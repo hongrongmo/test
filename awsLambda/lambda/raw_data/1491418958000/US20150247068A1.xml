@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247068A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021449" date-changed="20151006" time-changed="063056">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140141">
+        <country>US</country>
+        <doc-number>20150247068</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14424196</doc-number>
+        <date>20130802</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151006">
+      <classification-ipcr sequence="1">
+        <text>C09J 123/14        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>123</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C08K   5/098       20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>098</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C09J 123/12        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>123</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151006">
+      <classification-cpc sequence="1">
+        <text>C09J 123/14        20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>123</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C08K   5/098       20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>098</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C09J 123/12        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>J</subclass>
+        <main-group>123</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">24</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">Polyolefin Adhesive Compositions Comprising Nucleating Agents for Improved Set Time</invention-title>
+    <related-documents date-changed="20150903">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61713182</doc-number>
+          <date>20121012</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>ExxonMobil Chemical Patents Inc.</orgname>
+            <address>
+              <city>Baytown</city>
+              <state>TX</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Schroeyers</last-name>
+            <first-name>Jurgen J. M.</first-name>
+            <address>
+              <city>Helchteren</city>
+              <country>BE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Delucia</last-name>
+            <first-name>Joseph M.</first-name>
+            <address>
+              <city>Pittsburgh</city>
+              <state>PA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Coffey</last-name>
+            <first-name>James N.</first-name>
+            <address>
+              <city>League City</city>
+              <state>TX</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Vandevelde</last-name>
+            <first-name>Marijke</first-name>
+            <address>
+              <city>Keerbergen</city>
+              <country>BE</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>US13053403</doc-number>
+        <date>20130802</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014058521</doc-number>
+        <date>20140417</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173463214">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247068</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130802</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173463213">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247068</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130802</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">An adhesive composition comprising a polyolefin composition comprising a homopolymer of propylene or a copolymer of propylene and ethylene or a C<sub>4 </sub>to C<sub>10 </sub>alpha-olefin, and a nucleating agent effective for decreasing the set time for the adhesive composition in comparison to an otherwise identical adhesive composition in which the nucleating agent is absent. The adhesive composition may have a Dot T-Peel of 1 Newton or more on Kraft paper.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150819</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247068A1</docdb-publication-number>
+      <docdb-application-id>444210037</docdb-application-id>
+      <new-owner>EXXONMOBIL CHEMICAL PATENTS INC., TEXAS</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:SCHROEYERS, JURGEN J.;DE LUCIA, JOSEPH M.;COFFEY, JAMES N.;AND OTHERS;SIGNING DATES FROM 20150511 TO 20150623;REEL/FRAME:036361/0552</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCES TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application claims the benefit of U.S. Provisional Application No. 61/713,182, filed Oct. 12, 2012, and is related to U.S. Patent Application Ser. No. 61/609,020 filed Mar. 9, 2012.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">FIELD OF INVENTION</heading>
+      <p id="p-00002-en" num="0002">The invention relates to a polyolefin adhesive composition that comprises one or more nucleating agents for improving the set time of the finished adhesive.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">Historically, packaging grade hot melt adhesive (“HMA”) formulations include a base polymer, and one or more waxes and tackifiers. In addition to basic adhesive bond strength performance, the set-time of the HMA is a key parameter for packaging grade HMAs. This is because lower set times enable faster packaging line speeds.</p>
+      <p id="p-00004-en" num="0004">Set-time is the minimum time interval, after bonding of two substrates, during which the cohesive strength of the bond becomes stronger than the joint stress (often called the pop open force). Set-time thus represents the time necessary to cool down the HMA and obtain a good bond. Open-time is the maximum time interval, after application of the liquid HMA, during which a second substrate can be brought into contact with the molten adhesive and a good bond will be formed. Generally, once the adhesive has cooled to a certain temperature, it is no longer possible to make a bond. Usually HMA formulators attempt to design HMA formulations that have long open time and short setting times, a balance which is difficult to achieve.</p>
+      <p id="p-00005-en" num="0005">Conventional HMA formulations contain up to 30% wax to obtain good set times. Waxes however do not take part in actual adhesive performance; by removing the wax, overall adhesive performance can be enhanced. It would therefore be desirable to provide a hot melt adhesive formulation requiring less wax, preferably little to no wax and higher base polymer loading.</p>
+      <heading id="h-00004-en" level="1">SUMMARY</heading>
+      <p id="p-00006-en" num="0006">The foregoing and/or other challenges are addressed by the methods and products disclosed herein.</p>
+      <p id="p-00007-en" num="0007">In one aspect, an adhesive composition is provided that comprises a polyolefin composition comprising a homopolymer of propylene or a copolymer of propylene and ethylene or a C<sub>4 </sub>to C<sub>10 </sub>alpha-olefin, and a nucleating agent effective for decreasing the set time for the adhesive composition in comparison to an otherwise identical adhesive composition in which the nucleating agent is absent. The nucleating agent may be an organic metal salt. The adhesive composition has a Dot T-Peel of 1 Newton or more on Kraft paper.</p>
+      <p id="p-00008-en" num="0008">In another aspect, an adhesive composition is provided that comprises a polyolefin composition comprising a homopolymer of propylene or a copolymer of propylene and ethylene or a C<sub>4 </sub>to C alpha-olefin, and a nucleating agent effective for decreasing the set time for the adhesive composition in comparison to an otherwise identical adhesive composition in which the nucleating agent is absent, wherein the nucleating agent is an inorganic solid particle or an organic component having a crystallization temperature greater than that of the polyolefin composition. The adhesive composition has a Dot T-Peel of 1 Newton or more on Kraft paper.</p>
+      <p id="p-00009-en" num="0009">In yet another aspect, an adhesive composition is provided that comprises a polyolefin composition comprising a homopolymer of propylene or a copolymer of propylene and ethylene or a C<sub>4 </sub>to C<sub>10 </sub>alpha-olefin; and a nucleating agent effective for decreasing the set time for the adhesive composition by at least 10% in comparison to an otherwise identical adhesive composition in which the nucleating agent is absent. The adhesive composition has a Dot T-Peel of 1 Newton or more on Kraft paper.</p>
+      <p id="p-00010-en" num="0010">These and other aspects of the present inventions are described in greater detail in the following detailed description and are illustrated in the accompanying drawings.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 1</figref> is a graphical depiction illustrating various adhesive compositions building strength over time.</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 2</figref> is a graphical depiction illustrating a differential scanning calorimetry cooling curve for Composition F of Table 1.</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 3</figref> is a graphical depiction illustrating a differential scanning calorimetry cooling curve for Composition F of Table 1.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00014-en" num="0014">Adhesive formulations are disclosed herein that enable enhanced adhesive properties and deliver excellent set-times while maintaining long open times. In any embodiment, the formulations enable the usage of higher polymer loads in the finished adhesive, thereby delivering enhanced adhesive strength. In doing so, the formulations may reduce adhesive density and provide a pathway for reducing the mass and volume of adhesive that must be applied on packaging lines. By lowering adhesive volumes, set time may be further improved due to the fact that the reduced thermal mass requires less time to cool.</p>
+      <p id="p-00015-en" num="0015">The formulations disclosed herein may deliver improved set times while maintaining long open times by the incorporation of nucleating agents in the adhesive formulation. In any embodiment, the formulation may include a polyolefin composition comprising a homopolymer of propylene or a copolymer of propylene and ethylene or a C<sub>4 </sub>to C<sub>10 </sub>alpha-olefin. In any embodiment, the polyolefin composition may comprise a copolymer of propylene and ethylene.</p>
+      <p id="p-00016-en" num="0016">In any embodiment, the nucleating agent may be effective for decreasing the set time for the adhesive composition, preferably by at least 10%, in comparison to an otherwise identical adhesive composition in which the nucleating agent is absent. In any embodiment, the nucleating agent may be effective to increase the onset crystallization temperature of the polyolefin composition relative to the adhesive composition in which the nucleating agent is absent. In any embodiment, the nucleating agent may be effective to increase the onset crystallization temperature of the polyolefin composition by at least 10° C. relative to the adhesive composition in which the nucleating agent is absent.</p>
+      <p id="p-00017-en" num="0017">In any embodiment, the nucleating agent may be a metal salt. In any embodiment, the nucleating agent may be an organic compound having a crystallization temperature greater than the crystallization temperature of the polyolefin composition. In any embodiment, the nucleating agent may be selected from the group consisting of sodium benzoate, talc, glycerol alkoxide salts, cyclic carboxylic acid salts, bicyclic carboxylic acid salts, glycerolates, and hexahydrophthalic acid salts. In any embodiment, the nucleating agent comprises a salt of bicyclo[2.2.1]heptane dicarboxylate.</p>
+      <p id="p-00018-en" num="0018">Advantageously, the improvement in set-time enabled by the formulations disclosed herein may be achieved using reduced amounts of wax, or more preferably little to no wax. In any embodiment, the adhesive composition may comprise about 25 wt % wax or less, or about 5 wt % wax or less, or substantially no wax.</p>
+      <p id="p-00019-en" num="0019">The formulations disclosed herein are broadly applicable to multi-modal polymer blends that have a combination of properties that are beneficial for use in adhesive compositions. Generally, the nucleating agents may be employed with polyolefin compositions having multi-modal polymer blends in which the blend includes at least two polymers having a difference of heat of fusion of about 20 J/g or more, or about 30 J/g or more. For example, the nucleating agent may be employed to reduce the set time of a multi-modal polymer blend in which one polymer has a heat of fusion of about 50 J/g or less, and a second polymer has a heat of fusion of about 30 J/g or more. For example, the nucleating agent may be employed to reduce the set time of a multi-modal polymer blend in which one polymer has a heat of fusion of about 65 J/g to about 85 J/g, and a second polymer has a heat of fusion of about 10 J/g to about 30 J/g. The nucleating agent may also be employed to reduce the set time of a multi-modal polymer blend in which one polymer has a heat of fusion of 80 J/g or more, and the second polymer has a heat of fusion of about 50 J/g or less. The nucleating agent may also be employed to reduce the set time of a multi-modal polymer blend in which one polymer has a heat of fusion of 50 J/g or more, and the second polymer has a heat of fusion of about 15 J/g or less. In any embodiment, the weight ratio of first polymer to second polymer present in the blend may be 10:90 to 90:10, or 20:80 to 80:20, or 30:70 to 70:30, or 40:60 to 60:40.</p>
+      <p id="p-00020-en" num="0020">The formulations disclosed herein have a Dot-T Peel of 1 Newton or more on Kraft Paper. Dot T-Peel as used herein is determined according to ASTM D 1876, except that the specimen is produced by combining two 1 inch by 3 inch (2.54 cm×7.62 cm) substrate cut outs with a dot of adhesive having a volume that, when compressed under a 500-gram weight, occupies about 1 square inch of area (1 inch=2.54 cm). Once made, all the specimens may be pulled apart in side by side testing at a rate of 2 inches per minute by an apparatus that measures the destructive force that is applied. The maximum force achieved for each sample tested is the Dot T-Peel. A Dot T-Peel of 1 Newton may be considered a minimum performance requirement for an adhesive. Generally, an adhesive composition that demonstrates any measurable fiber tear has a Dot T-Peel of at least 1 Newton.</p>
+      <heading id="h-00007-en" level="1">A. POLYOLEFIN COMPOSITION</heading>
+      <p id="p-00021-en" num="0021">Polymers employed in any of the polyolefin compositions of the invention are preferably derived from one or more monomers selected from the group consisting of propylene, ethylene, C<sub>4 </sub>to C<sub>20 </sub>linear or branched olefins, and diolefins (particularly, C<sub>4 </sub>to C<sub>10 </sub>olefins). The term “monomer” or “comonomer” as used herein can refer to the monomer used to form the polymer, i.e., the unreacted chemical compound in the form prior to polymerization, and can also refer to the monomer after it has been incorporated into the polymer, also referred to herein as a “[monomer]-derived unit”, which by virtue of the polymerization reaction typically has fewer hydrogen atoms than it does prior to the polymerization reaction.</p>
+      <p id="p-00022-en" num="0022">Preferably, the polymer is predominantly propylene. Preferred comonomers include ethylene, butene, hexene, and octene, with ethylene being the most preferred comonomer. For propylene-based polymers, the crystallinity and heat of fusion of the polymer are affected by the comonomer content and the sequence distribution of the comonomer within the polymer. Generally, increased levels of comonomer will reduce the crystallinity provided by the crystallization of stereoregular propylene-derived sequences.</p>
+      <p id="p-00023-en" num="0023">The comonomer content and sequence distribution of the polymers can be measured using <sup>13</sup>C nuclear magnetic resonance (NMR) by methods well known to those skilled in the art. Comonomer content of discrete molecular weight ranges can be measured using methods well known to those skilled in the art, including Fourier Transform Infrared Spectroscopy (FTIR) in conjunction with samples by GPC, as described in Wheeler and Willis, Applied Spectroscopy, 1993, Vol. 47, pp. 1128-1130. For a propylene ethylene copolymer containing greater than 75 wt % propylene, the comonomer content (ethylene content) of such a polymer can be measured as follows: A thin homogeneous film is pressed at a temperature of about 150° C. or greater, and mounted on a Perkin Elmer PE 1760 infrared spectrophotometer. A full spectrum of the sample from 600 cm-1 to 4000 cm-1 is recorded and the monomer weight percent of ethylene can be calculated according to the following equation: Ethylene wt %=82.585−111.987X+30.045X2, where X is the ratio of the peak height at 1155 cm-1 and peak height at either 722 cm-1 or 732 cm-1, whichever is higher. For propylene ethylene copolymers having 75 wt % or less propylene content, the comonomer (ethylene) content can be measured using the procedure described in Wheeler and Willis. Various test methods including GPC measurements methods and methods for determining ethylene content by NMR and the DSC measurements are described in U.S. Pat. No. 6,525,157, which is incorporated by reference herein in its entirety.</p>
+      <p id="p-00024-en" num="0024">Preferred polymers are semi-crystalline propylene-based polymers. In any embodiment, the polymers may have a relatively low molecular weight, preferably about 100,000 g/mole or less. In any embodiment, the polymer may comprise a comonomer selected from the group consisting of ethylene and linear or branched C<sub>4 </sub>to C<sub>20 </sub>olefins and diolefins. In any embodiment, the comonomer may be ethylene or a C<sub>4 </sub>to C<sub>10 </sub>olefin.</p>
+      <p id="p-00025-en" num="0025">The term “polymer” as used herein includes, but is not limited to, homopolymers, copolymers, interpolymers, terpolymers, etc. and alloys and blends thereof. Further, as used herein, the term “copolymer” is meant to include polymers having two or more monomers, optionally with other monomers, and may refer to interpolymers, terpolymers, etc. The term “polymer” as used herein also includes impact, block, graft, random and alternating copolymers. The term “polymer” shall further include all possible geometrical configurations unless otherwise specifically stated. Such configurations may include isotactic, syndiotactic and random symmetries.</p>
+      <p id="p-00026-en" num="0026">“Polypropylene” as used herein includes homopolymers and copolymers of propylene or mixtures thereof. Products that include one or more propylene monomers polymerized with one or more additional monomers may be more commonly known as random copolymers (RCP) or impact copolymers (ICP). Impact copolymers are also known in the art as heterophasic copolymers. “Propylene-based”, as used herein, is meant to include any polymer comprising propylene, either alone or in combination with one or more comonomers, in which propylene is the major component (i.e., greater than 50 mole % propylene). In any embodiment, the polymer may be a propylene-based elastomer. The term “elastomer” as used herein refers to a polymer which exhibits elasticity, i.e., the ability to regain shape after deformation, is above its glass transition temperature at room temperature, and exhibits elongation at break of preferably at least 80%, or more preferably at least 100%, or even more preferably at least 200%.</p>
+      <p id="p-00027-en" num="0027">In any embodiment, the polyolefin composition may comprise one or more propylene-based polymers, which comprise propylene and from about 5 mole % to about 30 mole % of one or more comonomers selected from C<sub>2 </sub>and C<sub>4</sub>-C<sub>10 </sub>α-olefins. In any embodiment, the α-olefin comonomer units may derive from ethylene, butene, pentene, hexene, 4-methyl-1-pentene, octene, or decene. The embodiments described below are discussed with reference to ethylene and hexene as the α-olefin comonomer, but the embodiments are equally applicable to other copolymers with other α-olefin comonomers. In this regard, the copolymers may simply be referred to as propylene-based polymers with reference to ethylene or hexene as the α-olefin.</p>
+      <p id="p-00028-en" num="0028">In any embodiment, the polyolefin composition may include at least about 5 mole %, at least about 6 mole %, at least about 7 mole %, or at least about 8 mole %, or at least about 10 mole %, or at least about 12 mole % ethylene-derived or hexene-derived units. In those or other embodiments, the copolymers may include up to about 30 mole %, or up to about 25 mole %, or up to about 22 mole %, or up to about 20 mole %, or up to about 19 mole %, or up to about 18 mole %, or up to about 17 mole % ethylene-derived or hexene-derived units, where the percentage by weight is based upon the total weight of the propylene-derived and α-olefin derived units. Stated another way, the polyolefin composition may include at least about 70 mole %, or at least about 75 mole %, or at least about 80 mole %, or at least about 81 mole % propylene-derived units, or at least about 82 mole % propylene-derived units, or at least about 83 mole % propylene-derived units; and in these or other embodiments, the copolymers may include up to about 95 mole %, or up to about 94 mole %, or up to about 93 mole %, or up to about 92 mole %, or up to about 90 mole %, or up to about 88 mole % propylene-derived units, where the percentage by weight is based upon the total weight of the propylene-derived and alpha-olefin derived units. In any embodiment, the polyolefin composition may comprise from about 5 mole % to about 25 mole % ethylene-derived or hexene-derived units, or from about 8 mole % to about 20 mole % ethylene-derived or hexene-derived units, or from about 12 mole % to about 18 mole % ethylene-derived or hexene-derived units.</p>
+      <p id="p-00029-en" num="0029">The polyolefin composition may be characterized by a melting point (Tm), which can be determined by differential scanning calorimetry (DSC). For purposes herein, the maximum of the highest temperature peak is considered to be the melting point of the polymer. A “peak” in this context is defined as a change in the general slope of the DSC curve (heat flow versus temperature) from positive to negative, forming a maximum without a shift in the baseline where the DSC curve is plotted so that an endothermic reaction would be shown with a positive peak.</p>
+      <p id="p-00030-en" num="0030">In any embodiment, the Tm of the polyolefin composition (as determined by DSC) may be less than about 115° C., or less than about 110° C., or less than about 100° C., or less than about 90° C. In any embodiment, the Tm of the polyolefin composition may be greater than about 25° C., or greater than about 30° C., or greater than about 35° C., or greater than about 40° C.</p>
+      <p id="p-00031-en" num="0031">In one or more embodiments, the first crystallization temperature (Tc1) of the polyolefin composition (as determined by viscosity curve) is less than about 100° C., or less than about 90° C., or less than about 80° C., or less than about 70° C., or less than about 60° C., or less than about 50° C., or less than about 40° C., or less than about 30° C., or less than about 20° C., or less than about 10° C. In the same or other embodiments, the Tc1 of the polyolefin composition is greater than about 0° C., or greater than about 5° C., or greater than about 10° C., or greater than about 15° C., or greater than about 20° C.</p>
+      <p id="p-00032-en" num="0032">In other embodiments, the Tc1 lower limit of the polyolefin composition may be 0° C., 5° C., 10° C., 20° C., 30° C., 40° C., 50° C., 60° C., and 70° C.; and the Tc1 upper limit temperature may be 100° C., 90° C., 80° C., 70° C., 60° C., 50° C., 40° C., 30° C., 25° C., and 20° C. with ranges from any lower limit to any upper limit being contemplated.</p>
+      <p id="p-00033-en" num="0033">In one or more embodiments, the second crystallization temperature (Tc2) of the polyolefin composition (as determined by DSC) is less than about 100° C., or less than about 90° C., or less than about 80° C., or less than about 70° C., or less than about 60° C., or less than about 50° C., or less than about 40° C., or less than about 30° C., or less than about 20° C., or less than about 10° C. In the same or other embodiments, the Tc2 of the polymer is greater than about 0° C., or greater than about 5° C., or greater than about 10° C., or greater than about 15° C., or greater than about 20° C.</p>
+      <p id="p-00034-en" num="0034">In other embodiments, the Tc2 lower limit of the polyolefin composition may be 0° C., 5° C., 10° C., 20° C., 30° C., 40° C., 50° C., 60° C., and 70° C.; and the Tc2 upper limit temperature may be 100° C., 90° C., 80° C., 70° C., 60° C., 50° C., 40° C., 30° C., 25° C., and 20° C. with ranges from any lower limit to any upper limit being contemplated.</p>
+      <p id="p-00035-en" num="0035">In one or more embodiments, the polyolefin composition may have a density of from about 0.85 g/cm<sup>3 </sup>to about 0.92 g/cm<sup>3</sup>, or from about 0.86 g/cm<sup>3 </sup>to about 0.90 g/cm<sup>3</sup>, or from about 0.86 g/cm<sup>3 </sup>to about 0.89 g/cm<sup>3 </sup>at room temperature as measured per the ASTM D-792 test method.</p>
+      <p id="p-00036-en" num="0036">In one or more embodiments, the semi-crystalline polymer can have a weight average molecular weight (Mw) of from about 5,000 to about 500,000 g/mol, or from about 7,500 to about 300,000 g/mol, or from about 10,000 to about 200,000 g/mol, or from about 25,000 to about 175,000 g/mol.</p>
+      <p id="p-00037-en" num="0037">Techniques for determining the molecular weight may be found in U.S. Pat. No. 4,540,753 (Cozewith, Ju, and Verstrate) and in Macromolecules, 1988, Vol. 21, p. 3360 (Verstrate et al.). For example, molecular weight may be determined by size exclusion chromatography (SEC) by using a Waters 150 gel permeation chromatograph equipped with the differential refractive index detector and calibrated using polystyrene standards.</p>
+      <p id="p-00038-en" num="0038">In one or more embodiments, the polyolefin composition may have a viscosity (also referred to a Brookfield viscosity or melt viscosity), measured at 190° C. and determined according to ASTM D-3236 from about 100 cP to about 1,000,000,000 cP, or from about 1,000 to about 100,000,000 cP, or from about 2,000 to about 10,000,000 cP, or from about 2,500 to about 7,500,000 cP, or from about 3,000 to about 5,000,000 cP, or from about 3,500 to about 3,000,000 cP, or from about 4,000 to about 1,000,000 cP, or from about 4,500 to about 750,000 cP, or from about 5,000 to about 500,000 cP, or from about 5,500 to about 450,000 cP, or from about 6,000 to about 400,000 cP.</p>
+      <p id="p-00039-en" num="0039">In one or more embodiments, the polyolefin composition may be characterized by its viscosity at 190° C. In one or more embodiments, the semi-crystalline polymer may have a viscosity that is at least about 100 cP (centipoise), or at least about 500 cP, or at least about 1,000 cP, or at least about 1,500 cP, or at least about 2,000 cP, or at least about 3,000 cP, or at least about 4,000 cP, or at least about 5,000 cP. In these or other embodiments, the polyolefin composition may be characterized by an viscosity at 190° C. of less than about 100,000 cP, or less than about 75,000 cP, or less than about 50,000 cP, or less than about 25,000 cP, or less than about 20,000 cP, or less than about 15,000 cP, or less than about 10,000 cP, or less than about 5,000 cP with ranges from any lower limit to any upper limit being contemplated.</p>
+      <p id="p-00040-en" num="0040">In any embodiment, one or more of the polymers described herein may be blended with another polymer, such as another polymer described herein, to produce a physical blend of polymers, preferably a multimodal polymer blend. The term “blend” as used herein refers to a mixture of two or more polymers. The term “multimodal” as used herein refers to a blend of two or more distinct polymer species in which each species is distinguishable from another species present in the blend on the basis of at least one chemical or physical property selected from the group consisting of molecular weight, melt viscosity, comonomer content, heat of fusion, and crystallinity.</p>
+      <p id="p-00041-en" num="0041">In any embodiment, the first polymer and second polymer of the blend may have a difference in heat of fusion of about 20 J/g or more, or more preferably about 30 J/g or more. In any embodiment, the first polymer may have a heat of fusion of about 50 J/g or more and the second polymer may have a heat of fusion of about 30 J/g or less. For example, the first polymer may have a heat of fusion of about 65 to about 85 J/g and the second polymer may have a heat of fusion of about 10 J/g to about 20 J/g. The first and second polymer may each be, independently, a homopolymer of propylene or a copolymer of propylene and ethylene or a C<sub>4 </sub>to C<sub>10 </sub>olefin. In any embodiment, each polymer of the blend may have a propylene content of more than 50 mole %.</p>
+      <p id="p-00042-en" num="0042">Particularly advantageous adhesive properties can be achieved by employing a multimodal polymer blend that employs an exceptionally low crystalline propylene-based polymer in combination with a higher crystalline propylene-based polymer. In any embodiment, the exceptionally low crystalline propylene-based polymer may be a homopolymer of propylene or a copolymer of propylene and ethylene or a C<sub>4 </sub>to C<sub>10 </sub>olefin, and has a heat of fusion of about 15 J/g or less. In any embodiment, the exceptionally low crystalline propylene-based polymer may be a homopolymer of propylene or a copolymer of propylene and ethylene, butene, hexene, or octene. In any embodiment, the exceptionally low crystalline propylene-based may be a homopolymer of propylene or a copolymer of propylene and ethylene. In any embodiment, the exceptionally low crystalline propylene-based polymer may have a propylene content of more than 50 mole %.</p>
+      <p id="p-00043-en" num="0043">In any embodiment, the higher crystalline propylene-based polymer that is blended with the exceptionally low crystalline propylene-based polymer may be a homopolymer of propylene or a copolymer of propylene and ethylene or a C<sub>4 </sub>to C<sub>10 </sub>olefin, and has a heat of fusion of about 50 J/g or more, or 55 J/g or more, or 60 J/g or more, or 65 J/g or more, or 75 J/g or more. In an exemplary embodiment, the higher crystalline propylene-based polymer has a heat of fusion of about 65 J/g to about 85 J/g. In any embodiment, the higher crystalline propylene-based polymer may be a homopolymer of propylene or a copolymer of propylene and ethylene, butene, hexene, or octene. In any embodiment, the higher crystalline propylene-based polymer is a homopolymer of propylene or a copolymer of propylene and ethylene. In any embodiment, the higher crystalline propylene-based polymer may have a propylene content of more than 50 mole %.</p>
+      <p id="p-00044-en" num="0044">In addition, particularly advantageous adhesive properties can be achieved by using an exceptionally high crystalline propylene-based polymer in combination with a lower crystalline propylene-based polymer. In any embodiment, the exceptionally high crystalline propylene-based polymer may be a homopolymer of propylene or a copolymer of propylene and ethylene or a C<sub>4 </sub>to C<sub>10 </sub>olefin, and has a heat of fusion of about 80 J/g or more. In any embodiment, the exceptionally high crystalline propylene-based polymer may be a homopolymer of propylene or a copolymer of propylene and ethylene, butene, hexene, or octene. In any embodiment, the exceptionally high crystalline propylene-based polymer is a homopolymer of propylene or a copolymer of propylene and ethylene. In any embodiment, the exceptionally high crystalline propylene-based polymer may have a propylene content of more than 50 mole %.</p>
+      <p id="p-00045-en" num="0045">In any embodiment, the lower crystalline propylene-based polymer that is blended with the exceptionally high crystalline propylene-based polymer may be a homopolymer of propylene or a copolymer of propylene and ethylene or a C<sub>4 </sub>to C<sub>10 </sub>olefin, and has a heat of fusion of about 50 J/g or less, or more preferably about 25 J/g or less. In an exemplary embodiment, the lower crystalline propylene-based polymer has a heat of fusion of about 10 Jig to about 20 J/g. In any embodiment, the lower crystalline propylene-based polymer may be a homopolymer of propylene or a copolymer of propylene and ethylene, butene, hexene, or octene. In any embodiment, the lower crystalline propylene-based polymer is a homopolymer of propylene or a copolymer of propylene and ethylene. In any embodiment, the lower crystalline propylene-based polymer may have a propylene content of more than 50 mole %. In any embodiment, the lower crystalline propylene-based polymer has a heat of fusion of 45 J/g or less, 40 J/g or less, 35 J/g or less, or 30 J/g or less.</p>
+      <p id="p-00046-en" num="0046">The relative weight percentages of polymers of blend may vary depending on the application of the hot melt adhesive formulation. In any embodiment, the higher crystalline polymer may about 10% to about 90% of the polymer blend, or about 20% to about 80% of the polymer blend, or about 30% to about 70% of the polymer blend, or about 40% to about 60% of the polymer blend.</p>
+      <heading id="h-00008-en" level="2">Nucleating Agents</heading>
+      <p id="p-00047-en" num="0047">The term “nucleating agent” as used herein refers to a component that when added to the adhesive composition increases the temperature at which the polyolefin composition begins to solidify or crystallize from a molten state. Without being bound by theory, it is believed that such a component that is compatible with the polyolefin composition forms nucleation sites which promote the alignment and crystallization of the polyolefin polymer molecules adjacent to the nucleation sites. In any embodiment, the nucleating agent may be a solid particle having a size suitable for promoting a nucleating effect. In any embodiment, the nucleating agent may be a polymer that is compatible with the polyolefin and that crystallizes at a higher temperature than the polyolefin to promote a nucleating effect when the adhesive composition cools from a molten state.</p>
+      <p id="p-00048-en" num="0048">In any embodiment, the nucleating agent may be selected from the group consisting of sodium benzoate, talc, glycerol alkoxide salts, cyclic carboxylic acid salts, bicyclic carboxylic acid salts, glycerolates, and hexahydrophtalic acid salts. Nucleating agents include HYPERFORM™ additives, such as HPN-68, HPN-68L, HPN-20, HPN-20E, MILLAD™ additives (e.g., MILLAD™ 3988) (Milliken Chemicals, Spartanburg, S.C.) and organophosphates such as NA-11 and NA-21 (Amfine Chemicals, Allendale, N.J.). In any embodiment, the nucleating agent may comprise at least one bicyclic carboxylic acid salt. In any embodiment, the nucleating agent is bicycloheptane dicarboxylic acid, disodium salt such as bicyclo[2.2.1]heptane dicarboxylate. In any embodiment, the nucleating agent may be a blend of components comprising bicyclo[2.2.1]heptane dicarboxylate, disodium salt, 13-docosenamide, and amorphous silicon dioxide. In any embodiment, the nucleating agent may be cyclohexanedicarboxylic acid, calcium salt or a blend of cyclohexanedicarboxylic acid, calcium salt, and zinc stearate.</p>
+      <p id="p-00049-en" num="0049">In any embodiment, the nucleating agent may be a metal salt of Formula (I),</p>
+      <p id="p-00050-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="24.38mm" wi="35.22mm" alt="embedded image" img-content="chem" file="US20150247068A1_00004.PNG" img-format="png" original="US20150247068A1-20150903-C00001.TIF" />
+        </chemistry>
+      </p>
+      <heading id="h-00009-en" level="2">Formula (I)</heading>
+      <p id="p-00051-en" num="0050">wherein R<sup>1 </sup>to R<sup>10 </sup>are independently of one another a hydrogen atom, an alkyl group having 1 to 9 carbon atoms, a hydroxyl group, an alkoxy group having 1 to 9 carbon atoms, an amino group, an alkylamine group having 1 to 9 carbon atoms, a halogen atom, a phenyl group, or a group represented by the formula, R—(R′-—O)n-, R being an alkyl group having 1 to 3 carbon atoms, R′ being an alkylene group having 2 or 3 carbon atoms, and n being an integer of 1 to 4; any two alkyl groups of R<sup>1 </sup>to R<sup>10 </sup>may be linked to each other, thereby forming a carbon ring having 3 to 6 carbon atoms; and R<sup>1 </sup>and R<sup>2 </sup>have a trans or cis configuration with each other.</p>
+      <p id="p-00052-en" num="0051">Examples of R<sup>1 </sup>to R<sup>10 </sup>in formula (I) representing the metal salt are a methyl group, an ethyl group, a propyl group, a methoxy group, an ethoxy group, a methylamino group, an ethylamino group, a dimethylamino group, a diethylamino group, a fluorine atom, a chlorine atom, a bromine atom, and an iodine atom. Examples of the group represented by the formula, R—(R′—O)n-, contained in formula (I) are as follows: CH3-(CH2CH2-O)—, CH3(CH2CH2-O)2-, CH3(CH2CH2-O)3-, CH3(CH2CH2-O).sub.4-, C2H5-(CH2CH2-O)—, C2H5(CH2CH2-O)2-, C2H5(CH2CH2-O)3-, C3H7-(CH2CH2-)-, C3H7(CH2CH2-O) 2-, C3H7(CH2CH2-O)3-, CH3-(CH(CH3)CH2-O)—, CH3(CH(CH3)CH2-O)2-, C2H5-(CH(CH3)CH2-O)—, and C2H5(CH(CH3)CH2-O)2-.</p>
+      <p id="p-00053-en" num="0052">R<sup>1 </sup>to R<sup>10 </sup>are independently of one another preferably a hydrogen atom or an alkyl group having 1 to 3 carbon atoms such as a methyl group, an ethyl group and a propyl group. A more preferable metal salt is calcium 1,2-cyclohexanedicarboxylate represented by the following formula:</p>
+      <p id="p-00054-en" num="0000">
+        <chemistry id="chem-00002-en" num="00002">
+          <img id="img-00002-en" he="24.38mm" wi="28.62mm" alt="embedded image" img-content="chem" file="US20150247068A1_00005.PNG" img-format="png" original="US20150247068A1-20150903-C00002.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00055-en" num="0053">Further examples of the metal salt represented by Formula (I) are as follows:</p>
+      <p id="p-00056-en" num="0000">
+        <chemistry id="chem-00003-en" num="00003">
+          <img id="img-00003-en" he="229.87mm" wi="73.83mm" alt="embedded image" img-content="chem" file="US20150247068A1_00006.PNG" img-format="png" original="US20150247068A1-20150903-C00003.TIF" />
+        </chemistry>
+        <chemistry id="chem-00004-en" num="00004">
+          <img id="img-00004-en" he="249.17mm" wi="73.91mm" alt="embedded image" img-content="chem" file="US20150247068A1_00007.PNG" img-format="png" original="US20150247068A1-20150903-C00004.TIF" />
+        </chemistry>
+        <chemistry id="chem-00005-en" num="00005">
+          <img id="img-00005-en" he="52.41mm" wi="42.93mm" alt="embedded image" img-content="chem" file="US20150247068A1_00008.PNG" img-format="png" original="US20150247068A1-20150903-C00005.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00057-en" num="0054">In order to improve dispersibility of the metal salt in the adhesive composition of the present invention, the metal salt may be combined with a dispersing agent. Examples of the dispersing agent are an aliphatic acid such as an aliphatic acid having 10 to 24 carbon atoms; an alkyl ester of such an aliphatic acid; an alkali or alkaline-earth metal salt of such an aliphatic acid; alcohols having 10 to 30 carbon atoms; a polyalcohol; and an ester of such a polyalcohol. Among them, preferred is a metal salt of an aliphatic acid.</p>
+      <p id="p-00058-en" num="0055">Examples of the alkali metal are sodium, potassium and lithium, and examples of the alkaline-earth metal are calcium, magnesium and zinc. Examples of the polyalcohol are glycerin, ethylene glycol, propylene glycol, pentaerythritol, dipentaerythritol, tripentaerythritol, and sorbitol.</p>
+      <p id="p-00059-en" num="0056">The metal salt is preferably a particulate form, which has an average particle diameter of usually 0.01 to 10 μm, preferably 0.01 to 5 μm, and further preferably 0.01 to 3 μm, measured with a laser diffraction type-particle size distribution measurement apparatus such as a HELOS™ measurement apparatus (Sympatec GmbH).</p>
+      <p id="p-00060-en" num="0057">In any embodiment, the calcium 1,2-cyclohexanedicarboxylate, may be a commercially-available metal salt such as HYPERFORM™ HPN-20E (trademark of Milliken and Company), which contains 66% by weight of calcium 1,2-cyclohexanedicarboxylate as a principal component.</p>
+      <heading id="h-00010-en" level="1">B. SPECIFIC EMBODIMENTS</heading>
+      <p id="p-00061-en" num="0058">The invention may also be understood with relation to the following specific embodiments:</p>
+      <p id="p-00062-en" num="0059">Paragraph A: An adhesive composition comprising: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>a polyolefin composition comprising a homopolymer of propylene or a copolymer of propylene and ethylene or a C<sub>4 </sub>to C<sub>10 </sub>alpha-olefin;</li><li>a nucleating agent effective for decreasing the set time for the adhesive composition by at least 10% in comparison to an otherwise identical adhesive composition in which the nucleating agent is absent;</li><li>wherein the adhesive composition has a Dot T-Peel of 1 Newton or more on Kraft paper.</li></ul></li></ul></p>
+      <p id="p-00063-en" num="0063">Paragraph B: The adhesive composition of Paragraph A, wherein the nucleating agent is a metal salt.</p>
+      <p id="p-00064-en" num="0064">Paragraph C: The adhesive composition of Paragraph A, wherein the nucleating agent is an organic compound having a crystallization temperature greater than the crystallization temperature of the polyolefin composition.</p>
+      <p id="p-00065-en" num="0065">Paragraph D: The adhesive composition of any of Paragraphs A-C, wherein the nucleating agent is effective to increase the onset crystallization temperature of the polyolefin composition relative to the adhesive composition in which the nucleating agent is absent.</p>
+      <p id="p-00066-en" num="0066">Paragraph E: The adhesive composition of any of Paragraphs A-D, wherein the nucleating agent is effective to increase the onset crystallization temperature of the polyolefin composition by at least 10° C. relative to the adhesive composition in which the nucleating agent is absent.</p>
+      <p id="p-00067-en" num="0067">Paragraph F: The adhesive composition of any of Paragraphs A-E, wherein the nucleating agent may be selected from the group consisting of sodium benzoate, talc, glycerol alkoxide salts, cyclic carboxylic acid salts, bicyclic carboxylic acid salts, glycerolates, and hexahydrophtalic acid salts.</p>
+      <p id="p-00068-en" num="0068">Paragraph G: The adhesive composition of Paragraph F, wherein the nucleating agent comprises a salt of bicyclo[2.2.1]heptane dicarboxylate.</p>
+      <p id="p-00069-en" num="0069">Paragraph H: The adhesive composition of any of Paragraphs A-G, wherein the adhesive composition comprises about 25 wt % wax or less.</p>
+      <p id="p-00070-en" num="0070">Paragraph I: The adhesive composition of any of Paragraphs A-H, wherein the adhesive composition comprises about 5 wt % wax or less.</p>
+      <p id="p-00071-en" num="0071">Paragraph J: The adhesive composition of any of Paragraphs A-G, wherein the adhesive composition comprises substantially no wax.</p>
+      <p id="p-00072-en" num="0072">Paragraph K: The adhesive composition of any of Paragraphs A-J, wherein the polyolefin composition comprises a copolymer of propylene and ethylene.</p>
+      <p id="p-00073-en" num="0073">Paragraph L: The adhesive composition of any of Paragraphs A-K, wherein the polyolefin composition comprises a blended multimodal polymer.</p>
+      <p id="p-00074-en" num="0074">Paragraph M: The adhesive composition of Paragraph L, wherein the blended multimodal polymer comprises a first polymer, wherein the first polymer is a copolymer of propylene and ethylene or a C<sub>4 </sub>to C<sub>10 </sub>olefin; and a second polymer, wherein the second polymer is a copolymer of propylene and ethylene or a C<sub>4 </sub>to C<sub>10 </sub>olefin.</p>
+      <p id="p-00075-en" num="0075">Paragraph N: The adhesive composition of Paragraph M, wherein the first polymer and second polymer have a difference in heat of fusion of about 20 J/g or more.</p>
+      <p id="p-00076-en" num="0076">Paragraph O: The adhesive composition of Paragraph N, wherein the difference in heat of fusion between the first polymer and second polymer is about 30 J/g or more.</p>
+      <p id="p-00077-en" num="0077">Paragraph P: The adhesive composition of Paragraph N, wherein the first polymer has a heat of fusion of about 50 J/g or more, and the second polymer has a heat of fusion of about 30 J/g or less.</p>
+      <p id="p-00078-en" num="0078">Paragraph Q: The adhesive composition of Paragraph P, wherein the first polymer has a heat of fusion of about 65 J/g to about 85 J/g and the second polymer has a heat of fusion of about 10 J/g to about 30 J/g.</p>
+      <p id="p-00079-en" num="0079">Paragraph R: The adhesive composition of Paragraph O, wherein the first polymer has a heat of fusion of about 80 J/g or more, and the second polymer has a heat of fusion of about 50 J/g or less.</p>
+      <p id="p-00080-en" num="0080">Paragraph S: The adhesive composition of Paragraph O, wherein the first polymer has a heat of fusion of about 50 J/g or more, and the second polymer has a heat of fusion of about 15 J/g or less.</p>
+      <p id="p-00081-en" num="0081">Paragraph T: An adhesive composition comprising:</p>
+      <p id="p-00082-en" num="0000">a polyolefin composition comprising a homopolymer of propylene or a copolymer of propylene and ethylene or a C<sub>4 </sub>to C<sub>10 </sub>alpha-olefin; <br /> a nucleating agent effective for decreasing the set time for the adhesive composition in comparison to an otherwise identical adhesive composition in which the nucleating agent is absent, wherein the nucleating agent is an inorganic solid particle or an organic component having a crystallization temperature greater than that of the polyolefin composition; wherein the adhesive composition has a Dot T-Peel of 1 Newton or more on Kraft paper. </p>
+      <p id="p-00083-en" num="0082">Paragraph U: An adhesive composition comprising:</p>
+      <p id="p-00084-en" num="0000">a polyolefin composition comprising a homopolymer of propylene or a copolymer of propylene and ethylene or a C<sub>4 </sub>to C<sub>10 </sub>alpha-olefin; a nucleating agent effective for decreasing the set time for the adhesive composition in comparison to an otherwise identical adhesive composition in which the nucleating agent is absent, wherein the nucleating agent is an organic metal salt; and <br /> wherein the adhesive composition has a Dot T-Peel of 1 Newton or more on Kraft paper. </p>
+      <p id="p-00085-en" num="0083">Paragraph V: The adhesive composition of any of Paragraphs A-U, wherein the nucleating agent is present in an amount of 200 to 5000 ppm.</p>
+      <heading id="h-00011-en" level="1">Example One</heading>
+      <p id="p-00086-en" num="0084">Six adhesive compositions (A-F) were made by preheating components to 180° C. in a glass beaker and blended by simple manual stirring using a spatula. The composition of each adhesive is described in TABLE 1. Unless otherwise specified, the numerical values are expressed in weight percentages. Each of the compositions was analyzed to determine its open time, set time, fiber tear at room temperature and under refrigeration, and viscosity. The results of this analysis are also reported in TABLE 1.</p>
+      <p id="p-00087-en" num="0085">As used in this Example, the following terms have the following meanings:</p>
+      <p id="p-00088-en" num="0086">“PBE1” is a propylene based elastomer with a viscosity at 190° C. of 1122 mPas and a heat of fusion of 45 J/g.</p>
+      <p id="p-00089-en" num="0087">“PBE2” is a propylene based elastomer with a viscosity at 190° C. of 865 mPas and a heat of fusion of 41 J/g.</p>
+      <p id="p-00090-en" num="0088">“Linxar™ 127” is a polyolefin adhesive base polymer resin available from ExxonMobil Chemical Company.</p>
+      <p id="p-00091-en" num="0089">“Escorene™ UL 40028” is an ethylene vinyl acetate copolymer resin available from ExxonMobil Chemical Company.</p>
+      <p id="p-00092-en" num="0090">“Escorene™ UL 02528” is an ethylene vinyl acetate copolymer resin available from ExxonMobil Chemical Company.</p>
+      <p id="p-00093-en" num="0091">“Sasolwax™ C80” is a Fischer-Tropsch wax having a melting point of 80° C. available from Sasol wax a division of Sasol limited, South Africa.</p>
+      <p id="p-00094-en" num="0092">“Sasolwax™ H1” is a Fischer-Tropsch wax having a melting point of 98° C. available from Sasol wax a division of Sasol limited, South Africa.</p>
+      <p id="p-00095-en" num="0093">“Milliken™ HPN 20e” is a metal salt of 1,2-cyclohexanedicarboxylate available from Milliken Chemical, a division of Milliken &amp; Company.</p>
+      <p id="p-00096-en" num="0094">“Escorez™ 2206 LC” is an aromatic modified aliphatic hydrocarbon resin expressing a softening point of 92° C. available from ExxonMobil Chemical Company.</p>
+      <p id="p-00097-en" num="0095">“MAPP 40” is a maleated polypropylene with a softening point of 300-350 deg F., a viscosity at 150 C of 200-400 cPs, and an acid number of 40-50 available from SSI Chusei, Inc located in Pasadena, Tex.</p>
+      <p id="p-00098-en" num="0096">“A-C™ 596” is a propylene maleic anhydride copolymer available from Honeywell Specialty Adhesives.</p>
+      <p id="p-00099-en" num="0097">“Irganox™ 1010” is a hindered phenolic antioxidant available from BASF SE Corporation located in Ludwigshafen, Germany.</p>
+      <p id="p-00100-en" num="0098">“Fiber tear” describes the bond strength of the adhesive to the substrate and was measured at room temperature (RT) and −18° C. Fiber tear is a visual measurement as to the amount of paper substrate fibers that are attached to a bond after the substrates are torn apart. 100% fiber tear means the adhesive is stronger than the substrate and 100% of the adhesive is covered in substrate fibers. 0% fiber tear means the adhesive does not bond at all and simply pops off the substrate. Fiber tear was determined by bonding together substrates with the adhesive after the molten adhesive (180° C.) has been dropped onto one of the substrates with an eye dropper. The second substrate was placed on top of the adhesive, and a 500 g weight was placed on top of the second substrate for even application. The adhesive was allowed to cool at the referenced temperature for at least one hour. The substrates were then torn apart and the adhesive was inspected for fiber tear.</p>
+      <p id="p-00101-en" num="0099">“Set time” is defined as the minimal holding time to build bond cohesion requiring more than 10 kg force to break the bond. Set time was determined by bonding together substrates with the adhesive after the molten adhesive (180° C.) has been dropped onto one of the substrates with an eye dropper. The second substrate was placed on top of the adhesive, and a 500 g weight was placed on top of the second substrate for even application. After a predetermined interval of time the second substrate is removed and checked for fiber tear. If no fiber tear was found, a longer interval of time was tried. This continued until fiber tear is found. This length of time was reported as the set time.</p>
+      <p id="p-00102-en" num="0100">“Open time” is defined as the maximum open time after which it remains possible to build a bond stronger than 10 kg force. Open time was determined by bonding together substrates with the adhesive after the molten adhesive (180° C.) has been dropped onto one of the substrates with an eye dropper. The second substrate was placed on top of the adhesive, and a 500 g weight was placed on top of the second substrate for even application. The bonded specimen was examined to determine the longest time period, between application of the adhesive to one surface and mating with a second surface, which allows at least 50% fiber tear.</p>
+      <p id="p-00103-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="84pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="35pt" align="center" />
+              <colspec colname="7" colwidth="35pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="7" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Formulations (%)</entry>
+                  <entry>A (Ref)</entry>
+                  <entry>B (Ref)</entry>
+                  <entry>C</entry>
+                  <entry>D</entry>
+                  <entry>E</entry>
+                  <entry>F</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="84pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="char" char="." />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="28pt" align="char" char="." />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <colspec colname="6" colwidth="35pt" align="char" char="." />
+              <colspec colname="7" colwidth="35pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>PBE1</entry>
+                  <entry />
+                  <entry />
+                  <entry>90</entry>
+                  <entry />
+                  <entry>95</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>PBE2</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>90</entry>
+                  <entry />
+                  <entry>95</entry>
+                </row>
+                <row>
+                  <entry>Linxar ™ 127</entry>
+                  <entry />
+                  <entry>90.9</entry>
+                </row>
+                <row>
+                  <entry>Escorene ™ UL 40028</entry>
+                  <entry>20</entry>
+                </row>
+                <row>
+                  <entry>Escorene ™ UL 02528</entry>
+                  <entry>20</entry>
+                </row>
+                <row>
+                  <entry>Parrafinic wax, 68° C. mp</entry>
+                  <entry>10</entry>
+                </row>
+                <row>
+                  <entry>Sasolwax ™ C80</entry>
+                  <entry />
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry>Sasolwax ™ H1</entry>
+                  <entry>10</entry>
+                  <entry />
+                  <entry>5</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry>Milliken ™ HPN 20e</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>600 ppm</entry>
+                  <entry>600 ppm</entry>
+                </row>
+                <row>
+                  <entry>Escorez ™ 2206LC</entry>
+                  <entry>40</entry>
+                </row>
+                <row>
+                  <entry>MAPP 40</entry>
+                  <entry />
+                  <entry>3.2</entry>
+                </row>
+                <row>
+                  <entry>A-C ™ 596</entry>
+                  <entry />
+                  <entry />
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry>Irganox ™ 1010</entry>
+                  <entry>0.5</entry>
+                  <entry>0.9</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.5</entry>
+                </row>
+                <row>
+                  <entry>Set-Time (s)</entry>
+                  <entry>0.8</entry>
+                  <entry>0.8</entry>
+                  <entry>1.3</entry>
+                  <entry>1.0</entry>
+                  <entry>0.8</entry>
+                  <entry>0.8</entry>
+                </row>
+                <row>
+                  <entry>Open-Time (s)</entry>
+                  <entry>11.2</entry>
+                  <entry>17.0</entry>
+                  <entry>25.0</entry>
+                  <entry>15.0</entry>
+                  <entry>25.0</entry>
+                  <entry>13.0</entry>
+                </row>
+                <row>
+                  <entry>% Fiber-tear (RT)</entry>
+                  <entry>91</entry>
+                  <entry>97</entry>
+                  <entry>17</entry>
+                  <entry>75</entry>
+                  <entry>96</entry>
+                  <entry>98</entry>
+                </row>
+                <row>
+                  <entry>% Fiber-tear (−18° C.)</entry>
+                  <entry>3</entry>
+                  <entry>87</entry>
+                  <entry>0</entry>
+                  <entry>29</entry>
+                  <entry>95</entry>
+                  <entry>97</entry>
+                </row>
+                <row>
+                  <entry>Viscosity @ 160° C.</entry>
+                  <entry>3710</entry>
+                  <entry>1300</entry>
+                  <entry>1820</entry>
+                  <entry>1330</entry>
+                  <entry>2340</entry>
+                  <entry>1720</entry>
+                </row>
+                <row>
+                  <entry>(mPas)</entry>
+                </row>
+                <row>
+                  <entry>Viscosity @ 175° C.</entry>
+                  <entry>2470</entry>
+                  <entry>900</entry>
+                  <entry>1260</entry>
+                  <entry>913</entry>
+                  <entry>1600</entry>
+                  <entry>1170</entry>
+                </row>
+                <row>
+                  <entry>(mPas)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00104-en" num="0101">As can be seen in TABLE 1, the compositions that included the nucleating agent (compositions E and F), exhibited set time performances equal to that of the desired performance benchmarks. Notably, such performance was achieved without using a Fischer-Tropsch wax and using higher polymer loadings. Open time and fiber tear performance were also exceptional for compositions E and F.</p>
+      <p id="p-00105-en" num="0102">Peeling force as a function of application time for each of the adhesive blends is illustrated in <figref>FIG. 1</figref>. As can be seen in <figref>FIG. 1</figref>, the adhesive compositions comprising a nucleating agent build up strength quickly at about 0.7 seconds after application. It is believed that this phenomenon is effected by the crystallization of the organic component of the metal salt as the adhesive composition cools, which in turn promotes the crystallization and solidification of the base polymer of the adhesive composition starting at sites adjacent to the nucleating agent as the adhesive composition cools. Accordingly, the presence of the nucleating agent may increase the onset crystallization temperature of the polyolefin composition, e.g., by at least 2° C., 3° C., 5° C., or 7° C. relative to the adhesive composition in which the nucleating agent is absent. As illustrated in <figref>FIGS. 2 and 3</figref>, the presence of the nucleating agent in Composition F increased the onset crystallization temperature of the composition (relative to Composition D) to 97.62° C. from 90.26° C. In any embodiment, the nucleating agent may be provided in an amount effective to increase the onset crystallization temperature of the polyolefin composition, e.g., by at least 2° C., 3° C., 5° C., or 7° C. relative to the adhesive composition in which the nucleating agent is absent.</p>
+      <p id="p-00106-en" num="0103">Certain embodiments and features have been described using a set of numerical upper limits and a set of numerical lower limits. It should be appreciated that ranges from any lower limit to any upper limit are contemplated unless otherwise indicated. Certain lower limits, upper limits, and ranges appear in one or more claims below. All numerical values are “about” or “approximately” the indicated value, and take into account experimental error and variations that would be expected by a person having ordinary skill in the art.</p>
+      <p id="p-00107-en" num="0104">To the extent a term used in a claim is not defined above, it should be given the broadest definition persons in the pertinent art have given that term as reflected in at least one printed publication or issued patent. Furthermore, all patents, test procedures, and other documents cited in this application are fully incorporated by reference to the extent such disclosure is not inconsistent with this application and for all jurisdictions in which such incorporation is permitted.</p>
+      <p id="p-00108-en" num="0105">While the foregoing is directed to embodiments of the present invention, other and further embodiments of the invention may be devised without departing from the basic scope thereof, and the scope thereof is determined by the claims that follow.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>We claim:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. An adhesive composition comprising:
+<claim-text>a polyolefin composition comprising a homopolymer of propylene or a copolymer of propylene and ethylene or a C<sub>4 </sub>to C<sub>10 </sub>alpha-olefin; a nucleating agent effective for decreasing the set time for the adhesive composition by at least 10% in comparison to an otherwise identical adhesive composition in which the nucleating agent is absent;</claim-text><claim-text>wherein the adhesive composition has a Dot T-Peel of 1 Newton or more on Kraft paper.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The adhesive composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the nucleating agent is a metal salt.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The adhesive composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the nucleating agent is an organic compound having a crystallization temperature greater than the crystallization temperature of the polyolefin composition.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The adhesive composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the nucleating agent is effective to increase the onset crystallization temperature of the polyolefin composition relative to the adhesive composition in which the nucleating agent is absent.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The adhesive composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the nucleating agent is effective to increase the onset crystallization temperature of the polyolefin composition by at least 2° C. relative to the adhesive composition in which the nucleating agent is absent.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The adhesive composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the nucleating agent may be selected from the group consisting of sodium benzoate, talc, glycerol alkoxide salts, cyclic carboxylic acid salts, bicyclic carboxylic acid salts, glycerolates, and hexahydrophtalic acid salts.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The adhesive composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the nucleating agent comprises a salt of bicyclo[2.2.1]heptane dicarboxylate.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The adhesive composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the adhesive composition comprises about 25 wt % wax or less.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The adhesive composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the adhesive composition comprises about 5 wt % wax or less.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The adhesive composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the adhesive composition comprises substantially no wax.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The adhesive composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the polyolefin composition comprises a copolymer of propylene and ethylene.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The adhesive composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the polyolefin composition comprises a blended multi-modal polymer.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The adhesive composition of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the blended multi-modal polymer comprises a first polymer, wherein the first polymer is a copolymer of propylene and ethylene or a C<sub>4 </sub>to C<sub>10 </sub>olefin; and a second polymer, wherein the second polymer is a copolymer of propylene and ethylene or a C<sub>4 </sub>to C<sub>10 </sub>olefin.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The adhesive composition of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the first polymer and second polymer have a difference in heat of fusion of about 20 J/g or more.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The adhesive composition of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the difference in heat of fusion between the first polymer and second polymer is about 30 J/g or more.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The adhesive composition of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein the first polymer has a heat of fusion of about 50 J/g or more, and the second polymer has a heat of fusion of about 30 J/g or less.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The adhesive composition of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein the first polymer has a heat of fusion of about 65 J/g to about 85 J/g and the second polymer has a heat of fusion of about 10 J/g to about 30 J/g.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The adhesive composition of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein the first polymer has a heat of fusion of about 80 J/g or more, and the second polymer has a heat of fusion of about 50 J/g or less.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The adhesive composition of <claim-ref idref="clm-00014-en">claim 14</claim-ref> wherein the first polymer has a heat of fusion of about 50 J/g or more, and the second polymer has a heat of fusion of about 15 J/g or less.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The adhesive composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the nucleating agent is present in an amount of 200 to 5000 ppm.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en" independent="true">
+      <claim-text>
+        <b>21</b>. An adhesive composition comprising:
+<claim-text>a polyolefin composition comprising a homopolymer of propylene or a copolymer of propylene and ethylene or a C<sub>4 </sub>to C<sub>10 </sub>alpha-olefin;</claim-text><claim-text>a nucleating agent comprising an inorganic solid particle or an organic component having a crystallization temperature greater than that of the polyolefin composition;</claim-text><claim-text>wherein the adhesive composition has a Dot T-Peel of 1 Newton or more on Kraft paper.</claim-text></claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The adhesive composition of <claim-ref idref="clm-00021-en">claim 21</claim-ref>, wherein the nucleating agent is present in an amount of 200 to 5000 ppm.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en" independent="true">
+      <claim-text>
+        <b>23</b>. An adhesive composition comprising:
+<claim-text>a polyolefin composition comprising a homopolymer of propylene or a copolymer of propylene and ethylene or a C<sub>4 </sub>to C<sub>10 </sub>alpha-olefin;</claim-text><claim-text>a nucleating agent effective for decreasing the set time for the adhesive composition in comparison to an otherwise identical adhesive composition in which the nucleating agent is absent, wherein the nucleating agent is an organic metal salt; and</claim-text><claim-text>wherein the adhesive composition has a Dot T-Peel of 1 Newton or more on Kraft paper.</claim-text></claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. The adhesive composition of <claim-ref idref="clm-00023-en">claim 23</claim-ref>, wherein the nucleating agent is present in an amount of 200 to 5000 ppm. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247068A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247068A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247068A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247068A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150247068A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247068A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150247068A1_00004.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247068A1-20150903-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150247068A1_00005.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247068A1-20150903-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150247068A1_00006.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247068A1-20150903-C00003.TIF" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150247068A1_00007.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247068A1-20150903-C00004.TIF" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150247068A1_00008.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247068A1-20150903-C00005.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150247068A1.PDF" type="pdf" size="612058" pages="14" />
+</lexisnexis-patent-document>

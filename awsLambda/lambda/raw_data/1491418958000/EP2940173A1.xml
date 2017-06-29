@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2940173A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091029" date-changed="20151223" time-changed="095906">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121938985">
+        <country>EP</country>
+        <doc-number>2940173</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>13867247</doc-number>
+        <date>20131224</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>kor</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>KR</country>
+        <doc-number>1020120153919</doc-number>
+        <date>20121226</date>
+      </priority-claim>
+      <priority-claim sequence="2" kind="national">
+        <country>KR</country>
+        <doc-number>1020120153920</doc-number>
+        <date>20121226</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>KR</country>
+        <doc-number>20120153919</doc-number>
+        <kind>A</kind>
+        <date>20121226</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>KR</country>
+        <doc-number>20120153920</doc-number>
+        <kind>A</kind>
+        <date>20121226</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="docdb">
+        <country>KR</country>
+        <doc-number>2013012083</doc-number>
+        <kind>W</kind>
+        <date>20131224</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>20120153919</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>20120153920</doc-number>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="original">
+        <doc-number>2013012083</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>KR20120153919</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>KR20120153920</doc-number>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="epodoc">
+        <doc-number>WO2013KR12083</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151105">
+      <request-for-examination>
+        <date>20150625</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151223">
+      <classification-ipcr sequence="1">
+        <text>C22C  38/00        20060101AFI20140717BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140717</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C21D   8/00        20060101ALI20140717BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>8</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140717</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C22C  38/04        20060101ALI20140717BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140717</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C22C  38/38        20060101ALI20140717BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>38</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140717</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151223">
+      <classification-cpc sequence="1">
+        <text>C21D   8/00        20130101 FI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>8</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C21D   6/002       20130101 LI20151212BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>6</main-group>
+        <subgroup>002</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151212</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C21D   6/005       20130101 LI20151212BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>6</main-group>
+        <subgroup>005</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151212</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C21D   8/005       20130101 LI20151214BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>8</main-group>
+        <subgroup>005</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151214</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C22C  38/00        20130101 LI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C22C  38/04        20130101 LI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C22C  38/12        20130101 LI20150123BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150123</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C22C  38/18        20130101 LI20150123BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150123</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C22C  38/20        20130101 LI20151212BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151212</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>C22C  38/22        20130101 LI20151212BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>22</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151212</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>C22C  38/32        20130101 LI20151212BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>32</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151212</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>C22C  38/38        20130101 LI20151214BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>38</main-group>
+        <subgroup>38</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151214</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">7</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">HOCHFESTER AUSTENITISCHER STAHL MIT BEMERKENSWERTER ZÄHIGKEIT VON DURCH SCHWEISSEN WÄRMEBEAUFSCHLAGTEN ZONEN UND HERSTELLUNGSVERFAHREN DAFÜR</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">HIGH STRENGTH AUSTENITIC-BASED STEEL WITH REMARKABLE TOUGHNESS OF WELDING HEAT-AFFECTED ZONE AND PREPARATION METHOD THEREFOR</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">ACIER À BASE AUSTÉNITIQUE À HAUTE RÉSISTANCE AYANT UNE TÉNACITÉ REMARQUABLE D'UNE ZONE AFFECTÉE PAR LA CHALEUR DE SOUDAGE ET SON PROCÉDÉ DE PRÉPARATION</invention-title>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Posco</orgname>
+            <registered-number>101361412</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Goedong-dong 6261 Donghaean-ro Nam-gu</address-1>
+              <city>Pohang-si, Gyeongsangbuk-do 790-300</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>LEE, Hak-Cheol</name>
+            <address>
+              <address-1>Pohang Iron&amp;Steel Works 5 Dongchon-dong Nam-gu</address-1>
+              <city>Pohang-si Kyungsangbook-do 790-360</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>SUH, In-Shik</name>
+            <address>
+              <address-1>Pohang Iron&amp;Steel Works 5 Dongchon-dong Nam-gu</address-1>
+              <city>Pohang-si Kyungsangbook-do 790-360</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>LEE, Soon-Gi</name>
+            <address>
+              <address-1>Pohang Iron&amp;Steel Works 5 Dongchon-dong Nam-gu</address-1>
+              <city>Pohang-si Kyungsangbook-do 790-360</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>PARK, In-Gyu</name>
+            <address>
+              <address-1>Pohang Iron&amp;Steel Works 5 Dongchon-dong Nam-gu</address-1>
+              <city>Pohang-si Kyungsangbook-do 790-360</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5">
+          <addressbook lang="eng">
+            <name>KIM, Yong-Jin</name>
+            <address>
+              <address-1>Pohang Iron&amp;Steel Works 5 Dongchon-dong Nam-gu</address-1>
+              <city>Pohang-si Kyungsangbook-do 790-360</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6">
+          <addressbook lang="eng">
+            <name>LEE, Hong-Ju</name>
+            <address>
+              <address-1>Pohang Iron&amp;Steel Works 5 Dongchon-dong Nam-gu</address-1>
+              <city>Pohang-si Kyungsangbook-do 790-360</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Zech, Stefan Markus</name>
+            <registered-number>100755512</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Meissner, Bolte &amp; Partner GbR Postfach 86 06 24</address-1>
+              <city>81633 München</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>KR13012083</doc-number>
+        <date>20131224</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014104706</doc-number>
+        <date>20140703</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151210">
+      <main-family family-id="166463384">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150354037</doc-number>
+            <kind>A1</kind>
+            <date>20151210</date>
+          </document-id>
+          <application-date>
+            <date>20131224</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940173</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131224</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2896534</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131224</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104884661</doc-number>
+            <kind>A</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20131224</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014104706</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131224</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="167174407">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150354037</doc-number>
+            <kind>A1</kind>
+            <date>20151210</date>
+          </document-id>
+          <application-date>
+            <date>20131224</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020140083795</doc-number>
+            <kind>A</kind>
+            <date>20140704</date>
+          </document-id>
+          <application-date>
+            <date>20121226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940173</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131224</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101482343</doc-number>
+            <kind>B1</kind>
+            <date>20150107</date>
+          </document-id>
+          <application-date>
+            <date>20121226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101482344</doc-number>
+            <kind>B1</kind>
+            <date>20150107</date>
+          </document-id>
+          <application-date>
+            <date>20121226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020140083794</doc-number>
+            <kind>A</kind>
+            <date>20140704</date>
+          </document-id>
+          <application-date>
+            <date>20121226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2896534</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131224</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104884661</doc-number>
+            <kind>A</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20131224</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014104706</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131224</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention relates to a high strength austenitic-based steel with remarkable toughness of a welding heat-affected zone and a preparation method therefor. One embodiment of the present invention provides: a high strength austenitic-based steel with remarkable toughness of a welding heat-affected zone, comprising 0.8-1.5 wt% of C, 15-22 wt% of Mn, 5 wt% or less of Cr (except 0), and the balance of Fe and other inevitable impurities, and further comprising at least one of the following (a) and (b), wherein the microstructure of a welding heat-affected zone comprises 90 % or more of austenite by volume fraction; and a preparation method therefor. (a) Mo: 0.1-1 % and B: 0.001-0.02 % (b) Ti: 0.01-0.3 % and N: 0.003-0.1 %<img id="imga-00001-en" wi="78" he="70" img-content="drawing" file="imgaf001.tif" img-format="tif" /></p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <heading id="h-00001-en">[Technical Field]</heading>
+    <p id="p-00001-en" num="0001">The present disclosure relates to high strength austenitic steel having remarkable toughness in a welding heat-affected zone and a preparation method therefor.</p>
+    <heading id="h-00002-en">[Background Art]</heading>
+    <p id="p-00002-en" num="0002">In general, austenitic steel has a variety of applications, due to the properties thereof, such as work hardenability and non-magnetism. Conventionally used carbon steel, having ferrite or martensite as a major structure thereof, has limitations in terms of the properties thereof, and thus, due to being a material able to overcome the disadvantages of carbon steel, the applications of austenitic steel are increasing.</p>
+    <p id="p-00003-en" num="0003">Fields of application of austenitic steel, include nonmagnetic structural materials for a general electrical devices and superconductive devices, such as linear induction motor rails and nuclear fusion reactors, and equipment for mining, transportation, and storage in the oil and gas exploration industries that require steel having ductility, wear resistance, and hydrogen embrittlement resistance of expandable pipe steel, slurry pipe steel, and sour gas resistant steel. In these fields, the demand for austenitic steel is continually increasing.</p>
+    <p id="p-00004-en" num="0004">AISI304 (18Cr-8Ni) is a typical conventional austenitic stainless steel. However, this steel has low yield strength, and thus, is difficult to use as a structural material. In addition, since this steel includes Cr and Ni, relatively expensive alloying elements, in large quantities, it is economically unfeasible to use in large amounts, and thus, there are limits to the applications thereof.</p>
+    <p id="p-00005-en" num="0005">The content of manganese and the content of carbon may be increased to form austenite microstructures in austenitic steel, and in particular, in addition to carbon, an amount of Cr may be significantly increased to maintain a high degree of strength in the austenitic steel. In this case, carbides having a network form may be formed along austenite grain boundaries of the austenitic steel at high temperature, and thus, the physical properties of steel, particularly ductility, may be significantly reduced. In addition, carbides may be heavily formed in a weld heat-affected zone, heated to a high temperature during welding and rapidly cooled thereafter, as in the case of a base metal, thereby significantly decreasing toughness in such a weld heat-affected zone.</p>
+    <p id="p-00006-en" num="0006">In order to suppress the precipitation of carbides having a network form, a method for preparing high manganese steel featuring a solid solution treatment at a high temperature or performing hot working and quenching to room temperature has been suggested. However, in the case in which steel is relatively thick, there are disadvantages in that the effect on suppressing the generation of carbides by quenching may be insufficient, and also, it may be difficult to prevent the precipitation of carbides in a welding heat-affected zone affected by a new heat history.</p>
+    <heading id="h-00003-en">[Disclosure]</heading>
+    <heading id="h-00004-en">[Technical Problem]</heading>
+    <p id="p-00007-en" num="0007">An embodiment of the present disclosure is directed to high strength austenitic steel having improved corrosion resistance and to prevent decreasing in toughness in a welding heat-affected zone, and a method of preparing the same.</p>
+    <heading id="h-00005-en">[Technical Solution]</heading>
+    <p id="p-00008-en" num="0008">An aspect of the present disclosure is to provide high strength austenitic steel having remarkable toughness in a welding heat-affected zone, including 0.8-1.5 wt% of C, 15-22 wt% of Mn, 5 wt% or less of Cr (except 0), and the balance of Fe and other inevitable impurities, and further including at least one of (a) and (b), in which the microstructure of a welding heat-affected zone comprises 90% or more of austenite by volume fraction: <ol><li>(a) Mo: 0.1-1 wt% and B: 0.001-0.02 wt%</li><li>(b) Ti: 0.01-0.3 wt% and N: 0.003-0.1 wt%.</li></ol></p>
+    <p id="p-00009-en" num="0009">Another aspect of the present disclosure is to provide a method of preparing high strength austenitic steel having remarkable toughness in a welding heat-affected zone, in which the method includes re-heating a steel slab, including 0.8-1.5 wt% of C, 15-22 wt% of Mn, 5 wt% or less of Cr (except 0), and the balance of Fe and other inevitable impurities, and further including at least one of (a) and (b), at 1050°C to 1120°C; subjecting the re-heated steel slab to a hot finish rolling at 950°C or higher to obtain a hot rolling steel; and cooling the hot rolling steel at the rate of 10°C/s or more to be 500°C or less: <ol><li>(a) Mo: 0.1-1 wt% and B: 0.001-0.02 wt%</li><li>(b) Ti: 0.01-0.3 wt% and N: 0.003-0.1 wt%.</li></ol></p>
+    <heading id="h-00006-en">[Advantageous Effects]</heading>
+    <p id="p-00010-en" num="0010">According to the present invention, it is possible to provide high strength austenitic steel having remarkable toughness in a welding heat-affected zone, in which the formation of carbides having a network form is suppressed, by controlling the alloying elements and composition range so as to control the grain size of austenite in a welding zone and improve the grain stability of the austenite, thereby controlling the precipitation of the carbides.</p>
+    <p id="p-00011-en" num="0011">In addition, it is possible to use austenitic steel even in a corrosive environment for a long period of time by improving corrosion resistance through adding Cr.</p>
+    <heading id="h-00007-en">[Brief Description of Drawings]</heading>
+    <p id="p-00012-en" num="0012">
+      <ul id="ul-00001-en" list-style="none" compact="compact">
+        <li>
+          <figref>FIG. 1</figref> illustrates a thermal cycle of HAZ in the case of welding steel using a flux-cored arc welding (FCAW).</li>
+        <li>
+          <figref>FIG. 2</figref> is a photograph illustrating the welding heat-affected zone of Experimental Example 2 according to an embodiment of the present invention, which is observed using an optical microscope.</li>
+        <li>
+          <figref>FIG. 3</figref> is a photograph illustrating the welding heat-affected zone of Experimental Example 6 according to an embodiment of the present invention, which is observed using an optical microscope.</li>
+      </ul>
+    </p>
+    <heading id="h-00008-en">[Best Mode]</heading>
+    <p id="p-00013-en" num="0013">The inventors of the present invention confirmed that the components of steel should be properly controlled so as not to cause a problem, the decrease in the toughness of a welding zone by carbides having a network form, even though manganese, carbon, and chromium are included in large quantities to control the structure of steel to be austenite. As a result, the present inventors completed the present invention.</p>
+    <p id="p-00014-en" num="0014">In other words, according to the present invention, manganese, carbon, and chromium are added in order to secure austenite structures. At this time, in order to minimize the formation of carbides due to carbon in the case where a thermal cycle, such as a welding, is affected, it is confirmed that the toughness of a welding zone including a welding heat-affected zone may be sufficiently secured by controlling the content of carbon according to the content of manganese. In addition, the formation of the carbides may be actively suppressed by controlling the grain size of austenite of the welding zone or improving the grain stability of austenite by further adding an element, and thus, the toughness of the base metal and welding zone may be sufficiently secured. Based on this knowledge, the present invention was completed.</p>
+    <p id="p-00015-en" num="0015">Hereinafter, the present invention will be described. Firstly, the alloy composition of the steel according to the present invention will be described. Unless otherwise specifically noted, percentages used herein refer to weight percent (wt%).</p>
+    <heading id="h-00009-en">Carbon (C): 0.8 to 1.5%</heading>
+    <p id="p-00016-en" num="0016">Carbon is an element that stabilizes austenite, and thus, is allowed to obtain austenite structures at room temperature. Carbon is an important element that is allowed to increase the yield strength of steel, and in particular, is soluble inside the austenite to increase work hardening, thereby securing high tensile strength or to secure the nonmagnetic properties generated by the austenite. It is preferable that the content of carbon is 0.8% or more to secure these effects. When the content of carbon is less than 0.8%, the stability of austenite is decreased, and it is difficult to obtain high strength due to the lack of solute carbon. On the contrary, when the content of carbon is too high, there are disadvantages in that it is especially difficult to suppress the formation of carbides at a welding heat-affected zone, and the productivity is decreased due to a low melting point. Therefore, it is preferable to control the content of carbon to be 1.5% or less. As such, in the present invention, it is preferable that the content of carbon is within a range of 0.8 to 1.5%, and it is preferable that the content of carbon is within the range of 1.0 to 1.5% to obtain high strength.</p>
+    <heading id="h-00010-en">Manganese (Mn): 15 to 22%</heading>
+    <p id="p-00017-en" num="0017">Manganese is the most important element for an austenite stabilizer element, and is used for high manganese steel as the present invention. One object of the present invention is to obtain austenite as a major structure, and thus, it is preferable that the content of manganese is 15% or more. When the content of manganese is less than 15%, the stability of austenite is decreased, and thus, it is difficult to secure sufficient low temperature toughness. Meanwhile, when the content of manganese exceeds 22%, there are disadvantages in that corrosion resistance is decreased, a preparation process is difficult, and manufacturing costs is increased due to the addition of manganese, and also, the work hardening is decreased to decrease the tensile strength.</p>
+    <heading id="h-00011-en">Chromium (Cr): 5% or less (except 0%)</heading>
+    <p id="p-00018-en" num="0018">Chromium is an element that effectively improves corrosion resistance and strength. In the present invention, the manganese in the above-described range is included to stabilize austenite, and generally, the manganese is allowed to decrease the corrosion resistance of steel, and in particular, in the content of manganese in the above-described range, the corrosion resistance is low, compared to general carbon steel. In order to solve these problems, in the present invention, both the corrosion resistance and strength are improved by adding 5% or less chromium. However, when the content of chromium exceeds 5 wt%, manufacturing costs is increased; carbides are also formed in accordance with the grain boundary along with the solute carbon in the material, thereby decreasing ductility, in particular, emulsion strain induced crack resistance; and ferrite is formed, and thus, it is difficult to secure austenite as a major structure. Therefore, it is preferable to control the content of chromium at5 wt% or less. Specifically, it is more preferable to add 2 wt% or more of the chromium in order to maximize the effect on improving corrosion resistance. As described above, it may be widely applied in fields requiring corrosion resistance by improving corrosion resistance through adding chromium.</p>
+    <heading id="h-00012-en">Mo: 0.1 to 1% and B: 0.001 to 0.02%</heading>
+    <p id="p-00019-en" num="0019">Molybdenum and boron are elements that are segregated into austenite grains, and increase stability of the grain. Generally, they control the phenomenon of precipitating the carbides in large quantities in the austenite grains due to low grain stability. When the content of molybdenum is less than 0.1%, the grain stability is not sufficiently increased, and thereby, the precipitation of carbide is not largely controlled. When the content of molybdenum exceeds 1%, manufacturing costs may be increased and the toughness may be decreased by giving the steel high strength. Therefore, the content of molybdenum is preferably in the range of 0.1 to 1%. In addition, when the content of boron is less than 0.001%, the grain stability is not sufficiently increased, and thus, the precipitation of carbides is not largely controlled. When the content of boron exceeds 0.02%, the toughness may be decreased by giving the steel high strength, and brittleness may be generated by BN precipitation. Therefore, the content of boron is preferably in the range of 0.01 to 0.02%.</p>
+    <heading id="h-00013-en">Titanium (Ti): 0.01 to 0.3% and nitrogen (N): 0.003 to 0.1%</heading>
+    <p id="p-00020-en" num="0020">Titanium and nitrogen are elements that form TiN at a high temperature and prevent the movement of grain when growing an austenite crystal structure. In general, when the ratio of Ti : N is less than 3 : 1, TiN is crystallized in large crystals, thereby having a negative influence on crystal grain refinement. Therefore, it is preferable that the ratio of Ti : N is more than 3 : 1 by increasing the amount of N. When the amount of Ti is less than 0.01%, the amount of TiN is decreased, and thus, the grain growth is not greatly inhibited. Therefore, it is preferable to add Ti in the amount of 0.01% or more. When Ti exceeds 0.3%, oxide is formed at the time of manufacturing steel, and thus, the productivity is decreased. Therefore, the content thereof is preferably controlled to be 0.3% or less. In addition, when N is added in an amount of less than 0.003%, the amount of TiN is decreased, and thus, the grain growth is not largely inhibited. Therefore, it is preferable to add Ti in the amount of 0.003% or more. When it is added in an amount higher than 0.1%, strength is increased, while the ductility of the base metal is decreased. Therefore, it is preferable to add Ti in the amount of 0.1% or less.</p>
+    <p id="p-00021-en" num="0021">The balance component in the steel of the present invention is Fe, and the steel of the present invention may include impurities that are inevitably included at the time of preparation. Meanwhile, the steel of the present invention has the alloy composition as described above, and thus, may have excellent strength and low temperature toughness. However, in order to further improve the above-described effect by further suppressing the formation of carbide, Fe in the amount of 2% or more may be further included.</p>
+    <heading id="h-00014-en">Copper (Cu): 2% or less</heading>
+    <p id="p-00022-en" num="0022">Copper has very low solid solubility in carbide and is slowly diffused in austenite, and thus, has an effect on suppressing carbide. However, when it exceeds 2%, manufacturing costs may be increased, and furthermore, Cu may cause hot shortness that generates cracks in a steel plate at the time of preparation. Therefore, it is preferable that the amount thereof is controlled to be 2% or less.</p>
+    <p id="p-00023-en" num="0023">The steel of the present invention has an austenite microstructure, and furthermore, the welding heat-affected zone has 90% or more austenite by volume fraction. When the welding heat-affected zone has less than 90 vol% of the austenite fraction, wear resistance and impact toughness may be reduced. Meanwhile, the austenite fraction means that the carbide is included as one type of microstructure. In other words, when the carbide is not included in the content range of the microstructure, the steel of the present invention has an austenite single-phase structure. Meanwhile, the steel of the present invention does not mean only the material itself, and includes even the steel in a welded state that is applied in the final product.</p>
+    <p id="p-00024-en" num="0024">In addition, the steel of the present invention has preferably 100 µm or less of the grain size of the austenite (except 0). Sites in which the carbide may be precipitated are provided in large quantities by decreasing the grain size of the austenite, and thereby, the carbide may not be formed to be arborescent but formed as a diffused sphere. As a result, the toughness may be improved. As the austenite crystal grain is microscopic in size, it is favorable to secure the effect of the present invention, and thus, the lower limit thereof is not particularly limited.</p>
+    <p id="p-00025-en" num="0025">In addition, for the steel provided by the present invention, it is preferable to control the carbide formed at the welding heat-affected zone to be 10 vol% or less. When the fraction of the carbide exceeds 10 vol%, there may be a problem in that the toughness of the welding heat-affected zone may be reduced due to the carbide.</p>
+    <p id="p-00026-en" num="0026">The steel of the present invention that is provided as described above has 50 J or more of a Charpy impact value of a welding heat-affected zone at -40°C, and 450 MPa of a yield strength, which means excellent toughness of a welding heat-affected zone and high strength.</p>
+    <p id="p-00027-en" num="0027">Hereinafter, an embodiment of the method of preparing the austenite steel of the present invention will be described.</p>
+    <p id="p-00028-en" num="0028">Firstly, the steel slab having the alloy composition as described above is re-heated at 1050 to 1120°C. When the re-heating temperature exceeds 1120°C, the steel may be partially melted, and when the re-heating temperature is less than 1050°C, the carbide may not be melted, and thus, impact toughness may be decreased.</p>
+    <p id="p-00029-en" num="0029">The steel slab that is re-heated as described above is subjected to a hot finish rolling at 950°C or higher to obtain a hot rolling steel. When the temperature of the hot finished rolling is less than 950°C, recrystallization may be partially generated, and thus, a non-uniform crystal grain may be formed. Meanwhile, even though the steel of the present invention is subjected to the hot finished rolling in the range of the re-heating temperature as an austenitic steel, the structure and the physical properties to be desired may be secured without any problems. Therefore, the maximum of the hot finished rolling temperature is not particularly limited, and eventually, hot finish rolling may be performed in the range of 950 to 1120°C.</p>
+    <p id="p-00030-en" num="0030">Subsequently, the hot rolling steel is cooled to 500°C or less at the rate of 10 °C/s. When the rate of cooling is less than 10 °C/s or exceeds 500°C, the impact toughness may be decreased due to the precipitation of carbide. As long as the rate of cooling is 10 °C/s, the structure and physical properties to be described for the present invention may be secured without any problems. Therefore, the maximum thereof is not particularly limited, but due to facilities' limitations, it is difficult to exceed 100 °C/s. When the stopping of cooling is performed at 500°C or less, the structure and physical properties to be described for the present invention may be easily secured, and thus, the minimum thereof is not particularly limited. For example, the cooling may be performed to room temperature.</p>
+    <p id="p-00031-en" num="0031">Hereinafter, the present invention will be described with reference to Examples. However, the following Examples are not only for illustrating the present invention, and are not limited to the correct range of the present invention.</p>
+    <heading id="h-00015-en">(Example 1)</heading>
+    <p id="p-00032-en" num="0032">The steel slab having the chemical compositions listed in the following Table 1 was re-heated at 1120°C, and then was subjected to a rough rolling at 1100°C. Afterwards, the steel slab thus obtained was subjected to a finish rolling at 950°C, and then was cooled to room temperature at the rate of 20 °C/s to manufacture hot rolling steel. The welding of the hot rolling steel thus manufactured was performed under the conditions illustrated in <figref>FIG. 1. FIG. 1</figref> illustrates a thermal cycle of HAZ in the case of welding steel having a thickness of 40 mm with heat input capacity of 20 KJ/cm using flux-cored arc welding (FCAW). For the welding heat-affected zone (HAZ) that was obtained as described above, the microstructure and mechanical physical properties were measured, and the results thereof are listed in Table 2. <tables id="tables-00001-en" num="0001"><table frame="all"><title>[Table 1]</title><tgroup cols="7"><colspec colnum="1" colname="col1" colwidth="38mm" /><colspec colnum="2" colname="col2" colwidth="12mm" /><colspec colnum="3" colname="col3" colwidth="12mm" /><colspec colnum="4" colname="col4" colwidth="10mm" /><colspec colnum="5" colname="col5" colwidth="12mm" /><colspec colnum="6" colname="col6" colwidth="15mm" /><colspec colnum="7" colname="col7" colwidth="10mm" /><thead><row><entry morerows="1" align="center" valign="middle">Items</entry><entry namest="col2" nameend="col7" align="center" valign="middle">Chemical Composition (wt%)</entry></row><row><entry align="center" valign="middle">C</entry><entry align="center" valign="middle">Mn</entry><entry align="center" valign="middle">Cr</entry><entry align="center" valign="middle">Mo</entry><entry align="center" valign="middle">B</entry><entry align="center" valign="middle">Cu</entry></row></thead><tbody><row><entry align="center" valign="middle">Experimental Example 1</entry><entry align="center" valign="middle">1.21</entry><entry align="center" valign="middle">19.1</entry><entry align="center" valign="middle">3.2</entry><entry align="center" valign="middle">0.3</entry><entry align="center" valign="middle">0.005</entry><entry align="center" valign="middle">-</entry></row><row><entry align="center" valign="middle">Experimental Example 2</entry><entry align="center" valign="middle">1.41</entry><entry align="center" valign="middle">21.4</entry><entry align="center" valign="middle">4.2</entry><entry align="center" valign="middle">0.8</entry><entry align="center" valign="middle">0.012</entry><entry align="center" valign="middle">1.0</entry></row><row><entry align="center" valign="middle">Experimental Example 3</entry><entry align="center" valign="middle">1. 07</entry><entry align="center" valign="middle">16.9</entry><entry align="center" valign="middle">2.1</entry><entry align="center" valign="middle">0.5</entry><entry align="center" valign="middle">0.008</entry><entry align="center" valign="middle">-</entry></row><row><entry align="center" valign="middle">Experimental Example 4</entry><entry align="center" valign="middle">1.18</entry><entry align="center" valign="middle">17.2</entry><entry align="center" valign="middle">1.7</entry><entry align="center" valign="middle">0.9</entry><entry align="center" valign="middle">0.016</entry><entry align="center" valign="middle">-</entry></row><row><entry align="center" valign="middle">Experimental Example 5</entry><entry align="center" valign="middle">1.34</entry><entry align="center" valign="middle">20.6</entry><entry align="center" valign="middle">3.8</entry><entry align="center" valign="middle">0.7</entry><entry align="center" valign="middle">0.007</entry><entry align="center" valign="middle">-</entry></row><row><entry align="center" valign="middle">Comparative Example 1</entry><entry align="center" valign="middle">1.28</entry><entry align="center" valign="middle">19.2</entry><entry align="center" valign="middle">2.4</entry><entry align="center" valign="middle">0.02</entry><entry align="center" valign="middle">0.008</entry><entry align="center" valign="middle">-</entry></row><row><entry align="center" valign="middle">Comparative Example 2</entry><entry align="center" valign="middle">1.12</entry><entry align="center" valign="middle">17.8</entry><entry align="center" valign="middle">3.1</entry><entry align="center" valign="middle">0.4</entry><entry align="center" valign="middle">0.0002</entry><entry align="center" valign="middle">-</entry></row></tbody></tgroup></table></tables><tables id="tables-00002-en" num="0002"><table frame="all"><title>[Table 2]</title><tgroup cols="6"><colspec colnum="1" colname="col1" colwidth="24mm" /><colspec colnum="2" colname="col2" colwidth="27mm" /><colspec colnum="3" colname="col3" colwidth="30mm" /><colspec colnum="4" colname="col4" colwidth="24mm" /><colspec colnum="5" colname="col5" colwidth="28mm" /><colspec colnum="6" colname="col6" colwidth="34mm" /><thead><row><entry align="center" valign="middle">Items</entry><entry align="center" valign="middle">Base Metal Yield Strength (MPa)</entry><entry align="center" valign="middle">Base Metal Tensile Strength (MPa)</entry><entry align="center" valign="middle">HAZ Austenite Fraction (vol%)</entry><entry align="center" valign="middle">HAZ Carbide Fraction (vol%)</entry><entry align="center" valign="middle">HAZ Impact Toughness (J, @-40°C)</entry></row></thead><tbody><row><entry align="center" valign="middle">Experimental Example 1</entry><entry align="center" valign="middle">531</entry><entry align="center" valign="middle">1084</entry><entry align="center" valign="middle">94.2</entry><entry align="center" valign="middle">5.8</entry><entry align="center" valign="middle">143</entry></row><row><entry align="center" valign="middle">Experimental Example 2</entry><entry align="center" valign="middle">580</entry><entry align="center" valign="middle">1101</entry><entry align="center" valign="middle">92.1</entry><entry align="center" valign="middle">7.9</entry><entry align="center" valign="middle">115</entry></row><row><entry align="center" valign="middle">Experimental Example 3</entry><entry align="center" valign="middle">485</entry><entry align="center" valign="middle">997</entry><entry align="center" valign="middle">98</entry><entry align="center" valign="middle">2</entry><entry align="center" valign="middle">168</entry></row><row><entry align="center" valign="middle">Experimental Example 4</entry><entry align="center" valign="middle">512</entry><entry align="center" valign="middle">1035</entry><entry align="center" valign="middle">97.3</entry><entry align="center" valign="middle">2.7</entry><entry align="center" valign="middle">171</entry></row><row><entry align="center" valign="middle">Experimental Example 5</entry><entry align="center" valign="middle">568</entry><entry align="center" valign="middle">1094</entry><entry align="center" valign="middle">93.5</entry><entry align="center" valign="middle">6.5</entry><entry align="center" valign="middle">104</entry></row><row><entry align="center" valign="middle">Comparative Example 1</entry><entry align="center" valign="middle">521</entry><entry align="center" valign="middle">1021</entry><entry align="center" valign="middle">82.7</entry><entry align="center" valign="middle">17.3</entry><entry align="center" valign="middle">12</entry></row><row><entry align="center" valign="middle">Comparative Example 2</entry><entry align="center" valign="middle">503</entry><entry align="center" valign="middle">1002</entry><entry align="center" valign="middle">85.2</entry><entry align="center" valign="middle">14.8</entry><entry align="center" valign="middle">25</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00033-en" num="0033">As listed in the above Tables 1 and 2, it could be confirmed that in the cases of Experimental Examples 1 to 5 that satisfied the alloy composition suggested by the present invention, excellent impact toughness, 100 J or more at -40°C, was secured by securing 90% or more of the austenite fraction of the welding heat-affected zone.</p>
+    <p id="p-00034-en" num="0034">
+      <figref>FIG. 2</figref> is a photograph illustrating the welding heat-affected zone of Experimental Example 2 according to an embodiment of the present invention, which is observed using an optical microscope. As illustrated in <figref>FIG. 2</figref>, it could be confirmed that the welding heat-affected zone of Experimental Example 2 included 90% or more of austenite.</p>
+    <p id="p-00035-en" num="0035">However, it could be confirmed that in the cases of Comparative Examples 1 and 2 that did not satisfy the alloy composition suggested by the present invention, 10% or more of the carbide in the crystal grain system was precipitated, and thus, the proper amount of austenite fraction was not secured, thereby reducing the impact toughness to less than 50 J.</p>
+    <heading id="h-00016-en">(Example 2)</heading>
+    <p id="p-00036-en" num="0036">The steel slab having the chemical compositions listed in Table 3 was re-heated at 1120°C, and then was subjected to a rough rolling at 1100°C. Afterwards, the steel slab thus obtained was subjected to finishing rolling at 950°C, and then was cooled to room temperature at a rate of 20 °C/s to manufacture a hot rolling steel. The welding of the hot rolling steel thus manufactured was performed under the conditions illustrated in <figref>FIG. 1</figref>. For the welding heat-affected zone (HAZ) that was obtained as described above, the microstructure, the size of crystal grain, and mechanical physical properties were measured, and the results thereof are listed in Table 4. <tables id="tables-00003-en" num="0003"><table frame="all"><title>[Table 3]</title><tgroup cols="7"><colspec colnum="1" colname="col1" colwidth="40mm" /><colspec colnum="2" colname="col2" colwidth="12mm" /><colspec colnum="3" colname="col3" colwidth="12mm" /><colspec colnum="4" colname="col4" colwidth="10mm" /><colspec colnum="5" colname="col5" colwidth="14mm" /><colspec colnum="6" colname="col6" colwidth="14mm" /><colspec colnum="7" colname="col7" colwidth="10mm" /><thead><row><entry morerows="1" align="center" valign="middle">Items</entry><entry namest="col2" nameend="col7" align="center" valign="middle">Chemical Composition (wt%)</entry></row><row><entry align="center" valign="middle">C</entry><entry align="center" valign="middle">Mn</entry><entry align="center" valign="middle">Cr</entry><entry align="center" valign="middle">Ti</entry><entry align="center" valign="middle">N</entry><entry align="center" valign="middle">Cu</entry></row></thead><tbody><row><entry align="center" valign="middle">Experimental Example 6</entry><entry align="center" valign="middle">0.87</entry><entry align="center" valign="middle">19.3</entry><entry align="center" valign="middle">2.3</entry><entry align="center" valign="middle">0.05</entry><entry align="center" valign="middle">0.009</entry><entry align="center" valign="middle">-</entry></row><row><entry align="center" valign="middle">Experimental Example 7</entry><entry align="center" valign="middle">1.23</entry><entry align="center" valign="middle">20.5</entry><entry align="center" valign="middle">3.5</entry><entry align="center" valign="middle">0.12</entry><entry align="center" valign="middle">0.03</entry><entry align="center" valign="middle">-</entry></row><row><entry align="center" valign="middle">Experimental Example 8</entry><entry align="center" valign="middle">1.35</entry><entry align="center" valign="middle">18.7</entry><entry align="center" valign="middle">1.6</entry><entry align="center" valign="middle">0.21</entry><entry align="center" valign="middle">0.06</entry><entry align="center" valign="middle">0.5</entry></row><row><entry align="center" valign="middle">Experimental Example 9</entry><entry align="center" valign="middle">0.99</entry><entry align="center" valign="middle">17.6</entry><entry align="center" valign="middle">4.2</entry><entry align="center" valign="middle">0.18</entry><entry align="center" valign="middle">0.04</entry><entry align="center" valign="middle">-</entry></row><row><entry align="center" valign="middle">Experimental Example 10</entry><entry align="center" valign="middle">1.12</entry><entry align="center" valign="middle">21.1</entry><entry align="center" valign="middle">3.1</entry><entry align="center" valign="middle">0.09</entry><entry align="center" valign="middle">0.02</entry><entry align="center" valign="middle">-</entry></row><row><entry align="center" valign="middle">Comparative Example 3</entry><entry align="center" valign="middle">1.33</entry><entry align="center" valign="middle">20.3</entry><entry align="center" valign="middle">1.8</entry><entry align="center" valign="middle">0.002</entry><entry align="center" valign="middle">0.06</entry><entry align="center" valign="middle">-</entry></row><row><entry align="center" valign="middle">Comparative Example 4</entry><entry align="center" valign="middle">1.02</entry><entry align="center" valign="middle">18.2</entry><entry align="center" valign="middle">3.6</entry><entry align="center" valign="middle">0.23</entry><entry align="center" valign="middle">0.001</entry><entry align="center" valign="middle">-</entry></row></tbody></tgroup></table></tables><tables id="tables-00004-en" num="0004"><table frame="all"><title>[Table 4]</title><tgroup cols="7" rowsep="0"><colspec colnum="1" colname="col1" colwidth="24mm" /><colspec colnum="2" colname="col2" colwidth="22mm" /><colspec colnum="3" colname="col3" colwidth="26mm" /><colspec colnum="4" colname="col4" colwidth="23mm" /><colspec colnum="5" colname="col5" colwidth="26mm" /><colspec colnum="6" colname="col6" colwidth="21mm" /><colspec colnum="7" colname="col7" colwidth="26mm" /><thead><row rowsep="1"><entry align="center" valign="middle">Items</entry><entry align="center" valign="middle">Base Metal Yield Strength (MPa)</entry><entry align="center" valign="middle">Base Metal Tensile Strength (MPa)</entry><entry align="center" valign="middle">HAZ Austenite Fraction (vol%)</entry><entry align="center" valign="middle">Size of Austenite Crystal Grain (µm)</entry><entry align="center" valign="middle">HAZ Carbide Fraction (vol%)</entry><entry align="center" valign="middle">HAZ Impact Toughness (J, @-40°C)</entry></row></thead><tbody><row rowsep="1"><entry align="center" valign="middle">Experimental Example 6</entry><entry align="center" valign="middle">458</entry><entry align="center" valign="middle">923</entry><entry align="center" valign="middle">97.1</entry><entry align="center" valign="middle">82</entry><entry align="center" valign="middle">2.9</entry><entry align="center" valign="middle">133</entry></row><row rowsep="1"><entry align="center" valign="middle">Experimental Example 7</entry><entry align="center" valign="middle">533</entry><entry align="center" valign="middle">1067</entry><entry align="center" valign="middle">93.5</entry><entry align="center" valign="middle">71</entry><entry align="center" valign="middle">6.5</entry><entry align="center" valign="middle">147</entry></row><row rowsep="1"><entry align="center" valign="middle">Experimental Example 8</entry><entry align="center" valign="middle">562</entry><entry align="center" valign="middle">1103</entry><entry align="center" valign="middle">95.5</entry><entry align="center" valign="middle">62</entry><entry align="center" valign="middle">4.5</entry><entry align="center" valign="middle">165</entry></row><row rowsep="1"><entry align="center" valign="middle">Experimental Example 9</entry><entry align="center" valign="middle">488</entry><entry align="center" valign="middle">1055</entry><entry align="center" valign="middle">93.7</entry><entry align="center" valign="middle">68</entry><entry align="center" valign="middle">6.3</entry><entry align="center" valign="middle">174</entry></row><row rowsep="1"><entry align="center" valign="middle">Experimental Example 10</entry><entry align="center" valign="middle">502</entry><entry align="center" valign="middle">1044</entry><entry align="center" valign="middle">96.7</entry><entry align="center" valign="middle">82</entry><entry align="center" valign="middle">3.3</entry><entry align="center" valign="middle">121</entry></row><row rowsep="1"><entry align="center" valign="middle">Comparative Example 3</entry><entry align="center" valign="middle">544</entry><entry align="center" valign="middle">1070</entry><entry align="center" valign="middle">85.4</entry><entry align="center" valign="middle">207</entry><entry align="center" valign="middle">14.6</entry><entry align="center" valign="middle">33</entry></row><row rowsep="1"><entry align="center" valign="middle">Comparative Example 4</entry><entry align="center" valign="middle">496</entry><entry align="center" valign="middle">1008</entry><entry align="center" valign="middle">83.1</entry><entry align="center" valign="middle">175</entry><entry align="center" valign="middle">16.9</entry><entry align="center" valign="middle">42</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00037-en" num="0037">As listed in the above Tables 3 and 4, it could be confirmed that in the cases of Experimental Examples 6 to 10 that satisfied the alloy composition suggested by the present invention, micro crystal grains of 100 µm or less were included by securing 90% or more of the austenite fraction of the welding heat-affected zone, thereby securing excellent impact toughness, 100 J or more at -40°C.</p>
+    <p id="p-00038-en" num="0038">
+      <figref>FIG. 3</figref> is a photograph illustrating the welding heat-affected zone of Experimental Example 6 according to an embodiment of the present invention, which is observed using an optical microscope. As illustrated in <figref>FIG. 3</figref>, it could be confirmed that the welding heat-affected zone of Experimental Example 1 included 90% or more austenite.</p>
+    <p id="p-00039-en" num="0039">However, it could be confirmed that in the cases of Comparative Examples 3 and 4 that did not satisfy the alloy composition suggested by the present invention, the austenite fraction suggested by the present invention was not secured, and the austenite crystal grains were grown in an amount higher than 100 µm so as to precipitate 10% or more of the carbide in the crystal grain system, thereby reducing the impact toughness to be less than 50 J.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>High strength austenitic steel having remarkable toughness in a welding heat-affected zone, comprising 0.8-1.5 wt% of C, 15-22 wt% of Mn, 5 wt% or less of Cr (except 0), and the balance of Fe and other inevitable impurities, and further comprising at least one of (a) and (b),<br />
+wherein the microstructure of a welding heat-affected zone comprises 90% or more of austenite by volume fraction:
+<claim-text>(a) Mo: 0.1-1 wt% and B: 0.001-0.02 wt%</claim-text><claim-text>(b) Ti: 0.01-0.3 wt% and N: 0.003-0.1 wt%.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The high strength austenitic steel of claim 1, wherein the steel further includes 2 wt% or less of Cu.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The high strength austenitic steel of claim 1, wherein the size of the austenite crystal grain is 100 µm or less.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The high strength austenitic steel of claim 1, wherein, in the welding heat-affected zone, a carbide is formed in the amount of 10% or less by volume fraction.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The high strength austenitic steel of claim 1, wherein the welding heat-affected zone has 50 J or more of a Charpy impact value at -40°C.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>The high strength austenitic steel of claim 1, wherein the steel has 450 MPa or more of yield strength.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en" independent="true">
+      <claim-text>A method of preparing high strength austenitic steel having remarkable toughness in a welding heat-affected zone, the method comprising:
+<claim-text>re-heating a steel slab, including 0.8-1.5 wt% of C, 15-22 wt% of Mn, 5 wt% or less of Cr (except 0), and the balance of Fe and other inevitable impurities, and further including at least one of (a) and (b), at 1050 to 1120°C;</claim-text><claim-text>subjecting the re-heated steel slab to a hot finished rolling at 950°C or higher to obtain a hot rolling steel; and</claim-text><claim-text>cooling the hot rolling steel at the rate of 10°C/s or more to be 500°C or less:
+<claim-text>(a) Mo: 0.1-1 wt% and B: 0.001-0.02 wt%</claim-text><claim-text>(b) Ti: 0.01-0.3 wt% and N: 0.003-0.1 wt%.</claim-text></claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2940173A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2940173A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2940173A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0002.tif" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2940173A1_00004.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+  </drawings>
+  <image file="EP2940173A1.PDF" type="pdf" size="695638" pages="12" />
+</lexisnexis-patent-document>

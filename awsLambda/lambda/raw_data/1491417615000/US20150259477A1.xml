@@ -1,0 +1,1124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259477A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030134" date-changed="20151202" time-changed="021537">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121314821">
+        <country>US</country>
+        <doc-number>20150259477</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14439061</doc-number>
+        <date>20140312</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2013052124</doc-number>
+        <date>20130314</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>C08G  75/08        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>75</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C07D 331/02        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>331</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>C08G  75/08        20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>75</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C07D 331/02        20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>331</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C08G  75/06        20130101 LI20150805BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>75</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150805</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">10</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">NOVEL EPISULFIDE COMPOUND AND OPTICAL MATERIAL COMPOSITION</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>MITSUBISHI GAS CHEMICAL COMPANY, INC.</orgname>
+            <role>03</role>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kariyazono</last-name>
+            <first-name>Kazuki</first-name>
+            <address>
+              <city>Osaka</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Aoki</last-name>
+            <first-name>Takashi</first-name>
+            <address>
+              <city>Osaka</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Okada</last-name>
+            <first-name>Hiroyuki</first-name>
+            <address>
+              <city>Osaka</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Horikoshi</last-name>
+            <first-name>Hiroshi</first-name>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP14056397</doc-number>
+        <date>20140312</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014142138</doc-number>
+        <date>20140918</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151128">
+      <main-family family-id="167736973">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2902389</doc-number>
+            <kind>A1</kind>
+            <date>20150805</date>
+          </document-id>
+          <application-date>
+            <date>20140312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2902389</doc-number>
+            <kind>A4</kind>
+            <date>20151014</date>
+          </document-id>
+          <application-date>
+            <date>20140312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104768942</doc-number>
+            <kind>A</kind>
+            <date>20150708</date>
+          </document-id>
+          <application-date>
+            <date>20140312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>3561DELNP2015</doc-number>
+            <kind>A</kind>
+            <date>20151120</date>
+          </document-id>
+          <application-date>
+            <date>20150427</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201439077</doc-number>
+            <kind>A</kind>
+            <date>20141016</date>
+          </document-id>
+          <application-date>
+            <date>20140306</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014142138</doc-number>
+            <kind>A1</kind>
+            <date>20140918</date>
+          </document-id>
+          <application-date>
+            <date>20140312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5773100</doc-number>
+            <kind>B2</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20140312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150053826</doc-number>
+            <kind>A</kind>
+            <date>20150518</date>
+          </document-id>
+          <application-date>
+            <date>20140312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259477</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140312</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="167736972">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2902389</doc-number>
+            <kind>A1</kind>
+            <date>20150805</date>
+          </document-id>
+          <application-date>
+            <date>20140312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2902389</doc-number>
+            <kind>A4</kind>
+            <date>20151014</date>
+          </document-id>
+          <application-date>
+            <date>20140312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104768942</doc-number>
+            <kind>A</kind>
+            <date>20150708</date>
+          </document-id>
+          <application-date>
+            <date>20140312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>3561DELNP2015</doc-number>
+            <kind>A</kind>
+            <date>20151120</date>
+          </document-id>
+          <application-date>
+            <date>20150427</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201439077</doc-number>
+            <kind>A</kind>
+            <date>20141016</date>
+          </document-id>
+          <application-date>
+            <date>20140306</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014142138</doc-number>
+            <kind>A1</kind>
+            <date>20140918</date>
+          </document-id>
+          <application-date>
+            <date>20140312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5773100</doc-number>
+            <kind>B2</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20140312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150053826</doc-number>
+            <kind>A</kind>
+            <date>20150518</date>
+          </document-id>
+          <application-date>
+            <date>20140312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259477</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140312</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">According to a preferred embodiment of the present invention, with an optical material compound including an episulfide compound represented by formula (1) and an episulfide compound represented by formula (2), it is possible to stably and inexpensively store the episulfide compound represented by formula (2) and also provide an optical material having excellent light resistance (in formula (1), m represents an integer from 0 to 4, and n represents an integer from 0 to 2) (in formula (2), m represents an integer from 0 to 4, and n represents an integer from 0 to 2).</p>
+    <p id="p-a-00002-en" num="0000">
+      <chemistry id="chema-00001-en" num="00001">
+        <img id="imga-00001-en" he="30.65mm" wi="65.79mm" alt="embedded image" img-content="chem" file="US20150259477A1_00001.PNG" img-format="png" original="US20150259477A1-20150917-C00001.TIF" />
+      </chemistry>
+    </p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150428</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015259477A1</docdb-publication-number>
+      <docdb-application-id>444514549</docdb-application-id>
+      <new-owner>MITSUBISHI GAS CHEMICAL COMPANY, INC., JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:KARIYAZONO, KAZUKI;AOKI, TAKASHI;HORIKOSHI, HIROSHI;SIGNING DATES FROM 20150409 TO 20150414;REEL/FRAME:035516/0333</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to an episulfide compound, which is preferably usable for optical materials such as plastic lenses, prisms, optical fibers, information storage discs, filters or the like, especially for plastic lenses.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND ART</heading>
+      <p id="p-00002-en" num="0002">A plastic lens is lightweight, highly tough and easy to be dyed. Properties required of a plastic lens are low specific gravity, high transparency, and low yellow index. Optical properties required of a plastic lens are high refractive index, high Abbe number, high heat resistance, and high strength. A high refractive index allows the lens to be thinner, and a high Abbe number decreases the chromatic aberration of the lens.</p>
+      <p id="p-00003-en" num="0003">Recently, many organic compounds containing sulfur atoms produced for the purpose of providing a high refractive index and a high Abbe number have been reported. Among these compounds, polyepisulfide compounds containing sulfur atoms are known to provide a good balance of the refractive index and the Abbe number (Patent Document 1). Since polyepisulfide compounds are reactive with various types of compounds, compositions of polyepisulfide compounds and various types of compounds have been proposed for the purpose of enhancing the properties (Patent Documents 2 through 5).</p>
+      <p id="p-00004-en" num="0004">However, episulfide compounds, which are highly reactive, are difficult to be stored for a long time. A technique of storing episulfide compounds in a refrigerated state (Patent Document 6) and a technique of adding an epoxy compound containing a halogen group (Patent Document 7) have been proposed.</p>
+      <heading id="h-00003-en" level="1">PRIOR ART DOCUMENTS</heading>
+      <heading id="h-00004-en" level="1">Patent Documents</heading>
+      <p id="p-00005-en" num="0005">Patent Document 1: Japanese Laid-Open Patent Publication No. H09-110979</p>
+      <p id="p-00006-en" num="0006">Patent Document 2: Japanese Laid-Open Patent Publication No. H10-298287</p>
+      <p id="p-00007-en" num="0007">Patent Document 3: Japanese Laid-Open Patent Publication No. 2001-002783</p>
+      <p id="p-00008-en" num="0008">Patent Document 4: Japanese Laid-Open Patent Publication No. 2001-131257</p>
+      <p id="p-00009-en" num="0009">Patent Document 5: Japanese Laid-Open Patent Publication No. 2002-122701</p>
+      <p id="p-00010-en" num="0010">Patent Document 6: Japanese Laid-Open Patent Publication No. 2000-327677</p>
+      <p id="p-00011-en" num="0011">Patent Document 7: Japanese Laid-Open Patent Publication No. 2005-272418</p>
+      <heading id="h-00005-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <heading id="h-00006-en" level="1">Problems to be Solved by the Invention</heading>
+      <p id="p-00012-en" num="0012">However, storage in a refrigerated state requires a dedicated refrigeration device and thus is costly, and an epoxy compound containing a halogen group lowers the light resistance due to halogen. For these reasons, improvement has been desired.</p>
+      <p id="p-00013-en" num="0013">The present invention has an object of providing a composition for an optical material which allows a polymerizable compound such as an episulfide compound or the like to be stably and at low cost, and also provides a highly light-resistant optical material.</p>
+      <heading id="h-00007-en" level="1">Means for Solving the Problems</heading>
+      <p id="p-00014-en" num="0014">In light of such a situation, the present inventors accumulated active studies and found that the above-described object can be achieved by the present invention described below. The present invention is as follows.</p>
+      <p id="p-00015-en" num="0000">&lt;1&gt; An episulfide compound represented by formula (1) below:</p>
+      <p id="p-00016-en" num="0000">
+        <chemistry id="chem-00001-en" num="00002">
+          <img id="img-00001-en" he="13.63mm" wi="65.87mm" alt="embedded image" img-content="chem" file="US20150259477A1_00002.PNG" img-format="png" original="US20150259477A1-20150917-C00002.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00017-en" num="0000">(where m represents an integer of 0 to 4, and n represents an integer of 0 to 2). <br /> &lt;2&gt; A composition for an optical material, comprising the episulfide compound according to &lt;1&gt;, and a polymerizable compound. <br /> &lt;3&gt; The composition for an optical material according to &lt;2&gt;, wherein the episulfide compound is contained at a content of 0.001 to 5.0% by mass. <br /> &lt;4&gt; The composition for an optical material according to &lt;2&gt; or &lt;3&gt;, wherein the polymerizable compound is contained at a content of 95.0 to 99.999% by mass. <br /> &lt;5&gt; The composition for an optical material according to any one of &lt;2&gt; through &lt;4&gt;, wherein an episulfide compound represented by formula (2) below is contained as the polymerizable compound: </p>
+      <p id="p-00018-en" num="0000">
+        <chemistry id="chem-00002-en" num="00003">
+          <img id="img-00002-en" he="14.90mm" wi="60.88mm" alt="embedded image" img-content="chem" file="US20150259477A1_00003.PNG" img-format="png" original="US20150259477A1-20150917-C00003.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00019-en" num="0000">(where m represents an integer of 0 to 4, and n represents an integer of 0 to 2). <br /> &lt;6&gt; The composition for an optical material according to &lt;5&gt;, wherein the episulfide compound represented by formula (2) is contained at a content of 40 to 99.999% by mass. <br /> &lt;7&gt; A method for producing an optical material, comprising adding a polymerization catalyst to the composition for an optical material according to any one of &lt;2&gt; through <br /> &lt;6&gt; at a content of 0.0001% by mass to 10% by mass with respect to the total amount of the composition for an optical material, thereby causing polymerization and curing. <br /> &lt;8&gt; An optical material produced by the method according to &lt;7&gt;. <br /> &lt;9&gt; An optical lens, comprising the optical material according to &lt;8&gt;. <br /> &lt;10&gt; A method for producing the episulfide compound represented by formula (1) below according to &lt;1&gt;: </p>
+      <p id="p-00020-en" num="0000">
+        <chemistry id="chem-00003-en" num="00004">
+          <img id="img-00003-en" he="14.90mm" wi="64.09mm" alt="embedded image" img-content="chem" file="US20150259477A1_00004.PNG" img-format="png" original="US20150259477A1-20150917-C00004.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00021-en" num="0000">(where m represents an integer of 0 to 4, and n represents an integer of 0 to 2),</p>
+      <p id="p-00022-en" num="0015">the method comprising the steps of:</p>
+      <p id="p-00023-en" num="0016">reacting hydrogen sulfide or a polythiol compound with an epihalohydrin compound to obtain a compound represented by formula (3) below;</p>
+      <p id="p-00024-en" num="0017">reacting the obtained compound represented by formula (3) with an alkali to proceed with a dehydrohalogenation reaction to obtain a compound represented by formula (4) below; and</p>
+      <p id="p-00025-en" num="0018">reacting the obtained compound represented by formula (4) with a thiating agent to obtain the compound represented by formula (1) above:</p>
+      <p id="p-00026-en" num="0000">
+        <chemistry id="chem-00004-en" num="00005">
+          <img id="img-00004-en" he="15.66mm" wi="65.70mm" alt="embedded image" img-content="chem" file="US20150259477A1_00005.PNG" img-format="png" original="US20150259477A1-20150917-C00005.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00027-en" num="0000">(where X represents a halogen atom, m represents an integer of 0 to 4, and n represents an integer of 0 to 2);</p>
+      <p id="p-00028-en" num="0000">
+        <chemistry id="chem-00005-en" num="00006">
+          <img id="img-00005-en" he="14.90mm" wi="63.25mm" alt="embedded image" img-content="chem" file="US20150259477A1_00006.PNG" img-format="png" original="US20150259477A1-20150917-C00006.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00029-en" num="0000">(where X represents a halogen atom, m represents an integer of 0 to 4, and n represents an integer of 0 to 2).</p>
+      <heading id="h-00008-en" level="1">Advantageous Effect of the Invention</heading>
+      <p id="p-00030-en" num="0019">According to the present invention, a composition for an optical material is provided which allows a polymerizable compound such as an episulfide compound or the like, used to produce an optical material having a high refractive index, to be stored stably and at low cost, and also provides a highly light-resistant optical material.</p>
+      <heading id="h-00009-en" level="1">EMBODIMENTS FOR CARRYING OUT THE INVENTION</heading>
+      <p id="p-00031-en" num="0020">Hereinafter, the present invention will be described in detail.</p>
+      <p id="p-00032-en" num="0021">An embodiment according to the present invention relates to an episulfide compound represented by formula (1) shown above, and another embodiment according to the present invention relates to a composition for an optical material including the episulfide compound represented by formula (1) and a polymerizable compound. Examples of the polymerizable compound include episulfide compounds, vinyl compounds, methacrylic compounds, acrylic compounds, allyl compounds and the like. Episulfide compounds are preferable, and episulfide compounds represented by formula (2) shown above are more preferable.</p>
+      <p id="p-00033-en" num="0022">An episulfide compound represented by formula (1) is contained in a composition for an optical material according to the present invention preferably at a content of 0.001 to 5% by mass, more preferably at a content of 0.005 to 3.0% by mass, and especially preferably at a content of 0.01 to 1.0% by mass. When the content of the episulfide compound represented by formula (1) is less than 0.001% by mass, a sufficient effect may not be provided. When the content of the episulfide compound represented by formula (1) exceeds 5.0% by mass, the heat resistance may be decreased. A polymerizable compound is contained in the composition for an optical material according to the present invention preferably at a content of 95.0 to 99.999% by mass, more preferably at a content of 97.0 to 99.995% by mass, and especially preferably at a content of 99.0 to 99.99% by mass. In the case where an episulfide compound represented by formula (2) is used as the polymerizable compound, the episulfide compound represented by formula (2) is contained in the composition for an optical material preferably at a content of 40 to 99.999% by mass, more preferably at a content of 50 to 99.995% by mass, and especially preferably at a content of 60 to 99.99% by mass.</p>
+      <p id="p-00034-en" num="0023">Hereinafter, an episulfide compound represented by formula (1) and an episulfide compound represented by formula (2) will be described in detail.</p>
+      <p id="p-00035-en" num="0024">An embodiment according to the present invention relates to an episulfide compound represented by formula (1) shown above. The episulfide compound represented by formula (1) is used for a composition for an optical material, to which another embodiment according to the present invention relates. Regarding a compound represented by formula (1), it is preferable that m is an integer of 0 to 2 and n is an integer of 0 or 1; it is more preferable that m is 0 and n is 1, or that n is 0; it is mostly preferable that n is 0. Episulfide compounds represented by formula (1) may be used independently or as a mixture of two or more thereof.</p>
+      <p id="p-00036-en" num="0025">Specific examples of the episulfide compound represented by formula (1) include 1-mercapto-2-hydroxy-6,7-epithio-4-thiaheptane, 1-mercapto-2-hydroxy-7,8-epithio-4,5-dithiaoctane, 1-mercapto-2-hydroxy-8,9-epithio-4,6-dithianonane, 1-mercapto-2-hydroxy-9,10-epithio-4,7-dithiadecane, 1-mercapto-2-hydroxy-12,13-epithio-4,7,10-trithiatridecane, and the like. Among these, 1-mercapto-2-hydroxy-6,7-epithio-4-thiaheptane and 1-mercapto-2-hydroxy-7,8-epithio-4,5-dithiaoctane are preferable.</p>
+      <p id="p-00037-en" num="0026">Hereinafter, a method for producing an episulfide compound represented by formula (1) according to the present invention will be described. The production method is not limited to the following.</p>
+      <p id="p-00038-en" num="0027">A method for producing an episulfide compound represented by formula (1) according to the present invention is as follows. Hydrogen sulfide or a polythiol compound and an epihalohydrin compound are reacted to obtain a compound represented by formula (3) shown below. Next, the obtained compound represented by formula (3) is reacted with an alkali to proceed with a dehydrohalogenation reaction to obtain a compound represented by formula (4) shown below. Then, the obtained compound represented by formula (4) is reacted with a thiating agent such as thiourea, thiocyanate or the like to obtain an episulfide compound represented by formula (1).</p>
+      <p id="p-00039-en" num="0000">
+        <chemistry id="chem-00006-en" num="00007">
+          <img id="img-00006-en" he="15.66mm" wi="65.70mm" alt="embedded image" img-content="chem" file="US20150259477A1_00007.PNG" img-format="png" original="US20150259477A1-20150917-C00007.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00040-en" num="0000">(In the formula, X is a halogen atom, m is an integer of 0 to 4, and n is an integer of 0 to 2).</p>
+      <p id="p-00041-en" num="0000">
+        <chemistry id="chem-00007-en" num="00008">
+          <img id="img-00007-en" he="14.90mm" wi="63.25mm" alt="embedded image" img-content="chem" file="US20150259477A1_00008.PNG" img-format="png" original="US20150259477A1-20150917-C00008.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00042-en" num="0000">(In the formula, X is a halogen atom, m is an integer of 0 to 4, and n is an integer of 0 to 2).</p>
+      <p id="p-00043-en" num="0028">A method for producing the compound represented by formula (3) will be described.</p>
+      <p id="p-00044-en" num="0029">The compound represented by formula (3) is obtained by a reaction of hydrogen sulfide or a polythiol compound and an epihalohydrin compound. Example of the polythiol compound include methanediol, 1,2-dimercaptoethane, 1,3-dimercaptopropane, 1,4-dimercaptobutane, bis(2-mercaptoethyl)sulfide, and the like. Among hydrogen sulfide and the polythiol compounds, hydrogen sulfide, 1,2-dimercaptoethane, and bis(2-mercaptoethyl)sulfide are preferable. Hydrogen sulfide is most preferable. Examples of the epihalohydrin compound include epichlorohydrin and epibromohydrin, and the like. Epichlorohydrin is preferable.</p>
+      <p id="p-00045-en" num="0030">For reacting epihalohydrin and hydrogen sulfide or a polythiol compound, it is preferable to use a catalyst. Examples of the catalyst include inorganic acid, organic acid, Lewis acid, silicic acid, boric acid, quaternary ammonium salt, inorganic base, organic salt, and the like. Organic acid, quaternary ammonium salt, and inorganic base are preferable. Quaternary ammonium salt and inorganic base are more preferable. Specific examples thereof include tetramethylammoniumchloride, tetramethylammoniumbromide, tetramethylammoniumacetate, tetraethylammoniumchloride, tetraethylammoniumbromide, tetraethylammoniumacetate, tetrabutylammoniumchloride, tetrabutylammoniumbromide, tetraoctylammoniumacetate, tetrahexylammoniumchloride, tetrahexylammoniumbromide, tetrahexylammoniumacetate, tetraoctylammoniumchloride, tetraoctylammoniumbromide, tetraoctylammoniumacetate, sodium hydroxide, potassium hydroxide, magnesium hydroxide, calcium hydroxide, and the like. Among these, sodium hydroxide, potassium hydroxide, and calcium hydroxide are preferable.</p>
+      <p id="p-00046-en" num="0031">There is no specific limitation on the amount of the catalyst as long as the reaction proceeds properly. The amount of the catalyst with respect to 1 mol of epihalohydrin is preferably 0.00001 to 0.5 mol, and more preferably 0.001 to 0.1 mol. When the amount of the catalyst is less than 0.00001 mol, the reaction does not proceed or is too slow, which is not preferable. When the amount of the catalyst exceeds 0.5 mol, the reaction proceeds too fast to control, which is not preferable, either.</p>
+      <p id="p-00047-en" num="0032">There is no specific limitation on the ratio of epihalohydrin and hydrogen sulfide or a polythiol compound as long as the reaction proceeds properly. The molar ratio of epihalohydrin with respect to a thiol group (SH group) of the polythiol compound or H of hydrogen sulfide is preferably 0.3 to 4, more preferably 0.4 to 3, and still more preferably 0.5 to 2. When the ratio is less than 0.3 or exceeds 4, excessive amounts of the materials are left unreacted, which is not economically preferable.</p>
+      <p id="p-00048-en" num="0033">It is not necessary to use a solvent. In the case where a solvent is used, any of water, alcohols, ethers, ketones, aromatic hydrocarbons, and halogenated hydrocarbons is usable. Specific examples thereof include water, methanol, ethanol, propanol, isopropanol, diethylether, tetrahydrofuran, dioxane, methylcellosolve, ethylcellosolve, butylcellosolve, methylethylketone, acetone, benzene, toluene, xylene, dichloroethane, chloroform, chlorobenzene, and the like. Among these, water, methanol, and toluene are preferable. Water and methanol are most preferable.</p>
+      <p id="p-00049-en" num="0034">There is no specific limitation on the reaction temperature as long as the reaction proceeds properly. The reaction temperature is preferably −10° C. to 80° C., more preferably 0° C. to 50° C., and still more preferably 0° C. to 40° C. There is no specific limitation on the reaction time. The reaction time is usually 20 hours or shorter. When the reaction temperature is lower than −10° C., the reaction does not proceed or is too slow, which is not preferable. When the reaction temperature exceeds 80° C., the reaction product is turned into oligomer and has a high molecular weight, which is not preferable.</p>
+      <p id="p-00050-en" num="0035">A compound represented by formula (3) and having a disulfide bond with m=0 and n=1 may be obtained as follows. Epihalohydrin and hydrogen sulfide are reacted to obtain a compound containing halogeno group, alcoholic hydroxyl group, and thiol group (SH group), and then the SH groups are subjected to an intermolecular reaction by use of a halogen compound and a basic compound and thus are turned into disulfide. Specific examples of the halogen compound usable for turning SH groups into disulfide include chlorine, bromine, and iodine. Bromine and iodine are preferable. The amount of the halogen compound used with respect to 1 mol of SH group is 0.1 to 5 mol, preferably 0.2 to 3 mol, and more preferably 0.3 to 1 mol. When the amount is less than 0.1 mol or exceeds 5 mol, excessive amounts of the materials are left unreacted, which is not economically preferable.</p>
+      <p id="p-00051-en" num="0036">Specific examples of the basic compound include sodium carbonate, potassium carbonate, magnesium carbonate, calcium carbonate, sodium hydrogen carbonate, potassium hydrogen carbonate, sodium hydroxide, potassium hydroxide, magnesium hydroxide, calcium hydroxide, and the like. Sodium carbonate, potassium carbonate, magnesium carbonate, calcium carbonate, sodium hydrogen carbonate, and potassium hydrogen carbonate are preferable.</p>
+      <p id="p-00052-en" num="0037">The amount of the basic compound used with respect to 1 mol of SH group is 0.1 to 10 mol, preferably 0.2 to 5 mol, and more preferably 0.3 to 3 mol. When the amount is less than 0.1 mol or exceeds 10 mol, excessive amounts of the materials are left unreacted, which is not economically preferable.</p>
+      <p id="p-00053-en" num="0038">It is not necessary to use a solvent. In the case where a solvent is used, any of water, alcohols, ethers, ketones, aromatic hydrocarbons, and halogenated hydrocarbons is usable. Specific examples thereof include water, methanol, ethanol, propanol, isopropanol, diethylether, tetrahydrofuran, dioxane, methylcellosolve, ethylcellosolve, butylcellosolve, methylethylketone, acetone, benzene, toluene, xylene, dichloroethane, chloroform, chlorobenzene, and the like. Among these, water, methanol, and toluene are preferable. Water and methanol are most preferable.</p>
+      <p id="p-00054-en" num="0039">There is no specific limitation on the reaction temperature as long as the reaction proceeds properly. The reaction temperature is preferably −10° C. to 80° C., more preferably 0° C. to 50° C., and still more preferably 0° C. to 40° C. There is no specific limitation on the reaction time. The reaction time is usually 20 hours or shorter. When the reaction temperature is lower than −10° C., the reaction does not proceed or is too slow, which is not preferable. When the reaction temperature exceeds 80° C., the reaction product is turned into oligomer and has a high molecular weight, which is not preferable.</p>
+      <p id="p-00055-en" num="0040">A method for producing the compound represented by formula (4) will be described.</p>
+      <p id="p-00056-en" num="0041">The compound represented by formula (4) is obtained by reacting the compound represented by formula (3) with an alkali. Specific examples of the alkali include ammonia, hydroxide of alkaline metal and alkaline earth metal, carbonate of alkaline metal and alkaline earth metal, hydrogencarbonate of alkaline metal, ammonium salt of alkaline metal and alkaline earth metal, and the like. These may be used in the form of an aqueous solution. Sodium hydroxide, potassium hydroxide, calcium hydroxide, sodium carbonate, potassium carbonate, ammonium carbonate, sodium hydrogen carbonate, and potassium hydrogen carbonate are preferable. Sodium hydroxide and potassium hydroxide are more preferable.</p>
+      <p id="p-00057-en" num="0042">The amount of the alkali depends on the compound represented by formula (3) and thus is not uniquely defined. Usually, the amount of the alkali used with respect to the halohydrin equivalent in the compound represented by formula (3) is 0.40 to 0.60 equivalent, preferably 0.42 to 0.57 equivalent, and more preferably 0.45 to 0.55 equivalent. When the amount of the alkali is too small or too large, the yield is decreased.</p>
+      <p id="p-00058-en" num="0043">There is no specific limitation on the type of solvent used for the reaction, and any solvent is usable. Preferably, water, alcohols, ethers, ketones, aliphatic hydrocarbons, aromatic hydrocarbons, and halogenated hydrocarbons are usable. These solvents may be used independently or as a mixture thereof. Specific examples of the alcohols include methanol, ethanol, propanol, isopropanol, and the like. Specific examples of the ethers include diethylether, tetrahydrofuran, dioxane, and the like. Specific examples of the ketones include methylcellosolve, ethylcellosolve, butylcellosolve, methylethylketone, acetone, and the like. Specific examples of the aliphatic hydrocarbons include hexane, heptane, octane, and the like. Specific examples of the aromatic hydrocarbons include benzene, toluene, xylene, and the like. Specific examples of the halogenated hydrocarbons include dichloroethane, chloroform, chlorobenzene, and the like. Water and alcohols are more preferable. Specific examples thereof are water, methanol, propanol, and isopropanol. Among these, water and methanol are preferable.</p>
+      <p id="p-00059-en" num="0044">There is no specific limitation on the amount of the solvent. Usually, the amount of the solvent used with respect to 100 parts by mass of the compound represented by formula (3) is 5 to 1000 parts by mass, preferably 50 to 500 parts by mass, and more preferably 100 to 300 parts by mass.</p>
+      <p id="p-00060-en" num="0045">There is no specific limitation on the reaction temperature as long as the reaction proceeds properly. The reaction temperature is preferably −10° C. to 80° C., more preferably 0° C. to 50° C., and still more preferably 0° C. to 30° C. There is no specific limitation on the reaction time. The reaction time is usually 20 hours or shorter. When the reaction temperature is lower than −10° C., the reaction does not proceed or is too slow, which is not preferable. When the reaction temperature exceeds 80° C., the reaction product is turned into oligomer and has a high molecular weight, which is not preferable.</p>
+      <p id="p-00061-en" num="0046">In more detail, it is preferable to drip the compound represented by formula (3) onto a mixed solvent of an organic solvent and an aqueous solution of a basic compound to cause a reaction. There is no specific limitation on the method for dripping the compound represented by formula (3). The compound may be dripped as it is, may be dripped after being dissolved in a solvent, or without being isolated after being synthesized.</p>
+      <p id="p-00062-en" num="0047">Among the compounds represented by formula (4), a compound with n=0 can be obtained from hydrosulfide metal and epihalohydrin.</p>
+      <p id="p-00063-en" num="0048">Hydrosulfide metal is added to epihalohydrin to cause a reaction. The addition is performed such that the molar ratio of epihalohydrin/hydrosulfide metal is 5 to 20, preferably 5 to 15, and more preferably 5 to 10. The molar ratio herein is not the molar ratio in an actual reaction system, but is a molar ratio between the amount of epihalohydrin initially used for the reaction and the amount of hydrosulfide metal finally incorporated into the mixture.</p>
+      <p id="p-00064-en" num="0049">When the molar ratio of epihalohydrin/hydrosulfide metal is less than 5, a large amount of oligomer is generated and thus the yield may be decreased. By contrast, when the molar ratio of epihalohydrin/hydrosulfide metal exceeds 20, an excessive amount of epihalohydrin is used, which is not economically preferable.</p>
+      <p id="p-00065-en" num="0050">It is preferable that epihalohydrin is added to hydrosulfide metal gradually, instead of at a time, so that the amount of oligomer to be generated is small.</p>
+      <p id="p-00066-en" num="0051">It is not necessary to use a solvent if epihalohydrin and hydrosulfide metal are reacted without a solvent. It is preferable to use a solvent. In the case where a solvent is used, any of water, alcohols, ethers, aliphatic hydrocarbons, aromatic hydrocarbons, and halogenated hydrocarbons is preferably usable. Water and alcohols are more preferable, water and methanol are still more preferable, and methanol is most preferable. These solvents may be used independently or as a mixture thereof</p>
+      <p id="p-00067-en" num="0052">It is preferable to use a solvent in order to dissolve hydrosulfide metal. More specifically, it is preferable to react epihalohydrin with hydrosulfide metal dissolved in a solvent. It is more preferable to drip hydrosulfide metal dissolved in a solvent onto epihalohydrin.</p>
+      <p id="p-00068-en" num="0053">The reaction temperature is −5° C. to 30° C., preferably 0° C. to 20° C., and most preferably 5° C. to 15° C. When the reaction temperature is lower than −5° C., the reaction rate is decreased, which is not economically preferable. When the reaction temperature exceeds 30° C., the amount of the episulfide compound represented by formula (2) is increased, which is not preferable.</p>
+      <p id="p-00069-en" num="0054">It is preferable to, after the addition of hydrosulfide metal is finished, stir the substances. The substances are stirred preferably for 1 minute to 10 hours, more preferably for 5 minutes to 5 hours, and still more preferably for 10 minutes to 3 hours.</p>
+      <p id="p-00070-en" num="0055">After the epihalohydrin and hydrosulfide metal start reacting, an alkali may be added to promote the reaction. Specific examples of the alkali include ammonia, hydroxide of alkaline metal and alkaline earth metal, carbonate of alkaline metal and alkaline earth metal, hydrogencarbonate of alkaline metal, ammonium salt of alkaline metal and alkaline earth metal, and the like. These may be used in the form of an aqueous solution. Sodium hydroxide, potassium hydroxide, calcium hydroxide, sodium carbonate, potassium carbonate, ammonium carbonate, sodium hydrogen carbonate, and potassium hydrogen carbonate are preferable. Sodium hydroxide and potassium hydroxide are more preferable.</p>
+      <p id="p-00071-en" num="0056">A method for producing the episulfide compound represented by formula (1) from the compound represented by formula (4) will be described.</p>
+      <p id="p-00072-en" num="0057">The compound represented by formula (4) and a thiating agent such as thiourea, thiocyanate or the like are reacted to obtain the episulfide represented by formula (1). Preferable thiating agents include thiourea, sodium thiocyanate, potassium thiocyanate, and ammonium thiocyanate. Thiourea is especially preferable. The thiating agent is used in a mol corresponding to a sum of epoxy and halogen in the compound represented by formula (4), namely, in a theoretical amount. In the case where the reaction rate or purity is considered important, the thiating agent is used in a mol in the range of the theoretical amount to 2.5 times as large as the theoretical amount, preferably in a mol in the range of 1.3 times as large as the theoretical amount to 2.0 times as large as the theoretical amount, and more preferably in a mol in the range of 1.5 times as large as the theoretical amount to 2.0 times as large as the theoretical amount. There is no specific limitation on the type of solvent as long as the episulfide compound represented by formula (1) and the compound represented by formula (4) are dissolved. Specific examples of the solvent include alcohols such as methanol, ethanol, and the like; ethers such as diethylether, tetrahydrofuran, dioxane, and the like; hydroxyethers such as methylcellosolve, ethylcellosolve, butylcellosolve, and the like; aromatic hydrocarbons such as benzene, toluene, and the like; halogenation hydrocarbons such as dichloroethane, chloroform, chlorobenzene, and the like; water; and the like. Alcohols, aromatic hydrocarbons, and water are preferable. Methanol and toluene are more preferable. These solvents may be used independently or as a mixture thereof.</p>
+      <p id="p-00073-en" num="0058">There is no specific limitation on the reaction temperature as long as the reaction proceeds properly. The reaction temperature is usually 10° C. to 50° C. When the reaction temperature is lower than 10° C., the reaction rate is decreased, and thiourea is not dissolved sufficiently and thus the reaction does not proceed sufficiently. When the reaction temperature exceeds 50° C., generation of a polymer is conspicuous.</p>
+      <p id="p-00074-en" num="0059">It is preferable to add acid, acidic anhydride, or ammonium salt at the time of reaction. Specific examples of the usable acid and acidic anhydride include acidic compounds such as nitric acid, hydrochloric acid, perchloric acid, hypochlorous acid, chlorine dioxide, hydrofluoric acid, sulfuric acid, oleum, sulfuryl chloride, boric acid, arsenic acid, arsenous acid, pyroarsenic acid, phosphoric acid, phosphorous acid, hypophosphorous acid, phosphorus oxychloride, phosphorus oxybromide, phosphorus sulfide, phosphorus trichloride, phosphorus tribromide, phosphorus pentachloride, hydrocyanic acid, chromic acid, dinitrogen pentoxide, sulfur trioxide, boron oxide, arsenic pentoxide, phosphorus pentoxide, chromic anhydride, silica gel, silica alumina, aluminum chloride, zinc chloride, and the like; organic carboxylic acids such as formic acid, acetic acid, peracetic acid, thioacetic acid, oxalic acid, tartaric acid, propionic acid, butyric acid, succinic acid, valeric acid, capronic acid, caprylic acid, naphthenic acid, methylmercaptopropionate, malonic acid, glutaric acid, adipic acid, cyclohexanecarboxylic acid, thiodipropionic acid, dithiodipropionic acid-acetic acid, maleic acid, benzoic acid, phenylacetic acid, o-toluic acid, m-toluic acid, p-toluic acid, salicylic acid, 2-methoxybenzoic acid, 3-methoxybenzoic acid, benzoylbenzoic acid, phthalic acid, isophthalic acid, terephthalic acid, salicylic acid, benzilic acid, α-naphthalenecarboxylic acid, β-naphthalenecarboxylic acid, acetic anhydride, propionic anhydride, butyric anhydride, succinic anhydride, maleic anhydride, benzoic anhydride, phthalic anhydride, pyromellitic anhydride, trimellitic anhydride, trifluoroacetic anhydride, and the like; organic phosphorus compounds including phosphates such as mono-, di-, and trimethylphosphate, mono-, di-, and triethyiphosphate, mono-, di-, and triisobutylphosphate, mono-, di-, and tributylphosphate, mono-, di-, and triilaurylphosphate, and the like, including phosphites obtained as a result of the phosphate part of the above-listed substances being changed into phosphite; and also including dialkyldithiophosphate represented by dimethyldithiophosphate; phenols such as phenol, catechol, t-butylcatechol, 2,6-di-t-butylcresol, 2,6-di-t-butylethylphenol, resorcinol, hydroquinone, phloroglucin, pyrogallol, cresol, ethylphenol, butylphenol, nonylphenol, hydroxyphenylacetic acid, hydroxyphenylpropionic acid, amide hydroxyphenylacetate, methyl hydroxyphenylacetate, ethyl hydroxyphenylacetate, hydroxyphenetyl alcohol, hydroxyphenetyl amine, hydroxybenzaldehyde, phenylphenol, bisphenol A, 2,2′-methylene-bis (4-methyl-6-t-butylphenol), bisphenol F, bisphenol S, α-naphthol, β-naphthol, aminophenol, chlorophenol, 2,4,6-trichlorophenol, and the like; sulfonic acids such as methanesulfonic acid, ethanesulfonic acid, butanesulfonic acid, dodecanesulfonic acid, benzenesulfonic acid, o-toluenesulfonic acid, m-toluenesulfonic acid, p-toluenesulfonic acid, ethylbenzenesulfonic acid, butylbenzenesulfonic acid, dodecylbenzenesulfonic acid, p-phenolsulfonic acid, o-cresolsulfonic acid, metanilic acid, sulphanilic acid, 4B-acid, diaminostilbenesulfonic acid, biphenylsulfonic acid, α-naphthalenesulfonic acid, β-naphthalenesulfonic acid, peri acid, Laurent's acid, phenyl J acid, and the like; etc. A plurality of these may be used in combination. Preferable examples of the acid and acidic anhydride are organic carboxylic acids such as formic acid, acetic acid, peracetic acid, thioacetic acid, oxalic acid, tartaric acid, propionic acid, butyric acid, succinic acid, valeric acid, capronic acid, caprylic acid, naphthenic acid, methylmercaptopropionate, malonic acid, glutaric acid, adipic acid, cyclohexanecarboxylic acid, thiodipropionic acid, dithiodipropionic acid-acetic acid, maleic acid, benzoic acid, phenylacetic acid, o-toluic acid, m-toluic acid, p-toluic acid, salicylic acid, 2-methoxybenzoic acid, 3-methoxybenzoic acid, benzoylbenzoic acid, phthalic acid, isophthalic acid, terephthalic acid, salicylic acid, benzilic acid, α-naphthalenecarboxylic acid, β-naphthalenecarboxylic acid, acetic anhydride, propionic anhydride, butyric anhydride, succinic anhydride, maleic anhydride, benzoic anhydride, phthalic anhydride, pyromellitic anhydride, trimellitic anhydride, trifluoroacetic anhydride, and the like. More preferable examples are acidic anhydrides such as acetic anhydride, propionic anhydride, butyric anhydride, succinic anhydride, maleic anhydride, benzoic anhydride, phthalic anhydride, pyromellitic anhydride, trimellitic anhydride, trifluoroacetic anhydride, and the like. Acetic anhydrides are most preferable. The amount of these materials with respect to the total amount of the reaction solution is usually in the range of 0.001% by mass to 10% by mass, and preferably in the range of 0.01% by mass to 5% by mass. When the amount is less than 0.001% by mass, generation of a polymer is conspicuous and the reaction yield is decreased. When the amount exceeds 10% by mass, the yield may be significantly decreased. Specific examples of the ammonium salt include ammonium chloride, ammonium bromide, ammonium iodide, ammonium formate, ammonium acetate, ammonium propionate, ammonium benzoate, ammonium sulfate, ammonium nitrate, ammonium carbonate, ammonium phosphate, ammonium hydroxide, and the like. Ammonium nitrate, ammonium sulfate, and ammonium chloride are more preferable. Ammonium nitrate is most preferable.</p>
+      <p id="p-00075-en" num="0060">For a composition for an optical material according to the present invention, the episulfide compound represented by formula (2) is preferable usable as a polymerizable compound. Specific examples of the episulfide compound represented by formula (2) include episulfides such as bis(β-epithiopropyl)sulfide, bis(β-epithiopropyl)disulfide, bis(β-epithiopropyl)methane, 1,2-bis(β-epithiopropylthio)ethane, 1,3-bis(β-epithiopropylthio)propane, 1,4-bis(β-epithiopropylthio)butane, and the like. The episulfide compounds represented by formula (2) may be used independently or as a mixture of two or more thereof.</p>
+      <p id="p-00076-en" num="0061">Among these, bis(β-epithiopropyl)sulfide (n=0 in formula (2)) and bis((3-epithiopropyl)disulfide (m=0, n=1 in formula (2)) are more preferable. Bis((3-epithiopropyl)sulfide (n=0 in formula (2)) is most preferable.</p>
+      <p id="p-00077-en" num="0062">The composition for an optical material according to the present invention may contain a polythiol compound as a polymerizable compound in order to improve the color tone, during heating, of the resin to be obtained. The content of the polythiol compound is, where the total amount of the composition for an optical material is 100% by mass, usually 1 to 25% by mass, preferably 2 to 25% by mass, and especially preferably 5 to 20% by mass. When the content of the polythiol compound is less than 1% by mass, the lens may be colored yellow during molding. When the content of the polythiol compound exceeds 25%, the heat resistance may be decreased. The polythiol compounds usable in the present invention may be used independently or as a mixture of two or more thereof.</p>
+      <p id="p-00078-en" num="0063">Specific examples thereof include methanediol, methanetriol, 1,2-dimercaptoethane, 1,2-dimercaptopropane, 1,3-dimercaptopropane, 2,2-dimercaptopropane, 1,4-dimercaptobutane, 1,6-dimercaptohexane, bis(2-mercaptoethyl)ether, bis(2-mercaptoethyl)sulfide, 1,2-bis(2-mercaptoethyloxy)ethane, 1,2-bis(2-mercaptoethylthio)ethane, 2,3-dimercapto-1-propanol, 1,3-dimercapto-2-propanol, 1,2,3-trimercaptopropane, 2-mercaptoethyl-1,3-dimercaptopropane, 2-mercaptomethyl-1,4-dimercaptobutane, 2-(2-mercaptoethylthio)-1,3-dimercaptopropane, 4-mercaptomethyl-1,8-dimercapto-3,6-dithiaoctane, 2,4-dimercaptomethyl-1,5-dimercapto-3-thiapentane, 4,8-dimercaptomethyl-1,11-dimercapto-3,6,9-trithiaundecane, 4,7-dimercaptomethyl-1,11-dimercapto-3,6,9-trithiaundecane, 5,7-dimercaptomethyl-1,11-dimercapto-3,6,9-trithiaundecane, 1,1,1-tris(mercaptomethyl)propane, tetrakis(mercaptomethyl)methane, ethyleneglycolbis(2-mercaptoacetate), ethyleneglycolbis(3-mercaptopropionate), diethyleneglycolbis(2-mercaptoacetate), diethyleneglycolbis(3-mercaptopropionate), 1,4-buthanediolbis(2-mercaptoacetate), 1,4-buthanediolbis(3-mercaptopropionate), trimethylolpropanetristhioglycolate, trimethylolpropanetrismercaptopropionate, pentaerythritoltetrakisthioglycolate, pentaerythritoltetrakismercaptopropionate, 1,2-dimercaptocyclohexane, 1,3-dimercaptocyclohexane, 1,4-dimercaptocyclohexane, 1,3-bis(mercaptomethyl)cyclohexane, 1,4-bis(mercaptomethyl)cyclohexane, 2,5-dimercaptomethyl-1,4-dithiane, 2,5-dimercaptomethyl-1,4-dithiane, 2,5-bis(2-mercaptoethylthiomethyl)-1,4-dithiane, 2,5-dimercaptomethyl-1-thiane, 2,5-dimercaptoethyl-1-thiane, 2,5-dimercaptomethylthiophene, 1,2-dimercaptobenzene, 1,3-dimercaptobenzene, 1,4-dimercaptobenzene, 1,3-bis(mercaptomethyl)benzene, 1,4-bis(mercaptomethyl)benzene, 2,2-dimercaptobiphenyl, 4,4′-dimercaptobiphenyl, bis(4-mercaptophenyl)methane, 2,2-bis(4-mercaptophenyl)propane, bis(4-mercaptophenyl)ether, bis(4-mercaptophenyl)sulfide, bis(4-mercaptophenyl)sulfone, bis(4-mercaptomethylphenyl)methane, 2,2-bis(4-mercaptomethylphenyl)propane, bis(4-mercaptomethylphenyl)ether, bis(4-mercaptomethylphenyl)sulfide, 2.5-dimercapto-1,3,4-thiadiazole, 3,4-thiophenediol, 1,1,3,3-tetrakis(mercaptomethylthio)propane, and the like.</p>
+      <p id="p-00079-en" num="0064">Specific preferable examples among these are bis(2-mercaptoethyl)sulfide, 2,5-dimercaptomethyl-1,4-dithiane, 1,3-bis(mercaptomethyl)benzene, 1,4-bis(mercaptomethyl)benzene, 4-mercaptomethyl-1,8-dimercapto-3,6-dithiaoctane, 4,8-dimercaptomethyl-1,11-dimercapto-3,6,9-trithiaundecane, 4,7-dimercaptomethyl-1,11-dimercapto-3,6,9-trithiaundecane, 5,7-dimercaptomethyl-1,11-dimercapto-3,6,9-trithiaundecane, 1,1,3,3-tetrakis(mercaptomethylthio)propane, pentaerythritoltetrakismercaptopropionate, pentaerythritoltetrakisthioglycolate, trimethylolpropanetristhioglycolate, and trimethylolpropanetrismercaptopropionate. More preferable examples are bis(2-mercaptoethyl)sulfide, 2,5-bis(2-mercaptomethyl)-1,4-dithiane, 4-mercaptomethyl-1,8-dimercapto-3,6-dithiaoctane, 1,3-bis(mercaptomethyl)benzene, pentaerythritoltetrakismercaptopropionate, and pentaerythritoltetrakisthioglycolate. Most preferable examples are bis(2-mercaptoethyl)sulfide, 2,5-dimercaptomethyl-1,4-dithiane, and 4-mercaptomethyl-1,8-dimercapto-3,6-dithiaoctane.</p>
+      <p id="p-00080-en" num="0065">The composition for an optical material according to the present invention may contain a polyisocyanate compound as a polymerizable compound in order to improve the strength of the resin to be obtained. The content of the polyisocyanate compound is, where the total amount of the composition for an optical material is 100% by mass, usually 1 to 25% by mass, preferably 2 to 25% by mass, and especially preferably 5 to 20% by mass. When the content of the polyisocyanate compound is less than 1% by mass, the strength may be decreased. When the content of the polyisocyanate compound exceeds 25%, the color tone may be decreased. The polyisocyanate compounds usable in the present invention may be used independently or as a mixture of two or more thereof</p>
+      <p id="p-00081-en" num="0066">Specific examples thereof include diethylenediisocyanate, tetramethylenediisocyanate, hexamethylenediisocyanate, trimethylhexamethylenediisocyanate, cyclohexanediisocyanate, 1,3-bis(isocyanatemethyl)cyclohexane, 1,4-bis(isocyanatemethyl)cyclohexane, isophoronediisocyanate, 2,6-bis(isocyanatemethyl)decahydronaphthalene, Lysinetriisocyanate, tolylenediisocyanate, o-tolidinediisocyanate, diphenylmethanediisocyanate, diphenyletherdiisocyanate, 3-(2′-isocyanatecyclohexyl)propylisocyanate, isopropylidenebis(cyclohexylisocyanate), 2,2′-bis(4-isocyanatephenyl)propane, triphenylmethanetriisocyanate, bis(diisocyanatetolyl)phenylmethane, 4,4′,4″-triisocyanate-2,5-dimethoxyphenylamine, 3,3′-dimethoxybenzine-4,4′-diisocyanate, 1,3-phenylenediisocyanate, 1,4-phenylenediisocyanate, 4,4′-diisocyanatebiphenyl, 4,4′-diisocyanate3,3′-dimethylbiphenyl, dicyclohexylmethane-4,4′-diisocyanate, 1,1′-methylenebis(4-isocyanatebenzene), 1,1′-methylenebis(3-methyl-4-isocyanatebenzene), m-xylylenediisocyanate, p-xylylenediisocyanate, m-tetramethylxylylenediisocyanate, p-tetramethylxylylenediisocyanate, 1,3-bis(2-isocyanate-2-propyl)benzene, 2,6-bis(isocyanatemethyl)naphthalene, 1,5-naphthalenediisocyanate, bis(isocyanatemethyl)tetrahydrodicyclopentadiene, bis(isocyanatemethyl)dicyclopentadiene, bis(isocyanatemethyl)tetrahydrothiophene, bis(isocyanatemethyl)norbornene, bis(isocyanatemethyl)adamantane, thiodiethyl isocyanate, thiodipropyldiisocyanate, thiodihexyldiisocyanate, bis[(4-isocyanatemethyl)phenyl]sulfide, 2,5-diisocyanate-1,4-dithiane, 2,5-diisocyanatemethyl-1,4-dithiane, 2,5-diisocyanatemethylthiophene, dithiodiethyldiisocyanate, dithiodipropyldiisocyanate, and the like.</p>
+      <p id="p-00082-en" num="0067">The polyisocyanate compounds usable in the present invention are not limited to the above, and these may be used independently or as a mixture of two or more thereof</p>
+      <p id="p-00083-en" num="0068">Specific preferable examples among these are isophoronediisocyanate, tolylenediisocyanate, diphenylmethanediisocyanate, hexamethylenediisocyanate, m-xylylenediisocyanate, p-xylylenediisocyanate, m-tetramethylxylylenediisocyanate, p-tetramethylxylylenediisocyanate, 1,3-bis(isocyanatemethyl)cyclohexane, 1,4-bis(isocyanatemethyl)cyclohexane, bis(isocyanatemethyl)norbornene, and 2,5-diisocyanatemethyl-1,4-dithiane. At least one compound selected from these is preferably usable. Among these, isophoronediisocyanate, tolylenediisocyanate, diphenylmethanediisocyanate, hexamethylenediisocyanate, 1,3-bis(isocyanatemethyl)cyclohexane, and m-xylylenediisocyanate are more preferable. Isophoronediisocyanate, m-xylylenediisocyanate, and 1,3-bis(isocyanatemethyl)cyclohexane are most preferable.</p>
+      <p id="p-00084-en" num="0069">The ratio of the SH groups in the polythiol compound with respect to the NCO groups in the polyisocyanate compound, namely, [number of SH groups in the polythiol compound/number of NCO groups in the polyisocyanate compound] (SH groups/NCO groups), is preferably 1.0 to 2.5, more preferably 1.25 to 2.25, and still more preferably 1.5 to 2.0 When the ratio is lower than 1.0, the lens may be colored yellow during molding. When the ratio exceeds 2.5, the heat resistance may be decreased.</p>
+      <p id="p-00085-en" num="0070">The composition for an optical material according to the present invention may contain sulfur as a polymerizable compound in order to improve the refractive index of the resin to be obtained. The content of sulfur is, where the total amount of the composition for an optical material is 100% by mass, usually 0.1 to 15% by mass, preferably 0.2 to 10% by mass, and especially preferably 0.3 to 5% by mass.</p>
+      <p id="p-00086-en" num="0071">In the present invention, sulfur may be used in any form. Sulfur is specifically available as powdered sulfur, colloidal sulfur, precipitated sulfur, crystalline sulfur, sublimed sulfur, or the like. Powdered sulfur having microscopic particles is preferable.</p>
+      <p id="p-00087-en" num="0072">Sulfur used in the present invention may be produced by any method. Methods for producing sulfur include a method of subliming and purifying native sulfur ore, a method of mining sulfur buried underground by a melting method, a method of recovering sulfur from hydrogen sulfide obtained from a desulfurization process of petroleum or natural gas, and the like. Any method is usable.</p>
+      <p id="p-00088-en" num="0073">Sulfur used in the present invention preferably has a particle diameter smaller than 10 mesh; namely, it is preferable that the particles of sulfur are finer than 10 mesh. When the particle diameter of sulfur is larger than 10 mesh, sulfur is not likely to be fully dissolved. Therefore, an undesirable reaction or the like occurs in the first step and a flaw may be caused. The particle diameter of sulfur is more preferably smaller than 30 mesh, and most preferably smaller than 60 mesh.</p>
+      <p id="p-00089-en" num="0074">Sulfur used in the present invention has a purity of preferably 98% or higher, more preferably 99.0% or higher, still more preferably 99.5% or higher, and most preferably 99.9% or higher. When the purity of sulfur is 98% or higher, the color tone of the optical material to be obtained is improved as compared with when the purity of sulfur is lower than 98%.</p>
+      <p id="p-00090-en" num="0075">For producing an optical material by polymerizing and curing a composition for an optical material according to the present invention, it is preferable to add a polymerization catalyst. Examples of usable polymerization catalysts include amine, phosphine, onium salt, and the like. Especially, onium salt is preferable. Preferable examples of the onium salt are quaternary ammonium salt, quaternary phosphonium salt, tertiary sulfonium salt, and secondary iodonium salt. Among these, quaternary ammonium salt and quaternary phosphonium salt, which are highly compatible with the composition for an optical material, are more preferable. Quaternary phosphonium salt is still more preferable. Further preferable example of polymerization catalysts include quaternary ammonium salts such as tetra-n-butylammoniumbromide, triethylbenzylammoniumchloride, cetyldimethylbenzylammoniumchloride, 1-n-dodecylpyridiniumchloride, and the like; and quaternary phosphonium salts such as tetra-n-butylphosphoniumbromide, tetraphenylphosphoniumbromide, and the like. Among these, tetra-n-butylammoniumbromide, triethylbenzylammoniumchloride, and tetra-n-butylphosphoniumbromide are still more preferable.</p>
+      <p id="p-00091-en" num="0076">The amount of the polymerization catalyst depends on the components of the composition, the mixing ratio, and the polymerization and curing method, and thus is not uniquely defined. The amount of the polymerization catalyst is, where the total amount of the composition for an optical material is 100% by mass, usually 0.0001% by mass to 10% by mass, preferably 0.001% by mass to 5% by mass, more preferably 0.01% by mass to 1% by mass, and most preferably 0.01% by mass to 0.5% by mass. When the amount of the polymerization catalyst is larger than 10% by mass, the polymerization may advance rapidly. When the amount of the polymerization catalyst is smaller than 0.0001% by mass, the composition for an optical material is not fully cured, which may result in an insufficient heat resistance.</p>
+      <p id="p-00092-en" num="0077">For producing an optical material by use of a method according to the present invention, an additive such as an ultraviolet absorber, a bluing agent, a pigment or the like may be added to the composition for an optical material in order to improve the usability of the optical material to be obtained, needless to say.</p>
+      <p id="p-00093-en" num="0078">Preferable examples of the ultraviolet absorber include benzotriazole compounds. Especially preferable compounds are 2-(2-hydroxy-5-methylphenyl)-2H-benzotriazole, 5-chloro-2-(3,5-di-tert-butyl-2-hydroxyphenyl)-2H-benzotriazole, 2-(2-hydroxy-4-octylphenyl)-2H-benzotriazole, 2-(2-hydroxy-4-methoxyphenyl)-2H-benzotriazole, 2-(2-hydroxy-4-ethoxyphenyl)-2H-benzotriazole, 2-(2-hydroxy-4-butoxyphenyl)-2H-benzotriazole, 2-(2-hydroxy-4-octyloxyphenyl)-2H-benzotriazole, and 2-(2-hydroxy-5-t-octylphenyl)-2H-benzotriazole.</p>
+      <p id="p-00094-en" num="0079">The amount of such an ultraviolet absorber is, where the total amount of the composition for an optical material is 100% by mass, usually 0.01 to 5% by mass.</p>
+      <p id="p-00095-en" num="0080">For polymerizing and thus curing the composition for an optical material, an polymerization adjusting agent may be added as necessary in order to, for example, extend the pot life or disperse the polymerization heat. Examples of the polymerization adjusting agent include halides of groups XIII to XVI in the long periodic table. Preferable compounds among these are halides of silicon, germanium, tin and antimony. More preferable compounds are chlorides of germanium, tin and antimony containing an alkyl group. Still more preferable compounds are dibutyltindichloride, butyltintrichloride, dioctyltindichloride, octyltintrichloride, dibutyldichlorogermanium, butyltrichlorogermanium, diphenyldichlorogermanium, phenyltrichlorogermanium, and triphenylantimonydichloride. Dibutyltindichloride is most preferable. The polymerization adjusting agents may be used independently or as a mixture of two or more thereof.</p>
+      <p id="p-00096-en" num="0081">The amount of the polymerization adjusting agent is, where the total amount of the composition for an optical material is 100% by mass, usually 0.0001 to 5.0% by mass, preferably 0.0005 to 3.0% by mass, and more preferably 0.001 to 2.0% by mass. When the amount of the polymerization adjusting agent is smaller than 0.0001% by mass, a sufficient pot life is not guaranteed for the composition for an optical material to be obtained. When the amount of the polymerization adjusting agent is larger than 5.0% by mass, the composition for an optical material is not sufficiently cured, and the heat resistance of the optical material to be obtained may be decreased.</p>
+      <p id="p-00097-en" num="0082">The composition for an optical material thus obtained is injected into a mold or the like and polymerized to be formed into an optical material.</p>
+      <p id="p-00098-en" num="0083">For injecting the composition for an optical material according to the present invention, it is preferable to remove impurities by use of a filter or the like having a pore diameter of about 0.1 to 5 μm. This is preferable from the point of view of improving the quality of the optical material.</p>
+      <p id="p-00099-en" num="0084">The composition for an optical material according to the present invention is usually polymerized as follows. The curing time is usually 1 to 100 hours, and the curing temperature is usually −10° C. to 140° C. The polymerization is performed by a step of maintaining the composition for an optical material at a predetermined polymerization temperature for a predetermined time duration, a step of raising the temperature in the range of 0.1° C. to 100° C./h, a step of lowering the temperature in the range of 0.1° C. to 100° C./h, or a combination of these steps.</p>
+      <p id="p-00100-en" num="0085">It is preferable to, after the curing is finished, anneal the obtained optical material at a temperature of 50 to 150° C. for about 10 minutes to 5 hours. This is preferable to remove distortion of the optical material according to the present invention. The obtained optical material may be subjected to a surface treatment as necessary such as, for example, dying, hard coating, impact resistance coating, reflection prevention, anti-fogging or the like.</p>
+      <p id="p-00101-en" num="0086">The optical material according to the present invention is preferably used as a lens.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00010-en" level="1">EXAMPLES</heading>
+      <p id="p-00102-en" num="0087">Hereinafter, the present invention will be described by way of examples and comparative examples. The present invention is not limited to the following examples.</p>
+      <heading id="h-00011-en" level="2">1. Stability</heading>
+      <p id="p-00103-en" num="0088">An episulfide compound, which is a main component of the composition for an optical material (i.e., episulfide compound as a polymerizable compound), was traced regarding the change of the purity at 60° C. for 1 week in a nitrogen atmosphere by use of GPC analysis. A sample which had the purity decreased by less than 5% was evaluated as A, a sample which had the purity decreased by 5% or greater and less than 10% was evaluated as B, and a sample which had the purity decreased by 10% or greater was evaluated as C. A and B pass the test.</p>
+      <heading id="h-00012-en" level="2">2. Evaluation on Light Resistance (Color Tone Measurement)</heading>
+      <heading id="h-00013-en" level="2">(1) Measurement of the Initial Value</heading>
+      <p id="p-00104-en" num="0089">A flat plate having a thickness of 3.0 mm was produced by a method described in the examples, and the YI value was measured by colorimeter JS-555 produced by Color Techno System Corporation. The obtained value is labeled as p.</p>
+      <heading id="h-00014-en" level="2">(2) Measurement of Color Tone Change by Light</heading>
+      <p id="p-00105-en" num="0090">After the initial value was measured, the flat plate was irradiated with carbon arc combustion light for 60 hours. After this, the YI value was measured. The obtained value is labeled as q.</p>
+      <p id="p-00106-en" num="0091">The value of (q−p)/p was calculated. A sample with this value of less than 1.0 was evaluated as A. A sample with this value of 1.0 or greater and less than 2.0 was evaluated as B. A sample with this value of 2.0 or greater was evaluated as C. A and B pass the test.</p>
+      <heading id="h-00015-en" level="2">3. Releasability</heading>
+      <p id="p-00107-en" num="0092">A −4D lens was produced by a method described in the examples, and the releasability of the polymerized and cured lens from the mold was evaluated. A sample which was released easily was evaluated as A. A sample which was released was evaluated as B. A sample which was not released easily was evaluated as C. A and B pass the test.</p>
+      <heading id="h-00016-en" level="1">Example 1</heading>
+      <p id="p-00108-en" num="0093">185 g (2.0 mol) of epichlorhydrin, 30 g of water, 5 g of methanol, and 1.5 g of 32% aqueous solution of sodium hydroxide were put. While these substances were stirred, 35 g (1.0 mol) of hydrogen sulfide was blown to the substances with the liquid temperature being kept at 5 to 15° C. As a result, 210 g (0.96 mol) of bis(3-chloro-2-hydroxypropyl)sulfide was obtained.</p>
+      <p id="p-00109-en" num="0094">100 g of water was put, and then 120 g of 32% aqueous solution of sodium hydroxide was dripped thereto while the temperature thereof was kept at 0 to 10° C. Then, 300 g of methylisobutylketone was put for extraction. The obtained organic layer was washed with 1% acetic acid and then washed with water, and the solvent was removed by distillation. Then, the resultant substance was purified by a column to obtain 105 g (0.58 mol) of 1-chloro-2-hydroxy-6,7-epoxy-4-thiaheptane.</p>
+      <p id="p-00110-en" num="0095">Then, 750 ml of toluene, 750 ml of methanol, 0.2 g of acetic anhydride, and 177 g of thiourea were put to cause a reaction at 40° C. for 10 hours. Toluene was used for extraction. The obtained organic layer was washed with 10% sulfuric acid and then washed with water, and the solvent was removed by distillation. Then, the resultant substance was purified by a column to obtain 40 g (0.20 mol) of 1-mercapto-2-hydroxy-6,7-epithio-4-thiaheptane represented by the following formula.</p>
+      <p id="p-00111-en" num="0000">
+        <chemistry id="chem-00008-en" num="00009">
+          <img id="img-00008-en" he="9.48mm" wi="37.68mm" alt="embedded image" img-content="chem" file="US20150259477A1_00009.PNG" img-format="png" original="US20150259477A1-20150917-C00009.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00112-en" num="0096">
+        <sup>1</sup>H-NMR (CDCl<sub>3</sub>): 1.5 ppm (1H), 2.0 ppm (1H), 2.2-2.7 ppm (9H), 3.8 ppm (1H)</p>
+      <p id="p-00113-en" num="0097">
+        <sup>13</sup>C-NMR (CDCl<sub>3</sub>): 25 ppm, 33 ppm (2C), 39 ppm, 45 ppm, 78 ppm</p>
+      <heading id="h-00017-en" level="1">Example 2</heading>
+      <p id="p-00114-en" num="0098">190 g (2.1 mol) of epichlorhydrin, 500 ml of methanol, and 1.0 g of calcium hydroxide were put. While these substances were stirred, 75 g (2.2 mol) of hydrogen sulfide was blown to the substances with the liquid temperature being kept at 0 to 5° C. As a result, chloromercaptopropanol was obtained. Then, 1000 ml of water and 168 g of sodium hydrogen carbonate were put, and 254 g of iodine was put with the liquid temperature being kept at 5 to 10° C. After the reaction was performed at 10° C. for 12 hours, filtration and drying were performed. Thus, bis(3-chloro-2-hydroxypropyl)disulfide was obtained.</p>
+      <p id="p-00115-en" num="0099">100 g of water was put, and then 120 g of 32% aqueous solution of sodium hydroxide was dripped thereto while the temperature thereof was kept at 0 to 10° C. Then, 300 g of methylisobutylketone was put for extraction. The obtained organic layer was washed with 1% acetic acid and then washed with water, and the solvent was removed by distillation. Then, the resultant substance was purified by a column to obtain 20 g (0.09 mol) of 1-chloro-2-hydroxy-7,8-epoxy-4,5-dithiaoctane.</p>
+      <p id="p-00116-en" num="0100">Then, 750 ml of toluene, 750 ml of methanol, 0.2 g of acetic anhydride, and 177 g of thiourea were put to cause a reaction at 40° C. for 10 hours. Toluene was used for extraction. The obtained organic layer was washed with 10% sulfuric acid and then washed with water, and the solvent was removed by distillation. Then, the resultant substance was purified by a column to obtain 9.0 g (0.04 mol) of 1-mercapto-2-hydroxy-7,8-epithio-4,5-dithiaoctane represented by the following formula.</p>
+      <p id="p-00117-en" num="0000">
+        <chemistry id="chem-00009-en" num="00010">
+          <img id="img-00009-en" he="9.48mm" wi="43.35mm" alt="embedded image" img-content="chem" file="US20150259477A1_00010.PNG" img-format="png" original="US20150259477A1-20150917-C00010.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00118-en" num="0101">
+        <sup>1</sup>H-NMR (CDCl<sub>3</sub>): 1.5 ppm (1H), 2.0 ppm (1H), 2.2-3.0 ppm (9H), 3.8 ppm (1H)</p>
+      <p id="p-00119-en" num="0102">
+        <sup>13</sup>C-NMR (CDCl<sub>3</sub>): 24 ppm, 32 ppm (2C), 41 ppm, 46 ppm, 77 ppm</p>
+      <heading id="h-00018-en" level="1">Examples 3-8</heading>
+      <p id="p-00120-en" num="0103">To bis(β-epithiopropyl)sulfide (hereinafter, referred to as “compound a”) as a polymerizable compound, 1-mercapto-2-hydroxy-6,7-epithio-4-thiaheptane (hereinafter, referred to as “compound b”) prepared in embodiment 1 and represented by formula (1) was added in an amount shown in Table 1. The stability was evaluated. The results are shown in Table 1.</p>
+      <heading id="h-00019-en" level="1">Examples 9-14</heading>
+      <p id="p-00121-en" num="0104">To bis(β-epithiopropyl)disulfide (hereinafter, referred to as “compound c”) as a polymerizable compound, 1-mercapto-2-hydroxy-7,8-epithio-4,5-dithiaoctane (hereinafter, referred to as “compound d”) prepared in embodiment 2 and represented by formula (1) was added in an amount shown in Table 1. The stability was evaluated. The results are shown in Table 1.</p>
+      <heading id="h-00020-en" level="1">Comparative Example 1</heading>
+      <p id="p-00122-en" num="0105">The stability of only compound a was evaluated. The results are shown in Table 1.</p>
+      <heading id="h-00021-en" level="1">Comparative Example 2</heading>
+      <p id="p-00123-en" num="0106">The stability of only compound c was evaluated. The results are shown in Table 1.</p>
+      <p id="p-00124-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="left" />
+              <colspec colname="3" colwidth="70pt" align="left" />
+              <colspec colname="4" colwidth="35pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Main</entry>
+                  <entry>Component and</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example</entry>
+                  <entry>component</entry>
+                  <entry>amount (% by mass)</entry>
+                  <entry>Stability</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Example 3</entry>
+                  <entry>Compound a</entry>
+                  <entry>Compound b 0.001</entry>
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 4</entry>
+                  <entry>Compound a</entry>
+                  <entry>Compound b 0.005</entry>
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 5</entry>
+                  <entry>Compound a</entry>
+                  <entry>Compound b 0.01</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 6</entry>
+                  <entry>Compound a</entry>
+                  <entry>Compound b 1.0</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 7</entry>
+                  <entry>Compound a</entry>
+                  <entry>Compound b 3.0</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 8</entry>
+                  <entry>Compound a</entry>
+                  <entry>Compound b 5.0</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Comparative</entry>
+                  <entry>Compound a</entry>
+                  <entry>None</entry>
+                  <entry>C</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>example 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 9</entry>
+                  <entry>Compound c</entry>
+                  <entry>Compound d 0.001</entry>
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 10</entry>
+                  <entry>Compound c</entry>
+                  <entry>Compound d 0.005</entry>
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 11</entry>
+                  <entry>Compound c</entry>
+                  <entry>Compound d 0.01</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 12</entry>
+                  <entry>Compound c</entry>
+                  <entry>Compound d 1.0</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 13</entry>
+                  <entry>Compound c</entry>
+                  <entry>Compound d 3.0</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example 14</entry>
+                  <entry>Compound c</entry>
+                  <entry>Compound d 5.0</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Comparative</entry>
+                  <entry>Compound c</entry>
+                  <entry>None</entry>
+                  <entry>C</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>example 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00022-en" level="1">Examples 15-20</heading>
+      <p id="p-00125-en" num="0107">Compound a and compound b were mixed at a ratio shown in Table 2. 1.0% by mass of 2-(2-hydroxy-5-t-octylphenyl)-2H-benzotriazole as an ultraviolet absorber and 0.05% by mass of tetra-n-butylphosphoniumbromide as a polymerization catalyst were added, and the substances were well mixed at 20° C. to be uniform. Then, the obtained substance was deaerated at a vacuum degree of 1.3 kPa, and injected to a mold formed of two glass plates and a tape (for a flat plate having a thickness of 3.0 mm and a −4D lens). The substance was heated at 30° C. for 10 hours, had the temperature raised to 100° C. over 10 hours at a constant rate, and then was heated at 100° C. for 1 hour to be polymerized and cured. After being cooled, the substance was released from the mold and annealed at 110° C. for 60 minutes. Thus, a molded plate (a flat plate having a thickness of 3.0 mm and a −4D lens) was obtained. The light resistance of the flat plate was evaluated (color tone measurement), and the releasability of the −4D lens was evaluated. The results are shown in Table 2.</p>
+      <heading id="h-00023-en" level="1">Comparative Example 3</heading>
+      <p id="p-00126-en" num="0108">To compound a, 1.0% by mass of 2-(2-hydroxy-5-t-octylphenyl)-2H-benzotriazole as an ultraviolet absorber and 0.05% by mass of tetra-n-butylphosphoniumbromide as a polymerization catalyst were added, and the substances were well mixed at 20° C. to be uniform. Then, the obtained substance was deaerated at a vacuum degree of 1.3 kPa, and injected to a mold formed of two glass plates and a tape (for a flat plate having a thickness of 3.0 mm and a −4D lens). The substance was heated at 30° C. for 10 hours, had the temperature raised to 100° C. over 10 hours at a constant rate, and then was heated at 100° C. for 1 hour to be polymerized and cured. After being cooled, the substance was released from the mold and annealed at 110° C. for 60 minutes. Thus, a molded plate (a flat plate having a thickness of 3.0 mm and a −4D lens) was obtained. The light resistance of the flat plate was evaluated (color tone measurement), and the releasability of the −4D lens was evaluated. The results are shown in Table 2.</p>
+      <heading id="h-00024-en" level="1">Comparative examples 4 and 5</heading>
+      <p id="p-00127-en" num="0109">Compound a and 1-chloro-2-hydroxy-6,7-epoxy-4-thiaheptane represented by the following formula (hereinafter, referred to as “compound e”) were mixed at a ratio shown in Table 2. 1.0% by mass of 2-(2-hydroxy-5-t-octylphenyl)-2H-benzotriazole as an ultraviolet absorber and 0.05% by mass of tetra-n-butylphosphoniumbromide as a polymerization catalyst were added, and the substances were well mixed at 20° C. to be uniform. Then, the obtained substance was deaerated at a vacuum degree of 1.3 kPa, and injected to a mold formed of two glass plates and a tape (for a flat plate having a thickness of 3.0 mm and a −4D lens). The substance was heated at 30° C. for 10 hours, had the temperature raised to 100° C. over 10 hours at a constant rate, and then was heated at 100° C. for 1 hour to be polymerized and cured. After being cooled, the substance was released from the mold and annealed at 110° C. for 60 minutes. Thus, a molded plate (a flat plate having a thickness of 3.0 mm and a −4D lens) was obtained. The light resistance of the flat plate was evaluated (color tone measurement), and the releasability of the −4D lens was evaluated. The results are shown in Table 2.</p>
+      <p id="p-00128-en" num="0000">
+        <chemistry id="chem-00010-en" num="00011">
+          <img id="img-00010-en" he="9.48mm" wi="36.75mm" alt="embedded image" img-content="chem" file="US20150259477A1_00011.PNG" img-format="png" original="US20150259477A1-20150917-C00011.TIF" />
+        </chemistry>
+      </p>
+      <heading id="h-00025-en" level="1">Examples 21-26</heading>
+      <p id="p-00129-en" num="0110">Compound c and compound d were mixed at a ratio shown in Table 2. 1.0% by mass of 2-(2-hydroxy-5-t-octylphenyl)-2H-benzotriazole as an ultraviolet absorber and 0.5% by mass of N,N-dimethylcyclohexylamine as a polymerization catalyst were added, and the substances were well mixed at 20° C. to be uniform. Then, the obtained substance was deaerated at a vacuum degree of 1.3 kPa, and injected to a mold formed of two glass plates and a tape (for a flat plate having a thickness of 3.0 mm and a −4D lens). The substance was heated at 30° C. for 10 hours, had the temperature raised to 100° C. over 10 hours at a constant rate, and then was heated at 100° C. for 1 hour to be polymerized and cured. After being cooled, the substance was released from the mold and annealed at 110° C. for 60 minutes. Thus, a molded plate (a flat plate having a thickness of 3.0 mm and a −4D lens) was obtained. The light resistance of the flat plate was evaluated (color tone measurement), and the releasability of the −4D lens was evaluated. The results are shown in Table 2.</p>
+      <heading id="h-00026-en" level="1">Comparative Example 6</heading>
+      <p id="p-00130-en" num="0111">To compound c, 1.0% by mass of 2-(2-hydroxy-5-t-octylphenyl)-2H-benzotriazole as an ultraviolet absorber and 0.5% by mass of N,N-dimethylcyclohexylamine as a polymerization catalyst were added, and the substances were well mixed at 20° C. to be uniform. Then, the obtained substance was deaerated at a vacuum degree of 1.3 kPa, and injected to a mold formed of two glass plates and a tape (for a flat plate having a thickness of 3.0 mm and a −4D lens). The substance was heated at 30° C. for 10 hours, had the temperature raised to 100° C. over 10 hours at a constant rate, and then was heated at 100° C. for 1 hour to be polymerized and cured. After being cooled, the substance was released from the mold and annealed at 110° C. for 60 minutes. Thus, a molded plate (a flat plate having a thickness of 3.0 mm and a −4D lens) was obtained. The light resistance of the flat plate was evaluated (color tone measurement), and the releasability of the −4D lens was evaluated. The results are shown in Table 2.</p>
+      <heading id="h-00027-en" level="1">Comparative examples 7 and 8</heading>
+      <p id="p-00131-en" num="0112">Compound c and 1-chloro-2-hydroxy-7,8-epoxy-4,5-dithiaoctane represented by the following formula (hereinafter, referred to as “compound f”) were mixed at a ratio shown in Table 2. 1.0% by mass of 2-(2-hydroxy-5-t-octylphenyl)-2H-benzotriazole as an ultraviolet absorber and 0.5% by mass of N,N-dimethylcyclohexylamine as a polymerization catalyst were added, and the substances were well mixed at 20° C. to be uniform. Then, the obtained substance was deaerated at a vacuum degree of 1.3 kPa, and injected to a mold formed of two glass plates and a tape (for a flat plate having a thickness of 3.0 mm and a −4D lens). The substance was heated at 30° C. for 10 hours, had the temperature raised to 100° C. over 10 hours at a constant rate, and then was heated at 100° C. for 1 hour to be polymerized and cured. After being cooled, the substance was released from the mold and annealed at 110° C. for 60 minutes. Thus, a molded plate (a flat plate having a thickness of 3.0 mm and a −4D lens) was obtained. The light resistance of the flat plate was evaluated (color tone measurement), and the releasability of the −4D lens was evaluated. The results are shown in Table 2.</p>
+      <p id="p-00132-en" num="0000">
+        <chemistry id="chem-00011-en" num="00012">
+          <img id="img-00011-en" he="9.48mm" wi="42.33mm" alt="embedded image" img-content="chem" file="US20150259477A1_00012.PNG" img-format="png" original="US20150259477A1-20150917-C00012.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00133-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="left" />
+              <colspec colname="3" colwidth="63pt" align="left" />
+              <colspec colname="4" colwidth="35pt" align="left" />
+              <colspec colname="5" colwidth="28pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="5" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Main</entry>
+                  <entry>Component and</entry>
+                  <entry>Light</entry>
+                  <entry>Releas-</entry>
+                </row>
+                <row>
+                  <entry>Example</entry>
+                  <entry>component</entry>
+                  <entry>amount (% by mass)</entry>
+                  <entry>resistance</entry>
+                  <entry>ability</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Example 15</entry>
+                  <entry>Compound a</entry>
+                  <entry>Compound b 0.001</entry>
+                  <entry>B</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry>Example 16</entry>
+                  <entry>Compound a</entry>
+                  <entry>Compound b 0.005</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry>Example 17</entry>
+                  <entry>Compound a</entry>
+                  <entry>Compound b 0.01</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry>Example 18</entry>
+                  <entry>Compound a</entry>
+                  <entry>Compound b 1.0</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry>Example 19</entry>
+                  <entry>Compound a</entry>
+                  <entry>Compound b 3.0</entry>
+                  <entry>A</entry>
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Example 20</entry>
+                  <entry>Compound a</entry>
+                  <entry>Compound b 5.0</entry>
+                  <entry>A</entry>
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>Compound a</entry>
+                  <entry>None</entry>
+                  <entry>C</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry>example 3</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>Compound a</entry>
+                  <entry>Compound e 0.01</entry>
+                  <entry>C</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry>example 4</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>Compound a</entry>
+                  <entry>Compound e 1.0</entry>
+                  <entry>C</entry>
+                  <entry>C</entry>
+                </row>
+                <row>
+                  <entry>example 5</entry>
+                </row>
+                <row>
+                  <entry>Example 21</entry>
+                  <entry>Compound c</entry>
+                  <entry>Compound d 0.001</entry>
+                  <entry>B</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry>Example 22</entry>
+                  <entry>Compound c</entry>
+                  <entry>Compound d 0.005</entry>
+                  <entry>B</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry>Example 23</entry>
+                  <entry>Compound c</entry>
+                  <entry>Compound d 0.01</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry>Example 24</entry>
+                  <entry>Compound c</entry>
+                  <entry>Compound d 1.0</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry>Example 25</entry>
+                  <entry>Compound c</entry>
+                  <entry>Compound d 3.0</entry>
+                  <entry>A</entry>
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Example 26</entry>
+                  <entry>Compound c</entry>
+                  <entry>Compound d 5.0</entry>
+                  <entry>A</entry>
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>Compound c</entry>
+                  <entry>None</entry>
+                  <entry>C</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry>example 6</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>Compound c</entry>
+                  <entry>Compound f 0.01</entry>
+                  <entry>C</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry>example 7</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>Compound c</entry>
+                  <entry>Compound f 1.0</entry>
+                  <entry>C</entry>
+                  <entry>C</entry>
+                </row>
+                <row>
+                  <entry>example 8</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. An episulfide compound represented by formula (1) below:</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00001-en" num="00013">
+          <img id="imgc-00001-en" he="14.90mm" wi="64.09mm" alt="embedded image" img-content="chem" file="US20150259477A1_00013.PNG" img-format="png" original="US20150259477A1-20150917-C00013.TIF" />
+        </chemistry>
+      </claim-text>
+      <claim-text>(where m represents an integer of 0 to 4, and n represents an integer of 0 to 2).</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. A composition for an optical material, comprising the episulfide compound according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, and a polymerizable compound.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The composition for an optical material according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the episulfide compound is contained at a content of 0.001 to 5.0% by mass.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The composition for an optical material according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the polymerizable compound is contained at a content of 95.0 to 99.999% by mass.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The composition for an optical material according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein an episulfide compound represented by formula (2) below is contained as the polymerizable compound:</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00002-en" num="00014">
+          <img id="imgc-00002-en" he="14.90mm" wi="60.88mm" alt="embedded image" img-content="chem" file="US20150259477A1_00014.PNG" img-format="png" original="US20150259477A1-20150917-C00014.TIF" />
+        </chemistry>
+      </claim-text>
+      <claim-text>(where m represents an integer of 0 to 4, and n represents an integer of 0 to 2).</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The composition for an optical material according to <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the episulfide compound represented by formula (2) is contained at a content of 40 to 99.999% by mass.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. A method for producing an optical material, comprising adding a polymerization catalyst to the composition for an optical material according to <claim-ref idref="clm-00002-en">claim 2</claim-ref> at a content of 0.0001% by mass to 10% by mass with respect to the total amount of the composition for an optical material, thereby causing polymerization and curing.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. An optical material produced by the method according to <claim-ref idref="clm-00007-en">claim 7</claim-ref>.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. An optical lens, comprising the optical material according to <claim-ref idref="clm-00008-en">claim 8</claim-ref>.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. A method for producing the episulfide compound represented by formula (1) below according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>:</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00003-en" num="00015">
+          <img id="imgc-00003-en" he="14.90mm" wi="64.09mm" alt="embedded image" img-content="chem" file="US20150259477A1_00015.PNG" img-format="png" original="US20150259477A1-20150917-C00015.TIF" />
+        </chemistry>
+      </claim-text>
+      <claim-text>(where m represents an integer of 0 to 4, and n represents an integer of 0 to 2),
+<claim-text>the method comprising the steps of:</claim-text><claim-text>reacting hydrogen sulfide or a polythiol compound with an epihalohydrin compound to obtain a compound represented by formula (3) below;</claim-text><claim-text>reacting the obtained compound represented by formula (3) with an alkali to proceed with a dehydrohalogenation reaction to obtain a compound represented by formula (4) below; and</claim-text><claim-text>reacting the obtained compound represented by formula (4) with a thiating agent to obtain the compound represented by formula (1) above:</claim-text></claim-text>
+      <claim-text>
+        <chemistry id="chemc-00004-en" num="00016">
+          <img id="imgc-00004-en" he="15.66mm" wi="65.70mm" alt="embedded image" img-content="chem" file="US20150259477A1_00016.PNG" img-format="png" original="US20150259477A1-20150917-C00016.TIF" />
+        </chemistry>
+      </claim-text>
+      <claim-text>(where X represents a halogen atom, m represents an integer of 0 to 4, and n represents an integer of 0 to 2);</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00005-en" num="00017">
+          <img id="imgc-00005-en" he="14.90mm" wi="63.25mm" alt="embedded image" img-content="chem" file="US20150259477A1_00017.PNG" img-format="png" original="US20150259477A1-20150917-C00017.TIF" />
+        </chemistry>
+      </claim-text>
+      <claim-text>(where X represents a halogen atom, m represents an integer of 0 to 4, and n represents an integer of 0 to 2). </claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150259477A1_00001.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259477A1-20150917-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150259477A1_00002.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259477A1-20150917-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150259477A1_00003.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259477A1-20150917-C00003.TIF" inline="yes" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150259477A1_00004.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259477A1-20150917-C00004.TIF" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150259477A1_00005.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259477A1-20150917-C00005.TIF" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150259477A1_00006.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259477A1-20150917-C00006.TIF" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150259477A1_00007.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259477A1-20150917-C00007.TIF" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150259477A1_00008.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259477A1-20150917-C00008.TIF" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150259477A1_00009.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259477A1-20150917-C00009.TIF" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150259477A1_00010.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259477A1-20150917-C00010.TIF" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150259477A1_00011.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259477A1-20150917-C00011.TIF" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150259477A1_00012.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259477A1-20150917-C00012.TIF" inline="yes" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150259477A1_00013.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259477A1-20150917-C00013.TIF" inline="yes" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150259477A1_00014.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259477A1-20150917-C00014.TIF" inline="yes" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150259477A1_00015.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259477A1-20150917-C00015.TIF" inline="yes" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150259477A1_00016.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259477A1-20150917-C00016.TIF" inline="yes" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150259477A1_00017.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150259477A1-20150917-C00017.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150259477A1.PDF" type="pdf" size="589448" pages="12" />
+</lexisnexis-patent-document>

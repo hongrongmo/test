@@ -1,0 +1,1012 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2926709A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151007" time-inserted="093554" date-changed="20151016" time-changed="031259">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121593588">
+        <country>EP</country>
+        <doc-number>2926709</doc-number>
+        <kind>A1</kind>
+        <date>20151007</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>15160182</doc-number>
+        <date>20150320</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151007">
+      <priority-claim sequence="1" kind="national">
+        <country>KR</country>
+        <doc-number>1020140033547</doc-number>
+        <date>20140321</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>KR</country>
+        <doc-number>20140033547</doc-number>
+        <kind>A</kind>
+        <date>20140321</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>20140033547</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>KR20140033547</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151008">
+      <gazette-reference>
+        <date>20151007</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151007</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151007</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151008">
+      <request-for-examination>
+        <date>20150331</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151008">
+      <classification-ipcr sequence="1">
+        <text>A47L  15/00        20060101AFI20150828BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>47</class>
+        <subclass>L</subclass>
+        <main-group>15</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150828</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151008">
+      <classification-cpc sequence="1">
+        <text>A47L  15/4221      20130101 FI20150924BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>L</subclass>
+        <main-group>15</main-group>
+        <subgroup>4221</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A47L  15/0044      20130101 LI20150929BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>L</subclass>
+        <main-group>15</main-group>
+        <subgroup>0044</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150929</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A47L  15/0047      20130101 LI20150826BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>L</subclass>
+        <main-group>15</main-group>
+        <subgroup>0047</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150826</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A47L  15/0057      20130101 LI20150826BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>L</subclass>
+        <main-group>15</main-group>
+        <subgroup>0057</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150826</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A47L  15/4202      20130101 LI20150924BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>L</subclass>
+        <main-group>15</main-group>
+        <subgroup>4202</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A47L2401/06        20130101 LA20150826BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>L</subclass>
+        <main-group>2401</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150826</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A47L2401/14        20130101 LA20150826BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>L</subclass>
+        <main-group>2401</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150826</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A47L2401/20        20130101 LA20150826BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>L</subclass>
+        <main-group>2401</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150826</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A47L2501/01        20130101 LA20150826BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>L</subclass>
+        <main-group>2501</main-group>
+        <subgroup>01</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150826</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A47L2501/03        20130101 LA20150826BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>L</subclass>
+        <main-group>2501</main-group>
+        <subgroup>03</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150826</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>A47L2501/05        20130101 LA20150826BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>L</subclass>
+        <main-group>2501</main-group>
+        <subgroup>05</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150826</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>A47L2501/06        20130101 LA20150826BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>L</subclass>
+        <main-group>2501</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150826</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>B08B   3/14        20130101 LI20150924BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>08</class>
+        <subclass>B</subclass>
+        <main-group>3</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">15</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151007" lang="ger" format="original">VERFAHREN ZUR STEUERUNG EINES GESCHIRRSPÜLER</invention-title>
+    <invention-title id="title_eng" date-changed="20151007" lang="eng" format="original">METHOD FOR CONTROLLING DISHWASHER</invention-title>
+    <invention-title id="title_fre" date-changed="20151007" lang="fre" format="original">PROCÉDÉ DE COMMANDE DE LAVE-VAISSELLE</invention-title>
+    <references-cited date-changed="20151013">
+      <patent-citations name="patcit" date-changed="20151013" />
+      <citation>
+        <patcit num="1" dnum="EP2522267A1" dnum-type="publication number">
+          <document-id>
+            <country>EP</country>
+            <doc-number>2522267</doc-number>
+            <kind>A1</kind>
+            <name>FAGORBRANDT SAS [FR]</name>
+            <date>20121114</date>
+          </document-id>
+          <application-date>
+            <date>20120504</date>
+          </application-date>
+        </patcit>
+        <category>X</category>
+        <category>I</category>
+        <category>Y</category>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="WO2010112330A2" dnum-type="publication number">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2010112330</doc-number>
+            <kind>A2</kind>
+            <name>BSH BOSCH SIEMENS HAUSGERAETE [DE], et al</name>
+            <date>20101007</date>
+          </document-id>
+          <application-date>
+            <date>20100316</date>
+          </application-date>
+        </patcit>
+        <category>X</category>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US2011126855A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110126855</doc-number>
+            <kind>A1</kind>
+            <name>PYO JOONHO [KR], et al</name>
+            <date>20110602</date>
+          </document-id>
+          <application-date>
+            <date>20100630</date>
+          </application-date>
+        </patcit>
+        <category>Y</category>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="FR2405693A1" dnum-type="publication number">
+          <document-id>
+            <country>FR</country>
+            <doc-number>2405693</doc-number>
+            <kind>A1</kind>
+            <name>LICENTIA GMBH [DE]</name>
+            <date>19790511</date>
+          </document-id>
+          <application-date>
+            <date>19781009</date>
+          </application-date>
+        </patcit>
+        <category>A</category>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="DE1628482A1" dnum-type="publication number">
+          <document-id>
+            <country>DE</country>
+            <doc-number>1628482</doc-number>
+            <kind>A1</kind>
+            <name>BORGHI GIOVANNI</name>
+            <date>19700820</date>
+          </document-id>
+          <application-date>
+            <date>19660419</date>
+          </application-date>
+        </patcit>
+        <category>A</category>
+      </citation>
+    </references-cited>
+    <parties date-changed="20151007">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>LG Electronics Inc.</orgname>
+            <registered-number>101486812</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>128, Yeoui-daero</address-1>
+              <city>Yeongdeungpo-gu Seoul 150-721</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>Lee, Youmin</name>
+            <address>
+              <address-1>51, Gasan digital 1-ro, Geumcheon-gu</address-1>
+              <city>153-802 Seoul</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>Lee, Jongmin</name>
+            <address>
+              <address-1>51, Gasan digital 1-ro, Geumcheon-gu</address-1>
+              <city>153-802 Seoul</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>Kim, Heeyeon</name>
+            <address>
+              <address-1>51, Gasan digital 1-ro, Geumcheon-gu</address-1>
+              <city>153-802 Seoul</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Greenaway, Martin William</name>
+            <registered-number>101133949</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Kilburn &amp; Strode LLP 20 Red Lion Street</address-1>
+              <city>London WC1R 4PJ</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151007">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <patent-family date-changed="20151116">
+      <main-family family-id="173798656">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104921682</doc-number>
+            <kind>A</kind>
+            <date>20150923</date>
+          </document-id>
+          <application-date>
+            <date>20150320</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2926709</doc-number>
+            <kind>A1</kind>
+            <date>20151007</date>
+          </document-id>
+          <application-date>
+            <date>20150320</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150109943</doc-number>
+            <kind>A</kind>
+            <date>20151002</date>
+          </document-id>
+          <application-date>
+            <date>20140321</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150265130</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20150320</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173798655">
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104921682</doc-number>
+            <kind>A</kind>
+            <date>20150923</date>
+          </document-id>
+          <application-date>
+            <date>20150320</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2926709</doc-number>
+            <kind>A1</kind>
+            <date>20151007</date>
+          </document-id>
+          <application-date>
+            <date>20150320</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150109943</doc-number>
+            <kind>A</kind>
+            <date>20151002</date>
+          </document-id>
+          <application-date>
+            <date>20140321</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150265130</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20150320</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151007" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0001">The present invention relates to a method for controlling a dishwasher. The method for controlling the dishwasher, including a sump for storing washing water collected from a tub and the washing water supplied from a raw water supply section, a washing arm for injecting the washing water at the sump into the tub, a washing pump for feeding the washing water at the sump into the washing arm, and a drainage pump for discharging the washing water at the sump outside, includes supplying the washing water to the sump; rinsing the sump by driving the washing pump and pumping the washing water until the washing water is injected from the washing arm; and dumping the washing water stored into the sump by driving the drainage pump after the rinsing for the sump.</p>
+    <p id="p-a-00002-en" num="0002">The method for controlling the dishwasher according to the present invention may clean the sump, thereby to save supply amount of the washing water, inject more clean washing water into the washes, and reduce rinsing time. <img id="imga-00001-en" wi="52" he="126" img-content="drawing" file="imgaf001.tif" img-format="tif" /></p>
+  </abstract>
+  <legal-data date-changed="20151016">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20151007</date>
+      </publication-date>
+      <event-code-1>17P</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXAMINATION FILED</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2926709A1</docdb-publication-number>
+      <docdb-application-id>438260876</docdb-application-id>
+      <effective-date>
+        <date>20150331</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20151007</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2926709A1</docdb-publication-number>
+      <docdb-application-id>438260876</docdb-application-id>
+      <corresponding-kind>A1</corresponding-kind>
+      <legal-designated-states>
+        <country>AL</country>
+        <country>AT</country>
+        <country>BE</country>
+        <country>BG</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>EE</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>HR</country>
+        <country>HU</country>
+        <country>IE</country>
+        <country>IS</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LT</country>
+        <country>LU</country>
+        <country>LV</country>
+        <country>MC</country>
+        <country>MK</country>
+        <country>MT</country>
+        <country>NL</country>
+        <country>NO</country>
+        <country>PL</country>
+        <country>PT</country>
+        <country>RO</country>
+        <country>RS</country>
+        <country>SE</country>
+        <country>SI</country>
+        <country>SK</country>
+        <country>SM</country>
+        <country>TR</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20151007</date>
+      </publication-date>
+      <event-code-1>AV</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR VALIDATION OF THE EUROPEAN PATENT IN</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2926709A1</docdb-publication-number>
+      <docdb-application-id>438260876</docdb-application-id>
+      <countries-concerned>
+        <country>MA</country>
+      </countries-concerned>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20151007</date>
+      </publication-date>
+      <event-code-1>AX</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXTENSION OF THE EUROPEAN PATENT TO</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2926709A1</docdb-publication-number>
+      <docdb-application-id>438260876</docdb-application-id>
+      <countries-concerned>
+        <country>BA</country>
+        <country>ME</country>
+      </countries-concerned>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151007">
+    <heading id="h-00001-en">BACKGROUND OF THE INVENTION</heading>
+    <heading id="h-00002-en">
+      <u>Field of the Invention</u>
+    </heading>
+    <p id="p-00001-en" num="0001">The present invention relates to a method for controlling a dishwasher.</p>
+    <heading id="h-00003-en">
+      <u>Related Art</u>
+    </heading>
+    <p id="p-00002-en" num="0002">A dishwasher is an electric appliance that injects high pressure washing water from washing arm and washes garbage attached to the dishes by the washing water.</p>
+    <p id="p-00003-en" num="0003">The dishwasher generally includes a tub for forming a washing chamber, and a sump, mounted at a bottom side of the tub, for storing the washing water.</p>
+    <p id="p-00004-en" num="0004">A washing pump mounted inside the sump pumps the washing water into the washing arm, and the pumped washing water is injected in high pressure from a nozzle of the washing arm.</p>
+    <p id="p-00005-en" num="0005">In addition, the injected washing water washes the garbage attached to the dishes to fall it on the floor of the tub.</p>
+    <p id="p-00006-en" num="0006">The used washing water is separated from the garbage and then is collected into the sump to discharge it outside.</p>
+    <p id="p-00007-en" num="0007">In order to enhance the rinsing capability for the dishes in prior art, much washing water is supplied or much hot water is supplied.</p>
+    <p id="p-00008-en" num="0008">However, there was a problem that increases the water amount to be used on increasing the washing water amount.</p>
+    <p id="p-00009-en" num="0009">Further, there was a problem that increases use of electricity and therefore lowers energy efficiency on using hot water.</p>
+    <heading id="h-00004-en">
+      <u>Summary of the Invention</u>
+    </heading>
+    <p id="p-00010-en" num="0010">Problems to be solved by the present invention are as follows.</p>
+    <p id="p-00011-en" num="0011">Firstly, the supply amount of the washing water is saved and the rinsing capability for the dishes is enhanced.</p>
+    <p id="p-00012-en" num="0012">Secondly, the rinsing time is shortened and the rinsing capability for the dishes is enhanced.</p>
+    <p id="p-00013-en" num="0013">Thirdly, it is possible to prevent re-contamination for the dishes caused due to the foreign substances collected at the sump.</p>
+    <p id="p-00014-en" num="0014">The present invention is not limited to the above-mentioned problems and other problems, which are not described above, can be obviously understood to those skilled in the art from the following description.</p>
+    <p id="p-00015-en" num="0015">According to an aspect of the invention, there is provided a method for controlling a dishwasher, including a sump for storing washing water collected from a tub and the washing water supplied from a raw water supply section, a washing arm for injecting the washing water at the sump into the tub, a washing pump for feeding the washing water at the sump into the washing arm, and a drainage pump for discharging the washing water at the sump outside, and including: supplying the washing water to the sump; rinsing the sump by driving the washing pump and pumping the washing water until the washing water is injected from the washing arm; and dumping the washing water stored into the sump by driving the drainage pump after the rinsing for the sump.</p>
+    <p id="p-00016-en" num="0016">According to another aspect of the invention, there is provided a method for controlling a dishwasher including a sump for storing washing water collected from a tub and the washing water supplied from a raw water supply section, a washing arm for injecting the washing water at the sump into the tub, a washing pump for feeding the washing water at the sump into the washing arm, a drainage pump for discharging the washing water at the sump outside, and a filter, disposed between the tub and the washing pump, for filtering foreign substances at the washing water guided from the tub and for guiding the washing water filtered with the foreign substances into the sump, and including: suctioning the washing water stored into the filter through the washing pump into the washing pump; feeding the washing water suctioned through the washing pump into the washing arm; and ending the driving of the washing pump before the washing water is injected from the washing arm.</p>
+    <p id="p-00017-en" num="0017">According to further another aspect of the invention, there is provided a method for controlling a dishwasher including a sump for storing washing water collected from a tub and the washing water supplied from a raw water supply section, a washing arm for injecting the washing water at the sump into the tub, a washing pump for feeding the washing water at the sump into the washing arm, a drainage pump for discharging the washing water at the sump outside, a filter, disposed between the tub and the washing pump, for filtering foreign substances at the washing water guided from the tub and for guiding the washing water filtered with the foreign substances into the sump, and a heater, disposed at the sump, for heating the washing water, and including: hitting and washing the washes by the washing water by driving the washing pump; supplying the washing water to the sump through the raw water supply section; rinsing the sump by driving the washing pump and pumping the washing water until the washing water is injected from the washing arm; dumping the washing water stored into the sump by driving the drainage pump after the rinsing for the sump; hitting and rinsing the dishes by the cold water supplied through the raw water supply section after the dumping; and hitting and rinsing the dishes by the washing water heated by the heater.</p>
+    <p id="p-00018-en" num="0018">It is preferable that the sum of the performance time of the rinsing for the dishes performed by the cold water and/or the performance time of the rinsing for the dishes performed by the hot water is reduced when the performance time of the rinsing for the sump is increased.</p>
+    <p id="p-00019-en" num="0019">It is preferable that the sum of the amount of the washing water supplied to the rinsing for the dishes performed by the cold water and/or the amount of the washing water supplied to the rinsing for the dishes performed by the hot water is reduced when the amount of the washing water supplied during the rinsing for the sump is increased.</p>
+    <p id="p-00020-en" num="0020">The specifics of other embodiments are included in the detailed description and drawings.</p>
+    <heading id="h-00005-en">
+      <u>Brief Description of the Drawings</u>
+    </heading>
+    <p id="p-00021-en" num="0021">
+      <ul id="ul-00001-en" list-style="none" compact="compact">
+        <li>
+          <figref>FIG. 1</figref> is a cross-sectional view for a dishwasher according to one embodiment of the present invention.</li>
+        <li>
+          <figref>FIG. 2</figref> is s block view for a controller and surrounding configurations thereof according to one embodiment of the present invention.</li>
+        <li>
+          <figref>FIG. 3</figref> is a flow chart for showing a method for controlling the dishwasher according to one embodiment of the present invention.</li>
+        <li>
+          <figref>FIG. 4</figref> is a block view shown with flow directions of washing water on cleaning.</li>
+        <li>
+          <figref>FIG. 5</figref> minutely represents the method for controlling the dishwasher according to one embodiment of the present invention</li>
+        <li>
+          <figref>FIG. 6</figref> minutely represents the rinsing for a sump according to one embodiment of the present invention.</li>
+        <li>
+          <figref>FIG. 7</figref> is information for water amount, RPM of a washing motor, and driving time of the washing motor stored into a memory according to one embodiment of the present invention.</li>
+        <li>
+          <figref>FIG. 8A</figref> is a graph for representing the washing degree for dishes according to the usage of the washing water after ending the rinsing for the dishes according to one embodiment of the present invention, wherein a dotted line represents a case not performing the rinsing for the sump and a solid line represents a case performing the rinsing for the sump.</li>
+        <li>
+          <figref>FIG. 8B</figref> is a graph for representing the cloudiness of the washing water according to the usage of the washing water after ending the rinsing for the dishes according to one embodiment of the present invention, wherein the dotted line represents a case not performing the rinsing for the sump and a solid line represents a case performing the rinsing for the sump.</li>
+        <li>
+          <figref>FIG. 9</figref> is a graph for representing the washing degree for the dishes according to the usage of the washing water after ending the rinsing for the dishes according to one embodiment of the present invention, wherein a dotted line represents the case for performing the rinsing for the sump once and a solid line represents the case for performing the rinsing for the sump twice.</li>
+      </ul>
+    </p>
+    <heading id="h-00006-en">
+      <u>Detailed Description of the Embodiments</u>
+    </heading>
+    <p id="p-00022-en" num="0022">Benefits and features of the present invention and how to achieve them will become clear with reference to exemplary embodiments to be described below in detail along with the accompanying drawings. However, the present invention is not limited to embodiments disclosed below and can be implemented various type different from each other. Only the embodiment of the present invention is provided to enable a disclosure of the present invention to be completed and to notice one skilled in the art to which the present invention pertains to, of a category of the present invention perfectly and the present invention is only defined by the category of claims. The same reference numerals refer to identical components in the entire specification.</p>
+    <p id="p-00023-en" num="0023">Hereinafter, the present invention will be described by the embodiments of the present invention with reference to the drawings for describing a method for controlling a dishwasher.</p>
+    <p id="p-00024-en" num="0024">
+      <figref>FIG. 1</figref> is a cross-sectional view for a dishwasher according to one embodiment of the present invention.</p>
+    <p id="p-00025-en" num="0025">Referring to <figref>FIG. 1</figref>, a method for controlling a dishwasher in the embodiment of the present invention, including a washing arm 30 for injecting the washing water into a tub 5, a sump 10 for collecting the washing water injected from the washing arm 30, and a washing motor 19 for producing power for flowing the washing water, includes hitting and washing dishes by the washing water (S120); and rinsing the sump by driving the washing motor 19 so that the washing water is not discharged into the tub 5 (S220).</p>
+    <p id="p-00026-en" num="0026">A casing 2 forms an appearance of the tub 5. The inside of the casing 2 is disposed with the tub 5. The fronts of the casing 2 and the tub 5 are formed with an entrance. A door 9 is disposed at the front of the casing 2 and opens and closes the entrance. The door 9 is opened and closed in a drop-down type. The inside of the door 9 is disposed with a fan 3 for blowing wet air at the inside into the outside on drying the dishes.</p>
+    <p id="p-00027-en" num="0027">Any one of the casing 2 and door 9 is disposed with a detergent supply device that temporally stores a detergent and then supplies the detergent to the inside of the tub 5.</p>
+    <p id="p-00028-en" num="0028">A bottom of the tub 5 is disposed with the sump 10 for collecting the washing water.</p>
+    <p id="p-00029-en" num="0029">Further, the bottom of the tub 5 is disposed with a washing pump 17 for suctioning the washing water from the sump 10 and discharging the suctioned water into the washing arm 30.</p>
+    <p id="p-00030-en" num="0030">In addition, the bottom of the tub 5 is disposed with a drainage pump 20 for discharging the washing water collected at the sump 10 outside.</p>
+    <p id="p-00031-en" num="0031">The bottom of the tub 5 is disposed with a sump cover.</p>
+    <p id="p-00032-en" num="0032">The sump cover is disposed to cover a top side of the sump 10, and guides falling washing water into a filter 11.</p>
+    <p id="p-00033-en" num="0033">The washing pump 17 includes a washing motor 19 and an impeller (not shown).</p>
+    <p id="p-00034-en" num="0034">The impeller (not shown) is coupled with the washing motor 19 and rotated, and the washing water is flown by rotating the impeller.</p>
+    <p id="p-00035-en" num="0035">The sump 10 collects and stores at least one of the washing water supplied from a raw water supply section 25 or the washing water already injected into the tub 5.</p>
+    <p id="p-00036-en" num="0036">A heater 60 heats the washing water, and is disposed at the inside of the sump 10 in the present embodiment.</p>
+    <p id="p-00037-en" num="0037">A dish rack 40 is formed by wires. The dish rack 40 made of synthetic resin may be inject-molded. A plurality of the dish racks 40 is disposed, and the plurality of the dish racks 40 are disposed at the inside of the tub 5 in a vertical direction. The dish racks 40 include a lower rack 43 disposed with the dishes, having high height, such as the dishes or bowls, and a top rack 41 disposed with the dishes , having low height, such as a table cutlery or culinary ware. The lower rack 43 only may be disposed according to the size of the tub 5, and an upper rack 42 may be disposed between the top rack 41 and the lower rack 43.</p>
+    <p id="p-00038-en" num="0038">The washing pump 17 includes a washing pump 19, and the drainage pump 20 includes a drainage motor 21.</p>
+    <p id="p-00039-en" num="0039">The motor converts electrical energy into kinetic energy. The motor forms driving force for moving the washing water. The motor includes a stator wounded with coils, and a rotor for generating electromagnetic interaction and therefore rotating. The stator is disposed with a plurality of the wounded coils and internal resistors. The rotor is disposed with a plurality of magnets for generating the electromagnetic interaction into the coils. The rotor is rotated by the electromagnetic interaction between the coils and magnets.</p>
+    <p id="p-00040-en" num="0040">The rotor rotates the impeller, and the impeller to be rotated flows the washing water. The impeller forms the pressure difference between the insides of the washing pump 17 and the drainage pump 20 to suction the washing water. The impeller compresses and discharges the suctioned washing water. The washing pump 17 feeds the washing water into the washing arm 30. The drainage pump 20 feeds the washing water into the outside of the dishwasher.</p>
+    <p id="p-00041-en" num="0041">The motor is disposed with a hall sensor (not shown) for measuring position of the rotor. The hall sensor generates ON/OFF signals by rotating the rotor. It is possible to estimate the rotation speed and position of the rotor by the ON/OFF signals generated at the hall sensor. The controller 50 commands to apply the driving current to the motor. An inverter outputs power according to PWM signals and supplies the outputted power to the coil at the stator of the motor.</p>
+    <p id="p-00042-en" num="0042">Referring to FIG.2 to FIG.7, the method for controlling the dishwasher according to the present embodiment includes removing the garbage attached to the dishes by the washing water (S100), cleaning the sump 10 without injecting the washing water into the tub 5 (S200), and rinsing the dishes by the washing water (S300).</p>
+    <p id="p-00043-en" num="0043">The washing water used for the removing the garbage (S100) may be cold water supplied through the raw water supply section 25 or the washing water circulated at the tub.</p>
+    <p id="p-00044-en" num="0044">The garbage is separated from the dishes by hitting the dishes by clean washing water supplied to the raw water supply section 25 in the present embodiment.</p>
+    <p id="p-00045-en" num="0045">The cleaning the sump (S200) cleans the sump before the rinsing (S300) and prevents the dishes from re-contaminating.</p>
+    <p id="p-00046-en" num="0046">The washing water used on the rinsing (S300) for the dishes is also the clean washing water supplied from the raw water supply section 25.</p>
+    <p id="p-00047-en" num="0047">It drives the washing pump 17, until the washing water is injected through the washing arm 30, on cleaning the sump (S200).</p>
+    <p id="p-00048-en" num="0048">The washing water used on cleaning the sump (S200) may be the clean washing water supplied from the raw water supply section 25.</p>
+    <p id="p-00049-en" num="0049">On injecting the washing water through the washing arm 30, the garbage inside the sump is also injected and the dishes are re-contaminated, and therefore it pumps the washing water by the water amount not injecting from the washing arm 30.</p>
+    <p id="p-00050-en" num="0050">In particular, the washing water is pumped under the water amount necessary for injecting the washing water from the washing arm 30, and therefore it is desirable to clean the sump 10 by a lot of washing water, if possible.</p>
+    <p id="p-00051-en" num="0051">On performing the cleaning for the sump (S200), it is possible to control flow of the washing water by controlling a feed water valve 23, and it is also possible to control flow of the washing water by controlling the number of rotation of the washing pump 17.</p>
+    <p id="p-00052-en" num="0052">On cleaning the sump 10 through the cleaning for the sump (S200) as in the present embodiment, the washing water amount used for the rinsing for the dishes (S300) may be reduced and the performance time of the rinsing for the dishes (S300) may be reduced.</p>
+    <p id="p-00053-en" num="0053">It is desirable to drain the washing water used for the cleaning for the sump (S200) before the rinsing for the dishes (S300).</p>
+    <p id="p-00054-en" num="0054">The removing the garbage (S100) includes supplying the washing water to the sump 10 (S110), hitting and cleaning the dishes by the washing water (S120), and dumping the washing water received at the sump 10 by driving the drainage motor 21 (S130).</p>
+    <p id="p-00055-en" num="0055">The cleaning for the sump (S200) includes supplying the clean washing water to the sump 10 (S210), rinsing the sump by driving the washing motor 19 so that the washing water is not discharged into the tub 5 (S220), and dumping the washing water received at the sump 10 by driving the drainage pump 20 (S230).</p>
+    <p id="p-00056-en" num="0056">The rinsing for the dishes (S300) rinses the dishes by at least one of the cold water or hot water after the cleaning the sump (S200).</p>
+    <p id="p-00057-en" num="0057">In the present embodiment, after performing the rinsing for the dishes by the cold water (S320), the washing water used for the rinsing is dumped and the rinsing for the dishes (S520) is performed by the hot water.</p>
+    <p id="p-00058-en" num="0058">Dry time for the dishes may be reduced on rinsing the dishes by the hot water.</p>
+    <p id="p-00059-en" num="0059">In addition, the cleaning for the sump may be added between the rinsing for the dishes used with the cold water (S320) and the rinsing for the dishes used with the hot water (S520).</p>
+    <p id="p-00060-en" num="0060">That is, the garbage may be collected into the sump 10 on performing the rinsing for the dishes used with the cold water (S320).</p>
+    <p id="p-00061-en" num="0061">At this time, the cleaning for the sump is added and the inside of the sump 10 is cleaned. Then, when the rinsing for the dishes (S520) is performed by the hot water, rinsing capability for the dishes may be more enhanced.</p>
+    <p id="p-00062-en" num="0062">The washing water used for the cleaning (S120) contains the detergent. The detergent may be supplied from the detergent supply device formed at a door 9. The cleaning (S120) drops the garbage attached to the dishes on the floor of the tub 5. A part of the sump 10 and the washing arm 30 is contaminated by the foreign substances dropped during the washing (S120). The rinsing for the sump (S220) includes the cleaning for flow paths leading to the filter 11, the washing pump 17, the impeller and the washing arm 30, and the washing arm 30.</p>
+    <p id="p-00063-en" num="0063">A method for controlling the dishwasher in the embodiment of the present invention includes supplying the washing water to the sump 10 (S210) after ending the cleaning (S120).</p>
+    <p id="p-00064-en" num="0064">The washing water amount collected into the sump 10 during the supplying (S210) may be formed less than the water amount required to inject the washing water from the washing arm 30 during the rinsing for the sump (S220).</p>
+    <p id="p-00065-en" num="0065">The raw water supply section 25 may be the source of waterworks. The raw water supply section 25 supplies city water, and the washing water may be the city water. The feed water valve 23 blocks the washing water supplied from the raw water supply section 25.</p>
+    <p id="p-00066-en" num="0066">The feed water valve 23 may be a solenoid valve.</p>
+    <p id="p-00067-en" num="0067">A flowmeter 71 measures the flow of the washing water. The flowmeter 71, connected to the raw water supply section 25, measures the flow of the washing water supplied from the outside. The controller 50 receives information from the flowmeter 71 to determine the closing time of the feed water valve 23.</p>
+    <p id="p-00068-en" num="0068">In order to efficiently inject the washing water into the dishes, the dish rack 40 is formed in a grill type. The dish rack 40 may include a roller (not shown) allowing it to back and forth move inside the tub 5. The tub 5 may include a rail for guiding the roller.</p>
+    <p id="p-00069-en" num="0069">The washing arm 30 injects the washing water fed by the washing pump 17 into the inside of the tub 5. The washing arm 30 may be rotated inside the tub 5. A plurality of the washing arms 30 may be disposed according to heights.</p>
+    <p id="p-00070-en" num="0070">Preferably, the washing arm 30 includes a lower arm 33, disposed at a bottom of the lower rack 43, for injecting the washing water into the lower rack 43, an upper arm 32 disposed between the lower rack 43 and the upper rack 42, and a top arm 31 disposed at a top of the top rack 41.</p>
+    <p id="p-00071-en" num="0071">A flow path switching motor 77 may change the flow paths of the washing water discharged from the washing pump 17.</p>
+    <p id="p-00072-en" num="0072">The flow path switching motor 77 in the present embodiment may supply the washing water to any one of the lower arm 33, the upper arm 32, and the top arm 31.</p>
+    <p id="p-00073-en" num="0073">The flow path switching motor 77 may be a step motor. The controller 50 changes the flow paths of the washing water by the flow path switching motor 77.</p>
+    <p id="p-00074-en" num="0074">The memory 75 consists of a volatile memory losing the stored information on cutting off the power and a nonvolatile memory keeping the stored information on cutting off the power.</p>
+    <p id="p-00075-en" num="0075">The memory 75 includes a ROM (Read Only Memory) and a RAM (Random Access Memory). The memory 75 may be preferably the ROM keeping information on cutting off the power.</p>
+    <p id="p-00076-en" num="0076">The memory 75 is stored with information for feed water amount per each cycle, revolutions per minute of the washing motor 19, and the driving time of the washing motor 19.</p>
+    <p id="p-00077-en" num="0077">The controller 50, connected to the memory 75, stores the collected information or drives the set programs. The controller 50 controls the washing motor 19 and the feed water valve 23 based on the information stored into the memory 75.</p>
+    <p id="p-00078-en" num="0078">The controller 50 opens the feed water valve 23 and performs the supplying (S210). The washing water is flown from the raw water supply section 25 to the sump 10 on opening the feed water valve 23. The controller 50 receives information from a timer 73 or the flowmeter 71 to control the water amount.</p>
+    <p id="p-00079-en" num="0079">For example, when the feed water amount is set to 0.5L, the washing water is not injected from the washing arm 30 to the tub 5 because the washing water does not reach a nozzle formed at the washing arm 30. Therefore, in this case, since the washing water rinsing the sump 10 is not injected, it is possible to prevent the re-contamination of the dishes caused due to the foreign substances at the sump.</p>
+    <p id="p-00080-en" num="0080">That is, the amount at which the washing water is not injected is supplied to the sump 10 in the present embodiment and it is possible to rinse or clean the foreign substances collected into the sump.</p>
+    <p id="p-00081-en" num="0081">The feed water amount (0.5L) of the washing water may be variously set by volume of the flow path, etc.</p>
+    <p id="p-00082-en" num="0082">A method for controlling the dishwasher in the embodiment of the present invention includes supplying the washing water to the sump 10 (S210) after ending the washing (S120).</p>
+    <p id="p-00083-en" num="0083">The water amount of the washing water collected into the sump 10 during the supplying (S210) may be formed less than the water amount required to flow backward the washing water from the sump 10 to the tub 5 (S227) during the rinsing for the sump (S220).</p>
+    <p id="p-00084-en" num="0084">The sump 10 disposed at the bottom of the tub 5 receives the washing water. The sump 10 includes a filter net 13 for filtering the foreign substances contained at the washing water, a filter receptor 15 for receiving the filter net 13, and a washing pump 17 for suctioning the washing water collected into the filter receptor 15 and feeding the suctioned washing water into the washing arm 30.</p>
+    <p id="p-00085-en" num="0085">The sump 10 includes a sump cover for covering the top side thereof and guiding falling washing water into the filter 11.</p>
+    <p id="p-00086-en" num="0086">The filter net is formed in a mesh type. The plurality of the filter net 13 having sizes different from each other may be formed. For example, the filter net 13 disposed at the top thereof filters out the foreign substances only having large size because the number of the meshes per unit area is small. The filter net 13 disposed at the bottom thereof filters out the foreign substances having small size because the number of the meshes per unit area is large.</p>
+    <p id="p-00087-en" num="0087">The filter receptor 15 receives the filter net 13. The filter 13 is formed as a depth capable of adequately collecting the foreign substances. The filter receptor 15 is formed as a depth capable of receiving the filter net 13. The filter receptor 15 is connected to the washing pump 17.</p>
+    <p id="p-00088-en" num="0088">The washing pump 17 suctions and discharges the washing water received at the filter receptor 15. The washing pump 17 discharges the washing water into the washing arm 30. The controller 50 receives information from a timer 73 or the flowmeter 71 to control the water amount.</p>
+    <p id="p-00089-en" num="0089">For example, when the feed water amount is set to 0.5L, the washing water flowing from the filter receptor 15 to the tub 5 is not flown backward because the washing water amount is lack. Therefore, the washing water rinsing the sump 10 does not contaminate the dishes laid at the tub 5.</p>
+    <p id="p-00090-en" num="0090">Further, on ending the driving of the washing pump 17, the washing water increased up to a constant height of the washing arm 30 passes the washing pump 17 and may be flown backward into the filter receptor 15. That is, when the feed water amount of the washing water is much, it may be flown backward from the filter receptor 15 to the tub 5 via the filter net 13.</p>
+    <p id="p-00091-en" num="0091">The feed water amount in the present embodiment is set to the amount that is not flown backward from the filter 11 to the tub 5.</p>
+    <p id="p-00092-en" num="0092">When the feed water amount (0.5L) of the washing water may be differed according to the size of the dishwasher and the volume of the flow path.</p>
+    <p id="p-00093-en" num="0093">A rotational speed of the washing motor 19 may be the rotational speed, at the rinsing for the sump (S220) according to the embodiment of the present invention, until the washing water is injected from the washing arm 30.</p>
+    <p id="p-00094-en" num="0094">Generally, lifts are increased on increasing the number of rotation for the washing motor 19. When the lifts of the washing pump 17 are increased, the washing water may be injected into the tub 5 through the washing arm 30. The rotational speed of the washing motor 19 is set to 600RPM in the present embodiment, but the number of rotation may be differed according to the height of the washing arm and the volume of the flow path.</p>
+    <p id="p-00095-en" num="0095">In addition, the rotational speed of the washing motor 19 may be the speed, at the rinsing for the sump (S220), at which the washing water is not flown backward from the sump 10 to the tub 5.</p>
+    <p id="p-00096-en" num="0096">That is, the rotational speed is set to the speed at which the washing water of the sump 10 is not flown backward into the tub 5 through the filter 11.</p>
+    <p id="p-00097-en" num="0097">When the washing water becomes high more than needs, the washing water may be flown backward from the filter receptor 15 to the tub 5 on ending the driving of the washing motor 19.</p>
+    <p id="p-00098-en" num="0098">Therefore, the number of rotation for the washing motor 19 is lowly set to the number of rotation within controllable ranges. The rotational speed of the washing motor 19 is set to 600RPM in the present embodiment, but the number of rotation may be differed according to the size of the filter receptor 15, the height of the washing arm 30 and the volume of the flow path.</p>
+    <p id="p-00099-en" num="0099">The method for controlling the dishwasher in the embodiment of the present invention includes hitting the dishes by the cold water and performing the rinsing for the dishes by the cold water (S320), and the rinsing for the sump (S220) may be performed one times or more than one time before or after the rinsing for the dishes performed by the cold water (S320).</p>
+    <p id="p-00100-en" num="0100">The temperature of the cold water may be the temperature of the washing water supplied from the raw water supply section 25 or the city water.</p>
+    <p id="p-00101-en" num="0101">The temperature of the cold water is the temperature of the washing water that does not supply heat energy by the heater 60.</p>
+    <p id="p-00102-en" num="0102">The temperature of the cold water is an indoor temperature disposed with the dishwasher.</p>
+    <p id="p-00103-en" num="0103">The rinsing for the dishes performed by the cold water (S320) may be performed before or after the rinsing for the sump (S220). Therefore, the rinsing for the dishes performed by the cold water is performed after removing the garbage in the sump 10, thereby to wash the dishes by more clean washing water.</p>
+    <p id="p-00104-en" num="0104">The method for controlling the dishwasher in the embodiment of the present invention includes hitting the dishes by the hot water heated by the heater 60 and performing the rinsing for the dishes performed by the hot water (S520), and the rinsing for the dishes performed by the hot water (S520) may be performed after the rinsing for the sump (S220).</p>
+    <p id="p-00105-en" num="0105">The heater 60 may be disposed at the filter receptor 15. The heater 60 heats the washing water and produces stem or hot water (S515). The heater 60 may be a sheath heater 60. The heater 60 converts electrical energy into heat energy. The washing water suctions the heat energy from the heater 60. The controller 50 controls the driving time of the heater 60.</p>
+    <p id="p-00106-en" num="0106">The controller 50 drives the heater 60 to produce the hot water (S515). The controller 50 drives the heater 60 to control the temperature of the washing water.</p>
+    <p id="p-00107-en" num="0107">The rinsing for the dishes performed by the hot water (S520) helps the drying of the dishes by increasing the temperature of the dishes. The hot water has high solubility, but the cloudiness of the hot water is very low because the sump 10 has been washed by the rinsing for the sump (S220). Therefore, the dishes are washed by the clean hot water, thereby to enhance the cleanliness of the dishes.</p>
+    <p id="p-00108-en" num="0108">The method for controlling the dishwasher in the embodiment of the present invention includes hitting the dishes by the hot water heated by the heater 60 and performing the rinsing for the dishes by the hot water (S520), and the sum of the amount of the washing water supplied to perform the rinsing for the dishes performed by the cold water (S320) and the amount of the washing water supplied to perform the rinsing for the dishes performed by the hot water (S520) is reduced on increasing the washing water amount supplied during the rinsing for the sump (S220).</p>
+    <p id="p-00109-en" num="0109">The cleanliness of the sump 10 is enhanced on performing more the rinsing because the dishes are washed by more clean washing water.</p>
+    <p id="p-00110-en" num="0110">Therefore, the sum of the amounts of the washing water required for the rinsing for the dishes performed by the hot water (S520) and the rinsing for the dishes performed by the cold water (S320) may be reduced on increasing the rinsing times or the washing water amount required for the rinsing.</p>
+    <p id="p-00111-en" num="0111">The method for controlling the dishwasher in the embodiment of the present invention includes rinsing for the dishes by the hot water by hitting the dishes by the hot water heated by the heater 60 (S520), and the sum of the washing water amount supplied during the rinsing for the sump (S220), the amount of the washing water supplied to perform the rinsing for the dishes performed by the cold water (S320), and the water of the washing water supplied to perform the rinsing for the dishes performed by the hot water (S520) may be constantly formed.</p>
+    <p id="p-00112-en" num="0112">For example, when the washing water amount supplied during the rinsing for the sump (S220) is 0.5L, the washing water amount supplied to the rinsing for the dishes performed by the cold water (S320) is 2.6L, the washing water amount supplied to the rinsing for the dishes performed by the hot water (S520) is 2.9L, and the sum of the water amount, that is, 6L may be used.</p>
+    <p id="p-00113-en" num="0113">On the other hand, when the washing water amount supplied during the rinsing for the sump (S220) is two times per 0.5L (or one times per 1.0L), the washing water amount supplied to the rinsing for the dishes performed by the cold water (S320) is 2.5L, the washing water amount supplied to the rinsing for the dishes performed by the hot water (S520) is 2.5L, and the sum of the water amount, that is, 6L may be used.</p>
+    <p id="p-00114-en" num="0114">That is, the washing water amount required for the washing for the dishes may be constantly formed. Therefore, the cleanliness of the dishes may be enhanced while constantly maintaining the washing water amount.</p>
+    <p id="p-00115-en" num="0115">The method for controlling the dishwasher in the embodiment of the present invention includes rinsing the dishes by the hot water by hitting the dishes by the hot water heated by the heater 60 (S520), and the sum of the amounts of the washing water supplied to perform the rinsing for the dishes (S120), the rinsing for the sump (S220), the rinsing for the dishes performed by the cold water (S320), and the rinsing for the dishes performed by the hot water (S520) is constantly maintained.</p>
+    <p id="p-00116-en" num="0116">For example, when the washing water amount supplied during the washing (S120) is 3.2L and the washing water amount supplied to the rinsing for the sump (S220) is 0.5L, the washing water amount supplied to the rinsing for the dishes performed by the cold water (S320) is 2.6L and the washing water amount supplied to the rinsing for the dishes performed by the hot water (S520) is 2.9L. In this case, the sum of the washing water to be consumed is 9.2L.</p>
+    <p id="p-00117-en" num="0117">For another example, when the washing water amount supplied during the washing (S120) is 3.2L and the washing water amount supplied to the rinsing for the sump (S220) is twice per 0.5L (or once per 1.0L), the washing water amount supplied to the rinsing for the dishes performed by the cold water (S320) is 2.5L and the washing water amount supplied to the rinsing for the dishes performed by the hot water (S520) is 2.5L. In this case, the sum of the washing water to be consumed is 9.2L. Therefore, the cleanliness of the dishes may be enhanced while constantly maintaining the washing water amount by the control method according to the present invention.</p>
+    <p id="p-00118-en" num="0118">The method for controlling the dishwasher in the embodiment of the present invention includes rinsing the dishes by the hot water by hitting the dishes by the hot water heated by the heater 60 (S520), and the sum of the performance time of the rinsing for the dishes performed by the cold water (S320) and the performance time of the rinsing for the dishes by the hot water (S520) is reduced when the performance of the rinsing for the sump (S220) is lengthen.</p>
+    <p id="p-00119-en" num="0119">The controller 50 connected to a timer 73 may measure the driving times for the heater 60, the washing motor 19, the drainage motor 21, the feed water valve, etc.</p>
+    <p id="p-00120-en" num="0120">When the performance time of the rinsing for the sump (S220) is lengthened, the sump 10 becomes more cleaner.</p>
+    <p id="p-00121-en" num="0121">When the sump 10 becomes more cleaner, the washing water flowing into the washing arm 30 through the sump 10 also becomes clean. Therefore, the cleanliness of the dishes may be enhanced although the sum of the performance time of the rinsing for the dishes performed by the cold water (S320) and the performance time of the rinsing for the dishes performed by the hot water (S520) is reduced.</p>
+    <p id="p-00122-en" num="0122">The method for controlling the dishwasher in the embodiment of the present invention includes dumping the washing water received at the sump 10 by driving the drainage motor 21 (S230) after ending the rinsing for the sump (S220).</p>
+    <p id="p-00123-en" num="0123">The controller 50 drives the drainage motor 21 to discharge the washing water. Since the washing water at the sump 10 includes the foreign substances after driving the washing motor 19 and therefore the cloudiness of it is increased, the washing water is newly supplied after removing them.</p>
+    <p id="p-00124-en" num="0124">The dumping (S230) may be performed at each last step of the removing for the garbage attached to the dishes (S100) and/or the cleaning for the sump 10 without injecting the washing water into the tub 5 (S200) and/or the rinsing for the dishes performed by the washing water (S300).</p>
+    <p id="p-00125-en" num="0125">The method for controlling the dishwasher according to the embodiment of the present invention includes removing garbage attached to the dishes by the washing water (S100), cleaning the sump 10 without injecting the washing water into the tub 5 (S200), and rinsing the dishes by the washing water (S300).</p>
+    <p id="p-00126-en" num="0126">The removing the garbage (S100) includes supplying the washing water to the sump 10 (S110), hitting and washing the dishes by the washing water (S120), and dumping the washing water received at sump 10 by driving the drainage motor 21 (S130).</p>
+    <p id="p-00127-en" num="0127">The cleaning for the sump 10 without injecting the washing water into the tub 5 (S200) includes supplying the washing water to the sump 10 (S210), the rinsing for the sump performed by driving the washing motor 19 so that the washing water is not discharged into the tub 5 (S220), and dumping the washing water received at the sump 10 by driving the drainage motor 21 (S230).</p>
+    <p id="p-00128-en" num="0128">The rinsing for the dishes performed by the washing motor (S300) includes supplying the washing water to the sump 10 (S310), rinsing for the dishes performed by the cold water (S320) by hitting the dishes by the cold water, and dumping the washing water received at the sump 10 by driving the drainage motor 21 (S330).</p>
+    <p id="p-00129-en" num="0129">The rinsing for the dishes performed by the washing water (S300) includes supplying the washing water to the sump 10 (S510), producing the hot water by driving the heater 60 (S515), rinsing the dishes by hitting the dishes by the hot water (S520), and dumping the washing water received at the sump 10 by driving the drainage motor 21 (S530).</p>
+    <p id="p-00130-en" num="0130">The rinsing for the dishes performed by the washing water (S300) preferably performs both of the rinsing for the dishes performed by the cold water (S320) and the rinsing for the dishes performed by the hot water (S520).</p>
+    <p id="p-00131-en" num="0131">Further, it is desirable that the rinsing for the sump 10 (S220) is performed before the rinsing for the dishes performed by the cold water (S320) and the rinsing for the sump 10 (S420) is performed again before the rinsing for the dishes performed by the hot water (S520).</p>
+    <p id="p-00132-en" num="0132">Supplying the washing water to the sump (S410) is performed before the rinsing for the sump 10 (S420).</p>
+    <p id="p-00133-en" num="0133">Further, dumping the washing water received at the sump (S430) by driving the drainage motor may be performed after the rinsing for the sump (S420).</p>
+    <p id="p-00134-en" num="0134">On the other hand, the cleaning (S200) is preferably performed before the rinsing for the dishes performed by the washing water (S300).</p>
+    <p id="p-00135-en" num="0135">The method for controlling the dishwasher in the embodiment of the present invention includes suctioning the washing water from the filter 11 to the washing pump 17 by driving the washing pump 17 (S221), feeding the washing water from the washing pump 17 to the washing arm 30 by driving the washing pump 17 (S223), and pumping the washing water until the washing water is injected from the washing arm 30 and ending the driving of the washing pump 17 (S225).</p>
+    <p id="p-00136-en" num="0136">The rinsing for the sump (S220) without injecting the washing water into the tub 5 drives the washing motor 19. The controller 50 drives the washing motor 19. The washing motor 19 rotates the impeller to suction the washing water received at the filter 11. The washing water suctioned into the washing pump 17 is flown into the washing arm 30.</p>
+    <p id="p-00137-en" num="0137">A rising height of the washing water is defined according to the rotation number of the washing motor 19. The controller 50 feeds the washing water into the washing arm 30. The controller 50 drives the washing motor 19 so that the washing water is not injected from the washing arm 30. The washing motor 19 preferably rotates by 600RPM. The controller 50 rotates the washing motor 19 during 30 second and then ends the driving of the washing motor 19.</p>
+    <p id="p-00138-en" num="0138">The washing water is flown from the filter 11 to the washing arm 30 via the washing pump 17 on driving the washing motor 19.</p>
+    <p id="p-00139-en" num="0139">The method for controlling the dishwasher in the embodiment of the present invention includes hitting and washing the dishes by the washing water (S120), supplying the washing water to the sump 10 (S210), and dumping the washing water received at the sump 10 by driving the drainage motor 21 (S230).</p>
+    <p id="p-00140-en" num="0140">Wherein, the suctioning (S221), the feeding (S223) and the ending for the driving (S225) are performed between the supplying (S210) and the dumping (S230).</p>
+    <p id="p-00141-en" num="0141">The controller 50 rotates the washing motor 19 to wash the dishes.</p>
+    <p id="p-00142-en" num="0142">The washing (S120) is a part of a process for removing the garbage attached to the dishes. The controller 50 drives the washing motor and performs the suctioning (S221), the feeding (S223) and the ending for the driving (S225).</p>
+    <p id="p-00143-en" num="0143">The method for controlling the dishwasher in the embodiment of the present invention further includes flowing backward the washing water from the washing pump 17 to the filter 11 (S227).</p>
+    <p id="p-00144-en" num="0144">The flowing backward (S227) may be performed between the ending for the driving (S225) and the dumping (S230). The flowing backward (S227) is performed on ending the driving of the washing motor 19.</p>
+    <p id="p-00145-en" num="0145">The washing motor 19 ends the driving when the washing water is increased up to the constant height. Therefore, the washing water having the kinetic energy falls and is flown backward into the filter 10. The controller 50 drives the drainage pump 20 and performs the dumping (S230) on ending the flowing backward (S227).</p>
+    <p id="p-00146-en" num="0146">The foreign substances attached to the filter 11 are separated by the flowing backward (S227).</p>
+    <p id="p-00147-en" num="0147">Actions of the method for controlling the dishwasher in the present invention configured as above are described as follows.</p>
+    <p id="p-00148-en" num="0148">
+      <figref>FIG. 8A</figref> is a graph for representing the cleaning degree for dishes according to the usage of the washing water after ending the rinsing for the dishes according to one embodiment of the present invention, wherein a dotted line represents a case not performing the rinsing for the sump and a solid line represents a case performing the rinsing for the sump.</p>
+    <p id="p-00149-en" num="0149">Referring to <figref>FIG. 8A</figref>, the washing water of 11L is consumed and the washing degree is 2.9 in the case that the rinsing for the sump 10 is not performed and the washing water amount is increased(the dotted line).</p>
+    <p id="p-00150-en" num="0150">On the other hand, the washing water of 9.2L only satisfies the washing degree of 2.9 on performing the rinsing for the sump (S220) (the solid line). Therefore, the washing water of 1.8L is saved, and it is possible to achieve the same washing performance.</p>
+    <p id="p-00151-en" num="0151">
+      <figref>FIG. 8B</figref> is a graph for representing the cloudiness of the washing water according to the usage of the washing water after ending the rinsing for the dishes according to one embodiment of the present invention, wherein the dotted line represents a case not performing the rinsing for the sump and the solid line represents a case performing the rinsing for the sump.</p>
+    <p id="p-00152-en" num="0152">Referring to <figref>FIG. 8B</figref>, the washing water of 11L is consumed to achieve the cloudiness of 200 in the case that the rinsing for the sump 10 (S220) is not performed and the washing water amount is increased (the dotted line). On the other hand, the washing water of 9.2L only satisfies the clouidiness of 200 on performing the rinsing for the sump (S220) (the solid line).</p>
+    <p id="p-00153-en" num="0153">Likewise, the washing water of 1.8L is saved and it is possible to achieve the same washing performance on performing the rinsing for the sump (S220).</p>
+    <p id="p-00154-en" num="0154">
+      <figref>FIG. 9</figref> is a graph for representing the washing degree for dishes according to the usage of the washing water after ending the rinsing for the dishes according to one embodiment of the present invention, wherein the dotted line represents a case performing the rinsing for the sump once and the solid line represents the case performing the rinsing for the sump twice.</p>
+    <p id="p-00155-en" num="0155">Referring to <figref>FIG. 9</figref>, the washing water of 11L is consumed to achieve the washing degree of 3.00 on performing the rinsing for the sump once (the dotted line). On the other hand, the washing water of 9.2L only satisfies the washing degree of 3.00 on performing the rinsing for the sump twice (the solid line).</p>
+    <p id="p-00156-en" num="0156">Therefore, the washing performance may be enhanced on increasing times of the rinsing for the sump (S220), and the washing water of 1.8L is saved to achieve the same washing performance on performing it twice.</p>
+    <p id="p-00157-en" num="0157">There are the following effects according to the present invention.</p>
+    <p id="p-00158-en" num="0158">Firstly, since the sump is cleaned, the supply amount of the washing water is saved, thereby to enhance the rinsing capability for the dishes.</p>
+    <p id="p-00159-en" num="0159">Secondly, more clean washing water is injected into the dishes, thereby to shorten the rinsing time and to enhance the rinsing capability for the dishes.</p>
+    <p id="p-00160-en" num="0160">Thirdly, the foreign substances attached to the sump may be removed, thereby to prevent re-contamination for the dishes.</p>
+    <p id="p-00161-en" num="0161">The present invention is not limited to the above-mentioned problems and other problems, which are not described above, can be obviously understood to those skilled in the art from the following description.</p>
+    <p id="p-00162-en" num="0162">In addition, although the preferred embodiments of the present invention are shown and described above, the present invention is not limited to above-described specific embodiment and is variously modified by one skilled in the art without the gist of the present invention claimed in the claim, such that the modified embodiment is not to be understood separately from technical ideas or views of the present invention.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151007">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>A method for controlling a dishwasher, the dishwasher comprising a sump for storing water collected from a tub and water from a water supply, a washing arm for injecting water from the sump into the tub, a washing pump for feeding the water from the sump into the washing arm, and a drainage pump for discharging the water from the sump, and the method comprising the steps of:
+<claim-text>supplying water to the sump;</claim-text><claim-text>rinsing the sump by driving the washing pump until an amount of water is supplied to the washing arm; and</claim-text><claim-text>dumping water stored in the sump by driving the drainage pump after rinsing the sump.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The method for controlling the dishwasher according to claim 1, wherein, in the step of rinsing the sump, the amount of water supplied to the washing arm is less than that needed to inject water into the tub from the sump via the washing arm.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The method for controlling the dishwasher according to claim 1 or 2, wherein the amount of water supplied to the washing arm is less than that flowing backward from the washing arm to the sump after stopping the driving of the washing pump after a cleaning cycle.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The method for controlling the dishwasher according to any of claims 1 to 3, wherein a rotational speed of the washing pump is less than that needed to inject water into the tub from the sump via the washing arm,<br />
+or,<br />
+wherein a rotational speed of the washing pump is less than that occurring when water flows backward from the washing arm to the sump after stopping the driving of the washing pump after a cleaning cycle.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The method for controlling the dishwasher according to any of claims 1 to 4, wherein the dishwasher further comprises a filter, disposed between the tub and the washing pump, for filtering foreign substances from water guided from the tub and for guiding filtered water into the sump,<br />
+and wherein the step of rinsing the sump includes pumping water stored in the filter through the washing pump, feeding the water pumped through the washing pump into the washing arm, and stopping the driving of the washing pump before water is injected into the tub from the washing arm.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>The method for controlling the dishwasher according to claim 5, further comprising the step of allowing water fed into the washing arm to flow backwards into the filter due to its own weight after stopping the driving of the washing pump.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>The method for controlling the dishwasher according to any of claims 1 to 6, further comprising the step of rinsing the dishes with cold water after the step of dumping water stored in the sump,<br />
+wherein the step of rinsing the sump is performed at least once before and/or after the step of rinsing the dishes with cold water.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>The method for controlling the dishwasher according to any of claims 1 to 7, wherein the sump further comprises a heater for heating water, and wherein the method further comprises the step of rinsing the dishes using water heated by the heater after the step of dumping water stored in the sump.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>The method for controlling the dishwasher according to any of claims 1 to 7, wherein the sump further comprises a heater for heating water, and wherein the method further comprises the steps of:
+<claim-text>rinsing the dishes with cold water after dumping water stored in the sump; and</claim-text><claim-text>rinsing the dishes with water heated by the heater,</claim-text><claim-text>wherein the volume of cold water and/or the volume of water heated by the heater is reduced when a volume of water supplied during rinsing the sump is increased.</claim-text></claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>The method for controlling the dishwasher according to any of claims 1 to 7, wherein the sump further comprises a heater for heating water, and wherein the method further comprises the steps of:
+<claim-text>rinsing the dishes with cold water after the step of dumping water stored in the sump; and</claim-text><claim-text>rinsing the dishes using water heated by the heater,</claim-text><claim-text>wherein the sum of the volume of water supplied during the step of rinsing the sump, the volume of cold water and the volume of water heated by the heater is constant.</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>The method for controlling the dishwasher according to any of claims 1 to 7, wherein the sump further comprises a heater for heating water, and wherein the method further comprises the steps of:
+<claim-text>rinsing the dishes using cold water after the step of dumping the water stored in the sump; and</claim-text><claim-text>rinsing the dishes using water heated by the heater,</claim-text><claim-text>wherein the sum of the durations of the steps of rinsing the dishes using cold water and rinsing the dishes using water heated by the heater is reduced when the duration of the step of rinsing the sump is increased.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>The method for controlling the dishwasher according to any of claims 1 to 7, wherein the sump further includes a heater for heating water, and wherein the method further comprises the steps of:
+<claim-text>rinsing the dishes using cold water after dumping water stored in the sump; and</claim-text><claim-text>rinsing the dishes using water heated by the heater,</claim-text><claim-text>wherein the sum of the durations of the steps of rinsing the sump, rinsing the dishes using cold water and rinsing the dishes using water heated by the heater is constant.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>A method for controlling a dishwasher according to claim 1, wherein the dishwasher further comprises a filter, disposed between the tub and the washing pump, for filtering foreign substances from water guided from the tub and for guiding filtered water into the sump, and a heater, disposed at the sump, for heating water, and wherein the method further comprises the steps of:
+<claim-text>washing the dishes using water driven by the washing pump;</claim-text><claim-text>rinsing the dishes using cold water after the step of dumping the water stored in the sump; and</claim-text><claim-text>rinsing the dishes using water heated by the heater</claim-text></claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>The method for controlling the dishwasher according to claim 13, wherein the duration of the step of rinsing the dishes using cold water and/or the duration of the step of rinsing the dishes using water heated by the heater is reduced when the duration of the step of rinsing the sump is increased.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>The method for controlling the dishwasher according to claim 13, wherein the volume of water supplied during the step of rinsing the dishes using cold water and/or the volume of water supplied during the step of rinsing the dishes using water heated by the heater is reduced when the volume of water supplied during the step of rinsing the sump is increased.</claim-text>
+    </claim>
+  </claims>
+  <image file="EP2926709A1.PDF" type="pdf" size="368295" pages="21" />
+</lexisnexis-patent-document>

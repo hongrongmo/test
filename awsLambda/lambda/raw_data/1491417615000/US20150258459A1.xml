@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150258459A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030351" date-changed="20160124" time-changed="162607">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121318130">
+        <country>US</country>
+        <doc-number>20150258459</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14204929</doc-number>
+        <date>20140311</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>A63F  13/95        20140101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20140101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>95</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A63F  13/24        20140101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20140101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>A63F  13/95        20140902 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20140902</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>95</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A63F  13/24        20140902 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20140902</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>24</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">STORING STATE FOR PHYSICAL MODULAR TOYS</invention-title>
+    <references-cited date-changed="20151103">
+      <patent-citations name="patcit" date-changed="20151103" />
+      <citation>
+        <patcit num="1" dnum="US2001049249A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20010049249</doc-number>
+            <kind>A1</kind>
+            <name>TACHAU JEREMY [US], et al</name>
+            <date>20011206</date>
+          </document-id>
+          <application-date>
+            <date>20010709</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US2007072680A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070072680</doc-number>
+            <kind>A1</kind>
+            <name>IKEDA AKIO [JP]</name>
+            <date>20070329</date>
+          </document-id>
+          <application-date>
+            <date>20060815</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US2009197658A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090197658</doc-number>
+            <kind>A1</kind>
+            <name>POLCHIN GEORGE [US]</name>
+            <date>20090806</date>
+          </document-id>
+          <application-date>
+            <date>20090203</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US2010007528A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20100007528</doc-number>
+            <kind>A1</kind>
+            <name>URATA MASAHIRO [JP], et al</name>
+            <date>20100114</date>
+          </document-id>
+          <application-date>
+            <date>20080729</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="US2010026458A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20100026458</doc-number>
+            <kind>A1</kind>
+            <name>SAMDAHL AMBER [US], et al</name>
+            <date>20100204</date>
+          </document-id>
+          <application-date>
+            <date>20080729</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Microsoft Corporation</orgname>
+            <address>
+              <city>Redmond</city>
+              <state>WA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>SCOTT</last-name>
+            <first-name>James William</first-name>
+            <address>
+              <city>Cambridge</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>VILLAR</last-name>
+            <first-name>Nicolas</first-name>
+            <address>
+              <city>Cambridge</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>ZHANG</last-name>
+            <first-name>Haiyan</first-name>
+            <address>
+              <city>London</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>SAUL</last-name>
+            <first-name>Greg</first-name>
+            <address>
+              <city>London</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>BUNTING</last-name>
+            <first-name>Alexandra Keeley</first-name>
+            <address>
+              <city>London</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>SCHUNEMAN</last-name>
+            <first-name>Lee Jason</first-name>
+            <address>
+              <city>London</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="7" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>HARRISON</last-name>
+            <first-name>Philip Robert</first-name>
+            <address>
+              <city>Chalfont St Giles</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173672876">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150258459</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140311</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173672875">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150258459</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140311</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A modular assembly system is described in which each module comprises a storage element which stores an identifier for the module and data relating to the module. At least some of the module data is variable and is updated based on user interaction with an interactive software experience (e.g. state data). Each module also comprises one or more connectors for connecting to other modules to form a coherent physical whole object. In an embodiment, the system further comprises the interactive software experience which provides user objectives which can only be satisfied by the user interacting with the object or with modules that form the object. At least one of the modules in the object comprises a communication module which passes identifiers and module data to the interactive software experience and receives updated module data from the interactive software experience for storing in one of the modules in the object.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20141202</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015258459A1</docdb-publication-number>
+      <docdb-application-id>444512554</docdb-application-id>
+      <new-owner>MICROSOFT CORPORATION, WASHINGTON</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:ZHANG, HAIYAN;VILLAR, NICOLAS;SCOTT, JAMES WILLIAM;AND OTHERS;SIGNING DATES FROM 20140410 TO 20140728;REEL/FRAME:034314/0001</free-text-description>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20150109</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015258459A1</docdb-publication-number>
+      <docdb-application-id>444512554</docdb-application-id>
+      <new-owner>MICROSOFT TECHNOLOGY LICENSING, LLC, WASHINGTON</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:MICROSOFT CORPORATION;REEL/FRAME:034747/0417</free-text-description>
+      <effective-date>
+        <date>20141014</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">BACKGROUND</heading>
+      <p id="p-00001-en" num="0001">There are many ways that a user can interact with a computer game and typically a user controls the game via a keyboard and mouse, games controller (which may be handheld or detect body movement) or touch screen, dependent upon the platform on which the game is being played (e.g. computer, games console or handheld device). A number of games have also been developed in which gameplay is enabled (or unlocked) through the use of physical character toys which are placed on a custom base connected to a games console. By placing different toys on the custom base, different gameplay is enabled.</p>
+      <p id="p-00002-en" num="0002">The embodiments described below are not limited to implementations which solve any or all of the disadvantages of known apparatus for interacting with interactive software experiences, such as games.</p>
+      <heading id="h-00002-en" level="1">SUMMARY</heading>
+      <p id="p-00003-en" num="0003">The following presents a simplified summary of the disclosure in order to provide a basic understanding to the reader. This summary is not an extensive overview of the disclosure and it does not identify key/critical elements or delineate the scope of the specification. Its sole purpose is to present a selection of concepts disclosed herein in a simplified form as a prelude to the more detailed description that is presented later.</p>
+      <p id="p-00004-en" num="0004">A modular assembly system is described in which each module comprises a storage element which stores an identifier for the module and data relating to the module. At least some of the module data is variable and is updated based on user interaction with an interactive software experience (e.g. state data). Each module also comprises one or more connectors for connecting to other modules to form a coherent physical whole object. In an embodiment, the system further comprises the interactive software experience which provides user objectives which can only be satisfied by the user interacting with the object or with modules that form the object. At least one of the modules in the object comprises a communication module which passes identifiers and module data to the interactive software experience and receives updated module data from the interactive software experience for storing in one of the modules in the object.</p>
+      <p id="p-00005-en" num="0005">Many of the attendant features will be more readily appreciated as the same becomes better understood by reference to the following detailed description considered in connection with the accompanying drawings.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00006-en" num="0006">The present description will be better understood from the following detailed description read in light of the accompanying drawings, wherein:</p>
+      <p id="p-00007-en" num="0007">
+        <figref>FIG. 1</figref> is a schematic diagram of a coherent physical whole object formed from a plurality of modules;</p>
+      <p id="p-00008-en" num="0008">
+        <figref>FIG. 2</figref> is a schematic diagram of a system comprising the coherent physical whole object such as shown in <figref>FIG. 1</figref>;</p>
+      <p id="p-00009-en" num="0009">
+        <figref>FIG. 3</figref> is a flow diagram showing an example method of operation of the system shown in <figref>FIG. 2</figref>;</p>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 4</figref> illustrates an exemplary computing-based device in which embodiments of the methods described herein may be implemented; and</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 5</figref> shows a cross-section through each of a mating pair of example connectors.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <p id="p-00012-en" num="0012">Like reference numerals are used to designate like parts in the accompanying drawings.</p>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00013-en" num="0013">The detailed description provided below in connection with the appended drawings is intended as a description of the present examples and is not intended to represent the only forms in which the present example may be constructed or utilized. The description sets forth the functions of the example and the sequence of steps for constructing and operating the example. However, the same or equivalent functions and sequences may be accomplished by different examples.</p>
+      <p id="p-00014-en" num="0014">A system is described below which comprises a plurality of hardware modules which are each a sub-component of a coherent physical whole object, such as a toy. The modules may be connected together and re-arranged by users as part of interaction with an interactive software experience (e.g. a game), such that the modules and the coherent physical whole object which they form act as a user input device for the interactive software experience. In various examples, the interactive software experience provides a directed experience in that it presents a user with goals or objectives that require the user to interact with the object in some way (e.g. by rearranging modules or moving modules, by interacting with a sensor on a module, etc.). The interaction may be with the object as a whole or with one or more modules that are part of the object. In some examples, the act of assembly of a plurality of modules by a user into a complete object (e.g. a particular combination and/or arrangement of modules) unlocks or enables the interactive software experience or parts thereof (e.g. particular features, mini-games, levels, etc.).</p>
+      <p id="p-00015-en" num="0015">Once assembled, the coherent physical whole object is physically attached together to form a single object, i.e. requiring a deliberate action by the user to detach (e.g. an applied force to overcome a mechanical friction fit or a magnetic attachment holding the modules together, or an unclasping or threading action so that a module can be removed or disconnected from an adjacent module). This is in contrast to systems in which a module or modules are sensed to be near or touching one another, but no mechanical element holds them together (with the exception of gravity, if the whole assembly is only lifted vertically from underneath). The coherent physical whole object <b>108</b> is moveable freely (e.g. in three dimensions) by a user and is capable of communicating with the interactive software experience while it is in motion. The coherent physical whole object (and/or the modules from which it is formed) may comprise mechanical articulation or movement affordances, e.g. it may have joints such as hinges, or some elements may be mobile compared to other elements, e.g. sliding or rotating with respect to one another.</p>
+      <p id="p-00016-en" num="0016">Each coherent physical whole object comprises a plurality of modules. Each module has one or more connectors to enable it to connect to other modules to form a coherent physical whole object and these connectors pass data and power between modules. Each module also comprises a memory which is arranged to store both an ID for the module and data relating to the module (referred to herein as ‘module data’). As is described in more detail below, the module data may comprise game state information, game data itself (i.e. the code for the entire interactive software experience or for a part of it), etc. At least some of the module data is variable and is updated by based on user interaction with interactive software experience (e.g. using a conventional user input device or the object as user input device).</p>
+      <p id="p-00017-en" num="0017">In various examples the coherent physical whole object comprises at least one core module and one or more peripheral modules. A core module comprises additional processing capability compared to a peripheral module and generally a core module acts as a master while the peripheral modules act as slave modules; however a core module may in various examples be configured to act as a slave (e.g. where there is more than one core module). Both core and peripheral modules comprise one or more connectors and a memory which is arranged to store both an ID for the module (which may be a unique ID or an ID shared with other identical looking modules, e.g. an ID for a type of module) and module data for the module.</p>
+      <p id="p-00018-en" num="0018">The modules can, for example, represent parts (e.g. head, body, limbs) of a humanoid/animal/mystical character (e.g. a human, animal or robot), vehicles or parts thereof (e.g. chassis, wheels, roof, etc.), accessories for a vehicle or character (e.g. weapons, clothing, armor, or other objects which the character may wear/carry/hold), tracks (e.g. for a car, train, human, animal or other mobile object), bricks (e.g. as part of a construction set), baseboards or levels (e.g. where the tracks/bricks/baseboards/levels may form part of a playset such as a train set, model village, tower block, dolls house or other construction), parts of an educational toy (e.g. parts of a molecular model, skeleton or body, etc.) or fashion items or parts thereof. Where the interactive software experience is a game, the modules may comprise sub-components of a game piece (which may also be referred to as a toy or modular toy) and that game piece may be a character, vehicle, etc.</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 1</figref> is a schematic diagram of a coherent physical whole object <b>100</b> formed from a plurality of modules <b>102</b>, <b>104</b>. Each module <b>102</b>, <b>104</b> comprises a storage element <b>110</b>, <b>116</b> (e.g. a memory) and one or more connectors <b>112</b>, <b>114</b>. The connectors <b>112</b>, <b>114</b> physically attach the modules <b>102</b>, <b>104</b> together and also pass data and power between modules. The storage element <b>110</b>, <b>116</b> which may be integrated within a connector (e.g. as shown in module <b>104</b> in <figref>FIG. 1</figref>) or separate from a connector (e.g. as shown in module <b>102</b> in <figref>FIG. 1</figref>), is arranged to store an ID of the module (which in some examples may be a unique ID for the module or a unique ID for the type of module) and module data. This module data comprises variable data (i.e. data which changes over the life of the module) which is updated by the interactive software experience and may also comprise constant data (i.e. data which does not change over the life of the module).</p>
+      <p id="p-00020-en" num="0020">At least one of the modules (which may be a core module) in the coherent physical whole object <b>100</b> comprises a communications module <b>108</b> which enables the module <b>102</b> to communicate with a computing device running an interactive software experience, such as a game, social media application, personal organization application (e.g. which enables one or more users to set out a family/work schedule through physical tokens in the form of modules which represent particular tasks), multimedia application (e.g. which allows a user to compose photographs and music represented by physical tokens in the form of modules into a slideshow/movie for sharing), etc. Any suitable communication technology may be used, including wireless technologies (e.g. Bluetooth®, Bluetooth® Low Energy, WiFi™ or WiFi™ Direct, Near Field Communication (NFC), 802.15.4, etc.) and wired technologies. The communications module <b>108</b> may communicate directly with the computing device running the interactive software experience (e.g. smartphone, tablet computer, games console, etc.) or may communicate via a network (e.g. a home network or the internet) or intermediary device (e.g. a wireless access point) or intermediary server (e.g. cloud server).</p>
+      <p id="p-00021-en" num="0021">The information which is communicated from the coherent physical whole object <b>100</b> to the interactive software experience (via the communication module <b>108</b>) may include the IDs of the modules <b>102</b>, <b>104</b> and some or all of the module data stored in each of the modules which together form the coherent physical whole object <b>100</b>. In other examples, the ID information may be aggregated by one of the modules (e.g. module <b>102</b>) such that the raw IDs of each module are not transmitted but other information (e.g. module set information such as “module set A”) is communicated from which the interactive software experience can determine which modules together form the coherent physical whole object <b>100</b>. In various examples, the module data may similarly be aggregated before it is communicated to the interactive software experience. The information which is communicated to the interactive software experience (e.g. the IDs and the module data) may cause a change in the operation of the interactive software experience.</p>
+      <p id="p-00022-en" num="0022">As described above, the interactive software experience provides a directed experience in that it presents a user with goals or objectives that require the user to interact to achieve. Such interaction in a normal game is through existing peripherals like keyboards, mice, controllers, etc. Using the modular objects described, the interactive software experience may also require the user to interact with the object in some way. For example, a user may need to rearrange the modules in order to progress to a new level or achieve a goal within the interactive software experience. In various examples, a user may need to interact with the whole object (e.g. by moving a vehicle around a track) in order to further progress within the interactive software experience. In other examples, the user may be required to: add or remove modules from the coherent whole, e.g. to equip a particular weapon; to swap modules between multiple coherent whole objects (e.g. to transfer an “arm” from one robot to another robot), or to use input capabilities on the object or its constituent modules, e.g. to rotate a module in its socket, or to tap a module equipped with a button, accelerometer or other sensor, etc. In yet more examples, directed play may have more abstract goals requiring the user to formulate tactics or strategies for using the modules. For example, in a battle game, various modules may have different capabilities to attack or defend in certain ways, and the player must try to beat an opponent by swapping in and out modules in a way to maximize the chance of causing damage to the opponent while reducing damage caused to their own game character.</p>
+      <p id="p-00023-en" num="0023">In various examples, one of the modules (e.g. a module <b>102</b> which also comprises a communication module <b>108</b>) may also comprise a processor arranged to collect the IDs of each of the modules connected to form the coherent physical whole <b>100</b> and to collect some of all of the module data from each of the modules. The processor may be a microprocessor, controller or any other suitable type of processor for processing computer executable instructions to control the operation of the core module in order to collect data from the connected modules. In various examples, the data may be collected by a core module from each of the connected modules directly (e.g. via a bus which is electrically connected via the connectors or other means, such as using NFC, QR codes or computer vision). In other examples, however, each module may collect information on its neighbors such that the core module aggregates the data provided by its direct neighbor modules.</p>
+      <p id="p-00024-en" num="0024">It will be appreciated that the modules <b>102</b>, <b>104</b> shown in <figref>FIG. 1</figref> may comprise additional elements not shown in <figref>FIG. 1</figref>, such as batteries, sensors, actuators, displays, additional hardware logic, etc. Furthermore, although in <figref>FIG. 1</figref> only one of the modules comprises a communication module <b>108</b>, in other examples, each module may comprise a communication module <b>108</b> and each module may communicate its own ID and module data to the interactive software experience. It will further be appreciated that although <figref>FIG. 1</figref> shows one module <b>102</b> as a robot body and the other modules <b>104</b> as the head and limbs, each of the modules can have any physical form factor (e.g. any shape of external housing) which is compatible with the other modules (i.e. each module is shaped such that it can connect to at least one other module, without the outer housing clashing).</p>
+      <p id="p-00025-en" num="0025">As described above, the module data which is stored within each module relates to that particular module (i.e. the module in which the data is stored) and may comprise constant data and/or variable data. Where the data is variable, this may be updated by the interactive software experience with which the module is used and/or by a processor within the module itself or within another module in the coherent physical whole object.</p>
+      <p id="p-00026-en" num="0026">Examples of constant data include, but are not limited to: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>Game data, such as:         <ul id="ul-00003-en" list-style="none"><li>a 2D/3D representation of the module which can be used within a graphical user interface (GUI) of the interactive software experience to represent the module (e.g. a 3D model, image and/or texture map) or other data describing the module's physical characteristics (e.g. its shape, its texture, etc.) which is used by the interactive software experience to render the experience</li><li>audio snippets or text associated with that module, e.g. to be used in the portrayal of that module's character (or be integrated into the portrayal of the coherent whole object's character)</li><li>specifications of movements associated with that module or character, e.g. for an arm module it may have characteristic arm-swing action(s) while the coherent whole character is walking or running, etc.</li><li>a mini-game which is enabled within the interactive software experience as a result of using the module or a particular combination (e.g. set) of modules or may be enabled when the user reaches a particular point in the interactive software experience (e.g. at a particular score or level), this may be considered to be part of the interactive software experience</li><li>story-line elements from the interactive software experience (e.g. cut-scenes, new missions, etc.), again this may be considered to be part of the interactive software experience</li><li>the entire interactive software experience (e.g. executable files comprising the interactive software experience or part thereof)</li></ul></li><li>Configuration data, such as:         <ul id="ul-00004-en" list-style="none"><li>Manufacture date</li><li>Manufacturer</li><li>Module type</li><li>Compatibility details i.e. specifying which games or other modules this module is allowed to be used in combination with, for example specified using blacklists, whitelists or filters.</li><li>Details of any sets of modules that the module may belong to (e.g. where a set may, for example, be defined as comprising a particular combination of modules to make a particular coherent physical whole object) and which may unlock particular elements of the interactive software experience <br /> In examples where interactive software experience data is stored on the modules themselves, this means that an interactive software experience does not need to include (e.g. at time of shipping) details of every single module which can interact with it nor does the interactive software experience require access to an online look-up service for modules (e.g. for modules where the details were not included when the software was shipped). </li></ul></li></ul></li></ul></p>
+      <p id="p-00027-en" num="0040">In examples where the configuration data defines sets of modules, these sets of modules may, for example, be predefined sets of modules which work well together and which when used together unlock particular features of the interactive software experience. Similarly, sets may be defined which do not work well together. The sets may be advertised to the user or visible through module form factors (e.g. all modules that are robot body parts may work together, but modules which are animal body parts may not work with robot body parts) or in other examples, a set may be a particular combination that a user may discover through interaction with the modules. Although the sets are described above as being part of the constant data, in other examples, set data may form part of the variable data (described below), with sets forming over time (e.g. based on which modules a user regularly uses together to form an object).</p>
+      <p id="p-00028-en" num="0041">Examples of variable data include, but are not limited to: <ul id="ul-00005-en" list-style="none"><li><ul id="ul-00006-en" list-style="none"><li>State data</li><li>Details of the owner of the module, which may comprise only the current owner or details of the ownership history</li><li>Permissions granted by the owner, e.g. permissions for their “friends” using a social network (e.g. Xbox LIVE®) to borrow the module</li><li>A price associated with the module, e.g. a “for sale” price that a friend can pay to buy the module (which may be expressed in real currencies or virtual currencies/points systems), or past history of prices/transactions involving that module</li><li>Where/when/from whom the module was bought or how it was acquired (e.g. won as a prize in a game competition)—this is variable data as it is not fixed at the point of manufacture, but may be fixed later on. <br /> It will also be appreciated that some of the items listed as constant data may alternatively be variable data and vice versa. </li></ul></li></ul></p>
+      <p id="p-00029-en" num="0047">Any state data which is stored in a module may be specific to a particular interactive software experience (e.g. game dependent) or independent of the interactive software experience with which the module is used (e.g. game independent). Examples of state data which is independent of the interactive software experience with which the module is used include: <ul id="ul-00007-en" list-style="none"><li><ul id="ul-00008-en" list-style="none"><li>a total real world time in use or number of total uses</li><li>recent history of use</li><li>physical state information for the module (e.g. physical failure states such as an indicator that a sensor has failed or a rotating arm cannot rotate, battery levels, etc.)</li><li>details of use with other modules (e.g. IDs of other modules that it has been used with, details of sets of modules which have been used together with the module, etc.)</li><li>details of the interactive software experiences with which the module has been used</li><li>details of the devices with which the modules have interacted (e.g. devices executing the interactive software experience) or otherwise sensed, e.g. by sensing their Bluetooth MAC address.</li><li>details of where in the world the module has been used, and of other modules that were also present in such locations (and other users that were present)</li></ul></li></ul></p>
+      <p id="p-00030-en" num="0055">Examples of state data which is specific to a particular interactive software experience include: <ul id="ul-00009-en" list-style="none"><li><ul id="ul-00010-en" list-style="none"><li>History within the interactive software experience, e.g. a timeline of use, possibly detailed enough to facilitate re-viewing of past events.</li><li>Scores or values which are specific to the particular interactive software experience and may, for example, “achievements” unlocked, etc.</li><li>Details of use with other modules in the particular interactive software experience (e.g. IDs of other modules that it has been used with, details of sets of modules which have been used together with the module, etc.)</li><li>Details of virtual items from/for the interactive software experience (e.g. such that a module's storage acts as a container for these virtual items) <br /> Where the interactive software experience is a game, the history may comprise a history of past fight encounters and/or the scores/values detailed above may, for example, comprise one or more of: </li><li>One or more attribute values, e.g. health, speed, durability, etc.</li><li>An experience indicator</li><li>Details of any powerups or special skills that have been learned/earned/won by the particular module in the game</li></ul></li></ul></p>
+      <p id="p-00031-en" num="0063">As with other variable data, the state data may be updated by the interactive software experience with which the module is used (e.g. data which is particular to the specific interactive software experience and any independent data may be updated) and/or by a processor within the module itself or within another module in the coherent physical whole object. The state data may be modified based on user actions or outcomes within the interactive software experience (e.g. a module's health/strength may be depleted as a result of losing a battle in a game, and a module's score may be increased as a result of winning a battle or competition in a game). In various examples, modules may transfer state information between them, either when they form part of the same coherent physical whole object or when they form part of different objects which are brought into proximity with each other.</p>
+      <p id="p-00032-en" num="0064">The state data which is stored in modules may be communicated to an interactive software experience, cause a change in the operation of the interactive software experience and be updated as a result of user interaction with the interactive software experience.</p>
+      <p id="p-00033-en" num="0065">When the state data stored in a module is updated, this may cause a perceptible change in the module itself In various examples the change may be visible to the user, for example, where a module comprises a visual indicator (e.g. one or more LEDs) or display (e.g. LCD or electronic ink), these may be changed based on updated state information, or a module may change color in response to a change in the state data. In other examples, the change may not be visible but may be detectable by the user in another way (e.g. the module may vibrate or its texture may change such that the change may be detected by a user touching the module).</p>
+      <p id="p-00034-en" num="0066">In various examples the connectors within a module may be programmable and controlled based on the state information. Where the attraction between connectors is controllable, a change in the state information may cause a module to be ejected (or otherwise to detach) from the rest of the coherent physical whole object. This is described in more detail below with reference to <figref>FIG. 5</figref>.</p>
+      <p id="p-00035-en" num="0067">As well as, or instead of, communicating the IDs and/or module data from the coherent physical whole object <b>100</b> to the interactive software experience (via the communication module <b>108</b>), some or all of the module data stored in the modules may be communicated to a remote (or cloud) server. A cloud server may also update any of the variable data stored on the module (e.g. owner information).</p>
+      <p id="p-00036-en" num="0068">In various examples, the remote server may store a plurality of data records, each data record relating to a physical module <b>106</b> and comprising the ID of the module, one or more properties of the module and optionally an identifier for the owner or manufacturer of the module. One or more of these fields (e.g. module ID and/or owner ID) may be verified by an authentication service which provides a method of securely verifying properties about a field's value (e.g. that the owner is correct, that the module ID has been issued to the module by a trusted party and is therefore not counterfeit, etc.).</p>
+      <p id="p-00037-en" num="0069">The properties field(s) within a data record may comprise any property of the module to which the record relates (as identified by the module ID). Examples of properties include, but are not limited to: GPS location data for the module (e.g. a “home” location and/or a current location), interoperability data (e.g. which other modules or types of modules the module can interwork with and/or which interactive software experiences the module can be used with), statistics for the module (e.g. length of time in use, etc.), virtual objects associated with the module (e.g. where these objects have been collected within an interactive software experience), permissions associated with the module (e.g. which fields within the data record can be changed and by whom and in various examples the permissions may be dependent upon the use of the object, such as which interactive software experience it is being used with), interactive software experience data (e.g. textures, device-executable instructions for the software experience or a part thereof, etc.), state data (which may be specific to a particular interactive software experience or independent of any interactive software experience) and references to a secondary (or further) database (e.g. which may contain additional information about, for example, the owner of the module, as identified by the owner ID). It will be appreciated that where the properties field comprises sensitive user data, consent may be collected from the user to store and release this data.</p>
+      <p id="p-00038-en" num="0070">Where the coherent physical whole object communicates with a cloud (or other remote) server, the cloud server may store additional module data (e.g. additional state data) to complement that stored on the modules themselves. In such an example, the cloud server may also store a copy of the data stored on the modules themselves, or the data stored on the cloud server may be different to that stored on the modules themselves. For example, the modules may store current state data whilst the cloud server may store historical data. In another example, data from recently used interactive software experiences may be stored on the module and data from less recently used interactive software experiences may be stored on the cloud server.</p>
+      <p id="p-00039-en" num="0071">
+        <figref>FIG. 2</figref> is a schematic diagram of a system <b>200</b> comprising the coherent physical whole object <b>100</b> from <figref>FIG. 1</figref>. The system <b>200</b> further comprises the interactive software experience <b>202</b> which runs on a computing-based device <b>204</b>. The system <b>200</b> may further comprise a remote (e.g. cloud-based) server <b>206</b>. Operation of the system <b>200</b> can be described with reference to the example method shown in <figref>FIG. 3</figref>.</p>
+      <p id="p-00040-en" num="0072">As shown in <figref>FIG. 3</figref>, the module IDs and some or all of the module data for the modules <b>102</b>, <b>104</b> forming part of the coherent physical whole object <b>100</b> are communicated to the interactive software experience <b>202</b> (block <b>304</b>). As described above, each module <b>102</b>, <b>104</b> may communicate their own data (ID and some or all of the module data) to the interactive software experience, or one or more modules may collect data from other modules within the object <b>100</b> and transmit the collected data (which may be in raw or aggregated form) to the interactive software experience. In response to receiving this data from the modules, the operation of the interactive software experience is modified based on the received IDs and module data (block <b>306</b>) and as described above, this modification of the operation may comprise providing a directed interactive experience for the user such that the user needs to interact with the object <b>100</b> in order to progress further within the interactive software experience (e.g. to increase the user's score, progress to the next level, complete a task, etc.). Alternatively, the modification (in block <b>306</b>) may comprise enabling, disabling or modifying functionality within the interactive software experience and/or updating a graphical user interface provided by the interactive software experience.</p>
+      <p id="p-00041-en" num="0073">A user interacts with the object <b>100</b> (as part of directed or undirected activity within the interactive software experience <b>202</b>) and/or the interactive software experience (block <b>308</b>) and as a consequence of this, updated module data is communicated to (and received by) one or more modules within the object <b>100</b> (block <b>310</b>). In a similar way to the data which is communicated from the object to interactive software experience, the communication may be between the interactive software experience and individual modules within the object or one or more of the modules may act as conduits for the information: receiving information from the interactive software experience and communicating it to the module (within the object) to which the information relates. Irrespective of whether the updated module data is received directly from the interactive software experience or via another module, the received updated module data is stored in the module(s) to which it relates (block <b>312</b>). For example, the updated module data may only relate to one of the modules within the object and so may only be stored in that module. Further interaction with the interactive software experience <b>202</b> and/or object <b>100</b> (in block <b>308</b>) may result in further changes in the module data being communicated to the object (in block <b>310</b>) and stored in one or more modules (in block <b>312</b>).</p>
+      <p id="p-00042-en" num="0074">As shown by the arrows in <figref>FIG. 3</figref>, when a user interacts with the object <b>100</b> (in block <b>308</b>) this may result in the module data stored in one or more modules in the object being updated. In such an example, this updated module data may then be communicated to the interactive software experience (block <b>304</b>).</p>
+      <p id="p-00043-en" num="0075">In various examples, there may be interaction between objects (or between modules forming parts of different objects) and as a result there may be transfer of module data between modules and/or objects (block <b>314</b>). Where this occurs, the module data stored in the modules is updated (block <b>312</b>) and the changes may be communicated to the interactive software experience (block <b>304</b>).</p>
+      <p id="p-00044-en" num="0076">In various examples, the system <b>200</b> may comprise a cloud server <b>206</b>. As described above, this cloud server <b>206</b> may store additional data relating to modules and in which case, the interactive software experience may access additional module data for those modules forming part of the object <b>100</b> from the cloud server (block <b>316</b>). In some examples, as a result of the user interacting with the interactive software experience <b>202</b> and/or the object <b>100</b>, updated module data may be communicated to the cloud server (block <b>318</b>) and stored by the cloud server.</p>
+      <p id="p-00045-en" num="0077">In various examples, the module data stored by the cloud server for a module may be updated independently of any user interaction with the interactive software experience (block <b>320</b>), e.g. where the user sells/buys a module and so ownership information changes. In examples where this happens, the updated module data may be communicated from the cloud server to the module(s) to which it relates (block <b>310</b>) and stored in the module(s) (block <b>312</b>). The information may be communicated (in block <b>310</b>) from the cloud server directly to the module(s) or via one or more other entities, such as another module, the interactive software experience <b>202</b>, the device <b>204</b> running the interactive software experience (e.g. using a separate module update application), etc.</p>
+      <p id="p-00046-en" num="0078">
+        <figref>FIG. 4</figref> illustrates various components of an exemplary computing-based device <b>400</b> which may be implemented as any form of a computing and/or electronic device, and on which the interactive software experience <b>402</b> may run. As shown in <figref>FIG. 4</figref>, the device may run more than one interactive software experience <b>402</b> and any object <b>100</b> may communicate with one or more interactive software experiences. In some examples, the interactive software experience may be selected by the user and in other examples, the interactive software experience may be determined based on the particular selection of modules assembled into the coherent physical whole <b>100</b> by the user. As described above, in various examples, the interactive software experiences may be stored in and uploaded from one or more modules assembled into the coherent physical whole <b>100</b> by the user.</p>
+      <p id="p-00047-en" num="0079">Computing-based device <b>400</b> comprises one or more processors <b>404</b> which may be microprocessors, controllers or any other suitable type of processors for processing computer executable instructions to control the operation of the device in order to run the interactive software experience. In some examples, for example where a system on a chip architecture is used, the processors <b>404</b> may include one or more fixed function blocks (also referred to as accelerators) which implement a part of the functionality in hardware (rather than software or firmware). Alternatively, or in addition, the functionality described herein can be performed, at least in part, by one or more hardware logic components. For example, and without limitation, illustrative types of hardware logic components that can be used include Field-programmable Gate Arrays (FPGAs), Program-specific Integrated Circuits (ASICs), Program-specific Standard Products (ASSPs), System-on-a-chip systems (SOCs), Complex Programmable Logic Devices (CPLDs).</p>
+      <p id="p-00048-en" num="0080">Platform software comprising an operating system <b>406</b> or any other suitable platform software may be provided at the computing-based device to enable application software, such as the interactive software experiences <b>402</b> to be executed on the device.</p>
+      <p id="p-00049-en" num="0081">The computer executable instructions may be provided using any computer-readable media that is accessible by computing based device <b>400</b>. Computer-readable media may include, for example, computer storage media such as memory <b>408</b> and communications media. Computer storage media, such as memory <b>408</b>, includes volatile and non-volatile, removable and non-removable media implemented in any method or technology for storage of information such as computer readable instructions, data structures, program modules or other data. Computer storage media includes, but is not limited to, RAM, ROM, EPROM, EEPROM, flash memory or other memory technology, CD-ROM, digital versatile disks (DVD) or other optical storage, magnetic cassettes, magnetic tape, magnetic disk storage or other magnetic storage devices, or any other non-transmission medium that can be used to store information for access by a computing device. In contrast, communication media may embody computer readable instructions, data structures, program modules, or other data in a modulated data signal, such as a carrier wave, or other transport mechanism. As defined herein, computer storage media does not include communication media. Therefore, a computer storage medium should not be interpreted to be a propagating signal per se. Propagated signals may be present in a computer storage media, but propagated signals per se are not examples of computer storage media. Although the computer storage media (memory <b>408</b>) is shown within the computing-based device <b>400</b> it will be appreciated that the storage may be distributed or located remotely and accessed via a network or other communication link (e.g. using communication interface <b>410</b>).</p>
+      <p id="p-00050-en" num="0082">The communication interface <b>410</b> enables the computing-based device <b>400</b> to communicate with modules <b>102</b>, <b>104</b>. Where the computing-based device <b>400</b> communicates directly with a module <b>102</b>, <b>104</b>, the communication interface <b>410</b> comprises a wireless interface. In other examples, where the computing-based device <b>400</b> communicates with a module via a network or intermediary device, the communication interface may use wired or wireless technology. As described above, the communication interface may communicate with each module within the object <b>100</b> or with only a subset (i.e. a proper subset) of the modules.</p>
+      <p id="p-00051-en" num="0083">The computing-based device <b>400</b> also comprises an input/output controller <b>412</b> arranged to output display information to a display device <b>414</b> which may be separate from or integral to the computing-based device <b>400</b>. The display information may provide a graphical user interface. The input/output controller <b>412</b> is also arranged to receive and process input from one or more devices, such as a user input device <b>416</b> (e.g. a mouse, keyboard, camera, microphone or other sensor). In some examples the user input device <b>416</b> may detect voice input, user gestures or other user actions and may provide a natural user interface (NUI). This user input may be used to control the interactive software experience <b>402</b>. In various embodiments the display device <b>414</b> may also act as the user input device <b>416</b> if it is a touch sensitive display device. The input/output controller <b>412</b> may also output data to devices other than the display device, e.g. a locally connected printing device (not shown in <figref>FIG. 4</figref>).</p>
+      <p id="p-00052-en" num="0084">Any of the input/output controller <b>412</b>, display device <b>414</b> and the user input device <b>416</b> may comprise NUI technology which enables a user to interact with the computing-based device in a natural manner, free from artificial constraints imposed by input devices such as mice, keyboards, remote controls and the like. Examples of NUI technology that may be provided include but are not limited to those relying on voice and/or speech recognition, touch and/or stylus recognition (touch sensitive displays), gesture recognition both on screen and adjacent to the screen, air gestures, head and eye tracking, voice and speech, vision, touch, gestures, and machine intelligence. Other examples of NUI technology that may be used include intention and goal understanding systems, motion gesture detection systems using depth cameras (such as stereoscopic camera systems, infrared camera systems, RGB camera systems and combinations of these), motion gesture detection using accelerometers/gyroscopes, facial recognition, 3D displays, head, eye and gaze tracking, immersive augmented reality and virtual reality systems and technologies for sensing brain activity using electric field sensing electrodes (EEG and related methods).</p>
+      <p id="p-00053-en" num="0085">
+        <figref>FIG. 5</figref> shows a cross-section through each of a mating pair of example connectors <b>502</b>, <b>504</b> which may be used to connect two modules together. As described above, each connector is arranged to pass power and data between modules. A plan view <b>506</b> of the contact faces <b>508</b>, <b>510</b> of each of the connectors is also shown and this view is the same for both connectors in the mating pair. It can be seen that the contact face of these connectors are circular and the connectors provide mechanical guiding elements <b>538</b>, <b>540</b> which assist in correctly mating the two connectors (e.g. to make them easier to use). The plan view <b>506</b> of the contact faces shows concentric rings of connections and in this example, two separate electrical connections <b>512</b>, <b>514</b> are provided. In other examples there may be only one electrical connection or there may be more than two concentric rings. By using this arrangement, the connectors (and hence the modules) are free to rotate about the central axis <b>516</b> of the connectors, although any motion perpendicular to the axis <b>516</b> is constrained/prevented by the mechanical guiding elements <b>538</b>, <b>540</b>. In various examples, a connector is fixed relative to the module in which it is located, but is free to rotate with respect to another module.</p>
+      <p id="p-00054-en" num="0086">In various examples, the central core (connection <b>512</b>) may be free to move independently of the outer ring (connection <b>514</b>). This may be achieved, for example, by forming the central core on a tab or tongue <b>522</b> which is only connected to the outer portion in one place <b>524</b>, thereby forming an articulated arrangement, as shown in the second plan view <b>520</b> in <figref>FIG. 5</figref>.</p>
+      <p id="p-00055-en" num="0087">In order to physically connect the modules together, such that they do not separate when pushed gently or picked up, the connections <b>512</b>, <b>514</b> may be formed from magnetic material, with each of the connectors <b>502</b>, <b>504</b> being of opposite polarity so that the connections in different connectors are attracted to each other and the modules are held together by the magnetic attraction. By appropriate selection of magnets and dimensions, the attractive forces may be sufficient to hold the modules together when picked up by a user, but not so strong that they cannot be separated by the user when they wish to re-arrange the modules. Different strengths of magnets may be used for different applications (e.g. less strong attraction for toys for young children).</p>
+      <p id="p-00056-en" num="0088">In an alternative configuration of magnetic connector, instead of using magnetic material to form the electrical connections, a magnet <b>532</b> may be provided behind a PCB <b>534</b> (which may be a flexible PCB) providing the contact face <b>536</b> (and contacts <b>512</b>, <b>514</b>), as shown in the third cross section <b>530</b> in <figref>FIG. 5</figref>. The same construction may be used in both connectors <b>502</b>, <b>504</b> with opposite polarity magnets <b>532</b>.</p>
+      <p id="p-00057-en" num="0089">Where magnets are used in the connectors to physically hold them together, the magnets (e.g. magnet <b>532</b> or the magnets providing connections <b>512</b>, <b>514</b> in the alternative implementation) may be permanent magnets or may be electromagnets. Where electromagnets are used, the magnets may be programmable such that their polarity may be altered under the control of the processor within a module (e.g. based on stored state data). Use of programmable electromagnets enables a processor to control whether a particular module can connect to another module or not. For example, although a module may initially be able to connect (as the electromagnets have opposite polarities) the processor may subsequently change the polarity of one or more of the magnets so that they no longer attract but instead repel each other, forcibly ejecting the module. This may, for example, be used as part of the interactive software experience (e.g. within game play, for example during a battle) and/or to restrict the interoperability of modules. Examples of limiting interoperability include, but are not limited to, limiting which modules can connect to which connections on a core module (e.g. only “head modules” may be allowed to connect to the “head connection” on the core, and where a non-head module is detected, it may be ejected by the processor) and limiting modules to work within particular sets of modules (e.g. robot limbs can only be connected to a robot body and not to, for example, a horse body, or modules associated with a particular game or brand can only be connected to other modules from the same game/brand).</p>
+      <p id="p-00058-en" num="0090">The interoperability of modules may also be restricted using magnetic polarity in examples where permanent magnets are used. For example, a “head” connector on a core module may have a central connector <b>512</b> of a first polarity and an outer connector <b>514</b> of a second polarity, where the first and second polarities may be the same or different. In contrast, a “limb” connector on a core module may have a central connector <b>512</b> of the second polarity and an outer connector <b>514</b> of the first polarity. This therefore restricts limb peripheral modules to connecting only to the limb connector on the core module and head peripheral modules to connecting only to the head connector on the core module.</p>
+      <p id="p-00059-en" num="0091">Although <figref>FIG. 5</figref> shows arrangements of magnets of either a single polarity on the contact face (magnet <b>532</b>) or two concentric rings of magnetic material, it will be appreciated that these are provided by way of example and other arrangements may also be used (e.g. more than two concentric rings, or shapes other than rings, where the modules do not need to rotate once connected).</p>
+      <p id="p-00060-en" num="0092">The polarity of magnets may also be exploited for purposes other than (or in addition to) rejecting/ejecting modules. In various examples, the polarity of magnets within the connectors may be used to limit the angle of movement (or angle of attachment) of a module relative to another module. In other examples, the angle of movement/attachment may be limited using physical structures on the connector surfaces.</p>
+      <p id="p-00061-en" num="0093">Although the present examples are described and illustrated herein as being implemented in a gaming system, the system described is provided as an example and not a limitation. As those skilled in the art will appreciate, the present examples are suitable for application in a variety of different types of interactive software experiences/systems.</p>
+      <p id="p-00062-en" num="0094">The term ‘computer’ or ‘computing-based device’ is used herein to refer to any device with processing capability such that it can execute instructions. Those skilled in the art will realize that such processing capabilities are incorporated into many different devices and therefore the terms ‘computer’ and ‘computing-based device’ each include PCs, servers, mobile telephones (including smart phones), tablet computers, set-top boxes, media players, games consoles, personal digital assistants and many other devices.</p>
+      <p id="p-00063-en" num="0095">The methods described herein may be performed by software in machine readable form on a tangible storage medium e.g. in the form of a computer program comprising computer program code means adapted to perform all the steps of any of the methods described herein when the program is run on a computer and where the computer program may be embodied on a computer readable medium. Examples of tangible storage media include computer storage devices comprising computer-readable media such as disks, thumb drives, memory etc and do not include propagated signals. Propagated signals may be present in a tangible storage media, but propagated signals per se are not examples of tangible storage media. The software can be suitable for execution on a parallel processor or a serial processor such that the method steps may be carried out in any suitable order, or simultaneously.</p>
+      <p id="p-00064-en" num="0096">This acknowledges that software can be a valuable, separately tradable commodity. It is intended to encompass software, which runs on or controls “dumb” or standard hardware, to carry out the desired functions. It is also intended to encompass software which “describes” or defines the configuration of hardware, such as HDL (hardware description language) software, as is used for designing silicon chips, or for configuring universal programmable chips, to carry out desired functions.</p>
+      <p id="p-00065-en" num="0097">Those skilled in the art will realize that storage devices utilized to store program instructions can be distributed across a network. For example, a remote computer may store an example of the process described as software. A local or terminal computer may access the remote computer and download a part or all of the software to run the program. Alternatively, the local computer may download pieces of the software as needed, or execute some software instructions at the local terminal and some at the remote computer (or computer network). Those skilled in the art will also realize that by utilizing conventional techniques known to those skilled in the art that all, or a portion of the software instructions may be carried out by a dedicated circuit, such as a DSP, programmable logic array, or the like.</p>
+      <p id="p-00066-en" num="0098">Any range or device value given herein may be extended or altered without losing the effect sought, as will be apparent to the skilled person.</p>
+      <p id="p-00067-en" num="0099">Although the subject matter has been described in language specific to structural features and/or methodological acts, it is to be understood that the subject matter defined in the appended claims is not necessarily limited to the specific features or acts described above. Rather, the specific features and acts described above are disclosed as example forms of implementing the claims.</p>
+      <p id="p-00068-en" num="0100">It will be understood that the benefits and advantages described above may relate to one embodiment or may relate to several embodiments. The embodiments are not limited to those that solve any or all of the stated problems or those that have any or all of the stated benefits and advantages. It will further be understood that reference to ‘an’ item refers to one or more of those items.</p>
+      <p id="p-00069-en" num="0101">The steps of the methods described herein may be carried out in any suitable order, or simultaneously where appropriate. Additionally, individual blocks may be deleted from any of the methods without departing from the spirit and scope of the subject matter described herein. Aspects of any of the examples described above may be combined with aspects of any of the other examples described to form further examples without losing the effect sought.</p>
+      <p id="p-00070-en" num="0102">The term ‘comprising’ is used herein to mean including the method blocks or elements identified, but that such blocks or elements do not comprise an exclusive list and a method or apparatus may contain additional blocks or elements.</p>
+      <p id="p-00071-en" num="0103">It will be understood that the above description is given by way of example only and that various modifications may be made by those skilled in the art. The above specification, examples and data provide a complete description of the structure and use of exemplary embodiments. Although various embodiments have been described above with a certain degree of particularity, or with reference to one or more individual embodiments, those skilled in the art could make numerous alterations to the disclosed embodiments without departing from the spirit or scope of this specification.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A modular assembly system for use with an interactive software experience, the system comprising a module and the module comprising:
+<claim-text>one or more connectors for attaching other modules to the module to form a coherent physical whole object, each connector being arranged to pass data and power between modules; and</claim-text><claim-text>a storage element arranged to store an identifier of the module and module data for the module, wherein at least a portion of the module data is updated in use by the interactive software experience in response to user interaction.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The system according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising:
+<claim-text>a communications module arranged to transmit the identifier and some or all of the module data to a computing-based device running the interactive software experience and to receive the updated module data from the interactive software experience.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The system according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the communications module is further arranged to transmit at least a part of the module data to a module in a proximate object.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The system according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the at least a portion of the module data comprises state data associated with the interactive software experience.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The system according to <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the state data associated with the interactive software experience is updated in use by the interactive software experience in response to user interaction with the interactive software experience.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The system according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the module data comprises state data which is independent of an interactive software experience.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The system according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the data passed between modules via the one or more connectors comprises at least one of the identifier and a part of the module data.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The system according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the module data comprises executable files comprising the interactive software experience or a part of the interactive software experience.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The system according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the module data comprises a model of the module for use in the interactive software experience.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The system according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the module data comprises data for use by the software experience in rendering a graphical representation of the coherent physical whole object.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The system according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising the interactive software experience and wherein the interactive software experience is arranged to change its operation in response to module data received from one or more modules forming the coherent physical whole object.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The system according to <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the interactive software experience is a game.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The system according to <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the interactive software experience is arranged to provide directed interaction by presenting objectives to a user that can only be achieved by user interaction with one or modules in the object.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The system according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a remote server arranged to store additional module data for the module.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The system according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the module is arranged to exhibit a perceptible physical change in response to a predefined change in the module data.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en" independent="true">
+      <claim-text>
+        <b>16</b>. A method of operation of a modular assembly system, the method comprising:
+<claim-text>transmitting an identifier and module data from a module to an interactive software experience, wherein the module comprises one or more connectors for attaching other modules to the module to form a coherent physical whole object, each connector being arranged to pass data and power between modules; and a storage element arranged to store the identifier of the module and the module data;</claim-text><claim-text>receiving updated module data from the interactive software experience, the updated module data having been generated based on user interaction with the interactive software experience or the object; and</claim-text><claim-text>storing the updated module data in the storage element in the module.</claim-text></claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, further comprising:
+<claim-text>transferring at least a part of the module data between the module and a second module forming part of a separate proximate coherent physical whole object.</claim-text></claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, further comprising:
+<claim-text>presenting, within the interactive software experience, one or more user objectives, wherein at least one objective requires a user to interact with the object to achieve the objective.</claim-text></claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein operation of the interactive software experience is changed in response to module data received from one or more modules forming the coherent physical whole object.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en" independent="true">
+      <claim-text>
+        <b>20</b>. A modular assembly system comprising a module and the module comprising:
+<claim-text>one or more connectors for attaching other modules to the module to form a coherent physical whole object, each connector being arranged to pass data and power between modules;</claim-text><claim-text>a storage element arranged to store an identifier of the module and module data for the module; and</claim-text><claim-text>a communications module arranged to transmit the identifier and module data to a computing-based device running the interactive software experience and to receive updated module data from the interactive software experience, the updated module data being generated in response to user interaction with the interactive software experience. </claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150258459A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150258459A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150258459A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258459A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150258459A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258459A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150258459A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258459A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150258459A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258459A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150258459A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150258459A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150258459A1_00007.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150258459A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150258459A1.PDF" type="pdf" size="533590" pages="15" />
+</lexisnexis-patent-document>

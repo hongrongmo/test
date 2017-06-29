@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150250504A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="022125" date-changed="20160127" time-changed="023621">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121232093">
+        <country>US</country>
+        <doc-number>20150250504</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14659115</doc-number>
+        <date>20150316</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20160127">
+      <classification-ipcr sequence="1">
+        <text>A61B  17/70        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>70</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160127">
+      <classification-cpc sequence="1">
+        <text>A61B  17/7002      20130101 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>7002</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>G06F  11/0727      20130101 LI20150217BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>06</class>
+        <subclass>F</subclass>
+        <main-group>11</main-group>
+        <subgroup>0727</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150217</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>G06F  11/0751      20130101 LI20150217BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>06</class>
+        <subclass>F</subclass>
+        <main-group>11</main-group>
+        <subgroup>0751</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150217</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">12</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">Spinal Compressor and Distractor</invention-title>
+    <related-documents date-changed="20150910">
+      <continuation-in-part>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14200785</doc-number>
+              <date>20140307</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14006591</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation-in-part>
+    </related-documents>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Song</last-name>
+            <first-name>John</first-name>
+            <address>
+              <city>Chicago</city>
+              <state>IL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Song</last-name>
+            <first-name>John</first-name>
+            <address>
+              <city>Chicago</city>
+              <state>IL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150910">
+      <main-family family-id="173569020">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150250504</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150316</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173569019">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150250504</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150316</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A combined apparatus for compression and distraction of a first physical component having a first bone screw and a second physical component having a second bone screw, said apparatus comprising a connected rod fixedly connected to one of the first and second bone screw heads and slidably connected to the other of the first and second bone screw heads, a rod holder comprising a ramp, and A screw head extension comprising an protruding member and an adjusting means, such that when the protruding member is moved vertically, pressure between said protruding member and progressively wider portions of said ramp force an increase in distance between the rod holder and adjacent bone screw head, resulting in compression or distraction as desired of the physical components.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCES TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is a Continuation in Part of U.S. application Ser. No. 14/200,785, Spinal Compressor and Distracior by Dr. John Song, filed on Mar. 7, 2014. Said application is incorporated by reference in its entirety herein.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">STATEMENT REGARDING FEDERALLY SPONSORED RESEARCH OR DEVELOPMENT</heading>
+      <p id="p-00002-en" num="0002">Not applicable</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">During orthopedic surgical procedures, such as by way of example spinal orthopedic surgery, it is often desirable to use pedicle screws or other bone screws. Such screws can serve a variety of functions, such as stabilizing the spine, fixating two or more vertebrae with respect to each other, or serving as anchor points for various instruments such as rods, retractors, compressors, and distractors.</p>
+      <p id="p-00004-en" num="0004">During orthopedic surgical procedures, it is also often desirable to distract various physical components into locations further separated from each other, such as distracting two vertebrae to increase the space between them. Distraction can be desirable to, among other functions, increase the space between two vertebrae preparatory to the insertion of an implant. In other situations, it is desirable to compress various physical components into locations closer to each other, such as compressing two vertebrae to decrease the space between them. Compression can be desirable to, among other functions, space two vertebrae a desired distance from each other prior to fixating the vertebrae.</p>
+      <p id="p-00005-en" num="0005">In some situations in orthopedic surgery, it is desirable both to distract and to compress various physical components during the same surgical procedure. At times, both distraction and compression are desirable at the same physical location, with respect to the same physical components, at various times during the procedure. In orthopedic spinal surgery, by way of example, compression and/or distraction may be desirable with respect to vertebrae that are to be fixated with pedicle or other bone screws.</p>
+      <p id="p-00006-en" num="0006">Tools adapted to distract physical components such are vertebrae are known to the art. Tools known to the art function in general by providing a pair of tips or ends adapted to fit between the two physical components to be distracted, such as, for example, two vertebrae. Mechanical force is then applied to the handle of the distractor tool, typically by squeezing or rotating. Through lever, screw, or other mechanical action, the distractor tool converts such mechanical force applied to the handle into force pressing the tips or ends of the distractor away from each other. Tools adapted to compress physical components such as vertebrae are similarly known to the art, and work in a similar but largely opposite fashion from distractors. Such compressor tools function generally by providing a pair of tips or ends adapted to fit on or around the outer surfaces of two physical components to be compressed, such as, for example, two vertebrae. Mechanical force is applied to the handle of the compressor tool, typically by squeezing or rotating. Through lever, screw, or other mechanical action, the compressor tool converts such mechanical force applied to the handle into force pressing the tips or ends of the compressor towards each other.</p>
+      <p id="p-00007-en" num="0007">Tools known to the art suffer a number of deficiencies. First, many surgical kits provide a distractor and a compressor as separate tools. This complicates the surgical procedure by requiring the surgeon and other surgical staff to manage and keep track of a larger number of tools. The use of separate tools can also pose problems if one of the tools becomes contaminated and must be removed from the procedure.</p>
+      <p id="p-00008-en" num="0008">Although some tools exist that are capable of both distraction and compression, combined tools known to the art suffer a number of additional disadvantages. For example, combined distractor-compressor tools known to the art require the application of significant mechanical force to achieve distraction or compression. It is often difficult to apply sufficient mechanical force to a combined distractor-compressor tool while keeping the tips or ends of the tool properly located to achieve the desired distraction or compression. Additionally, the risk of tool slippage and resultant injury to the patient is significant. Since such combined tools must often be kept in place to maintain the desired positioning of physical components while screws or other fixation devices are installed, combined tools known to the art can result in a cluttered and difficult-to-navigate surgical opening, resulting in inconvenience and difficulty for the surgeon and an increased risk of poor outcome for the patient.</p>
+      <heading id="h-00004-en" level="1">SUMMARY</heading>
+      <p id="p-00009-en" num="0009">Versions of the present invention are directed to a combined distractor-compressor tool apparatus adapted for use in orthopedic surgery, and preferably for use in orthopedic spinal surgery. Versions of the present invention include a combined distractor-compressor tool capable of both distracting and compressing physical components during surgical procedures. The combined tool apparatus of the present invention mounts to screws secured in bone, preferably pedicle screws. Thus, a combined tool apparatus according to the teachings of the present invention reduces the number of tools required to perform a surgical procedure, and, by its connection to installed bone screws, eliminates the risks associated with slippage of the tool when mechanical force is applied. Further, versions of the present invention incorporate rods that can be used as fixation devices. Since the combined tool apparatus of the present invention mounts directly to bone screws, and preferably to bone screw heads, versions of the present invention provide an additional advantage of eliminating the need to install a separate fixation device while attempting to use a distracting or compressing tool.</p>
+      <p id="p-00010-en" num="0010">In one embodiment, the combined tool apparatus of the present invention comprises a distractor wherein a connecting rod is mounted to a first bone screw head and to a second bone screw head, said first and second bone screw heads being installed in bone, wherein the connecting rod is mounted fixedly to the first bone screw head and mounted slidably to the second bone screw head. A rod holder is attached to said connecting rod at a point between a said first bone screw head and said second bone screw head, wherein said rod holder is adjacent to either said first bone screw head or said second bone screw head and is generally co-axial with said first and second bone screw heads. The rod holder comprises a ramp on one face, facing the connecting rod to which the rod holder is nearest. A screw head extension is mounted to the bone screw head to which the rod holder is adjacent by sliding or otherwise connecting said screw head extension over said screw head. The screw head extension is internally threaded. The screw head extension operatively connects to an adjusting member, said adjusting member comprising an externally threaded portion that fits within the internally threaded portion of the screw head extension, and a protruding member protruding outwardly from said threaded portion and rotatably adjustable with respect to the threaded portion. The protruding member is moveable up or down along the longitudinal axis of the screw head extension by rotational adjustment of the adjusting member within the screw head extension. When a portion of the adjusting member is turned, such as by a turning means, the protruding member moves vertically along the longitudinal axis of the screw head extension, placing increasing pressure against the ramp, forcing the first bone screw head and second bone screw head to move away from each other and thus distracting the physical components to which the first and second bone screws are connected.</p>
+      <p id="p-00011-en" num="0011">In another embodiment, the combined tool apparatus comprises a compressor wherein a connecting rod is mounted to a first bone screw head and a second bone screw head, said first and second bone screw heads being installed in bone, wherein the connecting rod is mounted fixedly to the first bone screw head and mounted slidably to the second bone screw head. A rod holder is attached to said connecting rod at a point adjacent to either said first bone screw head or said second bone screw head, but not in between said first and second bone screw heads, and is generally co-axial with said first and second bone screw heads. The rod holder comprises a ramp on one face, facing the bone screw head to which the rod holder is nearest. A screw head extension is mounted to the bone screw head to which the rod holder is adjacent by sliding said screw head extension over said screw head or by other means of connection. The screw head extension is internally threaded. The screw head extension operatively connects to an adjusting member, said adjusting member comprising an externally threaded portion that fits within the internally threaded portion of the screw head extension, and a protruding member protruding outwardly from said threaded portion and rotatably adjustable with respect to the threaded portion. The protruding member is moveable up or down along the longitudinal axis of the screw head extension by rotational adjustment of the adjusting member within the screw head extension. When a portion of the adjusting member is turned, such as by a turning means, the protruding member moves vertically along the longitudinal axis of the screw head extension, placing increasing pressure against the ramp, forcing the first bone screw head and second bone screw head to move towards each other and thus compressing the physical components to which the first and second bone screws are connected.</p>
+      <p id="p-00012-en" num="0012">In the summary above and in the description, and the claims below, and in the accompanying drawings, reference is made to particular features of the invention. It is to be understood that the disclosure of the invention in this specification includes all possible combinations of such particular features.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00013-en" num="0013">These and other features, aspects, and advantages of the present invention will become better understood with regard to the following description and accompanying drawings, where:</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 1</figref> shows a perspective view of a version of the invention adapted for distraction, in which the screw head extension is mounted to a first bone screw head and a rod holder comprising a ramp is adjacent to the screw head extension:</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 2</figref> shows a perspective view of a version of the invention adapted for compression, in which the screw head extension is mounted to a first bone screw head and a rod holder comprising a ramp is adjacent to the screw head extension;</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 3</figref> shows a close-up view of a portion of the device as depicted in <figref>FIG. 2</figref>;</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 4</figref> shows a perspective view of a version of the invention adapted for distraction, in which the adjusting member comprises a ramp and the rod holder comprises a protruding member;</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 5</figref> shows a perspective view of a version of the invention adapted for compression, in which the adjusting member comprises a ramp and the rod holder comprises a protruding member;</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 6</figref> shows a side view of an adjusting member according to version of the present invention as depicted in <figref>FIGS. 1 and 2</figref>.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DESCRIPTION</heading>
+      <p id="p-00020-en" num="0020">Embodiments of the present combined tool apparatus are directed towards an apparatus for distraction and compression of physical components during surgery, wherein said apparatus makes use of bone screws installed in the physical components to be distracted or compressed. In preferred embodiments, the combined tool is adapted for use in connection with orthopedic spine surgery, and the bone screws are pedicle screws installed into vertebrae.</p>
+      <p id="p-00021-en" num="0021">A “bone screw” according to the versions of the present invention is, as will be recognized by one skilled in the art, a screw adapted to be fixed to bone. A “bone screw” according to versions of this invention comprises a screw adapted for fixation to bone, and also comprises a screw head, wherein said screw head is an elongated member extending outwardly from said screw and adapted to accommodate connection with a screw head extension [<b>3</b>], as described elsewhere herein. Embodiments of the present invention include a first bone screw and a second bone screw, which comprise a first bone screw head [<b>1</b>] and second bone screw head [<b>2</b>]. Preferably, the first and second bone screws are installed into vertebra, and most, preferably, are installed into adjacent vertebra. Further preferably, the first and second bone screws are pedicle screws. Other forms and types of screws may be used within the scope of this invention, as will be apparent to one skilled in the art.</p>
+      <p id="p-00022-en" num="0022">A “connecting rod” [<b>5</b>] is a rod adapted to mount to at least the first bone screw [<b>1</b>] and second bone screw [<b>2</b>]. Preferably, the connecting rod [<b>5</b>] is adapted to mount to bone screw heads. A connecting rod [<b>5</b>] mounts to at least one of the first and second bone screw heads fixedly, and mounts to at least one of the first and second bone screw heads slidably. Preferably, the connecting rod [<b>5</b>] is a metal rod used for temporary or permanent fixation of vertebrae, such as in a bone fusion procedure, as would be recognized by one skilled in the art.</p>
+      <p id="p-00023-en" num="0023">A fixed mount between said connecting rod [<b>5</b>] and said first or second bone screw head can be accomplished by a variety of mechanical connection means, as will be recognized by one skilled in the art. Preferably, at least one of said first and second bone screw heads comprise in part a collar [<b>7</b>], said collar comprises in part a void [<b>8</b>], and said collar [<b>7</b>] further comprises a set screw [<b>9</b>] such that when said connecting rod [<b>5</b>] is placed in or through said void [<b>8</b>] and said set screw [<b>9</b>] is tightened, said connecting rod [<b>5</b>] and said bone screw head are fixedly connected. As will be appreciated by one skilled in the art, a fixed mount achieved in this manner can be separated by loosening the set screw [<b>9</b>].</p>
+      <p id="p-00024-en" num="0024">A slidable mount between said connecting rod [<b>5</b>] and said first or second bone screw head can be accomplished by a variety of mechanical connection means, as will be recognized by one skilled in the art. Preferably, at least one of said first or second bone screw head comprises in part aperture [<b>11</b>] adapted to allow said connecting rod [<b>5</b>] to pass through said aperture [<b>11</b>] slidably. As will be recognized by one skilled in the art, the collar [<b>7</b>] and aperture [<b>11</b>] can be comprised by the saddle or tulip of bone screws known to the art.</p>
+      <p id="p-00025-en" num="0025">A “rod holder” [<b>13</b>] according to embodiments of the present invention comprises an elongated member adapted at its distal end for removable connection to the connecting rod [<b>5</b>]. A rod holder [<b>13</b>] according to these embodiments of the present invention may connect to said connecting rod [<b>5</b>] by any removable mechanical means, as will be appreciated by one skilled in the art. Preferably, said rod holder [<b>13</b>] in these embodiments is adapted for connection to said connection rod [<b>5</b>] by way of a slot [<b>15</b>] in the distal end of said rod holder [<b>13</b>], said slot [<b>15</b>] adapted to form a friction fit between said rod holder [<b>13</b>] and said connecting rod [<b>5</b>] when the distal end of said rod holder [<b>13</b>] is pressed against said connecting rod [<b>5</b>]. Preferably, in these embodiments said rod holder [<b>13</b>] extends generally coaxially with said first and second bone screw heads when said rod holder [<b>13</b>] is in connection with said connecting rod [<b>5</b>]. The rod holder [<b>13</b>] in a preferred embodiment further comprises a ramp [<b>14</b>]. Preferably, the ramp [<b>14</b>] is located near the distal end of the rod holder [<b>14</b>]. The ramp [<b>14</b>] has a narrowest point that is substantially flush with the rod holder [<b>13</b>] and a widest point that extends outwardly from the rod holder [<b>13</b>]. In a preferred embodiment, the widest point of the ramp is located near the distal end of the rod holder [<b>13</b>], and the narrowest point of the ramp is located proximally to the widest point. Optionally, the widest point of the ramp may be located proximally to the narrowest point. As will be understood by one skilled in the art, the ramp [<b>114</b>] may be located virtually anywhere along the length of the rod holder [<b>13</b>]. Optionally, the rod holder [<b>13</b>] may comprise a protruding member in lieu of a ramp.</p>
+      <p id="p-00026-en" num="0026">A “screw head extension” [<b>3</b>] according to versions of the present invention is an elongated tubular member that is, preferably, internally threaded. A screw head extension [<b>3</b>] comprises an at least partially open tubular member, comprising at least an open portion along a portion of the longitudinal axis of the extension. A screw head extension [<b>3</b>] fits to a first bone screw head or second bone screw head by mechanical connection, and preferably by sliding over the head of a bone screw so that the screw head extension [<b>3</b>] is generally coaxial with the bone screw. A screw head extension [<b>3</b>] is at least partially threaded on its inner face and adapted to accept a cooperatively threaded generally cylindrical adjusting member [<b>100</b>].</p>
+      <p id="p-00027-en" num="0027">An adjusting member [<b>100</b>] is a generally cylindrical member that is at least partially threaded, and preferably cooperatively threaded with the threading on the inner face of a screw head extension [<b>3</b>]. The adjusting member [<b>100</b>] comprises a threaded shaft portion [<b>101</b>], and, preferably, a protruding member [<b>16</b>], wherein the protruding member [<b>16</b>] is rotatably adjustable with respect to the threaded shaft portion [<b>101</b>], and, optionally, a head [<b>18</b>] to facilitate turning of the adjusting member, such as a hex head. The protruding member [<b>16</b>] protrudes outwardly from the longitudinal axis of the screw head extension [<b>3</b>], preferably in the direction of an adjacent rod holder [<b>13</b>]. The protruding member [<b>16</b>] can be any shape conducive to sliding up or down a ramp [<b>14</b>], or, alternately, can comprise a ramp adapted to work cooperatively with a separate protruding member located on an adjacent rod holder [<b>13</b>]. In embodiments where the protruding member is not a ramp, the extending portion of the protruding member [<b>16</b>] is preferably a semicircular shape. When the adjusting member [<b>100</b>] is placed within a screw head extension [<b>3</b>], the protruding member [<b>16</b>] extends outwardly from the screw head extension [<b>3</b>] through a longitudinal opening in the body of the screw head extension [<b>3</b>]. When the adjusting member [<b>100</b>] and screw head extension are assembled, the protruding member [<b>16</b>] can be located at any point along the length of the screw head extension [<b>3</b>], although preferably the range of movement of the protruding member [<b>16</b>] corresponds to, at one end, the narrowest point of the ramp [<b>14</b>] and, at the other end, the widest point of the ramp [<b>14</b>] when the rod holder [<b>13</b>] is connected to the connecting rod. The protruding member [<b>16</b>] is adjustable vertically up or down along at least a portion of the screw head extension [<b>3</b>] by rotatable adjustment of the threaded shaft portion of the adjusting member [<b>100</b>] within the cooperative threading of the screw head extension [<b>3</b>]. In a preferred embodiment, the screw head extension [<b>3</b>] and adjusting member [<b>100</b>], when assembled in threaded connection, comprise a screw drive, wherein turning of the adjusting member [<b>100</b>] results in vertical movement of the protruding member [<b>16</b>] with respect to the ramp [<b>14</b>], as will be appreciated by one skilled in the art. As will be appreciated by one skilled in the art, other suitable means for adjustment of the protruding member [<b>16</b>] vertically within the screw head extension may be employed, including cranks, ratchets, swashplates, and the like.</p>
+      <p id="p-00028-en" num="0028">In alternative embodiments, the adjusting member may comprise, as a protruding member, a ramp [<b>104</b>] extending outwardly from the face of the adjusting member. In these embodiments, as depicted in <figref>FIGS. 4 and 5</figref>, the rod holder [<b>102</b>] comprises a protruding member [<b>16</b>] that works cooperatively with the ramp [<b>104</b>] to compress or distract, as desired, when the ramp [<b>104</b>] is moved up or down by way of the adjusting member.</p>
+      <p id="p-00029-en" num="0029">In still alternative embodiments, the rod holder [<b>102</b>] may comprise an elongated tubular member that is, preferably, threaded on its interior face. In these embodiments, the rod holder [<b>102</b>] comprises an at least partially open tubular member, comprising at least an open portion along a portion of the longitudinal axis of the rod holder. The rod holder [<b>102</b>] in these embodiments fits to a first bone screw head or second bone screw head by connection of the rod holder [<b>102</b>] to the connecting rod [<b>5</b>] via a slot [<b>15</b>] so that the rod holder [<b>102</b>] is generally coaxial with the bone screw. A rod holder [<b>102</b>] in these embodiments is at least partially threaded on its inner face and adapted to accept a cooperatively threaded generally cylindrical adjusting member [<b>100</b>]. In these embodiments, compression and distracting is achieved by the same action as in the embodiments depicted in <figref>FIGS. 1 and 2</figref>, however, a ramp [<b>14</b>] is located on the bone screw head extension [<b>103</b>] and the adjusting member [<b>100</b>] connects cooperatively and rotatably adjustably with the rod holder [<b>102</b>].</p>
+      <p id="p-00030-en" num="0030">As depicted in <figref>FIG. 1</figref>, in one embodiment the combined tool apparatus comprises a distractor in which a connecting rod [<b>5</b>] is mounted slidably to a first bone screw head [<b>1</b>] and fixedly to a second bone screw head [<b>2</b>], said bone screws being installed in bone. A rod holder [<b>13</b>] is attached to said connecting rod [<b>5</b>] at a point between a said first bone screw head [<b>1</b>] and said second bone screw head [<b>2</b>], wherein said rod holder [<b>13</b>] is generally adjacent to said first or second bone screw head and generally co-axial with said first and second bone screw heads. The rod holder [<b>13</b>] comprises a ramp [<b>14</b>] near its distal end. The narrowest point of the ramp [<b>14</b>] is substantially flush with the surface of the rod holder and is proximal to the widest end of the ramp, said widest end protruding towards to the bone screw head to which the rod holder is adjacent. A screw head extension [<b>3</b>] is mounted to the bone screw head to which the rod holder [<b>13</b>] is adjacent by sliding said screw head extension [<b>3</b>] over said screw head. An adjusting member [<b>100</b>] comprising a threaded shaft member [<b>101</b>] and a protruding member [<b>16</b>] is connected to the screw head extension [<b>3</b>] adjacent the rod holder [<b>13</b>] by threaded engagement of the threaded shaft portion [<b>101</b>] with the threading on the interior face of the screw head extension [<b>3</b>] such that the protruding member [<b>16</b>] protrudes and extends generally towards the rod holder [<b>13</b>] at a vertical location substantially corresponding to the location of the ramp [<b>14</b>]. When the adjusting member [<b>100</b>] is rotated within the screw head extension [<b>3</b>], the protruding member [<b>16</b>] moves distally along the longitudinal axis of the adjustment member [<b>3</b>]. The protruding member [<b>16</b>] presses against the ramp [<b>14</b>] as it moves towards progressively wider portions of the ramp, forcing the first bone screw head [<b>1</b>] and second bone screw head [<b>2</b>] to move away from each other and distracting the physical components to which the first and second bone screws are connected.</p>
+      <p id="p-00031-en" num="0031">As depicted in <figref>FIG. 2</figref>, in another embodiment the combined tool apparatus comprises a compressor wherein a connecting rod [<b>5</b>] is mounted to at least a first bone screw head [l] and a second bone screw head [<b>2</b>], said bone screws being installed in bone, wherein the connecting rod [<b>5</b>] is mounted slidably to the first bone screw head [<b>11</b>] and mounted fixedly to the second bone screw head [<b>2</b>]. A rod holder [<b>13</b>] is attached to said connecting rod [<b>5</b>] at a point adjacent to either first bone screw head [<b>1</b>] or said second bone screw head [<b>2</b>] but not in between said first and second bone screw heads, and is generally co-axial with said first and second bone screw heads. The rod holder [<b>13</b>] comprises a ramp [<b>14</b>] near its distal end. The narrowest point of the ramp [<b>14</b>] is substantially flush with the surface of the rod holder and is proximal to the widest end of the ramp, said widest end protruding towards to the bone screw head to which the rod holder is adjacent. A screw head extension [<b>3</b>] is mounted to the bone screw head to which the rod holder [<b>13</b>] is adjacent by sliding said screw head extension [<b>3</b>] over said screw head. An adjusting member [<b>100</b>] comprising a threaded shaft member [<b>101</b>] and a protruding member [<b>16</b>] is connected to the screw head extension [<b>3</b>] adjacent the rod holder [<b>13</b>] by threaded engagement of the threaded shaft portion [<b>101</b>] with the threading on the interior face of the screw head extension [<b>3</b>] such that the protruding member [<b>16</b>] protrudes and extends generally towards the rod holder [<b>13</b>] at a vertical location substantially corresponding to the location of the ramp [<b>14</b>]. When the adjusting member [<b>100</b>] is rotated within the screw head extension [<b>3</b>], the protruding member [<b>16</b>] moves distally along the longitudinal axis of the adjustment member [<b>3</b>]. The protruding member <b>1161</b> presses against the ramp [<b>14</b>] as it moves towards progressively wider portions of the ramp, forcing the first bone screw head [<b>1</b>] and second bone screw head [<b>2</b>] to move away from each other and compressing the physical components to which the first and second bone screws are connected.</p>
+      <p id="p-00032-en" num="0032">As depicted in <figref>FIG. 4</figref>, in another embodiment the combined tool apparatus comprises a distractor in which a connecting rod [<b>5</b>] is mounted to a first bone screw head [<b>1</b>] and a second bone screw head [<b>2</b>], said first and second bone screw heads being installed in bone, wherein the connecting rod [<b>5</b>] is mounted slidably to the first bone screw head [<b>1</b>] and mounted fixedly to the second bone screw head [<b>2</b>]. A rod holder [<b>102</b>] is attached to said connecting rod [<b>5</b>] at a point in between a said first bone screw head [<b>1</b>] and said second bone screw head [<b>2</b>], wherein said rod holder [<b>102</b>] is adjacent to said first bone screw head or said second bone screw head and is generally co-axial with said first and second bone screw heads. An adjusting member is attached to a bone screw head adjacent to the rod holder [<b>102</b>], said adjusting member comprising a ramp [<b>104</b>] near its distal end. The narrowest point of the ramp is substantially flush with the surface of the screw head extension [<b>103</b>] and is proximal to the widest end of the ramp, said widest end extending generally towards the adjacent rod holder [<b>102</b>]. The rod holder comprises a protruding member [<b>16</b>] positioned to work cooperatively with the ramp [<b>104</b>]. An adjusting member [<b>100</b>] comprising a threaded shaft member [<b>101</b>] and a protruding member [<b>16</b>] is connected to the screw head extension [<b>103</b>] by threaded engagement of the threaded shaft portion [<b>101</b>] with the threading on the interior face of the screw head extension [<b>103</b>] such that the ramp [<b>104</b>] protrudes from the screw head extension [<b>103</b>] and extends generally towards the rod holder [<b>13</b>] at a vertical location substantially corresponding to the location of protruding member protruding from the rod holder [<b>13</b>]. When the adjusting member [<b>100</b>] is rotated within the screw head extension [<b>103</b>], the ramp [<b>104</b>] moves distally along the longitudinal axis of the screw head extension [<b>103</b>]. The protruding member [<b>16</b>] thus presses against the ramp [<b>104</b>] as it moves towards progressively wider portions of the ramp [<b>104</b>], forcing the first bone screw head [<b>1</b>] and second bone screw head [<b>2</b>] to move away from each and distracting the physical components to which the first and second bone screws are connected.</p>
+      <p id="p-00033-en" num="0033">As depicted in <figref>FIG. 5</figref>, in another embodiment the combined tool apparatus comprises a compressor, wherein a connecting rod [<b>5</b>] is mounted to a first bone screw head [<b>11</b>] and a second bone screw head [<b>2</b>], said first and second bone screw heads being installed in bone, wherein the connecting rod [<b>5</b>] is mounted slidably to the first bone screw head [<b>1</b>] and mounted fixedly to the second bone screw head [<b>2</b>]. A rod holder [<b>102</b>] is attached to said connecting rod [<b>5</b>] at a point adjacent to either first bone screw head [<b>1</b>] or said second bone screw head [<b>2</b>], but not in between said first and second bone screw heads, and is generally co-axial with said first and second bone screw heads. An adjusting member is attached to a bone screw head adjacent to the rod holder [<b>102</b>], said adjusting member comprising a ramp [<b>104</b>] near its distal end. The narrowest point of the ramp is substantially flush with the surface of the screw head extension [<b>103</b>] and is proximal to the widest end of the ramp, said widest end extending generally towards the adjacent rod holder [<b>102</b>]. The rod holder comprises a protruding member [<b>16</b>] positioned to work cooperatively with the ramp [<b>104</b>]. An adjusting member [<b>100</b>] comprising a threaded shaft member [<b>101</b>] and a protruding member [<b>16</b>] is connected to the screw head extension [<b>103</b>] by threaded engagement of the threaded shaft portion [<b>101</b>] with the threading on the interior face of the screw head extension [<b>103</b>] such that the ramp [<b>104</b>] protrudes from the screw head extension [<b>103</b>] and extends generally towards the rod holder [<b>13</b>] at a vertical location substantially corresponding to the location of protruding member protruding from the rod holder [<b>13</b>]. When the adjusting member [<b>100</b>] is rotated within the screw head extension [<b>103</b>], the ramp [<b>104</b>] moves distally along the longitudinal axis of the screw head extension [<b>103</b>]. The protruding member [<b>116</b>] thus presses against the ramp [<b>104</b>] as it moves towards progressively wider portions of the ramp [<b>104</b>], forcing the first bone screw head [<b>1</b>] and second bone screw head [<b>2</b>] to move towards from each other, compressing the physical components to which the first and second bone screws are connected.</p>
+      <p id="p-00034-en" num="0034">Although the present invention has been described in considerable detail with reference to certain preferred versions thereof, other versions are possible. For example, other screws, materials, connection means, turning means, or adjusting means may be used than those described in detail. Similarly, other placements of the versions of the invention may be employed than those shown in detail, and the invention may be used to compress or distract physical components other than those described herein. For example, the ramp may be located proximally rather than distally, or may have its widest end proximal to its distal end, and the protruding member may be adjusted vertically by means other than a screw mechanism. Therefore, the spirit and scope of the claims should not be limited to the description of the preferred versions described herein.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A combined tool apparatus for compression or distraction of a first physical component having a first bone screw and a second physical component having a second bone screw, said apparatus comprising:
+<claim-text>a. a first bone screw implanted in a first physical component and a second bone screw implanted in a second physical component, each of said first bone screw and said second bone screw comprising a screw, a collar, and a screw head;</claim-text><claim-text>b. a connecting rod mounted fixedly to said at least one of said first bone screw and said second bone screw and mounted slidably to the other of said first bone screw and said second bone screw;</claim-text><claim-text>c. a rod holder attached to said connecting rod at a location adjacent to said first bone screw at a location not in between said first bone screw and said second bone screw, said rod holder comprising a ramp extending orthogonally to the longitudinal axis of said rod holder in the general direction of said first bone screw;</claim-text><claim-text>d. A screw head extension connected to said first bone screw, said screw head extension comprising two or more prongs defining an a cylinder with at least one slit along its longitudinal axis and at least partially threaded on its interior face;</claim-text><claim-text>e. an adjusting member comprising a threaded portion and a protruding member, wherein said protruding member rotates freely with respect to said adjusting member threaded portion, said adjusting member threaded portion connected threadedly to said screw head threaded portion, and said protruding member fits and moves axially with said slit, such that turning said adjusting member with respect to said screw head extension moves said protruding member axially;</claim-text><claim-text>f. wherein axial adjustment of said protruding member in one or more of the distal direction or proximal direction by said adjusting means presses said protruding member against progressively wider portions of said ramp, forcing said screw head extension away from said rod holder and compressing said first physical component and said second physical component.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The apparatus of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said rod holder is detachably attached to said connecting rod.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en" independent="true">
+      <claim-text>
+        <b>3</b>. A combined tool apparatus for compression or distraction of a first physical component having a first bone screw and a second physical component having a second bone screw, said apparatus comprising:
+<claim-text>a. a first bone screw implanted in a first physical component and a second bone screw implanted in a second physical component, each of said first bone screw and said second bone screw comprising a screw, a collar, and a screw head;</claim-text><claim-text>b. a connecting rod mounted fixedly to said at least one of said first bone screw and said second bone screw and mounted slidably to at least one of said first bone screw and said second bone screw;</claim-text><claim-text>c. a rod holder attached to said connecting rod adjacent to said first bone screw at a location between said first bone screw and said second bone screw, said rod holder comprising a ramp extending orthogonally from the longitudinal axis of said rod holder in the general direction of said first bone screw;</claim-text><claim-text>d. A screw head extension connected to said first bone screw, said screw head extension comprising two or more prongs defining an a cylinder with at least one slit along its longitudinal axis and at least partially threaded on its interior face;</claim-text><claim-text>e. an adjusting member comprising a threaded portion and a protruding member, wherein said protruding member rotates freely with respect to said adjusting member threaded portion, said adjusting member threaded portion connected threadedly to said screw head threaded portion, and said protruding member fits and moves axially with said slit, such that turning said adjusting member with respect to said screw head extension moves said protruding member axially;</claim-text><claim-text>f. wherein axial adjustment of said protruding member in one or more of the distal direction or proximal direction by said adjusting means presses said protruding member against progressively wider portions of said ramp, forcing said screw head extension away from said rod holder and distracting said first physical component and said second physical component.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The apparatus of <claim-ref idref="clm-00003-en">claim 3</claim-ref> wherein said rod holder is detachably attached to said connecting rod.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en" independent="true">
+      <claim-text>
+        <b>5</b>. A combined tool apparatus for compression or distraction of a first physical component having a first bone screw and a second physical component having a second bone screw, said apparatus comprising:
+<claim-text>a. a first bone screw implanted in a first physical component and a second bone screw implanted in a second physical component, each of said first bone screw and said second bone screw comprising a screw, a collar, and a screw head;</claim-text><claim-text>b. a connecting rod mounted fixedly to said at least one of said first bone screw and said second bone screw and mounted slidably to at least one of said first bone screw and said second bone screw;</claim-text><claim-text>c. a rod holder attached to said connecting rod adjacent to said first bone screw at a location between said first bone screw and said second bone screw, said rod holder comprising a protruding member, wherein said protruding member protrudes generally orthogonally from said rod holder in the general direction of said first bone screw;</claim-text><claim-text>d. A screw head extension connected to said first bone screw, said screw head extension comprising two or more prongs defining an a cylinder with at least one slit along its longitudinal axis and at least partially threaded on its interior face;</claim-text><claim-text>e. an adjusting member comprising a threaded portion and a ramp, wherein said ramp rotates freely with respect to said adjusting member threaded portion, said adjusting member threaded portion connected threadedly to said screw head threaded portion, and said ramp fits and moves axially with said slit, such that turning said adjusting member with respect to said screw head extension moves said ramp member axially;</claim-text><claim-text>f. wherein axial adjustment of said ramp in one or more of the distal direction or proximal direction by said adjusting means presses said protruding member against progressively wider portions of said ramp, forcing said screw head extension away from said rod holder and distracting said first physical component and said second physical component.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The apparatus of <claim-ref idref="clm-00005-en">claim 5</claim-ref> wherein said rod holder is detachably attached to said connecting rod.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en" independent="true">
+      <claim-text>
+        <b>7</b>. A combined tool apparatus for compression or distraction of a first physical component having a first bone screw and a second physical component having a second bone screw, said apparatus comprising:
+<claim-text>a. a first bone screw implanted in a first physical component and a second bone screw implanted in a second physical component, each of said first bone screw and said second bone screw comprising a screw, a collar, and a screw head;</claim-text><claim-text>b. a connecting rod mounted fixedly to said at least one of said first bone screw and said second bone screw and mounted slidably to at least one of said first bone screw and said second bone screw;</claim-text><claim-text>c. a rod holder attached to said connecting rod adjacent to said first bone screw at a location not between said first bone screw and said second bone screw, said rod holder comprising a protruding member wherein said protruding member protrudes generally orthogonally from said rod holder in the general direction of said first bone screw;</claim-text><claim-text>d. A screw head extension connected to said first bone screw, said screw head extension comprising two or more prongs defining an a cylinder with at least one slit along its longitudinal axis and at least partially threaded on its interior face;</claim-text><claim-text>e. an adjusting member comprising a threaded portion and a ramp, wherein said ramp rotates freely with respect to said adjusting member threaded portion, said adjusting member threaded portion connected threadedly to said screw head threaded portion, and said ramp fits and moves axially with said slit, such that turning said adjusting member with respect to said screw head extension moves said ramp member axially;</claim-text><claim-text>f. wherein axial adjustment of said ramp in one or more of the distal direction or proximal direction by said adjusting means presses said protruding member against progressively wider portions of said ramp, forcing said screw head extension away from said rod holder and distracting said first physical component and said second physical component.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The apparatus of <claim-ref idref="clm-00007-en">claim 7</claim-ref> wherein said rod holder is detachably attached to said connecting rod.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en" independent="true">
+      <claim-text>
+        <b>9</b>. A combined tool apparatus for compression or distraction of a first physical component having a first bone screw and a second physical component having a second bone screw, said apparatus comprising:
+<claim-text>a. a first bone screw implanted in a first physical component and a second bone screw implanted in a second physical component, each of said first bone screw and said second bone screw comprising a screw, a collar, and a screw head;</claim-text><claim-text>b. a connecting rod mounted fixedly to said at least one of said first bone screw and said second bone screw and mounted slidably to the other of said first bone screw and said second bone screw;</claim-text><claim-text>c. a rod holder attached to said connecting rod at a location adjacent to said first bone screw at a location not in between said first bone screw and said second bone screw, said rod holder comprising an axially adjustable protruding member comprising a ramp, said ramp protruding generally orthogonally to the longitudinal axis of said rod holder in the general direction of said first bone screw head extension;</claim-text><claim-text>d. A first screw head extension connected to said first bone screw, said first screw head extension comprising two or more prongs defining an a cylinder with at least one slit along its longitudinal axis;</claim-text><claim-text>e. wherein adjustment of said protruding member in one or more of the distal direction or proximal direction presses progressively wider portions of said ramp against said first screw head extension, forcing said first screw head extension away from said rod holder and compressing said first physical component and said second physical component.</claim-text></claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The apparatus of <claim-ref idref="clm-00009-en">claim 9</claim-ref> wherein said rod holder is detachably attached to said connecting rod.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en" independent="true">
+      <claim-text>
+        <b>11</b>. A combined tool apparatus for compression or distraction of a first physical component having a first bone screw and a second physical component having a second bone screw, said apparatus comprising:
+<claim-text>a. a first bone screw implanted in a first physical component and a second bone screw implanted in a second physical component, each of said first bone screw and said second bone screw comprising a screw, a collar, and a screw head;</claim-text><claim-text>b. a connecting rod mounted fixedly to said at least one of said first bone screw and said second bone screw and mounted slidably to the other of said first bone screw and said second bone screw;</claim-text><claim-text>c. a rod holder attached to said connecting rod at a location adjacent to said first bone screw at a location in between said first bone screw and said second bone screw, said rod holder comprising an axially adjustable protruding member comprising a ramp, protruding generally orthogonally to the longitudinal axis of said rod holder in the general direction of said first bone screw head extension;</claim-text><claim-text>d. A first screw head extension connected to said first bone screw, said first screw head extension comprising two or more prongs defining an a cylinder with at least one slit along its longitudinal axis;</claim-text><claim-text>e. wherein adjustment of said protruding member in one or more of the distal direction or proximal direction presses progressively wider portions of said protruding member against said first screw head extension, forcing said first screw head extension away from said rod holder and distracting said first physical component and said second physical component.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The apparatus of <claim-ref idref="clm-00010-en">claim 10</claim-ref> wherein said rod holder is detachably attached to said connecting rod. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150250504A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150250504A1-20150910-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150250504A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250504A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150250504A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250504A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150250504A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250504A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150250504A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250504A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150250504A1_00006.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150250504A1-20150910-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150250504A1.PDF" type="pdf" size="536618" pages="12" />
+</lexisnexis-patent-document>

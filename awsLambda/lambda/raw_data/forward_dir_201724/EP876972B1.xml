@@ -1,0 +1,1707 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2017 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20170511" file="EP876972B1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-changed="20170510" time-changed="105731">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Grant" publ-desc="Granted patent">
+      <document-id id="1374995">
+        <country>EP</country>
+        <doc-number>876972</doc-number>
+        <kind>B1</kind>
+        <date>20040506</date>
+      </document-id>
+      <document-id data-format="original">
+        <doc-number>0876972</doc-number>
+        <kind>B1</kind>
+      </document-id>
+      <document-id data-format="docdb">
+        <doc-number>0876972</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>EP0876972</doc-number>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id id="23536221">
+        <country>EP</country>
+        <doc-number>98890027</doc-number>
+        <kind>A</kind>
+        <date>19980205</date>
+      </document-id>
+      <document-id data-format="original">
+        <doc-number>98890027</doc-number>
+      </document-id>
+      <document-id data-format="docdb" id="17331809">
+        <doc-number>98890027</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>EP19980890027</doc-number>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>ger</language-of-publication>
+    <priority-claims date-changed="20090310">
+      <priority-claim sequence="1" kind="national">
+        <country>AT</country>
+        <doc-number>59197</doc-number>
+        <date>19970408</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>59197</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>AT19970000591</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20090310">
+      <gazette-reference>
+        <date>20040506</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>19981111</date>
+      </unexamined-printed-without-grant>
+      <printed-with-grant>
+        <date>20040506</date>
+      </printed-with-grant>
+      <publication-of-grant-date>
+        <date>20040506</date>
+      </publication-of-grant-date>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20090310">
+      <request-for-examination>
+        <date>20000701</date>
+      </request-for-examination>
+      <first-examination-report-despatched>
+        <date>20000524</date>
+      </first-examination-report-despatched>
+    </dates-rights-effective>
+    <classification-ipc date-changed="20121207">
+      <main-classification>
+        <text> 7B 65G  23/14   A</text>
+        <edition>7</edition>
+        <section>B</section>
+        <class>65</class>
+        <subclass>G</subclass>
+        <main-group>23</main-group>
+        <subgroup>14</subgroup>
+        <qualifying-character>A</qualifying-character>
+      </main-classification>
+      <further-classification sequence="1">
+        <text> 7B 65G  17/02   B</text>
+        <edition>7</edition>
+        <section>B</section>
+        <class>65</class>
+        <subclass>G</subclass>
+        <main-group>17</main-group>
+        <subgroup>02</subgroup>
+        <qualifying-character>B</qualifying-character>
+      </further-classification>
+    </classification-ipc>
+    <classifications-ipcr date-changed="20121207">
+      <classification-ipcr sequence="1">
+        <text>B65G  15/08        20060101CFI20020620BMRU        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>C</classification-level>
+        <section>B</section>
+        <class>65</class>
+        <subclass>G</subclass>
+        <main-group>15</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20020620</date>
+        </action-date>
+        <generating-office>
+          <country>RU</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>B65G  15/08        20060101AFI20020620BMRU        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>65</class>
+        <subclass>G</subclass>
+        <main-group>15</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20020620</date>
+        </action-date>
+        <generating-office>
+          <country>RU</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>B61B   7/00        20060101C I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>C</classification-level>
+        <section>B</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>7</main-group>
+        <subgroup>00</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>B61B   7/00        20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>7</main-group>
+        <subgroup>00</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>B65G  15/30        20060101C I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>C</classification-level>
+        <section>B</section>
+        <class>65</class>
+        <subclass>G</subclass>
+        <main-group>15</main-group>
+        <subgroup>30</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>B65G  15/52        20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>65</class>
+        <subclass>G</subclass>
+        <main-group>15</main-group>
+        <subgroup>52</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="7">
+        <text>B65G  17/00        20060101C I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>C</classification-level>
+        <section>B</section>
+        <class>65</class>
+        <subclass>G</subclass>
+        <main-group>17</main-group>
+        <subgroup>00</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="8">
+        <text>B65G  17/02        20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>65</class>
+        <subclass>G</subclass>
+        <main-group>17</main-group>
+        <subgroup>02</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="9">
+        <text>B65G  17/12        20060101C I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>C</classification-level>
+        <section>B</section>
+        <class>65</class>
+        <subclass>G</subclass>
+        <main-group>17</main-group>
+        <subgroup>12</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="10">
+        <text>B65G  17/12        20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>65</class>
+        <subclass>G</subclass>
+        <main-group>17</main-group>
+        <subgroup>12</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="11">
+        <text>B65G  23/00        20060101C I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>C</classification-level>
+        <section>B</section>
+        <class>65</class>
+        <subclass>G</subclass>
+        <main-group>23</main-group>
+        <subgroup>00</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="12">
+        <text>B65G  23/14        20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>65</class>
+        <subclass>G</subclass>
+        <main-group>23</main-group>
+        <subgroup>14</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20121207">
+      <classification-cpc sequence="1">
+        <text>B61B   7/00        20130101  I20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>7</main-group>
+        <subgroup>00</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B65G  15/52        20130101  I20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>65</class>
+        <subclass>G</subclass>
+        <main-group>15</main-group>
+        <subgroup>52</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>B65G  17/02        20130101  I20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>65</class>
+        <subclass>G</subclass>
+        <main-group>17</main-group>
+        <subgroup>02</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>B65G  17/12        20130101  I20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>65</class>
+        <subclass>G</subclass>
+        <main-group>17</main-group>
+        <subgroup>12</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>B65G  23/14        20130101  I20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>65</class>
+        <subclass>G</subclass>
+        <main-group>23</main-group>
+        <subgroup>14</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>B65G2201/02        20130101  A20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>65</class>
+        <subclass>G</subclass>
+        <main-group>2201</main-group>
+        <subgroup>02</subgroup>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>B65G2201/06        20130101  A20130101BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>65</class>
+        <subclass>G</subclass>
+        <main-group>2201</main-group>
+        <subgroup>06</subgroup>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130101</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <classifications-ecla date-changed="20121207">
+      <classification-ecla sequence="1" classification-scheme="EC" country="EP">
+        <text>B61B  7/00</text>
+        <section>B</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>7</main-group>
+        <subgroup>00</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="2" classification-scheme="EC" country="EP">
+        <text>B65G 15/52</text>
+        <section>B</section>
+        <class>65</class>
+        <subclass>G</subclass>
+        <main-group>15</main-group>
+        <subgroup>52</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="3" classification-scheme="EC" country="EP">
+        <text>B65G 17/02</text>
+        <section>B</section>
+        <class>65</class>
+        <subclass>G</subclass>
+        <main-group>17</main-group>
+        <subgroup>02</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="4" classification-scheme="EC" country="EP">
+        <text>B65G 17/12</text>
+        <section>B</section>
+        <class>65</class>
+        <subclass>G</subclass>
+        <main-group>17</main-group>
+        <subgroup>12</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="5" classification-scheme="EC" country="EP">
+        <text>B65G 23/14</text>
+        <section>B</section>
+        <class>65</class>
+        <subclass>G</subclass>
+        <main-group>23</main-group>
+        <subgroup>14</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="1" classification-scheme="ICO" country="EP">
+        <text>L65G201:02</text>
+        <section>L</section>
+        <class>65</class>
+        <subclass>G</subclass>
+        <main-group>201</main-group>
+        <subgroup>02</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="2" classification-scheme="ICO" country="EP">
+        <text>L65G201:06</text>
+        <section>L</section>
+        <class>65</class>
+        <subclass>G</subclass>
+        <main-group>201</main-group>
+        <subgroup>06</subgroup>
+      </classification-ecla>
+    </classifications-ecla>
+    <number-of-claims calculated="yes">6</number-of-claims>
+    <invention-title id="title_ger" date-changed="20070505" lang="ger" format="original">Förderanlage zum Transport von Gütern</invention-title>
+    <invention-title id="title_eng" date-changed="20070505" lang="eng" format="original">Conveyor device for products</invention-title>
+    <invention-title id="title_fre" date-changed="20070505" lang="fre" format="original">Dispositif de transport pour produits</invention-title>
+    <references-cited date-changed="20070823">
+      <patent-citations name="patcit" date-changed="20070823" />
+      <citation>
+        <patcit num="1" dnum="EP-A- 0 315 820">
+          <document-id>
+            <country>EP</country>
+            <doc-number>315820</doc-number>
+            <kind>A1</kind>
+            <date>19890517</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>EP-A- 0 315 820</doc-number>
+          </document-id>
+          <application-date>
+            <date>19881025</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="EP-A- 0 745 545">
+          <document-id>
+            <country>EP</country>
+            <doc-number>745545</doc-number>
+            <kind>A2</kind>
+            <date>19961204</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>EP-A- 0 745 545</doc-number>
+          </document-id>
+          <application-date>
+            <date>19960423</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="CH-A- 544 712">
+          <document-id>
+            <country>CH</country>
+            <doc-number>544712</doc-number>
+            <kind>A</kind>
+            <date>19731130</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>CH-A- 544 712</doc-number>
+          </document-id>
+          <application-date>
+            <date>19721023</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="GB-A- 1 195 985">
+          <document-id>
+            <country>GB</country>
+            <doc-number>1195985</doc-number>
+            <kind>A</kind>
+            <date>19700624</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>GB-A- 1 195 985</doc-number>
+          </document-id>
+          <application-date>
+            <date>19671102</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="US-A- 3 785 296">
+          <document-id>
+            <country>US</country>
+            <doc-number>3785296</doc-number>
+            <kind>A</kind>
+            <date>19740115</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>US-A- 3 785 296</doc-number>
+          </document-id>
+          <application-date>
+            <date>19710825</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="6" dnum="US-A- 4 378 875">
+          <document-id>
+            <country>US</country>
+            <doc-number>4378875</doc-number>
+            <kind>A</kind>
+            <date>19830405</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>US-A- 4 378 875</doc-number>
+          </document-id>
+          <application-date>
+            <date>19801218</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20061018">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="ger">
+            <orgname>Innova Patent GmbH </orgname>
+            <address>
+              <address-1>Rickenbacherstrasse 8-10</address-1>
+              <city>6960 Wolfurt</city>
+              <country>AT</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="ger">
+            <name>Trieb, Herbert </name>
+            <address>
+              <address-1>Feldweg 16B</address-1>
+              <city>6922 Wolfurt</city>
+              <country>AT</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="ger">
+            <name>Atzwanger, Richard, Dipl.-Ing.  Patentanwalt </name>
+            <address>
+              <address-1>Mariahilfer Strasse 1c</address-1>
+              <city>1060 Wien</city>
+              <country>AT</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20061019">
+      <designation-epc>
+        <contracting-states>
+          <country>AT</country>
+          <country>CH</country>
+          <country>DE</country>
+          <country>ES</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>NL</country>
+          <country>SE</country>
+        </contracting-states>
+      </designation-epc>
+    </designation-of-states>
+    <patent-family date-changed="20070822">
+      <main-family family-id="2050592">
+        <family-member>
+          <document-id>
+            <country>BR</country>
+            <doc-number>PI9801014</doc-number>
+            <kind>A</kind>
+            <date>19990921</date>
+          </document-id>
+          <application-date>
+            <date>19980406</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>ES</country>
+            <doc-number>2216265</doc-number>
+            <kind>T3</kind>
+            <date>20041016</date>
+          </document-id>
+          <application-date>
+            <date>19980205</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AT</country>
+            <doc-number>59197</doc-number>
+            <kind>A</kind>
+            <date>19981215</date>
+          </document-id>
+          <application-date>
+            <date>19970408</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>6063698</doc-number>
+            <kind>A</kind>
+            <date>19981015</date>
+          </document-id>
+          <application-date>
+            <date>19980402</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>59811303</doc-number>
+            <kind>D1</kind>
+            <date>20040609</date>
+          </document-id>
+          <application-date>
+            <date>19980205</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>RU</country>
+            <doc-number>2183580</doc-number>
+            <kind>C2</kind>
+            <date>20020620</date>
+          </document-id>
+          <application-date>
+            <date>19980306</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AT</country>
+            <doc-number>265974</doc-number>
+            <kind>T</kind>
+            <date>20040515</date>
+          </document-id>
+          <application-date>
+            <date>19980205</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AT</country>
+            <doc-number>405396</doc-number>
+            <kind>B</kind>
+            <date>19990726</date>
+          </document-id>
+          <application-date>
+            <date>19970408</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>728375</doc-number>
+            <kind>B2</kind>
+            <date>20010111</date>
+          </document-id>
+          <application-date>
+            <date>19980402</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2234120</doc-number>
+            <kind>A1</kind>
+            <date>19981008</date>
+          </document-id>
+          <application-date>
+            <date>19980406</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>876972</doc-number>
+            <kind>A2</kind>
+            <date>19981111</date>
+          </document-id>
+          <application-date>
+            <date>19980205</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>876972</doc-number>
+            <kind>A3</kind>
+            <date>20000524</date>
+          </document-id>
+          <application-date>
+            <date>19980205</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>876972</doc-number>
+            <kind>B1</kind>
+            <date>20040506</date>
+          </document-id>
+          <application-date>
+            <date>19980205</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>6039171</doc-number>
+            <kind>A</kind>
+            <date>20000321</date>
+          </document-id>
+          <application-date>
+            <date>19980403</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2234120</doc-number>
+            <kind>C</kind>
+            <date>20050517</date>
+          </document-id>
+          <application-date>
+            <date>19980406</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>1195636</doc-number>
+            <kind>A</kind>
+            <date>19981014</date>
+          </document-id>
+          <application-date>
+            <date>19980408</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="1890522">
+        <family-member>
+          <document-id>
+            <country>BR</country>
+            <doc-number>PI9801014</doc-number>
+            <kind>A</kind>
+            <date>19990921</date>
+          </document-id>
+          <application-date>
+            <date>19980406</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>ES</country>
+            <doc-number>2216265</doc-number>
+            <kind>T3</kind>
+            <date>20041016</date>
+          </document-id>
+          <application-date>
+            <date>19980205</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AT</country>
+            <doc-number>59197</doc-number>
+            <kind>A</kind>
+            <date>19981215</date>
+          </document-id>
+          <application-date>
+            <date>19970408</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>6063698</doc-number>
+            <kind>A</kind>
+            <date>19981015</date>
+          </document-id>
+          <application-date>
+            <date>19980402</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>59811303</doc-number>
+            <kind>D1</kind>
+            <date>20040609</date>
+          </document-id>
+          <application-date>
+            <date>19980205</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>RU</country>
+            <doc-number>2183580</doc-number>
+            <kind>C2</kind>
+            <date>20020620</date>
+          </document-id>
+          <application-date>
+            <date>19980306</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AT</country>
+            <doc-number>265974</doc-number>
+            <kind>T</kind>
+            <date>20040515</date>
+          </document-id>
+          <application-date>
+            <date>19980205</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AT</country>
+            <doc-number>405396</doc-number>
+            <kind>B</kind>
+            <date>19990726</date>
+          </document-id>
+          <application-date>
+            <date>19970408</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>728375</doc-number>
+            <kind>B2</kind>
+            <date>20010111</date>
+          </document-id>
+          <application-date>
+            <date>19980402</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2234120</doc-number>
+            <kind>A1</kind>
+            <date>19981008</date>
+          </document-id>
+          <application-date>
+            <date>19980406</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>876972</doc-number>
+            <kind>A2</kind>
+            <date>19981111</date>
+          </document-id>
+          <application-date>
+            <date>19980205</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>876972</doc-number>
+            <kind>A3</kind>
+            <date>20000524</date>
+          </document-id>
+          <application-date>
+            <date>19980205</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>876972</doc-number>
+            <kind>B1</kind>
+            <date>20040506</date>
+          </document-id>
+          <application-date>
+            <date>19980205</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>6039171</doc-number>
+            <kind>A</kind>
+            <date>20000321</date>
+          </document-id>
+          <application-date>
+            <date>19980403</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2234120</doc-number>
+            <kind>C</kind>
+            <date>20050517</date>
+          </document-id>
+          <application-date>
+            <date>19980406</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>1195636</doc-number>
+            <kind>A</kind>
+            <date>19981014</date>
+          </document-id>
+          <application-date>
+            <date>19980408</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <legal-data date-changed="20170510">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>19981111</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <corresponding-authority>
+        <country>EP</country>
+      </corresponding-authority>
+      <corresponding-kind>A2</corresponding-kind>
+      <legal-designated-states>
+        <country>AT</country>
+        <country>CH</country>
+        <country>DE</country>
+        <country>ES</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>NL</country>
+        <country>SE</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>19981111</date>
+      </publication-date>
+      <event-code-1>AX</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXTENSION OF THE EUROPEAN PATENT TO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <free-text-description>AL;LT;LV;MK;RO;SI</free-text-description>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20000524</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <corresponding-authority>
+        <country>EP</country>
+      </corresponding-authority>
+      <corresponding-kind>A3</corresponding-kind>
+      <legal-designated-states>
+        <country>AT</country>
+        <country>BE</country>
+        <country>CH</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>IE</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LU</country>
+        <country>MC</country>
+        <country>NL</country>
+        <country>PT</country>
+        <country>SE</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20000524</date>
+      </publication-date>
+      <event-code-1>AX</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXTENSION OF THE EUROPEAN PATENT TO</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <free-text-description>AL;LT;LV;MK;RO;SI</free-text-description>
+    </legal-event>
+    <legal-event sequence="5">
+      <publication-date>
+        <date>20000524</date>
+      </publication-date>
+      <event-code-1>RIC1</event-code-1>
+      <legal-description>CLASSIFICATION (CORRECTION)</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <free-text-description>7B 65G  23/14   A, 7B 65G  17/02   B</free-text-description>
+    </legal-event>
+    <legal-event sequence="6">
+      <publication-date>
+        <date>20000802</date>
+      </publication-date>
+      <event-code-1>RAP1</event-code-1>
+      <legal-description>TRANSFER OF RIGHTS OF AN EP PUBLISHED APPLICATION</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <new-owner>INNOVA PATENT GMBH</new-owner>
+    </legal-event>
+    <legal-event sequence="7">
+      <publication-date>
+        <date>20000830</date>
+      </publication-date>
+      <event-code-1>17P</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXAMINATION FILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <effective-date>
+        <date>20000701</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="8">
+      <publication-date>
+        <date>20010131</date>
+      </publication-date>
+      <event-code-1>AKX</event-code-1>
+      <effect>+</effect>
+      <legal-description>PAYMENT OF DESIGNATION FEES</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <free-text-description>AT CH DE ES FR GB IT LI NL SE</free-text-description>
+    </legal-event>
+    <legal-event sequence="9">
+      <publication-date>
+        <date>20030108</date>
+      </publication-date>
+      <event-code-1>17Q</event-code-1>
+      <effect>+</effect>
+      <legal-description>FIRST EXAMINATION REPORT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <effective-date>
+        <date>20021126</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="10">
+      <publication-date>
+        <date>20040506</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <corresponding-authority>
+        <country>EP</country>
+      </corresponding-authority>
+      <corresponding-kind>B1</corresponding-kind>
+      <legal-designated-states>
+        <country>AT</country>
+        <country>CH</country>
+        <country>DE</country>
+        <country>ES</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>NL</country>
+        <country>SE</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="11">
+      <publication-date>
+        <date>20040511</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <designated-state-authority>
+        <country>SE</country>
+      </designated-state-authority>
+      <designated-state-event-code>TRGR</designated-state-event-code>
+      <designated-state-description>TRANSLATION OF GRANTED EP PATENT</designated-state-description>
+    </legal-event>
+    <legal-event sequence="12">
+      <publication-date>
+        <date>20040512</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <designated-state-authority>
+        <country>GB</country>
+      </designated-state-authority>
+      <designated-state-event-code>FG4D</designated-state-event-code>
+      <designated-state-description>EUROPEAN PATENT GRANTED</designated-state-description>
+      <free-text-description>NOT ENGLISH</free-text-description>
+    </legal-event>
+    <legal-event sequence="13">
+      <publication-date>
+        <date>20040514</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <designated-state-authority>
+        <country>CH</country>
+      </designated-state-authority>
+      <designated-state-event-code>NV</designated-state-event-code>
+      <designated-state-description>NEW AGENT</designated-state-description>
+      <representative-name>LUCHS &amp; PARTNER PATENTANWAELTE</representative-name>
+    </legal-event>
+    <legal-event sequence="14">
+      <publication-date>
+        <date>20040514</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <designated-state-authority>
+        <country>CH</country>
+      </designated-state-authority>
+      <designated-state-event-code>EP</designated-state-event-code>
+      <designated-state-description>ENTRY IN THE NATIONAL PHASE</designated-state-description>
+    </legal-event>
+    <legal-event sequence="15">
+      <publication-date>
+        <date>20040602</date>
+      </publication-date>
+      <event-code-1>GBT</event-code-1>
+      <effect>+</effect>
+      <legal-description>GB: TRANSLATION OF EP PATENT FILED (GB SECTION 77(6)(A)/1977)</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <effective-date>
+        <date>20040506</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="16">
+      <publication-date>
+        <date>20040609</date>
+      </publication-date>
+      <event-code-1>REF</event-code-1>
+      <legal-description>CORRESPONDS TO:</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <designated-state-authority>
+        <country>EP</country>
+      </designated-state-authority>
+      <corresponding-publication-number>59811303</corresponding-publication-number>
+      <corresponding-authority>
+        <country>DE</country>
+      </corresponding-authority>
+      <corresponding-publication-date>
+        <date>20040609</date>
+      </corresponding-publication-date>
+    </legal-event>
+    <legal-event sequence="17">
+      <publication-date>
+        <date>20041016</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <designated-state-authority>
+        <country>ES</country>
+      </designated-state-authority>
+      <designated-state-event-code>FG2A</designated-state-event-code>
+      <designated-state-description>DEFINITIVE PROTECTION</designated-state-description>
+      <corresponding-publication-number>2216265</corresponding-publication-number>
+      <corresponding-authority>
+        <country>ES</country>
+      </corresponding-authority>
+      <corresponding-kind>T3</corresponding-kind>
+    </legal-event>
+    <legal-event sequence="18">
+      <publication-date>
+        <date>20041210</date>
+      </publication-date>
+      <event-code-1>ET</event-code-1>
+      <effect>+</effect>
+      <legal-description>FR: TRANSLATION FILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="19">
+      <publication-date>
+        <date>20050427</date>
+      </publication-date>
+      <event-code-1>26N</event-code-1>
+      <effect>+</effect>
+      <legal-description>NO OPPOSITION FILED</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <effective-date>
+        <date>20050208</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="20">
+      <publication-date>
+        <date>20160218</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <designated-state-authority>
+        <country>FR</country>
+      </designated-state-authority>
+      <designated-state-event-code>PLFP</designated-state-event-code>
+      <designated-state-description>FEE PAYMENT</designated-state-description>
+      <fee-payment-year>19</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="21">
+      <publication-date>
+        <date>20160429</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <designated-state-authority>
+        <country>ES</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20160210</date>
+      </payment-date>
+      <fee-payment-year>19</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="22">
+      <publication-date>
+        <date>20160429</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <designated-state-authority>
+        <country>IT</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20160223</date>
+      </payment-date>
+      <fee-payment-year>19</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="23">
+      <publication-date>
+        <date>20160531</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <designated-state-authority>
+        <country>NL</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20160217</date>
+      </payment-date>
+      <fee-payment-year>19</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="24">
+      <publication-date>
+        <date>20160531</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <designated-state-authority>
+        <country>GB</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20160217</date>
+      </payment-date>
+      <fee-payment-year>19</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="25">
+      <publication-date>
+        <date>20160531</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <designated-state-authority>
+        <country>AT</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20160225</date>
+      </payment-date>
+      <fee-payment-year>19</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="26">
+      <publication-date>
+        <date>20170217</date>
+      </publication-date>
+      <event-code-1>REG</event-code-1>
+      <legal-description>REFERENCE TO A NATIONAL CODE</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <designated-state-authority>
+        <country>FR</country>
+      </designated-state-authority>
+      <designated-state-event-code>PLFP</designated-state-event-code>
+      <designated-state-description>FEE PAYMENT</designated-state-description>
+      <fee-payment-year>20</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="27">
+      <publication-date>
+        <date>20170428</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <designated-state-authority>
+        <country>SE</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20170216</date>
+      </payment-date>
+      <fee-payment-year>20</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="28">
+      <publication-date>
+        <date>20170428</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <designated-state-authority>
+        <country>FR</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20170217</date>
+      </payment-date>
+      <fee-payment-year>20</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="29">
+      <publication-date>
+        <date>20170428</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <designated-state-authority>
+        <country>CH</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20170217</date>
+      </payment-date>
+      <fee-payment-year>20</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="30">
+      <publication-date>
+        <date>20170428</date>
+      </publication-date>
+      <event-code-1>PGFP</event-code-1>
+      <effect>+</effect>
+      <legal-description>POSTGRANT: ANNUAL FEES PAID TO NATIONAL OFFICE</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     0876972A2</docdb-publication-number>
+      <docdb-application-id>17331809</docdb-application-id>
+      <designated-state-authority>
+        <country>DE</country>
+      </designated-state-authority>
+      <payment-date>
+        <date>20170217</date>
+      </payment-date>
+      <fee-payment-year>20</fee-payment-year>
+    </legal-event>
+  </legal-data>
+  <description id="descr_ger" lang="ger" format="original" date-changed="20110310">
+    <p id="p-00001-de">Die gegenständliche Erfindung betrifft eine Förderanlage zum Transport von Gütern mittels eines in sich geschlossenen Förderbandes, welches mit quer zur Förderbewegung ausgerichteten Tragbalken ausgebildet ist und mit seitlich außerhalb des Förderbandes angeordneten, in sich geschlossenen Förderseilen, von welchen die durch die Förderung von Gütern bewirkten Belastungen aufgenommen werden, wobei die Tragbalken beiderseits des Förderbandes mittels zwei unter Wirkung einer Feder gegeneinander verschwenkbare Klemmbacken aufweisenden Klemmeinrichtungen an die Förderseile anklemmbar sind und wobei das Förderband und die Förderseile in den beiden Endstationen über Umlenktrommeln geführt sind.</p>
+    <p id="p-00002-de">Bekannte Förderanlagen bestehen aus einem in sich geschlossenen, an den beiden Enden über Umlenkwalzen geführten Förderband und aus unterhalb des oberen Trumes des Förderbandes angeordneten Tragwalzen, an welchen das Förderband zur Auflage kommt. Dabei muß das Förderband hinreichend zugfest ausgebildet sein, um einerseits die durch die Förderbewegung bedingten Zugkräfte und andererseits die durch das Gewicht des Fördergutes auf dieses ausgeübten Zugkräfte aufzunehmen. Die durch das Gewicht des Fördergutes verursachten Zugbelastungen des Förderbandes sind umso geringer, je geringer der Abstand der sich unterhalb des oberen Trumes des Förderbandes befindlichen Tragwalzen ist.<br /> Da weiters bei bekannten derartigen Förderanlagen die Tragwalzen gegenüber dem Förderband nicht nur abrollen, sondern das Förderband über die Tragwalzen auch gleitet, wird eine hohe Zugbelastung des Förderbandes bedingt. Zudem wird hierdurch eine Abnützung des Förderbandes verursacht.</p>
+    <p id="p-00003-de">Bei bekannten derartigen Förderanlagen besteht somit das Erfordernis, entweder das Förderband mit einer sehr hohen Zugfestigkeit auszubilden, wobei sich die Tragwalzen in großem Abstand voneinander befinden können, wodurch über die gesamte Länge der Fördervorrichtung eine verringerte Anzahl von Förderwalzen vorgesehen werden kann, oder eine große Anzahl von Tragwalzen vorzusehen, welche in einem geringen Abstand voneinander vorgesehen sind, wobei zwar die durch das Gewicht des Fördergutes verursachten Zugebelastungen des Förderbandes verringert werden, wodurch dieses mit einer geringeren Zugfestigkeit ausgebildet werden kann, jedoch eine große Anzahl von Tragwalzen vorgesehen werden muß, wodurch der konstruktive Aufwand vergrößert wird.</p>
+    <p id="p-00004-de">Aus der EU 745 545 A1 ist eine Förderanlage bekannt, welche durch Tragseile gebildete Tragbahnen aufweist, längs welcher an den beiden Enden der Tragbalken gelagerte Rollen geführt sind. Diese bekannte Förderanlage ist jedoch insoferne nachteilig, als die Tragrollen bewegliche Teile darstellen, welche einer ständigen Kontrolle und Wartung bedürfen.</p>
+    <p id="p-00005-de">Aus der GB 1 195 985 A ist ein Förderband bekannt, welches mit quer zur Förderbewegung ausgerichteten Tragbalken ausgebildet ist. Diese Tragbalken sind mittels in Richtung der Tragbalken abragender Zapfen mit an beiden Seiten des Förderbandes angeordneten Ketten, welche als Trag- und Zugelemente dienen, gekuppelt. Förderketten sind jedoch deshalb nachteilig, da sie in ihrer Herstellung wesentlich teurer als Stahlseile sind und da sie bei vergleichbarer Zug- bzw. Tragleistung ein höheres Gewicht als Stahlseile aufweisen. Zudem sind sie deshalb wesentlich störungsanfälliger als Stahlseile, weil sie durch den Bruch eines einzigen Gliedes von einer Vielzahl von Gliedern insgesamt funktionsunfähig werden. Hinsichtlich der Bruchgefahr wird darauf verwiesen, daß bei Förderseilen durch eine magnettechnische Überwachung Beschädigungen so rechtzeitig feststellbar sind, daß Seilrisse mit Sicherheit vermieden werden können.</p>
+    <p id="p-00006-de">Die CH 544 712 A offenbart eine Förderanlage mit über Rollen geführten Förderseilen, mit welchen das Förderband gekuppelt ist. Dabei wird die Kupplung dadurch bewirkt, daß das Förderband mit Nuten ausgebildet ist, in welche die Förderseile eindringen und in diesen durch Formschluß gehalten sind. Diese bekannte Förderanlage ist jedoch deshalb nachteilig, da aufgrund von Zugbelastungen des Förderbandes und der Förderseile die erforderliche Kupplung zwischen dem Förderband und den Förderseilen nicht gewährleistet ist, wodurch gleichfalls Funktionsstörungen verursacht werden können.</p>
+    <p id="p-00007-de">Aus der EP-A-0 315 820 ist weiters eine Anlage bekannt, bei welcher Zugelemente, wie Zugseile oder Zugketten, vorgesehen sind, an welche mittels Federklemmen Mitnehmerwagen für das Förderband anklemmbar sind. Diese Anlage weist jedoch deshalb eine sehr aufwendige Konstruktion auf, da neben Zugelementen, welche in den Endstationen über Umlenktrommeln geführt sind und an welche das Förderband mittels Federklemmen angeklemmt ist, auch Führungselemente, wie Schienen, vorgesehen sein müssen, längs welcher die mit Laufrollen ausgebildeten Mitnehmerwagen verfahren werden, wobei weiters die Laufrollen der Mitnehmerwagen einer ständigen Wartung und Kontrolle bedürfen.</p>
+    <p id="p-00008-de">Der gegenständlichen Erfindung liegt demnach die Aufgabe zugrunde, eine Förderanlage gemäß der eingangs genannten Art zu schaffen, bei welcher die dem bekannten Stand der Technik anhaftenden Nachteile vermieden werden. Dies wird erfindungsgemäß dadurch erzielt, daß sich die beiden Klemmeinrichtungen jeweils in Fortsetzung der Tragbalken seitlich außerhalb der beiden Förderseile befinden.<br /> Bei einer derartigen Förderanlage ist demnach das Förderband an die Förderseile anklemmbar, jedoch sind keine Laufrollen vorgesehen, mittels welcher das Förderband längs Tragseilen verfahrbar ist.</p>
+    <p id="p-00009-de">Vorzugsweise ist jeweils eine der Klemmbacken am Tragbalken starr befestigt und ist die andere Klemmbacke mittels der Klemmeinrichtung gegenüber der am Tragbalken starr befestigten Klemmbacke verschiebbar. Weiters sind vorzugsweise die Umlenktrommeln mit einem in axialer Richtung mittleren Bereich, an welchen das Förderband zum Anliegen kommt, und mit zwei seitlich angeordneten Seilrillen, in welchen die Förderseile geführt sind, ausgebildet.</p>
+    <p id="p-00010-de">Nach weiteren bevorzugten Merkmalen ist das Förderband an der Unterseite der Tragbalken befestigt, wodurch es durch die Tragbalken in einzelne Bereiche unterteilt ist. Dabei ist vorzugsweise das Förderband als Wellkantenförderband ausgebildet, wobei die Bodenfläche des oberen Trumes an den Unterseiten der Tragbalken befestigt ist und wobei weiters die Enden der zwischen den Tragbalken befindlichen Abschnitte der Wellkanten an den Seitenflächen der Tragbalken befestigt sind. Die Höhe der Tragbalken kann angenähert gleich der Höhe der Wellkanten sein.</p>
+    <p id="p-00011-de">Der Gegenstand der Erfindung ist nachstehend anhand eines in der Zeichnung dargestellten Ausführungsbeispieles näher erläutert. Es zeigen:<dl tsize="18" compact="compact"><dt>Fig. 1</dt><dd>eine erfindungsgemäße Förderanlage, in Ansicht in Richtung der Förderbewegung,</dd><dt>Fig. 2</dt><dd>die Förderanlage gemäß Fig. 1, in Seitenansicht,</dd><dt>die Fig. 2a und 2b</dt><dd>Details A und B dieser Förderanlage, in gegenüber Fig. 2 vergrößertem Maßstab,</dd><dt>Fig. 3</dt><dd>einen Abschnitt der Förderanlage gemäß Fig. 1, in Seitenansicht und in gegenüber Fig. 1 vergrößertem Maßstab,</dd><dt>Fig. 3a</dt><dd>den in Fig. 3 dargestellten Abschnitt der Förderanlage, in Draufsicht,</dd><dt>Fig. 4</dt><dd>diese Förderanlage, im Schnitt nach der Linie IV-IV der Fig. 3 in gegenüber Fig. 3 vergrößertem Maßstab,</dd><dt>Fig. 5</dt><dd>ein Detail der Fig. 4, im Schnitt und in gegenüber Fig. 4 vergrößertem Maßstab,</dd><dt>Fig. 6</dt><dd>eine Umlenkstation dieser Förderanlage, in Seitenansicht, und</dd><dt>Fig. 7</dt><dd>eine Umlenkstation dieser Förderanlage, in Draufsicht und in gegenüber Fig. 6 vergrößertem Maßstab.</dd></dl></p>
+    <p id="p-00012-de">In den Fig. 1 und 2 ist eine Stütze 1 für eine herkömmliche Seilbahnanlage zum Transport von Personen dargestellt. Auf dieser Stütze 1 sind Rollen gelagert, in welchen ein Trag- und Förderseil für Sessel 10 geführt ist. Da diese Seilbahnanlage nicht Gegenstand der vorliegenden Erfindung ist, ist sie nicht weiter erläutert.</p>
+    <p id="p-00013-de">Innerhalb der Stütze 1 ist eine Förderanlage zum Transport von Gütern angeordnet. Hierfür ist die Stütze 1 mit zwei übereinander befindlichen Querbalken 11 und 11a ausgebildet, an welchen Rollen 2 und 2a gelagert sind. Diese Förderanlage besteht weiters aus zwei parallel angeordneten und in sich geschlossenen Förderseilen 3 und 3a, welche auf den Rollen 2 und 2a geführt sind und welche in den Endstationen der Förderanlage um Umlenktrommeln geführt sind. Weiters enthält die Förderanlage ein in sich geschlossenes Förderband 4, welches an den Unterseiten von quer zur Bewegungsrichtung des Förderbandes 4 ausgerichteten Tragbalken 5 befestigt ist, An den seitlichen Enden der Tragbalken 5 sind Klemmeinrichtungen 6 und 6a angeordnet, mittels welcher die Tragbalken 5 an die Förderseile 3 und 3a angeklemmt sind.</p>
+    <p id="p-00014-de">Wie dies insbesondere aus den Fig. 3 und Fig. 3a ersichtlich ist, ist das Förderband 4 als Wellkantenförderband ausgebildet, welches eine Bodenwand 41 aufweist, welche an den Unterseiten der Tragbalken 5 befestigt ist und von welcher nach oben zwei Seitenwände 42 und 43 abragen, welche gewellt ausgebildet sind. Dabei sind die Enden der jeweils zwischen den Tragbalken 5 befindlichen Abschnitte der Seitenwände 42 und 43 an den Seitenwänden der Tragbalken 5 befestigt. Hierdurch werden vom jeweils oberen Trum des Förderbandes 4 durch die Bodenwand 41, die Seitenwände 42 und 43 und zwei aufeinanderfolgende Tragbalken 5 Bereiche gebildet, in welchen Materialien, z.B. Schüttgüter 40, transportiert werden können. Es wird diesbezüglich auf die Fig. 4 verwiesen.</p>
+    <p id="p-00015-de">Wie dies insbesondere aus den Fig. 4 und 4a ersichtlich ist, sind an den freien Enden der Tragbalken 5 Klemmeinrichtungen 6 und 6a angeordnet, mittels welcher die Tragbalken 5 an die beiden seitlich außerhalb der Tragbalken 5 befindlichen Förderseile 3 und 3a angeklemmt sind.<br /> Wie dies aus Fig. 5 ersichtlich ist, sind die Klemmeinrichtungen 6, 6a durch aus der Seilbahntechnik bekannte Klemmen gebildet, bei welchen eine erste Klemmbacke 61 vorgesehen ist, welche am Tragbalken 5 starr befestigt ist und welche an das Förderseil 3a zum Anliegen kommt, wogegen eine zweite Klemmbacke 62 gegenüber der ersten Klemmbacke 61 mittels einer Spanneinrichtung 63, welche Tellerfedern enthält, verschiebbar ist, wodurch sie an das Förderseil 3a federnd zum Anliegen kommt.</p>
+    <p id="p-00016-de">Eine derartige Befestigung des Förderbandes 4 ist deshalb erforderlich, da sich der Querschnitt der Förderseile 3 und 3a während des Betriebes der Förderanlage verändern kann, weswegen für eine sichere Befestigung des Förderbandes 4 an den Förderseilen 3 und 3a eine federnde Anpressung der Klemmbacken 61 und 62 an die Förderseile 3 und 3a erforderlich ist.</p>
+    <p id="p-00017-de">Wie dies aus Fig. 6 ersichtlich ist, sind an den Enden der Förderanlage Umlenktrommeln 7 vorgesehen, um welche die Förderseile 3 und 3a und das Förderband 4 herumgeführt sind. Dabei ist jede Umlenktrommel 7 mit einer Spanneinrichtung 76 ausgebildet. Dem jeweiligen Ende des Förderbandes 4 ist eine weitere Fördereinrichtung 8 zugeordnet, an welche das geförderte Gut abgegeben wird und von welcher es weiter transportiert wird.</p>
+    <p id="p-00018-de">Wie dies weiters aus Fig. 7 ersichtlich ist, weist die Umlenktrommel 7 einen mittleren Bereich 71 auf, an welchem das Förderband 4 geführt ist, und ist sie außerhalb dieses mittleren Bereiches 71 mit zwei Seilrillen 72 und 73 ausgebildet, in welchen die Förderseile 3 und 3a geführt sind. Die Umlenktrommel 7 ist in Lagerböcken 74 und 75 verdrehbar gelagert.</p>
+  </description>
+  <description id="descr_eng" lang="eng" format="machine translation" date-changed="20110310">
+    <p id="p-00001-en">The gegenständliche invention concerns a conveyor plant to the transport of goods by means of a conveyor closed in itself, which also Tragbalken aligned transverse to the promotion movement is trained and with lateral auß erhalb the conveyor arranged promotion ropes closed in itself, by which the loads caused by the promotion of goods are taken up, whereby the Tragbalken are attachable on both sides the conveyor by means of two clamping jaws against each other tiltable under effect of a feather/spring exhibiting clamping mechanisms to the promotion rope and whereby the conveyor and the promotion rope are led across Umlenktrommeln in the two last stops.</p>
+    <p id="p-00002-en">Well-known conveyor plants consist of in itself a closed, to which both ends over detour rollers led conveyor and out below the upper Trumes of the conveyor arranged carrying rollers, at which the conveyor comes to the edition. Muß the conveyor zugfest sufficiently trained its, in order to take up on the one hand the traction powers due to the promotion movement and on the other hand by the weight of the material to be conveyed on this expenditure-practiced traction powers. The tensile loads of the conveyor caused by the weight of the material to be conveyed are the smaller, the smaller the distance of the carrying rollers present below the upper Trumes of the conveyor is.<br /> Since further with well-known such conveyor plants the carrying rollers do not only unreel opposite the conveyor, but the conveyor over the carrying rollers also slides, a high tensile load of the conveyor is caused. Besides thereby a wear of the conveyor is caused.</p>
+    <p id="p-00003-en">With well-known such conveyor plants thus the requirement exists to train either the conveyor with a very high tensile strength whereby itself the carrying rollers in groß em from each other to find it knows distance whereby over the entire length of the promotion device a reduced number of promotion rollers can be planned, or one groß to plan e number of carrying rollers, which are in a small distance from each other intended, whereby caused are reduced the admitting resting of the conveyor by the weight of the material to be conveyed, whereby this can be trained with a smaller tensile strength, however one groß e number of carrying rollers to be planned muß , whereby the constructional expenditure vergröß one ert.</p>
+    <p id="p-00004-en">From the European Union 745,545 A1 a conveyor plant is well-known, which exhibits carrying courses formed by carrying rope, along which at the two ends of the Tragbalken stored roles is led. This well-known conveyor plant is however insoferne unfavorable, when the supporting rollers represent mobile parts, which constant control and require maintenance.</p>
+    <p id="p-00005-en">From the GB 1,195,985 A a conveyor is well-known, which also Tragbalken aligned transverse to the promotion movement is trained. These Tragbalken are by means of toward the Tragbalken of abragender taps also at both sides of the conveyor coupled arranged chains, which as Tragund tension members serve. There conveyor chains are however therefore unfavorably, there them in their production substantially more expensive than steel cables are and them with comparable Zugbzw. Carrying achievement a higher weight than steel cables exhibit. Besides they are substantially disturbance as steel cables, because they become altogether nonfunctioning by the break of only one member of a multiplicity of members. Regarding the danger of fracture to it one refers, daß with promotion ropes by a magnet-technical monitoring damages so in time ascertainable are daß Rope tears with security to be avoided can.</p>
+    <p id="p-00006-en">The CH 544,712 A reveals a conveyor plant also over roles to led promotion ropes, with which the conveyor is coupled. The clutch is caused thereby, daß the conveyor with slots is trained, into which penetrate the promotion rope and in these by Formschluß are held. This well-known conveyor plant is unfavorable however therefore, since due to tensile loads of the conveyor and that promotion rope the necessary clutch between the conveyor and the promotion ropes is not ensured, whereby malfunctions can be also caused.</p>
+    <p id="p-00007-en">From the EP-A-0 315,820 further a plant is well-known, with which tension members, like hauling cables or course chains, are intended, to which by means of spring clips driver cars for the conveyor is attachable. This plant exhibits however therefore a very complex construction, since beside tension members, which are led in the last stops across Umlenktrommeln and to which the conveyor by means of spring clips are attached, also guiing devices, like rails, must be planned, along which the driver cars trained with castors will proceed, whereby further the castors of the driver cars require constant maintenance and control.</p>
+    <p id="p-00008-en">The gegenständlichen invention is the basis therefore the task, a conveyor plant gemäß to create the kind initially specified, with which the well-known state of the art adhering disadvantages are avoided. This becomes erfindungsgemäß thus obtains, daß itself the two clamping mechanisms in each case in continuation of the Tragbalken laterally auß erhalb both the promotion ropes find.<br /> With a such conveyor plant therefore the conveyor is attachable to the promotion rope, however no castors are intended, by means of which the conveyor is displaceable along carrying ropes.</p>
+    <p id="p-00009-en">Preferably in each case one is fastened the clamping jaw to the Tragbalken rigidly and is adjustable the other clamping jaw by means of the clamping mechanism opposite the clamping jaw fastened rigidly to the Tragbalken. Further preferably are the Umlenktrommeln with a range middle in axial direction, at which the conveyor comes to the request, and with two laterally arranged Seilrillen, in which are led the promotion rope, trained.</p>
+    <p id="p-00010-en">After further preferential characteristics the conveyor is fastened to the lower surface of the Tragbalken, whereby it is divided into individual ranges by the Tragbalken. The conveyor is preferably designed as waving edge conveyor, whereby the floor space of the upper Trumes is fastened to the lower surfaces of the Tragbalken and whereby further the ends of the sections of the waving edges present between the Tragbalken are fastened to the sides of the Tragbalken. The height of the Tragbalken can be approximate equal to the height of the waving edges.</p>
+    <p id="p-00011-en">The subject of the invention is below described on the basis a remark example represented in the design more near. Show:<dl tsize="18" compact="compact"><dt>Fig. 1</dt><dd>one erfindungsgemäß e conveyor plant, in opinion toward the promotion movement,</dd><dt>Fig. 2</dt><dd>the conveyor plant gemäß Fig. 1, in side view,</dd><dt>the Fig. 2a and 2b</dt><dd>Detail A and B of this conveyor plant, in opposite Fig. 2 vergröß ertem Maß staff,</dd><dt>Fig. 3</dt><dd>a section of the conveyor plant gemäß Fig. 1, in side view and in opposite Fig. 1 vergröß ertem Maß staff,</dd><dt>Fig. 3a</dt><dd>in Fig. 3 represented section of the conveyor plant, in plan view,</dd><dt>Fig. 4</dt><dd>this conveyor plant, on average after the line IV-IV of the Fig. 3 in opposite Fig. 3 vergröß ertem Maß staff,</dd><dt>Fig. 5</dt><dd>a detail of the Fig. 4, on average and in opposite Fig. 4 vergröß ertem Maß staff,</dd><dt>Fig. 6</dt><dd>a reversing station of this conveyor plant, in side view, and</dd><dt>Fig. 7</dt><dd>a reversing station of this conveyor plant, in plan view and in opposite Fig. 6 vergröß ertem Maß staff.</dd></dl></p>
+    <p id="p-00012-en">Into the Fig. a support 1 for a conventional aerial ropeway plant is represented 1 and 2 to the transport of persons. On this support 1 roles are stored, in which Tragund promotion rope for armchair 10 is led. Since this aerial ropeway plant is not the subject of the available invention, it is not further described.</p>
+    <p id="p-00013-en">Within the support 1 a conveyor plant is arranged to the transport of goods. For this the support 1 trained with two crossbars one above the other present 11 and 11a is, at which roles of 2 and 2a are stored. This conveyor plant exists further of two parallel arranged and in itself closed promotion ropes 3 and 3a, which on the roles 2 and 2a is led and which are led around Umlenktrommeln in the last stops of the conveyor plant. Further the conveyor plant contains a conveyor 4, which is fastened to the lower surfaces by transverse to the direction of motion of the conveyor 4 aligned Tragbalken 5, at the lateral ends of the Tragbalken 5, closed in itself, is arranged of clamping mechanisms 6 and 6a, by means of which the Tragbalken 5 to the promotion rope 3 and 3a are attached.</p>
+    <p id="p-00014-en">Like this in particular from the Fig. 3 and Fig. 3a is evident, is designed the conveyor 4 as waving edge conveyor, which exhibits a bottom wall 41, which to the lower surfaces of the Tragbalken 5 is fastened and of which upward two side panels 42 and 43 abragen, which are curved trained. The ends in each case of the sections of the side panels 42 and 43 present between the Tragbalken 5 are fastened to the side panels of the Tragbalken 5. Thereby 4 by the bottom wall 41 from the upper in each case Trum of the conveyor, which side panels 42 and 43 and two successive Tragbalken of 5 ranges in an educated manner, becomes, in which materials, e.g. bulk materials 40 can be transported. It becomes in this connection on the Fig. 4 referred.</p>
+    <p id="p-00015-en">Like this in particular from the Fig. , is arranged at the free ends of the Tragbalken 5 clamping mechanisms 6 and 6a is evident to 4 and 4a, by means of which the Tragbalken 5 to the two laterally auß erhalb the Tragbalken 5 promotion rope present 3 and 3a are attached.<br /> Like this from Fig. , is through formed from the aerial ropeway technology well-known clamps the clamping mechanisms 6, 6a is evident to 5, with which a first clamping jaw 61 is intended, which is rigidly fastened to the Tragbalken 5 and which comes to the promotion rope 3a to the request, against what a second clamping jaw is adjustable 62 opposite the first clamping jaw 61 by means of a tensioning arrangement 63, which diaphragm springs contains, whereby she comes to the promotion rope 3a springily to the request.</p>
+    <p id="p-00016-en">A such attachment of the conveyor 4 is therefore necessary, since the cross section that can change promotion rope 3 and 3a during the enterprise of the conveyor plant, why for a safe attachment of the conveyor 4 at the promotion ropes 3 and 3a a springy pressing of the clamping jaws 61 and 62 to the promotion rope 3 and 3a is necessary.</p>
+    <p id="p-00017-en">Like this from Fig. is evident to 6, are intended at the ends of the conveyor plant Umlenktrommeln 7, around which the promotion rope 3 and 3a and the conveyor 4 are led around. Each Umlenktrommel 7 trained with a tensioning arrangement 76 is. A further conveyer system 8 is assigned to the respective end of the conveyor 4, to which the promoted property is transferred and of which it is continued to transport.</p>
+    <p id="p-00018-en">Like this further from Fig. , exhibits the Umlenktrommel 7 a middle range 71 is evident to 7, at which the conveyor 4 is led, and is au&amp;szlig it; erhalb this middle range 71 with two Seilrillen 72 and 73 trained, in which the promotion rope 3 and 3a are led. The Umlenktrommel 7 is rotably stored in clevis mountings 74 and 75.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20070505">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>A conveying installation for conveying goods (40) by means of an endless conveyor belt (4), which is provided with supporting beams (5) oriented transversely relative to the conveying movement and with endless hauling cables (3, 3a) arranged laterally to the outside of the conveyor belt (4), by which hauling cables (3, 3a) the loads produced by the conveyance of goods (40) are absorbed, the supporting beams (5) being capable of being clamped to the hauling cables (3, 3a) on each side of the conveyor belt (4) by means of two clamping devices (6) comprising clamping jaws (61, 62) swivellable towards one another under the action of a spring and the conveyor belt (4) and the hauling cables (3, 3a) being guided over return drums (7) in the two end stations, <b>characterised in that</b> the two clamping devices (6, 6a) are each located as extensions of the supporting beams (5) laterally to the outside of the two hauling cables (3, 3a).</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>A conveying installation according to claim 2,<b>characterised in that</b> in each case one of the clamping jaws (61) is attached rigidly to the supporting beam (5) and the other clamping jaw (62) may be displaced by means of the clamping device (63) relative to the clamping jaw (61) attached rigidly to the supporting beam (5).</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>A conveying installation according to one of claims 1 and 2, characterised in that the return drums (7) are provided with an axially central zone (71), against which the conveyor belt (4) comes to rest, and with two laterally arranged cable grooves (72, 73), in which the hauling cables (3, 3a) are guided.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>A conveying installation according to one of claims 1 to 3, characterised in that the conveyor belt (4) is attached to the underside of the supporting beams (5), whereby it is divided by the supporting beams (5) into individual zones.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>A conveying installation according to one of claims 1 to 4, characterised in that the conveyor belt (4) takes the form of a corrugated sidewall conveyor belt, wherein the base surface (41) of the top run is attached to the undersides of the supporting beams (5) and wherein, in addition, the ends of the portions of the corrugated sidewalls (42, 43) located between the supporting beams (5) are attached to the side faces of the supporting beams (5).</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>A conveying installation according to claim 5,characterised in that the height of the supporting beams (5) is approximately equal to the height of the corrugated sidewalls (42, 43).</claim-text>
+    </claim>
+  </claims>
+  <claims id="claims_fre" lang="fre" format="original" date-changed="20070505">
+    <claim num="1" id="clm-00001-fr">
+      <claim-text>Convoyeur pour le transport de produits (40) à l'aide d'une bande transporteuse sans fin (4) qui est pourvue de poutres (5) transversales par rapport au sens de transport et de câbles tracteurs sans fin (3, 3a) qui sont disposés sur les côtés, en dehors de la bande transporteuse (4), et qui reçoivent les contraintes provoquées par le transport des produits (40), les poutres (5) étant aptes à être serrées sur les câbles (3, 3a), des deux côtés de la bande transporteuse (4), grâce à deux dispositifs de serrage (6) comportant des mâchoires de serrage (61, 62) aptes à pivoter l'une par rapport à l'autre sous l'action d'un ressort, et la bande transporteuse (4) et les câbles (3, 3a) étant guidés sur des tambours de renvoi (7) dans les deux stations d'extrémité,<br />    <b>caractérisé en ce que</b> les deux dispositifs de serrage (6, 6a) se trouvent dans le prolongement des poutres (5), sur les côtés, en dehors des deux câbles respectifs (3, 3a).</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-fr">
+      <claim-text>Convoyeur selon la revendication 2, <b>caractérisé en ce que</b> l'une des mâchoires de serrage (61) est fixée rigidement à la poutre (5) tandis que l'autre mâchoire de serrage (62) est mobile, grâce au dispositif de serrage (63), par rapport à la mâchoire (61) fixée rigidement à la poutre (5).</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-fr">
+      <claim-text>Convoyeur selon la revendication 1 ou 2,caractérisé en ce que les tambours de renvoi (7) sont pourvus d'une zone (71) centrale, dans le sens axial, contre laquelle la bande transporteuse (4) vient s'appliquer, et de deux rainures (72, 73) disposées sur les côtés, dans lesquelles les câbles tracteurs (3, 3a) sont guidés.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-fr">
+      <claim-text>Convoyeur selon l'une des revendications 1 à 3,caractérisé en ce que la bande transporteuse (4) est fixée au côté inférieur des poutres (5), et est ainsi divisée par les poutres (5) en zones individuelles.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-fr">
+      <claim-text>Convoyeur selon l'une des revendications 1 à 4,caractérisé en ce que la bande transporteuse (4) est conçue comme une bande transporteuse à bords ondulés, la surface inférieure (41) du brin supérieur étant fixée aux côtés inférieurs des poutres (5) et les extrémités des sections des bords ondulés (42, 43) situées entre les poutres (5) étant par ailleurs fixées aux surfaces latérales des poutres (5).</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-fr">
+      <claim-text>Convoyeur selon la revendication 5, caractérisé en ce que la hauteur des poutres (5) est approximativement égale à la hauteur des bords ondulés (42, 43).</claim-text>
+    </claim>
+  </claims>
+  <claims id="claims_ger" lang="ger" format="original" date-changed="20070505">
+    <claim num="1" id="clm-00001-de">
+      <claim-text>Förderanlage zum Transport von Gütern (40) mittels eines in sich geschlossenen Förderbandes (4), welches mit quer zur Förderbewegung ausgerichteten Tragbalken (5) ausgebildet ist und mit seitlich außerhalb des Förderbandes (4) angeordneten, in sich geschlossenen Förderseilen (3, 3a), von welchen die durch die Förderung von Gütern (40) bewirkten Belastungen aufgenommen werden, wobei die Tragbalken (5) beiderseits des Förderbandes (4) mittels zwei unter Wirkung einer Feder gegeneinander verschwenkbare Klemmbacken (61, 62) aufweisenden Klemmeinrichtungen (6) an die Förderseile (3, 3a) anklemmbar sind und wobei das Förderband (4) und die Förderseile (3, 3a) in den beiden Endstationen über Umlenktrommeln (7) geführt sind, <b>dadurch gekennzeichnet, daß</b> sich die beiden Klemmeinrichtungen (6, 6a) jeweils in Fortsetzung der Tragbalken (5) seitlich außerhalb der beiden Förderseile (3, 3a) befinden.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-de">
+      <claim-text>Förderanlage nach Patentanspruch 2, <b>dadurch gekennzeichnet, daß</b> jeweils eine der Klemmbacken (61) am Tragbalken (5) starr befestigt ist und die andere Klemmbacke (62) mittels der Klemmeinrichtung (63) gegenüber der am Tragbalken (6) starr befestigten Klemmbacke (61) verschiebbar ist.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-de">
+      <claim-text>Förderanlage nach einem der Patent ansprüche 1 und 2, dadurch gekennzeichnet, daß die Umlenktrommeln (7) mit einem in axialer Richtung mittleren Bereich (71), an welchen das Förderband (4) zum Anliegen kommt, und mit zwei seitlich angeordneten Seilrillen (72, 73), in welchen die Förderseile (3, 3a) geführt sind, ausgebildet ist.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-de">
+      <claim-text>Förderanlage nach einem der Patent ansprüche 1 bis 3, dadurch gekennzeichnet, daß das Förderband (4) an der Unterseite der Tragbalken (5) befestigt ist, wodurch es durch die Tragbalken (5) in einzelne Bereiche unterteilt ist.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-de">
+      <claim-text>Förderanlage nach einem der Patent ansprüche 1 bis 4, dadurch gekennzeichnet, daß das Förderband (4) als Wellkantenförderband ausgebildet ist, wobei die Bodenfläche (41) des oberen Trumes an den Unterseiten der Tragbalken (5) befestigt ist und wobei weiters die Enden der zwischen den Tragbalken (5) befindlichen Abschnitte der Wellkanten (42, 43) an den Seitenflächen der Tragbalken (5) befestigt sind.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-de">
+      <claim-text>Förderanlage nach Patent anspruch 5, dadurch gekennzeichnet, daß die Höhe der Tragbalken (5) angenähert gleich der Höhe der Wellkanten (42, 43) ist.</claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP876972B1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP876972B1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP876972B1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP876972B1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP876972B1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP876972B1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="EP876972B1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" />
+    </figure>
+  </drawings>
+  <image file="EP876972B1.PDF" type="pdf" size="220511" pages="12" />
+</lexisnexis-patent-document>

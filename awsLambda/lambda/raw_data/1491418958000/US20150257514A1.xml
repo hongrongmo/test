@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257514A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030230" date-changed="20151127" time-changed="111352">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121316422">
+        <country>US</country>
+        <doc-number>20150257514</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14639021</doc-number>
+        <date>20150304</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>DE</country>
+        <doc-number>202014100982</doc-number>
+        <date>20140315</date>
+      </priority-claim>
+      <priority-claim sequence="2" kind="national">
+        <country>DE</country>
+        <doc-number>202014103325</doc-number>
+        <date>20140718</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151001">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151001">
+      <classification-ipcr sequence="1">
+        <text>A45D  40/26        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>45</class>
+        <subclass>D</subclass>
+        <main-group>40</main-group>
+        <subgroup>26</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151001">
+      <classification-cpc sequence="1">
+        <text>A45D  40/267       20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>45</class>
+        <subclass>D</subclass>
+        <main-group>40</main-group>
+        <subgroup>267</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A46B   3/005       20130101 LI20150804BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>46</class>
+        <subclass>B</subclass>
+        <main-group>3</main-group>
+        <subgroup>005</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150804</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A46B   3/04        20130101 LI20150922BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>46</class>
+        <subclass>B</subclass>
+        <main-group>3</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150922</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A46B   9/021       20130101 LI20150804BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>46</class>
+        <subclass>B</subclass>
+        <main-group>9</main-group>
+        <subgroup>021</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150804</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A46B2200/1053      20130101 LA20150729BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>46</class>
+        <subclass>B</subclass>
+        <main-group>2200</main-group>
+        <subgroup>1053</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150729</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">25</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">APPLICATOR WITH A NON-ROUND CORE AND A STAR-SHAPED BRISTLE SET</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>GEKA GMBH</orgname>
+            <address>
+              <city>Bechhofen</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>DE</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Thierer</last-name>
+            <first-name>Gudrun</first-name>
+            <address>
+              <city>Feuchtwangen</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20151127">
+      <main-family family-id="173664726">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2918190</doc-number>
+            <kind>A1</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20150305</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257514</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150304</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="174735068">
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>202014100982</doc-number>
+            <kind>U1</kind>
+            <date>20150716</date>
+          </document-id>
+          <application-date>
+            <date>20140305</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2918190</doc-number>
+            <kind>A1</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20150305</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>202014103325</doc-number>
+            <kind>U1</kind>
+            <date>20151126</date>
+          </document-id>
+          <application-date>
+            <date>20140718</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257514</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150304</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A cosmetic applicator with a rod-shaped core and injection-molded fingers, wherein the core has a circumference surface and a non-round cross-section; the circumference surface is composed of large and small side surfaces arranged in alternating fashion; and preferably, all of the large side surfaces are the same size as one another and all of the small side surfaces are the same size as one another.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150505</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257514A1</docdb-publication-number>
+      <docdb-application-id>444564219</docdb-application-id>
+      <new-owner>GEKA GMBH, GERMANY</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:THIERER, GUDRUN;REEL/FRAME:035565/0318</free-text-description>
+      <effective-date>
+        <date>20150430</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">The invention relates to a cosmetic applicator and in particular, a mascara applicator with a rod-shaped core and injection molded fingers.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">For a long time, cosmetics and mascara were applied essentially exclusively using so-called wire core brushes. In such brushes, a number of filaments are placed between two legs of a U-shaped wire, which is then twisted. During the twisting action, the filaments are distributed between the two wire legs and form an applicator with outward protruding bristles all around, usually in a helical form.</p>
+      <p id="p-00003-en" num="0003">In order to be able to change the application properties of such applicators, there are only a few parameters available, namely the number and type of filaments used. If use of these alone is insufficient, then the only remaining option is to perform finishing work on the completed brushes, i.e. to trim them, for example, in order to thus give them particular properties.</p>
+      <p id="p-00004-en" num="0004">Recent times have seen increased use of cosmetic applicators with injection-molded bristles. Applicators of this kind offer significantly more variation options.</p>
+      <p id="p-00005-en" num="0005">The patent DE102004027098 B4, for example, has disclosed an applicator of this kind. This applicator is equipped with a number of bristles distributed in essentially uniform fashion all the way around, between which are situated comb tines along a longitudinal side, but it is hardly possible to use these tines without simultaneously also bringing the lashes into contact with the bristles that are ready to apply the cosmetic.</p>
+      <p id="p-00006-en" num="0006">Specifically in the application of mascara compound, different requirements must be met as well as possible. On the one hand, the applicator has to have the best possible compound-storing properties so that if possible, it needs to be dipped into the mascara compound only once and can then provide all of the lashes with the desired coating thickness. In addition, however, the applicator must also have so-called combing properties and separating properties because even thickly coated lashes must not adhere to one another, but must instead be separated from one another through deft use of the applicator.</p>
+      <p id="p-00007-en" num="0007">The object of the invention, therefore, is to create an applicator with optimized application and separation properties.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00008-en" num="0008">Consequently, a cosmetic applicator with a rod-shaped core is provided, from which injection-molded fingers protrude. In this context, a rod-shaped core is understood to be a core that extends along the longitudinal axis L of the applicator and whose length in this direction is at least 5 times—better still 10 times—greater than the maximum core diameter.</p>
+      <p id="p-00009-en" num="0009">As a rule, the rod-shaped core is solid. It is also possible, however, for it to be embodied as hollow or tubular.</p>
+      <p id="p-00010-en" num="0010">In the present context, fingers are understood to be application elements that can either be flexible in essentially all directions and are then referred to as bristles or can have the property of comb tines.</p>
+      <p id="p-00011-en" num="0011">According to the invention, the rod has a non-round cross-section so that its casing is composed of a plurality of circumference surfaces that can be differentiated from one another. These circumference surfaces are made up of alternating large and small side surfaces. A large side surface is characterized by the fact that its free surface is larger than that of a small side surface. Preferably, the free surface of a large side surface is larger than the surface of a small side surface by a factor of 2. Preferably, all of the large side surfaces are exactly—or at least essentially —the same size as one another and all of the small side surfaces are exactly—or at least essentially—the same size as one another.</p>
+      <p id="p-00012-en" num="0012">According to the invention, the set of fingers is adapted to the respective side surfaces and the set of fingers on the small side surfaces includes plates, while the set of fingers on the large side surfaces is preferably composed exclusively of bristles.</p>
+      <p id="p-00013-en" num="0013">This results in an applicator with novel application properties. The plates on the small side surfaces, which protrude farther as a rule, permit a precise, sensitive separation of the lashes. By contrast, the set of fingers on the large side surfaces, which is composed exclusively of bristles, permits a sustained application of mascara compound because this set of fingers has outstanding compound-storing properties.</p>
+      <p id="p-00014-en" num="0014">It is advantageous for the invention if the large side surfaces are optionally embodied as curved concavely inward toward the central longitudinal axis of the applicator. The side surfaces then form a kind of trough or chute in the direction parallel to the longitudinal axis, which is not entirely emptied of the compound when the set of fingers passes through the wiper, which makes a significant contribution to the good compound-storing properties.</p>
+      <p id="p-00015-en" num="0015">Likewise advantageous for the invention is the option of embodying the small side surfaces as curved convexly outward, once again in relation to the central longitudinal axis. With proper dimensioning, this allows the fingers that are composed of the plates to protrude outward a long way so that they can be used with no trouble for combing and separating, without simultaneously applying additional compound in the course of doing so.</p>
+      <p id="p-00016-en" num="0016">In an embodiment that has turned out to be particularly preferable, the circumference surface of the core is composed of at least—and ideally only—three large and three small side surfaces, situated one after another in alternating fashion in the circumferential direction. This specific embodiment with only three small and three large side surfaces makes it possible to allow the plates, which are then preferably respectively situated in the vicinity of the tips of the triangle that this largely produces, to protrude outward by an extremely large distance.</p>
+      <p id="p-00017-en" num="0017">It is particularly preferable to embody the respective plates so that they have two large main surfaces, two side surfaces, and one radially outer end surface. The two main surfaces extend completely or at least essentially perpendicular to the longitudinal axis of the applicator and the two side surfaces preferably diverge from each other in a V shape in the radial direction. Preferably the two main surfaces extend at least essentially perpendicular to the longitudinal axis of the applicator if the smaller angle that is included between each of the main surfaces and the longitudinal axis is not smaller than 87°. Preferably the main surfaces aim at each other (converge) in a radially outward direction.</p>
+      <p id="p-00018-en" num="0018">Ideally, each of the two main surfaces of the relevant plate has a free surface that is at least 2.5 times as large as the free surface of one of its side surfaces.</p>
+      <p id="p-00019-en" num="0019">Preferably, at least the overwhelming number of the plates (and preferably all of the plates) are embodied so that the radially outer end surface is oriented diagonally in such a way that each plate has one side surface that is longer in the radial direction and one that is shorter in the radial direction. In other words, the relevant plate is diagonally beveled in the region of its end surface. Consequently, the plate has an advancing direction with which it penetrates between individual lashes in the best way, depending on whether the applicator is rotated in one or the other direction during the application. This increases the flexibility in the use behavior; depending on how the applicator is moved, it is possible to achieve quite different application results.</p>
+      <p id="p-00020-en" num="0020">It is also advantageous if the plates are embodied as needed so that they form a chisel edge in the region of their radially outer end surface. In this context, a chisel edge is understood to be a local, approximately roof-shaped tapering of the plate toward its radially outer end surface. Such a tapering is formed by virtue of the fact that the main surfaces of the plate widen out toward their outermost ends and specifically, are inclined toward each other in a roof-like fashion.</p>
+      <p id="p-00021-en" num="0021">Alternatively, it is possible that the main surfaces of each plate are inclined to meet each other; i.e., aim at each other in a radially outward direction, so that the plate as a whole forms a blade. Additional chisel edges are not required.</p>
+      <p id="p-00022-en" num="0022">Preferably, the cosmetic applicator according to the invention is embodied so that the set of fingers on the small side surfaces is composed of at least three—and preferably only three—rows of fingers situated one after another in a line extending in the direction of the longitudinal axis of the applicator. In this case, the middle row of these fingers is preferably composed exclusively of bristles, while the two rows on the sides are preferably rows in which bristles and plates alternate in the direction extending along the longitudinal axis of the applicator. Preferably, the alternation occurs in such a way that a bristle is always followed by a plate and vice versa so that they always come one after another in alternating fashion.</p>
+      <p id="p-00023-en" num="0023">Such an embodiment results in exposed plates that can be used, as mentioned above, to produce good combing results. Preferably, as mentioned above, a plate is provided only every second time, with a respective bristle situated between two plates in the respective row. This prevents excessively narrow interstices between the plates, which would lead to excessive amounts of mascara compound remaining after the applicator is pulled out through the wiper.</p>
+      <p id="p-00024-en" num="0024">Preferably, the embodiment is such that the middle row of fingers that make up the set of fingers on the small side surfaces has a smaller total number of fingers than the two side rows. Preferably, the smaller number of fingers is implemented in that only one finger belonging to the middle row is provided at a location even with that of every second finger of the two outer rows, counting in the direction of the longitudinal axis of the applicator. In this way, it is possible to provide a relatively large open space along a circumferential line between the plates because in this case, no bristle is positioned in the middle row. A bristle that protruded from the middle between two plates, viewed in the circumference direction, would have no function due to the dominance of the plates, and would instead be in the way. For this reason, it is omitted.</p>
+      <p id="p-00025-en" num="0025">The three rows of fingers, which respectively represent the set of fingers belonging to one of the small end surfaces, thus advantageously successively form the following pattern in the direction of the longitudinal axis of the applicator: one bristle in each of the two outer rows of fingers is arranged in a line along a shared circumference line. Immediately next to this, viewed in the longitudinal direction of the applicator, a respective plate in each of the outer rows of bristles and a bristle in the middle row of bristles are arranged in a line along a shared circumference line. Then the pattern starts again from the beginning. Depending on the desired application result, this pattern starts either with two bristles in the two outer rows of bristles, each positioned in a row in the circumference direction and then continues as described above or this pattern begins at the free end surface with two plates in the two outer rows of fingers, each arranged in a line extending along a circumference line, and a bristle in the middle row of fingers, which is situated in the middle between them in the same line.</p>
+      <p id="p-00026-en" num="0026">It is particularly advantageous if the fingers of the middle row are the fingers that respectively constitute the set of fingers of a small side surface and are longer—preferably at least one quarter longer—than the fingers of the respective laterally adjacent rows that belong to the set of fingers of the same small end surface of the cosmetic applicator. In this way, the fingers of the middle row of a small end surface are the ones that protrude the farthest. In other words, these fingers represent the most exposed elements, which can be used to begin a separation in a very sensitive fashion, which process is continued by the plates, which are also quite exposed and are the next element to push between the lashes.</p>
+      <p id="p-00027-en" num="0027">In a preferred embodiment, the set of fingers of the large side surfaces is composed of only three rows of bristles respectively situated one behind another in a line extending in the direction of the longitudinal axis of the applicator. In other words, the large side surfaces are equipped exclusively with bristles. This means that the large side surfaces are the surfaces that are mainly used for applying the cosmetic or mascara compound.</p>
+      <p id="p-00028-en" num="0028">In a preferred embodiment, the middle row of the fingers constituting the set of fingers of the large side surfaces has a smaller total number of fingers than the two side rows. Preferably, only one finger belonging to the middle row is provided at a location even with that of every second finger of the two outer rows, viewed in the direction of the longitudinal axis of the applicator. This can have a positive influence on the compound-storing properties.</p>
+      <p id="p-00029-en" num="0029">It is particularly advantageous if the three rows of bristles, which respectively constitute the set of fingers of one of the large side surfaces, successively form the following pattern in the direction of the longitudinal axis of the applicator: one bristle in each of the two outer rows of fingers is arranged in a line along a shared circumference line. Continuing in the direction of the longitudinal axis of the applicator, this is then respectively followed by a single bristle of the middle row of bristles. In the next step in the direction of the longitudinal axis of the applicator, comes a bristle in each of the two outer rows of fingers, which bristles are arranged in a line extending along a shared circumference line. Continuing further in the direction of the longitudinal axis of the applicator, this is adjoined once again by a single bristle of the middle row of bristles. This pattern repeats continuously. Depending on where the focus of the application lies in the individual case, this pattern can either begin starting from the free end surface of the core with two bristles in the two outer rows of bristles, which are situated one after another along a line in the circumference direction, or with one bristle in the middle row.</p>
+      <p id="p-00030-en" num="0030">It is particularly advantageous if the bristles that constitute the set of fingers of the large side surfaces are each at least one quarter shorter than the fingers or than most of the fingers or better still, than all of the fingers that respectively constitute the set of fingers of a small side surface.</p>
+      <p id="p-00031-en" num="0031">It turns out to be particularly advantageous if the core of the applicator is curved in a sickle shape in one plane. The applicator core therefore assumes the form of a sickle when it is viewed in the relevant plane.</p>
+      <p id="p-00032-en" num="0032">Ideally, a small side surface of the core constitutes the outside of the sickle, i.e. the convexly curved spine of the sickle. In this way, the fingers that constitute the set of fingers on the small side surface—and in particular the fingers embodied in the form of plates situated underneath —extend with the maximum degree of freedom so that when the applicator is held in a corresponding fashion, an optimum separating action can be achieved with the aid of the plate-shaped fingers because they extend so freely that there is practically no danger that during the separation, the lashes will undesirably come into contact with the set of fingers on the large side surface that stores most of the mascara compound.</p>
+      <p id="p-00033-en" num="0033">In the same sense, it is ideal if a large side surface of the core constitutes the inside of the sickle, i.e. the concavely curved surface of the sickle.</p>
+      <p id="p-00034-en" num="0034">Separate protection is claimed for a cosmetic applicator with a rod-shaped core and fingers that are integrally connected to the circumference surface of the core, which fingers are arranged in rows extending in a direction parallel to the longitudinal axis of the applicator; in the circumference direction, the following finger set pattern repeats several times, preferably three times, in succession:</p>
+      <p id="p-00035-en" num="0035">A first row of fingers, which is composed of plates that have a maximum span ra<b>1</b> in the radial direction, immediately adjacent to this, at least one second row of fingers, which is composed of bristles that have a maximum span ra<b>2</b> in the radial direction, immediately adjacent to the one or more—preferably two—second rows, a third row of fingers, which is composed of plates that have a maximum span ra<b>1</b> in the radial direction; immediately adjacent to this, a fourth row of fingers that have a maximum span ra<b>3</b> in the radial direction; immediately adjacent to this, a fifth row of fingers is preferably provided that have a maximum span ra<b>3</b>* in the radial direction; and ideally, (optionally) immediately adjacent to this, a sixth row of fingers is provided that have a maximum span ra<b>3</b> in the radial direction, where: ra<b>2</b>&gt;ra<b>1</b>&gt;ra<b>3</b>, and at the same time, ideally ra<b>3</b>&gt;ra<b>3</b>*.</p>
+      <p id="p-00036-en" num="0036">Separate protection is also claimed for a cosmetic applicator system having a cosmetic applicator of the above-described type and a wiper; the span of the fingers in the radial direction is matched to the wiper so that the wiper does not wipe—or essentially does not wipe—the first row and third row of fingers and the wiper wipes the one or more second rows in a region that corresponds to at least the radially outermost ⅕ of the finger and to at most the radially outermost <b>1</b>/<b>2</b> of the finger and the wiper does not wipe the fourth and optional fifth and optional sixth row of fingers.</p>
+      <p id="p-00037-en" num="0037">In this case, it is particularly advantageous if the cosmetic applicator system also includes a wand and the diameter of the wand is greater than an imaginary circle drawn around the longitudinal axis of the applicator L, whose radius is determined by the maximum radial span ra<b>3</b> of the fourth row of fingers or, if provided, by the maximum radial span of the fingers of the fourth or fifth or sixth row of fingers that protrude the farthest in the radial direction. Such an embodiment has the significant advantage that the wiper wipes the wand clean. But since the outer diameter of the wand at its surface is greater than the diameter predetermined by the bristles of the fourth or fifth or sixth row of fingers, this ensures that the wiper does not fold down the fingers of the fourth or fifth or sixth row, but instead, the fingers of these rows duck under the wiper, so to speak. In this way, in the region of the fingers and radially above the region of the fingers and mostly radially above the region of these fingers, a not insignificant store of mascara compound remains even after the applicator has passed all the way through the wiper, which considerably facilitates the effective application of mascara compound without having to dip the applicator into the mascara compound several times to reload it.</p>
+      <p id="p-00038-en" num="0038">Other advantages, effects, and embodiment possibilities of the invention ensue from the following description of an exemplary embodiment, taken in conjunction with the figures.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00039-en" num="0039">
+        <figref>FIG. 1</figref> shows an exemplary embodiment of an applicator according to the invention, viewed from the front.</p>
+      <p id="p-00040-en" num="0040">
+        <figref>FIG. 2</figref> shows the same exemplary embodiment, viewed from the side.</p>
+      <p id="p-00041-en" num="0041">
+        <figref>FIG. 3</figref> shows the same exemplary embodiment, viewed from the side.</p>
+      <p id="p-00042-en" num="0042">
+        <figref>FIG. 4</figref> shows a section along the line A-A, which is indicated in <figref>FIG. 3</figref>.</p>
+      <p id="p-00043-en" num="0043">
+        <figref>FIG. 5</figref> is a very general illustration of what a finger in the form of a bristle is understood to mean in the context of the invention.</p>
+      <p id="p-00044-en" num="0044">
+        <figref>FIG. 6</figref> shows the system composed of the applicator and wiper, which is another focus of the invention.</p>
+      <p id="p-00045-en" num="0045">
+        <figref>FIG. 7</figref> is an enlarged depiction of the applicator shown in <figref>FIG. 6</figref> in order to demonstrate how the pattern of different fingers repeats in the circumference direction.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE PREFERRED EMBODIMENTS</heading>
+      <p id="p-00046-en" num="0046">
+        <figref>FIG. 2</figref> gives the quickest overview of the exemplary embodiment of the applicator according to the invention <b>1</b> as described here.</p>
+      <p id="p-00047-en" num="0047">The applicator <b>1</b> is composed of a core <b>2</b>, which in this case is curved in the form of a sickle, but can also be straight if necessary, an embodiment that is not shown in the drawing here.</p>
+      <p id="p-00048-en" num="0048">The core <b>2</b> could transition directly into a wand, which in turn is connected, for example, to a handle. For many application instances, however, it is advantageous if the core <b>2</b> is not integrally connected to a wand, but instead has a coupling section <b>3</b> by means of which it can be affixed to a corresponding wand, which is produced separately, possibly together with the handle.</p>
+      <p id="p-00049-en" num="0049">The applicator according to the invention is in particular used as a mascara applicator, which is why it is of such delicate dimensions.</p>
+      <p id="p-00050-en" num="0050">Unlike what is shown in the very enlarged depiction here, the total length GL of the section equipped with the bristles is usually less than 40 mm, but is most often even less than 30 mm.</p>
+      <p id="p-00051-en" num="0051">The maximum outer diameter Dmax of the applicator including its set of fingers is similar in size, see <figref>FIG. 4</figref>. This maximum outer diameter corresponds to the diameter of the smallest circle that can be placed around the applicator (see <figref>FIG. 4</figref>) and as a rule is ≦10 mm, typically even ≦8 mm.</p>
+      <p id="p-00052-en" num="0052">The coupling section in turn typically has a length of ≦12.5 mm.</p>
+      <p id="p-00053-en" num="0053">As is most clearly visible in <figref>FIG. 4</figref>, the core <b>2</b> does not have a circular cross-section. Instead, the core is profiled so that its circumference surface is made up of small side surfaces <b>4</b> and large side surfaces <b>5</b>. As is clear from the drawing, the small side surfaces <b>4</b> are curved convexly outward relative to the center point of the core, whereas with the large side surfaces <b>5</b>, preferably exactly the opposite is true: they are curved concavely inward, likewise relative to the center point of the core. The profiling of the core <b>2</b> in this case is preferably selected so that there are three small side surfaces <b>4</b> and three large side surfaces <b>5</b>, which follow one after another in alternating fashion, viewed in the circumference direction.</p>
+      <p id="p-00054-en" num="0054">One variant would be to provide not three small and three large side surfaces of the type mentioned above, but instead four of each kind of these side surfaces.</p>
+      <p id="p-00055-en" num="0055">Before discussing the details, it should first be noted that the following is immediately clear from <figref>FIG. 4</figref>, which for the person skilled in the art, sets the applicator apart from the previously known applicators. The applicator has a respective row of fingers situated at the angle of 3×120° and preferably on each of its small side surfaces, which protrudes far beyond the surrounding rows of fingers, preferably by at least ¼ of its length. This gives the applicator a conspicuous, star-shaped appearance and gives the applicator a novel use behavior due to the powerful degree of exposure of this row of fingers.</p>
+      <p id="p-00056-en" num="0056">This is optionally promoted by the fact that the above-mentioned rows of fingers are each framed on both sides by plate-shaped fingers that are inclined so that they point toward the fingers of the protruding row of fingers. The bolstering action of these plate-shaped fingers contributes to an even greater specificity of the novel use behavior.</p>
+      <p id="p-00057-en" num="0057">Turning now to the details, the following must then be noted:</p>
+      <p id="p-00058-en" num="0058">As is most clearly visible in <figref>FIG. 2</figref>, the set of fingers of each of the small side surfaces in this case is composed of three rows R<b>1</b>, R<b>2</b>, and R<b>3</b> of fingers. It should be noted that a fourth row, for example in the form of a central double- or twin row, could optionally be added, but this has been excluded from the preferred exemplary embodiments and is not shown in the drawings here.</p>
+      <p id="p-00059-en" num="0059">These three rows R<b>1</b>, R<b>2</b>, R<b>3</b> are preferably arranged so that a middle row R<b>2</b> extends parallel to the longitudinal axis of the core <b>2</b> along the middle of the small side surface <b>4</b>. The two other rows of fingers R<b>1</b>, R<b>3</b> that make up the set of fingers of the small side surfaces <b>4</b> are preferably positioned symmetrical to the middle row of fingers R<b>1</b>. Ideally, they are positioned such that the two side rows of fingers R<b>1</b>, R<b>2</b> form a V-shaped arrangement relative to each other, viewed from the end, and the middle row of fingers R<b>2</b> is positioned on the angle bisector between the two legs of the V.</p>
+      <p id="p-00060-en" num="0060">A precise comparison of <figref>FIGS. 3 and 4</figref> shows that the two outer rows of fingers R<b>1</b>, R<b>3</b> that constitute the set of fingers of the small side surface <b>4</b> are each composed of alternating bristles <b>6</b><i>a </i>and plates <b>6</b><i>b</i>. In other words, within a row, a bristle <b>6</b><i>a </i>is always followed by a plate <b>6</b><i>b </i>in a successively alternating fashion in the direction of the longitudinal axis.</p>
+      <p id="p-00061-en" num="0061">This comparison also shows that the fingers of the middle row are exclusively composed of bristles <b>6</b><i>c. </i></p>
+      <p id="p-00062-en" num="0062">It is noteworthy that the bristle density of the middle row R<b>2</b>, which in this case forms part of the set of fingers of the small side surface <b>4</b>, is only half as great as the finger density of the two other rows R<b>1</b> and R<b>3</b>. Specifically, a bristle <b>6</b><i>a </i>is provided in the middle row R<b>2</b> whenever on the right and left next to the bristle <b>6</b><i>a</i>, there are respective plates <b>6</b><i>b </i>of the two outer rows of fingers RI and R<b>3</b>. Next comes one bristle <b>6</b><i>a </i>in each of the two outer rows of fingers RI and R<b>3</b>; here, the middle row R<b>2</b> has no bristle, but instead has an empty space.</p>
+      <p id="p-00063-en" num="0063">Further inspection, especially of <figref>FIG. 4</figref>, reveals that the fingers of the middle row of fingers R<b>2</b> that forms part of the set of fingers of the small side surface <b>4</b>, are at least one quarter longer in the radial direction than the fingers of the two outer rows of fingers R<b>1</b> and R<b>3</b> that form part of the set of fingers of the small side surface <b>4</b>.</p>
+      <p id="p-00064-en" num="0064">In this way, the fingers <b>6</b><i>c </i>of the middle row of fingers R<b>2</b>, specifically because they are embodied in the form of long bristles, constitute a very sensitively controllable application element. They do not impair the combing function performed by the plates <b>6</b><i>b</i>, particularly because the middle bristles <b>6</b><i>c </i>are preferably provided with only a low density.</p>
+      <p id="p-00065-en" num="0065">It is also worth noting in connection with <figref>FIG. 4</figref> that the plates <b>6</b><i>b </i>belonging to the fingers of the two outer rows of fingers RI and R<b>3</b> that form part of the set of fingers of the small side surface <b>4</b>, with their outer edge viewed in the circumference direction are tangential to or extend marginally across the jump discontinuity with which the one small side surface <b>4</b> transitions into a large side surface <b>5</b>, in other words, the plates are standing “on edge.”</p>
+      <p id="p-00066-en" num="0066">To the extent that bristles form part of the set of fingers of the small side surface <b>4</b>, the general statements made below with regard to bristles of this kind also apply to the bristles here.</p>
+      <p id="p-00067-en" num="0067">For the plates <b>6</b><i>b </i>that form part of the set of fingers of the small side surface here, these plates <b>6</b><i>b </i>each have two main surfaces H on their front and back that are preferably oriented essentially orthogonal to the longitudinal axis of the applicator, two side surfaces S oriented in the circumference direction, and one radially outer end surface ST. The two side surfaces preferably extend away from each other in a V shape in the radial direction. The two main surfaces H are each larger in area than the two side surfaces S by a factor of at least 3 or better still, by a factor of 4. The plates <b>6</b><i>b </i>are nevertheless preferably embodied as quite narrow —most significantly, narrower than the plates that are usually used in cosmetic applicators. Consequently, each plate, at the height of its free end surface, relative to the central longitudinal axis, preferably occupies an arc angle AL of only ≦15°—better still of only ≦11°.</p>
+      <p id="p-00068-en" num="0068">It should also be noted that the radially outer end surface ST preferably extends in an inclined fashion so that each plate <b>6</b><i>b </i>has one side surface S that is longer in the radial direction and one that is shorter in the radial direction. On the whole, the embodiment of the plates <b>6</b><i>b </i>that are preferred according to the invention can be described as “necktie-like, with an end that is cut off at an angle.”</p>
+      <p id="p-00069-en" num="0069">It is also noteworthy that <figref>FIG. 3</figref> clearly shows that the two main surfaces H of each plate <b>6</b><i>b </i>are inclined toward each other so that the respective plate <b>6</b><i>b </i>narrows from its base to its radially outer end.</p>
+      <p id="p-00070-en" num="0070">If need be, the plates <b>6</b><i>b </i>at their radially outer end surfaces form a chisel edge, i.e. forming a blade-like taper. This makes it easier to separate the lashes because it is possible to comb them apart from each other with the chisel edge, even if they are loaded with mascara compound.</p>
+      <p id="p-00071-en" num="0071">Finally, <figref>FIGS. 1 and 4</figref> also clearly show the appearance of the set of fingers on each large side surface <b>5</b>.</p>
+      <p id="p-00072-en" num="0072">In this case, the sets of fingers of the large side surfaces are each composed of only three rows RI, RII, and RIII, each of which is composed of fingers arranged one after another in a line extending in the direction of the longitudinal axis of the applicator, which fingers are preferably uniformly embodied in the form of bristles.</p>
+      <p id="p-00073-en" num="0073">Last but not least, it should be noted that fourth rows RIV, for example in the form of a central double- or twin row, can be optionally added, but this has been excluded from the preferred exemplary embodiments and is not shown in the drawings here.</p>
+      <p id="p-00074-en" num="0074">The placement of the rows of fingers RI through RIII relative to one another is similar to the placement of the rows of fingers R<b>1</b> through R<b>3</b>—which form the set of fingers of the small side surfaces —relative to one another.</p>
+      <p id="p-00075-en" num="0075">The pattern of the fingers <b>7</b><i>a </i>and <b>7</b><i>b </i>is noteworthy here. One finger <b>7</b><i>a </i>in each of the outer rows of fingers RI and RIII is arranged in a line along a shared circumference line. Continuing from there in the direction parallel to the longitudinal axis, these are followed by a single finger <b>7</b><i>b </i>in the middle row of fingers RII. Advancing further along the longitudinal axis of the applicator, this is then followed by one finger <b>7</b><i>a </i>in each of the two outer rows of fingers RI and RIII, which are arranged in a line along a shared circumference line. Next, continuing onward, comes a single finger <b>7</b><i>b </i>in the middle row of fingers.</p>
+      <p id="p-00076-en" num="0076">In this case, at the free end surface of the core <b>2</b>, the beginning can be composed of the fingers <b>7</b><i>a </i>in the two outer rows of fingers RI and RIII or can be composed of one finger <b>7</b><i>b </i>in the middle row of fingers RII.</p>
+      <p id="p-00077-en" num="0077">The above-described pattern then continues in the direction of the longitudinal axis of the applicator L until the end of the bristle set is reached.</p>
+      <p id="p-00078-en" num="0078">Also noteworthy is the preferred embodiment form in which the fingers of the middle row RII, with their outer, free ends, preferably terminate earlier in the radial direction (i.e. further inward in the radial direction) than the fingers of the two outer rows RI and RIII that encompass them and, together with them, form the bristle set of a large side surface.</p>
+      <p id="p-00079-en" num="0079">As mentioned above, the core <b>2</b> of the applicator <b>1</b> is curved in a sickle shape in one plane, namely in the plane of the drawing that is shown in <figref>FIG. 3</figref>.</p>
+      <p id="p-00080-en" num="0080">Ideally, a small end surface <b>4</b> constitutes the outside of the sickle, which is labeled with the arrow A in <figref>FIG. 3</figref>.</p>
+      <p id="p-00081-en" num="0081">It is likewise advantageous if a large side surface of the core constitutes the inside of the sickle, which is labeled with the arrow I in <figref>FIG. 3</figref>.</p>
+      <p id="p-00082-en" num="0082">Ideally, the core <b>2</b> and all of its fingers <b>6</b><i>a </i>through <i>c </i>and <b>7</b><i>a, b </i>are injection-molded in a single shot out of the same material.</p>
+      <p id="p-00083-en" num="0083">Alternatively, however, it is also conceivable to use overmolding to mold a plurality of individual fingers or rows of fingers in order to produce them, for example, out of a different—or differently colored—material. It is also alternatively possible to produce a plurality of individual fingers or rows of fingers by injecting a second plastic compound from the inside along a cavity of the core <b>2</b> after the production of the core, which second plastic compound penetrates the core wall at certain locations due to its pressure and then shoots into a finger- or bristle cavity situated behind this wall. In this way, a tubular core is produced, from which part of the fingers and/or bristles protrude as an integral component thereof and from which another group of fingers and/or bristles protrude, which are integrally connected —through the openings in the core—to a second plastic that fills the interior of the core.</p>
+      <p id="p-00084-en" num="0084">Finally, it should also be noted that the additional set of fingers, which is composed of a number of bristles 8—preferably at least 9 of them—that the applicator supports on the free end surface of its core <b>2</b>, can form a very effective operative connection with the exposed bristles and the plates supporting them, which can distinguish the applicator according to the invention. These bristles preferably do not include an angle with the longitudinal axis that is bigger than 30°. The exposed bristles and plates permit a very efficient combing and separating along a greater length, whereas the bristles on the end surface make it possible to locally rework the combing and separating result, which is already good anyway.</p>
+      <p id="p-00085-en" num="0085">With regard to the definition of the term bristle, reference is hereby made to <figref>FIG. 5</figref>.</p>
+      <p id="p-00086-en" num="0086">In this context, a bristle is understood to be a rod-shaped element, whose maximum diameter Dbmax in the region above the rounding/throat with which it transitions into the core <b>2</b>, is smaller by a factor of 4—better still by a factor of at least 6—than the free length of the bristle with which the bristle protrudes from the applicator core.</p>
+      <p id="p-00087-en" num="0087">As a result, a finger to be classified as a bristle is elastic enough that the amount AE by which the tip of the element referred to as the bristle can be elastically deflected to the side from its home position without damage to the bristle is greater than the above-defined maximum diameter Dbmax at least by a factor of 4, or better still by a factor of 5.</p>
+      <p id="p-00088-en" num="0088">Unlike a plate, a bristle is typically an element that can be elastically deflected in all directions perpendicular to the direction of its longitudinal axis, whereas the plate has at least two opposing directions in which it exhibits a large amount of resistance to bending over.</p>
+      <p id="p-00089-en" num="0089">In other words, in the broadest sense, a bristle is understood to be a flexible element.</p>
+      <p id="p-00090-en" num="0090">A plate does not meet this definition; specifically, the plates described here are essentially rigid in the circumference direction, i.e. they do flex a little in the circumference direction, but cannot be arbitrarily deflected by a multiple of their maximum diameter.</p>
+      <p id="p-00091-en" num="0091">
+        <figref>FIGS. 6 and 7</figref> are provided to describe another aspect of the invention as follows:</p>
+      <p id="p-00092-en" num="0092">The cosmetic applicator <b>1</b> has a rod-shaped core <b>2</b>, which has fingers that are integrally joined to its circumference surface. The fingers are arranged in rows in a direction parallel to the longitudinal axis. With regard to the aspect that is relevant here, the applicator according to the invention is distinguished by the fact that in succession in the circumference direction, it has the following finger set pattern, which repeats several times, ideally 3 times:</p>
+      <p id="p-00093-en" num="0093">In <figref>FIG. 7</figref>, the finger set pattern begins at the lower end of the arrow BM. The beginning is formed by a first row of fingers that are composed of plates <b>6</b><i>b</i>, which are positioned one after another along the core <b>2</b> in the direction parallel to the longitudinal axis L and which have a maximum span ra<b>1</b> in the radial direction, as indicated by the corresponding segment of a circle depicted in <figref>FIG. 7</figref>. The term plate has already been defined above.</p>
+      <p id="p-00094-en" num="0094">Continuing in the clockwise direction, immediately adjacent to this comes at least one second row of fingers, which is composed of bristles <b>6</b><i>c</i>. The bristles <b>6</b><i>c </i>are likewise positioned one after another along the core <b>2</b> in a direction parallel to the longitudinal axis. The bristles <b>6</b><i>c </i>have a maximum span ra<b>2</b> in the radial direction, as is also indicated by a segment of a circle in <figref>FIG. 7</figref>.</p>
+      <p id="p-00095-en" num="0095">In <figref>FIG. 7</figref>, only a single second row of fingers in the form of bristles <b>6</b><i>c </i>is provided, but if needed, this row can be doubled, i.e. there are then two rows of fingers that are composed of bristles <b>6</b><i>c</i>, but this is not shown in the drawing here.</p>
+      <p id="p-00096-en" num="0096">Continuing on in the clockwise direction along the arrow BM, immediately adjacent to the second row, a third row of fingers is provided, which in turn is composed of plates <b>6</b><i>b</i>. The plates <b>6</b><i>b </i>are positioned one after another along a line in a direction parallel to the longitudinal axis L and preferably likewise have a maximum span ra<b>1</b> in the radial direction.</p>
+      <p id="p-00097-en" num="0097">Immediately adjacent to this, once again continuing in the clockwise direction along the arrow BM, a fourth row of fingers <b>7</b><i>a </i>is provided. These fingers are also positioned one after another along the core <b>2</b> in a direction parallel to the longitudinal axis L. These fingers of the fourth row have a maximum span ra<b>3</b> in the radial direction. The fingers of the fourth row are embodied in the form of bristles <b>7</b><i>a. </i></p>
+      <p id="p-00098-en" num="0098">Preferably adjacent to this, once again continuing in the clockwise direction along the arrow BM, a fifth row of fingers is provided, which are composed of bristles <b>7</b><i>b</i>. These bristles are also positioned in a line parallel to the longitudinal axis L. These bristles <b>7</b><i>b </i>have a maximum span ra<b>3</b>* in the radial direction, as indicated by the corresponding segment of a circle shown in <figref>FIG. 7</figref>.</p>
+      <p id="p-00099-en" num="0099">Optionally, another sixth row of fingers is provided, which is in turn composed of bristles <b>7</b><i>a</i>. This sixth row is situated immediately adjacent to the fifth row, viewed in the clockwise direction along the arrow BM. The sixth row is preferably the last row of fingers before the pattern described up to this point repeats in the circumference direction. The fingers of this sixth row have a maximum span ra<b>3</b> in the radial direction; in other words preferably, the radial span of the fourth row and the sixth row, if present, are identical.</p>
+      <p id="p-00100-en" num="0100">Ideally, and in most cases, in a row of fingers formed by a number of fingers all one behind the other in a longitudinal direction, all fingers are identical. For other cases, it is preferred if such a row of fingers consists of fingers alternatingly designed as plates and as bristles, so that in the longitudinal direction a bristle is followed by a finger.</p>
+      <p id="p-00101-en" num="0101">A particular relationship is maintained between the radial spans, namely ra<b>2</b>&gt;ra<b>1</b>&gt;ra<b>3</b>. Ideally at the same time, ra<b>3</b>&gt;ra<b>3</b>*.</p>
+      <p id="p-00102-en" num="0102">This arrangement of bristles has a functional purpose. The applicator and the associated wiper are specifically matched to each other so that the wiper partially wipes the one or more second rows of bristles <b>6</b><i>c</i>, preferably specifically in a region that corresponds to at least the radially outermost fifth of the bristle <b>6</b><i>c </i>and at most the radially outermost half of the bristle <b>6</b><i>c</i>. This means that the radial span ra<b>2</b> of these bristles <b>6</b><i>c </i>is correspondingly greater than the wiper inner diameter AD, also see <figref>FIG. 6</figref>, which clearly shows that the radially outermost quarter of the bristle <b>6</b><i>c </i>has a radius that is greater than the corresponding wiper inner radius AD/2 so that the outermost quarter of the bristle <b>6</b><i>c </i>is folded down and wiped.</p>
+      <p id="p-00103-en" num="0103">The first and third rows of fingers, which are embodied here as plates <b>6</b><i>b </i>and are situated on both sides next to the second row of fingers, perform a so-called bolstering function. Due to their embodiment in the form of plates <b>6</b><i>b</i>, these fingers are quite rigid; they therefore prevent the wiper from excessively folding over the second row of fingers, which are embodied here as relatively flexible bristles, when the applicator is pulled through the wiper.</p>
+      <p id="p-00104-en" num="0104">For this purpose, the fingers of the first and second rows, with regard to their maximum radial span, are preferably embodied so that the wiper does not wipe—or preferably, essentially does not wipe—the first and third row of fingers. The expression “to be essentially not wiped” is in any case used when at most, the radially outermost sixth—and better still, at most the radially outer eighth—of these fingers is wiped. This means that the radial span ra<b>2</b> of these bristles <b>6</b><i>c </i>is correspondingly greater than the wiper inner diameter AD, also see <figref>FIG. 6</figref>.</p>
+      <p id="p-00105-en" num="0105">Another optional embodiment possesses a wiper wiping more intensely without imparting the bolstering function. The expression “to be essentially not wiped” means, in this case, that at most the radially outermost third and preferably at most the radially outermost fourth of the fingers of the first and the third row is wiped.</p>
+      <p id="p-00106-en" num="0106">Ideally, the pattern repeats several times in the circumference direction along the core <b>2</b> of the applicator so that the applicator is kept in a central position as it passes through the wiper because the arrangement of the set of fingers is correspondingly symmetrical. It is particularly advantageous if the pattern repeats three times.</p>
+      <p id="p-00107-en" num="0107">Depending on the cosmetic applicator that is claimed by the asserted claims, protection is also claimed for a cosmetic applicator that has the following additional features:</p>
+      <p id="p-00108-en" num="0108">The core of the applicator has a core diameter that changes and for example becomes smaller in the direction of the longitudinal axis so that the applicator tapers in the middle, preferably in approximately the same way as a peanut. Such an applicator is then distinguished by the fact that its core diameter is greater at the tip than in the middle.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A cosmetic applicator with comprising:
+<claim-text>a rod-shaped core and a plurality of injection-molded fingers; wherein the core has a circumference surface and a non-round cross-section; the circumference surface is composed of large and small side surfaces arranged in alternating fashion; and all of the large side surfaces are the same size as one another and all of the small side surfaces are the same size as one another.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The cosmetic applicator according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein a set of fingers on the small side surfaces comprises plates and a set of fingers on the large side surfaces is composed exclusively of bristles.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The cosmetic applicator according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the large side surfaces are curved concavely inward.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The cosmetic applicator according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the small side surfaces are curved convexly outward.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The cosmetic applicator according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the circumference surface of the core is composed of at least three large and three small side surfaces arranged one after another in alternating fashion in a circumferential direction.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The cosmetic applicator according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the plates each have two main surfaces, two side surfaces, and one radially outer end surface; the two main surfaces extend completely or at least essentially completely perpendicular to a longitudinal axis of the applicator and the two side surfaces diverge from each other in a V shape in a radial direction.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The cosmetic applicator according to <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the radially outer end surface is oriented diagonally so that each plate has one side surface that is longer in the radial direction and one side surface that is shorter in the radial direction.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The cosmetic applicator according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the plates form a chisel edge at their radially outer end surfaces.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The cosmetic applicator according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the set of fingers on the small side surfaces is composed of at least three rows of fingers situated one after another in a line extending in a direction of a longitudinal axis of the applicator; a middle row of these fingers is composed exclusively of bristles and two outer rows are rows in which bristles and plates alternate in the direction extending along the longitudinal axis of the applicator, so that a bristle is always followed by a plate and vice versa, continuing in the direction of the longitudinal axis.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The cosmetic applicator according to <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the middle row of fingers that make up the set of fingers on the small side surfaces has a smaller total number of fingers than the two outer rows, in that only one finger belonging to the middle row is provided at a location even with that of every second finger of the two outer rows, counting in the direction of the longitudinal axis of the applicator.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The cosmetic applicator according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, the wherein three rows of fingers, which respectively constitute the set of fingers of one of the large side surfaces, successively form the following pattern in a direction of a longitudinal axis of the applicator: one finger in each of two outer rows of fingers is arranged in a line along a shared circumference line, one plate in each of the two outer rows of bristles and one finger in a middle row of bristles are arranged in a line along a shared circumference line, one finger in each of the two outer rows of fingers is arranged in a line along a shared circumference line, one plate in each of the two outer rows of bristles and one finger in the middle row of bristles are arranged in a line along the entire subsequent circumference line.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The cosmetic applicator according to <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the fingers of the middle row are the fingers that respectively constitute the set of fingers of a small side surface and are at least ¼ longer than the fingers of the respective laterally adjacent rows belonging to the set of fingers of the same small end surface of the cosmetic applicator.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The cosmetic applicator according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the set of fingers of the large side surfaces is composed of only three rows of fingers respectively situated one behind another in a line extending in a direction of a longitudinal axis of the applicator, which fingers are all bristles.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The cosmetic applicator according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein a middle row of fingers that make up the set of fingers on the large side surfaces has a smaller total number of fingers than two outer rows, in that only one finger belonging to the middle row is provided at a location even with that of every second finger of the two outer rows, counting in a direction of a longitudinal axis of the applicator.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The cosmetic applicator according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein three rows of fingers, which respectively constitute the set of fingers of one of the large side surfaces, successively form the following pattern in a direction of a longitudinal axis of the applicator; one finger in each of two outer rows of fingers is arranged in a line along a shared circumference line, followed by a single finger in a middle row of bristles, followed by one finger in each of the two outer rows of fingers, which fingers are arranged in a line extending along a shared circumference line, followed by a single finger in the middle row of bristles.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The cosmetic applicator according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the fingers, in the form of bristles that form the set of fingers of the large side surfaces, are each at least ¼ shorter than an overwhelming majority of the fingers that respectively form the set of fingers of a small side surface.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The cosmetic applicator according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the core of the cosmetic applicator is curved in a sickle shape in one plane.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The cosmetic applicator according to <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein a small side surface of the core constitutes an outside of the sickle.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The cosmetic applicator according to <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein a large side surface of the core constitutes an inside of the sickle.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en" independent="true">
+      <claim-text>
+        <b>20</b>. A cosmetic applicator comprising:
+<claim-text>a rod-shaped core and plurality of fingers that are integrally connected to a circumferential surface of the core, which fingers are arranged in rows extending in a direction parallel to a longitudinal axis of the applicator, wherein in the circumferential direction, the following finger set pattern repeats a plurality of times in succession:</claim-text><claim-text>a first row of fingers, which is composed of plates that have a maximum span (ra<b>1</b>) in a radial direction,</claim-text><claim-text>immediately adjacent to this, at least one second row of fingers, which is composed of bristles that have a maximum span (ra<b>2</b>) in the radial direction,</claim-text><claim-text>immediately adjacent to the one or more second rows, a third row of fingers, which is composed of plates that have a maximum span (ra<b>1</b>) the radial direction,</claim-text><claim-text>immediately adjacent to this, a fourth row of fingers that have a maximum span (ra<b>3</b>) in the radial direction;</claim-text><claim-text>immediately adjacent to this, a fifth row of fingers is provided that have a maximum span (ra<b>3</b>*) in the radial direction;</claim-text><claim-text>and, immediately adjacent to this, a sixth row of fingers is provided that have a maximum span (ra<b>3</b>) in the radial direction and where: ra<b>2</b>&gt;ra<b>1</b>&gt;ra<b>3</b>, and at the same time, ra<b>3</b>&gt;ra<b>3</b>*.</claim-text></claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The cosmetic applicator according to <claim-ref idref="clm-00020-en">claim 20</claim-ref>, wherein the first row of fingers, the one or more second rows of fingers, and the third row are situated on a small side surface of the core.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The cosmetic applicator according to <claim-ref idref="clm-00020-en">claim 20</claim-ref>, wherein the fourth and the fifth row of fingers as well as the sixth row of fingers are situated on a large side surface of the core.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. The cosmetic applicator according to <claim-ref idref="clm-00020-en">claim 20</claim-ref>, wherein the fourth and the fifth row of fingers as well as the sixth row of fingers are situated on a side surface of the core that is curved concavely inward toward the longitudinal axis of the applicator.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. A cosmetic applicator system having a cosmetic applicator according to <claim-ref idref="clm-00020-en">claim 20</claim-ref> and having a wiper, wherein the wiper and a span of the fingers in the radial direction are matched to each other so that the wiper essentially does not wipe the first row and third row of fingers and the wiper wipes the one or more second rows in a region that corresponds to at least the radially outermost ⅕ of the finger and at most to the radially outermost ½ of the finger and the wiper does not wipe the fourth and fifth and sixth row of fingers.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>25</b>. The cosmetic applicator system according to <claim-ref idref="clm-00024-en">claim 24</claim-ref>, wherein the cosmetic applicator is secured to a wand and a diameter of the wand is greater than an imaginary circle drawn around the longitudinal axis of the applicator, whose radius is determined by a maximum radial span (ra3) of the fourth row of fingers or by a maximum radial span of the fingers of the fourth or fifth or sixth row of fingers that protrude the farthest in the radial direction. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257514A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257514A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257514A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257514A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257514A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257514A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257514A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257514A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257514A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257514A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257514A1_00006.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257514A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257514A1.PDF" type="pdf" size="681585" pages="13" />
+</lexisnexis-patent-document>

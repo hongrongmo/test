@@ -1,0 +1,2020 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259652A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030116" date-changed="20151208" time-changed="150652">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121314272">
+        <country>US</country>
+        <doc-number>20150259652</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14641908</doc-number>
+        <date>20150309</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2014047379</doc-number>
+        <date>20140311</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151208">
+      <classification-ipcr sequence="1">
+        <text>C12N   9/02        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>9</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>G01N  33/573       20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>33</main-group>
+        <subgroup>573</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151208">
+      <classification-cpc sequence="1">
+        <text>C12N   9/0069      20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>9</main-group>
+        <subgroup>0069</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C12Q   1/66        20130101 LI20151126BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>66</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151126</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C12Y 113/12007     20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Y</subclass>
+        <main-group>113</main-group>
+        <subgroup>12007</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>G01N2333/90241     20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>2333</main-group>
+        <subgroup>90241</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">19</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">CHIMERIC GENES FOR THE CATALYTIC PROTEIN OF OPLOPHORUS LUCIFERASE AND USE THEREOF</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>JNC CORPORATION</orgname>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>JP</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>INOUYE</last-name>
+            <first-name>Satoshi</first-name>
+            <address>
+              <city>Kanagawa</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>SATO</last-name>
+            <first-name>Junichi</first-name>
+            <address>
+              <city>Kanagawa</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150928">
+      <main-family family-id="171536030">
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>201503811</doc-number>
+            <kind>D0</kind>
+            <date>20150422</date>
+          </document-id>
+          <application-date>
+            <date>20150306</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259652</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150309</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015167553</doc-number>
+            <kind>A</kind>
+            <date>20150928</date>
+          </document-id>
+          <application-date>
+            <date>20140311</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="171536029">
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>201503811</doc-number>
+            <kind>D0</kind>
+            <date>20150422</date>
+          </document-id>
+          <application-date>
+            <date>20150306</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259652</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150309</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015167553</doc-number>
+            <kind>A</kind>
+            <date>20150928</date>
+          </document-id>
+          <application-date>
+            <date>20140311</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A novel luciferase that is distinct from conventional luciferase has been desired.</p>
+    <p id="p-a-00002-en" num="0000">A luciferase mutant comprising an amino acid sequence in which tyrosine at position of 138 is substituted with another amino acid and at least 3 amino acids selected from the group consisting of isoleucine at position of 90, proline at position of 115, glutamine at position of 124 and asparagine at position of 166 are substituted with other amino acids, in the amino acid sequence of SEQ ID NO: 2.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150309</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015259652A1</docdb-publication-number>
+      <docdb-application-id>444514895</docdb-application-id>
+      <new-owner>JNC CORPORATION, JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:INOUYE, SATOSHI;SATO, JUNICHI;REEL/FRAME:035115/0902</free-text-description>
+      <effective-date>
+        <date>20150218</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to chimeric genes for the catalytic protein of <i>Oplophorus </i>luciferase, use thereof and so on.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND ART</heading>
+      <p id="p-00002-en" num="0002">Bioluminescence is a phenomenon based on a chemical reaction in vivo, which is called a luciferin (a luminescence substrate)-luciferase (an enzyme that catalyzes the luminescence reaction) reaction. Numerous studies of the identification of luciferins or luciferases and the elucidation of the luminescence mechanism in a molecular level have been performed for a long time in the country and overseas. In bioluminescent marine organisms, <i>Oplophorus gracilirostris </i>luciferase from the deep-sea shrimp is an extracellularly secreted luciferase (Non-Patent Document 1). <i>Oplophorus </i>luciferase is a 106 kDa protein composed of a protein with a molecular weight of 35 kDa and a protein with a molecular weight of 19 kDa. The domain that catalyzes the luminescence is found to be 19 kDa protein. <i>Oplophorus </i>luciferase uses coelenterazine as a luminescence substrate and is classified as a coelenterazine-type luciferase (Patent Document 1, Non-Patent Document 2). <i>Oplophorus </i>luciferase is different from other coelenterazine-type luciferases in broad substrate specificity and uses coelenterazine analogues as a suitable substrate as well as coelenterazine (Non-Patent Document 2). When the gene for the 19 kDa protein is expressed in <i>Escherichia coli </i>(<i>E. coli</i>) at ambient and lower temperatures, the protein is expressed mostly as an insoluble protein (Non-Patent Document 3). When the 19 kDa protein is expressed as a fusion protein to ZZ domain from protein A in a low temperature expression system, the fused protein can be expressed as a soluble protein (Non-Patent Document 4). It is also reported that when the 19 kDa protein was expressed in animal culture cells, the expressed protein was hardly secreted outside of cells (Non-Patent Document 2).</p>
+      <p id="p-00003-en" num="0003">Recently, it is reported that the mutated 19 kDa protein having catalytic activity of luminescence was prepared by mutating the 16 amino acids of the 19 kDa protein and showed a higher luminescence activity than native 19 kDa protein, and was secreted into an extracellular medium (Patent Document 2, Non-Patent Documents 4 and 5). It is also reported that coelenterazine derivatives displayed higher activity than native coelenterazine used as a substrate (Non-Patent Documents 4 and 5).</p>
+      <p id="p-00004-en" num="0004">In the luminescence reaction system using coelenterazine as a substrate, the luminescence reaction of luciferase proceeds only by a substrate and molecular oxygen. For this reason, a coelenterazine-type luciferase gene is used widely as a reporter assay in an animal cultured cell system at present. <i>Renilla </i>luciferase having 311 amino acids is used for a reporter assay inside of cells. For an extracellular reporter assay, the secreted <i>Gaussia </i>luciferase which is a secretory luciferase having 168 amino acids is used. When recombinant <i>Renilla </i>luciferase and <i>Gaussia </i>luciferase are compared in specific activity using coelenterazine as a luminescence substrate, the specific activity of <i>Renilla </i>luciferase is about 1/100 of <i>Gaussia </i>luciferase (Non-Patent Documents 5 and 6). On the other hand, the specific activity of mutated 19 kDa protein having catalytic activity of luminescence is 1/10 as compared to <i>Gaussia </i>luciferase, indicating that the mutated 19 kDa protein is obviously inferior as the gene for a reporter assay as a secreted protein.</p>
+      <p id="p-00005-en" num="0005">In view of the foregoing, it has been desired to develop a reporter gene which is an intracellular and secreted luciferase and has a higher luminescence activity than that of native 19 kDa protein when coelenterazine or even its analogue is used as the substrate.</p>
+      <heading id="h-00003-en" level="1">RELATED ART DOCUMENTS</heading>
+      <heading id="h-00004-en" level="1">Patent Documents</heading>
+      <p id="p-00006-en" num="0000">
+        <ul id="ul-00001-en" list-style="none">
+          <li>[Patent Document 1] Japanese Patent No. 4,613,441</li>
+          <li>[Patent Document 2] Japanese National Publication (Tokuhyo) No. 2012-525819</li>
+        </ul>
+      </p>
+      <heading id="h-00005-en" level="1">Non-Patent Documents</heading>
+      <p id="p-00007-en" num="0000">
+        <ul id="ul-00002-en" list-style="none">
+          <li>[Non-Patent Document 1] O. Shimomura et al. (1978) Biochemistry 17: 994-998.</li>
+          <li>[Non-Patent Document 2] S. Inouye et al. (2000) FEBS Lett. 481: 19-25.</li>
+          <li>[Non-Patent Document 3] S. Inouye &amp; S. Sasaki (2007) Protein Express. Purif. 56: 261-268.</li>
+          <li>[Non-Patent Document 4] M. P. Hall et al. (2012) ACS Chem Biol. 7: 1848-1857.</li>
+          <li>[Non-Patent Document 5] S. Inouye et al. (2013) Biochem. Biophys. Res. Commun. 437: 23-28.</li>
+          <li>[Non-Patent Document 6] S. Inouye et al. (2013) Protein Express. Purif. 83: 150-156.</li>
+        </ul>
+      </p>
+      <heading id="h-00006-en" level="1">DISCLOSURE OF THE INVENTION</heading>
+      <heading id="h-00007-en" level="1">Problem to be Solved by the Invention</heading>
+      <p id="p-00008-en" num="0014">Under the foregoing circumstances, a novel luciferase that is distinct from conventional luciferase has been desired.</p>
+      <heading id="h-00008-en" level="1">Means for Solving the Problem</heading>
+      <p id="p-00009-en" num="0015">The present inventors have made extensive investigations to solve the problem above. As a result, the inventors have found that 19 kDa protein mutants having catalytic activity of luminescence in which substituted amino acids are introduced into 5 amino acids (isoleucine at position of 90, proline at position of 115, glutamine at position of 124, tyrosine at position of 138 and asparagine at position of 166) provide a higher luminescence activity than native 19 kDa protein having catalytic activity of luminescence, and when the 19 kDa protein is expressed in animal cultured cells, the expressed protein is hardly secreted outside of cells. The present invention has thus been accomplished.</p>
+      <p id="p-00010-en" num="0016">More specifically, the present invention provides the following luciferase mutants, polynucleotides, recombinant vectors, transformants, a method of producing luciferase mutants, kits, a method for performing a luminescence reaction, and so on.</p>
+      <p id="p-00011-en" num="0017">[1] A luciferase mutant of (a) or (b) below:</p>
+      <p id="p-00012-en" num="0018">(a) a luciferase mutant comprising an amino acid sequence, in which tyrosine at position of 138 is substituted with another amino acid and at least 3 amino acids selected from the group consisting of isoleucine, proline, glutamine and asparagine at the positions of 90, 115, 124 and 166 are substituted with other amino acids, in the amino acid sequence of SEQ ID NO: 2; or,</p>
+      <p id="p-00013-en" num="0019">(b) a luciferase mutant comprising an amino acid sequence in which tyrosine at position of 138 is substituted with another amino acid and at least 3 amino acids selected from the group consisting of isoleucine at position of 90, proline at position of 115, glutamine at position of 124 and asparagine at position of 166 are substituted with other amino acids, and one or more amino acid(s) is/are substituted with other amino acid(s) at position(s) other than at positions of 4, 11, 18, 27, 33, 43, 44, 54, 68, 72, 75, 90, 115, 124, 138 and 166, in the amino acid sequence of SEQ ID NO: 2, and having a luciferase activity.</p>
+      <p id="p-00014-en" num="0020">[2] The luciferase mutant according to [1] above, wherein the luciferase mutant defined in (b) above is a mutant defined in (c) below:</p>
+      <p id="p-00015-en" num="0021">(c) a luciferase mutant comprising an amino acid sequence in which tyrosine at position of 138 is substituted with another amino acid, at least 3 amino acids selected from the group consisting of isoleucine at position of 90, proline at position of 115, glutamine at position of 124 and asparagine at position of 166 are substituted with other amino acids and 1 to 16 amino acid(s) is/are substituted with other amino acid(s) at position(s) other than at positions of 4, 11, 18, 27, 33, 43, 44, 54, 68, 72, 75, 90, 115, 124, 138 and 166, in the amino acid sequence of SEQ ID NO: 2, and having a luciferase activity.</p>
+      <p id="p-00016-en" num="0022">[3] The luciferase mutant according to [1] or [2] above, wherein said another amino acid substituted for the tyrosine at position of 138 is isoleucine or valine.</p>
+      <p id="p-00017-en" num="0023">[4] The luciferase mutant according to [1] above, wherein the luciferase mutant defined in (a) or (b) above is a luciferase mutant defined in (d) or (e) below:</p>
+      <p id="p-00018-en" num="0024">(d) a luciferase mutant comprising an amino acid sequence of SEQ ID NO: 6, SEQ ID NO: 8, SEQ ID NO: 10, SEQ ID NO: 12 or SEQ ID NO: 16;</p>
+      <p id="p-00019-en" num="0025">(e) a luciferase mutant comprising an amino acid sequence in which one or more amino acid(s) is/are substituted with other amino acid(s) at position(s) other than at positions of 4, 11, 18, 27, 33, 43, 44, 54, 68, 72, 75, 90, 115, 124, 138 and 166, in the amino acid sequence of SEQ ID NO: 6, SEQ ID NO: 8, SEQ ID NO: 10, SEQ ID NO: 12 or SEQ ID NO: 16, and having a luciferase activity.</p>
+      <p id="p-00020-en" num="0026">[5] The luciferase mutant according to [4] above, wherein the luciferase mutant defined in (e) above is a luciferase mutant defined in (f) below:</p>
+      <p id="p-00021-en" num="0027">(f) a luciferase mutant comprising an amino acid sequence in which 1 to 16 amino acid(s) is/are substituted with other amino acid(s) at position(s) other than at positions of 4, 11, 18, 27, 33, 43, 44, 54, 68, 72, 75, 90, 115, 124, 138 and 166, in the amino acid sequence of SEQ ID NO: 6, SEQ ID NO: 8, SEQ ID NO: 10, SEQ ID NO: 12 or SEQ ID NO: 16, and having a luciferase activity.</p>
+      <p id="p-00022-en" num="0028">[6] A polynucleotide comprising a polynucleotide encoding the luciferase mutant according to any one of [1] to [5] above.</p>
+      <p id="p-00023-en" num="0029">[7] A recombinant vector comprising the polynucleotide according to [6] above.</p>
+      <p id="p-00024-en" num="0030">[8] A transformant transformed with the recombinant vector according to [7] above.</p>
+      <p id="p-00025-en" num="0031">[9] A method for producing the luciferase mutant according to any one of [1] to [5] above, which comprises the steps of culturing the transformant of [8] above and producing the luciferase mutant according to any one of [1] to [5] above.</p>
+      <p id="p-00026-en" num="0032">[10] A kit comprising at least one selected from the luciferase mutant according to any one of [1] to [5] above, the polynucleotide according to [6] above, the recombinant vector according to [7] above and the transformant according to [8] above.</p>
+      <p id="p-00027-en" num="0033">[11] The kit according to [10] above, further comprising a luciferin.</p>
+      <p id="p-00028-en" num="0034">[12] The kit according to [11] above, wherein the luciferin is a coelenterazine analogue.</p>
+      <p id="p-00029-en" num="0035">[13] The kit according to [12] above, wherein the coelenterazine analogue is coelenterazine or h-coelenterazine.</p>
+      <p id="p-00030-en" num="0036">[14] A method for performing a luminescence reaction, which comprises contacting the luciferase mutant according to any one of [1] to [5] above with a luciferin.</p>
+      <p id="p-00031-en" num="0037">[15] The method according to [14] above, wherein the luciferin is a coelenterazine analogue.</p>
+      <p id="p-00032-en" num="0038">[16] The method according to [15] above, wherein the coelenterazine analogue is coelenterazine or h-coelenterazine.</p>
+      <p id="p-00033-en" num="0039">[17] A method for assaying the activity of a sequence associated with promoter regulation, which comprises using the polynucleotide according to [6] above as a reporter gene and contacting a luciferase mutant encoded by the reporter gene with a luciferin.</p>
+      <p id="p-00034-en" num="0040">[18] The method according to [17] above, wherein the luciferin is a coelenterazine analogue.</p>
+      <p id="p-00035-en" num="0041">[19] The method according to [18] above, wherein the coelenterazine analogue is coelenterazine or h-coelenterazine.</p>
+      <heading id="h-00009-en" level="1">Effects of the Invention</heading>
+      <p id="p-00036-en" num="0042">The present invention provides luciferase mutants that are distinct from the known mutants. In a preferred embodiment of the invention, the luciferase mutants have at least one characteristics selected from a higher activity than that of native 19 kDa protein and/or the reported 19 kDa protein mutants having catalytic activity of luminescence when coelenterazines analogues are used as the luminescence substrate, little secretion outside of cells when expressed in animal cultured cells, and so on.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00010-en" level="1">BRIEF DESCRIPTION OF DRAWINGS</heading>
+      <p id="p-00037-en" num="0043">
+        <figref>FIG. 1</figref> shows the results of SDS-PAGE analysis of the crude enzyme solution (crude extract) of <i>Escherichia coli </i>in which WNanoKAZ mutant was expressed using a pCold-ZZ-P vector.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00011-en" level="1">MODE FOR CARRYING OUT THE INVENTION</heading>
+      <p id="p-00038-en" num="0044">The present invention will be described below in detail.</p>
+      <heading id="h-00012-en" level="1">1. Luciferase Mutant of the Invention</heading>
+      <p id="p-00039-en" num="0045">The term luciferase mutant of the present invention refers to a mutant of the protein with a molecular weight of 19 kDa of <i>Oplophorus </i>luciferase. Specifically, the luciferase mutant of the present invention is intended to mean a luciferase mutant having substantially the same activity as the luciferase mutant comprising an amino acid sequence in which tyrosine at position of 138 is substituted with another amino acid and at least 3 amino acids selected from the group consisting of isoleucine at position of 90, proline at position of 115, glutamine at position of 124 and asparagine at position of 166 are substituted with other amino acids, in the amino acid sequence of SEQ ID NO: 2.</p>
+      <p id="p-00040-en" num="0046">The term “substantially the same activity” is intended to mean at least one activity selected from luciferase activity, activity for little extracellular secretion when expressed in animal cells, and so on.</p>
+      <p id="p-00041-en" num="0047">The term “luciferase activity” is intended to mean the activity for catalyzing the luminescence reaction using a luciferin (e.g., a coelenterazine analogue) which is used as a substrate, namely, the reaction in which luciferin (e.g., a coelenterazine analogue) is oxidized with molecular oxygen to produce oxyluciferin in its excited state. The excited state of oxyluciferin produced emits visible light and converts to the ground state of oxyluciferin.</p>
+      <p id="p-00042-en" num="0048">Luminescence activity can be determined by the method described in, e.g., Inouye, S. &amp; Shimomura, O. (1977) Biochem. Biophys. Res. Commun. 233, 349-353. Specifically, the luciferase mutant of the present invention is mixed with a luciferin to start the luminescence reaction, and the activity of catalyzing luminescence reaction can be determined using a luminometer. Commercially available luminometers, e.g., Luminescencer-PSN AB2200 (manufactured by Atto Inc.) or Centro 960 luminometer (manufactured by Berthold Inc.) may be used as luminometers.</p>
+      <p id="p-00043-en" num="0049">The luciferin used in the present invention may be any luciferin as far as it is used as a substrate for the luciferase mutants of the present invention. Specifically, the luciferin used in the present invention includes a coelenterazine analogue containing the imidazopyrazinone ring as the backbone.</p>
+      <p id="p-00044-en" num="0050">The coelenterazine analogue is used to mean coelenterazine or its analogues. Coelenterazine analogues include, for example, bis-coelenterazine, deoxyfuran-coelenterazine (furimazine), h-coelenterazine, hcp-coelenterazine, cp-coelenterazine, f-coelenterazine, fcp-coelenterazine, n-coelenterazine, MeO-coelenterazine, e-coelenterazine, cl-coelenterazine, ch-coelenterazine, 3iso-coelenterazine, 3meo-coelenterazine, cf3-coelenterazine, i-coelenterazine, et-coelenterazine, me-coelenterazine, 3me-coelenterazine, ameh-coelenterazine 8-(1-naphthyl)-coelenterazine, 8-(2-naphthyl)-coelenterazine, 8-(2-thienyl)-coelenterazine, 6,8-di(2-thienyl)-coelenterazine, 8-(4-hydroxyphenyl)-coelenterazine, 8-(2-benzothienyl)-coelenterazine, 8-(b-styryl)-coelenterazine, 8-phenyl-coelenterazine, 6-deoxy-coelenterazine, 8-(3-thienyl)-coelenterazine and 8-(3-benzo[b]thienyl)-coelenterazine. Of these coelenterazines analogues, coelenterazine is particularly preferred in the present invention.</p>
+      <p id="p-00045-en" num="0051">These coelenterazine analogues could be synthesized by publicly known methods or may also be commercially available.</p>
+      <p id="p-00046-en" num="0052">The coelenterazine analogues could be synthesized by the methods described in, e.g., Shimomura et al. (1988) Biochem. J. 251, 405-410, Shimomura et al. (1989) Biochem. J. 261, 913-920, Shimomura et al. (1990) Biochem. J. 270, 309-312, Tetrahedron Lett. 38: 6405-6406, WO 2010/090319, Inouye et al. (2010) Anal. Biochem. 407, 247-252 or Inouye et al. (2013) Biocchem. Biophys. Res. Commun. 437, 23-28, or respective modifications thereof. Furimazine may be produced by the method described in Hall et al. (2012) ACS Chem. Biol. 16; 848-1857.</p>
+      <p id="p-00047-en" num="0053">The coelenterazines analogues which are commercially available include, for example, coelenterazine, cf3-coelenterazine and h-coelenterazine manufactured by JNC Corp.; hcp-coelenterazine, cp-coelenterazine, f-coelenterazine, fcp-coelenterazine and n-coelenterazine manufactured by Biotium Inc.; and bis-coelenterazine manufactured by Prolume Ltd. and coelenterazine, furimazine and h-coelenterazine manufactured by Promega Corp.</p>
+      <p id="p-00048-en" num="0054">The “luminescence activity using a luciferin as a substrate” refers to luminescence activity using preferably coelenterazine analogues as the substrate. Preferably, the “luminescence activity using coelenterazine analogues as a substrate” is the luminescence activity in which coelenterazine is used as the substrate.</p>
+      <p id="p-00049-en" num="0055">The “activity for little extracellular secretion when expressed in animal cells” is intended to mean that when the protein is expressed in animal cells, most of the expressed protein is not exported but is retained within the cell, and hardly secreted outside of the cell. The term “little extracellular secretion” is specifically intended to mean that extracellular secretion of the protein occurs in an amount (by weight) of 5% or less, 4% or less, 3% or less, 2% or less, 1% or less, 0.5% or less, 0.1% or less, 0.05% or less, or 0.01% or less, of the expressed protein. Specific examples of the “animal cells” are those later described.</p>
+      <p id="p-00050-en" num="0056">The “luciferase mutant comprising an amino acid sequence in which tyrosine at position of 138 is substituted with another amino acid and at least 3 amino acids selected from the group consisting of isoleucine at position of 90, proline at position of 115, glutamine at position of 124 and asparagine at position of 166 are substituted with other amino acids, in the amino acid sequence of SEQ ID NO: 2” includes, for example, a luciferase mutant defined in (a) or (b) described below.</p>
+      <p id="p-00051-en" num="0057">(a) A luciferase mutant comprising an amino acid sequence in which tyrosine at position of 138 is substituted with another amino acid and at least 3 amino acids selected from the group consisting of isoleucine at position of 90, proline at position of 115, glutamine at position of 124 and asparagine at position of 166 are substituted with other amino acids, in the amino acid sequence of SEQ ID NO: 2; or, (b) a luciferase mutant comprising an amino acid sequence in which tyrosine at position of 138 is substituted with another amino acid, at least 3 amino acids selected from the group consisting of isoleucine at position of 90, proline at position of 115, glutamine at position of 124 and asparagine at position of 166 are substituted with other amino acids and one or more amino acid(s) is/are substituted with other amino acid(s) at position(s) other than at positions of 4, 11, 18, 27, 33, 43, 44, 54, 68, 72, 75, 90, 115, 124, 138 and 166, in the amino acid sequence of SEQ ID NO: 2, and having a luciferase activity.</p>
+      <p id="p-00052-en" num="0058">In (a) and (b) described above, the term “at least 3 amino acids are substituted with other amino acids” is intended to mean that substitution of amino acid residues occurs at 3 or 4 positions selected from positions 90, 115, 124 and 166 in the amino acid sequence of SEQ ID NO: 3.</p>
+      <p id="p-00053-en" num="0059">Specifically, the term “at least 3” in “at least 3 amino acids are substituted with other amino acids” is intended to mean (1) the positions of 90, 115 and 124, (2) the positions of 90, 115 and 166, (3) the positions of 115, 124 and 166, (4) the positions of 90, 124, 166, and (5) the positions of 90, 115, 124 and 166.</p>
+      <p id="p-00054-en" num="0060">The term other amino acids substituted for isoleucine at position of 90 in the amino acid sequence of SEQ ID NO: 2 includes, for example, valine, alanine, methionine, leucine, cysteine, serine or phenylalanine, preferably, valine, alanine, methionine, leucine or cysteine, and more preferably, valine.</p>
+      <p id="p-00055-en" num="0061">The term other amino acids substituted for proline at position of 115 in the amino acid sequence of SEQ ID NO: 2 includes, for example, aspartic acid, glutamic acid, isoaspartic acid, isoglutamic acid, 2-aminoadipic acid, 2-aminosuberic acid, and preferably, glutamic acid.</p>
+      <p id="p-00056-en" num="0062">The term other amino acids substituted for glutamine at position of 124 in the amino acid sequence of SEQ ID NO: 2 includes, for example, lysine, arginine, ornithine, 2,4-diaminobutanoic acid, 2,3-diaminopropionic acid, and preferably, lysine.</p>
+      <p id="p-00057-en" num="0063">The term other amino acids substituted for tyrosine at position of 138 in the amino acid sequence of SEQ ID NO: 2 includes, for example, isoleucine, valine, leucine, methionine, cysteine, is, arginine, lysine, histidine or glutamine, preferably, isoleucine, valine, leucine, methionine, arginine or lysine, and more preferably, isoleucine or valine.</p>
+      <p id="p-00058-en" num="0064">The term other amino acids substituted for aspartic acid at position of 166 in the amino acid sequence of SEQ ID NO: 2 includes, for example, lysine, arginine, ornithine, 2,4-diaminobutanoic acid and 2,3-diaminopropionic acid, and preferably arginine.</p>
+      <p id="p-00059-en" num="0065">Where at least 3 amino acids selected from the group consisting of isoleucine at position of 90, proline at position of 115, glutamine at position of 124 and asparagine at position of 166 are substituted in the amino acid sequence of SEQ ID NO: 2, preferably, isoleucine at position of 90 is valine, proline at position of 115 is glutamic acid, glutamine at position of 124 is lysine and asparagine at position of 166 is arginine.</p>
+      <p id="p-00060-en" num="0066">In (b) above, the term “one or more amino acid(s) is/are substituted with other amino acid(s)” is intended to mean that the substitution of one or a plurality of amino acid residues occur at an optional position(s) in the same sequence and at one or a plurality of positions in the amino acid sequence.</p>
+      <p id="p-00061-en" num="0067">The range of “one or more” in the “one or more amino acids are substituted with other amino acids” is, for example, 1 to 35, 1 to 34, 1 to 33, 1 to 32, 1 to 31, 1 to 30, 1 to 29, 1 to 28, 1 to 27, 1 to 26, 1 to 25, 1 to 24, 1 to 23, 1 to 22, 1 to 21, 1 to 20, 1 to 19, 1 to 18, 1 to 17, 1 to 16, 1 to 15, 1 to 14, 1 to 13, 1 to 12, 1 to 11, 1 to 10, 1 to 9, 1 to 8, 1 to 7, 1 to 6 (1 to several), 1 to 5, 1 to 4, 1 to 3, 1 to 2 or 1. In general, the less the number of amino acids substituted, the more preferred. Such proteins may be produced by site-directed mutagenesis described in “Sambrook J. et al., Molecular Cloning: A Laboratory Manual, Third Edition, Cold Spring Harbor Laboratory Press (2001),” “Ausbel F. M. et al., Current Protocols in Molecular Biology, Supplement 1-38, John Wiley and Sons (1987-1997),” “Nuc. Acids. Res., 10, 6487 (1982)”, “Proc. Natl. Acad. Sci. USA, 79, 6409 (1982)”, “Gene, 34, 315 (1985)”, “Nuc. Acids. Res., 13, 4431 (1985)”, “Proc. Natl. Acad. Sci. USA, 82, 488 (1985)”, etc.</p>
+      <p id="p-00062-en" num="0068">The position(s) of the amino acids which are substituted at the positions other than at positions of 4, 11, 18, 27, 33, 43, 44, 54, 68, 72, 75, 90, 115, 124, 138 and 166 in the amino acid sequence of SEQ ID NO: 2 are not particularly limited, and include position(s) 1 to 20, preferably, 1 to 16, more preferably, 1 to 14, much more preferably, 1 to 12, and most preferably, 1 to 9 (1 to several), selected from the group consisting of positions 1, 2, 3, 13, 14, 15, 25, 30, 36, 70, 83, 106, 128, 153, 156, 157, 159, 162, 163 and 169. In particular, the substitution positions can be position(s) 1 to 9 (1 to several), preferably, 1 to 8, more preferably, 1 to 7, much more preferably, 1 to 6, and most preferably, 1 to 5 (5 or less), selected from the group consisting of positions 1, 2, 3, 13, 14, 153, 159, 163 and 169.</p>
+      <p id="p-00063-en" num="0069">Examples of amino acid residues which are mutually substitutable are given below. Amino acid residues in the same group are mutually substitutable.</p>
+      <p id="p-00064-en" num="0070">Group A: leucine, isoleucine, norleucine, valine, norvaline, alanine, 2-aminobutanoic acid, methionine, o-methylserine, t-butylglycine, t-butylalanine and cyclohexylalanine;</p>
+      <p id="p-00065-en" num="0071">Group B: aspartic acid, glutamic acid, isoaspartic acid, isoglutamic acid, 2-aminoadipic acid and 2-aminosuberic acid;</p>
+      <p id="p-00066-en" num="0072">Group C: asparagine and glutamine;</p>
+      <p id="p-00067-en" num="0073">Group D: lysine, arginine, ornithine, 2,4-diaminobutanoic acid and 2,3-diaminopropionic acid;</p>
+      <p id="p-00068-en" num="0074">Group E: proline, 3-hydroxyproline and 4-hydroxyproline;</p>
+      <p id="p-00069-en" num="0075">Group F: serine, threonine and homoserine; and,</p>
+      <p id="p-00070-en" num="0076">Group G: phenylalanine and tyrosine.</p>
+      <p id="p-00071-en" num="0077">In a preferred embodiment of the invention, the luciferase mutant is a luciferase mutant comprising the amino acid sequence of SEQ ID NO: 6, SEQ ID NO: 8, SEQ ID NO: 10, SEQ ID NO: 12 or SEQ ID NO: 16, more preferably, a luciferase mutant comprising the amino acid sequence of SEQ ID NO: 6, SEQ ID NO: 8, SEQ ID NO: 10 or SEQ ID NO: 16, and most preferably, a luciferase mutant comprising the amino acid sequence of SEQ ID NO: 6.</p>
+      <p id="p-00072-en" num="0078">The luciferase mutant of the present invention may further contain an additional peptide sequence at the N terminus and/or C terminus, preferably at the N terminus. The additional peptide sequence is at least one peptide sequence selected from the group consisting of a peptide sequence for purification, a peptide sequence for expressing the luciferase mutant of the present invention as a soluble protein and an epitope sequence capable of recognizing an antibody. The additional peptide sequence is preferably a peptide sequence for purification. In another preferred embodiment of the invention, the additional peptide sequence is at least one sequence selected from the group consisting of a peptide sequence for purification and a peptide sequence for expressing the luciferase mutant of the present invention as a soluble protein.</p>
+      <p id="p-00073-en" num="0079">Peptide sequences employed in the art may be used as the peptide sequence for purification. The peptide sequence for purification includes, for example, a histidine tag sequence with a consecutive amino acid sequence of at least 4 histidine residues and preferably at least 6 residues, an amino acid sequence with a binding domain of glutathione S-transferase into glutathione, the amino acid sequence of Protein A, etc.</p>
+      <p id="p-00074-en" num="0080">The peptide used to express the luciferase mutant of the present invention as a soluble protein includes, for example, polypeptides represented by formula (Z)<sub>n</sub>. The amino acid sequences for the polypeptides represented by formula (Z)<sub>n </sub>and the nucleic acid sequences encoding the same are described in, e.g., JPA KOKAI No. 2008-99669.</p>
+      <p id="p-00075-en" num="0081">Peptide sequences used in the art can be used as the epitope sequence capable of recognizing an antibody.</p>
+      <p id="p-00076-en" num="0082">The method for acquiring the luciferase mutant of the invention is not particularly limited. The luciferase mutant of the invention may be a protein synthesized by chemical synthesis, or a recombinant protein produced by a genetic engineering technique. When the luciferase mutant of the invention is to be chemically synthesized, synthesis may be carried out by, for example, the Fmoc (fluorenylmethyloxycarbonyl) method or the tBoc (t-butyloxycarbonyl) method. In addition, peptide synthesizers available from Advanced ChemTech, PerkinElmer, Pharmacia, Protein Technology Instrument, Synthecell-Vega, PerSeptive, Shimadzu Corporation, etc. may also be used for chemical synthesis. When the luciferase mutant of the invention is to be produced by a genetic engineering technique, the mutant may be produced by a conventional genetic recombination technique. More specifically, the luciferase mutant of the invention may be produced by inserting a polynucleotide (e.g., DNA) encoding the luciferase mutant of the invention into a suitable expression system. The polynucleotide encoding the luciferase mutant of the invention, expression of the luciferase mutant of the invention in an expression system or the like will be later described.</p>
+      <heading id="h-00013-en" level="1">2. Polynucleotide of the Invention</heading>
+      <p id="p-00077-en" num="0083">The present invention also provides a polynucleotide comprising a polynucleotide encoding the luciferase mutant of the invention described above. The polynucleotide of the invention may be any polynucleotide so long as it has a nucleotide sequence encoding the luciferase mutant of the invention, although a DNA is preferred. Examples of the DNA include genomic DNA, genomic DNA library, cellular or tissue cDNA, cellular or tissue cDNA library, synthetic DNA, etc. Vectors used in the libraries are not particularly limited and may be any of bacteriophages, plasmids, cosmids, phagemids, etc. Also, these vectors may be amplified directly by a Reverse Transcription Polymerase Chain Reaction (hereinafter abbreviated as RT-PCR) using the total RNA or mRNA fraction prepared from the cell or tissue described above.</p>
+      <p id="p-00078-en" num="0084">The polynucleotide of the invention includes the following polynucleotides.</p>
+      <p id="p-00079-en" num="0085">(i) A polynucleotide comprising a polynucleotide encoding the luciferase mutant comprising an amino acid sequence in which tyrosine at position of 138 is substituted with another amino acid and at least 3 amino acids selected from the group consisting of isoleucine at position of 90, proline at position of 115, glutamine at position of 124 and asparagine at position of 166 are further substituted with other amino acids, in the amino acid sequence of SEQ ID NO: 2; or,</p>
+      <p id="p-00080-en" num="0086">(ii) A polynucleotide comprising a polynucleotide encoding the luciferase mutant comprising an amino acid sequence in which tyrosine at position of 138 is substituted with another amino acid, at least 3 amino acids selected from the group consisting of isoleucine at position of 90, proline at position of 115, glutamine at position of 124 and asparagine at position of 166 are further substituted with other amino acids and one or more amino acid(s) is/are substituted with other amino acid(s) at position(s) other than at positions of 4, 11, 18, 27, 33, 43, 68, 72 and 75, in the amino acid sequence of SEQ ID NO: 2, and having a luciferase activity.</p>
+      <p id="p-00081-en" num="0087">The luciferase mutants of (i) and (ii) above are as those described above.</p>
+      <p id="p-00082-en" num="0088">A polynucleotide encoding a protein having a given amino acid sequence, in which one or more amino acids are substituted in the amino acid sequence, can be obtained by using a site-specific mutagenesis technique (see, e.g., Gotoh, T. et al., Gene 152, 271-275 (1995), Zoller, M. J., and Smith, M., Methods Enzymol. 100, 468-500 (1983), Kramer, W. et al., Nucleic Acids Res. 12, 9441-9456 (1984), Kramer W, and Fritz H. J., Methods. Enzymol. 154, 350-367 (1987), Kunkel, T. A., Proc. Natl. Acad. Sci. USA. 82, 488-492 (1985), Kunkel, Methods Enzymol. 85, 2763-2766 (1988); etc.), the methods using amber mutation (see, e.g., the gapped duplex method, Nucleic Acids Res., 12, 9441-9456 (1984), etc.), etc.</p>
+      <p id="p-00083-en" num="0089">Alternatively, mutations may also be introduced into the polynucleotide by PCR (cf., e.g., Ho S. N. et al., Gene, 77, 51 (1989), etc.) using a pair of primers bearing on the respective 5′ ends a sequence in which the targeted mutation (deletion, addition, substitution and/or insertion) has been introduced.</p>
+      <p id="p-00084-en" num="0090">Also, a polynucleotide encoding a partial fragment of protein, which is one type of the deletion mutant, can be obtained using as the primers an oligonucleotide having a sequence which matches the nucleotide sequence at the 5′ end of the region encoding the partial fragment to be produced in the polynucleotide encoding the target protein and an oligonucleotide having a sequence complementary to the nucleotide sequence at the 3′ end thereof, and performing PCR in which the polynucleotide encoding the target protein is used as a template.</p>
+      <p id="p-00085-en" num="0091">The polynucleotide of the present invention includes preferably a polynucleotide comprising a polynucleotide encoding the luciferase mutant comprising the amino acid sequence of SEQ ID NO: 6, SEQ ID NO: 8, SEQ ID NO: 10, SEQ ID NO: 12 or SEQ ID NO: 16, and more preferably, a polynucleotide comprising a polynucleotide encoding the luciferase mutant comprising the amino acid sequence of SEQ ID NO: 6.</p>
+      <p id="p-00086-en" num="0092">The polynucleotide encoding the luciferase mutant comprising the amino acid sequence of SEQ ID NO: 6 includes a polynucleotide comprising the nucleotide sequence of SEQ ID NO: 5. The polynucleotide encoding the luciferase mutant comprising the amino acid sequence of SEQ ID NO: 8 includes a polynucleotide comprising the nucleotide sequence of SEQ ID NO: 7. The polynucleotide encoding the luciferase mutant comprising the amino acid sequence of SEQ ID NO: 10 includes a polynucleotide comprising the nucleotide sequence of SEQ ID NO: 9. The polynucleotide encoding the luciferase mutant comprising the amino acid sequence of SEQ ID NO: 12 includes a polynucleotide comprising the nucleotide sequence of SEQ ID NO: 11. The polynucleotide encoding the luciferase mutant comprising the amino acid sequence of SEQ ID NO: 14 includes a polynucleotide comprising the nucleotide sequence of SEQ ID NO: 13. The polynucleotide encoding the luciferase mutant comprising the amino acid sequence of SEQ ID NO: 16 includes a polynucleotide comprising the nucleotide sequence of SEQ ID NO: 15.</p>
+      <p id="p-00087-en" num="0093">In some embodiments of the present invention, the polynucleotide is preferably a polynucleotide comprising a polynucleotide consisting of the nucleotide sequence of SEQ ID NO: 5, SEQ ID NO: 7, SEQ ID NO: 9, SEQ ID NO: 11 or SEQ ID NO: 15, and more preferably, a polynucleotide comprising a polynucleotide consisting of the nucleotide sequence of SEQ ID NO: 5.</p>
+      <p id="p-00088-en" num="0094">The polynucleotide of the present invention may further contain a polynucleotide encoding an additional peptide sequence at the 5′ end and/or 3′ end, preferably at the 5′ end. The polynucleotide encoding the additional peptide sequence includes a polynucleotide encoding at least one peptide sequence selected from the group consisting of a peptide sequence for purification, a peptide sequence for expressing the luciferase mutant of the present invention as a soluble protein, an epitope sequence capable of recognizing an antibody, and the like.</p>
+      <p id="p-00089-en" num="0095">Polynucleotides comprising nucleotide sequences encoding the peptide sequence for purification employed in the art can be used as the polynucleotide encoding the peptide sequence for purification. Examples of the peptide sequence for purification include those as described above.</p>
+      <p id="p-00090-en" num="0096">The polynucleotide encoding the peptide sequence used to express the luciferase mutant of the present invention as a soluble protein includes, for example, polypeptides represented by formula (Z)<sub>n</sub>. The amino acid sequences for the polypeptides represented by formula (Z)<sub>n </sub>and the nucleic acid sequences encoding the same are those as described above.</p>
+      <p id="p-00091-en" num="0097">Polynucleotides comprising nucleotide sequences encoding the epitope sequence capable of recognizing antibodies which are used in the art can be used as the polynucleotide encoding the antibody-recognizing epitope sequence.</p>
+      <heading id="h-00014-en" level="1">3. Recombinant Vector and Transformant of the Invention</heading>
+      <p id="p-00092-en" num="0098">The present invention further provides recombinant vectors and transformants comprising the polynucleotides of the present invention described above.</p>
+      <heading id="h-00015-en" level="2">Preparation of Recombinant Vector</heading>
+      <p id="p-00093-en" num="0099">The recombinant vector of the invention can be obtained by ligating (inserting) the polynucleotide (DNA) of the invention to (into) an appropriate vector. More specifically, the recombinant vector can be obtained by digesting the purified polynucleotide (DNA) with a suitable restriction enzyme, then inserting into a suitable vector at the restriction enzyme site or multiple-cloning site, and ligating to the vector. The vector for inserting the polynucleotide of the invention is not particularly limited as long as it is replicable in a host, and includes plasmids, bacteriophages, animal viruses, etc. Examples of plasmids include plasmids from <i>E. coli </i>(e.g., pBR322, pBR325, pUC118, pUC119, etc.), plasmids from <i>Bacillus subtilis </i>(e.g., pUB110, pTP5, etc.) and plasmids from yeast (e.g., YEp13, YEp24, YCp50, etc.). Examples of bacteriophages include, e.g., λ phage. Examples of animal viruses include retroviruses, vaccinia viruses and insect viruses (e.g., baculoviruses). In addition, a pCold I vector, a pCold II vector, a pCold III vector and a pCold IV vector (all manufactured by Takara Bio Inc.), a pcDNA3 vector, a PICZa vector (manufactured by Invitrogen Inc.) and the like may also be suitably used.</p>
+      <p id="p-00094-en" num="0100">The polynucleotide of the present invention is generally ligated in an expressible manner downstream of a promoter in a suitable vector. When the host used for transformation is an animal cell, the promoter is preferably an SV40-derived promoter, retrovirus promoter, metallothionein promoter, heat shock promoter, cytomegalovirus promoter, SRα promoter, CMV promoter, and so on. When the host is a bacterium of the genus <i>Escherichia</i>, Trp promoter, T7 promoter, lac promoter, recA promoter, λPL promoter, lpp promoter, etc. are preferred. When the host is a bacterium of the genus <i>Bacillus</i>, SPO1 promoter, SPO2 promoter, penP promoter, etc. are preferred. When the host is yeast, PHOS promoter, PGK promoter, GAP promoter, ADH 1 promoter, GAL promoter, etc. are preferred. When the host is an insect cell, polyhedrin promoter, P10 promoter, etc. are preferred.</p>
+      <p id="p-00095-en" num="0101">A low-temperature expression-inducible promoter may also be suitably used. Examples of the low-temperature expression-inducible promoter include promoter sequences for cold shock genes. The cold shock gene includes, for example, <i>E. coli </i>cold shock genes (e.g., cspA, cspB, cspG, cspI and csdA), <i>Bacillus caldolyticus </i>cold shock genes (e.g., Bc-Csp), <i>Salmonella enterica </i>cold shock genes (e.g., cspE) and <i>Erwinia carotovora </i>cold shock genes (e.g., cspG). Among others, cspA promoter, cspB promoter, cspG promoter, cspI promoter, csdA promoter and the like can be advantageously used as the low-temperature expression-inducible promoter.</p>
+      <p id="p-00096-en" num="0102">In addition to the foregoing, the recombinant vector of the invention may further contain, if desired, an enhancer, a splicing signal, a polyA addition signal, a ribosome binding sequence (SD sequence), a selection marker, etc., and provided for use. The selection marker includes, for example, a dihydrofolate reductase gene, an ampicillin resistance gene, a neomycin resistance gene, etc.</p>
+      <heading id="h-00016-en" level="2">Preparation of Transformant</heading>
+      <p id="p-00097-en" num="0103">The thus obtained recombinant vector comprising the polynucleotide of the invention is introduced into an appropriate host to prepare the transformant. The host is not particularly limited as long as it is capable of expressing the polynucleotide (DNA) of the invention, and may be bacteria of the genera <i>Escherichia, Bacillus, Pseudomonas </i>and <i>Rhizobium</i>, yeast, animal cells, insect cells, etc. Bacteria of the genus <i>Escherichia </i>include <i>Escherichia coli</i>, etc. Bacteria of the genus <i>Bacillus </i>include <i>Bacillus subtilis</i>, etc. Bacteria of the genus <i>Pseudomonas </i>include <i>Pseudomonas putida</i>, etc. Bacteria of the genus <i>Rhizobium </i>include <i>Rhizobium meliloti</i>, etc. Yeast includes <i>Saccharomyces cerevisiae, Schizosaccharomyces pombe</i>, etc. Animal cells include primary cell cultures, iPS cells, cultured cell lines (CHO cells, HEK293 cells, HL-60 cells, HeLa cells, MDCK cells, NIH3T3cells, PC12 cells), etc. Insect cells include Sf9, Sf21, etc.</p>
+      <p id="p-00098-en" num="0104">The method of transfecting the recombinant vector into the host and the method of transformation by the same can be performed according to various general methods. The method for transfecting the recombinant vector into the host cell includes the calcium phosphate method (Virology, 52, 456-457 (1973)), the lipofection method (Proc. Natl. Acad. Sci. USA, 84, 7413 (1987)), the electroporation method (EMBO J., 1, 841-845 (1982)), etc. The method for transformation of the bacteria of the genus <i>Escherichia </i>includes the methods described in, e.g., Proc. Natl. Acad. Sci. USA, 69, 2110 (1972), Gene, 17, 107 (1982), etc. The method for transformation of the bacteria of the genus <i>Bacillus </i>includes the method described in Molecular &amp; General Genetics, 168, 111 (1979), etc. The method for transforming yeast includes the method described in Proc. Natl. Acad. Sci. USA, 75, 1929 (1978), etc. The method for transformation of animal cells includes the method described in Virology, 52, 456 (1973), etc. The method for transformation of insect cells includes the method described in Bio/Technology, 6, 47-55 (1988), etc. Thus, the transformant transformed with the recombinant vector comprising the polynucleotide encoding the luciferase mutant of the invention (the polynucleotide of the invention) can be obtained.</p>
+      <heading id="h-00017-en" level="2">Expression Vector and Transformant Comprising Low-Temperature</heading>
+      <heading id="h-00018-en" level="2">Expression-Inducible Promoter Sequence </heading>
+      <p id="p-00099-en" num="0105">An expression vector comprising the low-temperature expression-inducible promoter sequence is preferred as the expression vector among others.</p>
+      <p id="p-00100-en" num="0106">Specifically, the expression vector comprising the low-temperature expression-inducible promoter sequence is intended to mean an expression vector comprising the following promoter sequence and coding sequence:</p>
+      <p id="p-00101-en" num="0000">(1) a low-temperature expression-inducible promoter sequence; and, <br /> (2) a coding sequence comprising the polynucleotide of the invention. </p>
+      <p id="p-00102-en" num="0107">The low-temperature expression-inducible promoter sequence is intended to mean a promoter sequence which is capable of inducing expression of the protein by lowering the temperature from the culture conditions under which host cells can grow. Examples of the low-temperature expression-inducible promoter are promoters for genes encoding cold shock proteins (cold shock genes). Examples of the cold shock gene promoters include those as described above.</p>
+      <p id="p-00103-en" num="0108">The temperature at which the low-temperature expression-inducible promoter used in the invention is capable of inducing expression is generally 30° C. or less, preferably 25° C. or less, more preferably 20° C. or less, and most preferably 15° C. or less. In order to induce the expression more efficiently, however, the expression induction is generally performed at 5° C. or more, preferably at 10° C. or more, and most preferably at approximately 15° C.</p>
+      <p id="p-00104-en" num="0109">In preparing the expression vector of the invention comprising the low-temperature expression-inducible promoter sequence, the pCold I vector, pCold II vector, pCold III vector and pCold IV vector (all manufactured by Takara Bio Inc.) can be suitably used as the vector for insertion of the polynucleotide of the invention. The protein can be produced as a soluble protein in the cytoplasm in a host cell when expression is performed in a prokaryotic host cell using these vectors.</p>
+      <p id="p-00105-en" num="0110">Prokaryotic cells are preferred as the host into which the expression vector comprising the low-temperature expression-inducible promoter sequence is introduced, more preferably, <i>E. coli</i>, and particularly preferably, the BL21 and JM109 strains. Among others, the BL21 strain is most preferred.</p>
+      <p id="p-00106-en" num="0111">Temperatures for incubation at which the transformant carrying the expression vector comprising the low-temperature expression-inducible promoter sequence grows are generally 25 to 40° C. and preferably 30 to 37° C. Temperatures for inducing the expression are generally 4 to 25° C., preferably 10 to 20° C., more preferably 12 to 18° C., and most preferably 15° C.</p>
+      <heading id="h-00019-en" level="1">4. Production of Luciferase Mutant of the Invention </heading>
+      <p id="p-00107-en" num="0112">The present invention further provides a method for producing the luciferase mutant of the invention, which comprises the steps of culturing the transformant described above to produce the luciferase mutant of the invention. The luciferase mutant of the invention can be produced, for example, by culturing the transformant described above under conditions where the polynucleotide (DNA) encoding the luciferase mutant of the invention can be expressed, producing/accumulating and then separating/purifying the luciferase mutant of the invention.</p>
+      <heading id="h-00020-en" level="2">Incubation of Transformant</heading>
+      <p id="p-00108-en" num="0113">The transformant of the invention can be incubated in a conventional manner used for incubation of a host. By the incubation, the luciferase mutant of the invention is produced by the transformant and accumulated within the transformant or in the culture medium.</p>
+      <p id="p-00109-en" num="0114">The medium used for culturing the transformant using bacteria of the genus <i>Escherichia </i>or the genus <i>Bacillus </i>as a host may be any of a natural medium and a synthetic medium as far as it is a medium which contains carbon sources, nitrogen sources, inorganic salts, etc. necessary for growth of the transformant, and in which the transformant can efficiently grow. Examples of carbon sources which can be used are carbohydrates such as glucose, fructose, sucrose, starch, etc.; organic acids such as acetic acid, propionic acid, etc.; alcohols such as ethanol, propanol, and the like. Examples of nitrogen sources which can be used include ammonia, ammonium salts of inorganic or organic acids such as ammonium chloride, ammonium sulfate, ammonium acetate, ammonium phosphate, etc., and other nitrogen-containing compounds, and further include peptone, meat extracts, corn steep liquor, and the like. Examples of inorganic salts include monobasic potassium phosphate, dibasic potassium phosphate, magnesium phosphate, magnesium sulfate, sodium chloride, ferrous sulfate, manganese sulfate, copper sulfate, calcium carbonate, etc. If necessary, antibiotics such as ampicillin or tetracycline can be added to the medium during incubation. Where the transformant transformed with the expression vector using an inducible promoter is cultured, an inducer may also be added to the medium, if necessary. For example, when the transformant transformed with an expression vector using a Lac promoter is cultured, isopropyl-β-D-thiogalactopyranoside (IPTG), etc. may be added to the medium and indoleacrylic acid (IAA), etc. may be added to the medium in culturing the transformant transformed with an expression vector using a trp promoter.</p>
+      <p id="p-00110-en" num="0115">When the host is bacteria of the genus <i>Escherichia</i>, incubation is performed generally at approximately 15 to 43° C. for approximately 3 to 24 hours. If necessary, aeration and agitation may be applied. When the host is bacteria of the genus <i>Bacillus</i>, incubation is performed generally at approximately 30 to 40° C. for approximately 6 to 24 hours. If necessary, aeration and agitation may be applied.</p>
+      <p id="p-00111-en" num="0116">Medium for incubation of the transformant when the host is yeast include Burkholder's minimal medium (Proc. Natl. Acad. Sci. USA, 77, 4505 (1980)) and an SD medium containing 0.5% (w/v) Casamino acids (Proc. Natl. Acad. Sci. USA, 81, 5330 (1984)). Preferably, the pH of the medium is adjusted to approximately 5 to 8. Incubation is performed generally at approximately 20 to 35° C. for approximately 24 to 72 hours. If necessary, aeration and agitation may be applied.</p>
+      <p id="p-00112-en" num="0117">Medium for culturing the transformant when the host is an animal cell include MEM medium supplemented with approximately 5 to 20% (v/v) fetal calf serum (Science, 122, 501 (1952)), DMEM medium (Virology, 8, 396 (1959)), etc. Preferably, the pH of the medium is adjusted to approximately 6 to 8. Incubation is performed generally at approximately 30 to 40° C. for approximately 15 to 60 hours. If necessary, aeration and agitation may be applied.</p>
+      <p id="p-00113-en" num="0118">Medium for culturing the transformant when the host is an insect cell include Grace's insect medium (Nature, 195, 788 (1962)) to which additives such as 10% (v/v) immobilized bovine serum are suitably added. Preferably, the pH of the medium is adjusted to approximately 6.2 to 6.4. Incubation is performed generally at approximately 27° C. for approximately 3 to 5 days. If necessary, aeration and agitation may be applied.</p>
+      <p id="p-00114-en" num="0119">Temperatures for incubation at which the transformant transformed with the expression vector comprising the low-temperature expression-inducible promoter sequence and temperatures for expression induction are as described above.</p>
+      <heading id="h-00021-en" level="2">Separation/Purification of Luciferase Mutant of the Invention</heading>
+      <p id="p-00115-en" num="0120">The luciferase mutant of the invention can be obtained by separating/purifying the luciferase mutant of the invention from the culture described above. As used herein, the culture is intended to mean any one of a culture broth, cultured cells or cultured bacteria and a cell lysate of the cultured cells or cultured bacteria. The luciferase mutant of the invention can be separated and purified in a conventional manner.</p>
+      <p id="p-00116-en" num="0121">Specifically, when the luciferase mutant of the invention accumulates in the cultured bacteria or cultured cells, after completion of the incubation the bacteria or cells are disrupted in a conventional manner (e.g., ultrasonication, lysozyme, freezing and thawing, etc.,) and then a crude extract of the luciferase mutant of the invention can be obtained in a conventional manner (e.g., centrifugation, filtration, etc.). When the luciferase mutant of the invention accumulates in the periplasmic space, after completion of the incubation the extract containing the luciferase mutant of the invention can be obtained in a conventional manner (e.g., the osmotic shock method, etc.). When the luciferase mutant of the invention accumulates in the culture broth, after completion of the incubation the culture supernatant containing the luciferase mutant of the invention can be obtained by separating the bacteria or cells and the culture supernatant in a conventional manner (e.g., centrifugation, filtration, etc.).</p>
+      <p id="p-00117-en" num="0122">The luciferase mutant of the invention contained in the extract or culture supernatant thus obtained can be purified by conventional methods of separation and purification. Examples of these methods for separation and purification which may be used include ammonium sulfate precipitation, gel filtration chromatography, ion-exchange chromatography, affinity chromatography, reversed-phase high-performance liquid chromatography, dialysis, ultrafiltration, etc., alone or in a suitable combination thereof. When the luciferase mutant of the invention contains the peptide sequence for purification described above, it is preferred to perform purification using the same. Specifically, when the luciferase mutant of the invention contains a histidine tag sequence, nickel chelate affinity chromatography may be used; when the luciferase mutant of the invention contains the binding domain of S-transferase to glutathione, affinity chromatography with a glutathione-binding gel may be used; when the luciferase mutant of the invention contains the amino acid sequence of Protein A, antibody affinity chromatography may be used.</p>
+      <heading id="h-00022-en" level="1">5. Use of Luciferase Mutant of the Invention</heading>
+      <heading id="h-00023-en" level="2">Use as Detection Marker by Luminescence</heading>
+      <p id="p-00118-en" num="0123">The luciferase mutant of the invention can be used as a detection marker which emits luminescence in the presence of a luciferin (hereinafter “detection marker of the present invention”). The detection marker of the present invention can be utilized for detection of the target substance in, e.g., an immunoassay, a hybridization assay, etc.</p>
+      <p id="p-00119-en" num="0124">The luciferase mutant of the invention can be expressed, e.g., as a fusion protein with a target protein, and introduced into cells by means of the microinjection method, etc., and the resulting product can be used to determine distribution of the target protein described above. The distribution of such a target protein or the like can be determined by using detection methods such as luminescence imaging. In addition to the introduction into cells by means of the microinjection method or the like, the luciferase mutant of the invention can be expressed in cells to provide for use.</p>
+      <p id="p-00120-en" num="0125">The luminescence substrate (luciferin) used is preferably coelenterazines analogues, and particularly preferably, coelenterazine.</p>
+      <heading id="h-00024-en" level="2">Use as Reporter Protein</heading>
+      <p id="p-00121-en" num="0126">The luciferase mutant of the invention may also be used as a reporter protein to assay the transcription activity of promoters, etc. In this case, the polynucleotide of the invention is used as a reporter gene and the luciferase mutant encoded by the reporter gene is contacted with luciferin. As used herein, the term “contact” is intended to mean that the luciferase mutant of the invention and a luciferin are allowed to be present in the same reaction system or culture system, which includes, for example, addition of a luciferin to a culture container charged with cells expressing the luciferase mutant of the invention, mixing the cells with a luciferin, and incubation of the cells in the presence of a luciferin. The polynucleotide encoding the luciferase mutant of the invention (i.e., the polynucleotide of the invention) is fused to a target promoter or some other expression control sequence (e.g., an enhancer, etc.) to construct a vector. By introducing the vector into a host cell and detecting the luminescence from the luciferase mutant of the invention in the presence of a luciferin (luminescence substrate), the activity of the target promoter or some other expression control sequence can be assayed. Furthermore, the expressed luciferase mutant is reacted with coelenterazines analogues and the luminescence generated may also be visualized in pictures by using a high-sensitive detector.</p>
+      <p id="p-00122-en" num="0127">The luciferin used is preferably coelenterazines analogues, and particularly preferably, coelenterazine, as described above.</p>
+      <p id="p-00123-en" num="0128">The cells used are preferably animal cells. In a preferred embodiment of the invention, the luciferase mutant is hardly secreted outside of cells in the case of animal cells.</p>
+      <p id="p-00124-en" num="0129">The polynucleotide of the invention can be used as a reporter gene in such a manner as described above.</p>
+      <heading id="h-00025-en" level="2">Material for Amusement Supplies</heading>
+      <p id="p-00125-en" num="0130">The luciferase mutant of the invention has the activity of catalyzing the reaction where a luciferin is oxidized with oxygen molecules to form oxyluciferin in its excited state. The oxyluciferin in the excited state emits visible light to decay to the ground state. Accordingly, the luciferase mutant of the invention can be used preferably as a luminescent material for amusement supplies. Examples of such amusement supplies are luminescent soap bubbles, luminescent ice bars, luminescent candies, luminescent color paints, etc. These amusement supplies of the invention can be prepared in a conventional manner.</p>
+      <p id="p-00126-en" num="0131">The luciferin used is preferably coelenterazines analogues, and particularly preferably, coelenterazine, as described above.</p>
+      <heading id="h-00026-en" level="2">Bioluminescence Resonance Energy Transfer (BRET) Method</heading>
+      <p id="p-00127-en" num="0132">By utilizing the principle of interaction between molecules by the bioluminescence resonance energy transfer (BRET) method, the luciferase mutant of the invention is available for analytical methods such as analysis of physiological functions, assay of enzyme activities, etc.</p>
+      <p id="p-00128-en" num="0133">For instance, when the luciferase mutant of the invention is used as a donor and the fluorescent substance (e.g., an organic compound, a fluorescent protein, etc.) is used as an acceptor, the interactions between the donor and acceptor above can be detected by inducing bioluminescence resonance energy transfer (BRET) between them.</p>
+      <p id="p-00129-en" num="0134">In an embodiment of the present invention, the organic compound used as an acceptor includes Hoechist3342, Indo-1, DAP1, etc. In another embodiment of the present invention, the fluorescent protein used as an acceptor includes a green fluorescent protein (GFP), a blue fluorescent protein (BFP), a muted GFP fluorescent protein, phycobilin, etc.</p>
+      <p id="p-00130-en" num="0135">In a preferred embodiment of the present invention, the physiological functions to be analyzed include an orphan receptor (especially, a G protein-coupled receptor), apoptosis, transcription regulation by gene expression, etc. In a further preferred embodiment of the present invention, the enzyme to be analyzed is protease, esterase, kinase, or the like.</p>
+      <p id="p-00131-en" num="0136">Analysis of the physiological functions by the BRET method can be performed by known methods, for example, by modifications of the method described in Biochem. J. 2005, 385, 625-637 or Expert Opin. Ther Tarets, 2007 11: 541-556. Enzyme activities may also be assayed by known methods, for example, by modifications of the method described in Nature Methods 2006, 3:165-174 or Biotechnol. J. 2008, 3:311-324.</p>
+      <p id="p-00132-en" num="0137">The luciferin used is preferably coelenterazines analogues, and particularly preferably, coelenterazine, as described above.</p>
+      <heading id="h-00027-en" level="1">6. Kit of the Invention</heading>
+      <p id="p-00133-en" num="0138">The present invention also provides a kit comprising any one selected from the luciferase mutant of the invention, the polynucleotide of the invention, the recombinant vector of the invention and the transformant of the invention. The kit of the invention may further contain a luciferin.</p>
+      <p id="p-00134-en" num="0139">The luciferin used is preferably coelenterazines analogues, and particularly preferably, coelenterazine, as described above.</p>
+      <p id="p-00135-en" num="0140">The kit of the present invention may be prepared with conventional materials by conventional methods. The kit of the present invention may further contain, e.g., sample tubes, plates, instructions for the kit user, solutions, buffers, reagents, and samples suitable for standardization or control samples. The kit of the present invention may further contain salts including halide ions.</p>
+      <p id="p-00136-en" num="0141">The kit of the present invention can be used for the aforesaid measurement using a reporter protein or a reporter gene, the detection marker with luminescence, or the analysis of physiological functions or measurement of enzyme activities by the BRET method. The kit can also be used in the method for luminescence reaction as described below.</p>
+      <heading id="h-00028-en" level="1">7. Method for Luminescence Reaction</heading>
+      <heading id="h-00029-en" level="2">Luminescence Activity</heading>
+      <p id="p-00137-en" num="0142">The luciferase mutant of the invention has the ability of catalyzing the reaction which involves oxidization of a luciferin with oxygen molecules to form an oxyluciferin in its excited state. The oxyluciferin in the excited state emits light on returning to the ground state. That is, the luciferase mutant of the invention catalyzes the luminescence reaction in which a luciferin is used as a substrate to cause luminescence. This activity is sometimes referred to as “the luminescence activity” in the specification.</p>
+      <heading id="h-00030-en" level="2">Luminescence Reaction</heading>
+      <p id="p-00138-en" num="0143">The luminescence reaction using the luciferase mutant of the invention in which a luciferin is used as a substrate can be performed by contacting the luciferase mutant of the invention with the luciferin. As used herein, the term “contact” is intended to mean that the luciferase mutant of the invention and a luciferin are allowed to be present in the same reaction system, which includes, for example, addition of the luciferase mutant of the invention to a container charged with a luciferin, addition of a luciferin to a container charged with the luciferase mutant of the invention and mixing the luciferase mutant of the invention with a luciferin. The reaction can be carried out under conditions conventionally used for the luminescence reaction using <i>Oplophorus </i>luciferase or under conditions modified therefrom.</p>
+      <p id="p-00139-en" num="0144">Specifically, solvents for the reaction which are employed are, for example, a buffer solution such as Tris-HCl buffer, sodium phosphate buffer, etc., water, and the like.</p>
+      <p id="p-00140-en" num="0145">Temperatures for the reaction are generally approximately 4° C. to 40° C. and preferably approximately 4° C. to 25° C.</p>
+      <p id="p-00141-en" num="0146">In the reaction solution, pH is generally approximately 5 to 10, preferably approximately 6 to 9, more preferably approximately 7 to 8 and most preferably approximately 7.5.</p>
+      <p id="p-00142-en" num="0147">The luciferin is preferably coelenterazines analogues, and particularly preferably, coelenterazine, as described above.</p>
+      <p id="p-00143-en" num="0148">The luciferin may also be added to the reaction system in the form of a solution in a polar solvent such as dimethylformamide, dimethylsulfoxide, etc., or in an alcohol such as methanol, ethanol, butanol, etc.</p>
+      <heading id="h-00031-en" level="2">Activation of Luminescence Activity</heading>
+      <p id="p-00144-en" num="0149">Luciferase activity of the luciferase mutant of the invention can be activated by halide ions, nonionic surfactants, etc.</p>
+      <p id="p-00145-en" num="0150">Examples of the halide ions are fluorine ions, chlorine ions, bromine ions and iodine ions; preferred are chlorine ions, bromine ions and iodine ions.</p>
+      <p id="p-00146-en" num="0151">The concentration of halide ions is generally approximately 10 μM to 100 mM, preferably approximately 100 μM to 50 mM and particularly preferably approximately 1 mM to 20 mM.</p>
+      <p id="p-00147-en" num="0152">Addition of the halide ions to the reaction system is performed by a method which comprises adding the halide ions in a salt form. The salts used are alkali metal salts such as sodium salts, potassium salts, etc.; alkaline earth metal salts such as calcium salts, magnesium salts, barium salts, etc. More specific examples are NaF, NaCl, NaBr, NaI, KF, KCl, KBr, KI, CaF<sub>2</sub>, CaCl<sub>2</sub>, CaBr<sub>2</sub>, CaI<sub>2</sub>, MgF<sub>2</sub>, MgCl<sub>2</sub>, MgBr<sub>2</sub>, MgI<sub>2</sub>, etc.</p>
+      <p id="p-00148-en" num="0153">Examples of nonionic surfactants which are commercially available (trade name) include Tween 20 (polyoxyethylene sorbitan monolaurate), Tween 80 (polyoxyethylene sorbitan monooleate), Triton X-100 (polyethylene glycol-p-isooctylphenyl ether), Briji-58 (polyoxyethylene (20) cetyl ether), Nonidet P-40 (ethylphenolpoly(ethylene glycol ether)n), etc., and preferably, Tween 20, Triton X-100, etc.</p>
+      <p id="p-00149-en" num="0154">Concentration of the nonionic surfactant is generally approximately 0.0002% (w/v) to 0.2% (w/v), preferably, approximately 0.001% (w/v) to 0.1% (w/v), and particularly preferably, approximately 0.05% (w/v) to 0.02% (w/v).</p>
+      <p id="p-00150-en" num="0155">Regardless of their purposes, all of the documents and publications described in the specification are incorporated herein by reference, each in its entirety.</p>
+      <p id="p-00151-en" num="0156">Unless otherwise indicated with respect to the embodiments and working examples, the methods described in standard sets of protocols such as J. Sambrook, E. F. Fritsch &amp; T. Maniatis (Ed.), Molecular cloning, a laboratory manual (4th edition), Cold Spring Harbor Press, Cold Spring Harbor, N.Y. (2012); F. M. Ausubel, R. Brent, R. E. Kingston, D. D. Moore, J. G. Seidman, J. A. Smith, K. Struhl (Ed.), Current Protocols in Molecular Biology, John Wiley &amp; Sons Ltd., etc. or modifications or variations thereof are used. When commercially available reagent kits or measuring apparatuses are used, protocols attached thereto are used unless otherwise indicated.</p>
+      <p id="p-00152-en" num="0157">The objects, characteristics and advantages of the present invention as well as the idea thereof are apparent to those skilled in the art from the descriptions given herein. Based on the description given herein, those skilled in the art can easily reproduce the present invention.</p>
+      <p id="p-00153-en" num="0158">It can be understood that the embodiments of the invention, specific working examples, etc. are disclosed as preferred embodiments of the present invention. These descriptions are only for illustrative and explanatory purposes and are not intended to restrict the invention thereto. It is further apparent to those skilled in the art that various modifications may be made based on the descriptions given herein within the intent and scope of the present invention disclosed herein.</p>
+      <heading id="h-00032-en" level="1">EXAMPLES</heading>
+      <p id="p-00154-en" num="0159">Hereinafter, the present invention will be described with reference to specific examples but is not deemed to be limited thereto.</p>
+      <heading id="h-00033-en" level="1">Example 1</heading>
+      <heading id="h-00034-en" level="1">Preparation of Chimeric Gene of 19kOLase (KAZ) and nanoKAZ</heading>
+      <p id="p-00155-en" num="0160">A chimeric gene of the 19 kDa protein (hereinafter also designated as 19kOLase or KAZ) of native <i>Oplophorus </i>luciferase having luminescence activity and nanoKAZ (hereinafter designated as WNanoKAZ gene) was prepared by the following procedure. PCR was performed with two PCR primers using a PCR Kit (manufactured by Takara Bio Inc.) in which the vector pCold-ZZ-KAZ for soluble expression of native 19kOLase protein (nucleotide sequence of SEQ ID NO: 1, amino acid sequence of SEQ ID NO: 2) described in Inouye et al. (2008) Biochem. Biophys. Res. Commun. 376: 448-453 was used as a template (cycle conditions: 25 cycles; 1 min/94° C., 1 min/50° C., 1 min/72° C.). Specifically, the DNA fragment carrying the recognition sites for restriction enzyme EcoRI at the 5′ end and restriction enzyme SalI at the 3′ end of the gene encoding position 1 to 82 of the amino acid sequence of SEQ ID NO: 2 was prepared by PCR.</p>
+      <heading id="h-00035-en" level="2">Primers Used to Prepare the DNA Fragment:</heading>
+      <p id="p-00156-en" num="0161" />
+      <p id="p-00157-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" tabstyle="monospace">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>KAZ-8N/EcoRI</entry>
+                </row>
+                <row>
+                  <entry>(SEQ ID NO: 19)</entry>
+                </row>
+                <row>
+                  <entry>(5′gcg GAA TTC TTT ACG TTG GCA GAT TTC GTT GGA 3′)</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>KAZ-31/SalI247-R </entry>
+                </row>
+                <row>
+                  <entry>(SEQ ID NO: 20)</entry>
+                </row>
+                <row>
+                  <entry>(5′gcc GTC GAC GGG GTA AAC AAC TTT GAA GAT CAT 3′)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00158-en" num="0162">The DNA fragment amplified by PCR with the primers above was purified using a PCR purification kit (manufactured by Qiagen, Inc.) and digested with the restriction enzymes of EcoRI/SalI in a conventional manner.</p>
+      <p id="p-00159-en" num="0163">On the other hand, the pCold-ZZ-P-nanoKAZ vector for soluble expression of the mutated KAZ with 16 mutations (SEQ ID NO: 4, hereinafter also designated as nanoKAZ) described in Inouye et al (2013) Biochem. Biophys. Res. Commun. 437: 23-28 was digested with the restriction enzymes of EcoRI and SalI to give the pCold-ZZ-P-vector carrying the gene encoding position 83 to 169 of the amino acid sequence of nanoKAZ of SEQ ID NO: 4, followed by ligation with the gene fragment encoding position 1 to 82 of the amino acid sequence of native KAZ described above. As a result, the expression vector pCold-ZZ-P-WNanoKAZ for the chimeric protein having the amino acid sequence of position 1 to 82 of native KAZ and the amino acid sequence of position 83 to 169 of nanoKAZ was obtained.</p>
+      <p id="p-00160-en" num="0164">The nucleotide sequence of the insert DNA (WNanoKAZ gene) in pCold-ZZ-P-WNanoKAZ is shown in SEQ ID NO: 5. The amino acid sequence of the protein encoded by the WNanoKAZ gene (hereinafter designated as WNanoKAZ) is shown in SEQ ID NO: 6. The amino acid substitutions in the KAZ protein by constructing the chimeric (WNanoKAZ) gene are 5 positions shown in TABLE 1.</p>
+      <p id="p-00161-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Substituted amino acids and nucleotides in WNanoKAZ</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="84pt" align="left" />
+              <colspec colname="1" colwidth="126pt" align="center" />
+              <colspec colname="2" colwidth="7pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Nucleotide sequence</entry>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="77pt" align="left" />
+              <colspec colname="3" colwidth="56pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Substitution</entry>
+                  <entry>Substitution</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Substituted position</entry>
+                  <entry>(before)</entry>
+                  <entry>(after)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>of amino acid</entry>
+                  <entry>(Wild type = KAZ)</entry>
+                  <entry>(WNanoKAZ)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>I90V</entry>
+                  <entry>268 ATT (I)</entry>
+                  <entry>268 GTC (V)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>P115E</entry>
+                  <entry>343 CCT (P)</entry>
+                  <entry>343 GAG (E)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Q124K</entry>
+                  <entry>370 CAG (Q)</entry>
+                  <entry>370 AAG (K)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Y138I</entry>
+                  <entry>412 TAT (Y)</entry>
+                  <entry>412 ATC (I)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>N166R</entry>
+                  <entry>496 AAC (N)</entry>
+                  <entry>496 AGA (R)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00036-en" level="1">Example 2</heading>
+      <heading id="h-00037-en" level="1">Expression of WNanoKAZ in <i>E. coli </i>and Preparation of Crude Enzyme Solution</heading>
+      <p id="p-00162-en" num="0165">In order to express WNanoKAZ in <i>E. coli</i>, pCold-ZZ-P-WNanoKAZ obtained in EXAMPLE 1 was used. The <i>E. coli </i>BL21 strain (Novagen, Madison, Wis.) was used as a host cell. The BL21 strain carrying the recombinant plasmid was incubated in 5 mL of Luria-Bertani medium (hereinafter designated as LB medium) containing ampicillin (50 μg/mL) at 37° C. for 17 hours. The seed culture of 0.1 mL was inoculated to 10 mL of LB medium and incubated for 3 hours, followed by cooling in freezing water for 1 hour. IPTG was added to the culture medium at a final concentration of 0.1 mM, followed by incubation at 15° C. for further 19 hours. After completion of the incubation, 1 mL of the culture medium was collected by centrifugation at 10,000 rpm for 2 minutes. The collected <i>E. coli </i>cells were suspended in 0.5 mL of 30 mM Tris-HCl (pH 7.6)-10 mM EDTA. The cells were disrupted by sonication for 3 seconds using a Branson Model 250 Sonifire (Danbury, Conn.) to give a crude enzyme solution. Then, DTT was added to the crude enzyme solution at a final concentration of 1 mM. After the mixture was allowed to stand in freezing water over 8 hours or more, the luminescence activity was measured.</p>
+      <heading id="h-00038-en" level="1">Example 3</heading>
+      <heading id="h-00039-en" level="1">Assay for Luminescence Activity of WNanoKAZ in Crude Enzyme Solution</heading>
+      <p id="p-00163-en" num="0166">1 μl of the crude enzyme solution obtained in EXAMPLE 2 was added to 100 μl of 30 mM Trix-HCl (pH 7.6)-10 mM EDTA (Wako Pure Chemical Industries, Ltd.) containing 1 μg of coelenterazine (manufactured by JINC Corp.), luminescence reaction was started. Luminescence activity was measured for 60 seconds using a luminometer (manufactured by Atto Inc.: AB2200); the maximum intensity of luminescence (I<sub>max</sub>) was given as a relative luminescence activity.</p>
+      <p id="p-00164-en" num="0167">As a result, WNanoKAZ displayed 64-fold higher activity than native KAZ, and dnKAZ (amino acid sequence of SEQ ID NO: 18; in nanoKAZ the KLGTTMV peptide is added to the N terminus of dnKAZ), which is the mutated KAZ with 16 mutations, displayed 7.4-fold higher activity than that of native KAZ, as shown in TABLE 2. The luminescence activity was enhanced by introducing amino acid substitutions at 5 positions.</p>
+      <p id="p-00165-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Luminescence activity of WNanoKAZ, KAZ and dnKAZ</entry>
+                </row>
+                <row>
+                  <entry>in crude enzyme solution</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="140pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Expression vector</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>(pCold-ZZ-P-)</entry>
+                  <entry>Relative luminescence activity (I<sub>max</sub>)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>KAZ</entry>
+                  <entry>1.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>WNanoKAZ</entry>
+                  <entry>64</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>dnKAZ</entry>
+                  <entry>7.4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00040-en" level="1">Example 4</heading>
+      <heading id="h-00041-en" level="1">Secretory Expression Vector for WNanoKAZ Using the Secretory Signal Peptide Sequence of <i>Gaussia </i>Luciferase</heading>
+      <p id="p-00166-en" num="0168">The expression vector for WNanoKAZ was constructed as follows. Firstly, a novel vector pcDNA3-GLsp for expression in animal cultured cells was constructed. Specifically, the secretory signal peptide sequence of <i>Gaussia </i>luciferase was obtained from pcDNA3-GLuc vector (manufactured by Prolume Ltd.) by PCR using the GLsp-1R/EcoRI primer (SEQ ID NO: 21: 5′ ggc GAA TTC GGT GGG CTT GGC CTC GGC CAC 3′, EcoRI sequence underlined) and T7 primer (SEQ ID NO: 22: 5′ TAATACG ACTCACTATAGGG 3′) by PCR. After digesting with HindIII/EcoRI, the resultant fragment was inserted into the HindIII/EcoRI site of pcDNA3 vector (manufactured by Invitrogen Inc.) to construct a novel expression vector pcDNA3-GLsp. That is, the novel expression vector is under the control of the CMV promoter, followed by the Kozak sequence, the secretory signal peptide sequence of <i>Gaussia </i>luciferase and a multiple-cloning site sequence.</p>
+      <p id="p-00167-en" num="0169">Next, the expression vector for WNanoKAZ was constructed as follows, using the novel expression vector pcDNA3-GLsp. The DNA fragment obtained in EXAMPLE 1 was digested with the restriction enzymes of EcoRI/XbaI in a conventional manner and then ligated to the EcoRI-XbaI site of pcDNA3-GLsp to construct the expression vector pcDNA3-GLsp-WNanoKAZ. The gene sequence inserted was confirmed by sequencing using a DNA Sequencer (manufactured by ABI Inc.). As a result, it was confirmed that the insert gene sequence was the nucleotide sequence shown by SEQ ID NO: 5 (WNanoKAZ), and the amino acid sequence encoded by the gene sequence was the amino acid sequence shown by SEQ ID NO: 6 (WNanoKAZ).</p>
+      <heading id="h-00042-en" level="1">Example 5</heading>
+      <heading id="h-00043-en" level="1">Transfection of Vectors into Animal Culture Cells and Preparation of Enzyme for Assay</heading>
+      <heading id="h-00044-en" level="2">(1) Purification of Expression Plasmid</heading>
+      <p id="p-00168-en" num="0170">The following experiment was performed using pcDNA3-GLsp-WNanoKAZ obtained in EXAMPLE 4. The recombinant plasmid was purified from <i>E. coli </i>JM83 strain using a plasmid purification kit (manufactured by QIAGEN) and dissolved in sterile water. The firefly luciferase vector (pGL4.13 [Luc2/sv40]: manufactured by Promega Corp.) was similarly prepared and used as an internal standard.</p>
+      <heading id="h-00045-en" level="2">(2) Transfection and Preparation of Enzyme for Assay</heading>
+      <p id="p-00169-en" num="0171">Chinese hamster ovary cell line CHO-K1 was cultured in Ham's F-12 medium (manufactured by Wako Pure Chemical Industries, Ltd.) supplemented with 10% (v/v) fetal bovine serum (manufactured by Biowest Inc.). The CHO-K1 cells were seeded in a 6-well plate in 1×10<sup>5 </sup>cells/well/2 mL medium (n=2) and cultured in an incubator at 37° C. in 5% (v/v) CO<sub>2</sub>. After 24 hours, the purified recombinant plasmid was transfected to CHO-K1 cells using a FuGene HD transfection kit (manufactured by Promega Corp.) and the cells were used for subsequent experiment. Specifically, 1 pg of the recombinant plasmid, 0.1 μg of the internal standard vector pGL4.13 [Luc2/sv40] and 3 μL of FuGene HD were added to 100 μL of the medium and allowed to stand at room temperature for 15 minutes. Subsequently, 100 μL of the DNA-FuGene complex solution was added to the cells in the 6-well plate. After incubation for 46 hours, the culture medium was collected. On the other hand, the KAZ mutant expressed in the cells was washed 3 times with 3 mL of 1×PBS, then suspended in 1 mL of 1×PBS and disrupted by sonication on ice. The resultant cell extract of WNanoKAZ was used as the enzyme solution.</p>
+      <heading id="h-00046-en" level="1">Example 6</heading>
+      <heading id="h-00047-en" level="1">Assay for Luminescence Activity of KAZ Mutants Expressed in Animal  Cultured Cells</heading>
+      <p id="p-00170-en" num="0172">After adding 5 μL of the culture medium and cell extract obtained in EXAMPLE 5 to 100 μL of 30 mM Tris-HCl (pH 7.6)-10 mM EDTA (Wako Pure Chemical Industries, Ltd.) containing 1 μg of coelenterazine (manufactured by JNC Corp.), a luminescence reaction was started. Luminescence activity was measured for 60 seconds using a luminometer (manufactured by Atto Inc.: AB2200). The maximum intensity of luminescence (I<sub>max</sub>) was given as a percentage (%). The results reveal that extracellular secretion was not observed, as shown in TABLE 3.</p>
+      <p id="p-00171-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 3</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Luminescence activity of WnanoKAZ, KAZ and dnKAZ</entry>
+                </row>
+                <row>
+                  <entry>expressed in animal culture cells</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="center" />
+              <colspec colname="3" colwidth="14pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Relative luminescence</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Expression vector</entry>
+                  <entry>activity (%, I<sub>max</sub>)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="center" />
+              <colspec colname="3" colwidth="70pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>(pcDNA3-GLsp-)</entry>
+                  <entry>Culture medium</entry>
+                  <entry>Cell extracts</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="char" char="." />
+              <colspec colname="3" colwidth="70pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>KAZ</entry>
+                  <entry>0.1</entry>
+                  <entry>0.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>WNanoKAZ</entry>
+                  <entry>&lt;0.01</entry>
+                  <entry>22</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>dnKAZ</entry>
+                  <entry>100</entry>
+                  <entry>16</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00172-en" num="0173">Regarding firefly luciferase used as an internal standard to confirm the efficiency of transfection, 5 μL of the cell extract obtained in EXAMPLE 5 was added to 100 μL of a reagent for enzyme assay (Promega Corp.) to start a luminescence reaction. Luminescence activity was measured for 10 seconds in terms of the maximum intensity of luminescence (flu), using a luminometer (manufactured by Atto Inc.: AB2200). The results reveal that the transfection efficiencies were almost the same.</p>
+      <heading id="h-00048-en" level="1">Example 7</heading>
+      <heading id="h-00049-en" level="1">Construction of Single Amino Acid-Substituted Mutant Gene for WNanoKAZ</heading>
+      <p id="p-00173-en" num="0174">WNanoKAZ displayed 64-fold higher activity than that of dnKAZ as shown in EXAMPLE 3, when coelenterazine was used as the substrate. The higher activity is considered to be due to amino acid substitutions at 5 positions, in contrast to native KAZ. In order to identify amino acid residues associated with the increased activity, a mutant in which the substituted amino acid residues at 5 positions were replaced with the amino acid residues from native KAZ was constructed to examine its effects on luminescence activity.</p>
+      <p id="p-00174-en" num="0175">Amino acid substitution to the WNanoKAZ gene by site-directed mutagenesis was performed by PCR by the procedure described in Ho et al., Gene (1989) 77: 51-59. Specifically, PCR (cycle conditions: 25 cycles of 1 min/94° C., 1 min/50° C. and 1 min/72° C.) was performed with a PCR kit (manufactured by Takara Bio Inc.) using as a temperate pCold-KAZ or pCold-ZZ-KAZ carrying the WNanoKAZ gene and two PCR primers.</p>
+      <p id="p-00175-en" num="0176">To construct, e.g., single amino acid-substituted mutant gene WNanoKAZ-E115P, were prepared DNA fragments amplified by the following primers using as the template pcDNA3-GLsp-WNanoKAZ obtained in EXAMPLE 4.</p>
+      <heading id="h-00050-en" level="2">Primers Used to Prepare DNA Fragments:</heading>
+      <p id="p-00176-en" num="0177" />
+      <p id="p-00177-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0" tabstyle="monospace">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>KAZ-8N/EcoRI</entry>
+                </row>
+                <row>
+                  <entry>(SEQ ID NO: 19)</entry>
+                </row>
+                <row>
+                  <entry>(5′ gcg GAA TTC TTT ACG TTG GCA GAT TTC GTT GGA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>3′)</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>nanoKAZ: E115P-R</entry>
+                </row>
+                <row>
+                  <entry>(SEQ ID NO: 23)</entry>
+                </row>
+                <row>
+                  <entry>(5′ GAC GGC GAT GCC AGG GTA GGG TCT ACC 3′)</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>nanoKAZ: E115P-F</entry>
+                </row>
+                <row>
+                  <entry>(SEQ ID NO: 24)</entry>
+                </row>
+                <row>
+                  <entry>(5′ GGT AGA CCC TAC CCT GGC ATC GCC GTC 3′)</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>nanoKAZ-3C/XbaI</entry>
+                </row>
+                <row>
+                  <entry>(SEQ ID NO: 25)</entry>
+                </row>
+                <row>
+                  <entry>(5′ gcc TCT AGA TTA GGC CAG GAT TCT CTC GCA CAG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>TCT 3′)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00178-en" num="0178">The second PCR was carried out using the DNA fragments obtained above at the two sites and PCR primers of KAZ-8N/EcoRI and nanoKAZ-3C/XbaI (SEQ ID NO: 25). As a result, the WNanoKAZ gene region (WNanoKAZ-E115P) with substitution of proline for glutamic acid at amino acid position 115 in the amino acid sequence of SEQ ID NO: 6 was amplified.</p>
+      <p id="p-00179-en" num="0179">Amino acid-substituted WNanoKAZ gene regions were obtained in a similar manner using the templates and primers listed in TABLE 4.</p>
+      <p id="p-00180-en" num="0000">
+        <tables id="tables-00006-en" num="00006">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1" tabstyle="monospace">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="441pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 4</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Templates and PCR primers used for single amino acid substitution in WNanoKAZ protein</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="14pt" align="left" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <colspec colname="4" colwidth="77pt" align="center" />
+              <colspec colname="5" colwidth="245pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>Substituted</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>position</entry>
+                  <entry />
+                  <entry>Template</entry>
+                  <entry>Primer name</entry>
+                  <entry>Sequence</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="14pt" align="left" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <colspec colname="4" colwidth="7pt" align="left" />
+              <colspec colname="5" colwidth="70pt" align="left" />
+              <colspec colname="6" colwidth="245pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>V901</entry>
+                  <entry>PCR</entry>
+                  <entry>pcDNA3-</entry>
+                  <entry>a</entry>
+                  <entry>nanoKAZ: V901-F</entry>
+                  <entry>5′ gcc GTC GAC GAC CAC CAC TTC AAG ATT ATC CTG CAC TAC</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>GLsp-WN</entry>
+                  <entry />
+                  <entry />
+                  <entry>3′ (SEQ ID NO: 26)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>anoKAZ</entry>
+                  <entry>b</entry>
+                  <entry>nanoKAZ-3C/XbaI</entry>
+                  <entry>5′ gcc TCT AGA TTA GGC CAG GAT TCT CTC GCA CAG TCT 3′</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>(SEQ ID NO: 25)</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>E115P</entry>
+                  <entry>1st</entry>
+                  <entry>pcDNA3-</entry>
+                  <entry>a</entry>
+                  <entry>KAZ-8N/EcoRI</entry>
+                  <entry>5′ gcg GAA TTC TTT ACG TTG GCA GAT TTC GTT GGA 3′ (SEQ ID</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PCR</entry>
+                  <entry>GLsp-WN</entry>
+                  <entry />
+                  <entry />
+                  <entry>NO: 19)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>anoKAZ</entry>
+                  <entry>b</entry>
+                  <entry>nanoKAZ: E115P-R</entry>
+                  <entry>5′ GAC GGC GAT GCC AGG GTA GGG TCT ACC 3′ (SEQ ID NO: 23)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>pcDNA3-</entry>
+                  <entry>c</entry>
+                  <entry>nanoKAZ: E115P-F</entry>
+                  <entry>5′ GGT AGA CCC TAC CCT GGC ATC GCC GTC 3′ (SEQ ID NO: 24)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>GLsp-WN</entry>
+                  <entry>d</entry>
+                  <entry>nanoKAZ-3C/XbaI</entry>
+                  <entry>5′ gcc TCT AGA TTA GGC CAG GAT TCT CTC GCA CAG TCT 3′</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>anoKAZ</entry>
+                  <entry />
+                  <entry />
+                  <entry>(SEQ ID NO:25)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>2nd</entry>
+                  <entry>1st PCR</entry>
+                  <entry>a</entry>
+                  <entry>KAZ-8N/EcoRI</entry>
+                  <entry>5′ gcg GAA TTC TTT ACG TTG GCA GAT TTC GTT GGA 3′ (SEQ ID</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PCR</entry>
+                  <entry>product</entry>
+                  <entry />
+                  <entry />
+                  <entry>NO: 19)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>d</entry>
+                  <entry>nanoKAZ-3C/XbaI</entry>
+                  <entry>5′ gcc TCT AGA TTA GGC CAG GAT TCT CTC GCA CAG TCT 3′</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>(SEQ ID NO: 25)</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>K124Q</entry>
+                  <entry>1st</entry>
+                  <entry>pcDNA3-</entry>
+                  <entry>a</entry>
+                  <entry>KAZ-8N/EcoRI</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>PCR</entry>
+                  <entry>GLsp-WN</entry>
+                  <entry />
+                  <entry />
+                  <entry>5′ gcg GAA TTC TTT ACG TTG GCA GAT TTC GTT GGA 3′ (SEQ</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>anoKAZ</entry>
+                  <entry>b</entry>
+                  <entry>nanoKAZ: K124Q-R</entry>
+                  <entry>ID NO: 19)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>5′ GGT GAC GGT GAT CTG CTT GCC GTC GAA 3′ (SEQ ID NO:</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>27)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>pcDNA3-</entry>
+                  <entry>c</entry>
+                  <entry>nanoKAZ: K124Q-F</entry>
+                  <entry>5′ TTC GAC GGC AAG CAG ATC ACC GTC ACC 3′ (SEQ ID NO:</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>GLsp-WN</entry>
+                  <entry />
+                  <entry />
+                  <entry>28)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>anoKAZ</entry>
+                  <entry>d</entry>
+                  <entry>BGH-R</entry>
+                  <entry>5′ TAG AAG GCA CAG TCC AGG 3′ (SEQ ID NO: 29)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>2nd</entry>
+                  <entry>1st PCR</entry>
+                  <entry>a</entry>
+                  <entry>KAZ-8N/EcoRI</entry>
+                  <entry>5′ gcg GAA TTC TTT ACG TTG GCA GAT TTC GTT GGA 3′ (SEQ</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PCR</entry>
+                  <entry>product</entry>
+                  <entry />
+                  <entry />
+                  <entry>ID NO: 19)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>d</entry>
+                  <entry>nanoKAZ-3C/XbaI</entry>
+                  <entry>5′ gcc TCT AGA TTA GGC CAG GAT TCT CTC GCA CAG TCT 3′</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>(SEQ ID NO: 25)</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>I138Y</entry>
+                  <entry>1st</entry>
+                  <entry>pcDNA3-</entry>
+                  <entry>a</entry>
+                  <entry>KAZ-8N/EcoRI</entry>
+                  <entry>5′ gcg GAA TTC TTT ACG TTG GCA GAT TTC GTT GGA 3′ (SEQ</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PCR</entry>
+                  <entry>GLsp-WN</entry>
+                  <entry />
+                  <entry />
+                  <entry>ID NO: 19)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>anoKAZ</entry>
+                  <entry>b</entry>
+                  <entry>nanoKAZ: I138Y-R</entry>
+                  <entry>5′ CAG TCT CTC GTC ATA GAT CTT GTT GCC 3′ (SEQ ID NO:</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>30)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>pcDNA3-</entry>
+                  <entry>c</entry>
+                  <entry>nanoKAZ: I138Y-F</entry>
+                  <entry>5′ GGC AAC AAG ATC TAT GAC GAG AGA CTG 3′ (SEQ ID NO:</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>GLsp-WN</entry>
+                  <entry />
+                  <entry />
+                  <entry>31)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>anoKAZ</entry>
+                  <entry>d</entry>
+                  <entry>BGH-R</entry>
+                  <entry>5′ TAG AAG GCA CAG TCC AGG 3′ (SEQ ID NO: 29)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>2nd</entry>
+                  <entry>1st PCR</entry>
+                  <entry>a</entry>
+                  <entry>KAZ-8N/EcoRI</entry>
+                  <entry>5′ gcg GAA TTC TTT ACG TTG GCA GAT TTC GTT GGA 3′ (SEQ</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PCR</entry>
+                  <entry>product</entry>
+                  <entry />
+                  <entry />
+                  <entry>ID NO: 19)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>d</entry>
+                  <entry>BGH-R</entry>
+                  <entry>5′ TAG AAG GCA CAG TCC AGG 3′ (SEQ ID NO: 29)</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>R166N</entry>
+                  <entry>PCR</entry>
+                  <entry>pcDNA3-</entry>
+                  <entry>a</entry>
+                  <entry>nanoKAZ-4F</entry>
+                  <entry>5′ gcc GTC GAC GAC CAC CAC TTC AAG GTC ATC CTG CAC T</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>GLsp-WN</entry>
+                  <entry />
+                  <entry />
+                  <entry>3′ (SEQ ID NO: 32)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>anoKAZ</entry>
+                  <entry>b</entry>
+                  <entry>nanoKAZ: R166N-R</entry>
+                  <entry>5′ gcc TCT AGA TTA GGC CAG GAT GTT CTC GCA CAG TCT 3′</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>(SEQ ID NO: 33)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00051-en" level="1">Example 8</heading>
+      <heading id="h-00052-en" level="1">Construction of <i>E. coli </i>Expression Vectors for ZZ-Fused Single Amino Acid-Substituted WNanoKAZ Mutants</heading>
+      <p id="p-00181-en" num="0180">To express as soluble proteins, single amino acid-substituted WNanoKAZ mutant genes were fused to ZZ domain to construct expression vectors. Specifically, pCold-ZZ-X (described in Inouye &amp; Sahara, Protein Express. Purif. (2009) 66: 52-57) was used. The DNA fragment obtained in EXAMPLE 7 was digested with the restriction enzymes of EcoRI and XbaI and ligated to the EcoRI-XbaI site of the expression vector to construct the following 5 expression vectors capable of expressing the ZZ domain-fused single amino acid-substituted WNanoKAZ mutants: pCold-ZZ-P-WNanoKAZ-V90I, pCold-ZZ-P-WNanoKAZ-E115P, pCold-ZZ-P-WNanoKAZ-K124Q, pCold-ZZ-P-WNanoKAZ-I138Y and pCold-ZZ-P-WNanoKAZ-R166N. The nucleotide sequence of the inserted DNA was confirmed by sequencing using a DNA Sequencer (manufactured by ABI Inc.).</p>
+      <p id="p-00182-en" num="0181">The substituted amino acids and nucleotides in the amino acid sequence of WNanoKAZ mutant are shown in TABLE 5</p>
+      <p id="p-00183-en" num="0000">
+        <tables id="tables-00007-en" num="00007">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 5</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Substituted amino acids and nucleotides in WNanoKAZ mutants</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="91pt" align="left" />
+              <colspec colname="1" colwidth="105pt" align="center" />
+              <colspec colname="2" colwidth="21pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Nucleotide sequence</entry>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="63pt" align="left" />
+              <colspec colname="3" colwidth="63pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>WNanoKAZ mutant</entry>
+                  <entry>Substitution</entry>
+                  <entry>Substitution</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(WNanoKAZ-)</entry>
+                  <entry>(before)</entry>
+                  <entry>(after)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>V90I</entry>
+                  <entry>268 GTC(V)</entry>
+                  <entry>268 ATT(I)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>E115P</entry>
+                  <entry>343 GAG(E)</entry>
+                  <entry>343 CCT(P)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>K124Q</entry>
+                  <entry>370 AAG(K)</entry>
+                  <entry>370 CAG(Q)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>I138Y</entry>
+                  <entry>412 ATC(I)</entry>
+                  <entry>412 TAT(Y)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>R166N</entry>
+                  <entry>496 AGA(R)</entry>
+                  <entry>496 AAC(N)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00053-en" level="1">Example 9</heading>
+      <heading id="h-00054-en" level="1">Expression of ZZ-Fused KAZ Mutants in <i>E. coli </i>and Preparation of Crude Enzyme Solution</heading>
+      <p id="p-00184-en" num="0182">In order to express ZZ-fused KAZ mutants in <i>E. coli</i>, the recombinant plasmid produced in EXAMPLE 8 and pCold-ZZ-P-WNanoKAZ produced in EXAMPLE 1 were used. The crude enzyme solution was prepared in a manner similar to EXAMPLE 2, using the <i>E. coli </i>BL21 strain (Novagen, Madison, Wis.) as a host cell. Then, 5 μL of the crude enzyme solution obtained was subjected to SDS-PAGE analysis to confirm the protein expression in all mutants. The results are shown in <figref>FIG. 1</figref>. In <figref>FIG. 1</figref>, M and 1 to 8 represent as follows. M: molecular weight size markers; 1: ZZ-P-KAZ; 2: ZZ-P-WNanoKAZ; 3:</p>
+      <heading id="h-00055-en" level="2">ZZ-P-WNanoKAZ-V90I; 4: ZZ-P-WNanoKAZ-E115P; 5:</heading>
+      <heading id="h-00056-en" level="2">ZZ-P-WNanoKAZ-K124Q; 6: ZZ-P-WNanoKAZ-I138Y; 7:</heading>
+      <p id="p-00185-en" num="0183">ZZ-P-WNanoKAZ-R166N; 8: ZZ-P-dnKAZ. It was confirmed from <figref>FIG. 1</figref> that all mutants were expressed.</p>
+      <heading id="h-00057-en" level="1">Example 10</heading>
+      <heading id="h-00058-en" level="1">Assay for Luminescence Activity of ZZ-Fused WNanoKAZ Mutants in Crude Enzyme Solution</heading>
+      <p id="p-00186-en" num="0184">DTT was added to the crude enzyme solution obtained in EXAMPLE 9 at a final concentration of 1 mM, and then allowed to stand in an ice-water bath over 8 hours or more. After 1 μL of the crude enzyme solution was added to 100 μL of 30 mM Tris-HCl (pH 7.6)-10 mM EDTA (Wako Pure Chemical Industries, Ltd.) containing 1 μg of coelenterazine (manufactured by JNC Corp.), a luminescence reaction was started. Luminescence activity was measured for 60 seconds using a luminometer (manufactured by Atto Inc.: AB2200). The maximum intensity of luminescence (I<sub>max</sub>) was given as a relative luminescence activity (rlu).</p>
+      <p id="p-00187-en" num="0185">The results reveal that WNanoKAZ, WNanoKAZ-I90V, WNanoKAZ-E115P, WNanoKAZ-K124Q, WNanoKAZ-I138Y and WNanoKAZ-R166N showed 64-fold, 34-fold, 31-fold, 34-fold, 8.5-fold and 32-fold higher activity, respectively, than native KAZ.</p>
+      <p id="p-00188-en" num="0186">Also, WNanoKAZ, WNanoKAZ-I90V, WNanoKAZ-E115P, WNanoKAZ-K124Q, WNanoKAZ-I138Y and WNanoKAZ-R166N showed 8.6-fold, 4.6-fold, 4.2-fold, 4.6-fold, 1.1-fold and 4.3-fold higher activity, respectively, than the relative activity 7.4 of dnKAZ.</p>
+      <p id="p-00189-en" num="0187">The activity of WNanoKAZ-I138Y decreased to the same level as that of dnKAZ, clearly showing that the substitution of isoleucine for tyrosine at amino acid position 138 was critical for enhancing the activity of KAZ.</p>
+      <p id="p-00190-en" num="0188">These results revealed that the substitution of Y138I in the 5 amino acid substitutions was critical and the higher activity could be achieved by at least 3 substitutions out of the remaining 4 substitutions, and preferably 4 substitutions, as shown in TABLE 6.</p>
+      <p id="p-00191-en" num="0000">
+        <tables id="tables-00008-en" num="00008">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 6</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Luminescence activity of ZZ-fused WNanoKAZ mutants</entry>
+                </row>
+                <row>
+                  <entry>in crude enzyme solution</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="133pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Expression vector</entry>
+                  <entry>Relative luminescence activity</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(pCold-ZZ-P-)</entry>
+                  <entry>(I<sub>max</sub>)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="133pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>KAZ</entry>
+                  <entry>1.0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>WNanoKAZ</entry>
+                  <entry>64</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>WNanoKAZ-I90V</entry>
+                  <entry>34</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>WNanoKAZ-E115P</entry>
+                  <entry>31</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>WNanoKAZ-K124Q</entry>
+                  <entry>34</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>WNanoKAZ-I138Y</entry>
+                  <entry>8.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>WNanoKAZ-R166N</entry>
+                  <entry>32</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>dnKAZ</entry>
+                  <entry>7.4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00059-en" level="1">Example 11</heading>
+      <heading id="h-00060-en" level="1">Substrate Specificity of WNanoKAZ Mutants</heading>
+      <p id="p-00192-en" num="0189">Each of the coelenterazine analogues used for substrate specificity studies was synthesized by the methods described in publications. Specifically, bis-coelenterazine was synthesized by the method described in Nakamura et al. (1997) Tetrahedron Lett. 38: 6405-6406, furimazine by the method described in Hall et al. (2012) ACS Chem. Biol. 16; 848-1857, and, 6h-coelenterazine, f-coelenterazine and 6h-f-coelenterazine by the method described in Inouye et al (2013) Biochem. Biophys. Res. Commun. 437: 23-28. Luminescence activity was measured by the same method as in EXAMPLE 10, using the crude enzyme solution obtained in EXAMPLE 10, in which coelenterazine or its analogue was used as the luminescence substrate.</p>
+      <p id="p-00193-en" num="0190">As a result, WNanoKAZ and its single amino acid-substituted mutants exhibited enhanced luminescence activity, namely, WNanoKAZ, WNanoKAZ-190V, WNanoKAZ-E115P, WNanoKAZ-K124Q, WNanoKAZ-I138Y and WNanoKAZ-R166N exhibited 8.6-fold, 4.6-fold, 4.2-fold, 4.6-fold, 1.1-fold and 4.3-fold higher activity, respectively, than the other coelenterazine analogues when coelenterazine was used as the substrate, as shown in TABLE 7. It is noted from TABLE 7 that even when h-coelenterazine was used as the substrate, WNanoKAZ and its single amino acid-substituted mutants showed the activity as high as in the case when coelenterazine was used as the substrate.</p>
+      <p id="p-00194-en" num="0000">
+        <tables id="tables-00009-en" num="00009">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="357pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 7</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Substrate specificity of WNanoKAZ mutants</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="70pt" align="left" />
+              <colspec colname="1" colwidth="287pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Relative luminescence activity (I<sub>max</sub>)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <colspec colname="6" colwidth="42pt" align="center" />
+              <colspec colname="7" colwidth="42pt" align="center" />
+              <colspec colname="8" colwidth="42pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>WNanoKAZ</entry>
+                  <entry>CTZ</entry>
+                  <entry>h-CTZ</entry>
+                  <entry>6h-CTZ</entry>
+                  <entry>bis-CTZ</entry>
+                  <entry>f-CTZ</entry>
+                  <entry>6h-f-CTZ</entry>
+                  <entry>Furimazine</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="15" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="14pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <colspec colname="9" colwidth="21pt" align="center" />
+              <colspec colname="10" colwidth="21pt" align="center" />
+              <colspec colname="11" colwidth="21pt" align="center" />
+              <colspec colname="12" colwidth="21pt" align="center" />
+              <colspec colname="13" colwidth="21pt" align="center" />
+              <colspec colname="14" colwidth="21pt" align="center" />
+              <colspec colname="15" colwidth="21pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>mutants</entry>
+                  <entry>I<sub>max</sub></entry>
+                  <entry>Int.</entry>
+                  <entry>I<sub>max</sub></entry>
+                  <entry>Int.</entry>
+                  <entry>I<sub>max</sub></entry>
+                  <entry>Int.</entry>
+                  <entry>I<sub>max</sub></entry>
+                  <entry>Int.</entry>
+                  <entry>I<sub>max</sub></entry>
+                  <entry>Int.</entry>
+                  <entry>I<sub>max</sub></entry>
+                  <entry>Int.</entry>
+                  <entry>I<sub>max</sub></entry>
+                  <entry>Int.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="15" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="15" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="char" char="." />
+              <colspec colname="3" colwidth="21pt" align="char" char="." />
+              <colspec colname="4" colwidth="21pt" align="char" char="." />
+              <colspec colname="5" colwidth="21pt" align="char" char="." />
+              <colspec colname="6" colwidth="21pt" align="char" char="." />
+              <colspec colname="7" colwidth="14pt" align="char" char="." />
+              <colspec colname="8" colwidth="21pt" align="char" char="." />
+              <colspec colname="9" colwidth="21pt" align="char" char="." />
+              <colspec colname="10" colwidth="21pt" align="char" char="." />
+              <colspec colname="11" colwidth="21pt" align="char" char="." />
+              <colspec colname="12" colwidth="21pt" align="char" char="." />
+              <colspec colname="13" colwidth="21pt" align="char" char="." />
+              <colspec colname="14" colwidth="21pt" align="char" char="." />
+              <colspec colname="15" colwidth="21pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>KAZ</entry>
+                  <entry>1.0</entry>
+                  <entry>1.0</entry>
+                  <entry>1.2</entry>
+                  <entry>0.9</entry>
+                  <entry>0.08</entry>
+                  <entry>0.1</entry>
+                  <entry>0.5</entry>
+                  <entry>0.1</entry>
+                  <entry>1.0</entry>
+                  <entry>0.9</entry>
+                  <entry>0.3</entry>
+                  <entry>0.4</entry>
+                  <entry>0.2</entry>
+                  <entry>0.3</entry>
+                </row>
+                <row>
+                  <entry>WNanoKAZ</entry>
+                  <entry>64</entry>
+                  <entry>56</entry>
+                  <entry>64</entry>
+                  <entry>33</entry>
+                  <entry>8.9</entry>
+                  <entry>7.5</entry>
+                  <entry>32</entry>
+                  <entry>24</entry>
+                  <entry>48</entry>
+                  <entry>32</entry>
+                  <entry>41</entry>
+                  <entry>34</entry>
+                  <entry>26</entry>
+                  <entry>29</entry>
+                </row>
+                <row>
+                  <entry>WNanoKAZ-V90I</entry>
+                  <entry>34</entry>
+                  <entry>35</entry>
+                  <entry>41</entry>
+                  <entry>22</entry>
+                  <entry>5.1</entry>
+                  <entry>5.6</entry>
+                  <entry>23</entry>
+                  <entry>21</entry>
+                  <entry>31</entry>
+                  <entry>22</entry>
+                  <entry>23</entry>
+                  <entry>23</entry>
+                  <entry>17</entry>
+                  <entry>15</entry>
+                </row>
+                <row>
+                  <entry>WNanoKAZ-E115P</entry>
+                  <entry>31</entry>
+                  <entry>26</entry>
+                  <entry>27</entry>
+                  <entry>17</entry>
+                  <entry>5.9</entry>
+                  <entry>6.1</entry>
+                  <entry>18</entry>
+                  <entry>19</entry>
+                  <entry>22</entry>
+                  <entry>14</entry>
+                  <entry>14</entry>
+                  <entry>11</entry>
+                  <entry>13</entry>
+                  <entry>11</entry>
+                </row>
+                <row>
+                  <entry>WNanoKAZ-K124Q</entry>
+                  <entry>34</entry>
+                  <entry>32</entry>
+                  <entry>70</entry>
+                  <entry>41</entry>
+                  <entry>6.2</entry>
+                  <entry>6.1</entry>
+                  <entry>36</entry>
+                  <entry>33</entry>
+                  <entry>64</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                  <entry>35</entry>
+                  <entry>18</entry>
+                  <entry>11</entry>
+                </row>
+                <row>
+                  <entry>WNanoKAZ-I138Y</entry>
+                  <entry>8.5</entry>
+                  <entry>8.9</entry>
+                  <entry>35</entry>
+                  <entry>22</entry>
+                  <entry>1.7</entry>
+                  <entry>2.8</entry>
+                  <entry>18</entry>
+                  <entry>17</entry>
+                  <entry>29</entry>
+                  <entry>18</entry>
+                  <entry>17</entry>
+                  <entry>10</entry>
+                  <entry>11</entry>
+                  <entry>8.9</entry>
+                </row>
+                <row>
+                  <entry>WNanoKAZ-R166N</entry>
+                  <entry>32</entry>
+                  <entry>36</entry>
+                  <entry>43</entry>
+                  <entry>28</entry>
+                  <entry>4.6</entry>
+                  <entry>6.1</entry>
+                  <entry>17</entry>
+                  <entry>18</entry>
+                  <entry>38</entry>
+                  <entry>27</entry>
+                  <entry>13</entry>
+                  <entry>8.8</entry>
+                  <entry>17</entry>
+                  <entry>12</entry>
+                </row>
+                <row>
+                  <entry>dnKAZ (16mutants)</entry>
+                  <entry>7.4</entry>
+                  <entry>7.1</entry>
+                  <entry>129</entry>
+                  <entry>92</entry>
+                  <entry>5.3</entry>
+                  <entry>4.9</entry>
+                  <entry>98</entry>
+                  <entry>93</entry>
+                  <entry>136</entry>
+                  <entry>91</entry>
+                  <entry>80</entry>
+                  <entry>67</entry>
+                  <entry>47</entry>
+                  <entry>43</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="15" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00061-en" level="1">Example 12</heading>
+      <heading id="h-00062-en" level="1">Secretory Expression Vectors for WNanoKAZ Mutants Using the Secretory Signal Peptide Sequence of <i>Gaussia </i>Luciferase</heading>
+      <p id="p-00195-en" num="0191">Secretory expression vectors for WNanoKAZ mutants were constructed as follows, using the secretory signal peptide sequence of <i>Gaussia </i>luciferase. The WNanoKAZ mutant gene fragment prepared in EXAMPLE 7 using the pcDNA3-GLsp-vector obtained in EXAMPLE 4 was digested with the restriction enzymes of EcoRI/XbaI in a conventional manner and ligated to the EcoRI-XbaI site of pcDNA3-GLsp to construct the following expression vectors: pcDNA3-GLsp-WNanoKAZ-V90I, pcDNA3-GLsp-WNanoKAZ-E115P, pcDNA3-GLsp-WNanoKAZ-K124Q, pcDNA3-GLsp-WNanoKAZ-I138Y and pcDNA3-GLsp-WNanoKAZ-R166N. The gene sequence inserted was confirmed by sequencing using a DNA Sequencer (manufactured by ABI Inc.).</p>
+      <heading id="h-00063-en" level="1">Example 13</heading>
+      <heading id="h-00064-en" level="1">Transfection of Vectors into Animal Culture Cells and Preparation of Enzyme for Assay</heading>
+      <heading id="h-00065-en" level="2">(1) Purification of Expression Plasmid</heading>
+      <p id="p-00196-en" num="0192">The recombinant plasmid obtained in EXAMPLE 12 or 4 was purified in a manner similar to EXAMPLE 5 and dissolved in sterile water. The firefly luciferase vector (pGL4.13 [Luc2/sv40]: manufactured by Promega Corp.) was similarly prepared and used as an internal standard.</p>
+      <heading id="h-00066-en" level="2">(2) Transfection and Preparation of Enzyme for Assay</heading>
+      <p id="p-00197-en" num="0193">Culture medium containing two amino acid-substituted KAZ mutants and three amino acid-substituted KAZ mutants and cell extracts of the KAZ mutants as the enzyme solutions were prepared by the same procedure as in EXAMPLE 9.</p>
+      <p id="p-00198-en" num="0194">The resultant culture medium and cell extracts were used to measure luminescence activity as in EXAMPLE 6. As shown in TABLE 8, it was not recognized that WNanoKAZ and WNanoKAZ mutants happened to secret from the cells, as opposed to dnKAZ, while the mutants were expressed in the cytoplasm.</p>
+      <p id="p-00199-en" num="0000">
+        <tables id="tables-00010-en" num="00010">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 8</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Luminescence activity of WNanoKAZ mutants expressed by secretory</entry>
+                </row>
+                <row>
+                  <entry>expression vectors for WNanoKAZ using the secretory signal peptide</entry>
+                </row>
+                <row>
+                  <entry>sequence of <i>Gaussia </i>luciferase</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="center" />
+              <colspec colname="3" colwidth="14pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Relative luminescence</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Expression vector</entry>
+                  <entry>activity (%, I<sub>max</sub>)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="center" />
+              <colspec colname="3" colwidth="70pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>(pcDNA3-GLsp-)</entry>
+                  <entry>Culture medium</entry>
+                  <entry>Cell extracts</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="center" />
+              <colspec colname="3" colwidth="70pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>KAZ</entry>
+                  <entry>0.1</entry>
+                  <entry>0.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>WNanoKAZ</entry>
+                  <entry>&lt;0.01</entry>
+                  <entry>22</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>WNanoKAZ-I90V</entry>
+                  <entry> 0.03</entry>
+                  <entry>15</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>WNanoKAZ-E115P</entry>
+                  <entry>&lt;0.01</entry>
+                  <entry>12</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>WNanoKAZ-K124Q</entry>
+                  <entry> 0.03</entry>
+                  <entry>21</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>WNanoKAZ-I138Y</entry>
+                  <entry>&lt;0.01</entry>
+                  <entry>10</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>WNanoKAZ-R166N</entry>
+                  <entry>&lt;0.01</entry>
+                  <entry>26</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>dnKAZ</entry>
+                  <entry>100<sup>a</sup>  </entry>
+                  <entry>16</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00200-en" num="0195">These results demonstrate that the chimeric protein of KAZ and nanoKAZ, in which 5 amino acids were substituted, showed higher luminescence activity than native KAZ when coelenterazine was used as the substrate. The results reveal that the substitution of isoleucine at position of 138 was critical for the enhanced activity and, in the remaining 4 substitutions, at least 3 substitutions, preferably 4 substitutions are associated with the enhanced activity. In addition, these chimeric proteins have the property that into aminal culture cells and advantageously used for reporter assay in the cytoplasm, and the like.</p>
+      <p id="p-00201-en" num="0196">It had been observed by preliminary experiments for the present invention that a mutant with substitution of valine, not with isoleucine, for tyrosine at amino acid position 138 gave the same results as with the isoleucine substitution in the same experiments as demonstrated in EXAMPLES above. The results from a series of experiments of the present invention reveal that not only the substitution of isoleucine but also the substitution of valine for tyrosine at position of 138 can provide the mutants of the invention with the enhanced luminescence activity.</p>
+      <heading id="h-00067-en" level="1">SEQUENCE LISTING FREE TEXT</heading>
+      <p id="p-00202-en" num="0000">
+        <ul id="ul-00003-en" list-style="none">
+          <li>[SEQ ID NO: 1] Nucleotide sequence of KAZ.</li>
+          <li>[SEQ ID NO: 2] Amino acid sequence of KAZ.</li>
+          <li>[SEQ ID NO: 3] Nucleotide sequence of nanoKAZ.</li>
+          <li>[SEQ ID NO: 4] Amino acid sequence of nanoKAZ.</li>
+          <li>[SEQ ID NO: 5] Nucleotide sequence of WNanoKAZ.</li>
+          <li>[SEQ ID NO: 6] Amino acid sequence of WNanoKAZ.</li>
+          <li>[SEQ ID NO: 7] Nucleotide sequence of WNanoKAZ-I90V.</li>
+          <li>[SEQ ID NO: 8] Amino acid sequence of WNanoKAZ-I90V.</li>
+          <li>[SEQ ID NO: 9] Nucleotide sequence of WNanoKAZ-E115P.</li>
+          <li>[SEQ ID NO: 10] Amino acid sequence of WNanoKAZ-E115P.</li>
+          <li>[SEQ ID NO: 11] Nucleotide sequence of WNanoKAZ-K124Q.</li>
+          <li>[SEQ ID NO: 12] Amino acid sequence of WNanoKAZ-K124Q.</li>
+          <li>[SEQ ID NO: 13] Nucleotide sequence of WNanoKAZ-I138Y.</li>
+          <li>[SEQ ID NO: 14] Amino acid sequence of WNanoKAZ-I138Y.</li>
+          <li>[SEQ ID NO: 15] Nucleotide sequence of WNanoKAZ-R166N.</li>
+          <li>[SEQ ID NO: 16] Amino acid sequence of WNanoKAZ-R166N.</li>
+          <li>[SEQ ID NO: 17] Nucleotide sequence of dnKAZ.</li>
+          <li>[SEQ ID NO: 18] Amino acid sequence of dnKAZ.</li>
+          <li>[SEQ ID NO: 19] Nucleotide sequence of the primer used in EXAMPLES (KAZ-8N/EcoRI).</li>
+          <li>[SEQ ID NO: 20] Nucleotide sequence of the primer used in EXAMPLES (KAZ-31/SalI247-R).</li>
+          <li>[SEQ ID NO: 21] Nucleotide sequence of the primer used in EXAMPLES (GLsp-1R/EcoRI).</li>
+          <li>[SEQ ID NO: 22] Nucleotide sequence of the primer used in EXAMPLES (T7).</li>
+          <li>[SEQ ID NO: 23] Nucleotide sequence of the primer used in EXAMPLES (nanoKAZ:E115P-R).</li>
+          <li>[SEQ ID NO: 24] Nucleotide sequence of the primer used in EXAMPLES (nanoKAZ:E115P-F).</li>
+          <li>[SEQ ID NO: 25] Nucleotide sequence of the primer used in EXAMPLES (nanoKAZ-3C/XbaI).</li>
+          <li>[SEQ ID NO: 26] Nucleotide sequence of the primer used in EXAMPLES (nanoKAZ:V90I-F).</li>
+          <li>[SEQ ID NO: 27] Nucleotide sequence of the primer used in EXAMPLES (nanoKAZ:K124Q-R).</li>
+          <li>[SEQ ID NO: 28] Nucleotide sequence of the primer used in EXAMPLES (nanoKAZ:K124Q-F).</li>
+          <li>[SEQ ID NO: 29] Nucleotide sequence of the primer used in EXAMPLES (BGH-R).</li>
+          <li>[SEQ ID NO: 30] Nucleotide sequence of the primer used in EXAMPLES (nanoKAZ:I138Y-R).</li>
+          <li>[SEQ ID NO: 31] Nucleotide sequence of the primer used in EXAMPLES (nanoKAZ:I138Y-F).</li>
+          <li>[SEQ ID NO: 32] Nucleotide sequence of the primer used in EXAMPLES (nanoKAZ-4F).</li>
+          <li>[SEQ ID NO: 33] Nucleotide sequence of the primer used in EXAMPLES (nanoKAZ:R166N-R).</li>
+        </ul>
+      </p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A luciferase mutant of (a) or (b) below:
+<claim-text>(a) a luciferase mutant comprising an amino acid sequence in which tyrosine at the position of 138 is substituted with another amino acid and at least 3 amino acids selected from the group consisting of isoleucine at position of 90, proline at position of 115, glutamine at position of 124 and asparagine at position of 166 are substituted with other amino acids, in the amino acid sequence of SEQ ID NO: 2; or,</claim-text><claim-text>(b) a luciferase mutant comprising an amino acid sequence in which tyrosine at position of 138 is substituted with another amino acid, at least 3 amino acids selected from the group consisting of isoleucine at position of 90, proline at position of 115, glutamine at position of 124 and asparagine at position of 166 are substituted with other amino acids and one or more amino acid(s) is/are substituted with other amino acid(s) at position(s) other than at positions of 4, 11, 18, 27, 33, 43, 44, 54, 68, 72, 75, 90, 115, 124, 138 and 166, in the amino acid sequence of SEQ ID NO: 2, and having a luciferase activity.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The luciferase mutant according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the luciferase mutant defined in (b) above is a mutant defined in (c) below:
+<claim-text>(c) a luciferase mutant comprising an amino acid sequence in which tyrosine at position of 138 is substituted with another amino acid, at least 3 amino acids selected from the group consisting of isoleucine at position of 90, proline at position of 115, glutamine at position of 124 and asparagine at position of 166 are substituted with other amino acids and 1 to 16 amino acid(s) is/are substituted with other amino acid(s) at position(s) other than at positions 4, 11, 18, 27, 33, 43, 44, 54, 68, 72, 75, 90, 115, 124, 138 and 166, in the amino acid sequence of SEQ ID NO: 2, and having a luciferase activity.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The luciferase mutant according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said another amino acid substituted for the tyrosine at position 138 is isoleucine or valine.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The luciferase mutant according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the luciferase mutant defined (a) or (b) above is a luciferase mutant defined in (d) or (e) below:
+<claim-text>(d) a luciferase mutant comprising an amino acid sequence of SEQ ID NO: 6, SEQ ID NO: 8, SEQ ID NO: 10, SEQ ID NO: 12 or SEQ ID NO: 16; or,</claim-text><claim-text>(e) a luciferase mutant comprising an amino acid sequence in which one or more amino acid(s) is/are substituted with other amino acid(s) at position(s) other than at positions 4, 11, 18, 27, 33, 43, 44, 54, 68, 72, 75, 90, 115, 124, 138 and 166, in the amino acid sequence of SEQ ID NO: 6, SEQ ID NO: 8, SEQ ID NO: 10, SEQ ID NO: 12 or SEQ ID NO: 16, and having a luciferase activity.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The luciferase mutant according to <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the luciferase mutant defined in (e) above is a luciferase mutant defined in (f) below:
+<claim-text>(f) a luciferase mutant comprising an amino acid sequence in which 1 to 16 amino acid(s) is/are substituted with other amino acid(s) at position(s) other than at positions 4, 11, 18, 27, 33, 43, 44, 54, 68, 72, 75, 90, 115, 124, 138 and 166, in the amino acid sequence of SEQ ID NO: 6, SEQ ID NO: 8, SEQ ID NO: 10, SEQ ID NO: 12 or SEQ ID NO: 16, and having a luciferase activity.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. A polynucleotide comprising a polynucleotide encoding the luciferase mutant according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. A recombinant vector comprising the polynucleotide according to <claim-ref idref="clm-00006-en">claim 6</claim-ref>.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. A transformant transformed with the recombinant vector according to <claim-ref idref="clm-00007-en">claim 7</claim-ref>.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. A method for producing the luciferase mutant according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, which comprises the steps of culturing the transformant transformed with the recombinant vector comprising the polynucleotide encoding the luciferase mutant and producing the luciferase mutant.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. A kit comprising at least one selected from the luciferase mutant according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, a polynucleotide encoding the luciferase mutant, a recombinant vector comprising polynucleotide encoding the luciferase mutant and a transformant.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The kit according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, further comprising a luciferin.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The kit according to <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the luciferin is a coelenterazine analogue.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The kit according to <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the coelenterazine analogue is coelenterazine or h-coelenterazine.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. A method for performing a luminescence reaction, which comprises contacting the luciferase mutant according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> with a luciferin.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method according to <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein the luciferin is a coelenterazine analogue.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method according to <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the coelenterazine analogue is coelenterazine or h-coelenterazine.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. A method for assaying the activity of a sequence associated with promoter regulation, which comprises using the polynucleotide according to <claim-ref idref="clm-00006-en">claim 6</claim-ref> as a reporter gene and contacting a luciferase mutant encoded by the reporter gene with a luciferin.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method according to <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein the luciferin is a coelenterazine analogue.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method according to <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein the coelenterazine analogue is coelenterazine or h-coelenterazine. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150259652A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259652A1-20150917-D00001.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150259652A1.PDF" type="pdf" size="3458804" pages="33" />
+</lexisnexis-patent-document>

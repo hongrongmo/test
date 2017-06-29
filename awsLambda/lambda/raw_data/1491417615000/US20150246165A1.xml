@@ -1,0 +1,1162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246165A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021320" date-changed="20151214" time-changed="185737">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121139275">
+        <country>US</country>
+        <doc-number>20150246165</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14630626</doc-number>
+        <date>20150224</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="national">
+        <country>KR</country>
+        <doc-number>1020140023985</doc-number>
+        <date>20140228</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151013">
+      <classification-ipcr sequence="1">
+        <text>A61M   1/00        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>1</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61M  16/00        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>16</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61M  25/01        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>25</main-group>
+        <subgroup>01</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151013">
+      <classification-cpc sequence="1">
+        <text>A61M   1/0031      20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>1</main-group>
+        <subgroup>0031</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61M   1/0025      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>1</main-group>
+        <subgroup>0025</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61M   1/0056      20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>1</main-group>
+        <subgroup>0056</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61M  16/044       20130101 LI20150930BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>16</main-group>
+        <subgroup>044</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150930</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61M  16/0459      20130101 LI20150930BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>16</main-group>
+        <subgroup>0459</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150930</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61M  16/0463      20130101 LI20150930BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>16</main-group>
+        <subgroup>0463</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150930</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61M  16/0465      20130101 LI20150930BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>16</main-group>
+        <subgroup>0465</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150930</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61M  16/0479      20130101 LI20150930BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>16</main-group>
+        <subgroup>0479</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150930</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61M  25/0113      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>25</main-group>
+        <subgroup>0113</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A61M2025/0019      20130101 LA20151006BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>2025</main-group>
+        <subgroup>0019</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151006</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>A61M2202/0208      20130101 LA20150930BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>2202</main-group>
+        <subgroup>0208</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150930</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>A61M2205/3331      20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>2205</main-group>
+        <subgroup>3331</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>A61M2205/3334      20130101 LA20151006BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>2205</main-group>
+        <subgroup>3334</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151006</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>A61M2205/3569      20130101 LA20150930BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>2205</main-group>
+        <subgroup>3569</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150930</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>A61M2205/3592      20130101 LA20150930BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>2205</main-group>
+        <subgroup>3592</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150930</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="16">
+        <text>A61M2205/505       20130101 LA20150930BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>2205</main-group>
+        <subgroup>505</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150930</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="17">
+        <text>A61M2209/10        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>2209</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="18">
+        <text>A61M2210/1035      20130101 LA20151006BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>2210</main-group>
+        <subgroup>1035</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151006</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="19">
+        <text>A61M2230/42        20130101 LA20150930BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>M</subclass>
+        <main-group>2230</main-group>
+        <subgroup>42</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150930</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">10</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">ARTIFICIAL INTELLIGENCE PORTABLE SUCTION DEVICE HAVING A CATHETER REEL</invention-title>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>LMECA CO., LTD.</orgname>
+            <address>
+              <city>Wonju-si</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>KR</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>KANG</last-name>
+            <first-name>Jung-kil</first-name>
+            <address>
+              <city>Goyang-si</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>JUNG</last-name>
+            <first-name>Jin</first-name>
+            <address>
+              <city>Seoul</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>ROH</last-name>
+            <first-name>Jin-ho</first-name>
+            <address>
+              <city>Gunpo-si</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="168549393">
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101455087</doc-number>
+            <kind>B1</kind>
+            <date>20141021</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015130007</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150107</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246165</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150224</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015130008</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150107</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="168549392">
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101455087</doc-number>
+            <kind>B1</kind>
+            <date>20141021</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015130007</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150107</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246165</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150224</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015130008</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150107</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Disclosed is a suction device. The suction device includes a sensor unit which measures a breathing condition of a patient, a tube unit which is inserted into a bronchus of the patient in order to suck foreign material generated in the bronchus of the patient, when the values measured by the sensor unit exceeds a predetermined reference value, and a control unit which controls to drive the tube unit based on the measured value received from the sensor unit. According to the present invention, there is provided the suction device which is automatically operated by directly determining whether foreign material is generated in the bronchus of the patient.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150224</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246165A1</docdb-publication-number>
+      <docdb-application-id>444208259</docdb-application-id>
+      <new-owner>LMECA CO., LTD., KOREA, REPUBLIC OF</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:KANG, JUNG-KIL;JUNG, JIN;ROH, JIN-HO;REEL/FRAME:035021/0416</free-text-description>
+      <effective-date>
+        <date>20150223</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application claims priority to Korean Patent Application No. 10-2014-0023985, filed on Feb. 28, 2014 in the Korean Intellectual Property Office, the entire disclosure of which is incorporated herein by reference.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">1. Field of the Invention</p>
+      <p id="p-00003-en" num="0003">The present invention relates to a suction device, and more specifically to an artificial intelligence type suction device which sucks in by automatically determining an occurrence of foreign material in a user's respirator and inserting a catheter.</p>
+      <p id="p-00004-en" num="0004">2. Description of the Related Art</p>
+      <p id="p-00005-en" num="0005">A medical suction device is a medical foreign material suction device which sucks in and removes by force into a container foreign materials such as blood, saliva, vomitus and secreta that are generated from an inside of a patient's body while operating on the patient in hospitals. In general, patients with impaired mobility at home or hospital have a suction device mounted constantly for a guardian or nurse to drain foreign material out of the trachea or surgical site.</p>
+      <p id="p-00006-en" num="0006">A conventional suction device includes a suction unit for sucking foreign material or other waste, a containment unit for containing the foreign material, a driving unit for applying a suction force to the suction device and a suction tube through which waste flows. However, the conventional suction device needs an improvement in that the noise is loud and operation by the patient or guardian is necessary.</p>
+      <p id="p-00007-en" num="0007">In addition, since foreign materials may be generated during sleep to block the trachea, the nurse, carer or guardian should operate the suction device from time to time. However, the conventional suction device is inconvenient since the foreign material in the patient's body should be frequently removed according to condition or reaction from the patient night and day. In addition, since expenses for the catheters that should be replaced due to contamination whenever foreign material is removed are high, a method which is capable of continuously using the catheter is required.</p>
+      <p id="p-00008-en" num="0008">Relating to this, Korean Patent Registration No. 10-1403658 discloses a medical suction catheter including an on-off valve used for sucking foreign material in the body of the patient, and Korean Patent Registration No. 10-1279451 discloses a medical suction device which can automatically make sewage disposal of extracts. The techniques disclosed in the above patents have advantages such as being stable and hygienic in operation. However, these patents fail to disclose a technical configuration that provides convenience to the patient with impaired mobility.</p>
+      <p id="p-00009-en" num="0009">Therefore, there is a need to develop a suction device for removing foreign material from the patient from time to time and enhancing convenience and work efficiency of the guardian or nurse in order to improve the health of patient with impaired mobility.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00010-en" num="0010">In consideration of the above-mentioned circumstances, it is an object of the present invention to provide a suction device which sucks foreign material by detecting the foreign material in a patient's bronchus itself to automatically insert the catheter into the patient.</p>
+      <p id="p-00011-en" num="0011">In order to achieve the above object, a suction device according to one embodiment of the present invention includes a drive unit, an input unit, a sensor unit, a tube unit, a control unit, and a storage unit. The drive unit is disposed on the bottom of the suction device and is configured to periodically pump, the input unit is disposed on a front of the suction device and is configured to input setting values for control, the sensor unit is configured to measure a breathing condition of a patient, the a tube unit is configured to be inserted into a bronchus of a patient to suck foreign material generated in the bronchus when the foreign material is generated in the bronchus, and move out of the bronchus, the control unit is configured to receive the setting values and the measured results respectively transmitted from the input unit and the sensor unit and control the drive unit based on the received setting values and measured results; and the storage unit sucks and stores foreign material and stores and supplies saline water.</p>
+      <p id="p-00012-en" num="0012">In one embodiment, the drive unit may include a brushless DC motor (BLDC motor) which sucks and injects air by periodical pumping, and a driver which is connected to the BLDC motor at a distance and receives a control signal transmitted from the control unit to control the BLDC motor.</p>
+      <p id="p-00013-en" num="0013">In one embodiment, the input unit may include: a breathing information display window in which a user's respiration rate per minute, a single respiratory air volume showing a volume breathed by a user at one time and breathing information showing respiration rate per hour are displayed; and a device setting window in which setting buttons for operating a simple respiratory function and suction are provided.</p>
+      <p id="p-00014-en" num="0014">In one embodiment, the sensor unit may include: a mass flow meter (MFM sensor) which is configured to detect a daily breathing condition showing a patient's breathing pattern and a volume of exhaled gas for a predetermined time, and transmits the detected results to the control unit, and measure a mass of a patient's exhaled gas and the daily breathing condition and transmit the measured results of the daily breathing condition to the control unit.</p>
+      <p id="p-00015-en" num="0015">In one embodiment, the control unit may be configured to analyze the daily breathing condition received from the MFM sensor, and if it is determined that foreign material is generated in the body of the patient, control the drive unit to suck the foreign material, and analyze the daily breathing condition received from the MFM sensor, and if it is determined that the user's breathing condition is irregular and difficult, control to drive the simple respiratory function.</p>
+      <p id="p-00016-en" num="0016">In one embodiment, the tube unit may include: a catheter reel and a tube cover, and the catheter reel may include: a catheter which has a tube structure to suck foreign material; a screw frame which includes a plurality of protruded threads formed on an outer circumference thereof on which the catheter is reeled, and is configured to push or pull the catheter depending on the rotation direction thereof; a catheter reel case which includes a plurality of holes into which saline water for cleaning the catheter surface is injected formed therein, and houses the catheter and the screw frame; and a stepping motor configured to rotate the screw frame, wherein the tube cover may be formed outside of the catheter so that the catheter provides passages which are connected to a filter, the MFM sensor, a saline water container and a nebulizer between the bronchus and catheter reel.</p>
+      <p id="p-00017-en" num="0017">In one embodiment, the suction device may further include: a motor cover which encloses the BLDC motor to prevent a noise of the BLDC motor from being leaked to an outside and reduce a vibration of the BLDC motor.</p>
+      <p id="p-00018-en" num="0018">In one embodiment, the tube unit may further include: a T tube, and the T tube may include: a first cuff which is formed on an upper portion, and is inflated by air to expand the bronchus; a second cuff which is formed adjacent to and below the first cuff, and is inflated by air when the first cuff is deflated to expand the bronchus; a third cuff which is connected to the first cuff so as to flow air; a second tube which is connected to the second cuff so as to flow air; a first tube which sucks foreign material formed in the upper portion of the first cuff; and a fourth tube which, when the first cuff is deflated to make the second cuff inflate so that foreign material is formed in the upper portion of the second cuff, sucks the foreign material.</p>
+      <p id="p-00019-en" num="0019">In one embodiment, the first and second cuffs may be alternately inflated and deflated to expand the bronchus of the user.</p>
+      <p id="p-00020-en" num="0020">In one embodiment, the suction device may further include: a filter which prevents moisture from being penetrated into the sensor unit, and waste from being entered into the drive unit.</p>
+      <p id="p-00021-en" num="0021">According to the present invention, since the suction device sucks foreign material only when an occurrence of foreign material is detected by determining the patient's daily breathing condition through a mass flow meter (MFM) unlike the conventional suction device, it is possible to reduce the pain of the patient and power consumption, and it allows use for an unconscious patient without a guardian.</p>
+      <p id="p-00022-en" num="0022">In addition, since the motor cover provided in the suction device according to the present invention covers the brushless DC motor (BLDC motor) to prevent noises and vibrations generated from the BLDC motor from being leaked to an outside, a user environment that fits patients or infants who react sensitively to the ambient environment may be achieved.</p>
+      <p id="p-00023-en" num="0023">Further, by pushing the emergency button provided in the suction device according to the present invention, the patient can call the guardian in a situation in which the suction device is not operating.</p>
+      <p id="p-00024-en" num="0024">Further, it is possible to protect the patient by pushing the emergency button provided in the suction device according to the present invention when the device is operating abnormally, and the patient can call the guardian by pushing an emergency button connected to the suction device when the suction device is not operating.</p>
+      <p id="p-00025-en" num="0025">Further, since the MFM sensor used in the present invention directly measures the invariable mass, it is possible to effectively measure gas with a low flow rate, and accurately measure the mass of flowing gas by directly measuring without the need to measure the volume or pressure of gas.</p>
+      <p id="p-00026-en" num="0026">In addition, since the MFM sensor has no device generating a vibration during measuring the mass of gas, it is possible to increase the user's convenience during using the suction device according to the present invention.</p>
+      <p id="p-00027-en" num="0027">Furthermore, since the suction device according to the present invention is provided with a simple respiratory function, it is possible to improve the pulmonary function through the simple respiratory function if the user's breathing condition is irregular or difficult, and save the user's life in the case of an emergency situation.</p>
+      <p id="p-00028-en" num="0028">In addition, according to the present invention, improvement and training of a user's pulmonary function are possible through a function provided for the simple respiratory function whereby the user's inhalation time is subjected to increase gradually.</p>
+      <p id="p-00029-en" num="0029">Further, according to the present invention, it is possible to reduce the maintenance costs since reuse is possible through saline irrigation to the catheter which has conventionally been the cause of high maintenance costs due to disposable single use for sanitary reasons present in the art.</p>
+      <p id="p-00030-en" num="0030">Further, inflammation or infection of a user's bronchus may be minimized as the first and second cuffs of the tube unit provided in the suction device according to the present invention expand and contract alternately, and the tube unit has no need of frequent replacement, thereby user's convenience may be increased.</p>
+      <p id="p-00031-en" num="0031">Further, by using the communication device such as the Bluetooth module or WiFi module provided in the suction device according to the present invention, the control unit can send a warning message to the guardian or medical team in the case of an abrupt change of the daily breathing condition of the user.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00032-en" num="0032">The above and other objects, features and other advantages of the present invention will be more clearly understood from the following detailed description taken in conjunction with the accompanying drawings, in which:</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 1</figref> is an exploded perspective view showing the structure of a suction device according to one embodiment of the present invention;</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 2</figref> is a perspective view showing the structure of a tube unit included in the suction device according to one embodiment of the present invention in <figref>FIG. 1</figref>;</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIGS. 3 and 4</figref> are exploded perspective views showing the structures of a catheter reel in <figref>FIG. 2</figref>;</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIGS. 5 and 6</figref> are exploded perspective views showing the operation in which the catheter reel of <figref>FIG. 2</figref> is inserted into a bronchus through a T tube;</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIG. 7</figref> is a perspective view showing the structure of the T tube that may be connected to the tube unit included in the suction device according to one embodiment of the present invention in <figref>FIG. 1</figref>;</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIG. 8</figref> is an exploded perspective view showing the structure of the suction device according to one embodiment of the present invention in <figref>FIG. 1</figref> as seen from a different direction thereof;</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIG. 9</figref> is a view showing an example of an operation screen displayed on an input unit of the suction device according to one embodiment of the present invention in <figref>FIG. 1</figref>;</p>
+      <p id="p-00040-en" num="0040">
+        <figref>FIG. 10</figref> is an exploded perspective view showing a second storage unit formed in a lower part of the suction device according to one embodiment of the present invention in <figref>FIG. 1</figref>; and</p>
+      <p id="p-00041-en" num="0041">
+        <figref>FIG. 11</figref> is a block diagram showing a method of operating the suction device according to the present invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00042-en" num="0042">Hereinafter, the present invention will be described in detail with reference to the accompanying drawings.</p>
+      <p id="p-00043-en" num="0043">
+        <figref>FIG. 1</figref> is an exploded perspective view showing the structure of a suction device according to one embodiment of the present invention. Referring to <figref>FIG. 1</figref>, a suction device <b>10</b> according one embodiment of the present invention includes a cover unit <b>20</b>, a driving unit <b>30</b>, a storage unit <b>40</b>, a sensor unit <b>50</b>, a vacuum gauge <b>60</b>, a nebulizer <b>70</b>, an input unit <b>80</b>, a filter <b>90</b>, a scale <b>100</b>, a tube unit <b>110</b> and a control unit <b>120</b>.</p>
+      <p id="p-00044-en" num="0044">The cover unit <b>20</b> includes a front cover <b>20</b><i>a, </i>a rear cover <b>20</b><i>b </i>and a motor cover <b>20</b><i>c. </i>The front cover <b>20</b><i>a </i>is provided with the input unit <b>80</b>, and a switch for turning on and off the power of the suction device <b>10</b> on the top thereof.</p>
+      <p id="p-00045-en" num="0045">The driving unit <b>30</b> includes a driver <b>30</b><i>a, </i>a brushless DC motor (BLDC motor) <b>30</b><i>b </i>and a solenoid valve <b>30</b><i>c. </i>The storage unit <b>40</b> includes a saline water container <b>40</b><i>a </i>and a suction container <b>40</b><i>b. </i>The sensor unit <b>50</b> includes a mass flow meter (MFM) sensor <b>50</b><i>a. </i></p>
+      <p id="p-00046-en" num="0046">The rear cover <b>20</b><i>b </i>is disposed on a rear of the suction device <b>10</b> and is coupled with the front cover <b>20</b><i>a </i>to protect the inner components of the suction device <b>10</b>, while preventing noises from being leaked to an outside and external contaminants from entering therein.</p>
+      <p id="p-00047-en" num="0047">The motor cover <b>20</b><i>c </i>is formed in a double-case structure with a sponge attached on the center thereof. The double-case structure is formed to absorb noise and reduce vibration generated from the driving unit <b>30</b>. The motor cover <b>20</b><i>c </i>may reduce the stress for a user who uses the suction device <b>10</b> at all times due to the noise and vibration.</p>
+      <p id="p-00048-en" num="0048">The driver <b>30</b><i>a </i>sends a signal received from the control unit <b>120</b> to control the BLDC motor <b>30</b><i>b. </i>The driver <b>30</b><i>a </i>is connected to the BLDC motor <b>30</b><i>b </i>with a cable at a distance to reduce the effects of heat and noise from the BLDC motor <b>30</b><i>b, </i>and is formed at the outside of the motor cover <b>20</b><i>c. </i></p>
+      <p id="p-00049-en" num="0049">The BLDC motor <b>30</b><i>b </i>is connected to the driver <b>30</b><i>a </i>so as to stably and periodically pump. The BLDC motor <b>30</b><i>b </i>is mounted on a lower end of the suction device <b>10</b> and provides power for suction of foreign material in the user's body and the respiration of the user. In the present invention, the BLDC motor <b>30</b><i>b </i>is used as the motor for driving the suction device <b>10</b>.</p>
+      <p id="p-00050-en" num="0050">Since the BLDC motor <b>30</b><i>b, </i>unlike the conventional AC motor, can easily change the pressure desired by the user, as well as a flow rate (NL/m) and driving cycle of the motor by increasing or decreasing an electric current, the suction device <b>10</b> according to the present invention can make selective suction driving possible only when foreign material is generated, without making continuous suction driving regardless of whether there is foreign material or not.</p>
+      <p id="p-00051-en" num="0051">Further, the BLDC motor <b>30</b><i>b </i>has technical advantages such as excellent heat resistance, decreased noise, as well as no arc generation especially at the time of on/off. Therefore, not only is the motor life increased by about three times that of an AC motor but also it may be made in a small size.</p>
+      <p id="p-00052-en" num="0052">Meanwhile, in one embodiment of the present invention, a waste-preventing filter may be mounted on the driving unit <b>30</b> to prevent contamination by the waste entering in backflow through a catheter <b>113</b><i>a. </i></p>
+      <p id="p-00053-en" num="0053">The solenoid valve <b>30</b><i>c </i>is provided with a bar for blocking the passage in an inner passage thereof, and when an electric current is applied to the coil provided in the solenoid valve <b>30</b><i>c, </i>the cylindrical metal rod in the coil is moved upward by an electromagnetic force to push the bar upward, so that the solenoid valve <b>30</b><i>c </i>is opened.</p>
+      <p id="p-00054-en" num="0054">Meanwhile, when the supply of the electric current to the coil is cut off to make the cylindrical metal rod move downward, the bar descends by gravity to close the valve.</p>
+      <p id="p-00055-en" num="0055">When inhaling foreign material, the control unit <b>120</b> controls the solenoid valve <b>30</b><i>c </i>to be closed, so that air including the oxygen being supplied to the user is prevented from being sucked into the suction device <b>10</b> again.</p>
+      <p id="p-00056-en" num="0056">The solenoid valve <b>30</b><i>c </i>may be connected to all of the MFM sensor <b>50</b><i>a, </i>the saline water container <b>40</b><i>a </i>and the suction container <b>40</b><i>b, </i>or may be formed into three independent valves connected respectively to the MFM sensor <b>50</b><i>a, </i>the saline water container <b>40</b><i>a </i>and the suction container <b>40</b><i>b. </i></p>
+      <p id="p-00057-en" num="0057">For convenience of the description, the present invention will be described by dividing into the first to third solenoid valves <b>30</b><i>c </i>connected respectively to the MFM sensor <b>50</b><i>a, </i>the saline water container <b>40</b><i>a </i>and suction container <b>40</b><i>b. </i></p>
+      <p id="p-00058-en" num="0058">The storage unit <b>40</b> includes the saline water container <b>40</b><i>a </i>and the suction container <b>40</b><i>b. </i>The saline water container <b>40</b><i>a </i>is filled with saline water, and is fabricated in a proper size so as to secure space for the scale <b>100</b> in the lower portion thereof. The saline water container <b>40</b><i>a </i>includes its own motor so as to send saline water before inhaling foreign material to make the foreign material easily inhalable. The saline water container <b>40</b><i>a </i>may be detachably attached for the exchange and cleaning of saline water.</p>
+      <p id="p-00059-en" num="0059">The saline water container <b>40</b><i>a </i>is provided with the scale <b>100</b> and a small motor in the lower portion thereof. The scale <b>100</b> constantly measures a weight of saline water in the saline water container <b>40</b><i>a, </i>and if the weight is decreased from a predetermined value, sends a signal to the control unit <b>120</b>. The control unit <b>120</b> receives the signal and indicates a saline water supply signal through the input unit <b>80</b>.</p>
+      <p id="p-00060-en" num="0060">The saline water container <b>40</b><i>a </i>is connected to the first solenoid valve <b>30</b><i>c. </i>Thus, the first solenoid valve <b>30</b><i>c </i>is opened before foreign material is inhaled, and the saline water in the saline water container <b>40</b><i>a </i>is mixed with foreign material inside the user's bronchus to increase the fluidity of foreign material.</p>
+      <p id="p-00061-en" num="0061">In addition, the saline water container <b>40</b><i>a </i>is connected to the catheter <b>113</b><i>a </i>to be inserted into the bronchus of the user, and pumps saline water into the catheter <b>113</b><i>a </i>by using its own motor, so as to sterilize and clean the catheter <b>113</b><i>a. </i></p>
+      <p id="p-00062-en" num="0062">The suction container <b>40</b><i>b </i>is formed inside the side of the suction device <b>10</b> and stores foreign material sucked in. The scale <b>100</b> is disposed in the lower portion of the suction container <b>40</b><i>b. </i>The suction container <b>40</b><i>b </i>is formed in a suitable volume which is large enough to secure a space for the scale <b>100</b>. The suction container <b>40</b><i>b </i>may be detachably attached for treatment and cleaning of foreign materials.</p>
+      <p id="p-00063-en" num="0063">The suction container <b>40</b><i>b </i>is coupled with the second solenoid valve <b>30</b><i>c. </i>Thus, if the fluidity of foreign material is increased by the saline water in the saline water container <b>40</b><i>a, </i>the first solenoid valve <b>30</b><i>c </i>is closed. Foreign material is sucked in with the second solenoid valve <b>30</b><i>c </i>opened.</p>
+      <p id="p-00064-en" num="0064">When foreign material is sucked in, the second solenoid valve <b>30</b><i>c </i>is closed, and the third solenoid valve <b>30</b><i>c </i>connected to the MFM sensor <b>50</b><i>a </i>is opened. The sensor unit <b>50</b> includes the MFM sensor <b>50</b><i>a. </i></p>
+      <p id="p-00065-en" num="0065">The MFM sensor <b>50</b><i>a </i>is mounted on the side of the BLDC motor <b>30</b><i>b, </i>and since it has a small size and weight, the effect on the whole weight of the suction device <b>10</b> is insignificant. The MFM sensor <b>50</b><i>a </i>makes the mass of gas as a reference of measuring. Since the MFM sensor <b>50</b><i>a </i>directly measures an invariable mass, it is possible to exactly detect the flow rate of gas without requiring a complicated calculation.</p>
+      <p id="p-00066-en" num="0066">Further, the MFM sensor <b>50</b><i>a </i>may effectively measure the gas with a low flow rate, and since the sensor is not configured to measure the volume or pressure of gas, it is possible to exactly measure the mass of flowing gas. In addition, since the MFM sensor <b>50</b><i>a </i>has no device generating a vibration during measuring the mass of gas, it is possible to increase the user's convenience during using the suction device <b>10</b>.</p>
+      <p id="p-00067-en" num="0067">The MFM sensor <b>50</b><i>a </i>can measure the mass of a variety of gases such as CO<sub>2</sub>, Ar, methane, hydrogen, nitrogen, or the like. Specifically, by detecting the mass of CO<sub>2 </sub>from the respiration of a patient who uses the suction device <b>10</b>, and measuring complex data such as user's blood circulation, exhalation, inhalation, vital lung capacity and pulmonary function, it is possible to determine the condition of the user.</p>
+      <p id="p-00068-en" num="0068">Thus, since the suction device <b>10</b> is provided with the MFM sensor <b>50</b><i>a, </i>it is possible to secure information on the unstable breathing condition due to aggravation of a patient's physical condition. Further, the MFM sensor <b>50</b><i>a </i>can measure information on a patient's daily breathing condition as well. Herein, daily breathing condition information includes information on the general state of a user's breathing condition such as the mass of air the user breathes in and out (inhalation mass and exhalation mass) or the flow rate and the respiration rate per minute.</p>
+      <p id="p-00069-en" num="0069">Meanwhile, if foreign material is generated in the user's bronchus, the mass or flow rate of the air exhaled by the user becomes different. The MFM sensor <b>50</b><i>a </i>detects values of the changed user's inhalation mass, exhalation mass or the flow rate and the results of the respiration rate per minute, and sends to the control unit <b>120</b>. The control unit <b>120</b> can determine such a changed state depending on the values detected by the MFM sensor <b>50</b><i>a. </i></p>
+      <p id="p-00070-en" num="0070">Meanwhile, in one embodiment of the present invention, a pressure sensor such as a sound pressure sensor that measures the size of user's groan may be used instead of using the MFM sensor <b>50</b><i>a. </i>Commonly, a patient who feels uneasy due to foreign material generated in his bronchus groans unwittingly and in the case of using a sound pressure sensor, the level of the patient's groan is detected by the MFM sensor <b>50</b><i>a </i>and sent to the control unit <b>120</b>, so that it is possible to control taking the patient's subjective condition into consideration.</p>
+      <p id="p-00071-en" num="0071">Meanwhile, in one embodiment of the present invention, it is preferable that the sensor unit <b>50</b> is provided with a filter for preventing moisture from entering into the sensor unit <b>50</b>.</p>
+      <p id="p-00072-en" num="0072">Preferably, the vacuum gauge <b>60</b> is mounted on the front of the front cover <b>20</b><i>a </i>in order to show the suction pressure of the suction device <b>10</b>. If the suction pressure of the suction device <b>10</b> increases abnormally, it could damage the respiratory organ of the user. Therefore, it is preferable to mount the vacuum gauge <b>60</b> on the front so as to confirm whether there is normal pressure or not. Meanwhile, in one embodiment of the present invention, it is preferable that an analog vacuum gauge that is safe and has less error is used for the vacuum gauge <b>60</b>.</p>
+      <p id="p-00073-en" num="0073">The nebulizer <b>70</b>, which is mounted outside of the side of the suction device <b>10</b>, provides humidity to the patient's trachea if the user has difficulty in breathing, so as to stabilize the breathing condition of the user.</p>
+      <p id="p-00074-en" num="0074">The input unit <b>80</b> is provided with a panel-type display, and it is preferable that a plurality of buttons are arranged at a position in which the input unit <b>80</b> is disposed so that selection of respiration steps by age is possible. Since the input unit <b>80</b> is embodied in a touch panel type display, the user can select intuitively, thereby it has an advantage that there is no need to pay extra attention to the description of the operating method that is not easy to understand.</p>
+      <p id="p-00075-en" num="0075">The filter <b>90</b> is mounted on the front of the saline water container <b>40</b><i>a </i>to purify the air entering into the body of the user.</p>
+      <p id="p-00076-en" num="0076">The scales <b>100</b> are mounted below the saline water container <b>40</b><i>a </i>and the suction container <b>40</b><i>b </i>to measure the weights of foreign materials and saline water in the saline water container <b>40</b><i>a </i>and the suction container <b>40</b><i>b. </i></p>
+      <p id="p-00077-en" num="0077">When the measured value of the scale <b>100</b> installed below the saline water container <b>40</b><i>a </i>is less than a predetermined reference value, the scale <b>100</b> sends an underweight signal representing underweight of the saline water to the control unit <b>120</b>, and the control unit <b>120</b> outputs a saline water replenish request message through a touch panel type display or speaker of the input unit <b>80</b>.</p>
+      <p id="p-00078-en" num="0078">Meanwhile, when the measured value of the scale <b>100</b> installed below the suction container <b>40</b><i>b </i>exceeds a predetermined reference value, the scale <b>100</b> sends an overweight signal representing overweight of the saline water to the control unit <b>120</b>, and the control unit <b>120</b> outputs a foreign material deplenish request message through the touch panel type display or speaker of the input unit <b>80</b>.</p>
+      <p id="p-00079-en" num="0079">The tube unit <b>110</b> is connected to the outside of the suction device <b>10</b> to suck in foreign material generated in the bronchus of the user.</p>
+      <p id="p-00080-en" num="0080">The control unit <b>120</b> is mounted on the driver <b>30</b><i>a. </i>The control unit <b>120</b> analyzes the daily breathing condition information received from the MFM sensor <b>50</b><i>a, </i>and sends a signal for driving the BLDC motor <b>30</b><i>b </i>by the driver <b>30</b><i>a </i>depending on the analysis results. The BLDC motor <b>30</b><i>b </i>starts pumping through the signal received from the driver <b>30</b><i>a, </i>and the tube unit <b>110</b> sucks in foreign material generated in the bronchus of the user.</p>
+      <p id="p-00081-en" num="0081">
+        <figref>FIG. 2</figref> is a perspective view showing the structure of the tube unit included in the suction device of <figref>FIG. 1</figref>. Referring to <figref>FIG. 2</figref>, the tube unit <b>110</b> includes a catheter reel <b>113</b> and a tube cover <b>114</b>. The catheter reel <b>113</b> includes a catheter <b>113</b><i>a, </i>a screw frame <b>113</b><i>b, </i>a catheter reel case <b>113</b><i>c, </i>a stepping motor <b>113</b><i>d, </i>and a waste can <b>41</b>.</p>
+      <p id="p-00082-en" num="0082">The catheter <b>113</b><i>a </i>is reeled between protruded threads of the screw frame <b>113</b><i>b, </i>and moves out of the catheter reel <b>113</b> or returns into the catheter reel <b>113</b> again depending on the rotation direction of the screw frame <b>113</b><i>b. </i></p>
+      <p id="p-00083-en" num="0083">That is, when the screw frame <b>113</b><i>b </i>coupled with the stepping motor <b>113</b><i>d </i>rotates by the rotation of the stepping motor <b>113</b><i>d, </i>the threads formed in the catheter reel case <b>113</b><i>c </i>are meshed with the screw frame <b>113</b><i>b </i>to move in different (i.e. forward and reverse) directions depending on the rotation direction of the stepping motor <b>113</b><i>d. </i></p>
+      <p id="p-00084-en" num="0084">Thus, in the state in which the catheter <b>113</b><i>a </i>is reeled between protruded threads of the screw frame <b>113</b><i>b, </i>and tensile and frictional forces are applied between the catheter <b>113</b><i>a </i>and the screw frame <b>113</b><i>b, </i>when the screw frame <b>113</b><i>b </i>rotates by the rotation of the stepping motor <b>113</b><i>d, </i>the catheter <b>113</b><i>a </i>is moved in the rotation direction by the tensile and frictional forces applied thereto depending on the rotation direction of the screw frame <b>113</b><i>b. </i></p>
+      <p id="p-00085-en" num="0085">One end of the catheter <b>113</b><i>a </i>is disposed in the tube cover <b>114</b>, and the other end is connected to the waste can <b>41</b> passing through the catheter reel <b>113</b>. In addition, the tube cover <b>114</b>, except portions connected to the catheter reel <b>113</b> and directed to the bronchus, has four protruded openings formed on outside so as to be respectively coupled with the MFM sensor <b>50</b><i>a, </i>the saline water container <b>40</b><i>a, </i>the nebulizer <b>70</b> and a filter <b>150</b>.</p>
+      <p id="p-00086-en" num="0086">Saline water moves into the catheter <b>113</b><i>a </i>through the protruded opening connected to the saline water container <b>40</b><i>a, </i>so as to sterilize and disinfect the inside of the catheter <b>113</b><i>a </i>and remove foreign materials.</p>
+      <p id="p-00087-en" num="0087">In addition, three saline water hoses connected to the catheter reel case <b>113</b><i>c </i>transport saline water injected from the saline water container <b>40</b><i>a </i>to sterilize and clean the outer surface of the catheter <b>113</b><i>a </i>in the catheter reel case <b>113</b><i>c </i>and the screw frame <b>113</b><i>b. </i></p>
+      <p id="p-00088-en" num="0088">The filter <b>150</b> functions to purify air inletting from the outside. Alternately, after separating the filter <b>150</b> from the tube cover <b>114</b>, an artificial respirator may be installed in the protruded opening connected to the filter <b>150</b>. Thus, when a problem with the respirator of the patient has occurred during suction, the user may separate the filter <b>150</b> from the tube cover <b>114</b> and then connect the artificial respirator thereto so as to have the patient's respiratory function recovered.</p>
+      <p id="p-00089-en" num="0089">Meanwhile, the MFM sensor <b>50</b><i>a </i>is connected to the front portion of the catheter <b>113</b><i>a </i>to measure the mass flow of the gas exhaled by the patient, and the control unit <b>120</b> analyzes the measured value received from the MFM sensor <b>50</b><i>a </i>to determine the bronchus condition of the patient, and based on the analysis results, the stepping motor <b>113</b><i>d </i>is driven to insert the catheter <b>113</b><i>a </i>into the patient's bronchus or draw it out of the patient's bronchus.</p>
+      <p id="p-00090-en" num="0090">
+        <figref>FIGS. 3 and 4</figref> are exploded perspective views showing the structure of the catheter reel <b>113</b> included in the tube unit <b>110</b>. Referring to <figref>FIGS. 3 and 4</figref>, the catheter reel <b>113</b> includes the catheter <b>113</b><i>a, </i>the screw frame <b>113</b><i>b, </i>the stepping motor <b>113</b><i>d </i>and the catheter reel case <b>113</b><i>c. </i></p>
+      <p id="p-00091-en" num="0091">The catheter <b>113</b><i>a </i>may be formed of innoxious silicon, rubber, or polymer having elasticity. The catheter <b>113</b><i>a </i>is reeled between the protruded threads of the screw frame <b>113</b><i>b </i>to be fixed thereto by the frictional and tensile forces.</p>
+      <p id="p-00092-en" num="0092">The stepping motor <b>113</b><i>d </i>is coupled with the screw frame <b>113</b><i>b, </i>so as to be rotated by the rotation of the stepping motor <b>113</b><i>d. </i></p>
+      <p id="p-00093-en" num="0093">The stepping motor <b>113</b><i>d </i>may be rotated at minute angles, so as to gently insert the catheter <b>113</b><i>a </i>into the bronchus of the patient without damage to the bronchus. That is, since individual bronchi are different from person to person, when using the stepping motor <b>113</b><i>d, </i>it is possible to prevent or minimize a damage to the bronchus by individually adjusting and setting the depth of the catheter <b>113</b><i>a </i>meeting the bronchus of each patient.</p>
+      <p id="p-00094-en" num="0094">The catheter <b>113</b><i>a </i>moves into the bronchus by the forwardly rotating stepping motor <b>113</b><i>d </i>to suck in foreign material, and is reeled onto the screw frame <b>113</b><i>b </i>and pulled by the reversely rotating stepping motor <b>113</b><i>d </i>in a direction opposite to the sucking.</p>
+      <p id="p-00095-en" num="0095">During such a process, the surface of the catheter <b>113</b><i>a </i>is contaminated by foreign materials in the bronchus. In order to remove the foreign materials, the lower portion of the catheter reel case <b>113</b><i>c </i>is provided with three holes into which saline water hoses are inserted.</p>
+      <p id="p-00096-en" num="0096">Referring to <figref>FIG. 2</figref> and <figref>FIG. 3</figref>, when injecting saline water through the holes formed in the catheter reel case <b>113</b><i>c, </i>the injected saline water sterilizes and cleans the foreign materials remaining in the catheter <b>113</b><i>a </i>and the screw frame <b>113</b><i>b. </i>Further, in order to sterilize and clean the foreign materials existing in the catheter <b>113</b><i>a, </i>saline water moves to the waste can <b>41</b> passing through the catheter <b>113</b><i>a. </i></p>
+      <p id="p-00097-en" num="0097">Referring to <figref>FIG. 4</figref>, the screw frame <b>113</b><i>b </i>includes a plurality of protruded threads having a substantially rectangular cross-section formed on the outer circumference thereof, and the catheter <b>113</b><i>a </i>is reeled between the protruded threads. Further, the catheter <b>113</b><i>a, </i>the screw frame <b>113</b><i>b, </i>the catheter reel case <b>113</b><i>c </i>and the stepping motors <b>113</b><i>d </i>are respectively attached by an easy to assemble and detach structure, to effectively clean away the foreign materials.</p>
+      <p id="p-00098-en" num="0098">
+        <figref>FIGS. 5 and 6</figref> are exploded perspective views showing an operation in which the catheter reel <b>113</b> is inserted into the bronchus through a T tube <b>151</b>. Referring to <figref>FIGS. 5 and 6</figref>, the sensor unit <b>50</b> detects the patient's daily breathing condition changed by the foreign materials in the bronchus, and the control unit <b>120</b> controls to drive the stepping motor <b>113</b><i>d </i>based on the detected results.</p>
+      <p id="p-00099-en" num="0099">When the stepping motor <b>113</b><i>d </i>rotates, the catheter <b>113</b><i>a </i>is inserted into the patient's bronchus through the T tube <b>151</b>. At this time, the catheter <b>113</b><i>a </i>is gently inserted by the minutely rotating stepping motor <b>113</b><i>d </i>so as to prevent a damage do the bronchus of the patient. At this time, various types of T tube <b>151</b> suiting the patient may be used based on the condition of the patient.</p>
+      <p id="p-00100-en" num="0100">In addition, the control unit <b>120</b> injects saline water in the storage unit <b>40</b> through the catheter <b>113</b><i>a, </i>so that the foreign materials adsorbed to the bronchus are changed into a colloidal state which is likely to be detached. At this time, the control unit <b>120</b> controls to drive the BLDC motor <b>30</b><i>b </i>to suck the foreign materials in an easily suckable state through the catheter <b>113</b><i>a. </i></p>
+      <p id="p-00101-en" num="0101">After the catheter <b>113</b><i>a </i>is inserted into the bronchus to suck in the foreign materials, it is reeled onto the screw frame <b>113</b><i>b </i>by the reversely rotating stepping motor <b>113</b><i>d </i>to move out of the bronchus.</p>
+      <p id="p-00102-en" num="0102">When the catheter <b>113</b><i>a </i>that was inserted into the bronchus is reeled onto the screw frame <b>113</b><i>b, </i>saline water is injected by pumping of the BLDC motor <b>30</b><i>b </i>through the holes formed outside of the catheter reel case <b>113</b><i>c </i>to clean the outside of the catheter <b>113</b><i>a. </i></p>
+      <p id="p-00103-en" num="0103">In addition, saline water is also injected into the catheter <b>113</b><i>a </i>by the pumping of the BLDC motor <b>30</b><i>b </i>to clean the foreign material remaining in the catheter <b>113</b><i>a </i>as well.</p>
+      <p id="p-00104-en" num="0104">As described above, according to the present invention, by cleaning the inside and outside of the catheter <b>113</b><i>a, </i>it is possible to prevent damage to the bronchus due to contamination of the catheter <b>113</b><i>a. </i>Further, by maintaining and managing the catheter <b>113</b><i>a, </i>which is conventionally only disposably used for sanitary reasons, in a state reusable for at least one day, it is possible to reduce costs arising from frequent replacement of the catheter <b>113</b><i>a. </i></p>
+      <p id="p-00105-en" num="0105">
+        <figref>FIG. 7</figref> is a perspective view showing the structure of the T tube that may be connected to the tube unit included in the suction device of <figref>FIG. 1</figref>.</p>
+      <p id="p-00106-en" num="0106">Referring to <figref>FIG. 7</figref>, the T tube <b>151</b> includes a first cuff <b>151</b><i>a, </i>a second cuff <b>151</b><i>b, </i>a first tube <b>151</b><i>c, </i>a second tube <b>151</b><i>d, </i>a third tube <b>151</b><i>e, </i>a fourth tube <b>151</b><i>f </i>and a fifth tube <b>151</b><i>g. </i></p>
+      <p id="p-00107-en" num="0107">The T tube <b>151</b> is connected to the suction device <b>10</b>, and includes the first and second cuffs <b>151</b><i>a </i>and <b>151</b><i>b. </i>The T tube <b>151</b>, which is a tube for tracheostomy, is disposed inside the user's bronchus passing through the user's neck. The first and second cuffs <b>151</b><i>a </i>and <b>151</b><i>b </i>of the T tube <b>151</b> are inflated by syringe or air injector in the user's bronchus to perform the function of expanding the inside of the bronchus.</p>
+      <p id="p-00108-en" num="0108">The first and second cuffs <b>151</b><i>a </i>and <b>151</b><i>b </i>are inflated one after another at a predetermined interval of time in the user's bronchus. Meanwhile, the first and second cuffs <b>151</b><i>a </i>and <b>151</b><i>b </i>are inflated and deflated alternately one after another at the upper and lower positions. The reason is that, if the first and second cuffs <b>151</b><i>a </i>and <b>151</b><i>b </i>are continuously maintained in an inflated state, inflammation or infection may occur in the bronchus.</p>
+      <p id="p-00109-en" num="0109">Thus, in the present invention, it is possible to prevent an occurrence of the inflammation or infection in the bronchus by inflating and deflating the first and second cuffs <b>151</b><i>a </i>and <b>151</b><i>b </i>one after another at an interval of time.</p>
+      <p id="p-00110-en" num="0110">Meanwhile, in order to inflate the first and second cuffs <b>151</b><i>a </i>and <b>151</b><i>b </i>alternately one after another, the third tube <b>151</b><i>e </i>and the second tube <b>151</b><i>d </i>are independently connected to the first and second cuffs <b>151</b><i>a </i>and <b>151</b><i>b. </i></p>
+      <p id="p-00111-en" num="0111">Specifically, after a predetermined time has elapsed from when the first cuff <b>151</b><i>a </i>is inflated, air is drawn out using the third tube <b>151</b><i>e, </i>and air is inlet into the second cuff <b>151</b><i>b </i>to inflate it by using the second tube <b>151</b><i>d. </i>By repeatedly performing the above-described operation at a predetermined interval of time, the possibility of causing inflammation or infection to the user's bronchus is reduced, and a need for the user to exchange the T tube <b>151</b> frequently is removed, such that convenience may be increased.</p>
+      <p id="p-00112-en" num="0112">Meanwhile, in order to reduce a load applied to the neck of the user, it is preferable that, with a long tube being firstly connected, the long T tube <b>151</b> is connected to the tubes of the suction device <b>10</b>.</p>
+      <p id="p-00113-en" num="0113">Also, the long T tube is provided with the first tube <b>151</b><i>c </i>and the fourth tube <b>151</b><i>f </i>therein, which extend outward from the suction device <b>10</b> and reach the bronchus of the user.</p>
+      <p id="p-00114-en" num="0114">Meanwhile, when the MFM sensor <b>50</b><i>a </i>detects the user's daily breathing conditions such as the respiration rate per minute, as well as the mass and flow rate of exhaled gas and sends a signal representing the detected results to the control unit <b>120</b>, then the control unit <b>120</b> determines the patient's condition based on the received signal. If it is determined that there is a problem with the patient's breathing condition depending on the analysis of the daily breathing condition, the control unit <b>120</b> controls to drive the BLDC motor <b>30</b><i>b </i>to supply oxygen through the third tube <b>151</b><i>e. </i></p>
+      <p id="p-00115-en" num="0115">Further, in one embodiment of the present invention, by providing the control unit <b>120</b> with wireless communication devices such as a Bluetooth module or WiFi module, it is possible to provide simple artificial respiration through the fifth tube <b>151</b><i>g </i>when the daily breathing condition is rapidly changed, and at the same time an alert message may be sent to the guardian or medical team.</p>
+      <p id="p-00116-en" num="0116">Meanwhile, the first tube <b>151</b><i>c </i>and the fourth tube <b>151</b><i>f </i>are passages for sucking foreign materials generated in the patient's bronchus. The first tube <b>151</b><i>c </i>sucks in foreign material that may be formed in the upper portion of the first cuff <b>151</b><i>a </i>while the first cuff <b>151</b><i>a </i>is inflated, and the fourth tube <b>151</b><i>f </i>sucks in foreign material that may be generated in the upper portion of the second cuff <b>151</b><i>b </i>while the second cuff <b>151</b><i>b </i>is inflated with the air from the first cuff <b>151</b><i>a </i>which is subsequently deflated.</p>
+      <p id="p-00117-en" num="0117">Thus, while the first cuff <b>151</b><i>a </i>or the second cuff <b>151</b><i>b </i>is inflated by the first tube <b>151</b><i>c </i>and the fourth tube <b>151</b><i>f, </i>foreign materials generated in the bronchus are sequentially sucked.</p>
+      <p id="p-00118-en" num="0118">The saline water of the saline water container <b>40</b><i>a </i>is atomized into fine particles through the first tube <b>151</b><i>c </i>and the fourth tube <b>151</b><i>f </i>on the foreign materials generated in the body such as saliva, sputum or solid impurities. When saline water is atomized on the foreign material, fluidity of the foreign material is increased. Therefore, the foreign material is easily sucked in by the suction force applied through the first tube <b>151</b><i>c </i>and the fourth tube <b>151</b><i>f. </i></p>
+      <p id="p-00119-en" num="0119">That is, in the present invention, before the suction device <b>10</b> sucks in, saline water is firstly mixed with foreign material through the first tube <b>151</b><i>c </i>and the fourth tube <b>151</b><i>f </i>so as to increase the fluidity of the foreign material, and the BLDC motor <b>30</b><i>b </i>drives to suck in the foreign material.</p>
+      <p id="p-00120-en" num="0120">
+        <figref>FIG. 8</figref> is an exploded perspective view showing the structure of the suction device of <figref>FIG. 1</figref> as seen from a different direction thereof. As shown in <figref>FIG. 8</figref>, in one embodiment of the present invention, the suction device <b>10</b> may be additionally provided with a USB terminal <b>140</b> and a power switch <b>130</b> on the rear thereof.</p>
+      <p id="p-00121-en" num="0121">The USB terminal <b>140</b> is connected to an external device such as a notebook or a desktop PC, and is used to transmit a user's daily breathing condition information to the external device in real time, so that the external device may store or make statistical analysis on the daily breathing information.</p>
+      <p id="p-00122-en" num="0122">Meanwhile, the power switch <b>130</b> is disposed below the USB terminal <b>140</b>, and is used to turn on and off the power of the suction device <b>10</b>.</p>
+      <p id="p-00123-en" num="0123">
+        <figref>FIG. 9</figref> is a view showing an example of an operation screen displayed on the input unit <b>80</b> of the suction device of <figref>FIG. 1</figref>. As shown in <figref>FIG. 9</figref>, the suction device <b>10</b> according to the present invention may be additionally provided with a nebulizer function that can improve the pulmonary function for improvement of a user's respiratory function.</p>
+      <p id="p-00124-en" num="0124">The nebulizer function is a function for inducing the user's exhalation and inhalation time to be gradually increased. Specifically, for improvement of patient's respiratory function, the nebulizer <b>70</b> is used, or an additional nebulizer may be used by connecting it to the tube unit <b>110</b> after separating the nebulizer <b>70</b>.</p>
+      <p id="p-00125-en" num="0125">When using the additional nebulizer, the user may recover to normal conditions from conditions of irregular respiration rate per minute and an abnormally high respiration rate with his or her vital lung capacity improved.</p>
+      <p id="p-00126-en" num="0126">Meanwhile, referring to <figref>FIG. 9</figref>, a touch panel type display included in the input unit <b>80</b> may be largely divided into a breathing information display window <b>81</b> and a device setting window <b>82</b>. The breathing information display window <b>81</b> displays a respiration rate per minute <b>81</b><i>a, </i>single respiratory air volume <b>81</b><i>b </i>and respiration rate per hour <b>81</b><i>c. </i>The device setting window <b>82</b> is provided with a room temperature setting button <b>82</b><i>a, </i>respiration rate step setting buttons <b>82</b><i>b, </i>adjustment buttons <b>82</b><i>c, </i>an operation time setting button <b>82</b><i>d, </i>a pressure setting button <b>82</b><i>e, </i>inhalation time setting buttons <b>82</b><i>f, </i>exhalation time setting buttons <b>82</b><i>g, </i>a start button <b>82</b><i>h, </i>and a simple respiration button <b>82</b><i>i. </i></p>
+      <p id="p-00127-en" num="0127">The respiration rate per minute <b>81</b><i>a </i>shows a sum of exhalation and inhalation per minute, and the single respiratory air volume <b>81</b><i>b </i>shows the volume of air breathed out or in during exhalation or inhalation. The respiration rate per minute <b>81</b><i>a </i>and the single respiratory air volume <b>81</b><i>b </i>are numerical values measurable in a short time of one minute or less from the user.</p>
+      <p id="p-00128-en" num="0128">The respiration rate per hour <b>81</b><i>c </i>shows a sum of exhalation and inhalation per hour, and is a numerical value for confirming whether the patient's condition is improving or not.</p>
+      <p id="p-00129-en" num="0129">The room temperature setting button <b>82</b><i>a </i>shows the current room temperature of the place where the user uses the suction device <b>10</b>, and it is an important factor in the case for improving the operating room or the condition of the user with a weak bronchus.</p>
+      <p id="p-00130-en" num="0130">The respiration rate step setting button <b>82</b><i>b </i>includes a plurality of buttons, and the user selects the respiration rate step depending on his or her respiration rate per minute <b>81</b><i>a. </i>When selecting any one of the respiration rate step setting buttons <b>82</b><i>b, </i>air is injected at a rate equivalent to the half of the user's respiration rate per minute <b>81</b><i>a. </i></p>
+      <p id="p-00131-en" num="0131">For example, when the user selects <b>10</b> as the respiration rate per minute using the respiration rate step setting button <b>82</b><i>b, </i>the nebulizer injects 5 times for one minute. Therefore, the nebulizer injects 5 times matching with exhalation for 6 seconds at one time.</p>
+      <p id="p-00132-en" num="0132">Thus, the user is inhaling while air is injected by the nebulizer function of the suction device <b>10</b>, and whenever the respiration rate step is increased, the exhalation time is gradually increased so as to improve vital lung capacity, and the irregular and abnormally long respiration rate per minute may be recovered to normal.</p>
+      <p id="p-00133-en" num="0133">Meanwhile, in one embodiment of the present invention, the number of the respiration rate step setting button <b>82</b><i>b </i>is not limited to three, and a plurality of buttons exceeding three may be provided.</p>
+      <p id="p-00134-en" num="0134">The adjustment button <b>82</b><i>c </i>is a button for inputting the setting of pressure, time, etc., and the operation time setting button <b>82</b><i>d </i>is a button for starting the operation of the suction device <b>10</b> with the setting completed.</p>
+      <p id="p-00135-en" num="0135">The operation time setting button <b>82</b><i>d </i>is a button for setting the time at which the user uses the suction device <b>10</b>, and the user can input the service time of the suction device <b>10</b> in minutes by using this button</p>
+      <p id="p-00136-en" num="0136">The pressure setting button <b>82</b><i>e </i>is a button for setting the pressure of air atomized by the respirator of the user, and the user can freely set the pressure within a predetermined range by using this button.</p>
+      <p id="p-00137-en" num="0137">The inhalation time setting button <b>82</b><i>f </i>is a button for setting inhalation time, which is the time for the user to breathe in, and the user can set his or her inhalation time in seconds within the range of 1 second to 10 seconds by using this button.</p>
+      <p id="p-00138-en" num="0138">The exhalation time setting button <b>82</b><i>g </i>is a button for setting exhalation time, which is the time for the user to breathe out, and the user can set his or her exhalation time in seconds within the range of 1 second to 10 seconds by using this button.</p>
+      <p id="p-00139-en" num="0139">The start button <b>82</b><i>h </i>is a button for the user to start the operation of the suction device <b>10</b> after completing the setting for operation on the device setting window <b>82</b>.</p>
+      <p id="p-00140-en" num="0140">The simple respiration button <b>82</b><i>i </i>is a button for manual operation when improving a user's breathing condition or when a user's breathing condition is irregular and difficult. However, in the suction device <b>10</b> according to the present invention, basically the MFM sensor <b>50</b><i>a </i>measures a user's breathing condition to start simple respiration by artificial intelligence.</p>
+      <p id="p-00141-en" num="0141">Thus, the simple respiration button <b>82</b><i>i </i>is used to increase a user's inhalation time and improve his or her pulmonary function or during an emergency.</p>
+      <p id="p-00142-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="126pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Respiration rate step</entry>
+                  <entry>Respiration rate per minute</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(by age)</entry>
+                  <entry>(time/min)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Adult(Over 18 yrs)</entry>
+                  <entry>10</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Adolescent(12~18 yrs)</entry>
+                  <entry>15</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Children(5~12 yrs)</entry>
+                  <entry>20</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Preschooler(4~5 yrs)</entry>
+                  <entry>25</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Toddler(1~3 yrs)</entry>
+                  <entry>30</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Infants(1 month~1 yrs)</entry>
+                  <entry>40</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Newborn(0~1 month)</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00143-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="35pt" align="left" />
+              <colspec colname="1" colwidth="182pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Flow rate increase step (min)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="11" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="35pt" align="left" />
+              <colspec colname="1" colwidth="21pt" align="center" />
+              <colspec colname="2" colwidth="14pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="14pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <colspec colname="6" colwidth="14pt" align="center" />
+              <colspec colname="7" colwidth="21pt" align="center" />
+              <colspec colname="8" colwidth="14pt" align="center" />
+              <colspec colname="9" colwidth="21pt" align="center" />
+              <colspec colname="10" colwidth="21pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>1</entry>
+                  <entry>2</entry>
+                  <entry>3</entry>
+                  <entry>4</entry>
+                  <entry>5</entry>
+                  <entry>6</entry>
+                  <entry>7</entry>
+                  <entry>8</entry>
+                  <entry>9</entry>
+                  <entry>10</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="10" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="11" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="char" char="." />
+              <colspec colname="3" colwidth="14pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="14pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="14pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <colspec colname="9" colwidth="14pt" align="center" />
+              <colspec colname="10" colwidth="21pt" align="center" />
+              <colspec colname="11" colwidth="21pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Injection</entry>
+                  <entry>1</entry>
+                  <entry>1.1</entry>
+                  <entry>1.2</entry>
+                  <entry>1.3</entry>
+                  <entry>1.4</entry>
+                  <entry>1.5</entry>
+                  <entry>1.6</entry>
+                  <entry>1.7</entry>
+                  <entry>1.8</entry>
+                  <entry>1.9</entry>
+                </row>
+                <row>
+                  <entry>time</entry>
+                </row>
+                <row>
+                  <entry>rate</entry>
+                </row>
+                <row>
+                  <entry>Pressure</entry>
+                  <entry>2.5</entry>
+                  <entry>2.5</entry>
+                  <entry>2.5</entry>
+                  <entry>2.5</entry>
+                  <entry>2.5</entry>
+                  <entry>2.5</entry>
+                  <entry>2.5</entry>
+                  <entry>2.5</entry>
+                  <entry>2.5</entry>
+                  <entry>2.5</entry>
+                </row>
+                <row>
+                  <entry>(kg/cm<sup>2</sup>)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="11" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00144-en" num="0142">Table 1 shows the respiration rate per minute <b>81</b><i>a </i>in the respiration rate step setting button <b>82</b><i>b </i>divided by age, and Table 2 shows the injection time rate and pressure according to the flow rate increase steps.</p>
+      <p id="p-00145-en" num="0143">Data in Table 1 and Table 2 are inputted in the suction device <b>10</b> according to the present invention as basic information, and the numerical values listed in Table 1 and Table 2 may be freely changed by the user through the input unit <b>80</b>.</p>
+      <p id="p-00146-en" num="0144">Referring to Table 1, the respiration rate step setting button <b>82</b><i>b </i>is divided by age and has a different respiration rate per minute <b>81</b><i>a </i>respectively according to each age group.</p>
+      <p id="p-00147-en" num="0145">Referring to Table 2, as the flow rate increase step, a plurality of steps may be provided, and different times are set in minutes between the flow rate increase steps.</p>
+      <p id="p-00148-en" num="0146">The respiration rate per minute <b>81</b><i>a </i>shows the sum of inhalation and exhalation made within one minute, and a flow rate increase step means the step at which the injection time rate proceeds to the next rate, and it is possible to set from the minute unit to hour unit.</p>
+      <p id="p-00149-en" num="0147">An injection time rate shows the rate of time at which the nebulizer <b>70</b> atomizes during inhalation. For example, when the user selects Adult by the respiration rate step setting button <b>82</b><i>b </i>and sets 1 minute for the time of the flow rate increase step, the times of inhalation becomes 5 if the respiration rate per minute <b>81</b><i>a </i>is 10 times.</p>
+      <p id="p-00150-en" num="0148">Therefore, the time of one inhalation becomes 6 seconds. At this time, the flow rate increase step begins at step 1, and it takes 1 minute, which was set, to proceed from step 1 to step 2. The injection time rate at step 1 is 1, and if the injection time rate is 1, the nebulizer <b>70</b> atomizes for 6 seconds of inhalation time.</p>
+      <p id="p-00151-en" num="0149">As 1 minute has passed and proceeds to step 2, the injection time rate is changed to 1.1, so that the nebulizer <b>70</b> atomizes for 6.6 seconds of inhalation time. When another 1 minute has passed and proceeds to step 3, the injection time rate is changed to 1.2, so that the time of inhalation, that is, the injection time of air increases to 7.2 seconds.</p>
+      <p id="p-00152-en" num="0150">Thus, the injection time of air increases step by step at the injection time rate depending on the injection time rate, and the user is subjected to the injection time of air that is increased by using the suction device <b>10</b> for hours or days so as to increase the time of inhalation naturally.</p>
+      <p id="p-00153-en" num="0151">The function of inducing the inhalation time to increase may be applied to various types of suction devices in addition to the suction device <b>10</b>.</p>
+      <p id="p-00154-en" num="0152">Further, without limitation to the suction device <b>10</b>, the technical configuration of the present invention may be applied to products for increasing vital lung capacity, and may be used as well by lung cancer patients, athletes, rhinitis patients, users who want to improve hypogastric breathing or abdominal breathing, melancholiacs and psychiatric patients.</p>
+      <p id="p-00155-en" num="0153">For lung cancer patients, it is possible to partially improve the pulmonary function in which normal breathing is possible, and facilitate blood circulation to help with the treatment of lung cancer.</p>
+      <p id="p-00156-en" num="0154">According to the present invention, athletes may train his or her pulmonary function by daytime exercise and also through the function of inducing the suction device <b>10</b> to increase the inhalation time even during sleep.</p>
+      <p id="p-00157-en" num="0155">There is an effect of self-treatment for rhinitis patients by cultivating immunity through the function of inducing the increase of inhalation time and facilitating the blood circulation of the whole body and nose.</p>
+      <p id="p-00158-en" num="0156">For the users who train hypogastric breathing or abdominal breathing, the effects are increased by improving pulmonary function and inducing abdominal breathing even during sleep through the function of inducing the increase of inhalation time.</p>
+      <p id="p-00159-en" num="0157">Also, for students and office workers who need improved concentration, there are good effects that pulmonary function is improved and blood circulation is facilitated by the function of increasing the inhalation time so as to be helpful for not only concentration on study but also their health.</p>
+      <p id="p-00160-en" num="0158">For psychiatric patients, stabilized breathing may improve the blood circulation of the brain and improve their physical condition. Therefore, physical stability induces mental stability, so that there is an effect of reducing the anxiety or depression of psychiatric patients.</p>
+      <p id="p-00161-en" num="0159">Meanwhile, in one embodiment of the present invention, independently of the operation according to the values detected by the sensor unit <b>50</b> (a so-called automatic operation mode), it may also be set in such a manner that the movement into the bronchus of the tube unit according to a predetermined time cycle (for example, 1 hour) as set by an administrator such as a doctor through the input unit <b>80</b> in <figref>FIG. 8</figref>, and the foreign material sucking process through the suction pressure increase of the tube unit may be concurrently and repeatedly executed (a so-called semi-automatic operation mode).</p>
+      <p id="p-00162-en" num="0160">According to the above-described configuration, even when a detection error has occurred in the sensor unit <b>50</b>, automatic suction of foreign material according to a predetermined time cycle is executed, so that the patient may be prevented from encountering a dangerous situation.</p>
+      <p id="p-00163-en" num="0161">
+        <figref>FIG. 10</figref> is an exploded perspective view showing a second storage unit <b>11</b> formed in the lower part of the suction device <b>10</b> of <figref>FIG. 1</figref>.</p>
+      <p id="p-00164-en" num="0162">Referring to <figref>FIG. 10</figref>, the second storage unit <b>11</b> includes a suction container <b>11</b><i>a, </i>a thermal printer <b>11</b><i>b, </i>a saline water container <b>11</b><i>c, </i>a power supply <b>11</b><i>d, </i>and a motor <b>11</b><i>e. </i></p>
+      <p id="p-00165-en" num="0163">Referring to <figref>FIG. 1</figref> and <figref>FIG. 10</figref>, the suction container <b>11</b><i>a </i>is filled with waste if the suction container <b>40</b><i>b </i>of <figref>FIG. 1</figref> has no space to fill waste in. The saline water container <b>11</b><i>c </i>is also used as a storage container for filling saline water again in the saline water container <b>40</b><i>a, </i>when all of the saline water of the saline water container <b>40</b><i>a </i>of <figref>FIG. 1</figref> has been used.</p>
+      <p id="p-00166-en" num="0164">Therefore, the suction container <b>11</b><i>a </i>and the saline water container <b>11</b><i>c </i>have an advantage that they may be used if there are many users and it is difficult to manage from time to time.</p>
+      <p id="p-00167-en" num="0165">The thermal printer <b>11</b><i>b </i>may be provided between the suction container <b>11</b><i>a </i>and the saline water container <b>11</b><i>c </i>to print a service record, patient's breathing condition, operation time, and breathing information within a predetermined period in which the suction device <b>10</b> was used.</p>
+      <p id="p-00168-en" num="0166">Therefore, it is possible to confirm the present condition of the patient using the device by analyzing the information printed out and adequately treat the patient.</p>
+      <p id="p-00169-en" num="0167">The power supply <b>11</b><i>d </i>is disposed below the thermal printer <b>11</b><i>b </i>to supply power to the motor <b>11</b><i>e. </i>The motor <b>11</b><i>e </i>is provided below the power supply <b>11</b><i>d, </i>and the motor <b>11</b><i>e </i>is driven for pumping to move waste to the suction container <b>11</b><i>a </i>or move the saline water in the saline water container <b>11</b><i>c </i>to the saline water container <b>40</b><i>a. </i></p>
+      <p id="p-00170-en" num="0168">For the suction device <b>10</b> whose frequency of use is high and which is used in hospital or at home, it is preferable to additionally provide the second storage unit <b>11</b> as described above.</p>
+      <p id="p-00171-en" num="0169">
+        <figref>FIG. 11</figref> is a block diagram showing a method of operating the suction device of <figref>FIG. 1</figref>.</p>
+      <p id="p-00172-en" num="0170">The power supply <b>11</b><i>d </i>supplies power to the control unit <b>120</b> and the driver <b>30</b><i>a </i>(S<b>101</b>), and the MFM sensor <b>50</b><i>a </i>transmits to the control unit <b>120</b> the measured values for information on the mass of user's exhaled gas or daily breathing condition such as flow rate (S<b>102</b>).</p>
+      <p id="p-00173-en" num="0171">Meanwhile, the control unit <b>120</b> analyzes the values measured by the MFM sensor <b>50</b><i>a. </i>If it is determined that foreign material is generated out of the daily breathing condition, the control unit <b>120</b> transmits a drive signal to the driver <b>30</b><i>a </i>(S<b>103</b>).</p>
+      <p id="p-00174-en" num="0172">The driver <b>30</b><i>a </i>receives the drive signal from the control unit <b>120</b>, and sends it to the BLDC motor <b>30</b><i>b </i>(S<b>104</b>). The BLDC motor <b>30</b><i>b </i>is driven by the signal received from the driver <b>30</b><i>a, </i>and at this time, outside air is supplied to the BLDC motor <b>30</b><i>b </i>through a moisture filter (S<b>105</b>).</p>
+      <p id="p-00175-en" num="0173">Meanwhile, the catheter <b>113</b><i>a </i>moves through the catheter reel <b>113</b> to be inserted into the user's bronchus through the T tube <b>151</b> at a low speed, and is placed in the user's bronchus (S<b>106</b>). Herein, in order to increase the fluidity of foreign material before sucking it in through the catheter reel <b>113</b>, the first solenoid valve <b>30</b><i>c </i>connected to the saline water container <b>40</b><i>a </i>is opened (S<b>107</b>).</p>
+      <p id="p-00176-en" num="0174">Meanwhile, a small motor connected to the saline water container <b>40</b><i>a </i>is driven to suck saline water in the saline water container <b>40</b><i>a </i>(S<b>108</b>), and the saline water in the saline water container <b>40</b><i>a </i>passes through the first solenoid valve <b>30</b><i>c </i>and flows to the user's bronchus through the fourth tube <b>151</b><i>f </i>to increase the fluidity of the foreign materials.</p>
+      <p id="p-00177-en" num="0175">Meanwhile, if it is determined that the weight of the saline water in the saline water container <b>40</b><i>a </i>is less than a predetermined reference value, the scale <b>100</b> provided below the saline water container <b>40</b><i>a </i>transmits the underweight signal representing the underweight of the saline water to the control unit <b>120</b> (S<b>109</b>).</p>
+      <p id="p-00178-en" num="0176">When the first solenoid valve <b>30</b><i>c </i>is closed, the third solenoid valve <b>30</b><i>c </i>connected to the third tube <b>151</b><i>e </i>is also closed (S<b>110</b>), thereby the fluidity of foreign material is increased, and then the second solenoid valve <b>30</b><i>c </i>connected to the BLDC motor <b>30</b><i>b </i>through the fourth tube <b>151</b><i>f </i>is opened (S<b>111</b>).</p>
+      <p id="p-00179-en" num="0177">Then, the second solenoid valve <b>30</b><i>c </i>is opened, so that foreign materials pass through the fourth tube <b>151</b><i>f </i>and the second solenoid valve <b>30</b><i>c </i>to be sucked at a predetermined pressure.</p>
+      <p id="p-00180-en" num="0178">Meanwhile, the scale <b>100</b> provided below the suction container <b>11</b><i>a </i>measures the weight of foreign material. If it is determined that the weight of the foreign material exceeds the predetermined reference value, the scale <b>100</b> transmits the overweight signal representing the overweight of the foreign material to the control unit <b>120</b> (S<b>112</b>).</p>
+      <p id="p-00181-en" num="0179">When foreign materials are sucked at a predetermined pressure, the second solenoid valve <b>30</b><i>c </i>is closed, and the third solenoid valve <b>30</b><i>c </i>is opened, and thereby the patient maintains the breathing condition. Meanwhile, the MFM sensor <b>50</b><i>a </i>measures the daily breathing condition of the user at all times (S<b>113</b>).</p>
+      <p id="p-00182-en" num="0180">When foreign material is sucked through the catheter <b>113</b><i>a </i>and completely flows into the suction container <b>11</b><i>a, </i>the catheter reel <b>113</b> is driven to pull the catheter <b>113</b><i>a. </i>When the catheter <b>113</b><i>a </i>is discharged from the bronchus of the user, the inside and outside of the catheter <b>113</b><i>a </i>are cleaned by saline water (S<b>114</b>).</p>
+      <p id="p-00183-en" num="0181">Meanwhile, since the BLDC motor <b>30</b><i>b </i>used in the present invention can, unlike the conventional AC motor, have the pressure, flow rate (NL/m) and the drive cycle of motor desired by the user changed easily through an increase and decrease of electric current, in the suction device <b>10</b>, air injection is possible only for a user's inhalation without continuing air injection during a user's exhalation.</p>
+      <p id="p-00184-en" num="0182">Further, since the BLDC motor <b>30</b><i>b </i>used in the present invention has excellent heat resistance with less noise, and does not generate an arc when it is turned on/off, its motor life is three times longer than the conventional AC motor, and may be made smaller with comparable performance, thereby it is suitable for use in a portable suction device and is stable.</p>
+      <p id="p-00185-en" num="0183">Meanwhile, if the user has an inhalation time increased by using the suction device according to the present invention for several days, the user naturally comes to have a habit of abdominal respiration or a habit of long inhalation or exhalation. Thus, as the time of inhalation is increased, the user can gain the effects of blood circulation improvement and vital lung capacity improvement.</p>
+      <p id="p-00186-en" num="0184">In addition, the present invention can induce natural respiration also for patients or infants whose pulmonary function is not good due to the aftereffects following surgery.</p>
+      <p id="p-00187-en" num="0185">Further, since the catheter reel <b>113</b> of the present invention does not reside in the bronchus, it has an advantage that the inconvenience that the catheter <b>113</b><i>a </i>should be installed in the bronchus constantly is greatly reduced.</p>
+      <p id="p-00188-en" num="0186">The suction device according to the present invention in which automatic suction and catheter insertion are possible may be used in most hospitals and homes for patients who need a guardian's help, thereby having industrial applicability.</p>
+      <p id="p-00189-en" num="0187">While the present invention has been described with reference to the preferred embodiments, it will be understood by those skilled in the related art that various modifications and variations may be made therein without departing from the scope of the present invention as defined by the appended claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A suction device comprising:
+<claim-text>a drive unit which is disposed on the bottom of the suction device and is configured to periodically pump;</claim-text><claim-text>an input unit which is disposed on a front of the suction device and is configured to input setting values for control;</claim-text><claim-text>a sensor unit configured to measure a breathing condition of a patient;</claim-text><claim-text>a tube unit configured to be inserted into a bronchus of a patient to suck foreign material generated in the bronchus when the foreign material is generated in the bronchus, and move out of the bronchus;</claim-text><claim-text>a control unit configured to receive the setting values and the measured results respectively transmitted from the input unit and the sensor unit and control the drive unit based on the received setting values and measured results; and</claim-text><claim-text>a storage unit which sucks and stores foreign material and stores and supplies saline water.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The suction device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the drive unit includes a brushless DC motor (BLDC motor) which sucks and injects air by periodical pumping, and
+<claim-text>a driver which is connected to the BLDC motor at a distance and receives a control signal transmitted from the control unit to control the BLDC motor.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The suction device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the input unit includes:
+<claim-text>a breathing information display window in which a user's respiration rate per minute, a single respiratory air volume showing a volume breathed by a user at one time and breathing information showing respiration rate per hour are displayed; and</claim-text><claim-text>a device setting window in which setting buttons for operating a simple respiratory function and suction are provided.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The suction device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the sensor unit includes: a mass flow meter (MFM sensor) which is configured to detect a daily breathing condition showing a patient's breathing pattern and a volume of exhaled gas for a predetermined time, and transmits the detected results to the control unit, and
+<claim-text>measure a mass of a patient's exhaled gas and the daily breathing condition and transmit the measured results of the daily breathing condition to the control unit.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The suction device of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the control unit is configured to analyze the daily breathing condition received from the MFM sensor, and if it is determined that foreign material is generated in the body of the patient, control the drive unit to suck the foreign material, and
+<claim-text>analyze the daily breathing condition received from the MFM sensor, and if it is determined that the user's breathing condition is irregular and difficult, control to drive the simple respiratory function.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The suction device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the tube unit includes: a catheter reel and a tube cover, and the catheter reel includes:
+<claim-text>a catheter which has a tube structure to suck foreign material;</claim-text><claim-text>a screw frame which includes a plurality of protruded threads formed on an outer circumference thereof on which the catheter is reeled, and is configured to push or pull the catheter depending on the rotation direction thereof;</claim-text><claim-text>a catheter reel case which includes a plurality of holes into which saline water for cleaning the catheter surface is injected formed therein, and houses the catheter and the screw frame; and</claim-text><claim-text>a stepping motor configured to rotate the screw frame,</claim-text><claim-text>wherein the tube cover is formed outside of the catheter so that the catheter provides passages which are connected to a filter, the MFM sensor, a saline water container and a nebulizer between the bronchus and catheter reel.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The suction device of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, further comprising:
+<claim-text>a motor cover which encloses the BLDC motor to prevent a noise of the BLDC motor from being leaked to an outside and reduce a vibration of the BLDC motor.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The suction device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the tube unit further includes: a T tube, and
+<claim-text>the T tube includes: a first cuff which is formed on an upper portion, and is inflated by air to expand the bronchus;</claim-text><claim-text>a second cuff which is formed adjacent to and below the first cuff, and is inflated by air when the first cuff is deflated to expand the bronchus;</claim-text><claim-text>a third cuff which is connected to the first cuff so as to flow air;</claim-text><claim-text>a second tube which is connected to the second cuff so as to flow air;</claim-text><claim-text>a first tube which sucks foreign material formed in the upper portion of the first cuff; and</claim-text><claim-text>a fourth tube which, when the first cuff is deflated to make the second cuff inflate so that foreign material is formed in the upper portion of the second cuff, sucks the foreign material.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The suction device of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the first and second cuffs are alternately inflated and deflated to expand the bronchus of the user.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The suction device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising:
+<claim-text>a filter which prevents moisture from being penetrated into the sensor unit, and waste from being entered into the drive unit. </claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246165A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150246165A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150246165A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246165A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150246165A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246165A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150246165A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246165A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150246165A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246165A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150246165A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246165A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150246165A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246165A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150246165A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246165A1-20150903-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150246165A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246165A1-20150903-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150246165A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246165A1-20150903-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150246165A1_00011.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150246165A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150246165A1.PDF" type="pdf" size="782012" pages="20" />
+</lexisnexis-patent-document>

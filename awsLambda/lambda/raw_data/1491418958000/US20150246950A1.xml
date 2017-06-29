@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246950A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021239" date-changed="20160127" time-changed="023629">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121139038">
+        <country>US</country>
+        <doc-number>20150246950</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14635012</doc-number>
+        <date>20150302</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C07K  14/005       20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>14</main-group>
+        <subgroup>005</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C07K   7/06        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>7</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C07K  14/47        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>14</main-group>
+        <subgroup>47</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C12P  21/00        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>P</subclass>
+        <main-group>21</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C07K  14/005       20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>14</main-group>
+        <subgroup>005</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K  38/00        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>38</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C07K   7/06        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>7</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C07K  14/4708      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>14</main-group>
+        <subgroup>4708</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C07K2319/10        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>2319</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C07K2319/95        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>2319</main-group>
+        <subgroup>95</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C12P  21/00        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>P</subclass>
+        <main-group>21</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">27</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">Chimeric Dystrophin-VSV-G Protein to Treat Dystrophinopathies</invention-title>
+    <references-cited date-changed="20160127">
+      <patent-citations name="patcit" date-changed="20160127" />
+      <non-patent-citations name="nplcit" date-changed="20160127" />
+      <citation>
+        <patcit num="1" dnum="US2003219402A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20030219402</doc-number>
+            <kind>A1</kind>
+            <name>RUTTER WILLIAM J [US]</name>
+            <date>20031127</date>
+          </document-id>
+          <application-date>
+            <date>20030214</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US2007286856A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070286856</doc-number>
+            <kind>A1</kind>
+            <name>BROWN TRACEY J [AU], et al</name>
+            <date>20071213</date>
+          </document-id>
+          <application-date>
+            <date>20041011</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <nplcit num="1">
+          <text>Chen et al, Design of an in vivo cleavable disulfide linker in recombinant fusion proteins, Biotechniques. 2010 Jul;49(1):513-8</text>
+          <scopus-url>http://www.scopus.com/record/display.url?eid=2-s2.0-77957961920&amp;origin=inward</scopus-url>
+        </nplcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20150903">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61946961</doc-number>
+          <date>20140303</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Acharjee</last-name>
+            <first-name>Sujata</first-name>
+            <address>
+              <city>New York</city>
+              <state>NY</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Acharjee</last-name>
+            <first-name>Sujata</first-name>
+            <address>
+              <city>New York</city>
+              <state>NY</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20151203">
+      <main-family family-id="173461810">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246950</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150302</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173584512">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246950</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150302</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015134365</doc-number>
+            <kind>A3</kind>
+            <date>20151203</date>
+          </document-id>
+          <application-date>
+            <date>20150302</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015134365</doc-number>
+            <kind>A2</kind>
+            <date>20150911</date>
+          </document-id>
+          <application-date>
+            <date>20150302</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A chimeric protein that is a fusion construct of a series of functional domains is used to deliver a therapeutic agent to a human subject suffering from disease. In some embodiments, the chimeric protein includes a therapeutic region, a transportation region, and a cleavage region disposed between the therapeutic region and the transportation region. The transportation region allows the chimeric protein to be moved across a cellular membrane of an affected cell within the subject. Cleavage of the chimeric protein at the cleavage region once within the cell separates the therapeutic region from the transportation region, enabling the therapeutic region to function normally within the cell. The therapeutic region can be effective in the treatment of, for example, muscular dystrophy, diastrophic dysplasia, malignant melanoma, porphyria, alpha-1 antitrypsin deficiency, Aicardi-Goutieres syndrome, cystic fibrosis, progeria, Marfan syndrome, tuberous sclerosis, adrenoleukodystrophy, and the like.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application claims the benefit of U.S. Provisional No. 61/946,961, filed Mar. 3, 2014, which is incorporated herein by reference in its entirety.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">FIELD OF THE DISCLOSURE</heading>
+      <p id="p-00002-en" num="0002">Disclosed is a chimeric or fusion protein including a therapeutic construct that is designed for use in the treatment of human subjects suffering from diseases such as muscular dystrophy, diastrophic dysplasia, malignant melanoma, porphyria, alpha-1 antitrypsin deficiency, Aicardi-Goutieres syndrome, cystic fibrosis, progeria, Marfan syndrome, tuberous sclerosis, adrenoleukodystrophy, and the like.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND OF THE DISCLOSURE</heading>
+      <p id="p-00003-en" num="0003">The Dystrophin Glycoprotein complex (DGC) is a very crucial structural component of skeletal and cardiac muscles. It is comprised of dystrophin and a plurality of proteins associated with it and imparts structural stability to the muscle membrane. The physical interactions between the proteins of the DGC form the basis for mechanical linking of the outside of the membrane to the inside and play an important role in mediating biological signaling process. These proteins form an intricate network which stabilizes the membrane as it contracts and relaxes. These interactions are essential in maintaining the structural integrity of the muscle membrane. Lack of any of these components owing to mutation compromises the structural stability leading to muscle damage.</p>
+      <p id="p-00004-en" num="0004">Dystrophin was originally identified through its deficiency in the lethal neuromuscular disorder, Duchenne Muscular Dystrophy (DMD). Skeletal and cardiac muscles that lack functional full-length dystrophin protein are extremely susceptible to tear and damage from the contraction-relaxation activity. In the heart, aortic banding experiments performed on the dystrophin-deficient mdx mouse similarly result in accelerated cardiac damage. These studies demonstrated the essential role of dystrophin and the DGC in protecting the plasma membrane against contraction-induced damage.</p>
+      <p id="p-00005-en" num="0005">The absence of dystrophin in DMD patients leaves the muscle membrane fragile and susceptible to damage upon contraction, leading to destruction of the DGC with loss of mechanical stability and proper mechano-transduction signaling. The dystrophin deficient myofibers undergo repeated rounds of contraction mediated injury with consequent myofiber necrosis that ultimately results in the replacement of myofibers by fibrous and fat tissue; a progressive degeneration and failure of regeneration efficiency also occurs owing to the continuous depletion of muscle precursor cells or satellite cells and their incapability to proliferate, multiply, and differentiate.</p>
+      <p id="p-00006-en" num="0006">Dystrophin has four functional domains: a calponin-like actin binding domain at the amino terminal, a central rod domain of 24 spectrin-like repeats, a cysteine-rich region at the carboxy terminal, and an extreme helical carboxy terminal region. The amino terminal actin binding domain is responsible for anchoring dystrophin to cytoskeletal filamentous actin. Within the central rod domain, spectrin repeats 11 through 17 constitute a second site for binding actin. The cysteine rich region interacts with the intracellular portion of the transmembrane protein beta-dystroglycan and anchors dystrophin to the sarcolemma. The extreme carboxyl-terminal mediates its interaction with syntrophins.</p>
+      <p id="p-00007-en" num="0007">The human dystrophin gene is the largest gene characterized so far. It contains 79 exons, several splicing sites and a number of tissue specific promoters that result in a range of transcripts which form amino terminal truncated dystrophin proteins of varying lengths. Dystrophin is a huge gene with an open reading frame that is 11058 nucleotides long, making it a difficult target to work with. The large size of the dystrophin gene is also responsible for its high frequency of spontaneous mutation, with most of the mutations being deletions. The extent of severity caused by these mutations varies depending on the kind of deletion. Where a deletion results in complete absence of dystrophin protein due to disruption of the reading frame of the gene, severe forms of muscular dystrophy or DMD can occur. Deletions which lead to the formation of truncated proteins result in milder forms of muscular dystrophy such as Becker Muscular Dystrophy. One deletion which removes a central part of dystrophin protein encompassing 5,106 base pairs, almost half the coding sequence, has been reported to cause a very mild form of muscular dystrophy with patients being ambulant even at the age of 61.</p>
+      <p id="p-00008-en" num="0008">Dystrophin gene is one of the first genes identified by reverse genetics. DMD is an X-linked muscular dystrophy with an incidence of one in 3500 young males. DMD is one of the most common hereditary diseases known. The onset can be between the age of 3 to 5 yrs. and depending on the severity of the disease the affected males become non-ambulatory by the age of 13. The other clinical features include scoliosis, muscle weakness and damage, muscle hypertrophy, cardiomyopathy, mental retardation and very high serum creatine kinase levels. This disease ultimately causes death between the ages of 15 to 25 years. The most common cause of death in these patients is respiratory or cardiac failure. Tens of thousands of individuals are living with DMD in the United States, Europe, Australia, Canada, Israel, and Japan alone.</p>
+      <p id="p-00009-en" num="0009">DMD has also been reported in a number of animals including mouse, cats and dogs. Mdx mice that have a premature stop codon mutation on exon 23 of the dystrophin gene, leading to a lack of the mature protein, have long been used as an animal model to study the pathogenesis of the disease. The absence of dystrophin results in an acute onset of skeletal muscle necrosis around 3 weeks of post-natal life, followed by an extensive period of degeneration and regeneration until necrosis gradually decreases and a relatively low level is reached in adult mice (3-4 months) with pathology stabilization. However, the pathology is far more benign than in DMD.</p>
+      <p id="p-00010-en" num="0010">Vesicular Stomatitis Viruses have long been known to cause a number of diseases in humans, such as rabies. These viruses enter their hosts by making an envelope of proteins around them also known as VSV-G glycoproteins which facilitate the fusion of viral membrane with the host cell membrane. VSV-G has been widely used as a tool for gene transfer by pseudo typing viral vectors with VSV-G envelope. Recently it has been shown that LDL receptors present in the membrane of mammalian cells serve as a receptor for the VSV-G proteins and port of entry for the vesicular stomatitis viruses. This probably justifies the pantropic nature of vesicular stomatitis viruses as the LDL receptors are present in a wide range of mammalian cells and tissues.</p>
+      <p id="p-00011-en" num="0011">DMD therapies that are currently being developed include DNA- and cell-based therapies, as well as drugs which aim to modulate cellular pathways or gene expression. Attempts have been made to restore the expression of full-length functional protein or short truncated protein either via exon-skipping, gene therapy, stem cells, or small molecules to induce read-through of premature stop-codon mutations. Other promising approaches include small molecules or recombinant proteins to enhance the dystrophin surrogate utrophin, and stabilize or reduce degradation of DGC.</p>
+      <p id="p-00012-en" num="0012">Although the approaches previously used are promising, alternative strategies need to be developed because of the limitations of these approaches, e.g. oligonucleotides used for exon-skipping could not be effectively delivered to all the non-skeletal target muscle tissues such as heart; ataluren aimed to induce read-through of premature stop codons in dystrophin gene could only be used for a patient subpopulation exhibiting mutations displaying premature stop codons; ataluren was not potent enough to show any significant effect during clinical trials on patients treated with the drug. Currently there is no treatment available for DMD and current therapies rely in delaying the progression of the disease by clinically using Prednisone and supportive care with a mean life expectancy in the thirties.</p>
+      <p id="p-00013-en" num="0013">What is desired therefore is a simple yet effective system and method for treating patients with DMD. What is also desired is a singular system and method that allows for treatment of multiple types of dystrophinopathy across a plurality of patient types, resulting in increasing or maintaining the structural integrity of the muscle fiber, limiting muscle damage, and improved muscle strength.</p>
+      <heading id="h-00004-en" level="1">BRIEF SUMMARY</heading>
+      <p id="p-00014-en" num="0014">Disclosed herein is a system and method to alleviate the symptoms associated with certain conditions by delivering chimeric proteins in patients exhibiting symptoms of those conditions.</p>
+      <p id="p-00015-en" num="0015">In some embodiments, the system includes a chimeric protein comprising a therapeutic region, a transportation region, and a cleavage region disposed between the therapeutic region and the transportation region, wherein the transportation region allows for transport of the chimeric protein across a cellular membrane. In some embodiments, the cleavage region is disposed at the N-terminal end of the therapeutic region. In some embodiments, the cleavage region is disposed at the C-terminal end of the therapeutic region. In some embodiments, the therapeutic region is selected from the group consisting of: a full-length dystrophin, a truncated dystrophin, and combinations thereof.</p>
+      <p id="p-00016-en" num="0016">In some embodiments, the transportation region is selected from the group consisting of: a vesicular stomatitis virus G and functional variants of a vesicular stomatitis virus G. In some embodiments, the vesicular stomatitis virus G variants allow for up to at least 4 amino acid substitutions. In some embodiments, the vesicular stomatitis virus G variants has at least a sequence identity with a wild-type vesicular stomatitis virus G selected from the group consisting of: at least 90%, at least 95%, at least 96%, at least 97%, at least 98%, or at least 99% sequence identity.</p>
+      <p id="p-00017-en" num="0017">In some embodiments, the cleavage region is configured to be cleaved subsequent to transport of the chimeric protein across the cellular membrane. In some embodiments, the cleavage region is a cleavage site for a membrane metalloprotease. In some embodiments, the cleavage region comprises the amino acid sequence PLGLWAL, wherein each amino acid may be conservatively substituted. In some embodiments, the cleavage region comprises the amino acid sequence P-X-X-Hy-(S/T), wherein P identifies proline, X is any residue, Hy is a hydrophobic residue, and S/T may either serine or threonine.</p>
+      <p id="p-00018-en" num="0018">In some embodiments, at least a portion of a sequence of the chimeric protein is selected from the group consisting of: SEQ. ID NO.: 1, SEQ. ID NO.: 2, SEQ. ID NO.: 3, SEQ. ID NO.: 4, SEQ. ID NO.: 5, SEQ. ID NO.: 6, SEQ. ID NO.: 7, SEQ. ID NO.: 8, and pharmacologically acceptable equivalents thereof.</p>
+      <p id="p-00019-en" num="0019">In some embodiments, the present disclosure is directed to a method of treating a subject having a medical condition comprising the steps of preparing a therapeutic dose of a chimeric protein comprising a therapeutic region, a transportation region, and a cleavage region disposed between the therapeutic region and the transportation region wherein the transportation region allows for transport of the chimeric protein across a cellular membrane, and administering the therapeutic dose to the subject. In some embodiments, the medical condition includes a muscular dystrophy, diastrophic dysplasia, malignant melanoma, porphyria, alpha-1 antitrypsin deficiency, Aicardi-Goutieres syndrome, cystic fibrosis, progeria, Marfan syndrome, tuberous sclerosis, adrenoleukodystrophy, and the like. In some embodiments, the nucleotide sequence of the therapeutic region comprises a sequence selected from the group consisting of: SEQ. ID NO.: 1, SEQ. ID NO.: 3, SEQ. ID NO.: 5, and SEQ. ID NO.: 7. In some embodiments, the amino acid sequence of the therapeutic region comprises a sequence selected from the group consisting of: SEQ. ID NO.: 2, SEQ. ID NO.: 4, SEQ. ID NO.: 6, and SEQ. ID NO.: 8.</p>
+      <p id="p-00020-en" num="0020">In some embodiments, the present disclosure is directed to a method of making a chimeric protein for use in the treatment of a condition, the method comprising the steps of cloning a nucleotide sequence into a vector, the nucleotide sequence coding for a chimeric protein comprising a therapeutic region, a transportation region, and a cleavage region disposed between the therapeutic region and the transportation region wherein the transportation region allows for transport of the chimeric protein across a cellular membrane, transfecting the vector into a host cell, proliferating the host cell, and isolating the chimeric protein from the host cell. In some embodiments, the nucleotide sequence of the therapeutic region comprises a sequence selected from the group consisting of: SEQ. ID NO.: 1, SEQ. ID NO.: 3, SEQ. ID NO.: 5, and SEQ. ID NO.: 7. In some embodiments, the nucleotide sequence coding for the therapeutic region codes for a protein selected from the group consisting of: a full-length dystrophin, a truncated dystrophin, and combinations thereof.</p>
+      <p id="p-00021-en" num="0021">In some embodiments of the method of making a chimeric protein for use in the treatment of a condition, the nucleotide sequence coding for the transportation region codes for a protein selected from the group consisting of: a vesicular stomatitis virus G and functional variants of a vesicular stomatitis virus G. In some embodiments of the method of making a chimeric protein for use in the treatment of a condition, the nucleotide sequence coding for the cleavage region codes for a membrane metalloprotease. In some embodiments of the method of making a chimeric protein for use in the treatment of a condition, the medical condition includes a muscular dystrophy, diastrophic dysplasia, malignant melanoma, porphyria, alpha-1 antitrypsin deficiency, Aicardi-Goutieres syndrome, cystic fibrosis, progeria, Marfan syndrome, tuberous sclerosis, adrenoleukodystrophy, and the like. In some embodiments of the method of making a chimeric protein for use in the treatment of a condition, the step of isolating the chimeric protein from the host cell includes the step of isolating the chimeric protein from a lysate of the host cell.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00022-en" num="0022">The subject matter that is regarded as the invention is particularly pointed out and distinctly claimed in the claims at the conclusion of the specification. The foregoing and other objects, features, and advantages of the invention will be apparent from the following detailed description taken in conjunction with the accompanying drawings.</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 1</figref> shows a schematic view of a chimeric protein for the treatment of dystrophinopathies consistent with some embodiments of the present disclosure.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 2</figref> shows an immunostaining of HEK-293 cells transfected with VSV-G only against VSV-G antibody.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 3</figref> shows an immunostaining of HEK-293 cells transfected with the chimeric dystrophin protein shown in <figref>FIG. 1</figref> having VSV-G at the N-terminus against anti-VSV-G antibody.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 4</figref> shows an immunostaining of DMD patient cells with an anti-dystrophin antibody treated with 0.5 ml of conditioned media derived from HEK-293 cells transfected with chimeric dystrophin having VSV-G at the N-terminus.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 5</figref> shows an immunostaining of DMD patient cells with an anti-dystrophin antibody treated with 2.0 ml of conditioned media derived from HEK-293 cells transfected with chimeric dystrophin having VSV-G at the N-terminus.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 6</figref> shows a flowchart of a method of treating a subject having a medical condition using the chimeric protein shown in <figref>FIG. 1</figref>.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 7</figref> shows a flowchart of a method of making the chimeric protein shown in <figref>FIG. 1</figref> for use in the treatment of a condition.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 8</figref> shows another embodiment of the method of making a chimeric protein for use in the treatment of a condition as shown in <figref>FIG. 7</figref>.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00031-en" num="0031">The embodiments disclosed by the invention are only examples of the many possible advantageous uses and implementations of the innovative teachings presented herein. In general, statements made in the specification of the present application do not necessarily limit any of the various claimed inventions. Moreover, some statements may apply to some inventive features but not to others. In general, unless otherwise indicated, singular elements may be in plural and vice versa with no loss of generality. In the drawings, like numerals refer to like parts through several views.</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 1</figref> shows a schematic diagram of a chimeric protein consistent with some embodiments of the present disclosure. In some embodiments, a transportation region is fused to the N-terminal end of a therapeutic region. In some embodiments, the transportation region is fused to the C-terminal end of the therapeutic region. In some embodiments, a cleavage region is disposed between the therapeutic region and the transportation region. As used herein, the term “transportation regions” may also be interchangeably referred to as “delivery mechanisms” or “carriers”. In some embodiments, the transportation region is VSV-G. In some embodiments, the therapeutic region is a full length dystrophin protein. In some embodiments, the therapeutic region is a truncated dystrophin protein. In some embodiments, the cleavage region is a cleavage site for membrane metalloproteases.</p>
+      <p id="p-00033-en" num="0033">In some embodiments, the chimeric protein of the present disclosure has a nucleotide sequence wherein at least a portion of the sequence is selected from the group consisting of: SEQ. ID NO.: 1, SEQ. ID NO.: 3, SEQ. ID NO.: 5, SEQ. ID NO.: 7, and pharmacologically acceptable equivalents thereof. In some embodiments, the chimeric protein of the present disclosure has an amino acid sequence wherein at least a portion of the sequence is selected from the group consisting of: SEQ. ID NO.: 2, SEQ. ID NO.: 4, SEQ. ID NO.: 6, SEQ. ID NO.: 8, and pharmacologically acceptable equivalents thereof. In some embodiments, the sequence for the chimeric protein has at least 90%, at least 95%, at least 96%, at least 97%, at least 98%, or at least 99% sequence identity with at least one of SEQ. ID NO.: 1, SEQ. ID NO.: 2, SEQ. ID NO.: 3, SEQ. ID NO.: 4, SEQ. ID NO.: 5, SEQ. ID NO.: 6, SEQ. ID NO.: 7, SEQ. ID NO.: 8. In some embodiments, any suitable mutations, substitutions, additions, and deletions may be made to the chimeric protein so long as the pharmacological activity of the resulting variant chimeric protein is retained.</p>
+      <p id="p-00034-en" num="0034">SEQ. ID NO.: 1 is a nucleotide sequence of a dystrophin-VSV-G chimeric protein, with the VSV-G at the N-terminus, consistent with some embodiments of the present invention.</p>
+      <p id="p-00035-en" num="0035">SEQ. ID NO.: 2 is an amino acid sequence of a dystrophin-VSV-G chimeric protein, with the VSV-G at the N-terminus, consistent with some embodiments of the present invention.</p>
+      <p id="p-00036-en" num="0036">SEQ. ID NO.: 3 is a nucleotide sequence of a truncated dystrophin-VSV-G chimeric protein, with the VSV-G at the N-terminus, consistent with some embodiments of the present invention.</p>
+      <p id="p-00037-en" num="0037">SEQ. ID NO.: 4 is an amino acid sequence of a truncated dystrophin-VSV-G chimeric protein, with the VSV-G at the N-terminus, consistent with some embodiments of the present invention.</p>
+      <p id="p-00038-en" num="0038">SEQ. ID NO.: 5 is a nucleotide sequence of a dystrophin-VSV-G chimeric protein, with the VSV-G at the C-terminus, consistent with some embodiments of the present invention.</p>
+      <p id="p-00039-en" num="0039">SEQ. ID NO.: 6 is an amino acid sequence of a dystrophin-VSV-G chimeric protein, with the VSV-G at the C-terminus, consistent with some embodiments of the present invention.</p>
+      <p id="p-00040-en" num="0040">SEQ. ID NO.: 7 is a nucleotide sequence of a truncated dystrophin-VSV-G chimeric protein, with the VSV-G at the C-terminus, consistent with some embodiments of the present invention.</p>
+      <p id="p-00041-en" num="0041">SEQ. ID NO.: 8 is an amino acid sequence of a truncated dystrophin-VSV-G chimeric protein, with the VSV-G at the C-terminus, consistent with some embodiments of the present invention.</p>
+      <p id="p-00042-en" num="0042">Recombinant and chimeric proteins have been available in the market as therapies for various conditions and have proven to be extremely potent in curing diseases such as arthritis. In some embodiments, the present disclosure is directed to a dystrophin (or functional mutant or truncated form of dystrophin) protein fused either at the N-terminal or C-terminal with a VSV-G (or variants of VSV-G) protein with or without a short linker between the two proteins, which will be a cleavage site for membrane metalloproteases (MMPs). This therapy will rely on administering biologically effective amounts of recombinant dystrophin protein that will be transduced in different muscle tissues and ameliorate the pathologies associated with the lack of dystrophin. The therapy will allow the subject to compensate for the lack of certain functional protein production.</p>
+      <p id="p-00043-en" num="0043">In some embodiments, VSV-G protein serves as the transportation region or carrier for delivering the dystrophin protein to various tissues. LDL receptors, through which VSV-G establishes initial contact to enter the cells, are present in a wide range of tissues. Therefore, this approach mitigates the issues related to the delivery of dystrophin protein at different target sites found in previous approaches. In some embodiments, the VSV-G used in the chimeric protein of the instant application is a wild-type VSV-G. In some embodiments, the VSV-G is a variant of wild-type VSV-G. Any suitable mutations, substitutions, additions, and deletions may be made to the VSV-G so long as the cellular membrane transport activity of the resulting variant VSV-G is retained. In some embodiments, suitable VSV-G variants include the thermostable and serum resistant mutants of VSV-G, which include the following point mutations to wild-type VSV-G: S162T, T230N, T368A, or combined mutants T230N+T368A, or K66T+S162T+T230N+T368A. In some embodiments, variant VSV-G has at least 90%, at least 95%, at least 96%, at least 97%, at least 98%, or at least 99% sequence identity with wild-type VSV-G.</p>
+      <p id="p-00044-en" num="0044">Sometimes fusing a protein with another protein interferes with the function of the proteins and leads to a decrease in their biological activity. In order to overcome this problem, in some embodiments, a cleavage region including a cleavage site for MMPs is provided. In some embodiments, a cleavable linker is disposed between the dystrophin and VSV-G. In such an embodiment, dystrophin will only be released from the chimeric construct with VSV-G when it is cleaved by MMPs. MMPs are overexpressed during various pathologic conditions and inflammation, including muscular dystrophy. Therefore, when the chimeric dystrophin-VSV-G protein reaches the sites of inflammation upon delivery, the MMPs cleave the chimeric protein and release the dystrophin protein for incorporation into the muscle cells and treatment of the subject's dystrophinopathy. In some embodiments, the MMP cleavage site encodes for amino acids PLGLWAL, which is a known putative cleavage site for all the MMPs. In some embodiments, the MMP cleavage site comprises a sequence defined by the amino acids P-X-X-Hy-(S/T), wherein P identifies proline, X is any residue, Hy is a hydrophobic residue, and S/T may either serine or threonine. In some embodiments, the MMP cleavage site is selected from the sequences PLGLWAL, P-X-X-Hy-(S/T), and variants and mutations thereof. In some embodiments, the cleavage site is eliminated.</p>
+      <p id="p-00045-en" num="0045">This strategy can also be extended to other conditions which are caused by a lack of a single protein by replacing dystrophin with the protein of interest for the respective conditions. In some embodiments, the dystrophin is replaced by another therapeutic construct. In these embodiments, the therapeutic construct would be selected to treat the pathological conditions of other diseases, such as diastrophic dysplasia, malignant melanoma, porphyria, alpha-1 antitrypsin deficiency, Aicardi-Goutieres syndrome, cystic fibrosis, progeria, Marfan syndrome, tuberous sclerosis, adrenoleukodystrophy, and the like. In some embodiments, other proteins may be fused to the N- and C-termini of the proteins included in the chimeric protein. Table 1 below portrays various conditions that may be effectively treated using the chimeric proteins of the present disclosure, as well as the therapeutic constructs that may, in some embodiments, be substituted for dystrophin.</p>
+      <p id="p-00046-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Therapeutic constructs for incorporation into the chimeric protein of</entry>
+                </row>
+                <row>
+                  <entry>the present disclosure for use in the treatment of various conditions.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="140pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>Condition</entry>
+                  <entry>Therapeutic Construct</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>diastrophic dysplasia</entry>
+                  <entry>SLC26A2. A transmembrane glycoprotein</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>which is a sulfate transporter and a</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>member of the solute family.</entry>
+                </row>
+                <row>
+                  <entry>malignant melanoma</entry>
+                  <entry>p16(INK4a) and the p14(ARF); proteins</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>encoded by the CDKN2A and PTEN</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>genes.</entry>
+                </row>
+                <row>
+                  <entry>porphyria</entry>
+                  <entry>Delta-aminolevulinate dehydratase; 5-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>aminolevulinate synthase 2;</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>coproporphyrinogen oxidase;</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>ferrochelatase; hydroxymethylbilane</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>synthase; protoporphyrinogen oxidase;</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>uroporphyrinogen decarboxylase;</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>uroporphyrinogen III synthase.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Proteins encoded by the ALAD, ALAS2,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>CPOX, FECH, HMBS, PPOX, UROD, or</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>UROS genes.</entry>
+                </row>
+                <row>
+                  <entry>alpha-1 antitrypsin</entry>
+                  <entry>Alpha-1 antitrypsin. A plasma protein and</entry>
+                </row>
+                <row>
+                  <entry>deficiency</entry>
+                  <entry>serine protease inhibitor.</entry>
+                </row>
+                <row>
+                  <entry>Aicardi-Goutieres</entry>
+                  <entry>Proteins encoded by the TREX1,</entry>
+                </row>
+                <row>
+                  <entry>syndrome</entry>
+                  <entry>RNASEH2A, RNASEH2B, and</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>RNASEH2C genes. Mutations in these</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>genes may result in absent or dysfunctional</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>nuclease enzymes.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Proteins encoded by the SAMHD1 genes.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>These proteins may be involved in immune</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>response and/or inflammatory processes.</entry>
+                </row>
+                <row>
+                  <entry>cystic fibrosis</entry>
+                  <entry>Cystic fibrosis transmembrane</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>conductance regulator. A transmembrane</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>chloride channel protein.</entry>
+                </row>
+                <row>
+                  <entry>progeria</entry>
+                  <entry>Lamin A; lamin C. Proteins located at the</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>nuclear lamina.</entry>
+                </row>
+                <row>
+                  <entry>Marfan syndrome</entry>
+                  <entry>Fibrillin-1. A large extracellular matrix</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>protein.</entry>
+                </row>
+                <row>
+                  <entry>tuberous sclerosis</entry>
+                  <entry>Hamartin; tuberin. Hamartin is a</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>peripheral membrane protein. Tuberin</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>associates with hamartin in a cytosolic</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>complex.</entry>
+                </row>
+                <row>
+                  <entry>adrenoleukodystrophy</entry>
+                  <entry>Adrenoleukodystrophy protein. A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>peroxisome membrane protein.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00047-en" num="0046">In some embodiments, the present disclosure is also directed to a method of using a chimeric protein consistent with the embodiments described above in the treatment of dystrophinopathies. As shown in <figref>FIG. 6</figref>, un some embodiments, the method of treating a subject having a dystrophinopathy includes the steps of preparing <b>600</b> a therapeutic dose of a chimeric protein comprising a therapeutic region, a transportation region, and a cleavage region disposed between the therapeutic region and the transportation region, wherein the transportation region allows for transport of the chimeric protein across a cellular membrane; and administering <b>610</b> the therapeutic dose to the subject. As used herein, the term therapeutic dose means any suitable volume and concentration of the chimeric protein to be administered to a subject as part of a prescribed regimen that is effective for treating a dystrophinopathy. The specific dosage is a matter of design choice and may vary with the characteristics of the subject.</p>
+      <heading id="h-00007-en" level="2">Methods:</heading>
+      <p id="p-00048-en" num="0047">In some embodiments, the present disclosure is also directed to a method of making a chimeric protein consistent with the embodiments described above for use in the treatment of dystrophinopathies. As shown in <figref>FIG. 7</figref>, in some embodiments, the method of making the chimeric protein includes the steps of cloning <b>700</b> a nucleotide sequence into a vector, the nucleotide sequence coding for a chimeric protein comprising a therapeutic region, a transportation region, and a cleavage region disposed between the therapeutic region and the transportation region, wherein the transportation region allows for transport of the chimeric protein across a cellular membrane, transfecting <b>710</b> the vector into a host cell, proliferating <b>720</b> the host cell, and isolating <b>730</b> the chimeric protein from the host cell. In some embodiments, as shown in <figref>FIG. 8</figref>, isolating step <b>730</b> includes the step of isolating <b>830</b> the chimeric protein from a lysate of the host cell. Specific examples consistent with some embodiments of the method of making the chimeric protein are as follows:</p>
+      <p id="p-00049-en" num="0048">The dystrophin protein has been described by Kunkel et al., under patent application Ser. No. 07/136,618 and family ID 22473616, the contents of which are incorporated herein by reference in its entirety. The complete mRNA sequence of human dystrophin protein is available at gene bank under accession number M18533, M17154, M18026, and M20250.</p>
+      <p id="p-00050-en" num="0049">The following studies were all performed on a chimeric dystrophin protein without a cleavage region and with VSV-G as the transportation region at the N-terminus of the therapeutic dystrophin.</p>
+      <p id="p-00051-en" num="0050">Plasmid harboring cDNA for full-length <i>Homo Sapiens </i>dystrophin was sourced from Transomic Technologies, 601 Genome Way, Suite 1222, Huntsville, Ala. 35806. Cloning vector pRK-Flag-Myc (Sigma) and pMD2.G (Addgene) harboring the VSV-G cDNA were obtained. The VSV-G protein was cloned at the ApaI and NotI sites of the pRK-Flag-Myc vector thereby replacing the Flag tag with VSV-G. VSV-G protein was cloned by polymerase chain reaction (PCR) using pMD2.G vector as the template and forward and reverse primers as 5′ AAT TAT GGG CCC GAC ACC ATG GAG TGC CTT TTG TAC TTA 3′ and 5′ CTC TAC TTG GCT GAA CCT CGC CGG CGG TTT AGG 3′ respectively.</p>
+      <p id="p-00052-en" num="0051">Next, PCR was performed to amplify the dystrophin open reading frame (ORF) with forward and reverse primers as CCG TCA GCG GCC GCC ATG CTT TGG TGG GAA GAA GTA and TAC TCT CTC CTG TGT TAC CAG CTG GAG TAC respectively, designed to include restriction enzyme sites Not I and Sal I. The dystrophin ORF was cloned at the Not I and Sal I sites of the pRK-Flag-Myc vector following the VSV-G, yielding the chimeric dystrophin with VSV-G at the N-terminal. The KAPA HiFi HotStart ReadyMix PCR kit was used for performing PCR.</p>
+      <p id="p-00053-en" num="0052">Dystrophin and truncated dystrophin chimeric gene sequences with N-terminal VSV-G were synthesized by IDT DNA using their propriety technology and put into appropriate vector for protein expression using a baculovirus system. Methods of protein purification using a baculovirus system are well established and well within the capabilities of one having ordinary skill in the art.</p>
+      <p id="p-00054-en" num="0053">Once the chimeric sequence was generated, it was transfected in mammalian cells to ensure that the chimeric dystrophin protein is being expressed properly. HEK-293 cells were seeded on coverslips in a 6-well plate at a confluence of 60%. Cells were transfected with vectors containing either the VSV-G protein alone or the chimeric dystrophin-VSV-G protein using the Viafect™ reagent from Promega. A day after transfection the media were changed to normal media (10% FBS in DMEM). 48 hours post transfection, the media from the cells was removed.</p>
+      <p id="p-00055-en" num="0054">As shown in <figref>FIGS. 2 and 3</figref>, the transfected cells seeded on coverslips were fixed and stained for detection of dystrophin chimeric protein expression and compared to that of VSV-G alone. For fixation, cells were washed in Dulbecco's phosphate buffered saline (DPBS) and fixed in 4% paraformaldehyde solution for 10 minutes. Cells were washed in DPBS again followed by treatment with 0.5% Triton-X-100 for an additional 5 minutes. Following 3 washes in DPBS, cells were blocked for an hour in 10% BSA. Then primary antibody against VSV-G protein (VSV-G-tag Antibody, pAb, Rabbit, source: GenScript) or dystrophin (monoclonal anti-dystrophin, clone MANDYS8) was added at a dilution of 1:100 in 2.5% BSA-DPBS for one and half hours. Cells were again washed in DPBS. Anti-rabbit FITC conjugated secondary antibody against anti-VSV-G primary or Anti-mouse Texas Red conjugated secondary antibody against anti-dystrophin primary were also added at a dilution of 1:100 in 2.5% BSA-DPBS and incubated for 30 minutes. Cells were washed in DPBS and stained with DAPI in DPBS. Cells were mounted in anti-fade mounting medium.</p>
+      <p id="p-00056-en" num="0055">The stained transfected HEK-293 cells were detected for indirect immunofluorescence under a fluorescence microscope. The transfected cells displayed fluorescence in the cytoplasm confirming the expression of the chimeric protein (<figref>FIG. 3</figref>). The distribution of the VSV-G protein alone was different from that of the chimeric protein (<figref>FIG. 2</figref>).</p>
+      <p id="p-00057-en" num="0056">DMD patient cells (GM05169 and GM03604 A) were sourced from Coriell Institute of Biomedical Research. For treatment of DMD patient cells with conditioned media, GM05169 and GM03604 A cells were seeded onto coverslips in 6-well plate. HEK 293 cells were transfected as described above and the media after being changed 24 hours post transfection was left for another 48 hours. 72 hours post transfection, medium from the transfected cells were collected and centrifuged. Different amounts of conditioned HEK transfection media 2.0 ml, 1.0 ml, and 0.5 ml (making a total volume of 2 ml by adding 15% FBS DMEM media) were added to the DMD patient cells and then cells were fixed and stained as described above.</p>
+      <p id="p-00058-en" num="0057">DMD patient cells were then analyzed under a fluorescence microscope for chimeric protein transduction from media to patient cells. As shown in <figref>FIGS. 4 and 5</figref>, treatment of conditioned transfected HEK-293 cell media indeed resulted in the transduction of chimeric protein that was secreted in the media as displayed by the fluorescence in the cytoplasm of patient cells.</p>
+      <p id="p-00059-en" num="0058">It was postulated that fusion of VSV-G protein with the dystrophin protein would facilitate the entry of the dystrophin protein in the target muscle tissues. VSV-G is a vesicular protein which when overexpressed is secreted in vesicles known as gesicles. It was assumed, therefore, that chimeric dystrophin protein might be secreted as well in the transfection media upon expression. DMD patient cells displaying fluorescence positive for chimeric protein proves that the chimeric protein is secreted in the media of HEK-293 transfected cells and upon treatment of the conditioned media to DMD patient cells, the chimeric protein is taken up by the patient cells.</p>
+      <p id="p-00060-en" num="0059">As discussed above, in some embodiments, chimeric protein expression and functionality is confirmed by inserting DNA encoding the chimeric protein into baculovirus for recombinant protein production. DNA insertion into the baculovirus for recombinant protein production is accomplished using the commercially available pOET1 transfer plasmid (Oxford Expression Technologies) and recombinant baculovirus stocks are prepared for baculovirus-mediated protein expression according to the manufacturer protocols.</p>
+      <p id="p-00061-en" num="0060">Chimeric proteins are produced using recombinant baculovirus stocks to infect suspension cultures of insect cells grown in flasks or bioreactors with commercially available cell lines such as Sf9, Sf21 or Tni and commercially available culture media according to manufacturer protocols. Infected cultures are then harvested between 48 and 96 hours post infection and chimeric proteins are purified from culture media or clarified cell lysate by column chromatography involving one or more methods such as affinity, ion exchange, hydrophobic interaction, and size exclusion.</p>
+      <p id="p-00062-en" num="0061">Purified chimeric proteins are identified by Western blot using one or more dystrophin-specific primary antibodies. Protein purity is determined by densitometry analysis of SDS PAGE stained with SYPRO Orange or Coomassie Blue, and by reverse phase high performance liquid chromatography (RP-HPLC). Protein stability in phosphate buffered saline (PBS) or similar formulation buffer is assessed by analytical size exclusion chromatography (aSEC) to detect changes in protein monodispersity over time and after multiple freeze/thaw cycles. Endotoxin level in purified protein samples is measured by Limulus Amebocyte Lysate (LAL) assay.</p>
+      <p id="p-00063-en" num="0062">Purified chimeric protein produced by the methods described above is administered in mdx mice for further validation of its activity to improve the pathologic effects observed during dystrophinopathies. All the animal studies are done by The Jackson Laboratory.</p>
+      <p id="p-00064-en" num="0063">A variant of mdx mouse in a different background (DBA/2J) is used for the studies. Eighteen hemizygous D2.B10-Dmdmdx/J male mutant mice and six DBA/2J male control mice are produced in the Jackson Laboratory Facility. Three groups of 6 D2.B10-Dmdmdx/J males, age 28 days±3 days, are administered the chimeric protein or vehicle for a six week period. A group of 6 DBA/2J male controls, age 28 days±3 days, are administered just the chimeric protein administration vehicle.</p>
+      <p id="p-00065-en" num="0064">At the end of the treatment period, the following measurements are performed: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>Serum Creatine Kinase (CK) activity. Serum CK is measured with a Beckman Coulter AU Clinical Chemistry analyzer from serum collected by retro-orbital bleeding and frozen immediately and until analysis;</li><li>Evans Blue Dye (EBD) uptake by the skeletal muscle. EBD is injected 24 hours prior to euthanasia but after serum collection for CK measurement. After euthanasia, the gastrocnemius is collected and flash frozen. Muscles are then homogenized, the lysate is cleared, and EBD concentration in the supernatant is measured by spectrophotometry;</li><li>Histology. Hematoxylin and eosin stain for illustration purposes, reticulin stain for muscle fiber morphometry, quantification of the extent of atrophy/hypertrophy and centrally-located nuclei, and Masson Trichrome stain for the visualization of the fibrosis are performed. After sacrifice, one hind limb and one hemi-diaphragm are collected and fixed in paraformaldehyde. Muscles are dissected, paraffin-embedded, and cross-sectioned. Three sections per muscle are prepared to be stained with hematoxylin and eosin for illustration purposes with two mice per group and reticulin stain for automated fiber size measurements and central nuclei counts;</li><li>Anti-dystrophin immunofluorescence on the quadriceps, myocardium, and diaphragm. Tibialis anterior and quadriceps muscles are used. One quadriceps and the heart are flash-frozen without fixation for cryo-sectioning and cross-sections are stained by anti-dystrophin immunofluorescence; and</li><li>RNA extraction and quantification of the following mRNAs in the tibialis anterior: markers of inflammation, markers of fibrosis, markers of muscle fiber regeneration. One tibialis anterior is preserved in RNA. Later, RNAs are extracted, reverse-transcribed, and the following mRNA quantified by SYBR-Green qPCR: Mpeg1 and Lgals3 (macrophages markers), Ly6c1 (pro-fibrotic monocytes marker), Tnf-alpha (inflammatory cytokine), neonatal myosin (fiber regeneration marker), and collagen I.</li></ul></li></ul></p>
+      <p id="p-00066-en" num="0070">One or more embodiments of the present invention have been described. Nevertheless, it will be understood that various modifications may be made without departing from the spirit and scope of the invention. Accordingly, other embodiments are within the scope of the following claims.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A chimeric protein comprising a therapeutic region, a transportation region, and a cleavage region disposed between the therapeutic region and the transportation region, wherein the transportation region allows for transport of the chimeric protein across a cellular membrane.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The chimeric protein according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the cleavage region is disposed at the N-terminal end of the therapeutic region.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The chimeric protein according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the cleavage region is disposed at the C-terminal end of the therapeutic region.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The chimeric protein according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the therapeutic region is selected from the group consisting of: a full-length dystrophin, a truncated dystrophin, and combinations thereof.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The chimeric protein according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the transportation region is selected from the group consisting of: a vesicular stomatitis virus G and functional variants of a vesicular stomatitis virus G.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The chimeric protein according to <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the vesicular stomatitis virus G variants allow for up to at least 4 amino acid substitutions.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The chimeric protein according to <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the vesicular stomatitis virus G variants has at least a sequence identity with a wild-type vesicular stomatitis virus G selected from the group consisting of: at least 90%, at least 95%, at least 96%, at least 97%, at least 98%, or at least 99% sequence identity.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The chimeric protein according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the cleavage region is configured to be cleaved subsequent to transport of the chimeric protein across the cellular membrane.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The chimeric protein according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the cleavage region is a cleavage site for a membrane metalloprotease.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The chimeric protein according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein at least a portion of a sequence of the chimeric protein is selected from the group consisting of: SEQ. ID NO.: 1, SEQ. ID NO.: 2, SEQ. ID NO.: 3, SEQ. ID NO.: 4, SEQ. ID NO.: 5, SEQ. ID NO.: 6, SEQ. ID NO.: 7, SEQ. ID NO.: 8, and pharmacologically acceptable equivalents thereof.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The chimeric protein according to <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the cleavage region comprises the amino acid sequence PLGLWAL, wherein each amino acid may be conservatively substituted.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The chimeric protein according to <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the cleavage region comprises the amino acid sequence P-X-X-Hy-(S/T), wherein P identifies proline, X is any residue, Hy is a hydrophobic residue, and S/T may either serine or threonine.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en" independent="true">
+      <claim-text>
+        <b>13</b>. A method of treating a subject having a medical condition comprising the steps of:
+<claim-text>preparing a therapeutic dose of a chimeric protein comprising a therapeutic region, a transportation region, and a cleavage region disposed between the therapeutic region and the transportation region wherein the transportation region allows for transport of the chimeric protein across a cellular membrane; and</claim-text><claim-text>administering the therapeutic dose to the subject.</claim-text></claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of treating a subject having a medical condition according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the medical condition includes a muscular dystrophy, diastrophic dysplasia, malignant melanoma, porphyria, alpha-1 antitrypsin deficiency, Aicardi-Goutieres syndrome, cystic fibrosis, progeria, Marfan syndrome, tuberous sclerosis, adrenoleukodystrophy, and the like.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method of treating a subject having a medical condition according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein at least a portion of a sequence of the chimeric protein is selected from the group consisting of: SEQ. ID NO.: 1, SEQ. ID NO.: 2, SEQ. ID NO.: 3, SEQ. ID NO.: 4, SEQ. ID NO.: 5, SEQ. ID NO.: 6, SEQ. ID NO.: 7, SEQ. ID NO.: 8, and pharmacologically acceptable equivalents thereof.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en" independent="true">
+      <claim-text>
+        <b>16</b>. A chimeric protein for the treatment of a subject having a muscular dystrophy, the chimeric protein having a sequence wherein at least a portion of the sequence is selected from the group consisting of: SEQ. ID NO.: 1, SEQ. ID NO.: 2, SEQ. ID NO.: 3, SEQ. ID NO.: 4, SEQ. ID NO.: 5, SEQ. ID NO.: 6, SEQ. ID NO.: 7, SEQ. ID NO.: 8, and pharmacologically acceptable equivalents thereof.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en" independent="true">
+      <claim-text>
+        <b>17</b>. A method of making a chimeric protein for use in the treatment of a condition, the method comprising the steps of:
+<claim-text>cloning a nucleotide sequence into a vector, the nucleotide sequence coding for a chimeric protein comprising a therapeutic region, a transportation region, and a cleavage region disposed between the therapeutic region and the transportation region wherein the transportation region allows for transport of the chimeric protein across a cellular membrane;</claim-text><claim-text>transfecting the vector into a host cell;</claim-text><claim-text>proliferating the host cell; and</claim-text><claim-text>isolating the chimeric protein from the host cell.</claim-text></claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method of making a chimeric protein for use in the treatment of a condition according to <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein the nucleotide sequence comprises a sequence selected from the group consisting of: SEQ. ID NO.: 1, SEQ. ID NO.: 3, SEQ. ID NO.: 5, and SEQ. ID NO.: 7.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method of making a chimeric protein for use in the treatment of a condition according to <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein the nucleotide sequence coding for the therapeutic region codes for a protein selected from the group consisting of: a full-length dystrophin, a truncated dystrophin, and combinations thereof.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The method of making a chimeric protein for use in the treatment of a condition according to <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein the nucleotide sequence coding for the transportation region codes for a protein selected from the group consisting of: a vesicular stomatitis virus G and functional variants of a vesicular stomatitis virus G.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The method of making a chimeric protein for use in the treatment of a condition according to <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein the nucleotide sequence coding for the cleavage region codes for a membrane metalloprotease.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The method of making a chimeric protein for use in the treatment of a condition according to <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein the condition includes a muscular dystrophy, diastrophic dysplasia, malignant melanoma, porphyria, alpha-1 antitrypsin deficiency, Aicardi-Goutieres syndrome, cystic fibrosis, progeria, Marfan syndrome, tuberous sclerosis, adrenoleukodystrophy, and the like.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. The method of making a chimeric protein for use in the treatment of a condition according to <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein the step of isolating the chimeric protein from the host cell includes the step of isolating the chimeric protein from a lysate of the host cell.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en" independent="true">
+      <claim-text>
+        <b>24</b>. A chimeric protein comprising a therapeutic region and a transportation region disposed substantially adjacent said therapeutic region, wherein the transportation region allows for transport of the chimeric protein across a cellular membrane.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>25</b>. The chimeric protein according to <claim-ref idref="clm-00024-en">claim 24</claim-ref>, wherein the transportation region is disposed at the N-terminal end of the therapeutic region.</claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>
+        <b>26</b>. The chimeric protein according to <claim-ref idref="clm-00024-en">claim 24</claim-ref>, wherein the transportation region is disposed at the C-terminal end of the therapeutic region.</claim-text>
+    </claim>
+    <claim num="27" id="clm-00027-en">
+      <claim-text>
+        <b>27</b>. The chimeric protein according to <claim-ref idref="clm-00024-en">claim 24</claim-ref>, wherein at least a portion of a sequence of the chimeric protein is selected from the group consisting of: SEQ. ID NO.: 2, SEQ. ID NO.: 4, SEQ. ID NO.: 6, SEQ. ID NO.: 8, and pharmacologically acceptable equivalents thereof, wherein the amino acid sequence PLGLWAL is removed. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246950A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246950A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150246950A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246950A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150246950A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246950A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150246950A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246950A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150246950A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246950A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150246950A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246950A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150246950A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246950A1-20150903-D00007.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150246950A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246950A1-20150903-D00008.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150246950A1.PDF" type="pdf" size="9722234" pages="70" />
+</lexisnexis-patent-document>

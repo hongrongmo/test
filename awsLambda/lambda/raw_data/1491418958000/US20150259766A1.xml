@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259766A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030128" date-changed="20151110" time-changed="123227">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121314689">
+        <country>US</country>
+        <doc-number>20150259766</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14631527</doc-number>
+        <date>20150225</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151110">
+      <classification-ipcr sequence="1">
+        <text>C22B   3/00        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>B</subclass>
+        <main-group>3</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C22B   7/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>B</subclass>
+        <main-group>7</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151110">
+      <classification-cpc sequence="1">
+        <text>C22B  19/22        20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>B</subclass>
+        <main-group>19</main-group>
+        <subgroup>22</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C22B   7/007       20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>B</subclass>
+        <main-group>7</main-group>
+        <subgroup>007</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C22B  19/26        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>B</subclass>
+        <main-group>19</main-group>
+        <subgroup>26</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C23F   1/30        20130101 LI20151014BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151014</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C23F   1/44        20130101 LI20151014BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>44</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151014</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>Y02P  10/234       20151101 LA20151104BHEP        </text>
+        <cpc-version-indicator>
+          <date>20151101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>P</subclass>
+        <main-group>10</main-group>
+        <subgroup>234</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151104</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">DECOATING OF COATED MATERIALS</invention-title>
+    <related-documents date-changed="20150917">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61944459</doc-number>
+          <date>20140225</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>COLORADO SCHOOL OF MINES</orgname>
+            <address>
+              <city>Golden</city>
+              <state>CO</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Grogan</last-name>
+            <first-name>Joseph</first-name>
+            <address>
+              <city>Lakewood</city>
+              <state>CO</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Anderson</last-name>
+            <first-name>Corby G.</first-name>
+            <address>
+              <city>Golden</city>
+              <state>CO</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Martins</last-name>
+            <first-name>Gerard P.</first-name>
+            <address>
+              <city>Golden</city>
+              <state>CO</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173667666">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259766</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150225</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173667665">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259766</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150225</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A system and method for decoating a scrap coated metal in a leach solution uses direct measuring of the corrosion potential of the scrap metal in the system to determine the progress of the decoating process and end the process when the scrap is decoated. Corrosion potential measurements are made using a working electrode comprising more than one piece of scrap coated-metal within the system. The decoating system and method may include a system for recycling leach solution.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application claims benefit of priority pursuant to 35 U.S.C. §119(e) of U.S. provisional patent application No. 61/944,459, filed Feb. 25, 2014, which is hereby incorporated herein by reference in its entirety.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">FIELD</heading>
+      <p id="p-00002-en" num="0002">The disclosed processes, methods, and systems are directed to treating coated metals and the separate recovery of a metals stream and a coatings stream.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">Many metals receive a coating as a way of increasing their functionality. For example, galvanization is the process of coating steel or iron with a zinc coating, which aids in protecting the substrate metal. This process provides the underlying metal with a protective, corrosion resistant layer of zinc. Galvanization may be performed by electroplating. (electrogalvanization) or hot-dipping with the option for heat treating the coating after deposition.</p>
+      <p id="p-00004-en" num="0004">Scrap coated metals are currently a lower value scrap. This is because the coating may interfere with recycling processes or may be emitted as a toxic or hazardous substance. For example, furnaces that process scrap galvanized metal may emit zinc in the flue gas. Some of this zinc bearing waste may be recycled but generally only to mitigate waste disposal costs. The United States Environmental Protection Agency (USEPA) regulates the levels of elements that follow zinc, such as cadmium, in emissions and discharges.</p>
+      <p id="p-00005-en" num="0005">To avoid unnecessary levels of toxic or hazardous emissions, it is sometimes beneficial to remove coatings from metal. In the case of zinc decoating, this can be done through a variety of methods including hydrometallurgical, pyrometallurgical, and mechanical processes.</p>
+      <heading id="h-00004-en" level="1">SUMMARY</heading>
+      <p id="p-00006-en" num="0006">Disclosed herein is a method for decoating coated metals comprising: placing a scrap metal with a coating layer in an electrically conductive cage; immersing the coated scrap in an acidic leach solution in a reaction vessel; allowing the coating layer to react with the leach solution and dissolve into the leach solution; placing a reference electrode in the leach solution; measuring a corrosion potential by connecting the conductive cage to a volt meter and the reference electrode to the volt meter; removing a volume of leach solution from the reaction vessel containing dissolved coating material; dialyzing the volume of leach solution removed from the reaction vessel against a low ionic strength strip solution; allowing an acid to enter the strip solution; adding a volume of the strip solution containing the acid to the reaction vessel; stopping the reaction when the measured potential plateaus; thereby decoating a coated metal. In many embodiments, the coating is zinc, the metal is steel, and the acid is sulfuric acid.</p>
+      <p id="p-00007-en" num="0007">Also disclosed is a system for decoating coated metals comprising: a reaction vessel, comprising a tank with a plurality of inlets and outlets; the tank in fluid communication with a reagent recovery unit, wherein the reagent recovery unit comprises an ionic dialysis membrane; a volt meter; a reference electrode; and a lead for a working electrode. In some embodiments, the metal comprises steel or iron and the coating comprises zinc. The reference electrode for use in the disclosed system may be an Ag/AgCl electrode, and the working electrode may comprise a conductive containment cage of corrosion resistant metal, wherein the containment cage can be in electrical communication with a scrap metal positioned within the cage.</p>
+      <p id="p-00008-en" num="0008">This Summary is provided to introduce a selection of concepts in a simplified form. It is not intended to identify key features or essential features of the claimed subject matter, nor is it intended to be used to limit the scope of the claimed subject matter. A more extensive presentation of features, details, utilities, and advantages of the present invention as defined in the claims is provided in the following written description of various embodiments of the invention and illustrated in the accompanying drawings.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00009-en" num="0009">
+        <figref>FIG. 1A</figref> is a flow diagram describing one embodiment of the de-zincing process, where zinc fertilizer is produced.</p>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 1B</figref> is a flow diagram describing an embodiment similar to that shown in <figref>FIG. 1B</figref>, but this embodiment employs a Solvent Extraction step and a Zinc Electrowinning reactor to recover metallic zinc.</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 1C</figref> is a flow diagram describing the use of zinc crystallization</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 2</figref> is one embodiment of the disclosed process/system.</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 3</figref> is a graph showing corrosion potential and % completion as a function of time.</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 4</figref> is a graph showing corrosion as a function of time in various concentrations of zinc at the same concentration of H<sub>2</sub>SO<sub>4</sub>.</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 5</figref> is a graph showing corrosion as a function of time in at various H<sub>2</sub>SO<sub>4 </sub>percentages.</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 6</figref> depicts corrosion potential for 4 bench scale leaches (<b>3</b> with agitation, one without agitation). The corrosion potential on the y-axis is relative to the Ag/AgCl reference electrode (Eh+200 mV).</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 7</figref> is a graph of the solution concentration for iron and aluminum per leach.</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 8</figref> is a graph of the solution concentration for cobalt, chromium, nickel, manganese, manganese, molybdenum, and titanium per leach.</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 9</figref> is a flow diagram showing one embodiment of the disclosed method used to treat one metric tonne of galvanized scrap to produce a zinc-containing fertilizer and black, decoated scrap.</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 10</figref> presents two photos of basket used for bench scale leach: left) original SS316; right) ETFE Teflon coating over the SS on the basket.</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 11</figref> is a graph showing the effect of leaching temperature on iron dissolution.</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 12</figref> is a graph showing the effect of zinc coating weight on total leaching time.</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 13</figref> is a graph showing the leaching times of half-coupon surface leaching without and with exposed steel surface.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 14A-B</figref> are graphs comparing hydrogen evolution rates for experiments using shredded scrap (<figref>FIG. 14A</figref>) and in <figref>FIG. 14B</figref> the Teflon basket and the original stainless steel basket.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 15</figref> is a graph showing actual and calculated acid recoveries using the bench scale leach solution as a function of the treatment rate for the Bench Scale MechChem DD unit using AFN anionic membrane.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00026-en" num="0026">The disclosed compositions, devices, methods, processes, and systems are directed to enhancing removal of a coating material from coated metals and producing product streams containing de-coated metal and purified coating material as well as other useful products.</p>
+      <p id="p-00027-en" num="0027">In one embodiment, a system for de-zincing galvanized metal is described. The system comprising a reaction vessel, a reagent recovery unit, and a product recovery station. Also disclosed are methods for removing coating materials from coated metals using a de-coating process, wherein decoating occurs in the reaction vessel and the progress of the process is monitored to prevent or reduce corrosion of the substrate metal. The decoating process may be run as a batch or continuous process. The disclosed process includes immersing a coated metal in a leach solution that dissolves the coating material. The disclosed process is monitored directly by measuring a corrosion potential, also called mixed potential, of the coated metal which aids in determining when the process is at or near completion. In many embodiments, the disclosed process can result in preparing beneficial product streams, for example recovered coating material constituents, decoated substrate metals, &amp; hydrogen gas.</p>
+      <p id="p-00028-en" num="0028">The disclosed methods and systems may be used to reduce the costs involved in decoating of coated metals. In one embodiment, the leach solution may be recycled by removing one or more reagents from the solution. Methods and systems described herein aid in maximizing decoating rates, while minimizing over-all processing time and reducing contamination of the product streams by impurities in the substrate metal. In some embodiments, waste energy (in the form of waste heat from other industrial processes, for example smelting, roasting, melting or refining) may be used, either directly or indirectly, to recover product streams.</p>
+      <heading id="h-00007-en" level="2">Scrap Metal</heading>
+      <p id="p-00029-en" num="0029">Various coated metals can be decoated using the disclosed processes and systems. In one embodiment the coated scrap metal is a zinc coated steel. Other zinc coated substrate metals may also be used, for example iron and aluminum. Coatings other than zinc are also able to be removed using the disclosed process, such as nickel, chromium, cobalt, titanium, cadmium, magnesium, tin, iron and their alloys.</p>
+      <p id="p-00030-en" num="0030">Scrap coated metal may be obtained from pre and/or post-consumer streams. For example, zinc coated metal may be recycled from used structures and devices. In one embodiment, coated metal may be obtained from the auto-recycling or auto-manufacturing industry, as well as any industry that is involved in the salvage of coated metal. In some embodiments, the industry produces as excess coated metal, for example coated metal removed during cutting, stamping, or forming of a coated metal component, and/or from rejected or surplus coated metal products.</p>
+      <p id="p-00031-en" num="0031">Coated metal may be fully or partially coated with a coating material. In the case of zinc-coated steel, the scrap may be a fully-coated dipped metal or a stamped metal having non-coated edges/sides. The thickness of the coating layer and substrate material may vary.</p>
+      <p id="p-00032-en" num="0032">Scrap metal can be shredded or otherwise treated prior to processing. In some cases, the scrap can be shredded such that the average area of coated surface per piece of scrap is less than about 50.0 square inch, 40.0 sq·in., 30.0 sq·in., 25.0 sq·in., 20.0 sq·in., 15.0 sq·in., 10.0 sq·in., 9.0 sq·in., 8.0 sq·in., 7.0 sq·in., 6.0 sq·in., 5.0 sq·in., 4.0 sq·in., 3.0 sq·in., 2.0 sq·in., 1.5 sq·in., 1.5 sq·in., 1.3 sq·in., 1.2 sq·in., 1.1 sq·in., 1.0 sq·in., 0.9 sq·in., 0.8 sq·in., 0.7 sq·in., 0.6 sq·in., 0.5 sq·in., and greater than about 0.4 sq·in., 0.5 sq·in., 0.6 sq·in., 0.7 sq·in., 0.8 sq·in., 0.9 sq·in., 1.0 sq·in., 1.1 sq·in., 1.2 sq·in., 1.3 sq·in., 1.4 sq·in., 1.5 sq·in., 2.0 sq·in., 3.0 sq·in., 40 sq·in., 5.0 sq·in., 10.0 sq·in., 20.0 sq·in., 30.0 sq·in., 40.0 sq·in., or 45.0 sq·in.</p>
+      <p id="p-00033-en" num="0033">Depending upon the method used to galvanize a metal, the layer of zinc coating may be various thicknesses. For example, the thickness of a zinc coating layer may be from under 0.040 mm (1.7 mils) to over 0.09 mm (3.6 mils) or over 0.2 mm (7.9 mils). For most purposes, the amount of zinc in scrap zinc-coated metal is a fraction of the amount of metal. In most cases, zinc-coated metal scrap contains from about 1.0 to 0.6% zinc. In many cases, zinc-coated scrap metal comprises about 0.8 Wt. % zinc—that is 1000 kilograms of scrap zinc coated metal contains 8 kilograms of zinc.</p>
+      <heading id="h-00008-en" level="2">Leach Solution</heading>
+      <p id="p-00034-en" num="0034">The leach solution used in the disclosed method may comprise any compound suitable to corrode the coating material layer. In most cases, the corrosive compound is an acid, for example sulfuric acid, H<sub>2</sub>SO<sub>4</sub>. Other inorganic acids, such as sulfurous acid, H<sub>2</sub>SO<sub>3</sub>, nitric acid, hydrochloric acid, phosphoric acid, and organic acids, such as ethanoic acid and acetic acid, may also be used.</p>
+      <p id="p-00035-en" num="0035">The acid concentration in the leach solution is optimized and maintained, in order to provide a high rate of coating dissolution while minimizing the dissolution of the substrate metal. In the case of decoating of zinc-coated metals, the acid concentration is of a sufficient level to optimize zinc coating dissolution while minimizing the dissolution of the metal substrate, for example steel.</p>
+      <p id="p-00036-en" num="0036">Free acid concentration in the leach solution is optimized to minimize the volume of leach solution. Keeping the volume of leach solution low helps to optimize downstream processing of the leach solution, such as removing the dissolved coating material and/or recycling of the free acid.</p>
+      <p id="p-00037-en" num="0037">Free acid concentration is also optimized to maintain the concentrations of free acid and dissolved coating material below saturation levels in the leach solution. In the case of decoating zinc-coated metal scrap, this concentration is about 50 to 200 g H<sub>2</sub>SO<sub>4</sub>/L of leach solution, and the concentration of dissolved coating in the leach solution is about 50 to 200 g Zn/L.</p>
+      <heading id="h-00009-en" level="2">DeCoating System</heading>
+      <p id="p-00038-en" num="0038">
+        <figref>FIG. 1A</figref> shows one embodiment of the disclosed system. This embodiment comprises galvanized scrap steel which moves into a leach tank. An aqueous acidic solution moves from the leach tank to an acid recovery reactor, followed by a zinc product recovery reactor; a reactor being a vessel in which a distinct chemical reaction takes place. The dotted lines above the various tanks show recovery and reconstitution of solutions from various stages. In addition, there is a water source for this recovery (labeled Water Top Up), which is combined with a strip solution from the Zinc Product Recovery reactor. Free Recovered Acid is recovered by diffusion dialysis in the Acid recovery reactor, using an anionic membrane stack. At the Zinc Product Recovery unit, heat (for example, waste from a foundry) may be used to obtain crystallized zinc, precipitated zinc, or otherwise to create a zinc product lacking significant levels of impurities such as iron. <figref>FIG. 1B</figref> is similar to <b>1</b>A, but employs a Solvent Extraction step and a Zinc Electrowinning reactor to recover metallic zinc. <figref>FIG. 10</figref> shows yet another embodiment of the disclosed system, and is discussed more below.</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIG. 2</figref> is another embodiment of the disclosed system. As shown in <figref>FIG. 2</figref>, one embodiment of the disclosed system comprises a reaction vessel, a reagent recovery unit, and a product recovery unit. In the embodiment shown in <figref>FIG. 2</figref>, the reaction vessel is in fluid communication with the reagent recovery unit and the product recovery unit.</p>
+      <p id="p-00040-en" num="0040">In the embodiment depicted in <figref>FIG. 2</figref>, the reaction vessel comprises a tank, a reference electrode, a lead for connection to a working electrode, a containment cage, and one or more inlets/outlets. The inlets/outlets allow for the removal or addition of reagents and/or products, for example coated scrap metal, decoated scrap metal, leach solution, acid, hydrogen gas, reconstituted leach solution. In some cases, the inlet/outlet may be configured to accept an electrode, for example a reference electrode or working electrode.</p>
+      <heading id="h-00010-en" level="2">Tank</heading>
+      <p id="p-00041-en" num="0041">The tank has an interior surface that is corrosion resistant. In many embodiments, the interior surface of the tank is a material resistant to acid, such as plastic, glass, rubber, a fluorine based plastic, ethylene tetrafluoroethylene, ETFE, TEFLON®, or an acid resistant metal alloy such as nickel chromium steel alloys, or duplex steel. In some embodiments the interior surface is a coating that is chemical resistant and/or electrical resistant.</p>
+      <p id="p-00042-en" num="0042">The tank is designed to accept the cage and allow the scrap metal within the cage to come into contact with the leach solution. Thus, in many embodiments the tank may be a tub with one or more inlet/outlet ports, for removing and/or adding materials to the tank. The tank may further include devices or structures that may aid in supporting, positioning, or moving the containment cage. The tank may have an inlet or opening configured to allow the containment cage to enter the interior of the tank. In some embodiments, the tank may be reversibly sealable and substantially airtight, such that gases can be captured.</p>
+      <heading id="h-00011-en" level="2">Containment Cage</heading>
+      <p id="p-00043-en" num="0043">The containment cage is designed to accept and contain scrap metal. The cage aids in supporting an amount of scrap metal and may be positioned within the tank. When positioned in the cage, the scrap metal can be immersed in a solution in the tank. It can also be removed from the tank acting as the liquid/solid separation stage.</p>
+      <p id="p-00044-en" num="0044">The containment cage is also designed to be in electrical communication with the scrap such that an electrical current/voltage may pass through the scrap and into the containment cage. The cage may be a mesh structure of various gauges and strengths suitable to support and contain the amount of scrap metal. In most embodiments, the containment cage is sufficiently strong, such that it may be used to transport the amount of coated scrap metal into the tank and remove the decoated scrap metal after the decoating process.</p>
+      <p id="p-00045-en" num="0045">In some embodiments, the containment cage comprises an at least partially coated metal. In one embodiment, the coating is a chemical and/or electrical resistant coating. Inn some embodiments, the coating is a fluorine based plastic, for example ethylene tetrafluoroethylene, ETFE, or TEFLON®. Coated and uncoated cages may be electrically connected to a potentiometer for monitoring corrosion. In one embodiment the cage is connected to a Gamry potentiostat allowing for corrosion potential measurements. The image on the right in <figref>FIG. 10</figref> shows a basket coated in Teflon, but where the SS304 spring electrical connection can be seen running down from the handle to a fastening on the floor of the basket as the basket now has an insulating coating.</p>
+      <p id="p-00046-en" num="0046">The cage is constructed of a material that resists corrosion in the leach solution, or corrodes significantly slower than the coating material. The cage is configured to be in electrical communication with the working electrode (the scrap metal), and a volt meter, which may be positioned outside the tank and/or reaction vessel. Where the cage is at least partially comprised of a coated material, a working electrode and/or lead may be positioned within the cage so as to be in electrical communication with at least one piece of the scrap.</p>
+      <p id="p-00047-en" num="0047">The containment cage is designed to support and contain the amount of scrap metal while the scrap is transported, mixed, tumbled, or agitated. In many cases, movement of the containment cage aids in re-distributing the scrap metal and/or scrap bed to allow all surfaces of the scrap metal to come into contact with the leach solution and/or containment cage.</p>
+      <p id="p-00048-en" num="0048">The containment cage may be of any suitable shape and size. As shown in <figref>FIG. 2</figref>, the containment cage may define a square box-shape. In other embodiments, the containment cage may define a cylindrical shape that may aid in rotating the containment cage and tumbling the scrap placed inside the cage.</p>
+      <p id="p-00049-en" num="0049">The containment cage can also take the shape of a continuous feed system with a tumbling, conveyor belt, and screw and trammel mechanism.</p>
+      <heading id="h-00012-en" level="2">Electrodes/Volt Meter</heading>
+      <p id="p-00050-en" num="0050">The reaction vessel includes a reference electrode and a lead for connecting to the working electrode. The working electrode lead is designed to reversibly connect to the containment cage. The reference electrode is designed to be immersed in the leach solution within the tank, such that a circuit may be completed between the reference electrode, the leach solution, the working electrode, and the volt meter.</p>
+      <p id="p-00051-en" num="0051">The working electrode is in electrical communication with the coated scrap/containment system. In some embodiments, the working electrode is a lead or spring positioned to be in electrical communication with at least one piece of scrap. In some embodiments, the working electrode is the coated scrap and/or the containment cage.</p>
+      <p id="p-00052-en" num="0052">The reference electrode can be any suitable electrode, for example a leakless electrode. Use of a leakless electrode allows monitoring of the corrosion potential while minimizing corrosion of the reference electrode and introducing any contaminants from the reference electrode into the leaching solution. In some embodiments, the reference electrode is an Ag/AgCl electrode, calomel, copper/copper sulfate or other standard reference electrode.</p>
+      <p id="p-00053-en" num="0053">The volt meter may be any meter suitable to measure the corrosion potential of the system. In many embodiments the volt meter may be a high impedance volt meter.</p>
+      <heading id="h-00013-en" level="2">Reagent Recovery Unit</heading>
+      <p id="p-00054-en" num="0054">The reagent recovery unit may take the form of diffusion dialysis which includes an interior space, and at least one inlet/outlet in fluid communication with the interior space. In the embodiment depicted in <figref>FIG. 2</figref>, the diffusion dialysis reagent recovery unit includes a membrane, positioned within the interior space, a strip solution inlet, a reconstituted leach solution outlet, a removed leach solution inlet, and a product solution outlet. As shown in <figref>FIG. 2</figref>, the interior space of the reagent recovery unit may be in fluid communication with the interior of the tank through the reconstituted leach solution outlet, and the removed leach solution inlet. This reactor streams can operates in co-current or counter-current flows.</p>
+      <p id="p-00055-en" num="0055">A pre-filtration step can be used on the bleed solution between the leach tanks and acid recovery reactor to remove any particulates.</p>
+      <p id="p-00056-en" num="0056">A pre-ion exchange step can be used on the bleed solution between the leach tank and acid recovery reactor to remove any dissolved chemicals.</p>
+      <p id="p-00057-en" num="0057">The reagent recovery unit may include a strip solution reservoir. The strip solution is in fluid communication with the interior space of the reagent recovery unit.</p>
+      <p id="p-00058-en" num="0058">The product recovery unit is used to produce an end product comprising coating material. In some embodiments, the product recovery unit may include a fluidized bed reactor, a spray drier, or other comparable technologies.</p>
+      <p id="p-00059-en" num="0059">Reagent recovery could also take the form of the solution in a crystallization circuit. For example, as depicted in <figref>FIG. 1C</figref>, the zinc sulfate bleed would undergo crystallization which would remove zinc sulfate from solution, allowing the acid rich bleed, depleted in zinc sulfate, to be recycled and reused in the leach.</p>
+      <heading id="h-00014-en" level="2">Coating Removal</heading>
+      <p id="p-00060-en" num="0060">The coating material may be removed by any suitable corrosive compound in the leach solution. Where the coating material is zinc, the coating may be removed by reacting with an acid in the leach solution. As described above, the presently disclosed method may use a leach solution containing sulfuric acid to aid in dissolving the zinc coating material.</p>
+      <p id="p-00061-en" num="0061">In one particular embodiment, a coated metal (for example, galvanized steel) can be decoated using the described process.</p>
+      <p id="p-00062-en" num="0062">As described above, the concentrations of free acid and dissolved coating material in the leach solution are maintained at or near a steady state. Because free acid is being consumed and coating material is entering the leach solution during the decoating process, free acid is added to the reaction vessel and dissolved coating material is removed from the reaction vessel throughout the decoating process. This is accomplished using a method referred to as “feed and bleed.”</p>
+      <p id="p-00063-en" num="0063">In feed and bleed, dissolved coating material is removed from the reaction vessel during the decoating process by removing a volume of the leach solution that contains the dissolved coating material, and a similar volume of free acid containing solution is added to the reaction vessel. The free acid added to the reaction vessel may be included in a reconstituted leach solution or may be added separately. Reconstituted leach solution comprises a strip solution that has undergone diffusion dialysis against the removed leach solution. In most embodiments, this dialysis allows free acid ions and hydrogen ions to enter the strip solution stream. While some amount of dissolved coating material may also be extracted from the leach solution into the strip solution, its concentration is significantly below that of the removed leach solution.</p>
+      <p id="p-00064-en" num="0064">Free acid may also be added to the reconstituted leach solution prior to the reconstituted leach solution being added to the reaction vessel tank. In some embodiments, a volume of free acid may be added directly to the reaction vessel tank. Addition of free acid helps maintain the free acid concentration and the volume of leach solution in the tank, thus maintaining the free acid at a steady state concentration. Volumes of each stream can be adjusted to various flows and ratios.</p>
+      <p id="p-00065-en" num="0065">The progress of the decoating process is monitored using a corrosion potential. The corrosion potential is a voltage formed between an anode (coating material and substrate metal) and a cathode (evolved hydrogen in the leach solution). The corrosion potential is defined using mixed potential theory as being the point where the anodic and cathodic currents have a net difference of zero, meaning the rate of metal oxidation is equal to the rate of hydrogen reduction. Corrosion potential can be measured by completing an electrical connection between a working electrode, the coated metal, and a reference electrode immersed in the leaching solution. In the present case, the leach solution acts as an electrolyte, and a voltage through this circuit is measured with a voltmeter</p>
+      <p id="p-00066-en" num="0066">Where scrap zinc-coated metal is decoated using an acid leach solution, the progress of decoating is measured directly. This is accomplished because the working electrode, the scrap metal, is in direct electrical contact with the scrap containment cage, which is at least partly made of a conductive material. Thus, one end of an electrical lead may be attached directly to the cage and the other to a volt meter.</p>
+      <p id="p-00067-en" num="0067">The disclosed method determines an average corrosion potential because a plurality of scrap metal pieces, which act as working electrodes, are in electrical communication with the containment cage. That is, the volt meter measures the electrical potential of all scrap in electrical communication with conductive portions of the cage. This averaging of the corrosion potential provides a more accurate indication of the progress of the decoating process for the amount of scrap positioned within the containment cage.</p>
+      <p id="p-00068-en" num="0068">In many cases, the voltage formed between the reference electrode and the working electrode is measured on a high impedance voltmeter. As the coating material is dissolved and the metal substrate is exposed, the corrosion potential shifts from a coated potential to an uncoated potential, and then plateaus when the de-coating process is at or near completion. Because the progress of coating dissolution is related to the shift in corrosion potential, it is possible to monitor the progress of coating dissolution (decoating) by monitoring the decoating system's corrosion potential. In some embodiments, the process can be automated such that when the corrosion potential plateaus, or achieves a pre-set value the decoating process is stopped by removing the scrap from the leach solution/electrolyte. This minimizes dissolution of impurities.</p>
+      <p id="p-00069-en" num="0069">Voltage produced by the circuit described above may vary, depending on the substrate metal, coating material, and leach solution used.</p>
+      <p id="p-00070-en" num="0070">In the case of zinc-coated steel, the difference in voltage measured between the zinc-coated steel and uncoated steel is about 0.5 volts or from about 400 mV to about 600 mV. For example, when a standard hydrogen electrode is used, the voltage produced by coated metal may be about −700 mV and the voltage produced by the de-coated metal may be about −250 mV (i.e. −700 my−−250 mV=−450 mV). In the case of an Ag/AgCl reference electrode the voltage produced by coated metal may be about −1.0 V and the voltage produced by the de-coated metal may be about −0.6 V.</p>
+      <p id="p-00071-en" num="0071">Organic compounds may be found in the leach solution. In some cases, organic compounds can be used to aid in controlling corrosion. These compounds may enter the leach solution either through entrainment on the metal, or through controlled addition. For example, oils may be added to the process because it is known that they provide a corrosion inhibiting effect for the coating and/or the metal substrate.</p>
+      <p id="p-00072-en" num="0072">Organic compounds in the leach solution are maintained at a desired steady concentration. In many cases this is accomplished by removing the organic compounds using a constant bleed stream. For example, organic compounds can concentrate on the surface of the leach solution to form a coating on available solid surfaces. In some cases, available solid surfaces include the reaction vessel wall, in other cases, an available solid surface may be the polypropylene structure added to the reaction vessel for the purpose of collecting organic compounds. In one preferred example, a plurality of balls or beads may be added to the reaction vessel and a portion of the balls or bead removed from the reactor vessel, washed in an organic solvent, and returned to the reactor vessel at a rate to maintain the steady state concentration. In other cases, raft devices which float on the leach solution surface may be used to aid in removal of the organic compounds. Buoyant balls, beads, or rafts may also aid in controlling formation of acid aerosols. Acid aerosols may be formed through hydrogen gas evolution from the leach solution's surface. In some embodiments, hydrogen gas may be recovered from the reaction vessel and reused or collected as a product for use as energy or chemical purposes.</p>
+      <p id="p-00073-en" num="0073">Activated carbon of charcoal or another ion exchange media may be used to remove organics in the solution.</p>
+      <p id="p-00074-en" num="0074">As described above, the scrap coated-metal can be introduced into the leach solution using a corrosion-resistant cage, or added to a containment cage that is already immersed in the leach solution. The containment cage is constructed of a corrosion-resistant material to aid in reducing contaminants from the cage material entering the leach solution. The cage is also a porous container, such as a mesh or screen that allows leach solution to enter an interior of the cage, where scrap coated metal is placed.</p>
+      <p id="p-00075-en" num="0075">Passage of the cage through the leach solution helps to establish a mixing in the solution. This mixing aids in disturbing surface boundary layer phenomena which may occur. These phenomena may limit the amount of required chemical that can reach the surface reacting on the coating. The mixing of the leach solution aids in providing a substantially homogeneous leach solution.</p>
+      <p id="p-00076-en" num="0076">In some embodiments, the velocity field can be established by movement of the cage, for example a cage may be rotated. In some cases, the cage is placed on a rotating wheel, or the cage itself is rotated. In some embodiments, the cage may define a cylinder and the cylindrical cage may be rotated on an axis. Movement of the cage may aid in moving the scrap coated metal. For example, movement of the cage may cause a bed of scrap to tumble so that several surfaces of each piece of scrap may be exposed to the leach solution. In most cased the cage is constructed of a material having a low hydrogen reduction overpotential, such as 316 stainless steel. Thus, because the zinc coating dissolution is cathodically controlled, dissolution of the zinc coating is faster than dissolution of the cage material.</p>
+      <p id="p-00077-en" num="0077">The decoating process may be run as a batch or continuous process. When the disclosed process is performed in batch mode, an amount of coated scrap metal may be placed in the containment cage and then the cage is removed when the decoating process is completed. In continuous mode, the system will comprise a plurality of reference/working electrode circuits to monitor the progress of each stage of decoating. In continuous mode, a screw, wheel, spiral, conveyer, or similar device may be used to add and remove scrap from the reaction vessel.</p>
+      <heading id="h-00015-en" level="2">Reagent Recovery</heading>
+      <p id="p-00078-en" num="0078">Removed leach solution (bleed) can be treated after it is removed from the reaction vessel. In many embodiments the total amount of volume removed from the reaction vessel as removed leach solution is between about 40-100 L per metric tonne (1000 kilograms) of scrap coated metal.</p>
+      <p id="p-00079-en" num="0079">Removed leach solution can be treated using various methods. For example, the removed leach solution can be treated in a dialysis unit where one or more molecules or compounds can be extracted from the removed leach solution. In one embodiment, free acid can be recovered out of the removed leach solution after it is removed from the reaction vessel. In most cases, the free acid can be extracted from this solution and recycled into the reaction vessel.</p>
+      <p id="p-00080-en" num="0080">Ion exchange resins can also be used to selectively recover acid in a non-continuous process.</p>
+      <p id="p-00081-en" num="0081">Free acid is extracted from the removed leach solution by dialysis. Specifically, the removed leach solution can be dialyzed against a strip solution using suitable membranes, for example a dialysis membrane, as depicted in <figref>FIG. 15</figref> and described below. In some embodiments, the membranes may comprise compounds, for example ionic compounds. These ionic compounds may aid in attracting charged ions in the removed leach solution and repelling other ions. In most cases, the dialysis membrane can also exclude ions, molecules, and/or compounds of specific sizes. In embodiments where zinc is stripped from steel using sulfuric acid, the dialysis membrane may include cationic compounds which aid in selectively removing free acid anions from the removed leach solution, while blocking the passage of Zn through the membrane. In some cases, cationic compounds can be impregnated in a resin.</p>
+      <p id="p-00082-en" num="0082">The free acid ions are transferred to the low ionic strength strip solution. In many embodiments, the strip solution can be de-ionized water. In other embodiments, the strip solution can be obtained from one or more aqueous solutions produced during processing, for example during a reagent recovery method described below. Other suitable strip solutions may include distilled water, scrap wash water from after the leach, municipal water supplies.</p>
+      <p id="p-00083-en" num="0083">The use of membranes impregnated with cationic compounds to recover anionic species from a bleed solution to a strip solution utilizing concentration gradients may be referred to as diffusion dialysis. Diffusion dialysis can be used to recover free acid through use of a concentration gradient of the target species. Here, diffusion dialysis is used to aid in recovery of sulfate ions. For example, as sulfate is transferred from a high concentration sulfate solution (the removed leach solution) to a lower concentration strip solution, hydrogen and/or hydronium cations (H<sub>3</sub>O+) are also transferred across the membrane, which helps to maintain electroneutrality. Zinc ions have much lower diffusivity and are selectively kept in the bleed.</p>
+      <p id="p-00084-en" num="0084">After treatment in the reagent recovery unit, the strip solution gains free acid and can then be returned to the reaction vessel as reconstituted leach solution. In some embodiments, a concentrated acid can be added to the reconstituted leach solution to help maintain the free acid concentration in the reaction vessel. In some embodiments, it may be desirable to filter the recovered leach solution prior to the recovered leach solution entering the dialysis unit.</p>
+      <heading id="h-00016-en" level="2">Solution Purification</heading>
+      <p id="p-00085-en" num="0085">Molecules and compounds can be extracted from the removed leach solution through various methods. This extraction can be performed before or after the removed leach solution is treated by other methods, such as dialysis. In some embodiments, purification of the removed leach solution can occur through cementation. Cementation is galvanic reduction using a less noble metal to aid in precipitating out a molecule or compound. In many cases, cementation is used to remove one or more impurities in a solution. Here, zinc dust can be used to cement out metals in the removed leach solution such as copper, lead, and cadmium.</p>
+      <p id="p-00086-en" num="0086">In some embodiments, the removed leach solution can be extracted, for example by solvent extraction. In these embodiments, solvent extraction can be used to help obtain a substantially pure solution of zinc sulfate. This can be accomplished by mixing the removed leach solution with an organic solvent, for example an organic solvent containing cationic extractants. In some embodiments the organic solvent can be kerosene and the extractant can be D2HEPA. Solvent extraction is liquid-liquid ion exchange. Ion exchange using resins can also be used to purify the solution.</p>
+      <p id="p-00087-en" num="0087">In some embodiments, iron is selectively purified from the removed leach solution. For example, iron can be selectively removed from the removed leach solution using precipitation, such as with a ferric solid compound. Iron can also be removed from solution via crystallization as an iron sulfate product.</p>
+      <heading id="h-00017-en" level="2">Product Recovery</heading>
+      <p id="p-00088-en" num="0088">Dissolved coating material can be recovered from the removed leach solution in various ways. In some embodiments, coating material can be recovered from the removed leach solution through cooling, crystallization, evaporation, or a combination thereof. In various embodiments, waste heat from a foundry may be redirected to aid in recovery of various products. In some embodiments, hydrogen gas evolved during dissolution of the coating material may be used to help recover product.</p>
+      <p id="p-00089-en" num="0089">In the case of decoating galvanized metals with sulfur containing acids, zinc sulfate hydrate compounds can be recovered from the solution by cooling crystallization, evaporative crystallization, drying which can produce a crystalline product or a granulated product. Other zinc compounds can be equally formed, dependent on the solutions matrix. Metallic zinc can be recovered via electrowinning to produce a cathode product.</p>
+      <p id="p-00090-en" num="0090">Granulated coating material product can be formed through various processes. In one embodiment, accretion is used to produce a granulated coating material product. In the case of acid treated galvanized metal, a granulated zinc sulfate may be formed that has a relatively uniform spheroid structure. Granulated products can also be obtained by methods involving a fluidized bed reactor, a spray drier, or other comparable technologies. For example, granulated zinc sulfate product can be formed in a disk pelletizer, rotating granulator, fluidized bed reactor, spray dry reactor or comparable granulation technology.</p>
+      <p id="p-00091-en" num="0091">In some embodiments, coating material or other compounds/molecules may be recovered by crystallization. For example, fractional crystallization can be used to obtain selectively in crystal product composition/purity.</p>
+      <p id="p-00092-en" num="0092">Hydrogen gas can be recovered from the reaction vessel as it is evolved during dissolution. In some cases, the reaction vessel may be configured to capture the gas. The hydrogen gas can be collected for later sale, or can be recycled in the process as a chemical reductant or burned for energy.</p>
+      <heading id="h-00018-en" level="2">Product Uses</heading>
+      <p id="p-00093-en" num="0093">The disclosed processes result in various product streams. For example, the disclosed process may result in compounds comprising coating material in liquid or solid form. The substrate metal, substantially free of coating material, is also produced. These two product streams may be sold to various industries. For example, in the case of zinc-coated galvanized steel, steel with the zinc layer removed can be used as a substitute for the industry standard steel scrap. For example, a ferrous product that has been decoated can be used as a feed material to steel foundries. The disclosed process may also be used to produce a zinc cathode or other zinc compound from decoating a zinc coated material. In some cases, dezincing may produce zinc carbonate or zinc oxide.</p>
+      <p id="p-00094-en" num="0094">In one embodiment, the disclosed processes may be used to produce nutrient supplements. For example, zinc may be used as a micro-nutrient for plants or animals, such as zinc sulfate heptahydrate or monohydrate or oxysulfate or oxide for use as a dietary supplement. In most embodiments, the disclosed process can be used to produce a zinc containing product wherein impurity concentrations are below levels that are permissible under U.S. Environmental Protection Agency (EPA) regulations, as shown below. Table 1 shows the maximum allowable impurities relative to the zinc concentration in the micro-nutrient product produced by a zinc bearing hazardous waste material. For example, every 1 wt % of zinc, a maximum of 1.4 ppm Cadmium is allowed. Therefore if a pure zinc sulfate monohydrate is formed which contains 35.5 wt % zinc, 35*1.4=49.7 ppm maximum of cadmium is allowed in the product.</p>
+      <p id="p-00095-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="left" />
+              <colspec colname="3" colwidth="70pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="5" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Max. Total</entry>
+                  <entry>Zinc Sulfate</entry>
+                  <entry>Zinc Sulfate</entry>
+                </row>
+                <row>
+                  <entry>Constituent</entry>
+                  <entry>Unit:</entry>
+                  <entry>Conc. Per 1 wt % Zn</entry>
+                  <entry>Monohydrate</entry>
+                  <entry>Heptahydrate</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="left" />
+              <colspec colname="3" colwidth="70pt" align="char" char="." />
+              <colspec colname="4" colwidth="42pt" align="char" char="." />
+              <colspec colname="5" colwidth="42pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Zn</entry>
+                  <entry>Wt %</entry>
+                  <entry>1</entry>
+                  <entry>35.5</entry>
+                  <entry>21.5</entry>
+                </row>
+                <row>
+                  <entry>Zn</entry>
+                  <entry>ppm</entry>
+                  <entry>10,000</entry>
+                  <entry>355,000</entry>
+                  <entry>215,000</entry>
+                </row>
+                <row>
+                  <entry>Arsenic</entry>
+                  <entry>ppm</entry>
+                  <entry>0.3</entry>
+                  <entry>10.7</entry>
+                  <entry>6.5</entry>
+                </row>
+                <row>
+                  <entry>Cadmium</entry>
+                  <entry>ppm</entry>
+                  <entry>1.4</entry>
+                  <entry>49.7</entry>
+                  <entry>30.1</entry>
+                </row>
+                <row>
+                  <entry>Chromium</entry>
+                  <entry>ppm</entry>
+                  <entry>0.6</entry>
+                  <entry>21.3</entry>
+                  <entry>12.9</entry>
+                </row>
+                <row>
+                  <entry>Lead</entry>
+                  <entry>ppm</entry>
+                  <entry>2.8</entry>
+                  <entry>93.4</entry>
+                  <entry>60.2</entry>
+                </row>
+                <row>
+                  <entry>Mecury</entry>
+                  <entry>ppm</entry>
+                  <entry>0.3</entry>
+                  <entry>10.7</entry>
+                  <entry>6.5</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00096-en" num="0095">The coated material may have another classification making a zinc sulfate fertilizer produced from it applicable to other standards.</p>
+      <p id="p-00097-en" num="0096">
+        <figref>FIG. 9</figref> is a flow diagram showing one embodiment of the disclosed method used to treat one metric tonne of galvanized scrap to produce a zinc-containing fertilizer and black, decoated scrap.</p>
+      <p id="p-00098-en" num="0097">While multiple embodiments are disclosed, still other embodiments of the present invention will become apparent to those skilled in the art from the following detailed description. As will be apparent, the invention is capable of modifications in various obvious aspects, all without departing from the spirit and scope of the present invention. Accordingly, the detailed description is to be regarded as illustrative in nature and not restrictive.</p>
+      <heading id="h-00019-en" level="1">EXAMPLES</heading>
+      <heading id="h-00020-en" level="1">Example 1</heading>
+      <heading id="h-00021-en" level="1">FIG. <b>3</b> (15% H<sub>2</sub>SO<sub>4 </sub>with Various [Zn])</heading>
+      <p id="p-00099-en" num="0098">The corrosion potential is monitored by making an electrical connection to the working electrode (which in this case is comprised of the zinc coated scrap) and hooking it in series to a voltmeter. When the corrosion potential plateaus it indicates completion of the zinc coating removal and an optimum residence time for the scrap in the electrolyte. Simultaneous to the electrochemical measurements, the rate of zinc dissolution has been monitored through the H2 evolution from the leaching process.</p>
+      <p id="p-00100-en" num="0099">
+        <figref>FIG. 3</figref> shows Corrosion potential and % completion of deleaching plotted against time.</p>
+      <p id="p-00101-en" num="0100">Judging from visual observations and <figref>FIG. 3</figref>, corrosion potential offers better resolution for determining the completion of coating removal, and hence when the scrap should be withdrawn from the leach solution electrolyte.</p>
+      <p id="p-00102-en" num="0101">As depicted in <figref>FIG. 3</figref>, the rate of zinc decoating follows generally an ‘S’ curve, which may be explained by the appearance of the steel substrate surface, and the disappearance of the zinc coating. Zinc has a higher hydrogen overpotential than steel. Therefore as steel is exposed, the rate of hydrogen reduction increases. This also explains the change in corrosion potential as the system shifts from a predominant Zn anodic half reaction to a Fe half reaction. It is proposed that the cathodic process of hydrogen reduction on the substrate surface be it zinc or steel, is the controlling step of the leaching process.</p>
+      <heading id="h-00022-en" level="1">Examples 2 and 3</heading>
+      <heading id="h-00023-en" level="1">FIGS. <b>4</b> (5-15% H<sub>2</sub>SO<sub>4</sub>) and <b>5</b></heading>
+      <p id="p-00103-en" num="0102">Experiments were conducted to examine the effect of H2SO4 concentration (<figref>FIG. 4</figref>) and zinc concentration (<figref>FIG. 5</figref>). Varying the zinc concentration in the leach solution had little effect on the leaching rate of the zinc coating. However, similar experiments showed that increasing the acid concentration reduces the scrap residence time greatly (<figref>FIG. 4</figref>). Zinc concentrations were experimented with to 150 g Zn/L, but saturation effects started being seen in salt rims on the glassware.</p>
+      <heading id="h-00024-en" level="1">Example 4</heading>
+      <heading id="h-00025-en" level="1">Corrosion Potential Bench-Scale Experiments</heading>
+      <p id="p-00104-en" num="0103">A bench scale leach reactor has been constructed to conduct experiments. The reactor has a capacity of 15 L of leach solution and is capable of leaching 5 kg loads of scrap. The scrap load is contained in a steel cage with pulses through the solution providing bed movement.</p>
+      <p id="p-00105-en" num="0104">Bench Scale operating parameters were chosen with consideration for a variety of factors. For example, initial tests indicated that acid concentration and temperature are factors contributing to the rate of decoating. However, in order to minimize the cost of performing bench scale tests, an ambient leach temperature (20° C.) was chosen. Additionally, in order to maximize leach capacity a high free acid concentration of 150 g H2SO4/L was chosen to avoid reactor material restrictions. A steady state zinc concentration of 100 g Zn/L was also chosen to reduce solution volume and avoid issues associated with saturation.</p>
+      <p id="p-00106-en" num="0105">The corrosion potential was monitored for each individual leach experiment. 4 leaches are shown in <figref>FIG. 6</figref>. Leaches <b>7</b>-<b>9</b> (blue, red, purple lines, which end at 9 min) had the same operating parameters and match each other very well, whereas leach <b>10</b> (green line extending beyond 9 min) had no agitation resulting in the longer time to plateau.</p>
+      <p id="p-00107-en" num="0106">The effect of agitation may aid in exposing fresh surfaces to the leach solution. Without agitation, some surfaces may be blocked from exposure to the leach solution by proximity to other surfaces. In some cases, symmetrical, nearly identical areas of zinc coating remained on some pieces of otherwise dezinced flat scrap, which suggested that blocking was occurring on adjacent pieces of scrap. This blocking effect may be greater when scraps have a flat or even geometry which allows for tight packing.</p>
+      <p id="p-00108-en" num="0107">The Free acid concentration was maintained at a steady state of 150 g H<sub>2</sub>SO<sub>4</sub>/L±5 g H<sub>2</sub>SO<sub>4</sub>/L. Acid consumption for each leach was stoichiometrically calculated to be 60 g of 96% H<sub>2</sub>SO<sub>4 </sub>(later experiments have increased this to 80 g to maintain free acid concentration). ORP hovers around an Eh value of 0 mV as it is thought that the predominant redox couple controlling this potential is H<sup>+</sup>/H<sub>2(aq)</sub>.</p>
+      <p id="p-00109-en" num="0108">After 38 leaches the bench scale solution concentration was approximately 100 g Zn/L. <figref>FIGS. 7 and 8</figref> show an increase in impurities in the leach solution up to a steady state concentration. Iron and aluminum were the main impurities present and may be explained by leaching of the iron substrate and the alloyed aluminum in galvanized coatings. Other impurities may come from the galvanized scrap, but since this is a low carbon scrap with nominal alloying metals (Cr=0.03 wt. % &amp; Ni=0.009 wt. %) it is believed that these impurities may be leaching from the 316 stainless steel basket rather than or in addition to the scrap.</p>
+      <p id="p-00110-en" num="0109">Other metals such as Calcium, Magnesium, and Sodium were present in the 10's ppm range. Arsenic, Boron, Barium, Beryllium, Cadmium, Thallium, Vanadium and Antimony were below detection levels.</p>
+      <p id="p-00111-en" num="0110">De-zinced scrap was left in a tray to air dry after each leach. Without additional washing, the scrap has a white powdered residue. Washing the de-zinced scrap removed the white powdered residue, and the washed, de-zinced scrap developed a coating of iron corrosion. The white powder is believed to be predominantly zinc sulfate.</p>
+      <heading id="h-00026-en" level="1">Example 5</heading>
+      <heading id="h-00027-en" level="1">FIG. <b>11</b> Minimization of Iron Dissolution from the Substrate Steel</heading>
+      <p id="p-00112-en" num="0111">Using a smaller scale setup at approximately 1/100th the scale of Example 3, iron dissolution has been minimized by keeping the decoating reaction at ambient temperature. As shown in <figref>FIG. 11</figref>, an increase in temperature is associated with increased iron dissolution.</p>
+      <p id="p-00113-en" num="0112">The corrosion potential has been used to minimize the dissolution of the substrate iron by separating the metal from the electrolyte solution upon completion of the decoating reaction. The level of iron dissolving using the Teflon coated basket run follows the same trend as the stainless steel basket. This would indicate that iron dissolution is chiefly coming from the scrap and not the reactor.</p>
+      <heading id="h-00028-en" level="1">Example 6</heading>
+      <heading id="h-00029-en" level="1">FIG. <b>12</b> Adjustment to Decoating Time Dependent on Coating Weight/Thickness</heading>
+      <p id="p-00114-en" num="0113">Using a smaller scale setup at approximately 1/100th the scale of Example 3, the decoating time increases with increasing coating weigh/thickness. As shown in <figref>FIG. 12</figref>, the decoating time is adjusted accordingly via monitoring of the corrosion potential to ensure the decoating reaction has reached completion.</p>
+      <heading id="h-00030-en" level="1">Example 7</heading>
+      <heading id="h-00031-en" level="1">FIG. <b>13</b> Increasing the Decoating Rate by Exposing Substrate Surface to the Electrolyte</heading>
+      <p id="p-00115-en" num="0114">The exposure of the substrate beneath the coating to the electrolyte increases the decoating rate. These experiments, shown in <figref>FIG. 13</figref>, are galvanic coupling experiments. Experiments involved corrosion coupons with a coating thickness of G90, being leached twice in in 150 g H<sub>2</sub>SO<sub>4</sub>/L acid solution at 20° C. <figref>FIG. 13</figref> shows the effect of exposed steel surface on the leaching rate of the zinc coating. The zinc coatings are of identical size and have a near equal mass loss after leaching. Half of the surface of the coupon is isolated from the acid solution by masking its surface with electrolytic tape. The second leach proceeded at a faster rate than the first. Galvanic coupling, or galvanic corrosion, is the term given to accelerated corrosion of the more electro-active metal when two dissimilar metals are in electrical contact. This is the case for galvanized steel, and in fact is the method in which the substrate steel is protected. Another facet of the zinc-steel system is the large difference in exchange current densities between steel and zinc. This represents the intrinsic electron transfer rate between the electrolyte and is governed by the metals work function, free energies of adsorbed hydrogen bond formations, reactant surface potentials and solvent (water) dipoles adsorption characteristics.</p>
+      <p id="p-00116-en" num="0115">In <figref>FIG. 13</figref> it is shown that masking the coated metal and half of the coating in two separate leaches one after another, with the masking tape removed for the second leach, that by exposing the iron surface to the electrolyte in the second leach the rate of decoating is increased. There is an effect of iron adjacency to the zinc, with greater iron-zinc coating adjacency leading to greater decoating rates. Where the substrate has a lower hydrogen overpotential allowing for a faster decoating reaction to occur. Where the substrate has a lower work function allowing for a faster hydrogen reduction reaction to occur. Where the increased rate of the hydrogen reduction allows for an overall increased decoating rate.</p>
+      <heading id="h-00032-en" level="1">Example 8</heading>
+      <heading id="h-00033-en" level="1">FIGS. <b>14</b>A and <b>14</b>B Mechanism for Exposing Substrate Surface to the Electrolyte by Shredding and Use of Coated Basket</heading>
+      <p id="p-00117-en" num="0116">By shredding coated metal it is possible to increase the overall exposed iron substrate surface and iron-zinc coating adjacency. As shown in <figref>FIG. 14A</figref>, the increase substrate surface that is exposed to the electrolyte results in an increased decoating rate. Shredding produces scrap of various size: Particle Size (Inches), Weight (Kg), Percent (%): −⅞″+½″, 5601.1 Kg, 54.3&amp;; −½″+⅜″, 3142.6 Kg, 30.5%; and −⅜″ 1570.1 Kg, 15.2%. The leach was conducted on the −½″+⅜″ size fraction. The shredding deforms the galvanized surface coating and exposes much more steel to the leach solution. The electrokinetic effect of this increased iron surface area is to allow increased hydrogen evolution.</p>
+      <p id="p-00118-en" num="0117">
+        <figref>FIG. 14B</figref> shows the effect of using a coated basket. These experiments led to the unexpected finding that the dezincing reaction rate in a coated basket is higher than in an uncoated basket. Here the uncoated basket is comprised of stainless steel and the coating is a TEFLON coating of EFTE.</p>
+      <heading id="h-00034-en" level="1">Example 9</heading>
+      <heading id="h-00035-en" level="1">FIG. <b>15</b> Recovery of Acid from the Leach Solution</heading>
+      <p id="p-00119-en" num="0118">The leach solution is passed across AFN anionic membranes using diffusion dialysis. This recovers a high zinc sulfate—low acid solution to progress to zinc product recovery, and a high zinc sulfate—low acid solution to return to the decoating leach.</p>
+      <p id="p-00120-en" num="0119">All references disclosed herein, whether patent or non-patent, are hereby incorporated by reference as if each was included at its citation, in its entirety.</p>
+      <p id="p-00121-en" num="0120">The above specification, examples and data provide a complete description of the structure and use of exemplary embodiments of the invention as defined in the claims. Although various embodiments of the claimed invention have been described above with a certain degree of particularity, or with reference to one or more individual embodiments, those skilled in the art could make numerous alterations to the disclosed embodiments without departing from the spirit or scope of the claimed invention. Other embodiments are therefore contemplated. It is intended that all matter contained in the above description and shown in the accompanying drawings shall be interpreted as illustrative only of particular embodiments and not limiting. Changes in detail or structure may be made without departing from the basic elements of the invention as defined in the following claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>We claim:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A system for decoating coated metals comprising:
+<claim-text>a reaction vessel, comprising a tank with a plurality of inlets and outlets; the tank in fluid communication with</claim-text><claim-text>a reagent recovery unit, wherein the reagent recovery unit comprises an ionic dialysis membrane;</claim-text><claim-text>a volt meter;</claim-text><claim-text>a reference electrode; and</claim-text><claim-text>a lead for working electrode.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The system of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the metal comprises iron and the coating comprises zinc.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The system of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the metal is steel.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The system of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the reference electrode is an Ag/AgCl electrode.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The system of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the working electrode is a conductive containment cage of corrosion resistant metal.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The system of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the containment cage is in electrical communication with a scrap metal positioned within the cage.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The system of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the working electrode is positioned within a containment cage.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The system of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the containment cage comprises a corrosion resistant metal.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The system of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the corrosion resistant metal is coated.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The system of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the corrosion resistant metal is coated with a fluorine based plastic.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The system of <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the fluorine based plastic is ethylene tetrafluoroethylene, ETFE.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en" independent="true">
+      <claim-text>
+        <b>12</b>. A method for decoating coated metals comprising:
+<claim-text>placing a scrap metal with a coating layer in containment cage;</claim-text><claim-text>immersing the coated scrap in an acidic leach solution in a reaction vessel;</claim-text><claim-text>allowing the coating layer to react with the leach solution and dissolve into the leach solution;</claim-text><claim-text>placing a reference electrode in the leach solution;</claim-text><claim-text>measuring a corrosion potential by connecting at least one coated scrap to a volt meter and the reference electrode to the volt meter;</claim-text><claim-text>removing a volume of leach solution from the reaction vessel containing dissolved coating material;</claim-text><claim-text>dialyzing the volume of leach solution removed from the reaction vessel against a low ionic strength strip solution;</claim-text><claim-text>allowing an acid to enter the strip solution;</claim-text><claim-text>adding a volume of the strip solution containing the acid to the reaction vessel;</claim-text><claim-text>stopping the reaction when the measured potential plateaus; thereby</claim-text><claim-text>decoating a coated metal.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the coating is zinc.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the metal is steel.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein the acid is sulfuric acid.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the coated scrap is shredded to create coated scrap pieces an average dimension of less than about one-half inch.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the cage is electrically conductive.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the cage is comprised of a coated metal, and a working electrode is contained within the cage in contact with at least one coated scrap.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein the cage is comprised of a metal coated with a fluorine based plastic.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The method of <claim-ref idref="clm-00019-en">claim 19</claim-ref>, wherein the fluorine based plastic is ethylene tetrafluoroethylene, ETFE. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150259766A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150259766A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150259766A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259766A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150259766A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259766A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150259766A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259766A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150259766A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259766A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150259766A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259766A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150259766A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259766A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150259766A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259766A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150259766A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259766A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150259766A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259766A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150259766A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259766A1-20150917-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150259766A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259766A1-20150917-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150259766A1_00013.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150259766A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150259766A1.PDF" type="pdf" size="1293629" pages="21" />
+</lexisnexis-patent-document>

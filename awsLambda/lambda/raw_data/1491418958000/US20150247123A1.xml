@@ -1,0 +1,1615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247123A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021456" date-changed="20151226" time-changed="091348">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140194">
+        <country>US</country>
+        <doc-number>20150247123</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14425136</doc-number>
+        <date>20130903</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="regional">
+        <country>EP</country>
+        <doc-number>12182747</doc-number>
+        <date>20120903</date>
+      </priority-claim>
+      <priority-claim sequence="2" kind="regional">
+        <country>EP</country>
+        <doc-number>12198820</doc-number>
+        <date>20121221</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C12N   5/071       20100101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20100101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>5</main-group>
+        <subgroup>071</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C12N   5/0676      20130101 FI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>5</main-group>
+        <subgroup>0676</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C12N   5/0678      20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>5</main-group>
+        <subgroup>0678</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C12N2501/115       20130101 LA20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2501</main-group>
+        <subgroup>115</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C12N2501/117       20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2501</main-group>
+        <subgroup>117</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C12N2501/119       20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2501</main-group>
+        <subgroup>119</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C12N2501/155       20130101 LA20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2501</main-group>
+        <subgroup>155</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C12N2501/16        20130101 LA20131028BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2501</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20131028</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C12N2501/385       20130101 LA20131028BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2501</main-group>
+        <subgroup>385</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20131028</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C12N2501/41        20130101 LA20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2501</main-group>
+        <subgroup>41</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>C12N2501/415       20130101 LA20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2501</main-group>
+        <subgroup>415</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>C12N2501/60        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2501</main-group>
+        <subgroup>60</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>C12N2501/727       20130101 LA20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2501</main-group>
+        <subgroup>727</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>C12N2501/999       20130101 LA20131028BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2501</main-group>
+        <subgroup>999</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20131028</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>C12N2503/02        20130101 LA20131028BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2503</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20131028</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>C12N2506/02        20130101 LA20131028BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2506</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20131028</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="16">
+        <text>C12N2506/45        20130101 LA20131028BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2506</main-group>
+        <subgroup>45</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20131028</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">16</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">Generation of pancreatic endoderm from Pluripotent Stem cells using small molecules</invention-title>
+    <related-documents date-changed="20150903">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61697970</doc-number>
+          <date>20120907</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Novo Nordisk A/S</orgname>
+            <address>
+              <city>Bagsvaerd</city>
+              <country>DK</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>DK</country>
+          </residence>
+        </applicant>
+        <applicant sequence="2" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Cellectis SA</orgname>
+            <address>
+              <city>Paris</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>FR</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Ekberg</last-name>
+            <first-name>Jenny</first-name>
+            <address>
+              <city>Malmoe</city>
+              <country>SE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hansson</last-name>
+            <first-name>Mattias</first-name>
+            <address>
+              <city>Malmoe</city>
+              <country>SE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Doehn</last-name>
+            <first-name>Ulrik</first-name>
+            <address>
+              <city>Veskoe</city>
+              <country>DK</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hess</last-name>
+            <first-name>Katja</first-name>
+            <address>
+              <city>Heidelberg</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Funa</last-name>
+            <first-name>Nina</first-name>
+            <address>
+              <city>Lund</city>
+              <country>SE</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>EP13068188</doc-number>
+        <date>20130903</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014033322</doc-number>
+        <date>20140306</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150928">
+      <main-family family-id="173463274">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247123</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130903</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173463273">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2893000</doc-number>
+            <kind>A1</kind>
+            <date>20150715</date>
+          </document-id>
+          <application-date>
+            <date>20130903</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247123</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130903</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104903440</doc-number>
+            <kind>A</kind>
+            <date>20150909</date>
+          </document-id>
+          <application-date>
+            <date>20130903</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015528289</doc-number>
+            <kind>A</kind>
+            <date>20150928</date>
+          </document-id>
+          <application-date>
+            <date>20130903</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014033322</doc-number>
+            <kind>A1</kind>
+            <date>20140306</date>
+          </document-id>
+          <application-date>
+            <date>20130903</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A method of producing pancreatic cells or pancreatic cell precursors expressing at least 5% PDX1/NKX6.1 double positive, comprising exposing definitive endoderm cells to an effective amount of one or more small molecules, to differentiate the human definitive endoderm cells into the pancreatic cells or pancreatic cell precursors. The present invention also relates to pancreatic endoderm cells produced by said methods and uses of said pancreatic endoderm cells.</p>
+  </abstract>
+  <legal-data date-changed="20151226">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150602</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247123A1</docdb-publication-number>
+      <docdb-application-id>444210147</docdb-application-id>
+      <new-owner>NOVO NORDISK A/S, DENMARK</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:EKBERG, JENNY;HANSSON, MATTIAS;DOEHN, ULRIK;AND OTHERS;SIGNING DATES FROM 20150325 TO 20150508;REEL/FRAME:035765/0626</free-text-description>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20151007</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247123A1</docdb-publication-number>
+      <docdb-application-id>444210147</docdb-application-id>
+      <new-owner>CELLECTIS SA, FRANCE</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:EKBERG, JENNY;HANSSON, MATTIAS;DOEHN, ULRIK;AND OTHERS;SIGNING DATES FROM 20150818 TO 20150823;REEL/FRAME:036750/0059</free-text-description>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20151007</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247123A1</docdb-publication-number>
+      <docdb-application-id>444210147</docdb-application-id>
+      <new-owner>NOVO NORDISK A/S, DENMARK</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:EKBERG, JENNY;HANSSON, MATTIAS;DOEHN, ULRIK;AND OTHERS;SIGNING DATES FROM 20150818 TO 20150823;REEL/FRAME:036749/0785</free-text-description>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20151118</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247123A1</docdb-publication-number>
+      <docdb-application-id>444210147</docdb-application-id>
+      <new-owner>TAKARA BIO EUROPE AB, SWEDEN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:CELLECTIS SA;REEL/FRAME:037071/0840</free-text-description>
+      <effective-date>
+        <date>20150416</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to methods of generating pancreatic endoderm from pluripotent stem (PS) cells, such as human definitive endoderm.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">Beta cell transplantation potentially provides the ultimate cure for type I diabetes. However, the limited availability of donor beta cells constrains the use of this treatment as a clinical therapy. Pluripotent stem cells can proliferate infinitely and differentiate into many cell types; thus, PS cells are a promising source for beta cells. However, before PS cells can be used to treat diabetes, they need to be efficiently and reproducibly differentiated to pancreatic cells.</p>
+      <p id="p-00003-en" num="0003">During vertebrate embryonic development, a pluripotent cell gives rise to the three germ layers; ectoderm, mesoderm and endoderm. Induction of definitive endoderm (DE) is the first step towards formation of endoderm derived tissues. Generation of pancreatic endoderm (PE) from DE cells is necessary for the generation of insulin-producing beta cells. PE cells with the potential to become endocrine progenitors (EP) are characterized by co-expression of two important transcription factors, PDX1 and NKX6.1.</p>
+      <p id="p-00004-en" num="0004">Stepwise in vitro differentiation protocols have been established for generating pancreatic cells from PS cells. These protocols generally mimic the major events of pancreatic development, which includes several stages such as formation of the DE which co-expresses SOX17 and FOXA2, primitive gut, posterior foregut, PE, EP and ultimately the mature beta cells. To date, efficient DE differentiation of hES cells has been achieved by activin A treatment. The next major step in generating pancreatic beta cells is to generate PE that co-expresses PDX1 and NKX6.1. Several groups have developed in vitro protocols that can differentiate PS cells into DE and PE, however they are only able to generate a modest fraction of NKX6.1/PDX1 double positive (db+ve) cells, and importantly none of them are able to generate fully mature beta cells in vitro (Cai et al. (2010); D'Amour et al. (2006); Kunisada et al. (2012); Schulz et al. (2012); Zhang et al. (2009); Amen et al. (2010)).</p>
+      <heading id="h-00003-en" level="1">SUMMARY</heading>
+      <p id="p-00005-en" num="0005">The present invention relates to a method of producing pancreatic cells or pancreatic cell precursors where at least 5% of the cells co-express PDX1 and NKX6.1, comprising exposing definitive endoderm (DE) cells to an effective amount of at least one compound of the group consisting of: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>a. BMP inhibitor LDN-193189 (listed in table 1)</li><li>b. Kinase inhibitors (listed in tables 1 and 2)</li><li>c. Retinoic acid receptor agonists (listed in table 2) <br /> to differentiate the human DE cells into the pancreatic cells or pancreatic cell precursors. </li></ul></li></ul></p>
+      <p id="p-00006-en" num="0009">The present invention further relates to a method for producing pancreatic cells or pancreatic cell precursors where at least 5% of the cells co-express PDX1 and NKX6.1, comprising exposing DE cells to an effective amount of at least one compound of the group consisting of: <ul id="ul-00003-en" list-style="none"><li><ul id="ul-00004-en" list-style="none"><li>a. BMP inhibitor LDN-193189 (listed in table 1)</li><li>b. isomers of 1,9-pyrazoloanthrone with or without N-alkylation (listed in table 1 and 2)</li><li>c. Retinoic acid receptor agonists (listed in table 2) <br /> to differentiate the human DE cells into the pancreatic or pancreatic cell precursors. </li></ul></li></ul></p>
+      <p id="p-00007-en" num="0013">The present invention further relates to a method for producing pancreatic cells or pancreatic cell precursors where at least 5% of the cells co-express PDX1 and NKX6.1, comprising exposing definitive endoderm cells to an effective amount of at least one compound of the group consisting of: <ul id="ul-00005-en" list-style="none"><li><ul id="ul-00006-en" list-style="none"><li>a. BMP inhibitor LDN-193189</li><li>b. JNK inhibitor II</li><li>c. AM580 <br /> to differentiate the human DE cells into the pancreatic or pancreatic cell precursors. </li></ul></li></ul></p>
+      <p id="p-00008-en" num="0017">The present invention further relates to a method for generating pancreatic cells or pancreatic cell precursors where at least 5% of the cells co-express PDX1 and NKX6.1, comprising exposing definitive endoderm cells to an effective amount of the BMP inhibitor LDN-193189, to differentiate human DE cells into pancreatic or pancreatic cell precursors. The present invention further relates to a method for generating pancreatic cells or pancreatic cell precursors where at least 5% of the cells co-express PDX1 and NKX6.1, comprising exposing DE cells to an effective amount of the BMP inhibitor LDN-193189, and subsequent exposure to one of the following molecules: <ul id="ul-00007-en" list-style="none"><li><ul id="ul-00008-en" list-style="none"><li>a. Wnt inhibitor IWP2</li><li>b. Hedgehog inhibitor Cyclopamine (Cyc) <br /> to differentiate human DE cells into pancreatic or pancreatic cell precursors. </li></ul></li></ul></p>
+      <p id="p-00009-en" num="0020">The present invention further relates to a method for generating pancreatic cells or pancreatic cell precursors where at least 5% of the cells co-express PDX1 and NKX6.1, comprising exposing DE cells to an effective amount of the BMP inhibitor LDN-193189, and subsequent exposure to a combination of JNK inhibitor II, retinoic acid or a retinoic acid derivative, bFGF and one of the following molecules: <ul id="ul-00009-en" list-style="none"><li><ul id="ul-00010-en" list-style="none"><li>a. Wnt inhibitor IWP2</li><li>b. Hedgehog inhibitor Cyclopamine <br /> to differentiate human DE cells into pancreatic or pancreatic cell precursors. </li></ul></li></ul></p>
+      <p id="p-00010-en" num="0023">The present invention further relates to a method for generating pancreatic cells or pancreatic cell precursors where at least 5% of the cells co-express PDX1 and NKX6.1, comprising exposing DE cells to an effective amount of the BMP inhibitor LDN-193189, and subsequent exposure to a combination of JNK inhibitor II in combination with retinoic acid or a retinoic acid derivative, bFGF and LDN-193189 to differentiate DE stem cells into pancreatic or pancreatic cell precursors.</p>
+      <p id="p-00011-en" num="0024">In one embodiment of the present invention, any one of the retinoic acid receptor agonists or kinase inhibitors may be in combination with bFGF.</p>
+      <p id="p-00012-en" num="0025">The present invention further relates to pancreatic cells or pancreatic cell precursors obtainable by the methods of the present invention.</p>
+      <p id="p-00013-en" num="0026">The present invention relates to a pancreatic cell or pancreatic cell precursor produced by exposing a human pluripotent stem cell to at least one compound listed in tables 1 and 2.</p>
+      <p id="p-00014-en" num="0027">The present invention relates to use of any one of the compounds of tables 1 and 2, to induce pancreatic cells or pancreatic cell precursors from stem cells.</p>
+      <p id="p-00015-en" num="0028">The present invention relates to use of LDN-193189 to induce pancreatic cells or pancreatic cell precursors from stem cells.</p>
+      <p id="p-00016-en" num="0029">The present invention relates to use of LDN-193189 followed by Cyclopamine or IWP2, to induce pancreatic cells or pancreatic cell precursors from stem cells.</p>
+      <p id="p-00017-en" num="0030">The present invention takes an alternative approach to improve the efficiency of differentiating human PS cells toward mature beta cells, by providing a method to increase the fraction of NKX6.1/PDX1 double positive cells, a hallmark for PE cells committed to an endocrine cell fate.</p>
+      <p id="p-00018-en" num="0031">In one aspect, the invention provides an improved pancreatic cell population, i.e. PE with increased fraction of NKX6.1/PDX1 double positive cells.</p>
+      <p id="p-00019-en" num="0032">Furthermore, the present invention provides a more homogenous pancreatic cell population, which is important for the further development of these cells towards the endocrine lineage.</p>
+      <p id="p-00020-en" num="0033">The present invention also provides a more synchronised pancreatic population to get to the next stage.</p>
+      <p id="p-00021-en" num="0034">The present invention may also solve further problems that will be apparent from the disclosure of the exemplary embodiments.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF DRAWINGS</heading>
+      <p id="p-00022-en" num="0035">
+        <figref>FIG. 1</figref> shows the PE screening approach—also referred to as the library screening approach—using small molecule libraries. Pluripotent stem (PS) cells were differentiated into definitive endoderm (DE) according to the DE protocol (see general methods) and seeded in 96 well plates for screening. The pancreatic endoderm (PE) screen was divided into an early and a late phase. In the early phase compounds were added on top of a published bFGF based protocol (Amen et al., 2010, cf. also WO/2010/136583) for the first seven days of PE differentiation and then continued for another six days without the compounds. In the late phase compounds were only added on top of the bFGF based protocol for the last six days.</p>
+      <p id="p-00023-en" num="0036">
+        <figref>FIG. 2</figref> shows early phase hits for the library screening approach. Definitive endoderm cells from human induced pluripotent stem cells (hiPSC) (black) or hESC (white) were seeded in 96 well optical plates and differentiated into pancreatic endoderm using a 14 day protocol based on bFGF. Compounds were added on top of the bFGF based protocol for the first seven out of 14 days and analysed for NKX6.1/PDX1 double positive cells using the InCell analyzer 2000 (GE Healthcare). The graph shows the % effect of the fraction of NKX6.1/PDX1 double positive cells compared to the Benchmark protocol.</p>
+      <p id="p-00024-en" num="0037">
+        <figref>FIG. 3</figref> shows late phase hits for the library screening approach. Definitive endoderm cells from hiPSC (black) or hESC (white) were seeded in 96 well optical plates and differentiated into pancreatic endoderm using a 14 day protocol based on bFGF. Compounds were added on top of the bFGF based protocol for the last six days and analysed for NKX6.1/PDX1 double positive cells using the InCell analyzer 2000 (GE Healthcare). The graph shows the % effect of the fraction of NKX6.1/PDX1 double positive cells compared to the Benchmark protocol.</p>
+      <p id="p-00025-en" num="0038">
+        <figref>FIG. 4</figref> shows a second, candidate based PE screening approach. Pluripotent stem (PS) cells were differentiated into definitive endoderm according to DE protocol (See general methods) and seeded in 96 well plates for screening. The pancreatic endoderm screen was divided into two parts. In screen 1, compounds were added to a basal medium (RPMI1640+0.1% PEST+12% KOSR) the first eight days of PE differentiation. Compounds were tested in 4 different time windows having 2 day increments and then cells were left to continue differentiation for another six days in the bFGF based published protocol (Amen et al., 2010). In screen 2, cells were first differentiated for 4 days with the hit compounds from screen 1, then screening compounds were added the last 10 days to basal medium.</p>
+      <p id="p-00026-en" num="0039">
+        <figref>FIG. 5</figref> shows hits from the candidate screen 1 and 2 compared to cells differentiated according to Amen et al, 2010 which was used as a benchmark protocol running in parallel with every screen. In screen 1, one hit compound was identified (LDN-193189) and was found to be most effective when added for the first 4 days followed by 4 days basal medium. For screen 2, two hit compounds were identified (Cyclopamine and IWP-2) when cells were first exposed to the hit compound from screen 1 for 4 days and hit compounds from screen 2 were added for the last 10 days of differentiation. The graph shows the % effect of the fraction of NKX6.1/PDX1 double positive cells compared to the Benchmark protocol (Bars for hiPSC in black and hESC in white).</p>
+      <p id="p-00027-en" num="0040">
+        <figref>FIG. 6</figref> shows the advantageous effect on the amount of PDX1/NKX6.1 double positive cells by the combination of hit compounds found in the two individual screens (small molecule libraries and candidate approach) compared to the benchmark protocol (Ameri et al. (2010)). Bars for hiPSC in black and hESC in white.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">LIST OF ABBREVIATIONS</heading>
+      <p id="p-00028-en" num="0041">+ve: positive <br /> bFGF: basic Fibroblast Growth Factor (FGF) (also known as FGF2) </p>
+      <heading id="h-00006-en" level="2">Cyc: Cyclopamine</heading>
+      <p id="p-00029-en" num="0042">db: double positive</p>
+      <heading id="h-00007-en" level="2">DE: Definitive Endoderm</heading>
+      <p id="p-00030-en" num="0043">hBS: human Blastocyst derived Stem <br /> hBSC; human Blastocyst-derived Stem Cells <br /> hES: human Embryonic Stem <br /> hESC: human Embryonic Stem Cells <br /> hiPSC: human induced Pluripotent Stem Cells <br /> hPSC: human Pluripotent Stem Cells </p>
+      <heading id="h-00008-en" level="2">KOSR: Knock-out Serum Replacement</heading>
+      <p id="p-00031-en" num="0044">NKX6.1: NK6 homeobox 1 <br /> PDX1: Pancreatic and duodenal homeobox 1 </p>
+      <heading id="h-00009-en" level="2">PEST: Penicillin Streptomycin</heading>
+      <heading id="h-00010-en" level="2">PS: Pluripotent Stem</heading>
+      <heading id="h-00011-en" level="2">Rockout: Rho Kinase Inhibitor III</heading>
+      <heading id="h-00012-en" level="2">RT: Room Temperature</heading>
+      <heading id="h-00013-en" level="1">DESCRIPTION</heading>
+      <p id="p-00032-en" num="0045">The present invention related to methods of generating pancreatic endoderm from stem cells, such as human definitive endoderm cells and induced pluripotent stem cells.</p>
+      <p id="p-00033-en" num="0046">The present invention takes an alternative approach to improve the efficiency of differentiating human PS cells toward mature beta cells, by providing a method to improve the percentage of NKX6.1/PDX1 double positive cells, which are markers for a PE cell population, one of the cell stages necessary to reach endocrine cell populations. Furthermore, the present invention provides a more homogenous and synchronised pancreatic cell population, which is important for the further development of these cells towards the endocrine lineage.</p>
+      <p id="p-00034-en" num="0047">The present invention may also solve further problems that will be apparent from the disclosure of the exemplary embodiments.</p>
+      <p id="p-00035-en" num="0048">In one embodiment, the pancreatic endocrine cells obtainable by the method according to the invention are insulin producing cells, optionally together with cells differentiated towards glucagon, somatostatin, pancreatic polypeptide, and/or ghrelin producing cells. As used herein, “insulin producing cells” refers to cells that produce and store or secrete detectable amounts of insulin. “Insulin producing cells” can be individual cells or collections of cells.</p>
+      <p id="p-00036-en" num="0049">In another embodiment, the cell population comprising pancreatic cells is obtained from a somatic cell population. In some aspects the somatic cell population has been induced to de-differentiate into an embryonic-like stem (ES, e.g., a pluripotent) cell. Such de-differentiated cells are also termed induced pluripotent stem cells (iPSC).</p>
+      <p id="p-00037-en" num="0050">In another embodiment, the cell population comprising pancreatic cells is obtained from embryonic stem (ES, e.g., pluripotent) cells. In some aspects the cell population comprising pancreatic cells is pluripotent cells such as ES like-cells.</p>
+      <p id="p-00038-en" num="0051">In another embodiment, the cell population comprising pancreatic cells is embryonic differentiated stem (ES or pluripotent) cells. Differentiation takes place in embryoid bodies and/or in monolayer cell cultures or a combination thereof.</p>
+      <p id="p-00039-en" num="0052">In another embodiment, the cell population is a population of stem cells. In some aspects the cell population is a population of stem cells differentiated to the pancreatic endocrine lineage.</p>
+      <p id="p-00040-en" num="0053">Stem cells are undifferentiated cells defined by their ability at the single cell level to both self-renew and differentiate to produce progeny cells, including self-renewing progenitors, non-renewing progenitors, and terminally differentiated cells. Stem cells are also characterized by their ability to differentiate in vitro into functional cells of various cell lineages from multiple germ layers (endoderm, mesoderm and ectoderm), as well as to give rise to tissues of multiple germ layers following transplantation and to contribute substantially to most, if not all, tissues following injection into blastocysts.</p>
+      <p id="p-00041-en" num="0054">Stem cells are classified by their developmental potential as: (1) totipotent, meaning able to give rise to all embryonic and extraembryonic cell types; (2) pluripotent, meaning able to give rise to all embryonic cell types; (3) multi-potent, meaning able to give rise to a subset of cell lineages, but all within a particular tissue, organ, or physiological system (for example, hematopoietic stem cells (HSC) can produce progeny that include HSC (self-renewal), blood cell restricted oligopotent progenitors and all cell types and elements (e.g., platelets) that are normal components of the blood); (4) oligopotent, meaning able to give rise to a more restricted subset of cell lineages than multi-potent stem cells; and (5) unipotent, meaning able to give rise to a single cell lineage (e.g., spermatogenic stem cells).</p>
+      <p id="p-00042-en" num="0055">A protocol for obtaining pancreatic cells from stem cells is exemplified by, but not limited to, the protocols described in D'Amour, K. A. et al. (2006); Jiang, J. et al. (2007); Kroon, E. et al. (2008).</p>
+      <p id="p-00043-en" num="0056">A protocol for obtaining pancreatic cells from somatic cells or somatic cells induced to de-differentiate into pluripotent cells such as ES like-cells is exemplified by, but not limited to, the protocols described in Aoi, T. et al. (2008); D'Amour, K. A. et al. (2006); Jiang, J. et al. (2007); Kroon, E. et al. (2008); Takahashi, K. et al. (2007); Takahashi, K., and Yamanaka, S. (2006) and Wernig, M. et al. (2007).</p>
+      <p id="p-00044-en" num="0057">As used herein “differentiate” or “differentiation” refers to a process where cells progress from an undifferentiated state to a differentiated state, from an immature state to a less immature state or from an immature state to a mature state. For example, early undifferentiated embryonic pancreatic cells are able to proliferate and express characteristics markers, like PDX1, NKX6.1, and PTF1a. Mature or differentiated pancreatic cells do not proliferate and do secrete high levels of pancreatic endocrine hormones or digestive enzymes. E.g., fully differentiated beta cells secrete insulin at high levels in response to glucose. Changes in cell interaction and maturation occur as cells lose markers of undifferentiated cells or gain markers of differentiated cells. Loss or gain of a single marker can indicate that a cell has “matured or fully differentiated.” The term “differentiation factor” refers to a compound added to pancreatic cells to enhance their differentiation to mature endocrine cells also containing insulin producing beta cells. Exemplary differentiation factors include hepatocyte growth factor, keratinocyte growth factor, exendin-4, basic fibroblast growth factor, insulin-like growth factor-1, nerve growth factor, epidermal growth factor platelet-derived growth factor, and glucagon-like peptide 1. In some aspects differentiation of the cells comprises culturing the cells in a medium comprising one or more differentiation factors.</p>
+      <p id="p-00045-en" num="0058">As used herein, “human pluripotent stem cells” (hPSC) refers to cells that may be derived from any source and that are capable, under appropriate conditions, of producing human progeny of different cell types that are derivatives of all of the 3 germinal layers (endoderm, mesoderm, and ectoderm). hPSC may have the ability to form a teratoma in 8-12 week old SCID mice and/or the ability to form identifiable cells of all three germ layers in tissue culture. Included in the definition of human pluripotent stem cells are embryonic cells of various types including human blastocyst derived stem (hBS) cells in 30 literature often denoted as human embryonic stem (hES) cells, (see, e.g., Thomson et al. (1998), Heins et al. (2004), as well as induced pluripotent stem cells (see, e.g. Yu et al. (2007); Takahashi et al. (2007)). The various methods and other embodiments described herein may require or utilise hPSC from a variety of sources. For example, hPSC suitable for use may be obtained from developing embryos. Additionally or alternatively, suitable hPSC may be obtained from established cell lines and/or human induced pluripotent stem (hiPS) cells.</p>
+      <p id="p-00046-en" num="0059">As used herein “hiPSC” refers to human induced pluripotent stem cells.</p>
+      <p id="p-00047-en" num="0060">ES cell lines can also be derived from single blastomeres without the destruction of ex utero embryos and without affecting the clinical outcome (Chung et al. (2006) and Klimanskaya et al. (2006)).</p>
+      <p id="p-00048-en" num="0061">As used herein, the term “blastocyst-derived stem cell” is denoted BS cell, and the human form is termed “hBS cells”. In literature the cells are often referred to as embryonic stem cells, and more specifically human embryonic stem cells (hESC). The pluripotent stem cells used in the present invention can thus be embryonic stem cells prepared from blastocysts, as described in e.g. WO 03/055992 and WO 2007/042225, or be commercially available hBS cells or cell lines. However, it is further envisaged that any human pluripotent stem cell can be used in the present invention, including differentiated adult cells which are reprogrammed to pluripotent cells by e.g. the treating adult cells with certain transcription factors, such as OCT4, SOX2, NANOG, and LIN28 as disclosed in Yu, et al. (2007); Takahashi et al. (2007) and Yu et al. (2009).</p>
+      <p id="p-00049-en" num="0062">As used herein JNK inhibitor II includes isomers or tautomers of 1,9-pyrazoloanthrone with or without N-alkylation. Where 1,9-pyrazoloanthrone can be defined as “SMILES: c1ccc2c(c1)-c3c4c(cccc4[nH]n3)C2=O” or “1,6-dihydrodibenzo[cd,g]indazol-6-one”.</p>
+      <p id="p-00050-en" num="0063">DEF medium or DEF-CS medium/system is a defined balanced culture medium for the establishment and propagation of human pluripotent stem cells, DEF-CS medium/system.</p>
+      <heading id="h-00014-en" level="1">EMBODIMENTS OF THE INVENTION</heading>
+      <p id="p-00051-en" num="0000">
+        <ul id="ul-00011-en" list-style="none">
+          <li>1. A method of producing pancreatic cells or pancreatic cell precursors where at least 5% of the cells co-express PDX1 and NKX6.1, comprising exposing embryonic stem cells to an effective amount of at least one compound of the group consisting of:     <ul id="ul-00012-en" list-style="none"><li>a. BMP inhibitors</li><li>b. kinase inhibitors</li><li>c. retinoic acid receptor agonists</li><li>to differentiate the human embryonic stem cells into the pancreatic cells or pancreatic cell precursors.</li></ul></li>
+          <li>2. The method of embodiment 1, wherein said compounds are listed in tables 1 or 2.</li>
+          <li>3. The method of embodiments 1 or 2, wherein the kinase inhibitor is an isomer of 1,9-pyrazoloanthrone with or without N-alkylation.</li>
+          <li>4. The method of embodiments 1-3, wherein said kinase inhibitor is JNK inhibitor II.</li>
+          <li>5. The method of embodiments 1-2, wherein said retinoic acid receptor agonist is AM580.</li>
+          <li>6. The method of embodiments 1-5, wherein said JNK inhibitor II is in combination with AM580.</li>
+          <li>7. The method of embodiments 3-6, wherein bFGF is present.</li>
+          <li>8. The method of embodiments 7, wherein said bFGF is FGF2, FGF7 or FGF10.</li>
+          <li>9. The method of embodiment 8, wherein said bFGF is FGF7.</li>
+          <li>10. The method of embodiment 1, wherein said BMP inhibitor is LDN-193189.</li>
+          <li>11. The method of embodiment 10, wherein said LDN-193189 is followed by exposure to a Wnt inhibitor or a hedgehog inhibitor.</li>
+          <li>12. The method of embodiment 11, wherein said Wnt inhibitor is IWP2.</li>
+          <li>13. The method of embodiment 12, wherein said hedgehog inhibitor is cyclopamine.</li>
+          <li>14. The method of embodiments 1-13, wherein said pancreatic cells or pancreatic cell precursors are 10-20%, 10-30%, 10-40%, 5-20%, 5-30%, 5-40%, 5-50%, 5-60% or 5-70%, 5-80%, 40-80% or 5-90% PDX1/NKX6.1 double positive.</li>
+          <li>15. The method of any one of embodiments 14, wherein said pancreatic cells or pancreatic cell precursors are 5-50% PDX1/NKX6.1 double positive.</li>
+          <li>16. The method of any one of embodiments 1-9, wherein said pancreatic cells or pancreatic cell precursors are 40-80% PDX1/NKX6.1 double positive.</li>
+          <li>17. A pancreatic cell or pancreatic cell precursors obtainable by the methods of embodiments 1-16.</li>
+          <li>18. A pancreatic cell or pancreatic cell precursor produced by exposing a human pluripotent stem cell to at least one compound listed in Tables 1 or 2.</li>
+          <li>19. The pancreatic cell or pancreatic cell precursor of embodiment 18, in which said compound is LDN-193189.</li>
+          <li>20. The pancreatic cell or pancreatic cell precursor of embodiment 18, in which said compound is JNK inhibitor II.</li>
+          <li>21. The pancreatic cell or pancreatic cell precursor of embodiment 18, in which said compound is AM580.</li>
+          <li>22. The pancreatic cell or pancreatic cell precursor of embodiment 18, in which the pancreatic cell or pancreatic cell precursor is produced by exposing the stem cell to at least one compound in combination with at least one additional agent.</li>
+          <li>23. The pancreatic cell or pancreatic cell precursor of embodiment 22, in which said LDN-193189 is in combination with JNK inhibitor II and AM580.</li>
+          <li>24. The pancreatic cell or pancreatic cell precursor of embodiment 22, in which said LDN-193189 is followed by exposure to cyclopamine.</li>
+          <li>25. The pancreatic cell or pancreatic cell precursor of embodiment 22, in which said LDN-193189 is followed by exposure to IWP2.</li>
+          <li>26. The pancreatic cell or pancreatic cell precursor of embodiment 22, in which said compound is JNK inhibitor II in combination with a retinoic acid receptor agonist listed in Table 2.</li>
+          <li>27. The pancreatic cell or pancreatic cell precursor of embodiment 22, wherein JNK inhibitor II is in combination with AM580.</li>
+          <li>28. The pancreatic cell or pancreatic cell precursor of embodiment 22, wherein JNK inhibitor II is in combination with AM580 and bFGF.</li>
+          <li>29. The pancreatic cell or pancreatic cell precursor of embodiment 28, wherein bFGF is FGF2, FGF7 or FGF10.</li>
+          <li>30. The pancreatic cell or pancreatic cell precursor of embodiment 29, wherein bFGF is FGF7.</li>
+          <li>31. Use of a compound of Tables 1 or 2 to induce pancreatic cells or pancreatic cell precursors from stem cells.</li>
+          <li>32. Use of JNK inhibitor II to induce pancreatic cells or pancreatic cell precursors from stem cells.</li>
+          <li>33. Use of JNK inhibitor II in combination with a retinoic acid receptor agonist to induce pancreatic cells or pancreatic cell precursors from stem cells.</li>
+          <li>34. Use of JNK inhibitor II in combination with AM580 to induce pancreatic cells or pancreatic cell precursors from stem cells.</li>
+          <li>35. Use of LDN-193189 to induce pancreatic cells or pancreatic cell precursors from stem cells.</li>
+          <li>36. Use of LDN-193189 followed by Cyclopamine or IWP2 to induce pancreatic cells or pancreatic cell precursors from stem cells.</li>
+          <li>37. Use of LDN-193189 followed by Cyclopamine to induce pancreatic cells or pancreatic cell precursors from stem cells.</li>
+          <li>38. Use of LDN-193189 followed by IWP2 to induce pancreatic cells or pancreatic cell precursors from stem cells.</li>
+          <li>39. Use of LDN-193189 followed by combination with JNK inhibitor II, AM580 and bFGF to induce pancreatic cells or pancreatic cell precursors from stem cells.</li>
+          <li>40. Use of LDN-193189 followed by a combination of JNK inhibitor II, AM580, LDN-193189 and bFGF to induce pancreatic cells or pancreatic cell precursors from stem cells.</li>
+          <li>41. Use of LDN-193189 followed by a combination of JNK inhibitor II, AM580, LDN-193189, bFGF and Cyclopamine or IWP2 to induce pancreatic cells or pancreatic cell precursors from stem cells.</li>
+          <li>42. Use of LDN-193189 followed by a combination of JNK inhibitor II, AM580, LDN-193189, bFGF and Cyclopamine to induce pancreatic cells or pancreatic cell precursors from stem cells.</li>
+          <li>43. Use of LDN-193189 followed by a combination of JNK inhibitor II, AM580, LDN-193189, bFGF and IWP2 to induce pancreatic cells or pancreatic cell precursors from stem cells.</li>
+          <li>44. A method of producing pancreatic cells or pancreatic cell precursors expressing at least 5% PDX1/NKX6.1 double positive, comprising exposing definitive endoderm cells to an effective amount of at least one of the compounds from each of the following groups:     <ul id="ul-00013-en" list-style="none"><li>a. BMP inhibitor, and</li><li>b. Kinase inhibitors, and</li><li>c. Retinoic acid receptor agonists</li><li>to differentiate the definitive endoderm cells into the pancreatic cell or pancreatic cell precursors.</li></ul></li>
+          <li>45. The method of embodiment 44 wherein the BMP inhibitor is LDN-193189.</li>
+          <li>46. The method of embodiment 44 wherein the retinoic acid receptor agonist is AM580.</li>
+          <li>47. The method of embodiment 44 wherein the retinoic acid receptor agonist is a retinoic acid derivative.</li>
+          <li>48. The method of embodiment 44 wherein the kinase inhibitor is an isomer of 1,9-pyrazoloanthrone with or without N-alkylation.</li>
+          <li>49. The method of embodiment 44 wherein the kinase inhibitor is JNK inhibitor II and is in combination with AM580.</li>
+          <li>50. The method of embodiment 44 wherein said kinase inhibitors and retinoic acid receptor agonists are in combination with bFGF.</li>
+          <li>51. The method of embodiment 44 wherein said kinase inhibitors and retinoic acid receptor agonists are in combination with FGF7 or FGF10.</li>
+          <li>52. The method of embodiments 44-46, comprising a first step of exposing definitive endoderm cells to an effective amount of LDN-193189, without bFGF, and a second step of exposure to JNK inhibitor II in combination with AM580, in the presence of bFGF.</li>
+          <li>53. The method of embodiments 44-46, comprising exposing definitive endoderm cells to an effective amount of LDN-193189, following exposure to at least one compound of the group consisting of:     <ul id="ul-00014-en" list-style="none"><li>a wnt inhibitor, such as IWP2, and/or</li><li>a hedgehog inhibitor, such as cyclopamine</li></ul></li>
+          <li>54. The method of any one of embodiments 44-53, wherein said pancreatic cells or pancreatic cell precursors are at least 5%, at least 10%, 10-30%, 10-40%, 5-70%, 10-80% or 5-100% PDX1/NKX6.1 double positive.</li>
+          <li>55. A pancreatic cell or pancreatic cell precursor obtainable by in vitro use of the methods of embodiments 44-54.</li>
+          <li>56. A pancreatic cell or pancreatic cell precursor produced by in vitro exposing definitive endoderm cells to a kinase inhibitor targeting JNK1, 2 or 3, or Syc or Src or GSK-3 or P38 MAPK or P38 kinase or Rho kinase or MEK or Chk2 or VEGFR1, 2 or 3 or PDGFRb or KDR/Flk-1.</li>
+          <li>57. A pancreatic cell or pancreatic cell precursor produced by the method of embodiment 56 wherein the kinase inhibitor is JNK inhibitor II and wherein the definitive endoderm cells are also exposed to at least one of the following compounds:     <ul id="ul-00015-en" list-style="none"><li>LDN-193189,</li><li>a Wnt inhibitor,</li><li>a hedgehog inhibitor,</li><li>a retinoic acid receptor agonist.</li></ul></li>
+          <li>58. The pancreatic cell or pancreatic cell precursor of embodiment 56 wherein the definitive endoderm cells are exposed to JNK inhibitor II in combination with a retinoic acid receptor agonist listed in Table 2.</li>
+          <li>59. Use of a kinase inhibitor compound of Table 1 or 2 to induce pancreatic cells or pancreatic cell precursors from a pancreatic endoderm precursor.</li>
+          <li>60. Use of JNK inhibitor II and LDN-193189 in combination to induce pancreatic cells or pancreatic cell precursors from a pancreatic endoderm precursor.</li>
+          <li>61. Use of JNK inhibitor II in combination with a retinoic acid receptor agonist to induce pancreatic cells or pancreatic cell precursors from a pancreatic endoderm precursor.</li>
+        </ul>
+      </p>
+      <heading id="h-00015-en" level="1">GENERAL METHODS</heading>
+      <heading id="h-00016-en" level="2">In Vitro Culture of Pluripotent Stem Cells</heading>
+      <p id="p-00052-en" num="0139">Human embryonic stem (hES) cells line SA121 and human induced pluripotent stem cells (hiPSC) chIPS4 (Cellectis) were grown in DEF-CS culture media (Cellectis) in T75 culture flasks. Cells were single cell passaged with 5 μM Rock inhibitor Y-27632 (Sigma #Y0503) and seeded at a density of 40000 cells/cm2 for experiments. Cells were cultured at 37° C. and 5% CO<sub>2 </sub>in a humidified incubator (ThermoScientific Model 371).</p>
+      <p id="p-00053-en" num="0000">In Vitro Differentiation of Pluripotent Stem Cells into Definitive Endoderm</p>
+      <p id="p-00054-en" num="0140">Confluent cultures of hES cells (line SA121) and hiPSC (chIPS4) were washed once in RPMI1640 (Gibco #61870) and treated with 3 μM CHIR99021 (Axon#1386) in RPMI1640. After 24 hours the cells were washed with RPMI1640 and treated with 100 ng/ml Activin A (Peprotech #120-14E) in RPMI1640. 24 hours later, 2% B27 (Invitrogen #17504-044) was added to the Activin A media for 2 days with daily media change. Cells were maintained at 37° C. and 5% CO<sub>2 </sub>in a humidified incubator during the differentiation.</p>
+      <p id="p-00055-en" num="0000">Seeding of hES and hiPS Cell Derived Definitive Endoderm.</p>
+      <p id="p-00056-en" num="0141">Human ES cell derived DE and Human iPS cell derived DE cells were washed in PBS−/− and trypsinized for 5 min. using Tryple Select (Invitrogen, 12563-029). DE cells were carefully suspended in RPMI1640 and washed once before they were resuspended in DE seeding medium (Activin A 100 ng/ml, 2% B27, RPMI1640, 0.1% PEST (Gibco #15140)). The DE cells were seeded at 200 000/cm<sup>2 </sup>in 96 well optical plates (BD Bioscience), and PE differentiation using screening compounds was initiated the following day.</p>
+      <heading id="h-00017-en" level="2">Analysis</heading>
+      <p id="p-00057-en" num="0142">At day 8 or 14 of PE differentiation, media were aspirated followed by fixation of the cells at room temperature for 30 min with 4% paraformaldehyde (VWR, 97.131.000). Cells were washed with PBS and permeabilized with 0.5% Triton X-100 (Sigma, 9002-93-1) for 10 min, washed and blocked in 0.5% TNB-buffer (Perkin Elmer) for 30 min at room temperature. Primary antibodies mouse anti-NKX6.1 (Abcore#A55F12) and goat anti-PDX1 (Abcam#47383) were diluted 1:500 and 1:8000, respectively, in 0.1% Triton X-100 in PBS and added to each well for overnight incubation at 4° C. Cells were washed three times with PBS. DAPI (4′,6-diamidino-2-phenylindole, Applichem, A4099.0010) and secondary antibodies, Alexa Fluor 488 donkey anti-goat and Alexa Fluor 594 donkey anti-mouse (both Invitrogen) were diluted 1:1000 in 0.1% Triton X-100 in PBS and added to each well for 45 min. Cells were washed five times and left in 200 μL PBS for imaging.</p>
+      <p id="p-00058-en" num="0143">Imaging was performed using the InCell Analyzer 2000 (GE Healthcare). 4 fields per well with 10× objective were captured. The total cell number based in the DAPI counterstaining and the number of NKX6.1/PDX1 double positive cells was determined using InCell Developer Toolbox 1.8 (GE Healthcare). The fraction of NKX6.1/PDX1 double positive cells was normalized to the benchmark on each plate and the % effect was calculated. Values above 200% effect were categorized as hits.</p>
+      <heading id="h-00018-en" level="1">Examples</heading>
+      <p id="p-00059-en" num="0144">Pancreatic endoderm is characterized by co-expression of two transcription factors, NKX6.1 and PDX1. Many of the published protocols for making PE are ineffective with low outcome of NKX6.1/PDX1 double positive cells. Enhancing the efficacy of the PE protocols is a desirable outcome. We therefore screened libraries of small molecules to identify novel compounds that would improve the existing PE protocols. This was done on the assumption that inhibitors, agonists or antagonists may regulate signaling pathways, or chromosomal accessibility, which would improve the fraction of NKX6.1/PDX1 double positive cells.</p>
+      <heading id="h-00019-en" level="1">Example 1</heading>
+      <heading id="h-00020-en" level="1">Screening Small Molecules that Induce NKX6.1/PDX1 Co-Expression</heading>
+      <heading id="h-00021-en" level="2">Small Molecules</heading>
+      <p id="p-00060-en" num="0145">Four different libraries were included in the screen; a kinase inhibitor library (Calbiochem #539743), a bioactive lipid library (Enzo Life Sciences #BML-2800), a nuclear receptor ligand library (Enzo Life Sciences # BML-2802) and a phosphatase inhibitor library (Enzo Life Sciences #BML-2834). The compounds within the bioactive library were tested at 1 uM and 0.1 uM. Compounds from the other libraries were tested at 10 uM and 1 uM. In a second candidate based screening approach, small molecules that target the main signalling pathways involved in pancreas development were included.</p>
+      <p id="p-00061-en" num="0000">NKX6.1/PDX1 Screen The library compounds were screened on top of a bFGF based media formulation for making PE (Ameri et al. 2010) (RPMI1640, Gibco#61870; 12% KOSR, Gibco#10828; 0.1% PEST, Gibco#15140; 64 ng/mL bFGF, Peprotech #100-18B).</p>
+      <p id="p-00062-en" num="0146">The library PE screening approach was divided into an early and a late phase (<figref>FIG. 1</figref>).</p>
+      <p id="p-00063-en" num="0147">In the early phase, compounds were tested on top of the PE media for the first seven days of PE differentiation, and then the differentiation was continued for additional six days using PE media without compounds.</p>
+      <p id="p-00064-en" num="0148">In the late phase, DE cells were differentiated in the PE media for the first seven days. In the following six days compounds were tested on top of the PE media. 12 positive control wells (PE media) and 12 negative control wells (PE media without bFGF) were included in each 96 well plate. Media change was performed daily. Hits identified in the early phase screen are illustrated in <figref>FIG. 2</figref> and listed in table 1. Hits identified in the late phase screen are illustrated in <figref>FIG. 3</figref> and listed in table 2.</p>
+      <p id="p-00065-en" num="0149">The compounds from the candidate approach were screened in basal medium (RPMI1640, Gibco#61870; 12% KOSR, Gibco#10828; 0.1% PEST, Gibco#15140) without the addition of bFGF. This candidate approach screen was divided into two parts (<figref>FIG. 4</figref>). In the first part, compounds were tested in time intervals with 2 day increments for the first eight days of PE differentiation (2 days exposure to compounds followed by 6 days basal medium or 4 days exposure to compounds followed by 4 days basal medium or 6 days exposure to compounds followed by 2 days basal medium or 8 days exposure to compounds).</p>
+      <p id="p-00066-en" num="0150">One plate was fixed after these 8 days and analysed for PDX1 and NKX6.1 expression. A second plate was further differentiated for additional six days using the published PE protocol (Amen et al. (2010)).</p>
+      <p id="p-00067-en" num="0151">In the second part, DE cells were differentiated according to the hit compounds from the first part, the following 6-10 days compounds were tested in basal media.</p>
+      <p id="p-00068-en" num="0152">The benchmark protocol (Amen et al. (2010)) served as a control.</p>
+      <p id="p-00069-en" num="0153">Media change was performed daily in both first and second part experiments.</p>
+      <p id="p-00070-en" num="0154">Hits identified in the candidate screening approach are illustrated in <figref>FIG. 5</figref> and also contained in Tables 1 and 2.</p>
+      <heading id="h-00022-en" level="1">Example 2</heading>
+      <heading id="h-00023-en" level="1">Combining Small Molecule Hits that Induce NKX6.1/PDX1 Co-Expression</heading>
+      <p id="p-00071-en" num="0155">Combining Hits from the Candidate Screening Approach with Hits from the Library Approach</p>
+      <p id="p-00072-en" num="0156">DE cells were exposed to 4 days 50 nM LDN-193189, followed by 8 days AM580 (AH Diagnostics, BML GF104 0025), JNK Inhibitor II (Calbiochem, 420119), 50 nM LDN-193189 and 64 ng/ml FGF2, or AM580, JNK Inhibitor II, 50 nM LDN-193189, 64 ng/ml FGF2 and IWP2, or AM580, JNK Inhibitor II, 50 nM LDN-193189, 64 ng/ml FGF2 and Cyclopamine (<figref>FIG. 6</figref>). Media change was performed daily.</p>
+      <heading id="h-00024-en" level="1">Example 3</heading>
+      <heading id="h-00025-en" level="1">Confirmation of Small Molecules that Induce NKX6.1/PDX1 Co-Expression in Human Induced Pluripotent Stem Cells</heading>
+      <p id="p-00073-en" num="0157">Hit compounds (Tables 1 and 2) were screened on top of a bFGF based media formulation for making PE (Amen et al. 2010) (RPMI1640, Gibco#61870; 12% KOSR, Gibco#10828; 0.1% PEST, Gibco#15140; 64 ng/mL bFGF, Peprotech #100-18B).</p>
+      <p id="p-00074-en" num="0158">The screen was divided into an early and a late phase (<figref>FIG. 1</figref>). In the early phase, compounds were tested on top of the PE media for the first seven days of PE differentiation, and then continued for additional six days using PE media without compounds. In the late phase, DE cells were differentiated in the PE media for the first seven days. In the following six days compounds were tested on top of the PE media. Twelve positive control wells (PE media) and 12 negative control wells (PE media without bFGF) were included in each 96 well plate. Media change was performed daily.</p>
+      <p id="p-00075-en" num="0159">Values above 200% effect were categorized as a hit (<figref>FIG. 2</figref> and <figref>FIG. 3</figref>).</p>
+      <heading id="h-00026-en" level="2">Table 1 Shows Early Hit Compounds.</heading>
+      <p id="p-00076-en" num="0160">Compounds that enhance the fraction of NKX6.1/PDX1 double positive cells more than 200% compared the PE media. Library, location of compound within the library, target, chemical structure, hit concentration and percentage of PDX1/NKX6.1 double positive cells are listed.</p>
+      <p id="p-00077-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="406pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Early phase hits.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="left" />
+              <colspec colname="3" colwidth="42pt" align="left" />
+              <colspec colname="4" colwidth="42pt" align="left" />
+              <colspec colname="5" colwidth="203pt" align="center" />
+              <colspec colname="6" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Plate</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Library</entry>
+                  <entry>location</entry>
+                  <entry>Target</entry>
+                  <entry>Inhibitor</entry>
+                  <entry>Structure</entry>
+                  <entry>Concentration</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="left" />
+              <colspec colname="3" colwidth="42pt" align="left" />
+              <colspec colname="4" colwidth="42pt" align="left" />
+              <colspec colname="5" colwidth="203pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="right" />
+              <colspec colname="7" colwidth="28pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>Kinase inhibitor</entry>
+                  <entry>B3</entry>
+                  <entry>ATM kinase</entry>
+                  <entry>ATM Kinase Inhibitor</entry>
+                  <entry>
+                    <chemistry id="chem-00001-en" num="00001">
+                      <img id="img-00001-en" he="28.53mm" wi="49.95mm" alt="embedded image" img-content="table" file="US20150247123A1_00006.PNG" img-format="png" original="US20150247123A1-20150903-C00001.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>10</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Kinase inhibitor</entry>
+                  <entry>D18</entry>
+                  <entry>Chk2</entry>
+                  <entry>Chk2 Inhibitor II</entry>
+                  <entry>
+                    <chemistry id="chem-00002-en" num="00002">
+                      <img id="img-00002-en" he="24.81mm" wi="70.70mm" alt="embedded image" img-content="table" file="US20150247123A1_00007.PNG" img-format="png" original="US20150247123A1-20150903-C00002.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>10</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Kinase inhibitor</entry>
+                  <entry>N15</entry>
+                  <entry>P38 MAPK</entry>
+                  <entry>SKF-86002</entry>
+                  <entry>
+                    <chemistry id="chem-00003-en" num="00003">
+                      <img id="img-00003-en" he="27.26mm" wi="40.89mm" alt="embedded image" img-content="table" file="US20150247123A1_00008.PNG" img-format="png" original="US20150247123A1-20150903-C00003.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>10</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Kinase inhibitor</entry>
+                  <entry>P20</entry>
+                  <entry>KDR/Flk-1, VEGGFR-2, PDGFRb, VEGFR-1, VEGFR-3</entry>
+                  <entry>VEGF Receptor 2 Kinase Inhibitor IV</entry>
+                  <entry>
+                    <chemistry id="chem-00004-en" num="00004">
+                      <img id="img-00004-en" he="34.46mm" wi="48.34mm" alt="embedded image" img-content="table" file="US20150247123A1_00009.PNG" img-format="png" original="US20150247123A1-20150903-C00004.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>10</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Kinase inhibitor</entry>
+                  <entry>H22</entry>
+                  <entry>JNK1, JNK2, JNK3,</entry>
+                  <entry>JNK Inhibitor II</entry>
+                  <entry>
+                    <chemistry id="chem-00005-en" num="00005">
+                      <img id="img-00005-en" he="24.38mm" wi="29.63mm" alt="embedded image" img-content="table" file="US20150247123A1_00010.PNG" img-format="png" original="US20150247123A1-20150903-C00005.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>10</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Kinase inhibitor</entry>
+                  <entry>H22</entry>
+                  <entry>JNK1, JNK2, JNK3</entry>
+                  <entry>JNK Inhibitor II</entry>
+                  <entry>
+                    <chemistry id="chem-00006-en" num="00006">
+                      <img id="img-00006-en" he="24.38mm" wi="29.63mm" alt="embedded image" img-content="table" file="US20150247123A1_00011.PNG" img-format="png" original="US20150247123A1-20150903-C00006.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>1</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="left" />
+              <colspec colname="3" colwidth="42pt" align="left" />
+              <colspec colname="4" colwidth="42pt" align="left" />
+              <colspec colname="5" colwidth="203pt" align="center" />
+              <colspec colname="6" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Candidate screen BMP inhibitor</entry>
+                  <entry>Candidate approach</entry>
+                  <entry>ALK2, ALK3, ALK6</entry>
+                  <entry>LDN-193189</entry>
+                  <entry>
+                    <chemistry id="chem-00007-en" num="00007">
+                      <img id="img-00007-en" he="44.53mm" wi="65.11mm" alt="embedded image" img-content="table" file="US20150247123A1_00012.PNG" img-format="png" original="US20150247123A1-20150903-C00007.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>50 nM/100 nM</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00027-en" level="2">Table 2 Shows Late Hit Compounds.</heading>
+      <p id="p-00078-en" num="0161">Compounds that enhance the fraction of NKX6.1/PDX1 double positive cells more than 200% compared the PE media. Library, location of compound within the library, target, chemical structure, hit concentration and percentage of PDX1/NKX6.1 double positive cells are listed.</p>
+      <p id="p-00079-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="441pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Late phase hits.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="left" />
+              <colspec colname="3" colwidth="63pt" align="left" />
+              <colspec colname="4" colwidth="49pt" align="left" />
+              <colspec colname="5" colwidth="210pt" align="center" />
+              <colspec colname="6" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Plate</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Library</entry>
+                  <entry>location</entry>
+                  <entry>Target</entry>
+                  <entry>Inhibitor</entry>
+                  <entry>Structure</entry>
+                  <entry>Concentration</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="left" />
+              <colspec colname="3" colwidth="63pt" align="left" />
+              <colspec colname="4" colwidth="49pt" align="left" />
+              <colspec colname="5" colwidth="210pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="right" />
+              <colspec colname="7" colwidth="28pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>Kinase inhibitor</entry>
+                  <entry>H22</entry>
+                  <entry>JNK1, JNK2, JNK3</entry>
+                  <entry>JNK Inhibitor II</entry>
+                  <entry>
+                    <chemistry id="chem-00008-en" num="00008">
+                      <img id="img-00008-en" he="24.38mm" wi="29.63mm" alt="embedded image" img-content="table" file="US20150247123A1_00013.PNG" img-format="png" original="US20150247123A1-20150903-C00008.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>10</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Kinase inhibitor</entry>
+                  <entry>J4</entry>
+                  <entry />
+                  <entry>JNK Inhibitor, Negative Control</entry>
+                  <entry>
+                    <chemistry id="chem-00009-en" num="00009">
+                      <img id="img-00009-en" he="29.72mm" wi="29.63mm" alt="embedded image" img-content="table" file="US20150247123A1_00014.PNG" img-format="png" original="US20150247123A1-20150903-C00009.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>10</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Kinase inhibitor</entry>
+                  <entry>P5</entry>
+                  <entry>syc, src</entry>
+                  <entry>SYK Inhibitor III</entry>
+                  <entry>
+                    <chemistry id="chem-00010-en" num="00010">
+                      <img id="img-00010-en" he="12.28mm" wi="37.00mm" alt="embedded image" img-content="table" file="US20150247123A1_00015.PNG" img-format="png" original="US20150247123A1-20150903-C00010.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>10</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Kinase inhibitor</entry>
+                  <entry>F20</entry>
+                  <entry>GSK-3</entry>
+                  <entry>GSK-3b Inhibitor II</entry>
+                  <entry>
+                    <chemistry id="chem-00011-en" num="00011">
+                      <img id="img-00011-en" he="21.84mm" wi="48.09mm" alt="embedded image" img-content="table" file="US20150247123A1_00016.PNG" img-format="png" original="US20150247123A1-20150903-C00011.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>10</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Kinase inhibitor</entry>
+                  <entry>N15</entry>
+                  <entry>P38 MAPK</entry>
+                  <entry>SKF-86002</entry>
+                  <entry>
+                    <chemistry id="chem-00012-en" num="00012">
+                      <img id="img-00012-en" he="27.26mm" wi="40.89mm" alt="embedded image" img-content="table" file="US20150247123A1_00017.PNG" img-format="png" original="US20150247123A1-20150903-C00012.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>10</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Kinase inhibitor</entry>
+                  <entry>J14</entry>
+                  <entry>PI3-kinase</entry>
+                  <entry>LY 294002</entry>
+                  <entry>
+                    <chemistry id="chem-00013-en" num="00013">
+                      <img id="img-00013-en" he="34.97mm" wi="35.31mm" alt="embedded image" img-content="table" file="US20150247123A1_00018.PNG" img-format="png" original="US20150247123A1-20150903-C00013.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>10</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Kinase inhibitor</entry>
+                  <entry>N14</entry>
+                  <entry>P38 MAPK</entry>
+                  <entry>SC-68376</entry>
+                  <entry>
+                    <chemistry id="chem-00014-en" num="00014">
+                      <img id="img-00014-en" he="28.45mm" wi="33.44mm" alt="embedded image" img-content="table" file="US20150247123A1_00019.PNG" img-format="png" original="US20150247123A1-20150903-C00014.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>10</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Kinase inhibitor</entry>
+                  <entry>N6</entry>
+                  <entry>Rho kinase</entry>
+                  <entry>Rho Kinase Inhibitor III, Rockout</entry>
+                  <entry>
+                    <chemistry id="chem-00015-en" num="00015">
+                      <img id="img-00015-en" he="29.13mm" wi="23.79mm" alt="embedded image" img-content="table" file="US20150247123A1_00020.PNG" img-format="png" original="US20150247123A1-20150903-C00015.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>10</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Kinase inhibitor</entry>
+                  <entry>L5</entry>
+                  <entry>MEK</entry>
+                  <entry>PD 98059</entry>
+                  <entry>
+                    <chemistry id="chem-00016-en" num="00016">
+                      <img id="img-00016-en" he="34.97mm" wi="34.46mm" alt="embedded image" img-content="table" file="US20150247123A1_00021.PNG" img-format="png" original="US20150247123A1-20150903-C00016.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>10</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Kinase inhibitor</entry>
+                  <entry>N11</entry>
+                  <entry>P38 MAPK</entry>
+                  <entry>SB203580</entry>
+                  <entry>
+                    <chemistry id="chem-00017-en" num="00017">
+                      <img id="img-00017-en" he="36.07mm" wi="51.65mm" alt="embedded image" img-content="table" file="US20150247123A1_00022.PNG" img-format="png" original="US20150247123A1-20150903-C00017.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>10</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Bioactive lipids</entry>
+                  <entry>2-E09</entry>
+                  <entry>RAR</entry>
+                  <entry>AM-580</entry>
+                  <entry>
+                    <chemistry id="chem-00018-en" num="00018">
+                      <img id="img-00018-en" he="27.01mm" wi="54.02mm" alt="embedded image" img-content="table" file="US20150247123A1_00023.PNG" img-format="png" original="US20150247123A1-20150903-C00018.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>1</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Bioactive lipids</entry>
+                  <entry>2-E05</entry>
+                  <entry>RAR</entry>
+                  <entry>RETINOIC ACID, ALL TRANS</entry>
+                  <entry>
+                    <chemistry id="chem-00019-en" num="00019">
+                      <img id="img-00019-en" he="19.30mm" wi="57.91mm" alt="embedded image" img-content="table" file="US20150247123A1_00024.PNG" img-format="png" original="US20150247123A1-20150903-C00019.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>1</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Bioactive lipids</entry>
+                  <entry>2-E07</entry>
+                  <entry>RAR/RXR</entry>
+                  <entry>13-CIS RETINOIC ACID</entry>
+                  <entry>
+                    <chemistry id="chem-00020-en" num="00020">
+                      <img id="img-00020-en" he="19.30mm" wi="54.02mm" alt="embedded image" img-content="table" file="US20150247123A1_00025.PNG" img-format="png" original="US20150247123A1-20150903-C00020.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>1</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Bioactive lipids</entry>
+                  <entry>2-E06</entry>
+                  <entry>RAR/RXR</entry>
+                  <entry>9-CIS RETINOIC ACID</entry>
+                  <entry>
+                    <chemistry id="chem-00021-en" num="00021">
+                      <img id="img-00021-en" he="18.54mm" wi="59.69mm" alt="embedded image" img-content="table" file="US20150247123A1_00026.PNG" img-format="png" original="US20150247123A1-20150903-C00021.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>1</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Bioactive lipids</entry>
+                  <entry>2-E10</entry>
+                  <entry>RAR</entry>
+                  <entry>TTNPB</entry>
+                  <entry>
+                    <chemistry id="chem-00022-en" num="00022">
+                      <img id="img-00022-en" he="27.01mm" wi="54.02mm" alt="embedded image" img-content="table" file="US20150247123A1_00027.PNG" img-format="png" original="US20150247123A1-20150903-C00022.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>1</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Kinase inhibitor</entry>
+                  <entry>H22</entry>
+                  <entry>JNK1, JNK2, JNK3</entry>
+                  <entry>JNK Inhibitor II</entry>
+                  <entry>
+                    <chemistry id="chem-00023-en" num="00023">
+                      <img id="img-00023-en" he="24.38mm" wi="29.63mm" alt="embedded image" img-content="table" file="US20150247123A1_00028.PNG" img-format="png" original="US20150247123A1-20150903-C00023.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>1</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Kinase inhibitor</entry>
+                  <entry>J4</entry>
+                  <entry />
+                  <entry>JNK Inhibitor, Negative Control</entry>
+                  <entry>
+                    <chemistry id="chem-00024-en" num="00024">
+                      <img id="img-00024-en" he="29.72mm" wi="29.63mm" alt="embedded image" img-content="table" file="US20150247123A1_00029.PNG" img-format="png" original="US20150247123A1-20150903-C00024.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>1</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Bioactive lipids</entry>
+                  <entry>2-E09</entry>
+                  <entry>RAR</entry>
+                  <entry>AM-580</entry>
+                  <entry>
+                    <chemistry id="chem-00025-en" num="00025">
+                      <img id="img-00025-en" he="27.09mm" wi="54.02mm" alt="embedded image" img-content="table" file="US20150247123A1_00030.PNG" img-format="png" original="US20150247123A1-20150903-C00025.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>0.1</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Bioactive liids</entry>
+                  <entry>2-E07</entry>
+                  <entry>RAR/RXR</entry>
+                  <entry>13-CIS RETINOIC ACID</entry>
+                  <entry>
+                    <chemistry id="chem-00026-en" num="00026">
+                      <img id="img-00026-en" he="19.30mm" wi="54.02mm" alt="embedded image" img-content="table" file="US20150247123A1_00031.PNG" img-format="png" original="US20150247123A1-20150903-C00026.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>0.1</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Bioactive lipids</entry>
+                  <entry>2-E06</entry>
+                  <entry>RAR/RXR</entry>
+                  <entry>9-CIS RETINOIC ACID</entry>
+                  <entry>
+                    <chemistry id="chem-00027-en" num="00027">
+                      <img id="img-00027-en" he="18.54mm" wi="58.76mm" alt="embedded image" img-content="table" file="US20150247123A1_00032.PNG" img-format="png" original="US20150247123A1-20150903-C00027.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>0.1</entry>
+                  <entry>uM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="left" />
+              <colspec colname="3" colwidth="63pt" align="left" />
+              <colspec colname="4" colwidth="49pt" align="left" />
+              <colspec colname="5" colwidth="210pt" align="center" />
+              <colspec colname="6" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Candidate screen Hedgehog pathway inhibitor</entry>
+                  <entry />
+                  <entry>Smoothened (SMO)</entry>
+                  <entry>Cydopamine</entry>
+                  <entry>
+                    <chemistry id="chem-00028-en" num="00028">
+                      <img id="img-00028-en" he="21.84mm" wi="64.26mm" alt="embedded image" img-content="table" file="US20150247123A1_00033.PNG" img-format="png" original="US20150247123A1-20150903-C00028.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>1 μM/5 μM</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Candidate screen Wnt pathway inhibitor</entry>
+                  <entry />
+                  <entry>O-acyltransferase Porcupine</entry>
+                  <entry>IWP2</entry>
+                  <entry>
+                    <chemistry id="chem-00029-en" num="00029">
+                      <img id="img-00029-en" he="26.50mm" wi="72.47mm" alt="embedded image" img-content="table" file="US20150247123A1_00034.PNG" img-format="png" original="US20150247123A1-20150903-C00029.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>1 μM/5 μM</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00080-en" num="0162">While certain features of the invention have been illustrated and described herein, many modifications, substitutions, changes, and equivalents will now occur to those of ordinary skill in the art. It is, therefore, to be understood that the appended claims are intended to cover all such modifications and changes as fall within the true spirit of the invention.</p>
+      <heading id="h-00028-en" level="1">REFERENCES</heading>
+      <p id="p-00081-en" num="0000">
+        <ul id="ul-00016-en" list-style="none">
+          <li>Amen et al. (2010) Stem Cells, 28:45-56</li>
+          <li>Cai J. et al. (2010). J Mol Cell Biol., February; 2(1):50-60</li>
+          <li>Chung Y. et al. (2006). Nature, January 12; 439(7073):216-9</li>
+          <li>D'Amour K. A. et al. (2006). Nat Biotechnol, 24: 1392-401</li>
+          <li>Heins N. et al. (2004). Stem Cells, 22(3):367-76</li>
+          <li>Jiang J. et al. (2007). Stem Cells, 25:1940-53</li>
+          <li>Kroon E. et al. (2008). Nat Biotechnol, 26:443-452</li>
+          <li>Klimanskaya I. et al. (2006). Nature, November 23; 444(7118):481-5</li>
+          <li>Kunisada Y. et al. (2012). Stem Cell Res, 8(2):274-84</li>
+          <li>Schulz T C. et al. (2012). PLoS One, 7(5):e37004</li>
+          <li>Takahashi K. et al. (2007). Cell, 131:861-72</li>
+          <li>Takahashi K. and Yamanaka S. (2006). Cell, 126(4):663-76</li>
+          <li>Thomson J A. et al. (1998). Science, November 6; 282(5391):1145-7</li>
+          <li>Wernig, M. et al. (2007). Nature, 448:318-24</li>
+          <li>Zhang D. et al. (2009). Cell Research, 19:429-438</li>
+        </ul>
+      </p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>. A method of producing pancreatic cells or pancreatic cell precursors, comprising exposing definitive endoderm cells to an effective amount of at least one BMP inhibitor, at least one kinase inhibitor, and at least one retinoic acid receptor agonist, wherein at least 5% of the resulting pancreatic cells or pancreatic cell precursors are PDX1/NKX6.1 double positive.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the BMP inhibitor is LDN-193189.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the retinoic acid receptor agonist is AM580.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the retinoic acid receptor agonist is a retinoic acid derivative.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the kinase inhibitor is an isomer of 1,9-pyrazoloanthrone with or without N-alkylation.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein kinase inhibitor is JNK inhibitor II and the retinoic acid receptor agonist is AM580.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising exposing the definitive endoderm cells to bFGF.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising exposing the definitive endoderm cells to FGF7 or FGF10.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the exposing comprises a first exposure to an effective amount of LDN-193189 without bFGF and a second exposure to JNK inhibitor II, AM580, and bFGF.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, further comprising exposing the definitive endoderm cells to at least one compound selected from the group consisting of a wnt inhibitor and a hedgehog inhibitor prior to exposing the definitive endoderm cells to the LDN-193189.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said pancreatic cells or pancreatic cell precursors are at least 10% PDX1/NKX6.1 double positive.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. An isolated population of pancreatic cells or pancreatic cell precursors produced by the method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. An isolated population of pancreatic cells or pancreatic cell precursors produced by exposing definitive endoderm cells to a kinase inhibitor capable of inhibiting a target selected from the group consisting of JNK1, JNK2, JNK3, Syc, Src, GSK-3, P38, MAPK, P38 kinase, Rho kinase, MEK, Chk2, VEGFR1, VEGFR2, VEGFR3, PDGFRb, and KDR/Flk-1.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The isolated population of pancreatic cells or pancreatic cell precursors produced by the method of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the kinase inhibitor is JNK inhibitor II, and wherein the definitive endoderm cells are also exposed to a compound selected from the group consisting of LDN-193189, a Wnt inhibitor, a hedgehog inhibitor, and a retinoic acid receptor agonist.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The isolated population of pancreatic cells or pancreatic cell precursors of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the definitive endoderm cells are exposed to a retinoic acid receptor agonist.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>.-<b>18</b>. (canceled)</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247123A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247123A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247123A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247123A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247123A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00006.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00007.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00008.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00003.TIF" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00009.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00004.TIF" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00010.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00005.TIF" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00011.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00006.TIF" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00012.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00007.TIF" inline="yes" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00013.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00008.TIF" inline="yes" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00014.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00009.TIF" inline="yes" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00015.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00010.TIF" inline="yes" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00016.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00011.TIF" inline="yes" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00017.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00012.TIF" inline="yes" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00018.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00013.TIF" inline="yes" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00019.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00014.TIF" inline="yes" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00020.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00015.TIF" inline="yes" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00021.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00016.TIF" inline="yes" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00022.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00017.TIF" inline="yes" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00023.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00018.TIF" inline="yes" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00024.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00019.TIF" inline="yes" />
+    </figure>
+    <figure num="25">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00025.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00020.TIF" inline="yes" />
+    </figure>
+    <figure num="26">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00026.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00021.TIF" inline="yes" />
+    </figure>
+    <figure num="27">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00027.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00022.TIF" inline="yes" />
+    </figure>
+    <figure num="28">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00028.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00023.TIF" inline="yes" />
+    </figure>
+    <figure num="29">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00029.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00024.TIF" inline="yes" />
+    </figure>
+    <figure num="30">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00030.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00025.TIF" inline="yes" />
+    </figure>
+    <figure num="31">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00031.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00026.TIF" inline="yes" />
+    </figure>
+    <figure num="32">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00032.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00027.TIF" inline="yes" />
+    </figure>
+    <figure num="33">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00033.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00028.TIF" inline="yes" />
+    </figure>
+    <figure num="34">
+      <img he="N/A" wi="N/A" file="US20150247123A1_00034.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150247123A1-20150903-C00029.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150247123A1.PDF" type="pdf" size="774131" pages="19" />
+</lexisnexis-patent-document>

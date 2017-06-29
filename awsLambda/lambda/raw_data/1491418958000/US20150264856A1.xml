@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150264856A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150924" time-inserted="021026" date-changed="20151009" time-changed="020545">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121423860">
+        <country>US</country>
+        <doc-number>20150264856</doc-number>
+        <kind>A1</kind>
+        <date>20150924</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14662873</doc-number>
+        <date>20150319</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150924">
+      <priority-claim sequence="1" kind="national">
+        <country>DE</country>
+        <doc-number>102014205281</doc-number>
+        <date>20140321</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151001">
+      <unexamined-printed-without-grant>
+        <date>20150924</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151001">
+      <classification-ipcr sequence="1">
+        <text>A01B  59/041       20060101AFI20150924BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>59</main-group>
+        <subgroup>041</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151001">
+      <classification-cpc sequence="1">
+        <text>A01B  59/0415      20130101 FI20150924BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>59</main-group>
+        <subgroup>0415</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A01B  59/041       20130101 LI20150925BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>59</main-group>
+        <subgroup>041</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150925</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">17</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150924" lang="eng" format="original">STABILIZER FOR A LOWER LINK OF A THREE-POINT HITCH</invention-title>
+    <parties date-changed="20150924">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Deere &amp; Company</orgname>
+            <address>
+              <city>Moline</city>
+              <state>IL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>HEITLINGER</last-name>
+            <first-name>MARTIN</first-name>
+            <address>
+              <city>OESTRINGEN</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>ONKEN</last-name>
+            <first-name>HANKO</first-name>
+            <address>
+              <city>MANNHEIM</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>MAYER</last-name>
+            <first-name>KLAUS</first-name>
+            <address>
+              <city>Hesseneck-Kailbach</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20151007">
+      <main-family family-id="173800363">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2926638</doc-number>
+            <kind>A1</kind>
+            <date>20151007</date>
+          </document-id>
+          <application-date>
+            <date>20150316</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>102014205281</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20140321</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150264856</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20150319</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173800362">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2926638</doc-number>
+            <kind>A1</kind>
+            <date>20151007</date>
+          </document-id>
+          <application-date>
+            <date>20150316</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>102014205281</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20140321</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150264856</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20150319</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150924" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A stabilizer for a lower link of a three-point hitch of a tractor, includes a first stabilizer element and a second stabilizer element, which is supported so it can move with spring action relative to the first stabilizer element along a common longitudinal axis. A first limiting member is connected with the first stabilizer element, which in a closed position forms a first stop which interacts with the second stabilizer element to limit compression movement between the two stabilizer elements. A second limiting member between the two stabilizer elements forms a second stop to limit the compression movement relative to a corresponding end stop of the stabilizer when the first limiting member is brought into an opened position.</p>
+  </abstract>
+  <legal-data date-changed="20151009">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150526</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015264856A1</docdb-publication-number>
+      <docdb-application-id>444777424</docdb-application-id>
+      <new-owner>DEERE &amp; COMPANY, ILLINOIS</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:HEITLINGER, MARTIN;ONKEN, HANKO;MAYER, KLAUS;SIGNING DATES FROM 20150226 TO 20150516;REEL/FRAME:035762/0877</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150924">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present disclosure relates to a stabilizer for a lower link of a three-point hitch of a tractor.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">A stabilizer for a lower link of a three-point hitch on a tractor is known, for example, from EP 2 232 973 A2. The hinged stabilizer between a rear fastening site of the tractor and a lower link of the three-point hitch includes a first and a second stabilizer element, wherein the two stabilizer elements are conducted for movement into one another in a longitudinal direction so that they can deflect, relative to one another, against a resetting spring force. A closing flap, placed on the first stabilizer element so it can swivel, is used to limit a compression movement between the two stabilizer elements. The closing flap forms, in a closed position, a unilateral stop area, which interacts with a limiting collar of the second stabilizer element. If the closing flap of the stabilizer is moved to an opened position, then the two stabilizer elements are able to carry out an essentially free compression movement, whose scope is limited merely by a corresponding construction-related and, in this respect, a stationary end stop within the stabilizer. Depending on the position of the closing flap, therefore, it is possible to either completely block a lateral movement of a lower link equipped with the stabilizer or to release it within the scope of the structural conditions of the stabilizer. It is desired to provide a stabilizer which is improved with respect to its adaptation possibilities.</p>
+      <heading id="h-00003-en" level="1">SUMMARY</heading>
+      <p id="p-00003-en" num="0003">According to an aspect of the present disclosure, a stabilizer for a lower link of a three-point hitch of a tractor comprises a first stabilizer element and a second stabilizer element, which, relative to the first stabilizer element, is supported to move with a spring action along a common longitudinal axis. A first limiting member is connected with the first stabilizer element. The first limiting member, in a closed position, forms a first stop that interacts with the second stabilizer element to limit a compression movement between the two stabilizer elements. A second limiting member is provided between the two stabilizer elements. The second limiting member forms a second stop to limit the compression movement, relative to a corresponding end stop of the stabilizer, when the first limiting member is brought to an opened position.</p>
+      <p id="p-00004-en" num="0004">In other words, the two stops make it possible to limit, to a varying extent, a compression movement between the two stabilizer elements, and thus, in several steps, relative to a corresponding construction-related and, in this respect, to a stationary end stop of the stabilizer, so that the permissible lateral movement of a lower link equipped with the stabilizer can adapt flexibly to various applications in the field. Thus, for example, the operation of a plow generally requires higher lateral deflection capacity of the lower links than the use of a chisel plow or the like.</p>
+      <p id="p-00005-en" num="0005">The first stabilizer element is, in particular, an essentially cylindrical stabilizer housing, in which the second stabilizer element, designed as the spring piston, is conducted for longitudinal movement. A suspension mechanism located within the stabilizer housing presses the spring piston and thus the second stabilizer element into a pre-specified position at rest, and thus to make possible a self-centering of a lower link equipped with the stabilizer.</p>
+      <p id="p-00006-en" num="0006">The stabilizer can be the so-called single-acting type. This means that it permits a stage-wise limitation of only one compression movement between the two stabilizer elements, but not an extension movement. In order to be able to limit the permissible lateral movement of an implement placed on the three-point hitch in both directions, therefore, each of the two lower links of the three-point hitch is coordinated with a separate stabilizer, working in an opposite direction.</p>
+      <p id="p-00007-en" num="0007">Advantageously, the first limiting member is designed as an outer closing flap, and the second limiting member as an inner closing flap, wherein the two limiting member are connected with the first stabilizer element so that they can swivel on a rotational axis running transverse to the longitudinal axis of the stabilizer. For the stepwise release of the stabilizer, the outer closing flap first has to swivel and then the inner closing flap, from a closed to an opened position. The second stop, formed by the inner closing flap, hereby permits a compression movement between the two stabilizer elements that is larger in comparison to the one by the first stop that is formed by the outer closing flap.</p>
+      <p id="p-00008-en" num="0008">The inner closing flap is spatially located between the outer closing flap and the first stabilizer element, if the outer closing flap is in the closed position. At least in sections, a form- and/or a force-locking can thereby be produced between the adjacent contours of the aforementioned parts.</p>
+      <p id="p-00009-en" num="0009">Advantageously, the first and/or the second stops is/are formed by a flattening provided on the front on the outer and/or inner closing flaps. The flattening provided on the front represents a unilateral stop area for a counter bearing constructed on the second stabilizer element in the shape of a surrounding limiting collar. A compression movement of the two stabilizer elements is permitted to the extent that there is contact between the limiting collar and the individual unilateral stop area of the outer or inner closing flap.</p>
+      <p id="p-00010-en" num="0010">In the sense of a compact design of the stabilizer, it is conceivable that the closing flaps are connected, with economy of space, with the first stabilizer element so that they swivel around a common rotational axis. The rotational axis can, for example, be formed by a hinge pin that extends through the first stabilizer element, on whose free end, for the creation of a swiveling connection, the two closing flaps are supported so they rotate by means of corresponding outer and inner strap hinges.</p>
+      <p id="p-00011-en" num="0011">In particular, in the closed position, the outer closing flap may at least partially encloses both the inner closing flap as well as the first stabilizer element, which will produce an improved protection from soiling from the outside. For this purpose, the outer closing flap can have the shape of a half-shell, encompassing, in sections, the inner closing flap and the first stabilizer element in their closed position. A similar development is also conceivable with regard to the inner closing flap, so that in their closed positions, the two closing flaps protect at least the first stabilizer element, including a suspension mechanism accommodated therein, from the penetration of undesired soiling from the outside.</p>
+      <p id="p-00012-en" num="0012">The outer closing flap can be connected with a rear fastening site of the tractor via a tension strap with a hoist rope or a hoist chain such that it can be brought into the closed position automatically upon lifting the lower link. This is advantageous, above all, when carrying out transporting trips, since here, an uncontrolled back and forth swinging of an implement attached to the three-point hitch should be prevented if possible.</p>
+      <p id="p-00013-en" num="0013">Moreover, there can be a hitch element placed on the inner closing flap, by means of which the inner closing flap, together with the outer closing flap, can be brought from a closed position into an opened position. The hitch element can, for example, have the shape of a projection constructed on the inner closing flap, which extends through an opening provided on an upper side of the outer closing flap, and by means of which a securing element in the shape of a removable splint is stuck; its dimensions are selected larger in comparison to the opening in such a way that it moves along the inner closing flap into the opened position when the outer closing flap is lifted.</p>
+      <p id="p-00014-en" num="0014">The two closing flaps can be bent components or castings made of steel. The bent component or casting can have a reinforced stop area, so that increased stresses, as they occur in the case of heavy implements, can be correspondingly taken into consideration.</p>
+      <p id="p-00015-en" num="0015">In accordance with a possible alternative development of the stabilizer, the second limiting member is designed as a stop pin to variably limit the compression movement, which can be adjusted along the longitudinal axis of the stabilizer. This makes it possible to adapt the position of the second stop in a gradual manner, and thus the permissible scope of a compression movement between the two stabilizer elements in a deflection range that is found between the first stop and the corresponding end stop of the stabilizer. The first limiting member can be a conventional closing flap, wherein for the release of the stop bolt and thus, the second stop, it is first brought from the closed into the opened position.</p>
+      <p id="p-00016-en" num="0016">The second stop can be formed by a free end of the stop pin. Stated more precisely, the free end can be a unilateral stop area for a counter bearing constructed within the second stabilizer element in the shape of a central impact base. A compression movement between the two stabilizer elements is permissible until there is contact between the central impact base and the free end of the stop pin.</p>
+      <p id="p-00017-en" num="0017">In particular, the stop pin can be designed as a threaded pin. The threaded pin comprises a threaded section with an outer thread that meshes along the longitudinal axis of the second stabilizer element of the provided complementary inner thread, wherein the position of the free end can be changed by the rotating the threaded pin in or out. For this purpose, the threaded pin can have a tool holder in the shape of a socket drive, or something similar, on its opposite end.</p>
+      <p id="p-00018-en" num="0018">Furthermore, the threaded pin can be protected against loss, which limits the adjusting capacity. In the simplest case, it can be protected by a locking screw that runs transverse to the adjusting direction of the threaded pin, and which prevents an excess unscrewing of the threaded pin from the inner thread of the second stabilizer element.</p>
+      <p id="p-00019-en" num="0019">The stop pin may also be supported so it can be moved within a guide borehole constructed along the longitudinal axis of the second stabilizer element. The threaded section provided for the adjustment of the stop pin can be constructed, in this case, on a separate threaded pin impinging on the stop pin.</p>
+      <p id="p-00020-en" num="0020">A movement-inhibiting locking element may be used to prevent an unintended adjustment of the stop pin as a result of operation-caused vibrations or the like. This is, for example, constructed as a rubber-elastic O-ring, introduced into a circumferential grove of the stop pin, which is pre-compressed within the guide borehole of the stop pin so that it makes a displacement of the stop pin within the guide borehole difficult as a result of the frictional forces thus produced.</p>
+      <p id="p-00021-en" num="0021">In accordance with another possible alternative development of the stabilizer, the second limiting member is an intermediate ring located between the two stabilizer elements. The second stop can, in this case, be formed by a flattening provided on the front side on the intermediate ring. This is a unilateral stop area for a counter support constructed on the second stabilizer element in the shape of a surrounding limiting collar. A compression movement of the two stabilizer elements is permissible until there is contact between the limiting collar and the flattening provided on the front side. This means that, depending on the thickness of the intermediate ring used, it is possible to limit, in varying degrees, a compression movement of the two stabilizer elements. The limiting member can be a conventional closing flap wherein for the release of the intermediate ring and thus of the second stop, it has to first be brought from the closed into the opened position.</p>
+      <p id="p-00022-en" num="0022">For an easier assembling or dismantling, the intermediate ring can first be constructed in at least two parts. An assembly element in the shape of a spring-secured splint or a screw connection is hereby used for the detachable connection of the at least two parts on the first stabilizer element.</p>
+      <p id="p-00023-en" num="0023">Furthermore, the intermediate ring may have an inner thread that can be screwed on an outer thread that is constructed in an end area of the first stabilizer element, so that the position of the second stop can be adapted in a gradual manner by a corresponding screwing on or off of the intermediate ring. Here too, the intermediate ring can be constructed in two parts, wherein it can be braced by means of the assembly element with the outer thread of the first stabilizer element in such a way that it is secured against an unintended turning.</p>
+      <p id="p-00024-en" num="0024">Finally, the use of the intermediate ring can also be basically adjusted in connection with a hydraulic stabilizer so that a compression movement appearing on it can be limited in an appropriate manner.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 1</figref> is a perspective view of an embodiment example of the stabilizer in accordance with the invention for a lower link of a three-point hitch of a tractor;</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 2</figref> is a first sectional view of the stabilizer of <figref>FIG. 1</figref>;</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 3</figref> is a second sectional view of the stabilizer of <figref>FIG. 1</figref>;</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 4</figref> is a third sectional view of the stabilizer of <figref>FIG. 1</figref>;</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 5</figref> is a first sectional view of an alternative embodiment of a stabilizer for a lower link of a three point hitch of a tractor;</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 6</figref> is a second sectional view of the stabilizer of <figref>FIG. 5</figref>;</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 7</figref> is a perspective view of another alternative embodiment of a stabilizer for a lower link of a three-point hitch of a tractor;</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 8</figref> is a first sectional view of the stabilizer of <figref>FIG. 7</figref>;</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 9</figref> is a second sectional view of the stabilizer of <figref>FIG. 7</figref>; and</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 10</figref> is a perspective view of an embodiment example of a spring piston for use with the stabilizer embodiments.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00035-en" num="0035">At least one example embodiment of the subject matter of this disclosure is understood by referring to <figref>FIGS. 1 through 9</figref> of the drawings. Components that match or that are similar with regard to their function are marked with identical reference symbols.</p>
+      <p id="p-00036-en" num="0036">Referring to <figref>FIG. 1</figref>, the stabilizer <b>10</b> includes a first stabilizer element <b>12</b> and a second stabilizer element <b>16</b>, which is supported so it moves with a spring action along a common longitudinal axis <b>14</b>, opposite the first stabilizer element <b>12</b>. The first stabilizer element <b>12</b> is an essentially cylindrical stabilizer housing <b>18</b>, within which the second stabilizer element <b>16</b>, which is constructed as a spring piston <b>20</b>, is guided so it can move longitudinally, wherein the spring piston <b>20</b> is a component of a spring mechanism, which is described below with reference to <figref>FIGS. 2-4</figref>.</p>
+      <p id="p-00037-en" num="0037">The spring piston <b>20</b> has a piston section <b>22</b> with a reduced diameter, on which a first stop ring <b>24</b> is placed in a first end area so it can slide. The first stop ring <b>24</b> is secured by means of spring ring <b>26</b>, which meshes into a groove, which is formed circumferentially on the piston section <b>22</b>. Moreover, a second stop ring <b>28</b> is placed in a second area so it can slide. The second stop ring <b>28</b> is supported on a collar <b>30</b> which is formed on the spring piston <b>20</b>. A snap ring <b>32</b>, introduced into the stabilizer housing <b>18</b>, and a spacer <b>34</b> are used together with the first and second stop rings <b>24</b> and <b>28</b> to limit compression and extension movements of the spring piston <b>20</b>, and consequently form corresponding construction-related and, in that respect, stationary end stops <b>36</b> and <b>38</b> of the stabilizer <b>10</b>. A spiral spring <b>40</b>, surrounding the piston section <b>22</b>, extends between the two stop rings <b>24</b> and <b>28</b>. The spiral spring <b>40</b> is compressed or pre-stressed by means of the two stop rings <b>24</b> and <b>28</b> so that the spring piston <b>20</b>, and thus, the second stabilizer element <b>16</b>, is pressed into a pre-specified position at rest, so as to thus make possible a self-centering of a lower link equipped with the stabilizer <b>10</b>.</p>
+      <p id="p-00038-en" num="0038">It should be noted that the representation of the first stabilizer element <b>12</b> as an essentially cylindrical stabilizer housing <b>18</b> is merely shown as an example. Rather, a large number of other housing forms are also conceivable.</p>
+      <p id="p-00039-en" num="0039">The stabilizer <b>10</b> also includes a first limiting member <b>42</b>, connected with the first stabilizer element <b>12</b>, and a second limiting member <b>44</b> between the two stabilizer elements <b>12</b> and <b>16</b>. The first limiting member <b>42</b> is constructed as an outer closing flap <b>46</b> and the second limiting member <b>44</b> as an inner closing flap <b>48</b>, wherein the latter is located spatially or runs between the outer closing flap <b>46</b> and the first stabilizer element <b>12</b>, if the outer closing flap <b>46</b> and thus the inner closing flap <b>48</b> are located in a closed position, shown in <figref>FIGS. 1 and 2</figref>. As best seen in <figref>FIG. 2</figref>, a form- and/or force-locking is thereby produced, at least in sections, between the contours of the aforementioned parts <b>12</b>, <b>42</b>, and <b>44</b>.</p>
+      <p id="p-00040-en" num="0040">The two closing flaps <b>46</b> and <b>48</b> are connected with the first stabilizer element <b>12</b> so they can swivel about a common rotational axis <b>50</b>, running transverse to the longitudinal axis <b>14</b> of the stabilizer <b>10</b>. The rotational axis <b>50</b> is formed by a hinge pin <b>52</b>, which extends through the first stabilizer element <b>12</b>, on whose free end the two closing flaps <b>46</b> and <b>48</b> are supported so they can rotate by means of corresponding outer and inner strap hinges <b>54</b> and <b>56</b>.</p>
+      <p id="p-00041-en" num="0041">A first stop <b>58</b> is formed by a first flattening <b>60</b> provided on the front on the outer closing flap <b>48</b>, and a second stop <b>62</b> by a second flattening <b>64</b> provided on the front on the inner closing flap <b>48</b>. The first or second flattening <b>60</b> or <b>64</b>, provided on the front, represents an individual unilateral stop area for a counter bearing constructed on the second stabilizer element <b>16</b> in the shape of a surrounding limiting collar <b>66</b>. A compression movement of the two stabilizer elements <b>12</b> and <b>16</b> is permitted until there is contact between the limiting collar <b>66</b> and the individual unilateral stop area of the outer or inner closing flap <b>46</b> or <b>48</b>.</p>
+      <p id="p-00042-en" num="0042">For the gradual release of the stabilizer <b>10</b>, the outer closing flap <b>46</b> is to be swiveled first and subsequently, the inner closing flap <b>48</b>, in each case, from their closed into an opened position. This sequence is shown in <figref>FIGS. 2-4</figref>, wherein one can see that the second stop <b>62</b>, formed by the inner closing flap <b>48</b>, permits a compression movement that is greater in comparison to the first stop <b>58</b>, formed by the outer closing flap <b>46</b>, between the two stabilizer elements <b>12</b> and <b>16</b>.</p>
+      <p id="p-00043-en" num="0043">Generally speaking, in its closed position, the first limiting member <b>42</b> forms a first stop <b>58</b>, interacting with the second stabilizer element <b>16</b>, to limit a compression movement of the stabilizer elements <b>12</b> and <b>16</b>, wherein the second limiting member <b>44</b>, provided between the two stabilizer elements <b>12</b> and <b>16</b>, forms a second stop <b>62</b> to limit the compression movement in comparison to the corresponding end stop <b>36</b> of the stabilizer <b>10</b> for the case that the first limiting member <b>42</b> is brought into its opened position.</p>
+      <p id="p-00044-en" num="0044">As shown in <figref>FIGS. 1 and 2</figref>, the outer closing flap <b>46</b> encloses, in the closed position, both the inner closing flap <b>48</b> as well as the first stabilizer element <b>12</b>, at least in part. For this purpose, the outer closing flap <b>46</b> has the shape of a half-shell, encompassing, in sections, the inner closing flap <b>48</b> and the first stabilizer element <b>12</b> in their closed position. A similar development is also provided with respect to the inner closing flap <b>48</b>, so that in their closed position, the two closing flaps <b>46</b> and <b>48</b> protect at least the first stabilizer element <b>12</b>, including the suspension mechanism accommodated therein, from the penetration of undesired soiling from the outside.</p>
+      <p id="p-00045-en" num="0045">The outer closing flap <b>46</b> can be connected, via a tension strap <b>68</b> with a tension chain <b>70</b>, with a rear fastening site of the tractor (not shown) so as to bring it into the closed position automatically when the lower link is lifted. This is advantageous especially when carrying out transporting trips, since, here, an uncontrolled back and forth swiveling of an implement attached to the three-point hitch is to be prevented.</p>
+      <p id="p-00046-en" num="0046">Moreover, attached to the inner closing flap <b>48</b>, a coupling element <b>72</b> is present, by means of which the inner closing flap <b>48</b> can be brought, jointly with the outer closing flap <b>46</b>, from the closing position to the opened position. The coupling element <b>72</b> has the shape of a projection constructed on the inner closing flap <b>48</b>, which extends through an opening <b>74</b> provided on an upper side of the outer closing flap <b>46</b>, and through which a securing element <b>76</b>, shown in <figref>FIGS. 2 and 4</figref>, in the shape of a detachable splint is stuck; its dimensions are selected greater in comparison to the opening <b>74</b> in such a way that it moves along the inner closing flap <b>48</b> into the opened position when the outer closing flap <b>46</b> is lifted.</p>
+      <p id="p-00047-en" num="0047">The two closing flaps <b>46</b> and <b>48</b> are bent components produced from sheet steel, which have a reinforced stop area for the limiting collar <b>66</b>.</p>
+      <p id="p-00048-en" num="0048">Thus, the stabilizer <b>10</b> is of the so-called single-acting type. This means that it permits a gradual exclusive limitation of a compression movement of the two stabilizer elements <b>12</b> and <b>16</b>, but not of an extension movement. In order to be able to limit the permissible lateral movement of an implement attached to the three-point hitch in both directions, therefore, each of the two lower links of the three-point hitch is correlated with a separate stabilizer <b>10</b>, working in an opposite direction.</p>
+      <p id="p-00049-en" num="0049">For the production of a tractor-side articulated connection, the first stabilizer element <b>12</b> comprises a tie-rod <b>78</b>. The tie-rod <b>78</b> consists of a fastening eye <b>80</b>, formed in an end area of the first stabilizer element <b>12</b>, and a fastening sphere <b>82</b>, supported so it can rotate therein, which permits a spatial movement of the stabilizer <b>10</b> relative to a rear fastening site of the tractor.</p>
+      <p id="p-00050-en" num="0050">Furthermore, the second stabilizer element <b>16</b> comprises a fastening leg <b>84</b> for the creation of an articulated connection with one of the two lower links of the three-point hitch, wherein the fastening leg <b>84</b> has a fastening fork <b>86</b> that can be placed on the lower link.</p>
+      <p id="p-00051-en" num="0051">The second stabilizer element <b>16</b> is supported so it can rotate relative to the first stabilizer element <b>12</b>, with reference to the common longitudinal axis <b>14</b>, wherein an inner thread <b>88</b>, which is formed within the second stabilizer element <b>16</b>, meshes on an outer thread <b>90</b>, formed on the fastening leg <b>84</b>, so that the stabilizer <b>10</b> can be adjusted by rotating the second stabilizer element <b>16</b> relative to the first stabilizer element <b>12</b>, with reference to its entire length.</p>
+      <p id="p-00052-en" num="0052">For the manual rotation actuation of the second stabilizer element <b>16</b>, there is a gripping area <b>92</b>. The gripping area <b>92</b>, provided with an additional tool holder <b>94</b>, is connected with the second stabilizer element <b>16</b> so it cannot rotate.</p>
+      <p id="p-00053-en" num="0053">The limiting collar <b>66</b> and the gripping area <b>92</b> are a one-piece component of the second stabilizer element <b>16</b>. The second stabilizer element <b>16</b>, just like the first stabilizer element <b>12</b>, is a casting or a forged part made from a suitable steel alloy, which is subsequently appropriately processed to produce precise fits.</p>
+      <p id="p-00054-en" num="0054">In order to prevent an unintended adjustment of the entire length of the stabilizer <b>10</b>, a rotation of the second stabilizer element <b>16</b> can be locked relative to the first stabilizer element <b>12</b> by means of a locking element <b>96</b>.</p>
+      <p id="p-00055-en" num="0055">The locking element <b>96</b> comprises a spring clamp <b>98</b>, which meshes or is pressed into a recess <b>100</b> provided on the circumference of the limiting collar <b>66</b>. The spring clamp <b>98</b> can be swiveled out from the recess <b>100</b> manually, against a resetting spring force, so that a rotation of the limiting collar <b>66</b> is released. A fastening strap <b>102</b>, located on the first stabilizer element <b>12</b>, is used to hold the spring clamp <b>98</b>. The fastening strap <b>102</b> has two transverse boreholes <b>104</b> and <b>106</b> at a distance from one another in the longitudinal direction of the stabilizer <b>10</b>, wherein each of the two transverse boreholes <b>104</b> and <b>106</b> holds an open end of the spring clamp <b>98</b>. The closing flaps <b>46</b> and <b>48</b> are recessed in the area of the spring clamp <b>98</b> so that a swiveling out of the spring clamp <b>98</b> is also possible if the closing flaps <b>46</b> and <b>48</b> are located in the closed position.</p>
+      <p id="p-00056-en" num="0056">To facilitate a manual actuation of the spring clamp <b>98</b>, it comprises on its free end a gripping area <b>108</b>, which is expanded to form an eyelet. The resetting spring force is dimensioned in such a way that, on the one hand, a reliable locking of the rotatable limiting collar <b>66</b> is guaranteed and, on the other hand, an actuation of the spring clamp <b>98</b> without tools remains possible. The spring clap <b>98</b> is made from a noncorrosive or an appropriately surface-treated round wire.</p>
+      <p id="p-00057-en" num="0057">The recess <b>100</b> is a slit-shaped indentation, which is oriented in the direction of a spring movement between the first stabilizer element <b>12</b> and the second stabilizer element <b>16</b>. The slit-shaped indentation is formed so that it completely holds a meshing segment <b>110</b> provided on the spring clamp <b>98</b>. Since the spring clamp <b>98</b> is able to slide along the slit-shaped indentation, a spring movement between the two stabilizer elements <b>12</b> and <b>16</b> is not prevented.</p>
+      <p id="p-00058-en" num="0058">Here, a large number of recesses <b>100</b> are located, distributed along the circumference of the limiting collar <b>66</b>, so that the entire length of the stabilizer <b>10</b> can be gradually adjusted and locked.</p>
+      <p id="p-00059-en" num="0059">In <figref>FIGS. 5 and 6</figref>, an alternative embodiment of the stabilizer is shown for a lower link of a three-point hitch of a tractor.</p>
+      <p id="p-00060-en" num="0060">This differs from previously described embodiment in that the second limiting member <b>44</b> is constructed as a stop pin <b>112</b>, which can be adjusted along the longitudinal axis <b>14</b> of the stabilizer <b>10</b> to variably limit the compression movement. This makes it possible to gradually adapt the position of the second stop <b>62</b> and thus the permissible extent of a compression movement between the two stabilizer elements <b>12</b> and <b>16</b> in a deflection area given by the first stop <b>58</b> and the corresponding end stop <b>36</b> of the stabilizer <b>10</b>. The first limiting member <b>42</b> is a conventional closing flap <b>46</b>, wherein it is first brought from the closed into the opened position in accordance with the sequence shown in <figref>FIGS. 5 and 6</figref> for the release of the stop pin <b>112</b> and thus the second stop <b>62</b>.</p>
+      <p id="p-00061-en" num="0061">The second stop <b>62</b> is formed by a free end <b>114</b> of the stop pin <b>112</b>. Stated more precisely, the free end <b>110</b> forms a unilateral stop area for a counter bearing constructed within the second stabilizer element <b>16</b> in the shape of a central impact base <b>116</b>. A compression movement between the two stabilizer elements <b>12</b> and <b>16</b> is permitted until there is contact between the central impact base <b>116</b> and the free end <b>110</b> of the stop pin <b>112</b>.</p>
+      <p id="p-00062-en" num="0062">The stop pin <b>112</b> is supported so that it can be moved within a guide borehole <b>118</b> constructed along the longitudinal axis <b>14</b> of the second stabilizer element <b>16</b>, wherein a threaded pin <b>120</b>, which impinges on the stop pin <b>112</b>, is provided, which comprises a threaded section with an outer thread <b>122</b> for the adjustment of the stop pin <b>112</b>. The threaded pin <b>120</b> meshes into a complementary inner thread <b>124</b>, which is provided along the longitudinal axis <b>14</b> of the second stabilizer element <b>16</b> so that the position of the free end <b>110</b> can be changed by rotating the threaded pin <b>120</b> in or out. For this purpose, the threaded pin <b>120</b> has a tool holder <b>126</b> in the shape of a socket drive on its opposite end.</p>
+      <p id="p-00063-en" num="0063">So as to prevent an unintended adjustment of the stop pin <b>112</b> as a result of operation-caused vibrations or the like, the stop pin <b>112</b> is carries a movement-inhibiting locking element <b>128</b>. The locking element <b>128</b> is a rubber-elastic O-ring which is received by a circumferential groove on the stop pin <b>112</b>. The locking element <b>128</b> is compressed within the guide borehole <b>118</b> of the stop pin <b>112</b> so that it makes a movement of the stop pin <b>112</b> within the guide borehole <b>118</b> difficult as a result of the frictional forces produced by it.</p>
+      <p id="p-00064-en" num="0064">A loss protection device or locking screw <b>130</b> runs transverse to the adjustment direction of the threaded pin <b>120</b> and limits the adjusting capacity of the threaded pin <b>120</b> and prevents an excess screwing of the threaded pin <b>120</b> out of the inner thread <b>124</b> of the second stabilizer element <b>16</b>.</p>
+      <p id="p-00065-en" num="0065">In accordance with a non-depicted alternative development, the stop pin <b>112</b> itself can be constructed as a threaded pin. In this case, the requirement of a separate stop pin is omitted.</p>
+      <p id="p-00066-en" num="0066">
+        <figref>FIGS. 7-9</figref> show another alternative embodiment of a stabilizer for a lower link of a three-point hitch of a tractor. This differs from the preceding embodiment examples in that the second limiting member <b>44</b> is an intermediate ring <b>132</b> located between the two stabilizer elements <b>12</b> and <b>16</b>. The second stop <b>62</b> is formed in this case by a flattening <b>134</b> provided on the front side on the intermediate ring <b>132</b>. This represents a unilateral stop area for a counter bearing constructed on the second stabilizer element <b>16</b> in the shape of a surrounding limiting collar <b>66</b>. A compression movement between the two stabilizer elements <b>12</b> and <b>16</b> is permitted until there is contact between the limiting collar <b>66</b> and the flattening <b>134</b> provided on the front side. This means that, depending on the thickness of the used intermediate ring <b>132</b>, it is possible to limit, to a varying extent, the compression movement between the two stabilizer elements <b>12</b> and <b>16</b>. The first limiting member <b>42</b> is a conventional closing flap <b>46</b>, wherein it is to be first brought from the closed into the opened position in the sequence shown in <figref>FIGS. 8 and 9</figref> for the release of the intermediate ring <b>132</b> and thus of the second stop <b>62</b>.</p>
+      <p id="p-00067-en" num="0067">For an easier assembly or dismantling, the intermediate ring <b>132</b> is constructed in two parts. An assembly element <b>136</b>, in the shape of a screw connection, is hereby used for the detachable connection of the at least two parts on the first stabilizer element <b>12</b>.</p>
+      <p id="p-00068-en" num="0068">Optionally, the intermediate ring <b>132</b> has an inner thread, which can be screwed on an outer thread, constructed in an end area of the first stabilizer element <b>12</b>, so that the position of the second stop <b>62</b> can be gradually adapted by a corresponding screwing on or off of the intermediate ring <b>132</b>. As a result of the two-part structure of the intermediate ring <b>132</b>, it can be braced by means of the assembly element <b>136</b> with the outer thread of the first stabilizer element <b>12</b> in such a way that it is secured against an unintended rotation.</p>
+      <p id="p-00069-en" num="0069">While the above describes example embodiments of the present disclosure, these descriptions should not be viewed in a limiting sense. Rather, there are several variations and modifications which may be made without departing from the scope of the present invention as defined in the appended claims.</p>
+      <p id="p-00070-en" num="0070">While the disclosure has been illustrated and described in detail in the drawings and foregoing description, such illustration and description is to be considered as exemplary and not restrictive in character, it being understood that illustrative embodiments have been shown and described and that all changes and modifications that come within the spirit of the disclosure are desired to be protected. It will be noted that alternative embodiments of the present disclosure may not include all of the features described yet still benefit from at least some of the advantages of such features. Those of ordinary skill in the art may readily devise their own implementations that incorporate one or more of the features of the present disclosure and fall within the spirit and scope of the present invention as defined by the appended claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150924">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A stabilizer for a lower link of a three-point hitch of a tractor, with a first stabilizer element and a second stabilizer element, which is supported so it can move with spring action relative to the first stabilizer element along a common longitudinal axis, wherein a first limiting member is connected with the first stabilizer element, the first limiting member forming a first stop when it is in a closed position, the first stop interacting with the second stabilizer element to limit compression movement of the two stabilizer elements, characterized in that:
+<claim-text>a second limiting member is between the two stabilizer elements, the second limiting member forming a second stop which limits compression movement relative to a corresponding end stop of the stabilizer when the first limiting member is moved to an opened position.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The stabilizer of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein:
+<claim-text>the first limiting member is constructed as an outer closing flap and the second limiting member as an inner closing flap, wherein the two closing flaps are connected with the first stabilizer element so they can swivel about a rotational axis which runs transverse to the longitudinal axis of the stabilizer.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The stabilizer of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein:
+<claim-text>the first and second stops are formed by a flattening provided on the front side on the outer and/or inner closing flaps.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The stabilizer of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein:
+<claim-text>the two closing flaps are connected with the first stabilizer element so they can swivel around a common rotational axis.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The stabilizer of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein:
+<claim-text>in the closed position, the outer closing flap at least partially encloses both the inner closing flap and the first stabilizer element.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The stabilizer of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein:
+<claim-text>the outer closing flap includes a tension strap which is connected to a rear fastening site of the tractor via a chain.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The stabilizer of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein:
+<claim-text>a coupling element is placed on the inner closing flap, the coupling element moving the inner closing flap and the outer closing flap from a closed position to an open position.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The stabilizer of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein:
+<claim-text>the two closing flaps are bent components made of sheet steel.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The stabilizer of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein:
+<claim-text>the second limiting member comprises a stop pin which is adjustable along the longitudinal axis of the stabilizer to variably limit the compression movement.</claim-text></claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The stabilizer of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein:
+<claim-text>the second stop is formed by a free end of the stop pin.</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The stabilizer of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein:
+<claim-text>the stop pin comprises a threaded pin.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The stabilizer of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein:
+<claim-text>the stop pin is movable within a guide borehole, which is constructed along the longitudinal axis of the second stabilizer element, and the stop pin is adjusted by a threaded pin which impinges on the stop pin.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The stabilizer of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein:
+<claim-text>the stop pin carries with a movement-inhibiting locking element.</claim-text></claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The stabilizer of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein:
+<claim-text>the threaded pin engages a loss protection device, which limits an adjusting capacity of the threaded pin.</claim-text></claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The stabilizer of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein:
+<claim-text>the second limiting member is an intermediate ring, which is located between the two stabilizer elements.</claim-text></claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The stabilizer of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein:
+<claim-text>the intermediate ring is constructed in at least two parts.</claim-text></claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The stabilizer of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein:
+<claim-text>the intermediate ring has an inner thread, which is constructed in an end area of the first stabilizer element, and can be screwed on so that the position of the second stop can be gradually adapted by a corresponding screwing on or off the intermediate ring.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150264856A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150264856A1-20150924-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150264856A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264856A1-20150924-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150264856A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264856A1-20150924-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150264856A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264856A1-20150924-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150264856A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264856A1-20150924-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150264856A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264856A1-20150924-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150264856A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264856A1-20150924-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150264856A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264856A1-20150924-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150264856A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264856A1-20150924-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150264856A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264856A1-20150924-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150264856A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264856A1-20150924-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150264856A1_00012.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150264856A1-20150924-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150264856A1.PDF" type="pdf" size="656497" pages="17" />
+</lexisnexis-patent-document>

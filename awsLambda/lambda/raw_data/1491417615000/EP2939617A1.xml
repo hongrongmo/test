@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2939617A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091215" date-changed="20151110" time-changed="083718">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121940243">
+        <country>EP</country>
+        <doc-number>2939617</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>15150508</doc-number>
+        <date>20150108</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>US</country>
+        <doc-number>61985347</doc-number>
+        <date>20140428</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>US</country>
+        <doc-number>201461985347</doc-number>
+        <kind>P</kind>
+        <date>20140428</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>201461985347 P</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>US201461985347P</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151105">
+      <request-for-examination>
+        <date>20150126</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151105">
+      <classification-ipcr sequence="1">
+        <text>A61B  17/32        20060101AFI20150213BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>32</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150213</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151105">
+      <classification-cpc sequence="1">
+        <text>A61F   2/10        20130101 FI20150206BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>2</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150206</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B  17/32053     20130101 LI20150421BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>17</main-group>
+        <subgroup>32053</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150421</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61B2017/00752     20130101 LA20150421BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2017</main-group>
+        <subgroup>00752</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150421</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">15</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">Follikel-Punsch für den Einsatz mit krause Follikel</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">Follicle punch for use with curled follicles</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">Follicule poinçon pour une utilisation avec follicules bouclées</invention-title>
+    <references-cited date-changed="20151110">
+      <patent-citations name="patcit" date-changed="20151110" />
+      <citation>
+        <patcit num="1" dnum="WO2009146068A1" dnum-type="publication number">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2009146068</doc-number>
+            <kind>A1</kind>
+            <name>GEN HOSPITAL CORP [US], et al</name>
+            <date>20091203</date>
+          </document-id>
+          <application-date>
+            <date>20090401</date>
+          </application-date>
+        </patcit>
+        <category>X</category>
+        <category>I</category>
+        <category>Y</category>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="WO2007100581A2" dnum-type="publication number">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2007100581</doc-number>
+            <kind>A2</kind>
+            <name>BARD INC C R [US], et al</name>
+            <date>20070907</date>
+          </document-id>
+          <application-date>
+            <date>20070222</date>
+          </application-date>
+        </patcit>
+        <category>Y</category>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="NL1032931C1" dnum-type="publication number">
+          <document-id>
+            <country>NL</country>
+            <doc-number>1032931</doc-number>
+            <kind>C1</kind>
+            <name>HAIR SCIENCE INST [NL]</name>
+            <date>20080526</date>
+          </document-id>
+          <application-date>
+            <date>20061123</date>
+          </application-date>
+        </patcit>
+        <category>A</category>
+      </citation>
+    </references-cited>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Umar, Sanusi</orgname>
+            <registered-number>101422936</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>819 N. Harbor Drive Suite 400</address-1>
+              <city>Redondo Beach, CA 90277</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>Umar, Sanusi</name>
+            <address>
+              <address-1>819 N. Harbor Drive Suite 400</address-1>
+              <city>Redondo Beach, CA 90277</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Dickerson, David</name>
+            <registered-number>101189838</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Gartenstrasse 51</address-1>
+              <city>85354 Freising</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <patent-family date-changed="20151104">
+      <main-family family-id="174442384">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2939617</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20150108</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="174442383">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2838448</doc-number>
+            <kind>A4</kind>
+            <date>20150225</date>
+          </document-id>
+          <application-date>
+            <date>20131126</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014082077</doc-number>
+            <kind>A1</kind>
+            <date>20140530</date>
+          </document-id>
+          <application-date>
+            <date>20131126</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2892580</doc-number>
+            <kind>A1</kind>
+            <date>20140530</date>
+          </document-id>
+          <application-date>
+            <date>20131126</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2838448</doc-number>
+            <kind>A1</kind>
+            <date>20150225</date>
+          </document-id>
+          <application-date>
+            <date>20131126</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014082077</doc-number>
+            <kind>A4</kind>
+            <date>20140724</date>
+          </document-id>
+          <application-date>
+            <date>20131126</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015005970</doc-number>
+            <kind>A1</kind>
+            <date>20150115</date>
+          </document-id>
+          <application-date>
+            <date>20140513</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2939617</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20150108</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014082093</doc-number>
+            <kind>A1</kind>
+            <date>20140530</date>
+          </document-id>
+          <application-date>
+            <date>20131126</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">There is proposed a follicle punch comprising a generally tubular body disposed about a generally longitudinal axis between distal and proximal ends. A distal cutting end region terminates distally in an opposing pair of distally-extending, generally prong-like members having an anterior notch and a posterior notch therebetween. The prong-like members each have a curved anterior cutting edge and a curved posterior edge meeting at a cutting tip. <img id="imga-00001-en" wi="72" he="147" img-content="drawing" file="imgaf001.tif" img-format="tif" /></p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <heading id="h-00001-en">
+      <b>Field of the Invention</b>
+    </heading>
+    <p id="p-00001-en" num="0001">This invention relates to surgical instruments and, more particularly, to a punch for extracting hair follicles from the skin.</p>
+    <heading id="h-00002-en">
+      <b>Background of the Invention</b>
+    </heading>
+    <p id="p-00002-en" num="0002">Hair transplantation is a surgical technique that involves moving skin containing hair follicles from one part of the body (the donor site) to bald or balding parts (the recipient site).</p>
+    <p id="p-00003-en" num="0003">Hair naturally grows in follicles that contain groupings of 1 to 4 hairs, and transplant techniques typically move the 1-4 hair "follicular units" from the donor site to the recipient site. Hair follicles grow at an angle to the skin, pointing from anterior to posterior.</p>
+    <p id="p-00004-en" num="0004">The follicles of hair are typically removed from the donor site using punches of between 0.7mm and 1.25mm in diameter. The punches are tubular bodies having a skin-contacting cutting edge, and are typically mounted in a tool that causes the punch to rotate as the punch is brought into contact with the donor site. Hair follicles are very easily damage during the removal process, and damaged follicles are unlikely to be successfully transplanted.</p>
+    <p id="p-00005-en" num="0005">Curled follicles are extremely susceptible to damage by follicle punches and are therefore particularly difficult to extract for successful transplantation. Such follicles are curled beneath the skin and are easily cut and/or damaged by the advancing cutting edge of conventional punches as the punch penetrates the donor site's tissue.</p>
+    <heading id="h-00003-en">
+      <b>Summary of the Invention</b>
+    </heading>
+    <p id="p-00006-en" num="0006">The present invention proposes a punch that is particularly useful for removing curled hair follicles from a donor site comprises a generally tubular body disposed about a generally longitudinal axis and having a distal cutting end region terminating distally in a plurality of distally-extending circumferentially disposed, generally prong-like members carrying distally diverging cutting edges and separated by follicle-accommodating slits or slots. As used herein, the terms "slit" and "slot" are both used because the primary difference, as used herein, is subjective when working with dimensions of the small magnitudes discussed herein.</p>
+    <p id="p-00007-en" num="0007">According to the present invention, there is provided a follicle punch comprising: <ul id="ul-00001-en" list-style="none" compact="compact"><li>a generally tubular body disposed about a generally longitudinal axis between distal and proximal ends, and having a distal cutting end region terminating distally in an opposing pair of distally-extending, generally prong-like members having an anterior notch and a posterior notch therebetween, wherein the prong-like members each have a curved anterior cutting edge and a curved posterior edge meeting at a cutting tip.</li></ul></p>
+    <p id="p-00008-en" num="0008">Optionally, the anterior cutting edge of each prong-like member is convex, and the posterior cutting edge of each prong-like member is concave.</p>
+    <p id="p-00009-en" num="0009">Advantageously, the cutting tips are generally aligned with each other in the longitudinal direction.</p>
+    <p id="p-00010-en" num="0010">Conveniently, the cutting tips are aligned with each other in a direction transverse to the longitudinal axis.</p>
+    <p id="p-00011-en" num="0011">Optionally, the prong-like members have substantially the same shape as each other.</p>
+    <p id="p-00012-en" num="0012">Advantageously, one of said anterior and posterior notches extends proximately further than the other of said notches.</p>
+    <p id="p-00013-en" num="0013">Conveniently, the posterior notch extends proximately further than the anterior notch.</p>
+    <p id="p-00014-en" num="0014">Optionally, the posterior notch extends further than the anterior notch by a length in the range of 1 mm to 2 mm, inclusive.</p>
+    <p id="p-00015-en" num="0015">Advantageously, posterior notch has a generally "V"-shaped distal segment, and a generally "U"-shaped proximal segment extending proximally from the distal segment.</p>
+    <p id="p-00016-en" num="0016">Conveniently, the U-shaped notch includes two proximally extending legs connected by a generally laterally extending base at the proximal end of the notch, and wherein at least a portion of the legs carry respective cutting edges formed by respective bevelled surfaces. Optionally, the base of the U-shaped notch lacks a cutting edge formed by a bevelled cutting surface.</p>
+    <p id="p-00017-en" num="0017">Advantageously, at least one of the notches is generally V-shaped.</p>
+    <p id="p-00018-en" num="0018">Conveniently, said V-shaped notch includes two proximally extending legs that carry respective cutting edges formed by respective bevelled surfaces.</p>
+    <p id="p-00019-en" num="0019">Optionally, the prong-like members include bevelled surfaces terminating at the cutting edges.</p>
+    <p id="p-00020-en" num="0020">Advantageously, the bevelled surfaces are formed on the inside surface of the tubular punch body.</p>
+    <p id="p-00021-en" num="0021">Conveniently, the cutting edge formed by the bevelled cutting surface is at the punch's outer diameter.</p>
+    <p id="p-00022-en" num="0022">In practice, the punch is oriented during the extraction process at the donor site so that the curled hair root passes into, and is spared from the advancing cutting edge by, a slit as the punch is inserted into and penetrates the tissue. The punch may then be rotated slightly so that the cutting edges cut most of the tissue surrounding the follicle without making damaging contact with the follicle. It may be noted that a rotary motion may not be necessary and, if rotation is desired, it may be in one direction or be in the form of an oscillatory rotary movement, depending on characteristics of the donor site and targeted follicle.</p>
+    <p id="p-00023-en" num="0023">The foregoing insertion process may be performed manually or under machine or computer control, and with or without the aid of an ultrasonic transducer coupled to the punch to impart a vibratory cutting force against the tissue. In addition, a mechanism for automatically rotating the punch may be employed, and may accordingly be coupled to the ultrasonic transducer if one is used.</p>
+    <p id="p-00024-en" num="0024">So that the invention may be more readily understood, and so that further features thereof may be appreciated, embodiments of the invention will now be described by way of example with reference to the accompanying drawings in which: <ul id="ul-00002-en" list-style="none"><li><figref>Figure 1</figref> is a front elevation view of a punch for removing hair follicles that is constructed in accordance with the invention;</li><li><figref>Figure 2</figref> is a side elevation view of a punch of <figref>Figure 1</figref>;</li><li><figref>Figure 3</figref> is a longitudinal section view of the punch of <figref>Figure 1</figref>, taken along line 3-3 in <figref>Figure 1</figref>;</li><li><figref>Figure 4</figref> is a longitudinal section view of the punch of <figref>Figure 1</figref>, taken along line 4-4 in <figref>Figure 2</figref>;</li><li><figref>Figure 5</figref> is an enlarged fragmentary view of the portion of the punch illustrated within the line 5 of <figref>Figure 4</figref>;</li><li><figref>Figure 6</figref> is a bottom plan view of the punch of <figref>Figure 2</figref>;</li><li><figref>Figure 7</figref> is a fragmentary view in perspective of the cutting end region of the punch oriented per line 7-7 in <figref>Figure 6</figref> illustrated in <figref>Figure 1</figref>;</li><li><figref>Figure 8</figref> is an oblique fragmentary elevation view of the cutting end region of the punch of <figref>Figure 1</figref>;</li><li><figref>Figure 9</figref> is an oblique bottom view of the cutting end region of the punch of <figref>Figure 1</figref>;</li><li><figref>Figure 10</figref> is a schematic illustration of the preferred methodology for extracting a curled follicle in accordance with the invention;</li><li><figref>Figure 11A</figref> is a right front oblique view, in schematic, of an alternative embodiment of a punch that is constructed in accordance with the invention for removing hair follicles;</li><li><figref>Figure 11B</figref> is a longitudinal sectional view of the punch of <figref>Figure 11A</figref>, taken along line 11 B-11B in <figref>Figure 11C</figref>;</li><li><figref>Figure 11C</figref> is a front elevation view, in schematic, of the punch of <figref>Figure 11A</figref>,</li><li><figref>Figure 12A</figref> is a right front oblique view, in schematic, of a second alternative embodiment of a punch that is constructed in accordance with the invention for removing hair follicles;</li><li><figref>Figure 12B</figref> is a longitudinal sectional view of the punch of <figref>Figure 12A</figref>, taken along line 12B-12B in <figref>Figure 12C</figref>;</li><li><figref>Figure 12C</figref> is a front elevation view, in schematic, of the punch of <figref>Figure 12A</figref>;</li><li><figref>Figure 13A</figref> is a rear elevation view, in schematic, of the currently preferred embodiment of the distal end region of a punch constructed in accordance with the invention for removing hair follicles from patients with straight or wavy hair;</li><li><figref>Figure 13B</figref> is a left side elevation view, in schematic, of the distal end region illustrated in <figref>Figure 13A</figref>;</li><li><figref>Figure 13C</figref> is a front elevation view, in schematic, of the distal end region illustrated in <figref>Figure 13A</figref>;</li><li><figref>Figure 14A</figref> is a rear elevation view, in schematic, of the currently preferred embodiment of the distal end region of a punch constructed in accordance with the invention for removing hair follicles from patients with kinky Afro-textured hair;</li><li><figref>Figure 14B</figref> is a left side elevation view, in schematic, of the distal end region illustrated in <figref>Figure 14A</figref>;</li><li><figref>Figure 14C</figref> is a front elevation view, in schematic, of the distal end region illustrated in <figref>Figure 14A</figref>; and</li><li><figref>Figure 15</figref> is a schematic illustration of the preferred methodology for extracting a curled follicle using the punch of <figref>Figures 14a-c</figref> in accordance with the invention.</li></ul></p>
+    <heading id="h-00004-en">
+      <b>Detailed Description</b>
+    </heading>
+    <p id="p-00025-en" num="0025">Referring to Figures 1-9, a punch for extracting curled follicles is illustrated as comprising a generally tubular body 12 extending from a proximal end 14 to a skin-contacting distal end 16 about a generally central longitudinal axis 11. The currently preferred dimensions of the punch are displayed in the Figures in both inches (unbracketed) and millimeters (bracketed), said currently preferred dimensions being part of this Detailed Description.</p>
+    <p id="p-00026-en" num="0026">The punch's generally tubular body 12 has a distal cutting end region terminating distally in a plurality of distally-extending circumferentially disposed, generally prong-like members 13 carrying distally diverging cutting edges15 separated by follicle-accommodating slits 22. The currently preferred number of members 13 is two because a pair of such members currently appears to provide the appropriate amount of cutting around the follicle together with sufficient slit width to safely accommodate entry and protection of the follicle during the extraction process.</p>
+    <p id="p-00027-en" num="0027">As illustrated in the Figures, each of the preferred prong-like members 13 has a generally convex outer surface and a generally concave inner surface substantially the same as that of the tubular body. As also illustrated in the Figures, each of the prong-like members also has a beveled cutting surface 24, 26 terminating at a cutting edge, with the bevel preferably being on the inside of the punch so that it terminates at a cutting edge on the punch's outer diameter. However, the formation of bevels on the outer surface of the punch is also possible, although not preferred, and is within the scope of the invention. It may be noted that it is currently believed that the cutting edge portion illustrated in <figref>Figure 3</figref> as totaling 1.653 mm in length may be as long as approximately 4 mm or so, and that the follicle-accommodating slit 22 should preferably be approximately 2 mm - 4 mm longer than the cutting edge portion.</p>
+    <p id="p-00028-en" num="0028">The bevels 24, 26 are preferably created by grinding cutting edges outwardly from the interiors of the members 13 to produce sharp cutting edges. However, the bevels can also be formed by laser cutting, water jet or abrasive jet cutting, chemical moulding, and/or other manufacturing processes without departing from the scope of the invention.</p>
+    <p id="p-00029-en" num="0029">The bevels 24, 26 preferably interface at an apex of the prong-like member to provide a sharp, point-like, leading tip 25 which makes the initial penetration into the tissue that surrounds the targeted follicle, while the widening, generally semi-elliptical profiles of the prong-like members 13 cut more of the surrounding tissue as the punch is urged distally into the site. The leading tip can alternatively be a sharp rounded tip without departing from the scope of the invention.</p>
+    <p id="p-00030-en" num="0030">The distal end region of the punch may be further provided with generally circumferentially-extending notch having a generally concave shape that generally circumscribes the punch's outer surface. The notch preferably extends 1-2 mm proximally from a location closely adjacent the tip of the punch. The generally concave shape serves two purposes. First, its preferred size and shape results in a wound with everted edges; as the punch enters the tissue surrounding the targeted follicle, the tissue outward of the cut expands against the concavity as it is passed by the cutting edge. When the punch is subsequently withdrawn, the tissue resumes its consequently everted shape. Second, the generally concave shape and preferred sharpening from the inside of the punch results in a cutting force that is outwardly directed away from the follicle and tissue to be extracted, deceasing the risk of damage to the follicle.</p>
+    <p id="p-00031-en" num="0031">Alternatively, the punch can be provided with a flared distal end having a diameter that has a diverging inner diameter and diverging outer diameter along the last 1 mm or so, with the flared end region resulting in a preferred gap of approximately 1.25 mm between opposing tips. Gaps of great or lesser spacing may be utilized as well, depending on the subject's hair and follicle dimensions without departing from the scope of the invention.</p>
+    <p id="p-00032-en" num="0032">In one preferred configuration, the shape and dimensions of the slit 22 are, as best illustrated in <figref>Figures 4 and 5</figref>, a general inverted "V" profile having a relatively distal segment 22b and a relatively proximal segment 22a that is more steeply tapered than the distal segment 22b. The more steeply tapered interior of the relatively proximal segment provides a slit length and width that accommodates the follicle as the punch penetrates the surrounding tissue, in order to spare the follicle from being cut; the less tapered distal segment of the slit results in adequate spacing of the cutting edges of adjacent prong-like members 13 from the follicle's root structure so that the cutting yields a viable implant. Although the same taper could be used for both segments, it is preferable not to do so since a generally uniformly steep taper (such as that of the preferred distal segment) would add unnecessary length to the punch to achieve the needed spacing between the prongs, while a generally uniformly shallow taper (such as that of the preferred distal segment) would fail to provide the slit length needed.</p>
+    <p id="p-00033-en" num="0033">The cutting edge of the punch, which preferably extends from its leading tip to the beginning of the steeply tapered portion of the slit (i.e., the interface of the proximal and distal slit segments), may be smooth or include one or more serrations. If serrations are included, it is currently preferable that there be one or two serrations, with rounded edges, although the use of sharply angled edges would not depart from the scope of the invention.</p>
+    <p id="p-00034-en" num="0034">
+      <figref>Figure 10</figref> schematically illustrates (at "A") a subject's head 100 having a plurality of hairs 102 protruding from the skin 104. A hair 102 and its curled, subcutaneously-located follicle 106 is schematically illustrated in magnified form at "B".</p>
+    <p id="p-00035-en" num="0035">As next schematically illustrated with greater magnification at "C", the punch is inserted into the skin at the donor site in such a way that the hair enters the punch's interior while the follicle 106 passes uncut through the slit 22. As further illustrated at "D", the punch is advanced past the follicle, which remains undamaged by the cutting edges of the punch by passing through the slit. Once the punch has penetrated sufficiently, it can be partially rotated back and forth if desired, as schematically illustrated by the arrows, resulting in an arcuate cut in the tissue substantially circumscribing the curled follicle, while the follicle itself is spared by its clearance within the slit and isolation from the cutting edges. The intact hair follicle is then removed from the donor site for subsequent transfer to the recipient site.</p>
+    <p id="p-00036-en" num="0036">To penetrate the skin, the punch could be manually pressed proximally by hand. Currently, it is believed that the use of an ultrasonic transducer to apply rapid, incremental, proximally-directed cutting force pulses to the tissue via the punch offers a more precisely controllable methodology for penetrating the tissue while the punch is positioned at the donor site and oriented so as to accommodate the follicle within the slit.</p>
+    <p id="p-00037-en" num="0037">Turning to <figref>Figures 11A-C</figref>, another variation a follicle punch constructed in accordance with the invention is illustrated. It should be noted that the interior surfaces of the punch are smooth; the apparent facets illustrated in <figref>Figures 11A and 11B</figref> are computer-generated "tangent" lines connoting a change in surface direction only.</p>
+    <p id="p-00038-en" num="0038">The punch illustrated in <figref>Figures 11A-C</figref> comprises a pair of distally-extending circumferentially disposed, generally prong-like members 113 carrying distally diverging cutting edges 114, 116 and separated by a generally U-shaped follicle-accommodating slit 122. The cutting edge of each prong-like member is again preferably formed from the inside of the punch by grinding cutting edges outwardly from the interior region of the members. However, as noted earlier, the cutting edges can also be formed by laser cutting, water jet or abrasive jet cutting, chemical moulding, and/or other manufacturing processed without departing from the scope of the invention. The leading tips 125 of the punch illustrated in <figref>Figures 11A-C</figref> are sharp rounded tips that make the initial penetration into the skin and tissue surrounding the targeted follicle.</p>
+    <p id="p-00039-en" num="0039">To minimize the risk of the follicle being cut during the extraction process, the formation of the cutting edges may be limited to the first 0.060 inches (1.52 mm) or so from the distal tip 125 of the punch, so that the cutting edges pass the follicle during insertion of the punch at the donor site and any subsequent contact between the punch and follicle is not with a cutting edge. The cutting edge may however extend the entire length, or a different length, of the slits.</p>
+    <p id="p-00040-en" num="0040">The gap between the prong-like members of the punch illustrated in <figref>Figures 11A-C</figref> is preferably 0.02-0.03 inches (0.51- 0.76 mm) wide. It preferably extends proximally from the distal tip of the punch for about 0.12 to 0.16 inches (3.05 - 4.06 mm).</p>
+    <p id="p-00041-en" num="0041">Turning to <figref>Figure 12A-C</figref>, another variation of the punch is illustrated, wherein the punch comprises a pair of distally-extending circumferentially disposed generally prong-like members 213 that carry distally-diverging cutting edges 214, 216 separated by a generally U-shaped follicle-accommodating slit. The leading tips 225 of the members 213 are sharp pointed tips. Each cutting edge 214, 216 is preferably formed from the inside of the punch by grinding cutting edges outwardly from the interior region of the prong-like members. However, as noted earlier, the cutting edges can also be formed by laser cutting, water jet or abrasive jet cutting, chemical moulding, and/or other manufacturing processed without departing from the scope of the invention. To minimize the risk of the follicle being cut during the extraction process, the formation of the cutting edges may be limited to the first 0.060 inches (1.52 mm) or so from the distal tip of the punch, so that the cutting edges pass the follicle during insertion of the punch at the donor site and any subsequent contact between the punch and follicle is not with a cutting edge. The cutting edge may however extend the entire length, or a different length, of the gap.</p>
+    <p id="p-00042-en" num="0042">The gap between the prong-like members of the punch illustrated in <figref>Figures 12A-C</figref> is preferably 0.03 inches (0.076 mm) wide, and preferably extends proximally from the distal tip of the punch for about 0.16 inches (4.06 mm).</p>
+    <p id="p-00043-en" num="0043">As with <figref>Figures 11A-B</figref>, it should be noted that the interior surfaces of the punch illustrated in <figref>Figures 12A-B</figref> are smooth, and that the apparent facets are computer-generated "tangent" lines connoting a change in surface direction only.</p>
+    <p id="p-00044-en" num="0044">
+      <figref>Figure 13A</figref> is a rear elevation view, in schematic, of the distal end region of the currently preferred punch for removing hair follicles from patients with straight or wavy hair, while <figref>Figure 13B</figref> is a left side elevation view, in schematic, of the distal end region illustrated in <figref>Figure 13A and Figure 13C</figref> is a front elevation view, in schematic, of the distal end region illustrated in <figref>Figure 13A</figref>. The distal end region illustrated in <figref>Figures 13A-C</figref>, comprises a generally tubular body 302 disposed about a generally longitudinal axis 304 between distal and proximal ends 306, 308, and having a distal cutting end region terminating distally in an opposing pair of distally-extending, generally prong-like members 310, 312 having posterior and anterior notches 314, 316 therebetween. The tubular body is preferably formed from stainless steel having a thickness in the range of 15-22 gauge (i.e., 0.0673 - 0.0299 inches; 1.709- 0.759 mm). For exemplary purposes, an 18 gauge thickness (0.0478 inches; 1.214 mm) will be used herein.</p>
+    <p id="p-00045-en" num="0045">Each of the prong-like members carries cutting edges 318 preferably formed by a respective beveled surface within the generally tubular body that terminates at the cutting edge so that the cutting edge is formed at the outer surface (i.e., the outer diameter) of the generally tubular body. Preferably, the cutting edge extends completely around the prong-like member, and may be serrated or (preferably) non-serrated. The preferred bevel is created by sharpening the generally tubular body from the inside at a 15° angle.</p>
+    <p id="p-00046-en" num="0046">As illustrated in <figref>Figures 13A and 13C</figref>, the currently preferred posterior notch 314 extends further in the proximal direction than the currently preferred anterior notch 316, and is shaped differently. Turning first to the preferred anterior notch best shown in <figref>Figure 13C</figref>, the notch 316 is generally V-shaped, comprising two proximally extending legs 316a, 316b that carry respective cutting edges formed by respective beveled surfaces. The apex of the "V" is approximately 0.118 inches (3 mm) proximally from the tip 320 of the prong-like member. The legs 316a, b of the notch each extend at a preferred angle of approximately 12° with respect to the longitudinal axis 304, resulting in angle of convergence of approximately 24°.</p>
+    <p id="p-00047-en" num="0047">The currently preferred posterior notch 314, best illustrated in <figref>Figure 13A</figref>, comprises a generally "V"-shaped distal segment 314a, and a generally "U"-shaped proximal segment 314b that extends proximally from the distal segment. The U-shaped segment includes two proximally extending legs connected by a generally laterally extending base 314c at the proximal end of the notch. Preferably, and for reasons described later, the proximally-extending legs of the U-shaped segment carry respective sharpened cutting edges formed by respective beveled surfaces, while the base 314c lacks a sharpened cutting.</p>
+    <p id="p-00048-en" num="0048">The currently preferred generally V-shaped distal segment 314a of the posterior notch is approximately 0.097 inches (2.46 mm) proximally of the tip 306. The base 314c lies approximately 0.157 inches (4 mm) proximally of the tip 306; i.e. 0.039 inches (1 mm) proximally further from the tip than the apex of anterior notch's apex. In practice, a difference in the range of 0-0.12 inches (0-3 mm) is acceptable for reasons described later. Preferably, the angle of convergence of the legs of the posterior notch's V-shaped segment is the same as that of the anterior notch's legs 316a,b.</p>
+    <p id="p-00049-en" num="0049">
+      <figref>Figure 14A</figref> is a rear elevation view, in schematic, of the distal end region of the currently preferred punch constructed in accordance with the invention for removing hair follicles from patients with kinky Afro-textured hair, while <figref>Figure 14B</figref> is a left side elevation view, in schematic, of the preferred distal end region illustrated in <figref>Figure 14A and Figure 14C</figref> is a front elevation view, in schematic, of the preferred distal end region illustrated in <figref>Figure 14A</figref>.</p>
+    <p id="p-00050-en" num="0050">As illustrated in <figref>Figures 14A-C</figref>, the preferred punch's distal end region comprises a generally tubular body 402 disposed about a generally longitudinal axis 404 between distal and proximal ends 406, 408, and has a distal cutting end region terminating distally in an opposing pair of distally-extending, generally prong-like members 410, 412 having posterior and anterior notches 414, 416 therebetween. The prong-like members each have a convex curved anterior cutting edge 418 and a concave curved posterior cutting edge 420; the two cutting edges 418, 420 meeting at a cutting tip 428.</p>
+    <p id="p-00051-en" num="0051">The prong-like members are preferably aligned with each other in the longitudinal and lateral directions (i.e., in the directions transverse to the longitudinal axis) as illustrated in <figref>Figure 14A-C</figref>, and have substantially the same shape as each other. As illustrated particularly in <figref>Figure 14B</figref>, the cutting tips 428 of the two prong-like members 410, 412 are thus aligned with one another, and in the particular embodiment illustrated are offset slightly from the longitudinal axis 404, towards the posterior side (i.e. the left-hand side as illustrated in <figref>Figure 14B</figref>) of the punch as viewed in side elevation along the plane of the longitudinal axis. However, in other embodiments it is proposed that the cutting tips 428 may be aligned with the longitudinal axis, when viewed from the side as in <figref>Figure 14B</figref></p>
+    <p id="p-00052-en" num="0052">As shown most clearly in the side elevational view of <figref>Figure 14B</figref>, in the illustrated embodiment the concave posterior cutting edge 420 of each prong-like member 410, 412, extends from the distal end of the posterior notch 414 and through a transverse plane (i.e., orthogonal to the page) passing through the longitudinal axis 404 of the punch as viewed in side elevation, before curving back towards, and through, the same plane again.</p>
+    <p id="p-00053-en" num="0053">By way of example, one preferred tubular body formed from 18-gauge stainless steel (a thickness of 0.0478 inches (1.214 mm)) terminates in prong-like members having a convex anterior cutting edge 418 characterized by a 0.051 inch radius of curvature and a concave posterior cutting edge 420 characterized by a 0.088 inch (2.24 mm) radius of curvature.</p>
+    <p id="p-00054-en" num="0054">As with the punch of <figref>Figures 13A-C</figref>, the punch of <figref>Figures 14A-C</figref> preferably has a posterior notch 414 extending further proximately than the anterior notch 416 by a length in the range of 0 mm to 3 mm, inclusive. Turning first to the preferred anterior notch 416 best shown in <figref>Figure 14C</figref>, the notch 416 has a proximal segment that is generally U-shaped, comprising two proximally extending legs 424, 426 that preferably carry sharpened cutting edges. The legs 424, 426 are linked at their proximal end by a curved lateral segment 430 having, by way of example, a radius of curvature of 0.013 inches (0.33 mm) approximately 0.065 inches (1.65 mm) proximal of the cutting tip. The anterior notch 416 further comprises a distal generally "V"-shaped segment that interfaces with the proximal segment approximately 0.043 inches (1.09 mm) proximally from the tips 428.</p>
+    <p id="p-00055-en" num="0055">The currently preferred posterior notch 414, best illustrated in <figref>Figure 14A</figref>, comprises a generally "U"-shaped posterior notch segment formed by two proximally extending legs 432 connected by a curved generally laterally extending base 434 at the proximal end of the notch 414. Preferably, and for reasons described later, the proximally-extending legs 432 of the U-shaped segment carry respective cutting edges formed by respective beveled surfaces, while the laterally-extending base 434 lacks a sharpened cutting edge.</p>
+    <p id="p-00056-en" num="0056">The legs 432 of the illustrated posterior notch 414 interface with the prong-like members approximately 0.085 inches (2.16 mm) proximally from the tips 428. The laterally-extending base 434 is approximately 0.133 inches (3.38 mm) proximally from the tips. Accordingly, the posterior notch 414 extends approximately 0.083 inches (2.1 mm) further from the tips than the anterior notch 416.</p>
+    <p id="p-00057-en" num="0057">
+      <figref>Figure 15</figref> schematically illustrates (at "A") a subject's head 500 having a plurality of hairs 502 protruding from the skin 504. A hair 502 and its curled, subcutaneously-located follicle 506 is schematically illustrated in magnified form at "B". The hair follicle grow at an angle Θ to the skin, pointing from anterior to posterior.</p>
+    <p id="p-00058-en" num="0058">As next schematically illustrated with greater magnification at "C", the preferred punch of <figref>Figures 14A-C</figref> is inserted into the skin at the donor site in such a way that the hair 502 enters the punch's interior. As the hair and follicle enter the punch's interior, its curl is accommodated by the posterior notch 414. Because the posterior notch 414 is sufficiently long in the proximal direction and its laterally-extending base 434 lacks a sharpened cutting edge, the curled hair 502 and follicle 506 is less likely to be damaged by contact with the edges of the posterior notch 414 during punch insertion. As the punch is further inserted from its positions in "C" and "D" to follow the follicle 506 as the prong-like members' cutting edges 418, 420 cut the surrounding tissue, the curled shape of the follicle 506 causes it to contact the posterior internal surface of the punch and, perhaps, the laterally-extending base 434 of the posterior notch 414. As the punch is advanced past the follicle 506, it remains undamaged by the cutting edges 418, 420 of the punch by passing through the posterior notch 414. Once the punch has penetrated sufficiently, it can be partially rotated back and forth if desired, resulting in an arcuate cut in the tissue substantially circumscribing the curled follicle, while the follicle itself is spared by its clearance within the posterior notch 414 and the lack of a cutting edge on the base member 434.</p>
+    <p id="p-00059-en" num="0059">The placement of a "V"-shaped notch 416 on the anterior side of the punch illustrated in <figref>Figures 14A-C</figref> is preferred because the cutting edges circumscribing that notch shape cut more efficiently and controllably, and contact with the follicle (which points away from the anterior is unlikely.</p>
+    <p id="p-00060-en" num="0060">Those of ordinary skill in the art will recognize, however, that the anterior and posterior notches could be the same shape---e.g., either generally V-shaped, generally "U" shaped, generally " 'V' plus 'U'-shaped, or other desired shape-and such combinations are within the scope of the invention.</p>
+    <p id="p-00061-en" num="0061">Regardless of the specific version of follicle punch utilized, the inclusion of an ultrasonic transducer coupled to the punch and selectively operable to enhance the cutting operation is desirable. The transducer is mounted within a handpiece to which the punch is attached in a manner analogous to the transducer, handpiece and scaler tip of an ultrasonic dental scaler.</p>
+    <p id="p-00062-en" num="0062">The punch may be further mounted for reciprocating pivoting movement within the handpiece so as to move in such manner with or without ultrasonic vibratory movement. Likewise, the configuration may be such that ultrasonic vibratory movement can be generated with or without the pivoting movement.</p>
+    <p id="p-00063-en" num="0063">In practice, it has been found that an adjustable degree of longitudinally reciprocating ultrasonic movement is desirable in that the appropriate degree of movement is a function of the subject's skin thickness and tissue, with higher settings being suitable when cutting through thicker skin or scar tissue for example. The use of the ultrasonic movement permits the surgeon or other operator of the equipment to better use his/her "fine motor" muscle movement to more precisely make the required incisions with greater sensitivity and finesse.</p>
+    <p id="p-00064-en" num="0064">Although the present invention and its advantages have been described in detail, it should be understood that various changes, substitutions and alterations can be made herein without departing from the spirit and scope of the invention as will be defined by appended claims.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>A follicle punch comprising:
+<claim-text>a generally tubular body disposed about a generally longitudinal axis between distal and proximal ends, and having a distal cutting end region terminating distally in an opposing pair of distally-extending, generally prong-like members having an anterior notch and a posterior notch therebetween, wherein</claim-text><claim-text>the prong-like members each have a curved anterior cutting edge and a curved posterior edge meeting at a cutting tip.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The punch of claim 1, wherein the anterior cutting edge of each prong-like member is convex, and the posterior cutting edge of each prong-like member is concave.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The punch of Claim 1 or claim 2, wherein the cutting tips are generally aligned with each other in the longitudinal direction.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The punch of any preceding claim, wherein the cutting tips are aligned with each other in a direction transverse to the longitudinal axis.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The punch of any preceding claim, wherein the prong-like members have substantially the same shape as each other.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>The punch of any preceding claim, wherein one of said anterior and posterior notches extends proximately further than the other of said notches.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>The punch of any preceding claim, wherein the posterior notch extends proximately further than the anterior notch.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>The punch of Claim 7 wherein the posterior notch extends further than the anterior notch by a length in the range of 1 mm to 2 mm, inclusive.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>The punch of any preceding claim, wherein posterior notch has a generally "V"-shaped distal segment, and a generally "U"-shaped proximal segment extending proximally from the distal segment.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>The punch of Claim 9 wherein the U-shaped notch includes two proximally extending legs connected by a generally laterally extending base at the proximal end of the notch, and wherein at least a portion of the legs carry respective cutting edges formed by respective beveled surfaces.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>The punch of Claim 9 or Claim 10, wherein the base of the U-shaped notch lacks a cutting edge formed by a beveled cutting surface.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>The punch of any preceding claim, wherein at least one of the notches is generally V-shaped.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>The punch of Claim 12 wherein said V-shaped notch includes two proximally extending legs that carry respective cutting edges formed by respective beveled surfaces.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>The punch of any preceding claim wherein the prong-like members include beveled surfaces terminating at the cutting edges.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>The punch of Claim 14 wherein the beveled surfaces are formed on the inside surface of the tubular punch body.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2939617A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2939617A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2939617A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0002.tif" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2939617A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0003.tif" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2939617A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0004.tif" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP2939617A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0005.tif" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="EP2939617A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0006.tif" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="EP2939617A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0007.tif" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="EP2939617A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0008.tif" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="EP2939617A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0009.tif" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="EP2939617A1_00011.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+  </drawings>
+  <image file="EP2939617A1.PDF" type="pdf" size="334008" pages="19" />
+</lexisnexis-patent-document>

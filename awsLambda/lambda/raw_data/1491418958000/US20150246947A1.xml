@@ -1,0 +1,1860 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246947A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021239" date-changed="20160118" time-changed="124524">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121139035">
+        <country>US</country>
+        <doc-number>20150246947</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14634028</doc-number>
+        <date>20150227</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C07K   7/08        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>7</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61K  38/10        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>38</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61K  47/48        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>48</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C07K   7/08        20130101 FI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>7</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K  38/00        20130101 LA20150512BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>38</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150512</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61K  38/10        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>38</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61K  47/48215     20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>48215</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C07K  14/745       20130101 LI20150512BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>14</main-group>
+        <subgroup>745</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150512</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">24</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">PEPTIDES AND METHODS OF USE</invention-title>
+    <related-documents date-changed="20150903">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61946103</doc-number>
+          <date>20140228</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>BAXTER INTERNATIONAL INC.</orgname>
+            <address>
+              <city>Deerfield</city>
+              <state>IL</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+        <applicant sequence="2" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>BAXTER HEALTHCARE SA</orgname>
+            <address>
+              <city>Glattpark (Opfikon)</city>
+              <country>CH</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>CH</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Dockal</last-name>
+            <first-name>Michael</first-name>
+            <address>
+              <city>Vienna</city>
+              <country>AT</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Polakowski</last-name>
+            <first-name>Thomas</first-name>
+            <address>
+              <city>Berlin</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Osterkamp</last-name>
+            <first-name>Frank</first-name>
+            <address>
+              <city>Berlin</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hartmann</last-name>
+            <first-name>Rudolf</first-name>
+            <address>
+              <city>Bisamberg</city>
+              <country>AT</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Paschke</last-name>
+            <first-name>Matthias</first-name>
+            <address>
+              <city>Berlin</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hartlieb</last-name>
+            <first-name>Bettina</first-name>
+            <address>
+              <city>Vienna</city>
+              <country>AT</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="7" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Scheiflinger</last-name>
+            <first-name>Friedrich</first-name>
+            <address>
+              <city>Vienna</city>
+              <country>AT</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173461808">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246947</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150227</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173461807">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246947</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150227</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The invention provides peptides, including peptides that bind and, optionally, inhibit Protein S, and compositions thereof. The peptides may be used to, e.g., inhibit Protein S activity, enhance thrombin formation in a subject, increase blood clot formation in a subject, treat a blood coagulation disorder in a subject, purify Protein S, and identify a Protein S binding compound.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150420</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246947A1</docdb-publication-number>
+      <docdb-application-id>444209794</docdb-application-id>
+      <new-owner>BAXTER INTERNATIONAL INC., ILLINOIS</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:DOCKAL, MICHAEL;HARTMANN, RUDOLF;HARTLIEB, BETTINA;AND OTHERS;SIGNING DATES FROM 20150324 TO 20150327;REEL/FRAME:035445/0587</free-text-description>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20150420</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246947A1</docdb-publication-number>
+      <docdb-application-id>444209794</docdb-application-id>
+      <new-owner>3B PHARMACEUTICALS GMBH, GERMANY</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:POLAKOWSKI, THOMAS;OSTERKAMP, FRANK;PASCHKE, MATTIAS;REEL/FRAME:035445/0620</free-text-description>
+      <effective-date>
+        <date>20150323</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20150420</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246947A1</docdb-publication-number>
+      <docdb-application-id>444209794</docdb-application-id>
+      <new-owner>BAXTER INTERNATIONAL INC., ILLINOIS</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:3B PHARMACEUTICALS GMBH;REEL/FRAME:035445/0645</free-text-description>
+      <effective-date>
+        <date>20150323</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20150420</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246947A1</docdb-publication-number>
+      <docdb-application-id>444209794</docdb-application-id>
+      <new-owner>BAXTER HEALTHCARE SA, SWITZERLAND</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:3B PHARMACEUTICALS GMBH;REEL/FRAME:035445/0645</free-text-description>
+      <effective-date>
+        <date>20150323</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="5">
+      <publication-date>
+        <date>20150420</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246947A1</docdb-publication-number>
+      <docdb-application-id>444209794</docdb-application-id>
+      <new-owner>BAXTER HEALTHCARE SA, SWITZERLAND</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:DOCKAL, MICHAEL;HARTMANN, RUDOLF;HARTLIEB, BETTINA;AND OTHERS;SIGNING DATES FROM 20150324 TO 20150327;REEL/FRAME:035445/0587</free-text-description>
+    </legal-event>
+    <legal-event sequence="6">
+      <publication-date>
+        <date>20150817</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246947A1</docdb-publication-number>
+      <docdb-application-id>444209794</docdb-application-id>
+      <new-owner>BAXALTA GMBH, SWITZERLAND</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:BAXTER INTERNATIONAL INC.;REEL/FRAME:036372/0411</free-text-description>
+      <effective-date>
+        <date>20150811</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="7">
+      <publication-date>
+        <date>20150817</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246947A1</docdb-publication-number>
+      <docdb-application-id>444209794</docdb-application-id>
+      <new-owner>BAXALTA GMBH, SWITZERLAND</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:BAXTER HEALTHCARE SA;REEL/FRAME:036368/0001</free-text-description>
+      <effective-date>
+        <date>20150811</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="8">
+      <publication-date>
+        <date>20150817</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246947A1</docdb-publication-number>
+      <docdb-application-id>444209794</docdb-application-id>
+      <new-owner>BAXALTA INCORPORATED, ILLINOIS</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:BAXTER HEALTHCARE SA;REEL/FRAME:036368/0001</free-text-description>
+      <effective-date>
+        <date>20150811</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="9">
+      <publication-date>
+        <date>20150817</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015246947A1</docdb-publication-number>
+      <docdb-application-id>444209794</docdb-application-id>
+      <new-owner>BAXALTA INCORPORATED, ILLINOIS</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:BAXTER INTERNATIONAL INC.;REEL/FRAME:036372/0411</free-text-description>
+      <effective-date>
+        <date>20150811</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATION</heading>
+      <p id="p-00001-en" num="0001">This application claims priority to U.S. Provisional Patent Application No. 61/946,103, filed Feb. 28, 2014, which is incorporated by reference herein in its entirety.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">TECHNICAL FIELD OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">The invention generally relates to peptides that bind Protein S and uses thereof.</p>
+      <heading id="h-00003-en" level="1">INCORPORATION BY REFERENCE</heading>
+      <p id="p-00003-en" num="0003">Incorporated by reference in its entirety is a computer-readable nucleotide/amino acid sequence listing submitted concurrently herewith and identified as follows: ASCII text file named “46380A_SeqListing.txt,” 1,390,466 bytes, created Feb. 27, 2015.</p>
+      <heading id="h-00004-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00004-en" num="0004">Hemostasis relies on the complex coagulation cascade, wherein a series of events mediated by blood clotting factors leads to conversion of prothrombin to thrombin. Factor X (FX) activation is the central event of both the intrinsic and extrinsic pathways of the coagulation cascade. The extrinsic pathway has been proposed as the primary activator of the coagulation cascade (Mackman et al., <i>Arterioscler. Thromb. Casc. Biol., </i>27, 1687-1693 (2007)). Circulating Tissue Factor (TF) and activated Factor VII (FVIIa) interact to form the “extrinsic complex,” which mediates activation of FX. The coagulation cascade is amplified by the intrinsic pathway, during which successive activation of factors XII, XI, IX, and VIII results in formation of the “intrinsic” FIXa-FVIIIa complex that also mediates FX activation. Activated FX promotes thrombin formation, which is required for the body to create fibrin and effectively curb bleeding. Coagulation is down-regulated by the Protein C-mediated anticoagulant pathway. Thrombin in complex with thrombomodulin activates Protein C. Activated Protein C with its co-factor, Protein S, degrades and inactivates activated blood factors V (FVa) and VIII (FVIIIa).</p>
+      <p id="p-00005-en" num="0005">Severe bleeding disorders, such as hemophilia, result from disruption of the blood coagulation cascade. Factor replacement therapy is the most common treatment for blood coagulation disorders. However, blood clotting factors typically are cleared from the bloodstream shortly after administration. To be effective, a patient must receive frequent intravenous infusions of plasma-derived or recombinant factor concentrates, which is uncomfortable, is expensive, and is time consuming. In addition, therapeutic efficacy of factor replacement therapy can diminish drastically upon formation of inhibitory antibodies. Few therapeutic options exist for patients with anti-Factor antibodies.</p>
+      <heading id="h-00005-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00006-en" num="0006">The invention includes, for example, a peptide comprising an amino acid sequence at least 50% identical to the amino acid sequence VSAGWYDYNTDTYYEF (SEQ ID NO: 2920) and comprising the structure of Formula I: X1004-X1005-X1006-X1007-X1008-X1009-X1010-X1011-X1012-X1013-X1014-X1015-X1016-X1017-X1018-X1019, wherein X1004 is A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, Tle, V, v, W, or Y; wherein X1005 is A, C, D, Dap, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, s, T, V, W, or Y; wherein X1006 is A, a, Aib, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, s, T, Tle, V, W, or Y; wherein X1007 is A, a, Aib, C, D, E, F, G, H, I, K, L, M, N, Nmg, P, p, Q, R, S, s, T, Tle, V, W, or Y; wherein X1008 is 1Ni, 2Ni, A, Bta, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, w, or Y; wherein X1009 is A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, Y, or w; wherein X1010 is A, C, D, d, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, w, or Y; wherein X1011 is A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, Y, or w; wherein X1012 is A, C, D, E, F, G, H, I, K, L, M, N, n, P, p, Q, R, S, T, V, W, or Y; wherein X1013 is A, a, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, t, V, W, or Y; wherein X1014 is A, C, D, d, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, or Y; wherein X1015 is A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, t, Tle, V, W, or Y; wherein X1016 is A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, or Y; wherein X1017 is A, C, D, E, F, G, H, I, K, L, M, N, Nle, P, p, Q, R, S, T, V, W, Y, or y; wherein X1018 is A, C, D, E, e, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, or Y; and wherein X1019 is A, C, D, E, F, f, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, or Y (SEQ ID NO: 2921). In various embodiments, the peptide further comprises one or more N-terminal amino acid(s) directly linked to X1004, wherein the N-terminal amino acid(s) comprise the amino acid sequence selected from the group consisting of X1003, X1002-X1003, and X1001-X1002-X1003. In this regard, X1003 is A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, Tle, V, W, Y, or y; X1002 is A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, Y, or y; and X1001 is A, Bpa, C, D, E, e, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, or Y (SEQ ID NO: 2922). Alternatively or in addition, the peptide may comprise a C-terminal amino acid directly linked to X1019 and selected from the group consisting of A, C, D, E, e, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, and Y (SEQ ID NO: 2923). For example, in various embodiments, the peptide comprises an amino acid sequence at least about 80% identical to EYYVSAGWYDYNTDTYYEFE (SEQ ID NO: 2924). The invention includes a peptide comprising (or consisting of) an amino acid sequence selected from the group consisting of SEQ ID NOs: 1-2916, 2920, and 2924.</p>
+      <p id="p-00007-en" num="0007">In addition, the invention provides methods of using the peptide(s) of the invention. For example, the invention provides a method for inhibiting Protein S activity in a subject. A method of treating a subject suffering from a disease or being at risk of suffering from a disease also is provided. The invention also provides a method of enhancing thrombin formation, a method for increasing blood clot formation in a subject, and a method for treating a disease or disorder, such as a blood coagulation disorder. The methods are, in their entirety, also referred to herein as, e.g., “the method of the invention.” The methods comprise administering to a subject a peptide described herein in an amount effective to achieve a desired effect, e.g., an amount effective to inhibit Protein S activity, enhance thrombin formation, enhance blood clot formation, or treat the blood coagulation disorder in the subject. Further aspects of the invention include use of the peptide of the invention in medicine or for the manufacture of a medicament.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00006-en" level="1">DESCRIPTION OF THE FIGURES</heading>
+      <p id="p-00008-en" num="0008">
+        <figref>FIG. 1A-C</figref> is a chart providing the binding affinity (Mean IC50 [nM]) of various peptides described herein measured by LANCE IC50 assay using JBS0684 as a tracer peptide.</p>
+      <p id="p-00009-en" num="0009">
+        <figref>FIG. 2A-JJ</figref> is a chart providing the amino acid sequences of various peptides described herein.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00007-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00010-en" num="0010">The invention provides peptides that bind Protein S and, in some instances, block the inhibitory (i.e., anticoagulant) activity of Protein S within the blood coagulation cascade. Protein S functions as a co-factor to activated Protein C (APC) to degrade Factors Va (FVa) and VIIIa (FVIIIa). Inhibition of Protein S reduces Protein C-mediated FVa and FVIIIa degradation, allowing the blood factors to function in the blood coagulation cascade to produce thrombin, and ultimately fibrin. Protein S is a 70 kD vitamin K-dependent glycoprotein, 635 amino acids in length, comprising a γ-carboxy-glutamic acid domain (Gla domain), a thrombin-sensitive module, epidermal growth factor like domains (EGF domains), and a region having similarity to the sex hormone binding globulin. The protein is found free in plasma and also complexed to complement protein C4b-binding protein (C4BP). Free Protein S serves as APC co-factor; the complexed form does not have co-factor activity. Protein S increases the affinity of APC for phospholipid-containing membranes, enhances APC-mediated cleavage at R306 in FVa, and enhances APC-mediated inactivation of FVIIIa. Walker, <i>J. Biol. Chem., </i>256(21), 11128-11131 (1981); Rosing et al., <i>J. Biol. Chem., </i>270(46), 27852-27858 (1995). Protein S also interferes with coagulation independent of APC by, for example, binding to FXa and FVa. Hackeng, <i>J. Biol. Chem., </i>269(33), 21051-21058 (1994). The sequence of human Protein S is provided as SEQ ID NO: 2917 (nucleic acid sequence provided as SEQ ID NO: 2918). The invention provides, in one aspect, Protein S-binding peptides that optionally block one or more of Protein S's activities, thereby optionally enhancing thrombin formation. In the context of the disclosure, any peptide encompassed by Formula I described herein and any Protein S-binding peptide described herein is also referred to as “the peptide of the invention” and as “a peptide as described herein.” “Peptide” is meant to include traditional peptides (i.e., having a traditional peptide backbone) as well as peptidomimetics (i.e., protein-like polymers having modified backbones and, optionally, side-chains found in amino acids).</p>
+      <p id="p-00011-en" num="0011">The amino acid sequences of several peptides are provided herein. Conventional amino acids are identified according to their standard, one-letter or three-letter codes. Examples of non-conventional amino acids and additional peptide building blocks with their, e.g., three- or four-letter/number code (with the exception of Ttds and Dopa, which are common four-letter abbreviations) are described in Table 1 and elsewhere herein. The chemical structures of the non-conventional amino acids and building blocks are known in the art and described in, e.g., U.S. Patent Application Publication No. 2013/0252896, incorporated by reference herein in its entirety, including Tables 1-3.</p>
+      <p id="p-00012-en" num="0012">The amino acid sequences of the peptides provided herein are depicted in typical peptide sequence format. For example, the three-letter code or one-letter code of an amino acid indicates the presence of the amino acid in a specified position within the peptide sequence. The code for each non-conventional amino acid or building block is connected to the code for the next and/or previous amino acid or building block in the sequence by a hyphen in many instances. Adjacent amino acids are connected by a chemical bond (typically an amide bond). The formation of the chemical bond removes a hydroxyl group from the 1-carboxyl group of the amino acid when it is located to the left of the adjacent amino acid (e.g., Hle-adjacent amino acid), and removes a hydrogen from the amino group of the amino acid when it is located on the right of the adjacent amino acid (e.g., adjacent amino acid-Hle). It is understood that both modifications can apply to the same amino acid and apply to adjacent conventional amino acids present in amino acid sequences without hyphens explicitly illustrated. Where an amino acid contains more than one amino and/or carboxy group in the amino acid side chain, the 2- or 3-amino group and/or the 1-carboxy group generally are used for the formation of peptide bonds. For some non-conventional amino acids, a three-letter code is used where the first letter indicates the stereochemistry of the C-α-atom. For example, a capital first letter indicates that the L-form of the amino acid is present in the peptide sequence, while a lower case first letter indicating that the D-form of the corresponding amino acid is present in the peptide sequence. When one-letter code is used, a lower case letter represents a D-amino acid, while an upper case letter represents an L-amino acid. Unless indicated to the contrary, the amino acid sequences are presented herein in N- to C-terminus direction.</p>
+      <p id="p-00013-en" num="0013">The C-termini of several peptide sequences described herein are often explicitly illustrated by inclusion of an OH, NH<sub>2</sub>, or an abbreviation for a specific terminating amine linked to the C-terminal amino acid code via a hyphen. The N-termini of several peptides described herein are explicitly illustrated by inclusion of a hydrogen (for a free N-terminus), or an abbreviation for a specific terminating carboxylic acid or other chemical group linked to the N-terminal amino acid code via a hyphen.</p>
+      <p id="p-00014-en" num="0014">The invention provides a peptide comprising the structure of Formula (I): X1004-X1005-X1006-X1007-X1008-X1009-X1010-X1011-X1012-X1013-X1014-X1015-X1016-X1017-X1018-X1019, wherein X1004 is A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, Tle, V, v, W, or Y; wherein X1005 is A, C, D, Dap, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, s, T, V, W, or Y; wherein X1006 is A, a, Aib, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, s, T, Tle, V, W, or Y; wherein X1007 is A, a, Aib, C, D, E, F, G, H, I, K, L, M, N, Nmg, P, p, Q, R, S, s, T, Tle, V, W, or Y; wherein X1008 is 1Ni, 2Ni, A, Bta, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, w, or Y; wherein X1009 is A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, Y, or w; wherein X1010 is A, C, D, d, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, w, or Y; wherein X1011 is A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, Y, or w; wherein X1012 is A, C, D, E, F, G, H, I, K, L, M, N, n, P, p, Q, R, S, T, V, W, or Y; wherein X1013 is A, a, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, t, V, W, or Y; wherein X1014 is A, C, D, d, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, or Y; wherein X1015 is A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, t, Tle, V, W, or Y; wherein X1016 is A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, or Y; wherein X1017 is A, C, D, E, F, G, H, I, K, L, M, N, Nle, P, p, Q, R, S, T, V, W, Y, or y; wherein X1018 is A, C, D, E, e, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, or Y; and wherein X1019 is A, C, D, E, F, f, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, or Y (SEQ ID NO: 2921).</p>
+      <p id="p-00015-en" num="0015">In various embodiments, the invention provides a peptide comprising (or consisting of) an amino acid sequence at least 50% identical (e.g., at least 55% identical, at least 60% identical, at least 65% identical, at least 70% identical, at least 75% identical, at least 80% identical, at least 85% identical, or at least 90% identical) to the amino acid sequence VSAGWYDYNTDTYYEF (SEQ ID NO: 2920) and having the structure of Formula I, wherein X1004 is A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, Tle, V, v, W, or Y; wherein X1005 is A, C, D, Dap, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, s, T, V, W, or Y; wherein X1006 is A, a, Aib, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, s, T, Tle, V, W, or Y; wherein X1007 is A, a, Aib, C, D, E, F, G, H, I, K, L, M, N, Nmg, P, p, Q, R, S, s, T, Tle, V, W, or Y; wherein X1008 is 1Ni, 2Ni, A, Bta, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, w, or Y; wherein X1009 is A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, Y, or w; wherein X1010 is A, C, D, d, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, w, or Y; wherein X1011 is A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, Y, or w; wherein X1012 is A, C, D, E, F, G, H, I, K, L, M, N, n, P, p, Q, R, S, T, V, W, or Y; wherein X1013 is A, a, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, t, V, W, or Y; wherein X1014 is A, C, D, d, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, or Y; wherein X1015 is A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, t, Tle, V, W, or Y; wherein X1016 is A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, or Y; wherein X1017 is A, C, D, E, F, G, H, I, K, L, M, N, Nle, P, p, Q, R, S, T, V, W, Y, or y; wherein X1018 is A, C, D, E, e, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, or Y; and wherein X1019 is A, C, D, E, F, f, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, or Y (SEQ ID NO: 2921).</p>
+      <p id="p-00016-en" num="0016">In various embodiments of the invention, X1004 is A, E, F, G, H, I, K, L, M, N, P, Q, R, T, V, W, or Y; X1005 is A, D, E, F, G, H, I, K, L, M, N, R, S, T, V, W, or Y; X1006 is A, a, F, G, H, I, L, M, P, S, T, V, W, or Y; X1007 is G or a; X1008 is F, H, L, W, or Y; X1009 is F or Y; X1010 is A, D, E, F, G, H, I, K, L, M, N, Q, R, S, T, V, W, or Y; X1011 is A, E, F, G, H, I, K, L, M, N, P, Q, R, S, T, V, W, or Y; X1012 is A, D, E, F, G, H, I, K, L, M, N, n, P, Q, R, S, T, V, W, or Y; X1013 is A, D, E, F, G, H, I, K, L, M, N, Q, R, S, T, V, W, or Y; X1014 is A, D, d, E, G, H, N, Q, or S; X1015 is A, D, E, F, G, H, I, K, L, M, N, Q, R, S, T, V, W, or Y; X1016 is A, D, E, F, H, I, L, M, N, S, T, W, or Y; X1017 is A, D, E, F, G, H, I, K, L, M, N, Q, R, S, T, V, W, or Y; X1018 is A, D, E, F, G, H, I, K, L, M, N, P, Q, R, S, T, V, W, or Y; and X1019 is E, F, f, H, I, L, M, V, W, or Y.</p>
+      <p id="p-00017-en" num="0017">In one aspect, the peptide of the invention comprises the structure of Formula (I) wherein X1004 is A, F, H, I, K, L, T, V, W, or Y (e.g., X1004 is selected from the group consisting of A, F, I, L, T, V, and W); X1005 is A, E, F, G, H, I, K, L, M, N, Q, R, S, T, V, W, or Y (e.g., X1005 is selected from the group consisting of A, E, F, G, H, I, K, L, M, R, S, T, V, W, and Y); X1006 is A, F, G, I, L, M, V, W, or Y (e.g., X1006 is selected from the group consisting of A, F, G, I, L, V, W, and Y); X1007 is G; X1008 is F, L, W, or Y (e.g., F or Y); X1010 is A, D, E, F, H, I, K, L, M, N, Q, R, S, T, V, W, or Y (e.g., X1010 is selected from the group consisting of D, E, F, H, I, K, L, N, Q, V, W, and Y); X1011 is A, F, G, H, I, K, L, M, N, R, S, T, V, W, or Y (e.g., X1011 is selected from the group consisting of F, G, I, K, L, M, R, T, V, W, and Y); X1012 is A, D, E, F, G, H, I, K, L, M, N, n, P, Q, R, S, T, V, W, or Y (e.g., X1012 is selected from the group consisting of D, E, F, G, H, I, K, L, N, Q, R, S, T, V, and Y); X1013 is D, E, F, G, H, I, K, L, Q, R, S, T, V, or W; X1014 is D, d, E, G, H, or N (e.g., X1014 is selected from the group consisting of D, E, and H); X1015 is D, E, H, I, K, M, Q, R, S, T, V, or W; X1016 is D, E, F, H, S, W, or Y (e.g., X1016 is selected from the group consisting of F, H, W, and Y); X1017 is D, E, G, H, I, T, W, or Y; X1018 is A, D, E, G, H, I, K, L, M, P, Q, R, S, T, V, or W; and X1019 is F, I, M, W, or Y (e.g., X1019 is selected from the group consisting of F, I, M, and W). In one or more aspects, X1004 is V, X1005 is S, X1006 is A, X1007 is G, X1008 is W, and X1009 is Y. The peptide optionally comprises an amino acid sequence at least 50% identical to VSAGWYDYNTDTYYEF (SEQ ID NO: 2920).</p>
+      <p id="p-00018-en" num="0018">In some embodiments, the peptide of the invention comprises one or more additional amino acid residues attached to the N- or C-terminus of the amino acid sequence. For example, the peptide comprising the structure of Formula I, in some embodiments, further comprises one or more N-terminal amino acid(s) directly linked to X1004, wherein the N-terminal amino acid(s) comprise the amino acid sequence selected from the group consisting of X1003, X1002-X1003, and X1001-X1002-X1003. X1003 and X1002 are independently selected from A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, Tle, V, W, Y, or y (e.g., X1003 and X1002 are independently selected from A, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, y, or Y). For example, in some aspects, X1003 is A, E, F, G, H, I, K, L, N, P, R, T, V, W, y, or Y; and X1002 is A, D, E, F, G, H, I, K, L, N, P, R, T, V, W, y, or Y. X1001 is A, Bpa, C, D, E, e, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, or Y (e.g., X1001 is selected from the group consisting of A, D, E, e, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, and Y).</p>
+      <p id="p-00019-en" num="0019">In addition to the core structure set forth in Formula I, other structures that are specifically contemplated are those in which one or more additional amino acids are attached to the C-terminus of the core structure directly linked to X1019. For example, the C-terminal addition optionally comprises an amino acid sequence selected from the group consisting of A, C, D, E, e, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, and Y, such as the group consisting of A, D, E, e, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, and Y. The invention further provides a peptide comprising at least 50% identity to the amino acid sequence EYYVSAGWYDYNTDTYYEFE (SEQ ID NO: 2924) and comprising the formula X1001-X1002-X1003-X1004-X1005-X1006-X1007-X1008-X1009-X1010-X1011-X1012-X1013-X1014-X1015-X1016-X1017-X1018-X1019-X1020, as each amino acid position is defined above (SEQ ID NO: 2923).</p>
+      <p id="p-00020-en" num="0020">The invention includes a peptide comprising or consisting of an amino acid sequence having at least 60% identity, at least 65%, at least 70%, at least 75%, at least 80%, at least 85%, at least 90%, at least 95% or 100% identity to (i) the amino acid sequence VSAGWYDYNTDTYYEF (SEQ ID NO: 2920), (ii) the amino acid sequence EYYVSAGWYDYNTDTYYEFE (SEQ ID NO: 2924), or (iii) the amino acid sequence of any one of SEQ ID NO: 1-2916. As used herein, “at least 60% identity” and similar terms encompass any integer from, e.g., 60% to 100%, such as 60%, 65%, 70%, 71%, 72%, 73%, 74%, 75%, 76%, 77%, 78%, 79%, 80%, 81%, 82%, 83%, 84%, 85%, 86%, 87%, 88%, 89%, 90%, 91%, 92%, 93%, 94%, 95%, 96%, 97%, 98% or 99% and the like. Also, the term “at least [percentage] identity” encompasses any percentage that is greater than or equal to the number of identical amino acids (or peptide building blocks) divided by the total number of amino acids (or building blocks) of the peptide of the invention ([at least percentage identity]≧[number of identical amino acids or building blocks]/[total number of amino acids or building blocks of the peptide of the invention]). The calculation of percent identity of aligned amino acids (or nucleotides) of two or more sequences is well understood in the art and is determined conventionally using known computer programs. For example, alignment of two or more sequences to determine percent sequence identity is optionally performed using the algorithm described by Altschul et al. (Nucleic Acids Res., 25:3389-402 (1997)) as incorporated into BLAST (basic local alignment search tool) programs, available on the National Center for Biotechnology Information website. The peptide preferably binds Protein S and, optionally, inhibits Protein S activity.</p>
+      <p id="p-00021-en" num="0021">The invention includes peptides that comprise a cyclic structure. In this regard, the invention includes peptides comprising cyclic structures within the peptide (e.g., one or more loops formed by linkage between amino acids), peptides comprising a cyclic structure formed by the interaction of a terminal amino acid with an amino acid within the peptide sequence, and peptides cyclized head to tail. The peptides of the invention, in some instances, comprise intramolecular disulfide bonds. In some embodiments, the intramolecular disulfide bonds are formed by cysteine residues. Peptides comprising cyclic structures formed by non-cysteine residues, or a non-cysteine residue and a cysteine residue, also are provided. Suitable non-conventional amino acids or chemical moieties for cyclization include, but are not limited to, 3-[2-(2-{2-[2-(2-Amino-ethoxy)-ethoxy]-ethoxy}-ethoxy)-ethoxy]-propionic acid (FA19205), 3-(2-{2-[2-(2-Amino-ethoxy)-ethoxy]-ethoxy}-ethoxy)-propionic acid (FA19204), 3-{2-[2-(2-Amino-ethoxy)-ethoxy]-ethoxy}-propionic acid (FA19203), [2-(2-Amino-ethoxy)-ethoxy]-acetic acid (FA03202), (S)-Homo-cysteine (Hcy), D-Homo-cysteine (hcy), Aminoethylthiol (Cea), and c.</p>
+      <p id="p-00022-en" num="0022">The peptides described herein are, in some embodiments, conjugated or attached to one or more moieties at the N- and/or C-terminus or at residues internal to the peptide. Exemplary moieties include, but are not limited to, carboxyfluorescein-Ttds (FAM-Ttds), a proline-glutamate tag (“PE”), Palmitoyl (Palm), 2-phenyl acetyl, 3-phenyl propionyl, 2-(naphth-2-yl)acetyl, hexanoyl, 2-methyl propionyl, 3-methyl butanoyl, 2-naphthylsulfonyl, acetyl, Aminooxyacetic acid (AOA), levulinic acid (Lev), pentynoic acid (Pyn), 1-naphthylsulfonyl, C, c, N-ethylmaleiimido Ethylmaleiimido cysteine (C(NEM)), 3-[2-(2-{2-[2-(2-Amino-ethoxy)-ethoxy]-ethoxy}-ethoxy)-ethoxy]-propionic acid (FA19205), 3-(2-{2-[2-(2-Amino-ethoxy)-ethoxy]-ethoxy}-ethoxy)-propionic acid (FA19204), 3-{2-[2-(2-Amino-ethoxy)-ethoxy]-ethoxy}-propionic acid (FA19203), [2-(2-Amino-ethoxy)-ethoxy]-acetic acid (FA03202), K(Tdts-maleimid), 2-Amino-6-ε-(2-aminooxyAminooxy-acetylamino)-hexanoic acidL-lysine (K(AOA)), Aminoethylthiol (Cea), Eag, (S)-Homo-lysine (Hly), K, (S)-Ornithine (Orn), (S)-2,4-Diaminobutyric acid (Dab), (S)-Diaminopropionic acid (Dap), (S)-Diaminopropionic acid (Hcy), penicillamine (Pen), ε-(Myristyl)-L-lysine (K(Myr)), ε-(Myristyl-Ttds)-L-lysine (K(Ttds-Myr)), ε-(Palmityl-Ttds)-L-lysine (K(Ttds-Palm)), ε-(Myristyl-γ-glutamyl-Ttds)-L-lysine (K(Ttds-γGlu-Myr)), ε-(4-(p-Iodophenyl)butyryl))-L-lysine (K(AlbuTag)), ε-(4-(Pentyl)-benzolsulfonamidyl)-L-lysine (K(4PBSA)), (S)-4-Benzoylphenylalanine (Bpa), Bpa-K(Bio)-C, C(Atf-Bio), C(Atf-LC-Bio), C(FeBABE), C(MalCy5), C(PEG), ε-(Acetyl)-L-lysine (K(Ac)), K(Ttds), K(Ttds-γGlu), K(Glutar), K(Ttds-Mal), T, Ttds, or Ttds-K(Bio). K(Bio) is ε-(Biotinyl)-L-lysine. C(Atf-Bio) is 2-Amino-3-[2-(2-(4-azido-2,3,5,6-tetrafluoro-benzoylamino)-6-{6-[5-(2-oxo-hexahydro-thieno[3,4-d]imidazol-6-yl)-pentanoylamino]-hexanoylamino}-hexanoylamino)-ethyldisulfanyl]-propionic acid. C(Atf-LC-Bio) is 2-Amino-3-[2-(2-[6-(4-azido-2,3,5,6-tetrafluoro-benzoylamino)-hexanoylamino]-6-{6-[5-(2-oxo-hexahydro-thieno[3,4-d]imidazol-6-yl)-pentanoylamino]-hexanoylamino}-hexanoylamino)-ethyldisulfanyl]-propionic acid. C(FeBABE) is an Fe(III)-complex of 2-Amino-3-({4-[2,3-bis-(bis-carboxymethyl-amino)-propyl]-phenylcarbamoyl}-methylsulfanyl)-propionic acid. This is an ethylenediamine tetra acetic acid (EDTA)-complex of Fe(III) linked to the sulfur of the cysteine side chain via a thioether bond and an aromatic spacer. C(MalCy5) is 2-{5-[1-(5-{2-[3-(2-Amino-2-carboxy-ethylsulfanyl)-2,5-dioxo-pyrrolidin-1-yl]-ethylcarbamoyl}-pentyl)-3,3-dimethyl-1,3-dihydro-indol-2-ylidene]-penta-1,3-dienyl}-1,3,3-trimethyl-3H-indolium. This is the dye Cy5 conjugated to the sulfur of the cysteine via a maleimide based thioether linkage.</p>
+      <p id="p-00023-en" num="0023">In one aspect, the amino acid sequence of a peptide comprises a conservative substitution, wherein an amino acid residue is replaced with an amino acid residue having a similar side chain. Families of amino acid residues having similar side chains have been defined within the art, and include amino acids with basic side chains (e.g., lysine, arginine, and histidine), acidic side chains (e.g., aspartic acid and glutamic acid), uncharged polar side chains (e.g., glycine, asparagine, glutamine, serine, threonine, tyrosine, and cysteine), nonpolar side chains (e.g., alanine, valine, leucine, isoleucine, proline, phenylalanine, methionine, and tryptophan), beta-branched side chains (e.g., threonine, valine, and isoleucine), and aromatic side chains (e.g., tyrosine, phenylalanine, tryptophan, and histidine). It will be appreciated, however, that a practitioner is not limited to conservative substitutions; preferably, the resulting peptide retains the ability to bind Protein S and, optionally, downregulates, in whole or in part, Protein S activity. For instance, <figref>FIG. 1</figref> describes peptides that are substitutional mutants of the amino acid sequence of JBS2512 (SEQ ID NO: 2) and which retain Protein S binding characteristics.</p>
+      <p id="p-00024-en" num="0024">In one aspect, the peptide of the invention consists of 60 amino acids or less, 55 amino acids or less, 40 amino acids or less, 35 amino acids or less, or 30 amino acids or less. Optionally, the peptide consists of 25 amino acids or less, 20 amino acids or less, 15 amino acids or less, or 10 amino acids or less. In various embodiments, the peptide comprises 15-35 amino acid residues (e.g., 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, or 35 amino acid residues). In some aspects, amino acids are removed from the peptide described herein from within the amino acid sequence, at the N-terminus, and/or at the C-terminus. Such peptide fragments can comprise 3-14 amino acid residues (e.g., 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, or 14 amino acid residues). The peptide of the invention is, in various embodiments, fused or complexed to a second peptide domain that, for example, binds another target (such as a different region of Protein S or a different protein) or increases the half-life or stability of the inventive peptide. In such fusions or complexes, the size of the peptide of the invention is exclusive of the second peptide or heterologous peptide domain.</p>
+      <p id="p-00025-en" num="0025">In one aspect, the peptide further comprises one or more amino acids that facilitate synthesis, handling, or use of the peptide, including, but not limited to, one or two lysines at the N-terminus and/or C-terminus to increase solubility of the peptide. Suitable fusion proteins include, but are not limited to, proteins comprising a peptide of the invention (e.g., Protein S-binding peptide) linked to one or more polypeptides, polypeptide fragments, or amino acids not generally recognized to be part of the protein sequence. In one aspect, a fusion peptide comprises the entire amino acid sequences of two or more peptides or, alternatively, comprises portions (fragments) of two or more peptides. In some aspects, a peptide (e.g., Protein S-binding peptide) is operably linked to, for instance, one or more of the following: a marker protein, a peptide that facilitates purification, a peptide sequence that promotes formation of multimeric proteins, or a fragment of any of the foregoing. Suitable fusion partners include, but are not limited to, a His tag, a FLAG tag, a strep tag, and a myc tag.</p>
+      <p id="p-00026-en" num="0026">Optionally, the peptide of the invention is fused to one or more entities that enhance the half life of the peptide. Half life can be increased by, e.g., increasing the molecular weight of the Protein S-binding peptide to avoid renal clearance and/or incorporating a ligand for the nFc receptor-mediated recycling pathway. In one embodiment, the peptide of the invention is fused to or chemically conjugated to an albumin polypeptide or a fragment thereof (e.g., human serum albumin (HSA) or bovine serum albumin (BSA)). The albumin fragment comprises 10%, 25%, 50%, or 75% of the full length albumin protein. An exemplary peptide-albumin conjugate is JBS3754 (SEQ ID NO: 999), which is JBS3216 (SEQ ID NO: 462) conjugated to albumin. JBS3761 also is an example of an albumin fusion (SEQ ID NO: 1005). Alternatively or in addition, the peptide of the invention is fused to or complexed with an albumin binding domain or fatty acid that binds albumin when administered in vivo. An example of an albumin binding domain is “albu-tag,” a moiety derived from on 4-(p-iodophenyl)-butanoic acid (Dumelin et al., <i>Angew Chem Int Ed Engl </i>47:3196-3201 (2008)). Other suitable fusion partners include, but are not limited to, a proline-alanine-serine multimer (PASylation) and an antibody or fragment thereof (e.g., an Fc portion of an antibody).</p>
+      <p id="p-00027-en" num="0027">In one embodiment, two or more peptides of the invention are fused together, linked by a multimerization domain, or attached via chemical linkage to generate a peptide complex. The peptides of the multimer may be the same or different. Thus, the invention provides a homo-dimer (i.e., a dimer comprising two identical peptides), a homo-multimer (i.e., a complex comprising three or more identical peptides), a hetero-dimer (i.e., a dimer comprising two different peptides), and hetero-multimer (i.e., a complex comprising three or more peptides, wherein at least two of the peptides are different) comprising or consisting of any of the peptides described herein, optionally attached by one or more linkers. A representative multimer is JBS3179 (SEQ ID NO: 433), a tetramer of JBS2572 (SEQ ID NO: 62) monomers coupled via a 40 kD, four-arm PEG moiety.</p>
+      <p id="p-00028-en" num="0028">In this regard, the invention provides a peptide complex comprising a first peptide and a second peptide. Any of the peptides described herein are suitable subunits (e.g., first peptide or second peptide) for the peptide complex. In some embodiments, the peptide complex comprises 25-100 amino acids, e.g., 30-80 amino acids, 30-60 amino acids, or 30-50 amino acids. The level of inhibition of at least one Protein S activity (e.g., Protein S binding to FVa, phospholipid binding, or APC cofactor activity) mediated by the peptide complex is optionally greater than the level of inhibition achieved by the first peptide or the second peptide (alone or, optionally, in combination) in various embodiments of the invention. The functional characteristics and therapeutic and diagnostic applications of monomeric Protein S-binding peptides described herein also are applicable to the peptide complexes described herein. Similarly, descriptions of modifications to monomeric Protein S-binding peptides also relate to peptide complexes.</p>
+      <p id="p-00029-en" num="0029">In various aspects of the disclosure, the peptide subunits (e.g., first peptide and second peptide) of the peptide complex are fused together directly or are linked by a linker moiety. Any linker moiety is suitable for use in the context of the peptide complex. The linker moiety, in some aspects of the invention, bridges a distance of about 1 Å to about 100 Å, e.g., about 5 Å to about 80 Å (about 5 Å to about 50 Å), about 10 Å to about 70 Å (about 10 Å to about 60 Å, about 10 Å to about 50 Å, about 10 Å to about 40 Å, or about 10 Å to about 30 Å), in one of its conformations. Thus, the linker is optionally about 1 Å to about 100 Å in length, e.g., about 5 Å to about 50 Å or about 10 Å to about 30 Å in length in one of its conformations. Linkers of greater length (greater than about 100 Å) also are contemplated. For example, biocompatible polymers, optionally having a molecular weight of about 2 kDa to about 60 kDa, also are contemplated for use in the peptide complex. Examples of biocompatible polymers include, but are not limited to, PEG, PSA, proline-alanine-serine multimer, and hydroxyethyl starch. Additional description of linker moieties and reactive groups is provided in International Patent Publication No. WO 2011/143209, incorporated herein by reference in its entirety.</p>
+      <p id="p-00030-en" num="0030">In one aspect, the linker moiety comprises the structure Z<sub>1-20</sub>, wherein Z is an oligomer building block. Examples of oligomer building blocks include, but are not limited to, an amino acid, hydroxy acid, ethylene glycol, propylene glycol, or a combination of any of the foregoing. For example, the linker moiety is optionally an amino acid, a dipeptide, a tripeptide, or a polypeptide comprising 4-20 amino acids. In some embodiments, Z is G, s, S, a, A, Bal, Gaba, Ahx, Ttds, or a combination of any of the foregoing (such as peptide ten-mer comprising A, S, or a combination of A and S). If desired, the linking moiety comprises an amine, ether, thioether, maleimide, disulfide, amide, ester, alkene, cycloalkene, alkyne, trizoyl, carbamate, carbonate, or hydrazone.</p>
+      <p id="p-00031-en" num="0031">The terms “first peptide” and “second peptide” are not meant to imply a particular physical order of the peptides, but merely to distinguish different subunits of the peptide complex. The subunits of the peptide complex may be linked in any of a number of configurations so long as the first peptide and second peptide interact with a target (e.g., Protein S). For example, the C-terminus of the first peptide is connected to the N-terminus of the second peptide, the N-terminus of the first peptide is connected to the C-terminus of the second peptide, the N- or C-terminus of the first (or second) peptide is connected to an internal attachment point in the second (or first) peptide, or the first and second peptides are connected via internal attachment points (i.e., attachment points located within the amino acid sequence of the peptide and not at the N- or C-terminus). More than one linker may be used, e.g., a first linking moiety is attached at the N-terminus of the first peptide and the C-terminus of the second peptide, and a second linking moiety (which may be the same type of moiety or a different type of moiety) is attached at the C-terminus of the first peptide and attached at the N-terminus of the second peptide. While the discussion of possible configurations refers to the first and second peptides, it will be appreciated that additional peptides may be linked to the first and/or second peptides as described herein.</p>
+      <p id="p-00032-en" num="0032">Derivatives are included in the invention and include peptides that have been chemically modified in some manner distinct from addition, deletion, or substitution of amino acids. In this regard, a peptide provided herein is chemically bonded with polymers, lipids, other organic moieties, and/or inorganic moieties. Examples of peptide and protein modifications are given in Hermanson, <i>Bioconjugate Techniques, </i>Academic Press, (1996). The peptides described herein optionally comprise a functional group that facilitates conjugation to another moiety (e.g., a peptide moiety). Exemplary functional groups include, but are not limited to, isothiocyanate, isocyanate, acyl azide, NHS ester, sulfonyl chloride, aldehyde, epoxide, oxirane, carbonate, arylating agent, imidoester, carbodiimide, anhydride, alkyl halide derivatives (e.g., haloacetyl derivatives), maleimide, aziridine, acryloyl derivatives, arylating agents, thiol-disulfide exchange reagents (e.g., pyridyl disulfides or TNB thiol), diazoalkane, carboyldiimadazole, N,N′-Disuccinyl carbonate, N-Hydroxysuccinimidyl chloroformate, and hydrazine derivatives. Maleimide is useful, for example, for generating a Protein S-binding peptide that binds with albumin in vivo.</p>
+      <p id="p-00033-en" num="0033">In one aspect, the invention includes peptides described herein covalently modified to include one or more water soluble polymer attachments. A water soluble polymer (or other chemical moiety) is attached to any amino acid residue, although attachment to the N- or C-terminus is preferred in some embodiments. Useful polymers include, but are not limited to, PEG (e.g., PEG approximately 40 kD, 30 kD, 20 kD, 10 kD, 5 kD, or 1 kD in size), polyoxyethylene glycol, polypropylene glycol, monomethoxy-polyethylene glycol, dextran, hydroxyethyl starch, cellulose, poly-(N-vinyl pyrrolidone)-polyethylene glycol, propylene glycol homopolymers, a polypropylene oxide/ethylene oxide co-polymer, polysialic acid (PSA), polyoxyethylated polyols (e.g., glycerol) and polyvinyl alcohol, as well as mixtures of any of the foregoing. In one aspect, the peptide of the invention is a PEGylated peptide. PEG moieties are available in different shapes, e.g., linear or branched. Exemplary PEGylated peptides include JBS3755 (SEQ ID NO: 1000), which comprises the amino acid sequence of JBS3216 (SEQ ID NO: 462) attached to 20 kD linear PEG moieties at the N-terminus via Ahx (6-aminohexanoic acid) and the C-terminal end via the ε amino group of Lys, and JBS3757 (SEQ ID NO: 1002), wherein the 20 kD PEG moieties are branched. For further discussion of water soluble polymer attachments, see U.S. Pat. Nos. 4,640,835; 4,496,689; 4,301,144; 4,670,417; 4,791,192; and 4,179,337. Other moieties useful for improving peptide half life or stability are described herein and include, for instance, albumin (optionally modified to allow conjugation to the inventive peptide), fatty acid chains (e.g., C12-C18 fatty acid, such as a C14 fatty acid, or dicarboxylic acids, such as octadecane dicarboxylic acid (oddc)), an antibody or fragment thereof (e.g., an Fc portion of an antibody), and proline-alanine-serine multimers.</p>
+      <p id="p-00034-en" num="0034">In another aspect, a peptide derivative includes a targeting moiety specific for a particular cell type, tissue, and/or organ. Alternatively, the peptide is linked to one or more chemical moieties that facilitate purification, detection, multimerization, binding with an interaction partner, and characterization of peptide activity. An exemplary chemical moiety is biotin. Other moieties suitable for conjugation to the peptide of the invention include, but are not limited to, a photosensitizer, a dye, a fluorescence dye, a radionuclide, a radionuclide-containing complex, an enzyme, a toxin, and a cytotoxic agent. Photosensitizers include, e.g., Photofrin, Visudyne, Levulan, Foscan, Metvix, Hexvix®, Cysview™, Laserphyrin, Antrin, Photochlor, Photosens, Photrex, Lumacan, Cevira, Visonac, BF-200 ALA, and Amphinex. If desired, a His tag, a FLAG tag, a strep tag, or a myc tag is conjugated to the peptide.</p>
+      <p id="p-00035-en" num="0035">In addition, in one aspect, the peptides of the invention are acylated at the N-terminal amino acid of the peptide. In another aspect, the peptides of the invention are amidated at the C-terminal amino acid of the peptide. In a still further aspect, the peptides of the invention are acylated at the N-terminal amino acid of the peptide and are amidated at the C-terminal amino acid of the peptide.</p>
+      <p id="p-00036-en" num="0036">Derivatives also include peptides comprising modified or non-proteinogenic amino acids or a modified linker group (see, e.g., Grant, <i>Synthetic Peptides: A User's Guide, </i>Oxford University Press (1992)). Modified amino acids include, for example, amino acids wherein the amino and/or carboxyl group is replaced by another group. Non-limiting examples include modified amino acids incorporating thioamides, ureas, thioureas, acylhydrazides, esters, olefines, sulfonamides, phosphoric acid amides, ketones, alcohols, boronic acid amides, benzodiazepines and other aromatic or non-aromatic heterocycles (see Estiarte et al., <i>Burgers Medicinal Chemistry, </i>6<sup>th </sup>edition, Volume 1, Part 4, John Wiley &amp; Sons, New York (2002)). Non-proteinogenic amino acids include, but are not limited, to β-alanine (Bal), norvaline (Nva), norleucine (Nle), 4-aminobutyric acid (γ-Abu), 2-aminoisobutyric acid (Aib), 6-aminohexanoic acid (c-Ahx), ornithine (Orn), hydroxyproline (Hyp), taurine, sarcosine, citrulline (Cit), cysteic acid (Coh), cyclohexylalanine (Cha), methioninesulfoxide (Meo), methioninesulfone (Moo), homoserinemethylester (Hsm), propargylglycine (Eag), 5-fluorotryptophan (5Fw), 6-fluorotryptophan (6Fw), 3′,4′-dimethoxyphenyl-alanine (Ear), 3′,4′-difluorophenylalanine (Dff), 4′-fluorophenyl-alanine (Pff), 1-naphthyl-alanine (1Ni), 2-Naphthylalanine (2Ni), 1-methyltryptophan (1Mw), penicillamine (Pen), homoserine (Hse), t-butylglycine, t-butylalanine, phenylglycine (Phg), benzothienylalanine (Bta), L-homo-cysteine (Hcy), N-methyl-phenylalanine (Nmf), 2-thienylalanine (Thi), 3,3-diphenylalanine (Ebw), L-alpha-t-Butylglycine (Tle), Bpa, homophenylalanine (Hfe), and S-benzyl-L-cysteine (Ece). These and other non-proteinogenic amino acids may exist as D- or L-isomers. Examples of modified linkers include, but are not limited to, the flexible linker 4,7,10-trioxa-1,13-tridecanediamine (Ttds), glycine, 6-aminohexanoic acid, beta-alanine (Bal), pentynoic acid (Pyn), and combinations of Ttds, glycine, 6-aminohexanoic acid and Bal.</p>
+      <p id="p-00037-en" num="0037">Homologs of the amino acids constituting the peptides of the invention may be as set forth in Table 1. In any embodiment, one or more amino acids of the peptide of the invention are substituted with an amino acid or building block set forth in Table 1.</p>
+      <p id="p-00038-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="245pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="2" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Amino Acid</entry>
+                  <entry>Exemplary homologs/substitutions</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>A</entry>
+                  <entry>2-Amino-isobutyric acid (Aib), β-Alanine (Bal), (S)-2-Propargylglycine (Eag),</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(S)-N-Methylalanine (Nma), 2-Aminobutyric acid (Abu), G, M, (S)-2-Amino-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>pentanoic acid (Nva), (S)-Norleucine (Nle)</entry>
+                </row>
+                <row>
+                  <entry>C</entry>
+                  <entry>S, A, (S)-Homo-cysteine (Hcy), M, L, I, V, (R)-N-Methylcysteine (Nmc), β-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Cysteine</entry>
+                </row>
+                <row>
+                  <entry>D</entry>
+                  <entry>E, Homoglutamic acid, γ-Hydroxy-glutamic acid, γ-Carboxy-glutamic acid, (S)-N-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Methyl-Aspartic acid (Nmd), β-Aspartic acid, N, Q, Cysteic acid, β-Homoaspartic</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>acid (Bhd)</entry>
+                </row>
+                <row>
+                  <entry>E</entry>
+                  <entry>D, Glu, Homoglutamic acid, γ-Hydroxy-glutamic acid, γ-Carboxy-glutamic acid,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>α-Aminoadipic acid, (S)-N-Methyl-glutamic acid (Nme), β-glutamic acid, Q, N,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Cysteic acid, β-Homoglutamatic acid (Bhe)</entry>
+                </row>
+                <row>
+                  <entry>F</entry>
+                  <entry>L-Homophenylalanine (Hfe), (S)-N-Methyl-phenylalanine (Nmf), β-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Phenylalanine, L-Phenylglycin (Phg), β-Homophenylalanine (Bhf),</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Thienylalanine, Benzothienylalanine, Bromophenylalanine, Iodophenylalanione,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Chlorophenylalanine, Methylphenylalanine, Nitrophenylalanine, Y, W,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Naphtylalanine, 1,2,3,4-L-tetrahydroisoquinolinecarboxylic acid (Tic)</entry>
+                </row>
+                <row>
+                  <entry>G</entry>
+                  <entry>A, a, N-Methyl-glycine (Nmg)</entry>
+                </row>
+                <row>
+                  <entry>H</entry>
+                  <entry>(S)-N-Methyl-histidine (Nmh), 1-Methylhistidine, 3-Methylhistidine,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Thienylalanine</entry>
+                </row>
+                <row>
+                  <entry>I</entry>
+                  <entry>L, V, (S)-2-Amino-5-methyl-hexanoic acid (Hle), (S)-2-Amino-pentanoic acid</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(Nva), Nle, β-Isoleucine, (S)-N-Methyl-leucine (Nml), M, N-Methyl-L-isoleucine</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(Nmi), β-Homoisoleucine (Bhi), (S)-Cyclohexylalanine (Cha), L-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Cyclohexylglycine (Chg)</entry>
+                </row>
+                <row>
+                  <entry>K</entry>
+                  <entry>(S)-N-Methyl-lysine (Nmk), R, (S)-N-Methyl-arginine (Nmr), β-Lysine, (S)-2,4-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Diaminobutyric acid (Dab), (S)-Diaminopropionic acid (Dap), β-(1-Piperazinyl)-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>alanine, 2,6-Diamino-4-hexynoic acid, δ-Hydroxy-lysine, (S)-Homo-arginine</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(Har), ω-Hydroxy-norarginine, ω-Amino-arginine, ω-Methyl-arginine, β-(2-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Pyridyl)-alanine, β-(3-Pyridyl)-alanine, 3-Amino-tyrosine, 4-Amino-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>phenylalanine, (S)-Homo-citrulline (Hci), (S)-Citrullin (Cit), β-Homolysine (Bhk)</entry>
+                </row>
+                <row>
+                  <entry>L</entry>
+                  <entry>I, V, Hle, Nle, (S)-2-Amino-pentanoic acid (Nva), β-Isoleucine, (S)-N-Methyl-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>leucine (Nml), M, β-Homovaline(Bhv), β-Homoleucine (Bhl), (S)-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Cyclohexylalanine (Cha)</entry>
+                </row>
+                <row>
+                  <entry>M</entry>
+                  <entry>I, V, Hle, Nva, R, (S)-Homo-arginine (Har), (S)-N-Methyl-methionine (Nmm),</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Methioninesulfone, Methionine-sulphoxid (Met(O)), Nle</entry>
+                </row>
+                <row>
+                  <entry>N</entry>
+                  <entry>(S)-N-Methyl-asparagine (Nmn), β-Asparagine, Q, (S)-N-Methyl-glutamine</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(Nmq), β-Glutamine, Cys(3-propionic acid amide)-OH, Cys(O2-3-propionic acid</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>amide)-OH, β-Homoasparagine (Bhn), β-Homoglutamine (Bhq)</entry>
+                </row>
+                <row>
+                  <entry>P</entry>
+                  <entry>Azetidine-2-carboxylic acid, 4-Hydroxy-L-proline (Hyp), α-Methyl-methionine,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>4-Hydroxy-piperidine-2-carboxylic acid, D-Pipecolic acid (Pip), α-Methyl-Pro, 3-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Amino-Pro, 4-Amino-Pro</entry>
+                </row>
+                <row>
+                  <entry>Q</entry>
+                  <entry>N, Nmn, (S)-N-Methyl-glutamine (Nmq), β-Glutamine, Cys(3-propionic acid</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>amide)-OH, Cys(O2-3-propionic acid amide)-OH, Bhn, Bhq</entry>
+                </row>
+                <row>
+                  <entry>R</entry>
+                  <entry>(S)-N-Methyl-lysine (Nmk), K, (S)-N-Methyl-arginine (Nmr), β-Lysine, Dab,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Dap, (S)-Ornithine (Orn), β-(1-Piperazinyl)-alanine, 2,6-Diamino-4-hexynoic acid,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>δ-Hydroxy-lysine, Har, ω-Hydroxy-norarginine, ω-Amino-arginine, ω-Methyl-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>arginine, β-(2-Pyridyl)-alanine, β-(3-Pyridyl)-alanine, 3-Amino-tyrosine, 4-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Amino-phenylalanine, (S)-Homo-citrulline (Hci), (S)-Citrullin (Cit), Hle, L, (S)-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Norleucine (Nle), M, Bhk, (S)-N-Methyl-lysine (Nmk)</entry>
+                </row>
+                <row>
+                  <entry>S</entry>
+                  <entry>T, homoserine (Hse), β-Serine, C, β-Cyano-alanine, allo-Threonine, β-Homoserine</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(Bhs)</entry>
+                </row>
+                <row>
+                  <entry>T</entry>
+                  <entry>S, Homothreonine, β-Threonine, allo-Threonine</entry>
+                </row>
+                <row>
+                  <entry>V</entry>
+                  <entry>L, I, Hle, (S)-2-Amino-pentanoic acid (Nva), Nle, β-Valine, (S)-N-Methyl-valine</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(Nmv), M, Nmi, (S)-N-Methyl-leucine (Nml), (S)-Cyclohexylalanine (Cha), L-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Cyclohexylglycine (Chg)</entry>
+                </row>
+                <row>
+                  <entry>W</entry>
+                  <entry>(S)-N-Methyl-tryptophane (Nmw), β-Tryptophan, F, L-Homophenylalanine (Hfe),</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(S)-N-Methyl-phenylalanine (Nmf), β-Phenylalanine, L-Phenylglycin (Phg), β-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Homophenylalanine (Bhf), Thienylalanine, Benzothienylalanine,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Bromophenylalanine, Iodophenylalanine, Chlorophenylalanine,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Methylphenylalanine, Nitrophenylalanine, Y, Naphtylalanine, 1,2,3,4-L-</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>tetrahydroisoquinolinecarboxylic acid (Tic), β-Homotyrosine (Bhy)</entry>
+                </row>
+                <row>
+                  <entry>Y</entry>
+                  <entry>(S)-N-Methyl-tyrosine (Nmy), β-Tyrosine, F, Hfe, Nmf, β-Phenylalanine, Phg,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Bhf, Thienylalanine, Benzothienylalanine, Bromophenylalanine,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Iodophenylalanine, Chlorophenylalanine, Methylphenylalanine,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Nitrophenylalanine, W, Naphtylalanine, Tic, Bhy</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00039-en" num="0038">In some embodiments, the peptide (CO—NH) linkages joining amino acids within the peptide of the invention are reversed to create a “retro-modified” peptide, i.e., a peptide comprising amino acid residues assembled in the opposite direction (NH—CO bonds) compared to the reference peptide. The retro-modified peptide comprises the same amino acid chirality as the reference peptide. An “inverso-modified” peptide is a peptide of the invention comprising amino acid residues assembled in the same direction as a reference peptide, but the chirality of the amino acids is inverted. Thus, where the reference peptide comprises L-amino acids, the “inverso-modified” peptide comprises D-amino acids, and vice versa. Inverso-modified peptides comprise CO—NH peptide bonds. A “retro-inverso modified” peptide refers to a peptide comprising amino acid residues assembled in the opposite direction and which have inverted chirality. A retro-inverso analogue has reversed termini and reversed direction of peptide bonds (i.e., NH—CO), while approximately maintaining the side chain topology found in the reference peptide. Retro-inverso peptidomimetics are made using standard methods, including the methods described in Meziere et al, <i>J. Immunol., </i>159, 3230-3237 (1997), incorporated herein by reference. Partial retro-inverso peptides are peptides in which only part of the amino acid sequence is reversed and replaced with enantiomeric amino acid residues.</p>
+      <p id="p-00040-en" num="0039">Peptides of the invention are made in a variety of ways. In one aspect, the peptides are synthesized by solid phase synthesis techniques including those described in Merrifield, <i>J. Am. Chem. Soc., </i>85, 2149 (1963); Davis et al., <i>Biochem. Intl., </i>10, 394-414 (1985); Larsen et al., <i>J. Am. Chem. Soc., </i>115, 6247 (1993); Smith et al., <i>J. Peptide Protein Res., </i>44, 183 (1994); O'Donnell et al., <i>J. Am. Chem. Soc., </i>118, 6070 (1996); Stewart and Young, <i>Solid Phase Peptide Synthesis, </i>Freeman (1969); Finn et al., <i>The Proteins, </i>3<sup>rd </sup>ed., vol. 2, pp. 105-253 (1976); and Erickson et al., <i>The Proteins, </i>3<sup>rd </sup>ed., vol. 2, pp. 257-527 (1976). The invention contemplates synthetic peptides. Alternatively, the peptide is expressed recombinantly by introducing a nucleic acid encoding a peptide of the invention into host cells, which are cultured to express the peptide. Such peptides are purified from the culture media or cell pellets.</p>
+      <p id="p-00041-en" num="0040">The invention also encompasses a nucleic acid comprising a nucleic acid sequence encoding a peptide of the invention. Methods of preparing DNA and/or RNA molecules are well known in the art. If desired, a peptide coding sequence is incorporated into an expression vector. One of ordinary skill in the art will appreciate that any of a number of expression vectors known in the art are suitable in the context of the invention, such as, but not limited to, plasmids, plasmid-liposome complexes, and viral vectors. Any of these expression vectors are prepared using standard recombinant DNA techniques described in, e.g., Sambrook et al., <i>Molecular Cloning, a Laboratory Manual, </i>2d edition, Cold Spring Harbor Press, Cold Spring Harbor, N.Y. (1989), and Ausubel et al., <i>Current Protocols in Molecular Biology, </i>Greene Publishing Associates and John Wiley &amp; Sons, New York, N.Y. (1994). Optionally, the nucleic acid is operably linked to one or more regulatory sequences, such as a promoter, activator, enhancer, cap signal, polyadenylation signal, or other signal involved with the control of transcription or translation.</p>
+      <p id="p-00042-en" num="0041">Any of the peptides (or peptide complexes) of the invention or nucleic acids encoding the peptides also is provided in a composition (e.g., a pharmaceutical composition). In this regard, the peptide (or peptide complex) is formulated with a physiologically-acceptable (i.e., pharmacologically-acceptable) carrier, buffer, excipient, or diluent, as described further herein. Optionally, the peptide is in the form of a physiologically acceptable salt, which is encompassed by the invention. “Physiologically acceptable salts” means any salts that are pharmaceutically acceptable. Some examples of appropriate salts include acetate, hydrochloride, hydrobromide, sulfate, citrate, tartrate, glycolate, and oxalate. If desired, the composition comprises one or more additional pharmaceutically-effective agents.</p>
+      <p id="p-00043-en" num="0042">The peptide provided herein preferably binds Protein S and optionally inhibits at least one Protein S activity such as, but not limited to, an activity that downregulates the blood coagulation cascade. Without being bound by any specific mechanism of action, the peptide may inhibit binding (competitively or allosterically) of Protein S to activated Protein C (APC), Factor V, or lipid surfaces, thereby limiting the naturally occurring inhibition of coagulation by Protein S. With Protein S activity diminished, FVa and FVIIIa are not as readily degraded and less FXa is inhibited, resulting in enhanced conversion of prothrombin to thrombin.</p>
+      <p id="p-00044-en" num="0043">In one aspect, the peptide of the invention exhibits Protein S antagonistic activity in model and/or plasmatic systems. An exemplary plasma-based assay examines Protein S/APC-dependent thrombin generation initiated via the extrinsic coagulation pathway (Nicolaes, <i>Blood Coagul. Fibrinolysis, </i>8:28 (1997)). Protein S enhances the anticoagulation effect of APC in plasma. Thrombin formation is triggered in plasma substantially lacking FVIII or FIX activity (e.g., the residual coagulation factor activity is lower than 1%) in the presence of a candidate peptide. Thrombin formation is detected using, e.g., a fluorogenic or chromogenic substrate. A system for measuring thrombin activity is provided by Thrombinoscope BV (Maastricht, The Netherlands). Prothrombin conversion is measured using, e.g., a Thrombograph™ (Thermo Scientific, Waltham, Mass.), and the resulting data is compiled into a Calibrated Automated Thrombogram (CAT) generated by Thrombinoscope™ software available from Thrombinoscope BV. In various embodiments, the peptide demonstrates an EC50 of about 20 nM to about 100 μM (e.g., about 40 nM to about 50 μM) in the Protein S/APC-dependent thrombin generation assay.</p>
+      <p id="p-00045-en" num="0044">In certain embodiments, the Protein S-inhibitory peptide increases the amount of peak thrombin generated during the assay and/or decreases the time required to achieve peak thrombin formation. For example, the peptide improves Protein S-regulated thrombin generation in the absence of FVIII (e.g., in FVIII-depleted plasma) to at least 1% of the level of Protein S-dependent thrombin generation in normal plasma. Generally, normal (unafflicted) plasma contains about 0.5 U/mL to about 2 U/mL Factor VIII. Accordingly, in some instances, a Protein S-binding peptide (e.g., Protein S-inhibitory peptide) will enhance thrombin formation in the absence of FVIII to at least about 1% of that observed in the presence of 0.5 U/mL to 2 U/mL FVIII.</p>
+      <p id="p-00046-en" num="0045">In various aspects, the peptide is administered to an animal model of thrombin deficiency or hemophilia to characterize Protein S inhibitory activity in vivo. Such in vivo models are known in the art and include for example, mice administered anti-FVIII antibodies to induce hemophilia A (Tranholm et al., <i>Blood, </i>102, 3615-3620 (2003)); coagulation factor knock-out models such as, but not limited to, FVIII knock-out mice (Bi et al., <i>Nat. Genet., </i>10(1), 119-121 (1995)) and FIX knock-out mice (Wang et al., <i>PNAS, </i>94(21), 11563-66 (1997)); induced hemophilia-A in rabbits (Shen et al., <i>Blood, </i>42(4), 509-521 (1973)); and Chapel Hill HA dogs (Lozier et al., <i>PNAS, </i>99, 12991-12996 (2002)).</p>
+      <p id="p-00047-en" num="0046">Various peptides bind Protein S from any source including, but not limited to, mouse, rat, rabbit, dog, cat, cow, horse, pig, guinea pig, and primate. In one embodiment, the peptide binds human Protein S. Optionally, the peptide of the invention binds Protein S from more than one species (i.e., the peptide is cross-reactive among multiple species). In certain aspects, the peptide binds Protein S with a dissociation constant (K<sub>D</sub>) of less than or equal to 1×10<sup>−4 </sup>M, less than or equal to 1×10<sup>−5 </sup>M, less than or equal to 1×10<sup>−6 </sup>M, or less than or equal to 1×10<sup>−7 </sup>M, or less than or equal to 1×10<sup>−8 </sup>M, or less than or equal to 1×10<sup>−9 </sup>M, or less than or equal to 1×10<sup>−10 </sup>M.</p>
+      <p id="p-00048-en" num="0047">Affinity may be determined using, for example and without limitation, any one, two, or more of a variety of techniques, such as an affinity ELISA (EC50) assay, a competitive ELISA (IC50) assay, a competitive LANCE IC50 assay (e.g., a homogenous europium-based TR-FRET assay described herein) and/or a surface plasmon resonance (BIAcore™) assay. Optionally, when using an ELISA-based affinity (EC50) assay (e.g., the assay described in Example 1), the peptide demonstrates an EC50 of 1×10<sup>−4 </sup>M, less than or equal to 1×10<sup>−5 </sup>M, less than or equal to 1×10<sup>−6 </sup>M, less than or equal to 1×10<sup>−7 </sup>M, less than or equal to 1×10<sup>−8 </sup>M, or less than or equal to 1×10<sup>−9 </sup>M. When characterized using a competitive (IC50) ELISA assay or LANCE IC50 assay, the peptide of the invention optionally demonstrates an IC50 of less than or equal to about 10,000 nM. For example, the peptide demonstrates an IC50 of less than or equal to about 5,000 nM, less than or equal to about 1,000 nM, or less than or equal to about 500 nM. In one aspect, the peptide demonstrates an IC50 of less than or equal to about 250 nM, less than or equal to about 100 nM, less than or equal to about 50 nM, or less than or equal to about 10 nM (e.g., less than or equal to about 9 nM, less than or equal to about 8 nM, less than or equal to about 7 nM, less than or equal to about 6 nM, less than or equal to about 5 nM, less than or equal to about 4 nM, less than or equal to about 3 nM, or less than or equal to about 1 nM). Optionally, competitive assays utilize JBS0684 (SEQ ID NO: 1) as the “tracer” (i.e., competing peptide). Thus, in various embodiments, the peptide binds human Protein S with an IC50 of less than 25 nM, less than 10 nM, less than 5 nM, less than 3 nM, or less than 1 nM in a competitive LANCE assay using a peptide comprising (or consisting of) the amino acid sequence of SEQ ID NO: 1 (JBS0684) as a tracer. Exemplary peptides and their IC50 values are provided in <figref>FIG. 1</figref>.</p>
+      <p id="p-00049-en" num="0048">Another suitable assay for characterizing the inventive peptides is a k<sub>off </sub>assay, which examines a peptide's release from Protein S. The k<sub>off </sub>assay result is not the dissociation rate constant, but a percentage of competitor peptide blocked from Protein S binding by a test peptide after an incubation period with Protein S. An exemplary k<sub>off </sub>assay includes the following steps: 1) incubation of a Protein S-coated microtiter plate with an amount of test peptide resulting in approximately 90% Protein S occupation; 2) removal of unbound test peptide; 3) addition of a biotinylated tracer (i.e., competitor) peptide (e.g., JBS0684) that competes with the test peptide for binding to Protein S; 4) incubation for a period of time during which binding sites released by the test peptide is occupied by the tracer; 5) removal of unbound tracer and test peptide; and 6) detection of bound tracer by a chromogenic reaction using streptavidin-horseradish peroxidase conjugate. The resulting signal is indicative of binding sites freed by the test peptide. A test peptide that does not dissociate from Protein S during the incubation period yields a weaker signal compared to an analyte that dissociates completely. Optionally, the peptide demonstrates a k<sub>off </sub>of less than or equal to 1×10<sup>−3 </sup>s<sup>−1</sup>, less than or equal to 1×10<sup>−4 </sup>s<sup>−1</sup>, less than or equal to 1×10<sup>−5 </sup>s<sup>−1</sup>, less than or equal to 1×10<sup>−6 </sup>s<sup>−1</sup>, or less than or equal to 1×10<sup>−7 </sup>s<sup>−1</sup>.</p>
+      <p id="p-00050-en" num="0049">As with all binding agents and binding assays, one of skill in the art recognizes that the various moieties to which a binding agent should not detectably bind in order to be biologically (e.g., therapeutically) effective would be exhaustive and impractical to list. Therefore, the term “specifically binds” refers to the ability of a peptide to bind Protein S with greater affinity than it binds to an unrelated control protein that is not Protein S. For example, the peptide may bind to Protein S with an affinity that is at least, 5, 10, 15, 25, 50, 100, 250, 500, 1000, or 10,000 times greater than the affinity for a control protein. In some embodiments, the peptide binds Protein S with greater affinity than it binds to an “anti-target,” a protein or other naturally occurring substance in humans to which binding of the peptide might lead to adverse effects. Because Protein S-inhibitory peptides exert their activity in the blood stream and/or at the endothelium, plasma proteins represent potential anti-targets. Protein S also is a multi-domain protein harboring domains highly homologous to other proteins of the coagulation system proteins containing Gla-domains (e.g., GAS6, Factor VII, Factor IX, Factor X, Protein C, Protein Z, and prothrombin), EGF-like domains (e.g., GAS6, Factor VII, Factor IX, Factor X, Protein C, Protein Z, and thrombomodulin), and laminin G-like domains (e.g., GAS6). Proteins having these domains also are potential anti-targets. In various embodiments, human GAS6 is the anti-target due to its homology to Protein S (42% identity, 57% consensus sequence). Thus, in one aspect, the peptide of the invention binds to Protein S with an affinity that is at least 5, 10, 15, 25, 50, or 100 times greater than the affinity for an anti-target, such as human GAS6 (tested using any suitable method, such as a surface plasmon resonance assay (e.g., BIAcore)).</p>
+      <p id="p-00051-en" num="0050">Optionally, the peptide of the invention demonstrates one or more desired characteristics described herein, and the amino acid sequence of a peptide can be modified to optimize binding, stability, and/or activity, if desired. An exemplary peptide binds Protein S with a K<sub>D </sub>of less than or equal to 10 μM and/or exhibits a binding affinity for Protein S that is at least 10 times greater than the binding affinity for an anti-target. Alternatively or in addition, the peptide enhances thrombin generation in Protein S deficient plasma supplemented with Protein S and APC or FVIII inhibited/deficient plasma with an EC50 (as measured using any suitable assay, such as the assays described here) of less than or equal to 10 μM and/or improves Protein S-dependent thrombin generation in the absence of Factor VIII activity to at least about 20% (e.g., 40%) of the level of thrombin formation in plasma containing normal Factor VIII activity. Alternatively or in addition, the peptide achieves a desired level of plasma stability (e.g., 50% or more of a dose remains in human plasma after six hours or 12 hours, or 50% or more of a dose remains in mouse plasma after four or eight hours) and/or demonstrates a desired half life in vivo (e.g., at least two, three, four, five, six, seven, eight, nine, or ten hours) and/or demonstrates a desired level of solubility. Alternatively or in addition, the peptide of the invention exhibits a desired level of bioavailability, such as a desired level of bioavailability following intravenous or subcutaneous administration (e.g., greater than or equal to 5%, 10%, 15%, 20%, 25%, 30%, or 50%) and/or demonstrates a desired level of Protein S-inhibitory activity at a given dose in vivo.</p>
+      <p id="p-00052-en" num="0051">The invention further includes a method of inhibiting Protein S. The method comprises contacting Protein S with a peptide described herein. Optionally, the method comprises inhibiting Protein S in a subject, and the method comprises administering to the subject the peptide in an amount effective to inhibit Protein S activity. Any degree of Protein S activity inhibition is contemplated. For example, a peptide of the invention reduces Protein S inhibition of the coagulation cascade at least about 5% (e.g., at least about 10%, at least about 25%, or at least about 30%). In some embodiments, the peptide reduces Protein S activity at least about 50%, at least about 75%, or at least about 90% compared to Protein S activity in the absence of the peptide.</p>
+      <p id="p-00053-en" num="0052">In one aspect of the invention, peptides of the invention are used to detect and/or quantify Protein S in vivo or in vitro. An exemplary method of detecting and/or quantifying Protein S in a sample comprises (a) contacting a sample with a peptide of the invention, and (b) detecting binding of the peptide to Protein S. The method is useful for therapy and diagnosis of disease where Protein S is a suitable diagnostic marker. Peptide-Protein S complexes are directly or indirectly detected. Detection moieties are widely used in the art to identify biological substances and include, for example, dye (e.g., fluorescent dye), radionuclides and radionuclide-containing complexes, and enzymes. Moieties allowing detection are optionally attached or conjugated to the peptide. In some aspects, peptide-Protein S binding is detected indirectly. In this regard, the peptide is optionally contacted with an interaction partner that binds the peptide of invention without significantly interfering with peptide-Protein S binding, and the interaction partner is detected. Exemplary interaction partners include, but are not limited to, antibodies, antigen-binding antibody fragments, anticalins and antibody mimetics, aptamers, streptavidin, avidin, neutravidin, and spiegelmers. Optionally, the interaction partner comprises a detection moiety to facilitate detection of an interaction partner-peptide complex. The peptide is, in some embodiments, modified to facilitate binding of an interaction partner. For example, in one aspect, the peptide of the invention is conjugated to biotin, which is bound by an interaction partner comprising streptavidin. An exemplary interaction partner comprises strepavidin fused to horseradish peroxidase, which is detected in, e.g., an ELISA-like assay. Alternatively, the peptide of the invention is modified to include an antibody epitope, and binding of the corresponding antibody to the peptide-Protein S complex is detected.</p>
+      <p id="p-00054-en" num="0053">Peptide-Protein S complexes and interaction partner-peptide complexes are identified using any of a number of methods, such as, but not limited to, biochemical assays (e.g., enzymatic assays), spectroscopy (e.g., detection based on optical density, fluorescence, FRET, BRET, TR-FRET, fluorescence polarization, electrochemoluminescence, or NMR), positron emission tomography (PET), and single Photon Emission Computed Tomography (SPECT). Detectable moieties that facilitate fluorescence detection of peptide-Protein S complexes or interaction partner-peptide complexes include, but are not limited to, fluorescein, Alexa Fluor® 350, Marina Blue™, Cascade Yellow™, Alexa Fluor® 405, Pacific Blue™, Pacific Orange™, Alexa Fluor® 430, Alexa Fluor® 488, Oregon Green® 488, Alexa Fluor® 500, Oregon Green® 514, Alexa Fluor® 514, Alexa Fluor® 532, Alexa Fluor® 555, Tetramethylrhodamine, Alexa Fluor® 546, Rhodamine B, Rhodamine Red™-X, Alexa Fluor® 568, Alexa Fluor® 594, Texas Red®, Texas Red®-X, Alexa Fluor® 610, Alexa Fluor® 633, Alexa Fluor® 635, Alexa Fluor® 647, Alexa Fluor® 660, Alexa Fluor® 680, Alexa Fluor® 700, Alexa Fluor® 750, B-Phycoerythrin, R-Phycoerythrin, Allophycocyanin, BODIPY®, Cy3, Cy5, TAMRA, and fluorescent proteins (GFP and derivatives thereof).</p>
+      <p id="p-00055-en" num="0054">The invention also provides a method for diagnosing a subject suffering from a disease or disorder, or at risk of suffering from a disease or disorder, wherein the disease or disorder is associated with or caused by aberrant Protein S activity. The method comprises administering to the subject the peptide of the invention and detecting Protein S-peptide complex. Detection of complexes is described above. The presence of the complex indicates the presence of Protein S, thereby allowing diagnosis of a disease or disorder associated with Protein S (e.g., a disease or disorder which (i) can be treated by inhibiting Protein S or (ii) comprises symptoms which can be ameliorated or prevented by inhibiting Protein S). If administration of the peptide to the subject is not desired, a biological sample is obtained from the subject, contacted with the peptide as described herein, and Protein S-peptide complexes are detected. It will be appreciated that methods of using the peptides described herein also include use of any of the peptide complexes described herein.</p>
+      <p id="p-00056-en" num="0055">Some diseases and disorders, such as thrombophilia, venous thrombosis, and pulmonary embolism, are linked to reduced Protein S levels. Protein S deficiency can be hereditary or result from, e.g., vitamin K deficiency, warfarin treatment, pregnancy, infection, and liver disease. To detect a deficiency, the method optionally entails quantifying Protein S. If Protein S in the biological sample is below a desired threshold, treatment for the disease or disorder is commenced. In some instances, the treatment comprises anticoagulation therapy (such as heparin or warfarin therapies).</p>
+      <p id="p-00057-en" num="0056">The peptides described herein preferably bind Protein S and, therefore, are useful for purifying Protein S (e.g., recombinant Protein S) from a biological sample (e.g., a biological fluid, such as serum), fermentation extract, tissue preparations, culture medium, and the like. The peptides also are useful for purifying proteins that interact with Protein S, such as, but not limited to, C4BP. The invention includes methods of using the peptide of the invention in the commercial production of Protein S or in a method of characterizing Protein S. For example, the invention includes a method of purifying Protein S. The method comprises contacting a sample containing Protein S with a peptide as defined herein under conditions appropriate to form a complex between Protein S and the peptide; removing the complex from the sample; and, optionally, dissociating the complex to release Protein S. Exemplary conditions appropriate to form a complex between Protein S and the peptide are disclosed in the Examples. In some embodiments, the peptide is immobilized to a support, e.g., a solid support, to facilitate recovery of Protein S. For example, in one embodiment, the peptide is immobilized to chromatography stationary phase (e.g., silica, affinity chromatography beads, or chromatography resins), a sample comprising Protein S is applied to the stationary phase such that Protein S-peptide complexes are formed, the remainder of the sample is removed from the stationary phase, and Protein S is eluted from the stationary phase. In this regard, the peptides of the invention are, in one aspect, suitable for use in affinity chromatography techniques.</p>
+      <p id="p-00058-en" num="0057">A method of enhancing thrombin formation in a subject also is provided. The method comprises administering to the subject a peptide provided herein under conditions effective to inhibit Protein S. In this regard, the peptide is administered in an amount and under conditions effective to enhance thrombin formation in the subject. In various aspects of the invention, the subject is “clotting factor-deficient” meaning that the subject suffers from a deficiency in one or more blood factors required for thrombin formation, such as FVIII, FIX, or FXI. Indeed, in one embodiment, the subject is deficient in FVIII. Clotting factor deficiencies are identified by examining the amount of factor in a clinical sample. Practitioners classify hemophilia according to the magnitude of clotting factor deficiency. Subjects suffering from mild hemophilia have approximately 5% to 30% of the normal amount (1 U/ml) of Factor VIII or Factor IX. Moderate hemophilia is characterized by approximately 1% to 5% of normal Factor VIII, Factor IX, or Factor XI levels, while subjects suffering from severe hemophilia have less than 1% of the normal amount of Factor VIII, Factor IX, or Factor XI. Deficiencies can be identified indirectly by activated partial thromboplastin time (APTT) testing. The invention further includes enhancing thrombin formation in a subject that does not suffer from a clotting factor deficiency. The method comprises administering to a subject (e.g., a subject comprising normal, physiological levels of clotting factor) a peptide provided herein under conditions effective to enhance thrombin formation.</p>
+      <p id="p-00059-en" num="0058">In one aspect, the peptide is used for increasing blood clot formation in a subject. The method of increasing blood clot formation comprises administering to the subject a peptide described herein in an amount and under conditions effective to increase blood clot formation. It will be appreciated that the method need not completely restore the coagulation cascade to achieve a beneficial (e.g., therapeutic) effect. Any enhancement or increase in thrombin or blood clot formation that reduces the onset or severity of symptoms associated with clotting factor deficiencies is contemplated. Methods of determining the efficacy of the method in promoting thrombin formation and blood clotting are known in the art and described herein.</p>
+      <p id="p-00060-en" num="0059">The invention further includes a method of treating a blood coagulation disorder in a subject, the method comprising administering to the subject one or more peptides (or peptide complex(es)) of the invention (i.e., any one or more of the peptides described herein), in an amount and under conditions effective to treat the blood coagulation disorder in the subject. “Coagulation disorders” include bleeding disorders (e.g., hypocoagulation) caused by deficient blood coagulation factor activity and deficient platelet activity. Blood coagulation factors include, but are not limited to, Factor V (FV), FVII, FVIII, FIX, FX, FXI, FXIII, FII (responsible for hypoprothrombinemia), and von Willebrand's factor. Factor deficiencies are caused by, for instance, a shortened in vivo half life of the factor, altered binding properties of the factor, genetic defects of the factor, and a reduced plasma concentration of the factor. Coagulation disorders can be congenital or acquired. Coagulation disorders also stem from development of inhibitors or autoimmunity (e.g., antibodies) against clotting factors. In one example, the coagulation disorder is hemophilia A. Alternatively, the coagulation disorder is hemophilia B or hemophilia C.</p>
+      <p id="p-00061-en" num="0060">Platelet disorders are caused by deficient platelet function or abnormally low platelet number in circulation. Low platelet count may be due to, for instance, underproduction, platelet sequestration, or uncontrolled patent destruction. Thrombocytopenia (platelet deficiencies) may be present for various reasons, including chemotherapy and other drug therapy, radiation therapy, surgery, accidental blood loss, and other disease conditions. Exemplary disease conditions that involve thrombocytopenia are: aplastic anemia; idiopathic or immune thrombocytopenia (ITP), including idiopathic thrombocytopenic purpura associated with breast cancer; HIV-associated ITP and HIV-related thrombotic thrombocytopenic purpura; metastatic tumors which result in thrombocytopenia; systemic lupus erythematosus, including neonatal lupus syndrome splenomegaly; Fanconi's syndrome; vitamin B12 deficiency; folic acid deficiency; May-Hegglin anomaly; Wiskott-Aldrich syndrome; chronic liver disease; myelodysplastic syndrome associated with thrombocytopenia; paroxysmal nocturnal hemoglobinuria; acute profound thrombocytopenia following C7E3 Fab (Abciximab) therapy; alloimmune thrombocytopenia, including maternal alloimmune thrombocytopenia; thrombocytopenia associated with antiphospholipid antibodies and thrombosis; autoimmune thrombocytopenia; drug-induced immune thrombocytopenia, including carboplatin-induced thrombocytopenia and heparin-induced thrombocytopenia; fetal thrombocytopenia; gestational thrombocytopenia; Hughes' syndrome; lupoid thrombocytopenia; accidental and/or massive blood loss; myeloproliferative disorders; thrombocytopenia in patients with malignancies; thrombotic thrombocytopenia purpura, including thrombotic microangiopathy manifesting as thrombotic thrombocytopenic purpura/hemolytic uremic syndrome in cancer patients; post-transfusion purpura (PTP); autoimmune hemolytic anemia; occult jejunal diverticulum perforation; pure red cell aplasia; autoimmune thrombocytopenia; nephropathia epidemica; rifampicin-associated acute renal failure; Paris-Trousseau thrombocytopenia; neonatal alloimmune thrombocytopenia; paroxysmal nocturnal hemoglobinuria; hematologic changes in stomach cancer; hemolytic uremic syndromes (e.g., uremic conditions in childhood); and hematologic manifestations related to viral infection including hepatitis A virus and CMV-associated thrombocytopenia. Platelet disorders also include, but are not limited to, Von Willebrand Disease, paraneoplastic platelet dysfunction, Glanzman's thrombasthenia, and Bernard-Soulier disease. Additional bleeding disorders include, but are not limited to, hemorrhagic conditions induced by trauma; a deficiency in one or more contact factors, such as FXI, FXII, prekallikrein, and high molecular weight kininogen (HMWK); vitamin K deficiency; a fibrinogen disorder, including afibrinogenemia, hypofibrinogenemia, and dysfibrinogenemia; and alpha2-antiplasmin deficiency. In one embodiment, the peptide of the invention is used to treat excessive bleeding, such as excessive bleeding caused by surgery, trauma, intracerebral hemorrhage, liver disease, renal disease, thrombocytopenia, platelet dysfunction, hematomas, internal hemorrhage, hemarthroses, hypothermia, menstruation, pregnancy, and Dengue hemorrhagic fever. All of the above are considered “blood coagulation disorders” in the context of the disclosure.</p>
+      <p id="p-00062-en" num="0061">In one aspect, the peptide of the invention is used to reverse the effects (in whole or in part) of one or more anticoagulants in a subject. Numerous anticoagulants are known in the art and include, for instance, heparin; coumarin derivatives, such as warfarin or dicumarol; TFPI; AT III; lupus anticoagulant; nematode anticoagulant peptide (NAPc2); FVIIa inhibitors; active-site blocked FVIIa (FVIIai); active-site blocked FIXa (FIXai); FIXa inhibitors; FXa inhibitors, including fondaparinux, idraparinux, DX-9065a, and razaxaban (DPC906); active-site blocked FXa (FXai); inhibitors of FVa or FVIIIa, including activated protein C (APC) and soluble thrombomodulin; thrombin inhibitors, including hirudin, bivalirudin, argatroban, and ximelagatran; and antibodies or antibody fragments that bind a clotting factor (e.g., FV, FVII, FVIII, FIX, FX, FXIII, FII, FXI, FXII, von Willebrand factor, prekallikrein, or high molecular weight kininogen (HMWK)).</p>
+      <p id="p-00063-en" num="0062">As used herein, “treating” and “treatment” refers to any reduction in the severity and/or onset of symptoms associated with disease or disorder (e.g., a blood coagulation disorder). One of ordinary skill in the art will appreciate that any degree of protection from, or amelioration of, a disorder or symptom associated therewith is beneficial to a subject, such as a human patient. The quality of life of a patient is improved by reducing to any degree the severity of symptoms in a subject and/or delaying the appearance of symptoms. Accordingly, the method in one aspect is performed as soon as possible after it has been determined that a subject is at risk for developing a blood coagulation disorder (e.g., a deficiency in a clotting factor (e.g., FVIII, FIX, or FXI) is detected or inhibitory antibodies are detected) or as soon as possible after a blood coagulation disorder (e.g., hemophilia A, hemophilia B, or hemophilia C) is detected. In an additional aspect, the peptide is administered to protect, in whole or in part, against excessive blood loss during injury or surgery.</p>
+      <p id="p-00064-en" num="0063">In view of the above, the invention provides a peptide (or peptide complex) for use in medicine, i.e., for use in a method for the treatment of a subject, such as a method for the treatment of a disease where the inhibition of Protein S is beneficial. In one aspect, the disease or disorder is a blood coagulation disorder. The subject is suffering from a disease or disorder or is at risk from suffering from a disease or disorder (or adverse biological event, such as excessive blood loss). The method comprises administering to the subject the peptide (or peptide complex) in an amount and under conditions effective to treat or prevent, in whole or in part, the disease or disorder. The invention further provides a peptide (or peptide complex) for use in the manufacture of a medicament. For example, the peptide (or peptide complex) can be used in the manufacture of a medicament for the treatment of a blood coagulation disorder, as described in detail herein.</p>
+      <p id="p-00065-en" num="0064">In some embodiments, it is advantageous to administer to a subject a nucleic acid comprising a nucleic acid sequence encoding a peptide complex or peptide of the invention. Such a nucleic acid, in one aspect, is provided instead of, or in addition to, a peptide complex or peptide. Expression vectors, nucleic acid regulatory sequences, administration methods, and the like, are further described herein and in U.S. Patent Publication No. 20030045498.</p>
+      <p id="p-00066-en" num="0065">The amount of peptide administered to a subject (e.g., a mammal, such as a human) and the conditions of administration (e.g., timing of administration, route of administration, dosage regimen) are sufficient to affect the desired biological response over a reasonable time frame. Purely by way of illustration, in one aspect, the method comprises administering, e.g., from about 0.1 μg/kg to about 100 mg/kg or more. Given the chronic nature of many blood coagulation disorders, it is envisioned that a subject will receive the peptide of the invention over a treatment course lasting weeks, months, or years, and may require one or more doses daily or weekly. In other embodiments, the peptide of the invention is administered to treat an acute condition (e.g., bleeding caused by surgery or trauma, or factor inhibitor/autoimmune episodes in subjects receiving coagulation replacement therapy) for a relatively short treatment period, e.g., one to 14 days.</p>
+      <p id="p-00067-en" num="0066">Suitable methods of administering a physiologically-acceptable composition, such as a pharmaceutical composition comprising a peptide described herein, are well known in the art. Depending on the circumstances, a pharmaceutical composition is applied or instilled into body cavities, absorbed through the skin or mucous membranes, ingested, inhaled, and/or introduced into circulation. In one aspect, a composition comprising a peptide of the invention is administered intravenously, intraarterially, or intraperitoneally to introduce the peptide of the invention into circulation. Non-intravenous administration also is appropriate, particularly with respect to low molecular weight therapeutics. In certain circumstances, it is desirable to deliver a pharmaceutical composition comprising the peptide of the invention orally, topically, sublingually, vaginally, rectally, pulmonary; through injection by intracerebral (intra-parenchymal), intracerebroventricular, intramuscular, intra-ocular, intraportal, intralesional, intramedullary, intrathecal, intraventricular, transdermal, subcutaneous, intranasal, urethral, or enteral means; by sustained release systems; or by implantation devices. If desired, the peptide is administered regionally via intraarterial or intravenous administration feeding a region of interest, e.g., via the femoral artery for delivery to the leg. In one embodiment, the peptide is incorporated into a microparticle as described in, for example, U.S. Pat. Nos. 5,439,686 and 5,498,421, and U.S. Patent Publications 2003/0059474, 2003/0064033, 2004/0043077, 2005/0048127, 2005/0170005, 2005/0142205, 2005/142201, 2005/0233945, 2005/0147689. 2005/0142206, 2006/0024379, 2006/0260777, 2007/0207210, 2007/0092452, 2007/0281031, and 2008/0026068. Alternatively, the composition is administered via implantation of a membrane, sponge, or another appropriate material on to which the desired molecule has been absorbed or encapsulated. Where an implantation device is used, the device in one aspect is implanted into any suitable tissue, and delivery of the desired molecule is in various aspects via diffusion, timed-release bolus, or continuous administration. In other aspects, the peptide is administered directly to exposed tissue during surgical procedures or treatment of injury, or is administered via transfusion of blood procedures. Therapeutic delivery approaches are well known to the skilled artisan, some of which are further described, for example, in U.S. Pat. No. 5,399,363.</p>
+      <p id="p-00068-en" num="0067">To facilitate administration, the peptide or peptide complex in one embodiment is formulated into a physiologically-acceptable composition comprising a carrier (i.e., vehicle, adjuvant, buffer, or diluent). Sterile, physiologically-acceptable carriers are well known in the art. Illustrative pharmaceutical forms suitable for injectable use include without limitation sterile aqueous solutions or dispersions and sterile powders for the extemporaneous preparation of sterile injectable solutions or dispersions (for example, see U.S. Pat. No. 5,466,468). A pharmaceutical composition comprising a peptide provided herein is optionally placed within containers, along with packaging material that provides instructions regarding the use of such pharmaceutical compositions. Generally, such instructions include a tangible expression describing the reagent concentration, as well as, in certain embodiments, relative amounts of excipient ingredients or diluents that may be necessary to reconstitute the pharmaceutical composition.</p>
+      <p id="p-00069-en" num="0068">When appropriate, the peptide or peptide complex of the invention is administered in combination with other substances and/or other therapeutic modalities to achieve an additional or augmented biological effect. Co-treatments include, but are not limited to, plasma-derived or recombinant coagulation factors, hemophilia prophylaxis treatments, immunosuppressants, plasma factor-inhibiting antibody antagonists (i.e., anti-inhibitors), antifibrinolytics, antibiotics, hormone therapy, anti-inflammatory agents (e.g., Non-Steroidal Anti-Inflammatory Drugs (NSAIDs) or steroidal anti-inflammatory substances), procoagulants, and pain relievers. In one aspect, the method is an adjunct therapy to traditional replacement factor treatment regimens involving administration of, e.g., FXIII, FXII, FXI (e.g., HEMOLEVEN® (Laboratoire francais du Fractionnement et des Biotechnologies, Les Ulis, France) and FXI concentrate (BioProducts Laboratory, Elstree, Hertfordshire, UK)), FX, FIX (e.g., BENEFIX® Coagulation Factor IX (Wyeth, Madison, N.J.); ALPHANINE® SD (Grifols, Los Angeles, Calif.); MONONINE® (CSL Behring, King of Prussia, Pa.); BEBULIN-VH™ (Baxter, Deerfield, Ill.); PROFILNINE® SD (Grifols, Los Angeles, Calif.); or PROPLEX T™ (Baxter, Deerfield, Ill.)), FVIII (e.g., ADVATE™ (Baxter, Deerfield, Ill.); HELIXATE® FS (CSL Behring, King of Prussia, Pa.); REFACTO® (Wyeth, Madison, N.J.), XYNTHA™ (Wyeth, Madison, N.J.), KOGENATE® and KOGENATE® FS (Bayer, Pittsburgh, Pa.); ALPHANATE® (Grifols, Los Angeles, Calif.); HEMOPHIL M™ (Baxter, Deerfield, Ill.); KOATE®-DVI (Talecris Biotherapeutics-USA, Research Triangle Park, N.C.); or MONARC-M™ (Baxter, Deerfield, Ill.)), FVIIa (e.g., NOVOSEVEN® FVIIa (Novo Nordisk, Princeton, N.J.) and FVII concentrate (Baxter Bioscience, Vienna, Austria, or BioProducts Laboratory, Elstree, Hertfordshire, UK)), FV, FVa, FII, and/or FIII, to a subject. In some instances, the subject also receives FEIBA VH Immuno™ (Baxter BioScience, Vienna, Austria), which is a freeze-dried sterile human plasma fraction with Factor VIII inhibitor bypassing activity. FEIBA VH Immuno™ contains approximately equal units of Factor VIII inhibitor bypassing activity and Prothrombin Complex Factors (Factors II, VII, IX, and X and protein C). Other exemplary co-treatments include, but are not limited to, prekallikrein, high molecular weight kininogen (HMWK), Von Willebrand's factor, Tissue Factor, and thrombin. Alternatively or in addition, the peptide is co-formulated with one or more different Protein S-binding peptides, such as one or more different peptides of the inventions. In one aspect, administration of the peptide allows a reduction in the dose of co-therapeutic required to achieve a desired biological response. Also optionally, the peptide (or peptide complex) is part of a therapeutic regimen that includes administration of a Tissue Factor Pathway Inhibitor (TFPI)-binding peptide, such as the TFPI-binding peptides described in International Patent Publication No. WO 2013/141965.</p>
+      <p id="p-00070-en" num="0069">The invention thus includes administering to a subject a peptide of the invention (or multiple peptides, or a peptide complex), in combination with one or more additionally suitable substances(s), each being administered according to a regimen suitable for that medicament. Administration strategies include concurrent administration (i.e., substantially simultaneous administration) and non-concurrent administration (i.e., administration at different times, in any order, whether overlapping or not) of the peptide (or peptide complex) and one or more additionally suitable agent(s). It will be appreciated that different components are optionally administered in the same or in separate compositions, and by the same or different routes of administration.</p>
+      <p id="p-00071-en" num="0070">The invention further provides a method for identifying a Protein S-binding compound, such as a Protein S-binding peptide. In one aspect, the method comprises (a) contacting Protein S with a peptide described herein and a test compound (which may be a second peptide) under conditions that allow formation of Protein S-peptide complexes. The method further comprises (b) measuring Protein S-peptide complexes formed in step (a), and (c) comparing the number of Protein S-peptide complexes formed in the presence of the test compound with the number of Protein S-peptide complexes formed in the absence of the test compound. A reduction in the number of Protein S-peptide complexes formed in the presence of the test compound compared to the number of Protein S-peptide complexes formed in the absence of the test compound indicates that the test compound is a Protein S-binding compound. In one aspect, the method further comprises forming Protein S-peptide complexes in the absence of the test compound for comparison in step (c), although this is not required inasmuch as the information may be obtained separately (e.g., from previously prepared reference standards).</p>
+      <p id="p-00072-en" num="0071">Protein S, the peptide, and the test compound are combined simultaneously or sequentially, optionally with washing steps before and/or after addition of the peptide and/or the test compound. In one embodiment, Protein S is contacted with a peptide described herein under conditions that allow formation of Protein S-peptide complexes, unbound peptide is removed, and the remaining Protein S-peptide complexes are contacted with a test compound. Displacement of the peptide from the Protein S-peptide complexes is detected, and indicates that the test compound is a Protein S-binding compound. Displacement is detected by, for example, measuring the number of Protein S-peptide complexes before and after exposure to the test compound.</p>
+      <p id="p-00073-en" num="0072">Protein S-binding peptide complexes are detected and/or measured (quantified) using any suitable detection means, including detection means known in the art for detecting peptides in a sample. For example, in one embodiment of the invention, the peptide of the invention comprises a label that generates a signal. Exemplary labels are described herein and include, e.g., radionuclides, fluorescent dyes, isotopes, enzyme substrates, and enzymes. The method comprises measuring signal generated by Protein S-peptide complexes and comparing signal generated by Protein S-peptide complexes formed in the presence of the test compound with signal generated by Protein S-peptide complexes formed in the absence of the test compound. A reduction in signal from a sample comprising Protein S-peptide complexes exposed to test compound (compared to signal generated by a similar sample of Protein S-peptide complexes not exposed to the test compound) indicates that complex formation has been inhibited or disrupted, and that the test compound is a Protein S-binding compound.</p>
+      <p id="p-00074-en" num="0073">The methods of the invention to identify Protein S-binding compounds are particularly amenable to the various high throughput screening techniques known in the art. Any “test compound” (e.g., small molecule, peptide, protein (such as an antibody or fragment thereof), peptidomimetic, or polynucleotide (DNA or RNA)) is suitable for screening using the methods described herein. If desired, a collection, population, or library of test compounds is screened for Protein S binding (and, optionally, anti-Protein S activity) using the methods described herein. High throughput screening methods embraced by the invention include automated procedures allowing screening of tens to hundreds of thousands of test compounds.</p>
+      <p id="p-00075-en" num="0074">This entire document is intended to be related as a unified disclosure, and it should be understood that all combinations of features described herein are contemplated, even if the combination of features are not found together in the same sentence, or paragraph, or section of this document. For example, where protein therapy is described, embodiments involving polynucleotide therapy (using polynucleotides/vectors that encode the protein) are specifically contemplated, and the reverse also is true. Unless explicitly indicated to the contrary, the description provided herein with respect to one peptide of the invention or method of the invention applies to each and every peptide of the invention and method of the invention, respectively. Also, unless explicitly indicated to the contrary, the description provided herein with respect to a peptide of the invention or use thereof applies to peptide complexes of the invention.</p>
+      <p id="p-00076-en" num="0075">The invention also includes, for instance, all embodiments of the invention narrower in scope in any way than the variations specifically mentioned above. With respect to aspects of the invention described as a genus, all individual species are considered separate aspects of the invention. With respect to aspects of the invention described or claimed with “a” or “an,” it should be understood that these terms mean “one or more” unless context unambiguously requires a more restricted meaning. If aspects of the invention are described as “comprising” a feature, embodiments also are contemplated “consisting of” or “consisting essentially of” the feature.</p>
+      <p id="p-00077-en" num="0076">All publications, patents and patent applications cited in this specification are herein incorporated by reference as if each individual publication or patent application were specifically and individually indicated to be incorporated by reference.</p>
+      <heading id="h-00008-en" level="1">EXAMPLES</heading>
+      <p id="p-00078-en" num="0077">The invention will be understood more readily by reference to the following examples, which are provided by way of illustration and are not intended to limit the invention.</p>
+      <heading id="h-00009-en" level="1">Example 1</heading>
+      <p id="p-00079-en" num="0078">The following example describes production and selection of peptides described herein and characterization Protein S binding.</p>
+      <p id="p-00080-en" num="0079">Peptides were synthesized by Fmoc solid phase synthesis mostly with acetylated N-terminus and amidated C-terminus. Raw products were purified to &gt;90% by HPLC and lyophilized as TFA salts. Lyophilized peptides were stored at &lt;−15° C. Protein S-binding peptide sequences were identified using an mRNA display library and panel of selection assays. The mRNA display method is described in, e.g., International Patent Publication No. WO 2005/051985 and Liu et al., <i>Methods in Enzymology, </i>318, 268-293 (2000). In brief, mRNA is directly linked to its encoded peptide through a puromycin molecule. The peptide-RNA complexes were exposed to full length Protein S in a series of selection rounds during which and Protein S-bound candidate peptide-RNA complexes were isolated and enriched. The RNA encoding peptides with desired properties was reverse transcribed to obtain coding DNA.</p>
+      <p id="p-00081-en" num="0080">The selection rounds included moderate and high stringency selection steps, as well as competitive conditions based on inhibitory anti-Protein S antibodies. The selection process began with five selection rounds of progressive stringency. A library consisting of ˜10<sup>13 </sup>random 20-mer peptide-mRNA complexes was incubated for 1 hour with 100 nM biotinylated human Protein S immobilized on paramagnetic streptavidin beads. The binding of peptide/mRNA fusions to Protein S beads and non-coated streptavidin control beads was monitored by scintillation measurement of radioactive-labeled peptide-mRNA complexes. Unbound peptide-mRNA complexes were removed by four washing steps. Subsequently, peptide/mRNA fusions bound to the Protein S-coated beads were amplified and subjected to the next round of selection. A progressive enrichment of Protein S-binding peptide-mRNA complexes was observed over five selection rounds. For example, high stringency selection of peptides identified in round 2 eliminated ˜99% of the population, leaving a subpopulation of high affinity binders.</p>
+      <p id="p-00082-en" num="0081">Unique peptide sequences identified by mRNA display (296 peptides) were synthesized as N-terminally biotinylated variants in order to facilitate affinity testing. Peptides with detectable affinity for Protein S in the various screening assays described above were further characterized in an ELISA-based EC50 binding assay. Briefly, Nunc Polysorb MTP wells were coated with 50 μl Protein S (3 μg/ml) and blocked with 2% yeast extract and 0.1% Tween80. Biotinylated peptides were incubated in Protein S-coated wells and blocked control wells (without Protein S). After several washing steps, bound peptide was detected by Streptavidin-HRP using TMB as chromogenic substrate. EC50 values were obtained from peptide titration curves by non-linear regression of the background-corrected and normalized binding signals. The affinities of the peptides range from two-digit micromolar to sub-nanomolar (EC50). Exemplary peptides identified by the mRNA display and screening assays include JBS0684 (SEQ ID NO: 1) and JBS2512 (SEQ ID NO: 2).</p>
+      <heading id="h-00010-en" level="1">Example 2</heading>
+      <p id="p-00083-en" num="0082">This example describes the generation of additional Protein S binding peptides and characterization of Protein S binding. This example further describes plasma-based hemophilia model and demonstrates the Protein S-inhibitory activity of the peptides described herein.</p>
+      <p id="p-00084-en" num="0083">Peptides identified in Example 1 were subjected to substitution analysis to further investigate Protein S binding and to identify peptides with improved activity. For example, each amino acid position of parent peptide JBS2512 was separately replaced by a set of eight representative amino acids (Ala, Asp, Phe, Gly, Leu, Lys, Ser, Pro). Thus, approximately 160 new peptide candidates were created from one parent peptide. Each of these new peptide candidates carried a single amino acid exchange compared to the parent peptide.</p>
+      <p id="p-00085-en" num="0084">The new peptide candidates were synthesized (purity&gt;60%) and screened for affinity in a competitive binding assay (ELISA IC50) and activity in a thrombin generation assay (CAT). The competition (IC50) ELISA was performed using biotinylated tracer peptide JBS0684 to compete for Protein S-binding with candidate peptides. Peptides that compete with the tracer bind the same region of Protein S as the tracer (and each other). Ninety-six well PolySorp plates (Nunc) were coated with 3 μg/mL Protein S in coating buffer (15 mM Na<sub>2</sub>CO<sub>3</sub>, 35 mM NaHCO<sub>3</sub>, pH 9.6) over night. Plates were washed three times with wash buffer (HNaT: 175 mM NaCl, 25 mM HEPES, 5 mM CaCl<sub>2</sub>, 0.1% Tween 80, pH 7.35), and blocked with 100 μl 2% yeast extract in HNaT for at least 1 hour. Plates were then washed three times with HNaT. JBS0684 was applied at a concentration corresponding to the EC90 value determined in the binding ELISA. A competitor stock solution of peptide (10 mM) was diluted 1/33.3 in HNaT without HSA, and a serial 1/3 dilution was prepared with HNaT with 3% DMSO. The dilution was further diluted with the biotinylated tracer peptide in a ratio of 1:6 (20 μl competitor dilution and 100 μl tracer peptide). The mixture of competitor and tracer peptide was applied to the Protein S-coated microtiter plate and incubated for 1.5 hours. The plates were washed three times with HNaT. Peptide-Protein S binding was detected by applying HRP-conjugated streptavidin to the microtiter plate, incubating the mixture for one hour, washing the plate three times with HNaT, applying TMB (3,3′5,5′-Tetramethylbenzidin), and detecting the subsequent chromogenic conversion of TMB by HRP. IC50 measurements of peptides are provided herein (see, e.g., Table 3).</p>
+      <p id="p-00086-en" num="0085">Peptides also were tested for improvement of Protein S/APC-dependent thrombin generation in hemophilic plasma using a CAT assay. Protein S enhances the anticoagulation of APC in plasma. The CAT assay quantifies the effect of Protein S on APC-mediated thrombin generation initiated via the extrinsic coagulation pathway (Nicolaes, <i>Blood Coagul. Fibrinolysis, </i>8:28 (1997)). APC (35 nM) and Protein S (25 nM) was added to Protein S-depleted plasma, and plasma samples were incubated with high titer heat inactivated anti-human FVIII plasma raised in goat (4490 BU/ml; Baxter BioScience, Vienna, Austria; 50 BU/ml final plasma concentration). Thrombin formation in plasma was followed by calibrated automated thrombography (CAT) in a Fluoroskan Ascent® reader (Thermo Labsystems, Helsinki, Finland) and quantified via the thrombin peak-height. Thrombin generation was determined at high tissue factor (TF) concentration in the absence and in the presence of APC at a concentration that reduces the peak height to ˜20%. The inhibitory effect of peptides described herein on the APC cofactor activity of Protein S (PS) in plasma was measured in FVIII-inhibited pooled normal plasma supplemented with APC. Complete (100%) Protein S/APC inhibition is the height of the thrombin peak without addition of APC. Lack of (0%) PS/APC inhibition correlates to the thrombin peak-height value with a certain amount of APC. Peptides were ranked by their normalized values in comparison to the mean of wild-type controls including SD at two defined peptide concentrations (EC50 and EC90).</p>
+      <p id="p-00087-en" num="0086">Exemplary conditions for the CAT assay are as follows. Protein S-depleted plasma was supplemented with 35 nM APC and 35 nM Protein S. Stock APC was diluted with 10 pM TF and 15 μM PL. Lyophilized peptides were dissolved in 100% DMSO to a 5 mM stock concentration and further diluted with HNABSA5-buffer+0.1% Tween80. The final peptide plasma concentrations were 140 nM (EC90 wildtypes) and 90 nM (EC50 wildtypes). In a 96 well Immulon 2HB (transparent), U-bottom (ThermoElectron) plate was mixed 80 μl plasma (+CTI+Z994-5), 10 μl peptide dilution, and 10 μl APC-TF-PL-MIX or Calibrator. Thrombin generation was initiated by dispensing 20 μL of FluCa reagent containing fluorogenic substrate and HEPES-buffered CaCl<sub>2 </sub>(100 mM) into each well. Fluorescence intensity was recorded at 37° C. using the Fluoroskan Ascent® reader (filters 390 nm excitation and 460 nm emission). The parameters of the resulting thrombin generation curves were calculated using the Thrombinoscope™ software (Thrombinoscope) and thrombin calibrator to correct for inner filter and substrate consumption effects (Hemker, <i>Pathophysiol Haemost Thromb, </i>33: 415 (2003)).</p>
+      <p id="p-00088-en" num="0087">For both the competitive binding assay and the CAT assay, peptide candidates were characterized as having better, similar, or less activity than the parent. The analysis revealed enhancing substitutions at six different positions located within the three N-terminal positions and positions 13, 15 and 17. Tolerated substitutions (substitutions that did not negatively affect activity) were identified at several positions, including positions 1-3, 11, 13, 15, 17, 18, and 20. Selected peptides with enhancing substitutions were re-synthesized (purity&gt;90%) and run in the ELISA IC50 assay, the results of which are provided in Table 2.</p>
+      <p id="p-00089-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0" tabstyle="monospace">
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="119pt" align="left" />
+              <colspec colname="3" colwidth="14pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="5" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>SEQ</entry>
+                  <entry>IC</entry>
+                  <entry>CAT</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>ID</entry>
+                  <entry>50</entry>
+                  <entry>EC50</entry>
+                </row>
+                <row>
+                  <entry>Peptide</entry>
+                  <entry>Sequence</entry>
+                  <entry>NO.</entry>
+                  <entry>[nM]</entry>
+                  <entry>[nM]</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>JBS2512</entry>
+                  <entry>Ac-TGHVSAGWYDYNFDHYREFT-NH2</entry>
+                  <entry>  2</entry>
+                  <entry>3.9</entry>
+                  <entry>24</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS2516</entry>
+                  <entry>Ac-TAHVSAGWYDYNFDHYREFT-NH2</entry>
+                  <entry>  6</entry>
+                  <entry>3.3</entry>
+                  <entry>21</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS2526</entry>
+                  <entry>Ac-TGHVSAGWYDYNADHYREFT-NH2</entry>
+                  <entry> 16</entry>
+                  <entry>3.6</entry>
+                  <entry>19</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS2528</entry>
+                  <entry>Ac-TGHVSAGWYDYNFDAYREFT-NH2</entry>
+                  <entry> 18</entry>
+                  <entry>5.2</entry>
+                  <entry>23</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS2546</entry>
+                  <entry>Ac-TGHVSAGWYDYNFDDYREFT-NH2</entry>
+                  <entry> 36</entry>
+                  <entry>6.8</entry>
+                  <entry>30</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS2552</entry>
+                  <entry>Ac-GGHVSAGWYDYNFDHYREFT-NH2</entry>
+                  <entry> 42</entry>
+                  <entry>5.5</entry>
+                  <entry>24</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS2572</entry>
+                  <entry>Ac-TGLVSAGWYDYNFDHYREFT-NH2</entry>
+                  <entry> 62</entry>
+                  <entry>2.5</entry>
+                  <entry>14</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS2582</entry>
+                  <entry>Ac-TGHVSAGWYDYNLDHYREFT-NH2</entry>
+                  <entry> 72</entry>
+                  <entry>2.3</entry>
+                  <entry>15</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS2584</entry>
+                  <entry>Ac-TGHVSAGWYDYNFDLYREFT-NH2</entry>
+                  <entry> 74</entry>
+                  <entry>2.7</entry>
+                  <entry> 9</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS2586</entry>
+                  <entry>Ac-TGHVSAGWYDYNFDHYLEFT-NH2</entry>
+                  <entry> 76</entry>
+                  <entry>2.6</entry>
+                  <entry>19</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS2591</entry>
+                  <entry>Ac-TKHVSAGWYDYNFDHYREFT-NH2</entry>
+                  <entry> 81</entry>
+                  <entry>4.2</entry>
+                  <entry>n.d.</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS2592</entry>
+                  <entry>Ac-TGKVSAGWYDYNFDHYREFT-NH2</entry>
+                  <entry> 82</entry>
+                  <entry>5.6</entry>
+                  <entry>68</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS2602</entry>
+                  <entry>Ac-TGHVSAGWYDYNKDHYREFT-NH2</entry>
+                  <entry> 92</entry>
+                  <entry>3.4</entry>
+                  <entry>30</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS2604</entry>
+                  <entry>Ac-TGHVSAGWYDYNFDKYREFT-NH2</entry>
+                  <entry> 94</entry>
+                  <entry>4.1</entry>
+                  <entry>19</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS2625</entry>
+                  <entry>Ac-TGHVSAGWYDYNFDHYFEFT-NH2</entry>
+                  <entry>115</entry>
+                  <entry>1.6</entry>
+                  <entry>29</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS2629</entry>
+                  <entry>Ac-TPHVSAGWYDYNFDHYREFT-NH2</entry>
+                  <entry>119</entry>
+                  <entry>3.1</entry>
+                  <entry>25</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS2661</entry>
+                  <entry>Ac-TGHVSAGWYDYNFDSYREFT-NH2</entry>
+                  <entry>151</entry>
+                  <entry>2.8</entry>
+                  <entry>16</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00090-en" num="0088">Many peptides from the mRNA display selections and the substitution analysis showed very good inhibition of Protein S/APC cofactor activity in the plasmatic system at low peptide concentration. JBS2512, for example, demonstrated very good binding affinity to Protein S and a low EC50 value in the CAT assay. JBS2572 has a non-homologous His to Leu substitution at position 3 which increases the affinity and the activity in the CAT-assay 1.6-fold compared to JBS2512. In the competition binding assay (ELISA IC50), JBS2572 demonstrated an IC50 of 2.5±0.3 nM. JBS2572 improved PS/APC-dependent thrombin generation in hemophilic plasma.</p>
+      <p id="p-00091-en" num="0089">Peptides also were characterized in a competition, homogenous europium-based TR-FRET assay (LANCE IC50 assay) using JBS0684 as a tracer (i.e., competitor for Protein S binding). The following reagents were mixed together in a Perkin-Elmer ProxiPlate MTP well (indicated concentration is the final concentration): Eu-labeled Protein S (10 nM), Ulight™-labeled Streptavidin (100 nM), tracer (JBS0684 (300 nM)), and peptide (titrated in three-fold dilution steps). The final volume was 50 μl/well. The reaction mix was incubated for 1 hour at room temperature, then the fluorescence emission at 665 nm was recorded on a multi-mode reader (SpectraMax® M5, Molecular Devices) using the following instrument settings: Ex 340 nm, Em 665 nm, delay 50 μsec, integration 100 μsec, reads 100. Binding of tracer peptides to soluble europium-labeled Protein S was detected by Streptavidin labeled with an acceptor fluorophor (ULight™). Inhibition of tracer-binding to Protein S by a non-biotinylated peptide results in a decrease of TR-FRET between the Eu-labeled Protein S and ULight™-labeled Streptavidin. IC50 values were obtained from peptide titration curves at constant tracer concentration using non-linear regression of the fluorescence emission signals at 665 nm. JBS2572 demonstrated an IC50 of 49±6 nM using a Molecular Devices M5 reader. Additional measurements were taken using a Tecan F500 reader, which enables the use of lower Protein S (2 nM) and tracer concentrations (60 nM); the LANCE IC50 value for JBS2572 was in the range of 10 nM.</p>
+      <p id="p-00092-en" num="0090">Protein S affinity also was determined via Biacore (Biacore 3000 or Biacore T200) using human full-length Protein S and human GAS6. Briefly, 1000 RU of Protein S or GAS6 were immobilized on a CMS chip. In order to probe the kinetics of Protein S binding peptides to Protein S, the peptides were injected at various concentrations in a HBS-buffer containing 3 mM CaCl<sub>2 </sub>and 1% DMSO to the flow cell and allowed to interact with the immobilized proteins on the sensor chip. The chip could be regenerated with 4 M MgCl<sub>2 </sub>in HBS-buffer. Sensorgrams were fitted to a Langmuir binding model for the determination of k<sub>on </sub>and k<sub>off </sub>and the calculation of K<sub>D</sub>. Peptides were tested on their specificity to Protein S with peptide binding studies on the anti-target GAS6. JBS2572 demonstrated K<sub>D </sub>for binding to Protein S of 6 nM (k<sub>on</sub>=2.48×10<sup>5 </sup>1/Ms, k<sub>off</sub>=1.48×10<sup>−3 </sup>1/s) at 25° C. At 37° C., the K<sub>D </sub>was 3.8×10<sup>−9 </sup>(4 nM) (k<sub>on</sub>=1.14×10<sup>6 </sup>1/Ms, k<sub>off</sub>: 4.31×10<sup>−3 </sup>1/s).</p>
+      <p id="p-00093-en" num="0091">Examples 1 and 2 provide exemplary methods of generating and characterizing Protein S-binding peptides (e.g., Protein S-inhibitory peptides). Hundreds of peptides were identified that bind to human Protein S. Substitution analysis of an exemplary peptide generated additional Protein S-binding peptides, and demonstrated that substitutions within the Protein S-binding peptide were tolerated (i.e., retained affinity for Protein S) and, in some instances, improved affinity. Many peptides bound human Protein S with a dissociation constant or IC50 of &lt;10 μM. The Examples further demonstrates that peptides of the invention inhibit Protein S cofactor activity in a plasma assay system with an EC50 of &lt;10 μM. In vitro activity was demonstrated in the presence of physiological Protein S concentrations.</p>
+      <heading id="h-00011-en" level="1">Example 3</heading>
+      <p id="p-00094-en" num="0092">This example demonstrates that peptides of the invention exhibit reduced affinity for non-Protein S proteins (“anti-targets”).</p>
+      <p id="p-00095-en" num="0093">Protein S comprises domains highly homologous to regions of other coagulation system proteins containing Gla-domains (such as, e.g., GAS6 (the protein encoded by the Growth Arrest Specific-6 gene), Factor VII, Factor IX, Factor X, Protein C, Protein Z, and prothrombin), EGF-like domains (such as, e.g., GAS6, Factor VII, Factor IX, Factor X, Protein C, Protein Z, and thrombomodulin), and laminin G-like domains (such as GAS6). These other coagulation system proteins, therefore, are potential anti-targets. Human GAS6 was used to determine anti-target binding because it is the most similar to Protein S (42% identity, 57% consensus sequence).</p>
+      <p id="p-00096-en" num="0094">Interactions with the anti-target GAS6 were measured via Biacore (surface plasmon resonance) (see Example 2). The maximum signal from the interaction of the peptides with human GAS6 was much lower than the signals obtained with Protein S as interaction partner. Kinetic analysis of the low GAS6 binding signals was error prone, and sensorgrams were reviewed visually to estimate anti-target binding. JBS2572 showed no specific binding to GAS6 at 1 μM concentration. The affinity of JBS2572 for the anti-target was at least 10 times less (indeed, at least 150 times less) than the affinity of the peptides for human Protein S. The data provided by this example confirm that peptides described herein specifically bind Protein S.</p>
+      <heading id="h-00012-en" level="1">Example 4</heading>
+      <p id="p-00097-en" num="0095">Peptides with increased affinity for human Protein S were obtained from a partially randomized library based on the sequence of JBS2572 (SEQ ID NO: 62). Selection of high affinity binders was accomplished by mRNA display and screening assays using methods similar to those described in Examples 1 and 2. The selection conditions applied to the peptide pool resulted in increased binding signals to Protein S. Enriched peptide pools from three rounds of selection were sequenced, which yielded the amino acid sequences of e.g., JBS3216-3223 (SEQ ID NO: 462-469) and JBS3231-3314 (SEQ ID NO: 477-560). Several peptides from the affinity maturation pool were chemically modified. JBS3319 was conjugated to 40 kD PEG moiety to yield JBS3318 (SEQ ID NO: 564). A tetramer of JBS3319 monomers together with a four arm 10 kD PEG moiety yielded JBS3321 (SEQ ID NO: 567). JBS3179 (SEQ ID NO: 433) is a JBS3206 tetramer comprising a 40 kD PEG moiety. JBS3322 (SEQ ID NO: 568) is a JBS3206 monomer comprising a 40 kD PEG moiety.</p>
+      <p id="p-00098-en" num="0096">Protein S binding affinity was evaluated for 18 representative peptides (JBS3216, JBS3218, JBS3221, JBS3223, JBS3232, JBS3235, JBS3236, JBS3258, JBS3260, JBS3263, JBS3274, JBS3281, JBS3283, JBS3284, JBS3296, JBS3297, JBS3306, and JBS3314) via Biacore and LANCE IC50 assays. The peptides' ability to inhibit Protein S activity was determined via CAT assay, and plasma stability was also examined.</p>
+      <p id="p-00099-en" num="0097">Affinity and activity of all 18 peptides was improved compared to parent JBS2572. The results demonstrate that multiple substitutions within the amino acid sequence of the peptides described herein are tolerated (i.e., does not destroy the ability of the peptide to bind Protein S). For example, JBS3216, which comprises substitutions at seven amino acid positions in the sequence of JBS2572 (positions 1-3, 13, 15, 17, and 20) and JBS2512, demonstrated a higher affinity for Protein S (K<sub>D</sub>=0.2 nM) than the parent peptide JBS2572 (K<sub>D</sub>=4 nM). Indeed, the optimized peptides demonstrated pM-affinities (20-fold improvement) with a k<sub>off </sub>in the range of 1×10<sup>−4 </sup>to 6×10<sup>−4 </sup>s<sup>−1</sup>. Activity and stability were improved up to 1.5-fold. Exemplary Biacore results using methods similar to those described above are provided in Table 4. Plasma stability was determined in pooled normal human plasma and mouse plasma at 37° C.; exemplary results also are provided in Table 3. Stability analysis also revealed that, after 24 hours of incubation in human plasma, greater than 80% binding activity of JBS3318, JBS3179, and JBS3322 and ˜50% of binding activity of JBS3216 remained. JBS3179, JBS3318, and JBS3322 also were determined not to interact with GAS6, an anti-target (at 1 μM).</p>
+      <p id="p-00100-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <colspec colname="6" colwidth="35pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="6" rowsep="1">TABLE 3</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Stability</entry>
+                  <entry>Stability</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>in mouse</entry>
+                  <entry>in human</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>plasma;</entry>
+                  <entry>plasma;</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>k<sub>on</sub></entry>
+                  <entry>k<sub>off</sub></entry>
+                  <entry>K<sub>D</sub></entry>
+                  <entry>4 hours</entry>
+                  <entry>6 hours</entry>
+                </row>
+                <row>
+                  <entry>Peptide</entry>
+                  <entry>(1/Ms)</entry>
+                  <entry>(1/s)</entry>
+                  <entry>(nM)</entry>
+                  <entry>[%]</entry>
+                  <entry>[%]</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="char" char="." />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <colspec colname="6" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>JBS3179</entry>
+                  <entry>4.10E+05</entry>
+                  <entry>1.79E−04</entry>
+                  <entry>0.4</entry>
+                  <entry>89 ± 13</entry>
+                  <entry>105 ± 7 </entry>
+                </row>
+                <row>
+                  <entry>JBS3318</entry>
+                  <entry>1.52E+05</entry>
+                  <entry>2.13E−04</entry>
+                  <entry>1.4</entry>
+                  <entry>102 ± 20 </entry>
+                  <entry>114 ± 8 </entry>
+                </row>
+                <row>
+                  <entry>JBS3322</entry>
+                  <entry>7.80E+04</entry>
+                  <entry>2.78E−04</entry>
+                  <entry>3.6</entry>
+                  <entry>91 ± 26</entry>
+                  <entry>131 ± 14</entry>
+                </row>
+                <row>
+                  <entry>JBS3216</entry>
+                  <entry>1.14E+06</entry>
+                  <entry>2.33E−04</entry>
+                  <entry>0.2</entry>
+                  <entry>66 ± 23</entry>
+                  <entry>80 ± 2</entry>
+                </row>
+                <row>
+                  <entry>JBS3263</entry>
+                  <entry>6.29E+05</entry>
+                  <entry>2.64E−04</entry>
+                  <entry>0.4</entry>
+                  <entry>56 ± 6 </entry>
+                  <entry> 74 ± 12</entry>
+                </row>
+                <row>
+                  <entry>JBS3283</entry>
+                  <entry>7.35E+05</entry>
+                  <entry>3.22E−04</entry>
+                  <entry>0.4</entry>
+                  <entry>94 ± 6 </entry>
+                  <entry>90 ± 9</entry>
+                </row>
+                <row>
+                  <entry>JBS3306</entry>
+                  <entry>1.00E+06</entry>
+                  <entry>4.02E−04</entry>
+                  <entry>0.4</entry>
+                  <entry>80 ± 14</entry>
+                  <entry> 84 ± 12</entry>
+                </row>
+                <row>
+                  <entry>JBS3321</entry>
+                  <entry>1.58E+06</entry>
+                  <entry>3.88E−05</entry>
+                  <entry>0.02</entry>
+                  <entry>94 ± 12</entry>
+                  <entry>99 ± 6</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00101-en" num="0098">The inhibitory activity of the peptides was analyzed in the CAT assay (i.e., thrombin-based, APC resistance test) in plasmas from three individuals with severe hemophilia A. JBS3179, JBS3318, and JBS3322, for example, improved Protein S/APC dependent thrombin generation in the plasmas with an EC50 lower than 100 nM. JBS3179 demonstrated an EC50 of 6 nM in the CAT assay, and JBS3216 also efficiently improved coagulation in a CAT assay in human hemophilia A patient plasma (EC50=85 nM). JBS3216 also improved thrombin generation in several non-human mammals: cynomolgous monkey, marmoset monkey, pig, sheep, dog, rabbit, rat, and mouse.</p>
+      <p id="p-00102-en" num="0099">JBS3179 also demonstrated beneficial in vivo activity. The peptide dose-dependently reduced bleeding in a hemophilia mouse tail cut model when administered with 25 U/kg ADVATE, significantly reduced joint bleeding in a hemarthrosis hemophilia A mouse model when co-administered with sub-efficient FVIII doses, and improved ex vivo thrombin generation in a rabbit model of induced hemophilia.</p>
+      <heading id="h-00013-en" level="1">Example 5</heading>
+      <p id="p-00103-en" num="0100">This example describes additional peptides that bind Protein S and demonstrates that variability within the amino acid sequences of the peptides described herein is tolerated with respect to Protein S binding and inhibition.</p>
+      <p id="p-00104-en" num="0101">Several peptides having multiple substitutions in the JBS2572 amino acid sequence were synthesized and evaluated using LANCE IC50 and CAT assays described above. For the assays, pooled normal plasma was supplemented with 3 nM APC and triggered with 6 pM TF, and 15 μM phospholipids (DOPC/POPS 80/20). Stock APC was diluted with TF-PL-MIX to 24 nM (plasma concentration: 3 nM). Exemplary results are provided in Table 4. The analysis focused on positions 1, 4, 5, 13, 15 and 17, and demonstrated that multiple substitutions within the parent sequence are tolerated and, in many instances, increased binding affinity and inhibitory activity compared to peptides having single substitutions within the JBS2572 parent sequence.</p>
+      <p id="p-00105-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0" tabstyle="monospace">
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="center" />
+              <colspec colname="2" colwidth="84pt" align="center" />
+              <colspec colname="3" colwidth="14pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="14pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="6" rowsep="1">TABLE 4</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>SEQ</entry>
+                  <entry>Substitu-</entry>
+                  <entry>LANCE</entry>
+                  <entry>CAT</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>ID</entry>
+                  <entry>tions in</entry>
+                  <entry>IC50</entry>
+                  <entry>EC50</entry>
+                </row>
+                <row>
+                  <entry>Peptide</entry>
+                  <entry>Sequence</entry>
+                  <entry>NO</entry>
+                  <entry>JBS2572</entry>
+                  <entry>[nM]</entry>
+                  <entry>[nM]</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>JBS2572</entry>
+                  <entry>Ac-TGLVSAGWYDYNFDHY</entry>
+                  <entry> 62</entry>
+                  <entry>Parent</entry>
+                  <entry>9.7</entry>
+                  <entry>151</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>REFT-NH2</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS3186</entry>
+                  <entry>Ac-TGLVSAGWYDYNFDTY</entry>
+                  <entry>438</entry>
+                  <entry>H15T,</entry>
+                  <entry>2.6</entry>
+                  <entry>176</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>MEFT-NH2</entry>
+                  <entry />
+                  <entry>R17M</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS3188</entry>
+                  <entry>Ac-TGLVSAGWYDYNFDTY</entry>
+                  <entry>440</entry>
+                  <entry>H15T,</entry>
+                  <entry>2.9</entry>
+                  <entry>155</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>TEFT-NH2</entry>
+                  <entry />
+                  <entry>R17T</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS3189</entry>
+                  <entry>Ac-TGLVSAGWYDYNFDVY</entry>
+                  <entry>441</entry>
+                  <entry>H15V,</entry>
+                  <entry>5.0</entry>
+                  <entry>281</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>TEFT-NH2</entry>
+                  <entry />
+                  <entry>R17T</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS3190</entry>
+                  <entry>Ac-YGLVSAGWYDYNFDTY</entry>
+                  <entry>442</entry>
+                  <entry>H15T,</entry>
+                  <entry>1.6</entry>
+                  <entry>130</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>REFT-NH2</entry>
+                  <entry />
+                  <entry>T01Y</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS3191</entry>
+                  <entry>Ac-YGLVSAGWYDYNFDVY</entry>
+                  <entry>443</entry>
+                  <entry>H15V,</entry>
+                  <entry>1.6</entry>
+                  <entry>147</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>REFT-NH2</entry>
+                  <entry />
+                  <entry>T01Y</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS3192</entry>
+                  <entry>Ac-TGLVEAGWYDYNFDTY</entry>
+                  <entry>444</entry>
+                  <entry>H15T,</entry>
+                  <entry>2.8</entry>
+                  <entry>117</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>REFT-NH2</entry>
+                  <entry />
+                  <entry>S05E</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS3193</entry>
+                  <entry>Ac-TGLVEAGWYDYNFDVY</entry>
+                  <entry>445</entry>
+                  <entry>H15V,</entry>
+                  <entry>2.5</entry>
+                  <entry>116</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>REFT-NH2</entry>
+                  <entry />
+                  <entry>S05E</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS3194</entry>
+                  <entry>Ac-TGLVSAGWYDYNNDTY</entry>
+                  <entry>446</entry>
+                  <entry>H15T,</entry>
+                  <entry>1.8</entry>
+                  <entry>122</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>REFT-NH2</entry>
+                  <entry />
+                  <entry>F13N</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS3195</entry>
+                  <entry>Ac-TGLVSAGWYDYNNDVY</entry>
+                  <entry>447</entry>
+                  <entry>H15V,</entry>
+                  <entry>2.0</entry>
+                  <entry>139</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>REFT-NH2</entry>
+                  <entry />
+                  <entry>F13N</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS3196</entry>
+                  <entry>Ac-YGLVSAGWYDYNFDHY</entry>
+                  <entry>448</entry>
+                  <entry>R17M,</entry>
+                  <entry>2.2</entry>
+                  <entry>155</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>MEFT-NH2</entry>
+                  <entry />
+                  <entry>T01Y</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS3197</entry>
+                  <entry>Ac-TGLVEAGWYDYNFDHY</entry>
+                  <entry>449</entry>
+                  <entry>R17M,</entry>
+                  <entry>6.1</entry>
+                  <entry>146</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>MEFT-NH2</entry>
+                  <entry />
+                  <entry>S05E</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS3198</entry>
+                  <entry>Ac-TGLVSAGWYDYNNDHY</entry>
+                  <entry>450</entry>
+                  <entry>R17M,</entry>
+                  <entry>2.5</entry>
+                  <entry>149</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>MEFT-NH2</entry>
+                  <entry />
+                  <entry>F13N</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS3201</entry>
+                  <entry>Ac-YGLVEAGWYDYNNDTY</entry>
+                  <entry>453</entry>
+                  <entry>T01Y,</entry>
+                  <entry>1.9</entry>
+                  <entry>127</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>MEFT-NH2</entry>
+                  <entry />
+                  <entry>S05E,</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>F13N,</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>15T,</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>R17M</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS3202</entry>
+                  <entry>Ac-TGL-Tle-SAGWYDYN</entry>
+                  <entry>454</entry>
+                  <entry>V4Tle,</entry>
+                  <entry>1.6</entry>
+                  <entry>129</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>FDTYREFT-NH2</entry>
+                  <entry />
+                  <entry>H15T</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>JBS3203</entry>
+                  <entry>Ac-TGL-Tle-SAGWYDYN</entry>
+                  <entry>455</entry>
+                  <entry>V4Tle,</entry>
+                  <entry>1.8</entry>
+                  <entry>127</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>FDHYMEFT-NH2</entry>
+                  <entry />
+                  <entry>R17M</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="6" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00014-en" level="1">Example 6</heading>
+      <p id="p-00106-en" num="0102">This example demonstrates the ability of peptides described herein to interrupt Protein S (PS) binding to C4BP. C4BP is an octopus-like molecule which contains seven identical α-chains (MW 70 kDa) and a smaller β-chain (45 kDa). Protein S binds to the β-chain, and Protein S complex formation with C4BP abolishes the APC cofactor activity of Protein S. The dissociation constant of Protein S and C4BP in presence of calcium ions is ˜0.5 nM. Due to this high affinity, the level of free PS corresponds to its molar excess over β-chain-containing C4BP.</p>
+      <p id="p-00107-en" num="0103">To investigate the effect of the peptides described herein on PS/C4BP complexes, a LANCE IC50 assay was established using methods similar to those described above. JBS2572 or JBS3216 was added to a preformed C4BP/PS complex. Changes in the complex concentration were followed by recording the TR-FRET signal. For both peptides, a time- and concentration-dependent dissociation of the C4BP/PS complex was observed. The IC50 of JBS3216 was 0.3 nM, and the IC50 of JBS2572 was 2 nM. The time-dependency of the complex reduction was similar for both peptides. After two hours of incubation in the presence of 100 nM JBS2572 or JBS3216, the C4BP/PS complex was reduced to 60% and 50%, respectively. In addition, binding of biotinylated JBS2572 to Protein S was inhibited by C4BP in the LANCE IC50 assay. Pull-down experiments where JBS2697 was coupled to streptavidin sepharose and incubated for one hour at room temperature with (a) Protein S (1.6 pmol) (b) C4BP (8.5 pmol) and (c) Protein S (1.6 pmol)+C4BP (8.5 pmol) supported the results from the modified LANCE IC50 assay. JBS2697 interacted with free Protein S only from experiment (a) with Protein S alone and from experiment (c) with the C4BP-Protein S mixture.</p>
+      <p id="p-00108-en" num="0104">These findings demonstrate that the peptides described herein can reduce the fraction of preformed C4BP/PS complex at nM concentration in a time-dependent manner. Disruption of the C4BP/PS interaction by the peptides (and vice versa) may stem from competitive or allosteric inhibition of the C4BP/PS complex. The binding site of C4BP on Protein S was mapped to the Laminin G-domains of Protein S with a K<sub>D </sub>of 0.1-0.6 nM. Thus, Laminin G domains appear to be involved in the interaction between the peptides and Protein S. Binding site mapping experiments using limited proteolysis support the observation. N-terminal sequencing of proteolytic fragments identified a peptide-protected region within the LG1 domain of Protein S, strongly suggesting the LG1 domain as the peptides' target binding region.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>. A peptide comprising an amino acid sequence at least 50% identical to the amino acid sequence VSAGWYDYNTDTYYEF (SEQ ID NO: 2920) and having the structure of Formula I:
+<claim-text>X1004-X1005-X1006-X1007-X1008-X1009-X1010-X1011-X1012-X1013-X1014-X1015-X1016-X1017-X1018-X1019,</claim-text><claim-text>wherein X1004 is A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, Tle, V, v, W, or Y;</claim-text><claim-text>wherein X1005 is A, C, D, Dap, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, s, T, V, W, or Y;</claim-text><claim-text>wherein X1006 is A, a, Aib, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, s, T, Tle, V, W, or Y;</claim-text><claim-text>wherein X1007 is A, a, Aib, C, D, E, F, G, H, I, K, L, M, N, Nmg, P, p, Q, R, S, s, T, Tle, V, W, or Y;</claim-text><claim-text>wherein X1008 is 1Ni, 2Ni, A, Bta, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, w, or Y;</claim-text><claim-text>wherein X1009 is A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, Y, or w;</claim-text><claim-text>wherein X1010 is A, C, D, d, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, w, or Y;</claim-text><claim-text>wherein X1011 is A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, Y, or w;</claim-text><claim-text>wherein X1012 is A, C, D, E, F, G, H, I, K, L, M, N, n, P, p, Q, R, S, T, V, W, or Y;</claim-text><claim-text>wherein X1013 is A, a, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, t, V, W, or Y;</claim-text><claim-text>wherein X1014 is A, C, D, d, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, or Y;</claim-text><claim-text>wherein X1015 is A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, t, Tle, V, W, or Y;</claim-text><claim-text>wherein X1016 is A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, or Y;</claim-text><claim-text>wherein X1017 is A, C, D, E, F, G, H, I, K, L, M, N, Nle, P, p, Q, R, S, T, V, W, Y, or y;</claim-text><claim-text>wherein X1018 is A, C, D, E, e, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, or Y; and</claim-text><claim-text>wherein X1019 is A, C, D, E, F, f, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, or Y (SEQ ID NO: 2921).</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The peptide of <claim-ref idref="clm-00001-en">claim 1</claim-ref> further comprising one or more N-terminal amino acid(s) directly linked to X1004, wherein the N-terminal amino acid(s) comprise the amino acid sequence selected from the group consisting of X1003, X1002-X1003, and X1001-X1002-X1003,
+<claim-text>wherein X1003 is A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, Tle, V, W, Y, or y;</claim-text><claim-text>wherein X1002 is A, C, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, Y, or y; and</claim-text><claim-text>wherein X1001 is A, Bpa, C, D, E, e, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, or Y (SEQ ID NO: 2922).</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The peptide of <claim-ref idref="clm-00001-en">claim 1</claim-ref> further comprising a C-terminal amino acid directly linked to X1019 and selected from the group consisting of A, C, D, E, e, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, and Y (SEQ ID NO: 2923).</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The peptide of <claim-ref idref="clm-00001-en">claim 1</claim-ref>,
+<claim-text>wherein X1004 is A, E, F, G, H, I, K, L, M, N, P, Q, R, T, V, W, or Y;</claim-text><claim-text>wherein X1005 is A, D, E, F, G, H, I, K, L, M, N, R, S, T, V, W, or Y;</claim-text><claim-text>wherein X1006 is A, a, F, G, H, I, L, M, P, S, T, V, W, or Y;</claim-text><claim-text>wherein X1007 is G or a;</claim-text><claim-text>wherein X1008 is F, H, L, W, or Y;</claim-text><claim-text>wherein X1009 is F or Y;</claim-text><claim-text>wherein X1010 is A, D, E, F, G, H, I, K, L, M, N, Q, R, S, T, V, W, or Y;</claim-text><claim-text>wherein X1011 is A, E, F, G, H, I, K, L, M, N, P, Q, R, S, T, V, W, or Y;</claim-text><claim-text>wherein X1012 is A, D, E, F, G, H, I, K, L, M, N, n, P, Q, R, S, T, V, W, or Y;</claim-text><claim-text>wherein X1013 is A, D, E, F, G, H, I, K, L, M, N, Q, R, S, T, V, W, or Y;</claim-text><claim-text>wherein X1014 is A, D, d, E, G, H, N, Q, or S;</claim-text><claim-text>wherein X1015 is A, D, E, F G, H, I, K, L, M, N, Q, R, S, T, V, W, or Y;</claim-text><claim-text>wherein X1016 is A, D, E, F, H, I, L, M, N, S, T, W, or Y;</claim-text><claim-text>wherein X1017 is A, D, E, F, G, H, I, K, L, M, N, Q, R, S, T, V, W, or Y;</claim-text><claim-text>wherein X1018 is A, D, E, F, G, H, I, K, L, M, N, P, Q, R, S, T, V, W, or Y; and</claim-text><claim-text>wherein X1019 is E, F, f, H, I, L, M, V, W, or Y.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The peptide of <claim-ref idref="clm-00004-en">claim 4</claim-ref>,
+<claim-text>wherein X1004 is A, F, H, I, K, L, T, V, W, or Y;</claim-text><claim-text>wherein X1005 is A, E, F, G, H, I, K, L, M, N, Q, R, S, T, V, W, or Y;</claim-text><claim-text>wherein X1006 is A, F, G, I, L, M, V, W, or Y;</claim-text><claim-text>wherein X1007 is G;</claim-text><claim-text>wherein X1008 is F, L, W, or Y;</claim-text><claim-text>wherein X1010 is A, D, E, F, H, I, K, L, M, N, Q, R, S, T, V, W, or Y;</claim-text><claim-text>wherein X1011 is A, F, G, H, I, K, L, M, N, R, S, T, V, W, or Y;</claim-text><claim-text>wherein X1012 is A, D, E, F, G, H, I, K, L, M, N, n, P, Q, R, S, T, V, W, or Y;</claim-text><claim-text>wherein X1014 is D, d, E, G, H, or N;</claim-text><claim-text>wherein X1016 is D, E, F, H, S, W, or Y; and</claim-text><claim-text>wherein X1019 is F, I, M, W, or Y.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The peptide of <claim-ref idref="clm-00005-en">claim 5</claim-ref>,
+<claim-text>wherein X1004 is A, F, I, L, T, V, or W;</claim-text><claim-text>wherein X1005 is A, E, F, G, H, I, K, L, M, R, S, T, V, W, or Y;</claim-text><claim-text>wherein X1006 is A, F, G, I, L, V, W, or Y;</claim-text><claim-text>wherein X1008 is F or W;</claim-text><claim-text>wherein X1010 is D, E, F, H, I, K, L, N, Q, V, W, or Y;</claim-text><claim-text>wherein X1011 is F, G, I, K, L, M, R, T, V, W, or Y;</claim-text><claim-text>wherein X1012 is A, D, E, F, G, H, I, K, L, N, Q, R, S, T, V, or Y;</claim-text><claim-text>wherein X1013 is D, E, F, G, H, I, K, L, Q, R, S, T, V, or W;</claim-text><claim-text>wherein X1014 is D, E, or H;</claim-text><claim-text>wherein X1015 is D, E, H, I, K, M, Q, R, S, T, V, or W;</claim-text><claim-text>wherein X1016 is F, H, W, or Y;</claim-text><claim-text>wherein X1017 is D, E, G, H, I, T, W, or Y;</claim-text><claim-text>wherein X1018 is A, D, E, G, H, I, K, L, M, P, Q, R, S, T, V, or W; and</claim-text><claim-text>wherein X1019 is F, I, M, or W.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The peptide of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein X1004 is V, X1005 is S, X1006 is A, X1007 is G, X1008 is W, and X1009 is Y.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The peptide of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the amino acid sequence comprises at least about 80% to the amino acid sequence VSAGWYDYNTDTYYEF (SEQ ID NO: 2920).</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The peptide of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the amino acid sequence comprises the amino acid sequence VSAGWYDYNTDTYYEF (SEQ ID NO: 2920).</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The peptide of <claim-ref idref="clm-00001-en">claim 1</claim-ref> further comprising one or more N-terminal amino acid(s) directly linked to X1004, wherein the N-terminal amino acid(s) comprise the amino acid sequence selected from the group consisting of X1003, X1002-X1003, and X1001-X1002-X1003,
+<claim-text>wherein X1003 is A, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, y, or Y;</claim-text><claim-text>wherein X1002 is A, D, E, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, y, or Y; and</claim-text><claim-text>wherein X1001 is A, D, E, e, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, or Y.</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The peptide of <claim-ref idref="clm-00010-en">claim 10</claim-ref>,
+<claim-text>wherein X1003 is A, E, F, G, H, I, K, L, N, P, R, T, V, W, y, or Y; and</claim-text><claim-text>wherein X1002 is A, D, E, F, G, H, I, K, L, N, P, R, T, V, W, y, or Y.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The peptide of <claim-ref idref="clm-00004-en">claim 4</claim-ref> further comprising a C-terminal amino acid directly linked to X1019 and selected from the group consisting of A, D, E, e, F, G, H, I, K, L, M, N, P, p, Q, R, S, T, V, W, and Y.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The peptide of <claim-ref idref="clm-00012-en">claim 12</claim-ref> comprising an amino acid sequence at least about at least about 90% identical to the amino acid sequence EYYVSAGWYDYNTDTYYEFE (SEQ ID NO: 2924).</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The peptide according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the peptide binds human Protein S with an IC50 of less than 25 nM, less than 10 nM, less than 5 nM, less than 3 nM, or less than 1 nM in a competitive LANCE assay using a peptide consisting of the amino acid sequence of SEQ ID NO: 1 as a tracer.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. A peptide consisting of an amino acid sequence at least about 80% identical to EYYVSAGWYDYNTDTYYEFE (SEQ ID NO: 2924).</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. A peptide comprising an amino acid sequence selected from the group consisting of SEQ ID NOs: 1-2916, 2920, and 2924.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The peptide of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the peptide is conjugated to a polyethylene glycol (PEG) moiety, human serum albumin (HSA), an antibody or fragment thereof, hydroxyethyl starch, a proline-alanine-serine multimer (PASylation), a C12-C18 fatty acid, or polysialic acid.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The peptide of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the peptide is conjugated or attached to a moiety selected from the group consisting of Bpa, Bpa-K(Bio)-C, C(Atf-Bio), C(Atf-LC-Bio), C(FeBABE), C(MalCy5), C(NEM), C(PEG), K, K(Ac), K(Ttds), K(Ttds-γGlu), K(Glutar), K(Ttds-Mal), T, Ttds, or Ttds-K(Bio).</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The peptide of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the peptide inhibits Protein S activity.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. A pharmaceutical composition comprising the peptide of <claim-ref idref="clm-00001-en">claim 1</claim-ref> and a pharmaceutically acceptable carrier.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>-<b>24</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>25</b>. A method for inhibiting Protein S activity in a subject, the method comprising administering to the subject the peptide of <claim-ref idref="clm-00001-en">claim 1</claim-ref> in an amount effective to inhibit Protein S activity.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>26</b>. A method of treating a subject suffering from a blood coagulation disorder or being at risk of suffering from a blood coagulation disorder, the method comprising administering to the subject the peptide of <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>27</b>. (canceled)</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00007.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00008.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00009.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00010.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00011.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00012.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00013.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00014.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00015.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00016.TIF" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00017.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00017.TIF" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00018.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00018.TIF" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00019.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00019.TIF" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00020.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00020.TIF" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00021.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00021.TIF" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00022.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00022.TIF" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00023.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00023.TIF" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00024.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00024.TIF" />
+    </figure>
+    <figure num="25">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00025.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00025.TIF" />
+    </figure>
+    <figure num="26">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00026.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00026.TIF" />
+    </figure>
+    <figure num="27">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00027.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00027.TIF" />
+    </figure>
+    <figure num="28">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00028.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00028.TIF" />
+    </figure>
+    <figure num="29">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00029.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00029.TIF" />
+    </figure>
+    <figure num="30">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00030.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00030.TIF" />
+    </figure>
+    <figure num="31">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00031.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00031.TIF" />
+    </figure>
+    <figure num="32">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00032.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00032.TIF" />
+    </figure>
+    <figure num="33">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00033.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00033.TIF" />
+    </figure>
+    <figure num="34">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00034.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00034.TIF" />
+    </figure>
+    <figure num="35">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00035.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00035.TIF" />
+    </figure>
+    <figure num="36">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00036.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00036.TIF" />
+    </figure>
+    <figure num="37">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00037.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00037.TIF" />
+    </figure>
+    <figure num="38">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00038.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00038.TIF" />
+    </figure>
+    <figure num="39">
+      <img he="N/A" wi="N/A" file="US20150246947A1_00039.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150246947A1-20150903-D00039.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150246947A1.PDF" type="pdf" size="43344600" pages="59" />
+</lexisnexis-patent-document>

@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247185A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021513" date-changed="20160104" time-changed="154706">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140297">
+        <country>US</country>
+        <doc-number>20150247185</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14632286</doc-number>
+        <date>20150226</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2014038183</doc-number>
+        <date>20140228</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20160104">
+      <classification-ipcr sequence="1">
+        <text>C12Q   1/68        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>68</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160104">
+      <classification-cpc sequence="1">
+        <text>B03C   1/00        20130101 FI20151007BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>03</class>
+        <subclass>C</subclass>
+        <main-group>1</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151007</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B01L   3/5027      20130101 LI20151223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>3</main-group>
+        <subgroup>5027</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>B01L   7/52        20130101 LI20151223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>7</main-group>
+        <subgroup>52</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>B01L2200/0621      20130101 LA20151223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2200</main-group>
+        <subgroup>0621</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>B01L2200/0631      20130101 LA20151223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2200</main-group>
+        <subgroup>0631</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>B01L2200/0668      20130101 LA20151223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2200</main-group>
+        <subgroup>0668</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>B01L2200/0673      20130101 LA20151223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2200</main-group>
+        <subgroup>0673</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>B01L2300/0838      20130101 LA20151223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2300</main-group>
+        <subgroup>0838</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>B01L2300/087       20130101 LA20151223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2300</main-group>
+        <subgroup>087</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>B01L2300/1805      20130101 LA20151223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2300</main-group>
+        <subgroup>1805</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>B01L2400/043       20130101 LA20151223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2400</main-group>
+        <subgroup>043</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>B01L2400/0478      20130101 LA20151223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>2400</main-group>
+        <subgroup>0478</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>B03C   1/0332      20130101 LI20151023BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>03</class>
+        <subclass>C</subclass>
+        <main-group>1</main-group>
+        <subgroup>0332</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151023</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>B03C   1/288       20130101 LI20151023BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>03</class>
+        <subclass>C</subclass>
+        <main-group>1</main-group>
+        <subgroup>288</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151023</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>B03C2201/18        20130101 LA20151023BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>03</class>
+        <subclass>C</subclass>
+        <main-group>2201</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151023</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="16">
+        <text>B03C2201/26        20130101 LA20151023BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>03</class>
+        <subclass>C</subclass>
+        <main-group>2201</main-group>
+        <subgroup>26</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151023</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">DEVICE AND METHOD FOR PURIFYING TARGET SUBSTANCE</invention-title>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Seiko Epson Corporation</orgname>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>JP</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>MURAYAMA</last-name>
+            <first-name>Toshiro</first-name>
+            <address>
+              <city>Fujimi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>TAKAGI</last-name>
+            <first-name>Fumio</first-name>
+            <address>
+              <city>Chino</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150907">
+      <main-family family-id="173463404">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247185</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015159786</doc-number>
+            <kind>A</kind>
+            <date>20150907</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104877897</doc-number>
+            <kind>A</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20150226</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173463403">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247185</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015159786</doc-number>
+            <kind>A</kind>
+            <date>20150907</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104877897</doc-number>
+            <kind>A</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20150226</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A target substance purification device includes: a mount for installing a capillary containing a liquid plug and having a longitudinal direction; a magnetic force applying mechanism that applies a magnetic force to the capillary to retain a magnetic body detachably retaining the target substance; a control mechanism that restricts movement of the magnetic body along the longitudinal direction of the capillary; and a liquid sending mechanism that moves the liquid along the longitudinal direction of the capillary while the movement of the magnetic body is being restricted by the control mechanism.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150330</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247185A1</docdb-publication-number>
+      <docdb-application-id>444210268</docdb-application-id>
+      <new-owner>SEIKO EPSON CORPORATION, JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:MURAYAMA, TOSHIRO;TAKAGI, FUMIO;REEL/FRAME:035283/0512</free-text-description>
+      <effective-date>
+        <date>20150311</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">BACKGROUND</heading>
+      <p id="p-00001-en" num="0001">1. Technical Field</p>
+      <p id="p-00002-en" num="0002">The present invention relates to a device and a method for purifying a target substance.</p>
+      <p id="p-00003-en" num="0003">2. Related Art</p>
+      <p id="p-00004-en" num="0004">Boom et al. reports a method for conveniently extracting nucleic acids from biological materials with the use of a nucleic acid-binding solid phase support such as silica particles, and a chaotropic agent (J. Clin. Microbiol., vol. 28 No. 3, p. 495-503 (1990)). The method of Boom et al., and all the other extraction methods that involve adsorbing a nucleic acid on a support with a nucleic acid-binding solid phase support (such as silica) and a chaotropic agent basically include the steps of (1) adsorbing a nucleic acid on a nucleic acid-binding solid phase support in the presence of a chaotropic agent (adsorbing step), (2) washing the support and the adsorbed nucleic acid with a washing liquid to remove the non-specifically bound foreign substances and the chaotropic agent (washing step), and (3) eluting the nucleic acid from the support with water or a low salt concentration buffer (eluting step), as described, for example, in JP-A-11-146783, and JP-A-2009-207459.</p>
+      <p id="p-00005-en" num="0005">A problem of such methods, however, is that each support particle is a very fine magnetic particle, and its hydrophilic surface may cause some of the particles to remain in the aqueous solution eluent when the externally applied magnetic procedures are insufficient. The presence of such magnetic particle residues in the eluent may interfere with the subsequent detection of a reaction by blocking the excitation light applied for detecting an amplification reaction.</p>
+      <heading id="h-00002-en" level="1">SUMMARY</heading>
+      <p id="p-00006-en" num="0006">An advantage according to some aspects of the invention is to provide a device and a method for purifying a target substance whereby magnetic particles can be efficiently removed.</p>
+      <p id="p-00007-en" num="0007">An aspect of the invention is directed to a device for purifying a target substance, including: a mount for installing a capillary containing a liquid plug and having a longitudinal direction; a magnetic force applying mechanism that applies a magnetic force to the capillary to retain a magnetic body detachably retaining the target substance; a control mechanism that restricts movement of the magnetic body along the longitudinal direction of the capillary; and a liquid sending mechanism that moves the liquid along the longitudinal direction of the capillary while the movement of the magnetic body is being restricted by the control mechanism.</p>
+      <p id="p-00008-en" num="0008">Another aspect of the invention is directed to a device for purifying a target substance, including: a capillary containing a liquid plug and having a longitudinal direction; a magnetic force applying mechanism that applies a magnetic force to the capillary to retain a magnetic body detachably retaining the target substance; a control mechanism that restricts movement of the magnetic body along the longitudinal direction of the capillary; and a liquid sending mechanism that moves the liquid along the longitudinal direction of the capillary while the movement of the magnetic body is being restricted by the control mechanism.</p>
+      <p id="p-00009-en" num="0009">In both of the aspects of the invention described above, the target substance may be a nucleic acid, and the capillary may include: a first plug of oil; a second plug of a washing liquid that undergoes phase separation from the oil, and washes the magnetic body detachably retaining the nucleic acid; a third plug of oil; a fourth plug of an eluent that undergoes phase separation from the oil, and elutes the nucleic acid from the magnetic body detachably retaining the nucleic acid; and a fifth plug of oil, the first plug, the second plug, the third plug, the fourth plug, and the fifth plug being contained inside the capillary in this order. The device may include a moving mechanism that moves the magnetic body within a plane that crosses the longitudinal direction of the capillary. The magnetic force applying mechanism may include a permanent magnet. The liquid sending mechanism may include a pressure applying member, and the pressure applying member may be a plunger. Alternatively, the liquid sending mechanism may include a suction member, and the suction member may be a vacuum pump. Alternatively, the capillary may have ends with detachable sealing members.</p>
+      <p id="p-00010-en" num="0010">Still another aspect of the invention is directed to a method for purifying a target substance, including: introducing a magnetic body detachably retaining the target substance into a capillary having a liquid plug; externally applying a magnetic force to the capillary to retain the magnetic body inside the liquid; eluting the target substance from the magnetic body inside the liquid; and moving the liquid with the eluted target substance out of the capillary by moving the liquid along the longitudinal direction of the capillary while restricting movement of the magnetic body.</p>
+      <p id="p-00011-en" num="0011">In the method according to this aspect of the invention, the target substance may be a nucleic acid, and the capillary may include: a first plug of oil; a second plug of a washing liquid that undergoes phase separation from the oil, and washes the magnetic body detachably retaining the nucleic acid; a third plug of oil; a fourth plug of an eluent that undergoes phase separation from the oil, and elutes the nucleic acid from the magnetic body detachably retaining the nucleic acid; and a fifth plug of oil, the first plug, the second plug, the third plug, the fourth plug, and the fifth plug being contained inside the capillary in this order, wherein the magnetic body detachably retaining the target substance may be introduced into the capillary from an end closer to the first plug, wherein the magnetic body may move into the eluent under a magnetic force externally applied to the capillary, wherein the target substance may elute from the magnetic body in the eluent, and wherein the eluent with the eluted target substance may move to an end closer to the fifth plug, and may discharge from the capillary at the end closer to the fifth plug. The method may include moving the magnetic body within a plane that crosses the longitudinal direction of the capillary. The liquid with the eluted target substance may be moved along the longitudinal direction of the capillary by applying pressure inside the capillary, and the pressure may be applied with a plunger. Alternatively, the liquid with the eluted target substance may be moved along the longitudinal direction of the capillary by creating suction inside the capillary, and the suction may be created with a vacuum pump. Alternatively, the capillary may have detachable sealing members at the both ends, and the capillary may be vertically held, and the liquid with the eluted target substance may be moved along the longitudinal direction of the capillary by opening and closing the sealing members.</p>
+      <p id="p-00012-en" num="0012">The invention has thus enabled providing a device and a method for purifying a target substance whereby magnetic particles can be efficiency removed.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00013-en" num="0013">The invention will be described with reference to the accompanying drawings, wherein like numbers reference like elements.</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIGS. 1A and 1B</figref> are schematic diagrams of a nucleic acid purification device according to an embodiment of the invention.</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 2</figref> is a magnified view near a plug inside a capillary according to the embodiment of the invention.</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 3</figref> is a schematic diagram of the nucleic acid purification device with a reaction vessel and a substance extraction unit according to the embodiment of the invention.</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIGS. 4A and 4B</figref> are schematic diagrams representing a use of the nucleic acid purification device according to the embodiment of the invention.</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIGS. 5A to 5F</figref> are schematic diagrams representing a specific procedure of using the nucleic acid purification device according to the embodiment of the invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DESCRIPTION OF EXEMPLARY EMBODIMENTS</heading>
+      <p id="p-00019-en" num="0019">The objects, features, advantages, and ideas of the invention will be clearly understood by a skilled person from the descriptions of the invention, and it would be easy for a skilled person to reproduce the invention from the following descriptions. The embodiments and concrete examples of implementation discussed in the following detailed explanation serve solely to illustrate or describe the preferred embodiments of the invention, and do not limit the invention in any ways. It will be understood that various modifications and alterations may be made to the invention by a skilled person from the following descriptions, provided such modifications and alterations do not exceed the intent and the scope of the invention disclosed below.</p>
+      <heading id="h-00005-en" level="2">Target Substance Purification Device</heading>
+      <p id="p-00020-en" num="0020">As illustrated in <figref>FIG. 1A</figref>, an embodiment of a target substance purification device <b>80</b> according to the invention includes a capillary <b>12</b> having a liquid plug <b>10</b>, a magnetic body M detachably retaining a target substance inside the capillary <b>12</b>, a magnetic force applying mechanism <b>14</b> that applies a magnetic force to the capillary <b>12</b> to retain the magnetic body, a control mechanism <b>16</b> that stops the longitudinal movement of the magnetic body inside the capillary <b>12</b>, and a liquid sending mechanism <b>18</b> that moves a liquid along the longitudinal direction of the capillary <b>12</b> while the control mechanism <b>16</b> is stopping the movement of the magnetic body M.</p>
+      <p id="p-00021-en" num="0021">The liquid plug <b>10</b> is preferably an aqueous solution, more preferably a salt solution, particularly a buffer. The capillary <b>12</b> may have more than one plug. In this case, it is preferable to provide a wax plug or an oil plug between the liquid plugs so that the liquid plugs can independently exist.</p>
+      <p id="p-00022-en" num="0022">The capillary <b>12</b> is hollow inside, and has a tubing portion (also called “tube portion”) that allows a liquid to longitudinally travel inside the hollow space. The tube portion has a longitudinal direction, but may be bent. The size and the shape of the hollow space inside the tube portion are not particularly limited, as long as the liquid can maintain the form of a plug inside the tube portion. The size of the hollow space inside the tube portion, and the shape of the cross section perpendicular to the longitudinal direction may vary along the longitudinal direction of the tube portion. Whether the liquid can maintain a plug shape inside the tube portion depends on conditions such as the material of the tube portion, and the type of the liquid, and as such the shape of the cross section perpendicular to the longitudinal direction of the tube portion is appropriately designed to allow the liquid to maintain a plug shape inside the tube portion. The outer cross sectional shape of the tube portion perpendicular to the longitudinal direction is not limited either. The thickness of the tube portion is not particularly limited. When the cross section of the hollow space inside the tube portion perpendicular to the longitudinal direction is circular in shape, the tube portion may have an inner diameter (the diameter of the circle of the cross section of the inner hollow perpendicular to the longitudinal direction) of, for example, 0.5 mm to 3 mm. Such an inner diameter of the tube portion is preferable in terms of ease of forming a liquid plug over a wide range of tube portion materials and liquid types. The material of the tube portion is not particularly limited, and may be, for example, glass, polymer, or metal. The materials selected for the tube portion are preferably materials that are transparent to visible light, such as glass and polymer, because such materials provide visual access to inside of the tube portion (the hollow space) from outside. It is also preferable to use a magnetically transparent material or a non-magnetic material for the tube portion because such materials make it easier to externally apply a magnetic force to the tube portion such as when passing magnetic particles M through the tube portion.</p>
+      <p id="p-00023-en" num="0023">The target substance is not limited, and may be a macromolecule such as a nucleic acid (e.g., DNA, RNA), and a protein, or a low-molecular substance such as a compound. The shape of the magnetic body M is not particularly limited, and is preferably particulate. In order to detachably retain the target substance, the magnetic body M either detachably binds to the target substance, or has a target substance-binding substance that detachably binds to the magnetic body M. For example, when the target substance is a nucleic acid, the magnetic body M may have nucleic acid binding molecules such as silica particles. The magnetic body M may have an antibody binding molecule such as protein A when the target substance is an antibody.</p>
+      <p id="p-00024-en" num="0024">The purification device <b>80</b> according to the invention includes a magnetic force applying section <b>20</b> provided with the magnetic force applying mechanism <b>14</b> and the control mechanism <b>16</b>. The magnetic force applying mechanism <b>14</b> externally applies a magnetic force to the capillary <b>12</b> to retain the magnetic body M inside the capillary <b>12</b>, and control the movement of the magnetic body M. The magnetic force applying mechanism <b>14</b> can be designed by a skilled person with ease. For example, the magnetic force applying mechanism <b>14</b> has a magnetic force applying body such as a permanent magnet, and can retain the magnetic body M with the magnetic force of the magnetic force applying body. The control mechanism <b>16</b> controls the longitudinal movement of the magnetic body M inside the capillary <b>12</b>, and can stop the magnetic body M as desired. This is made possible, for example, with a mechanism by which the magnetic force applying mechanism <b>14</b> can be moved, and stopped at the desired position. Preferably, the control mechanism <b>16</b> is adapted to move the magnetic body M within a plane that crosses the longitudinal direction of the capillary <b>12</b>, particularly a plane orthogonal to the longitudinal direction of the capillary <b>12</b>. Specifically, it is preferable that the control mechanism <b>16</b> swings the magnetic body M. For example, because the magnetic body M is attracted by whichever of the magnetic force applying bodies is closer to the magnetic body M, the magnetic force applying body that is more proximate than the other to the capillary attracts the magnetic body M when two magnetic force applying bodies are provided. As the magnetic force applying body is moved away from the capillary <b>12</b>, the magnetic body M is attracted by the other magnetic force applying body approaching the capillary <b>12</b> from the opposite side. In this way, the magnetic body M can be moved sideways. The magnetic body M can thus be moved back and forth sideways by swinging the pair of magnetic force applying bodies sideways. This makes it easier for the magnetic body M to contact the liquid as it moves in the liquid plug <b>10</b>, and improves the washing and eluting effects.</p>
+      <p id="p-00025-en" num="0025">The liquid sending mechanism <b>18</b> of the purification device <b>80</b> is provided to move the liquid plug <b>10</b> along the longitudinal direction of the capillary <b>12</b>, and eject the liquid through a capillary end portion <b>24</b>. For example, the liquid sending mechanism <b>18</b> may be a pressure applying member that applies pressure to the liquid inside the capillary <b>12</b>, and moves the liquid under the applied pressure, or a suction member that moves the liquid by evacuating the capillary <b>12</b> and creating a negative pressure therein. The pressure applying member may be, for example, a piston or a plunger as shown in <figref>FIGS. 1A and 1B</figref>. The suction member may be, for example, a vacuum pump. Preferably, the diameter of the piston or the plunger is the same as the inner diameter of the capillary <b>12</b>, and the piston or the plunger is directly fitted to the capillary <b>12</b>. In this case, as illustrated in <figref>FIG. 1B</figref>, the liquid plug can be moved along the longitudinal direction of the capillary <b>12</b> by pushing the piston or the plunger into the capillary <b>12</b>. In the case of a vacuum pump, for example, the capillary <b>12</b> may be fitted to the opening of a side arm flask through a rubber stopper, and a vacuum may be created inside the flask with a vacuum pump such as an aspirator connected to the arm. The liquid plug also can be moved along the longitudinal direction of the capillary <b>12</b> in this manner. Alternatively, a detachable sealing member such as a cap may be provided at the both ends of the capillary <b>12</b>, and may be opened and closed to move the liquid with the eluted target substance along the longitudinal direction of the capillary <b>12</b> under the force of gravity, and discharge and collect the liquid from the capillary <b>12</b> held vertical to the ground. It is also possible to use the capillary <b>12</b> provided at one end with a high volatility liquid plug that does not instantaneously mix with oil. Heating the plug after sealing this end of the capillary <b>12</b> vaporizes the high volatility liquid, and moves the liquid with the eluted target substance toward the opposite end from the high volatility liquid plug along the longitudinal direction of the capillary <b>12</b>.</p>
+      <heading id="h-00006-en" level="2">Target Substance Purification Method</heading>
+      <p id="p-00026-en" num="0026">The purification device <b>80</b> of the foregoing configuration may be used to purify a target substance. For example, a target substance of interest for purification is obtained from a sample such as cells and viruses containing the target substance, for example, by lysing or extracting the sample with a lysing solution or an extractant. The magnetic body M that can detachably retain the target substance is then added, and bound to the target substance. The magnetic body M detachably retaining the target substance may be washed with a buffer or the like with a centrifuge tube or the like. The magnetic body M detachably retaining the target substance is then introduced into the capillary <b>12</b> having the liquid plug <b>10</b>. The method for introducing the magnetic body M is not particularly limited, and the magnetic body M may be introduced into the capillary <b>12</b> through the end portion <b>24</b> after being suspended in the same liquid used for the liquid plug <b>10</b> so that the liquids coalesce inside the capillary <b>12</b>.</p>
+      <p id="p-00027-en" num="0027">Simultaneously, a magnetic force is applied from outside of the capillary <b>12</b> to retain the magnetic body M inside the liquid. For example, as illustrated in <figref>FIG. 2</figref>, the magnetic body M may be retained inside the liquid by installing the magnetic force applying mechanism <b>14</b> in proximity outside (right side) of the liquid plug <b>10</b>. The magnetic body M may be moved as desired inside the capillary <b>12</b>, or may be retained at the specific position along the longitudinal direction of the capillary <b>12</b> by moving the magnetic force applying mechanism <b>14</b> along the longitudinal direction of the capillary <b>12</b>, or by stopping the magnetic force applying mechanism <b>14</b> as desired with the control mechanism <b>16</b> that controls the movement of the magnetic force applying mechanism <b>14</b>.</p>
+      <p id="p-00028-en" num="0028">With the magnetic body M retained inside the liquid, the target substance is eluted from the magnetic body Min the liquid. The elution method is not particularly limited, and may be appropriately decided according to the manner in which the target substance binds to the target substance-binding substance of the magnetic body M. For example, in the case of a nucleic acid and silica, the liquid may be heated by heating the capillary. In the case of an antibody and an antigen, the antibody and the antigen may be separated from each other by making the pH acidic by addition of an acid to the liquid. Here, the liquid effect on the magnetic body M can be improved by swinging the magnetic body M on a plane that crosses the longitudinal direction of the capillary <b>12</b>, particularly a plane orthogonal to the longitudinal direction of the capillary <b>12</b>, as described above.</p>
+      <p id="p-00029-en" num="0029">Thereafter, as illustrated in <figref>FIG. 1B</figref>, the liquid with the eluted target substance is moved along the longitudinal direction of the capillary <b>12</b>, and ejected through the end <b>24</b> of the capillary <b>12</b> while stopping the longitudinal movement of the magnetic body M along the capillary <b>12</b>. The liquid can then be collected to obtain the target substance that eluted from the magnetic body.</p>
+      <p id="p-00030-en" num="0030">More than one liquid plug may be provided, one being a washing liquid for washing the magnetic body M detachably retaining the target substance, and the other being an eluent for eluting the target substance from the magnetic body M. Specifically, in this case, the capillary <b>12</b> may include a first plug of oil, a second plug of a washing liquid that undergoes phase separation from the oil, and washes the magnetic body detachably retaining the target substance, a third plug of oil, a fourth plug of an eluent that undergoes phase separation from the oil, and elutes the target substance from the magnetic body M detachably retaining the target substance, and a fifth plug of oil, in this order inside the capillary <b>12</b>. As with the case of a single plug, the magnetic body M detachably retaining the target substance is introduced into the washing liquid. The magnetic body M is then moved to the eluent with the control mechanism <b>16</b> that controls the movement of the magnetic force applying mechanism <b>14</b>. The target substance is then eluted in the eluent, and is ejected and collected through the end of the capillary as described above. Here, the washing effect can be further improved by providing more than one washing liquid plug.</p>
+      <heading id="h-00007-en" level="2">Example of Nucleic Acid Purification</heading>
+      <p id="p-00031-en" num="0031">As illustrated in <figref>FIG. 3</figref>, the nucleic acid purification device of this Example includes a reaction vessel <b>100</b>, and a substance extraction unit <b>300</b>. The reaction vessel <b>100</b> includes a tube <b>110</b> having a longitudinal direction, and a plunger <b>130</b> connected to the tube <b>110</b> on the side of an opening <b>120</b> provided at one end of the tube <b>110</b>. The tube <b>110</b> has an opening <b>140</b> at the end opposite the opening <b>120</b>, and is charged with a first plug <b>200</b> of an oil, a second plug <b>210</b> of an washing liquid, a third plug <b>220</b> of an oil, a fourth plug <b>230</b> of an eluent, and a fifth plug <b>240</b> of an oil, in this order from the opening <b>140</b> toward the opening <b>120</b>. The washing liquid and the eluent are aqueous solutions immiscible to the oil. The substance extraction unit <b>300</b> includes a mount <b>320</b> for installing the reaction vessel <b>100</b>, permanent magnets <b>320</b>A and <b>320</b>B for applying a magnetic force to the side surface of the tube <b>110</b> of the reaction vessel <b>100</b>, a liquid sending mechanism <b>330</b> that pushes the plunger <b>130</b> to send the liquid inside the reaction vessel <b>100</b>, and a heating section <b>340</b> for heating a part of the tube <b>110</b>. In this Example, silicone oil was used as the oil. A 76 mass % guanidine hydrochloride aqueous solution was used as the washing liquid. Sterile water was used as the eluent.</p>
+      <p id="p-00032-en" num="0032">The following describes how the nucleic acid purification device is used to extract a nucleic acid from human blood.</p>
+      <p id="p-00033-en" num="0033">First, as illustrated in <figref>FIGS. 4A and 4B</figref>, 375 μL of an adsorbent, and 1 μL of a magnetic particle (magnetic particle M) dispersed liquid were contained in a 3-mL polyethylene vessel (adsorption vessel <b>150</b>). The composition of the adsorbent was 76 mass % guanidine hydrochloride, 1.7 mass % EDTA.2Na dihydrate, and a 10 mass % polyoxyethylene sorbitan monolaurate aqueous solution (MagExtractor-Genome-, NPK-1; Toyobo). The magnetic particle dispersed liquid contained 50 volume % magnetic silica particles, and 20 mass % lithium chloride.</p>
+      <p id="p-00034-en" num="0034">Fifty microliters of blood collected from human was pipetted into the adsorption vessel <b>150</b> through the opening. After capping the opening, the adsorption vessel <b>150</b> was agitated for 30 seconds by shaking it with hand to adsorb the blood nucleic acid to the magnetic particles M (see <figref>FIG. 4A</figref>). After removing the cap from the adsorption vessel <b>150</b>, the opening <b>140</b> on the first plug side of the reaction vessel <b>100</b> is inserted into the adsorption vessel <b>150</b>, and the plunger <b>130</b> was slid up against the opening <b>120</b>. This charges the magnetic particles M inside the adsorption vessel <b>150</b> into the tube portion <b>110</b> of the reaction vessel <b>100</b> with the adsorbent (see <figref>FIG. 4B</figref>). The tube <b>110</b> with the plunger <b>130</b> is then installed on the mount <b>320</b> provided in the substance extraction unit <b>300</b>. Here, the tube <b>110</b> is installed so that the opening <b>120</b> side of the tube is vertically above the opening <b>140</b>. With the reaction vessel <b>100</b> installed in place, the opening <b>140</b> is past below the permanent magnets <b>320</b>A and <b>320</b>B, and the permanent magnets <b>320</b>A and <b>320</b>B are on the sides of the tube <b>110</b> at the first plug position. As a result, the magnetic force from the permanent magnets <b>320</b>A and <b>320</b>B moves the magnetic particles M to the first plug position inside the tube <b>110</b> (see <figref>FIG. 5A</figref>). The permanent magnet <b>320</b>A and the permanent magnet <b>320</b>B are on the opposite sides of the tube <b>110</b>, facing each other with a certain distance in between. The permanent magnets <b>320</b>A and <b>320</b>B move reciprocally along the axis orthogonal to the longitudinal direction of the tube so as to vary their distances from the tube <b>110</b>.</p>
+      <p id="p-00035-en" num="0035">The liquids inside the tube are moved by pushing the plunger <b>130</b> toward the opening <b>140</b> while moving the permanent magnets <b>320</b>A and <b>320</b>B reciprocally along the axis orthogonal to the tube longitudinal direction. Under the applied pressure of the plunger <b>130</b> inside the tube, the second plug <b>210</b> of a washing liquid moves to the level that lies on the axis along which the magnetic force applying section is undergoing reciprocal movement. This moves the magnetic particles M to the second plug relative to the first plug of oil. The magnetic particles M are washed by the washing liquid, and the foreign substances around the magnetic particles M are removed as the permanent magnets <b>320</b>A and <b>320</b>B make reciprocal movement while the plunger <b>130</b> sends the liquid (see <figref>FIGS. 5B and 5C</figref>). As the plunger <b>130</b> sends the liquids further, the second plug moves toward the opening <b>140</b>, and the third plug <b>220</b> of the oil comes to lie on the axis along which the permanent magnets <b>320</b>A and <b>320</b>B are undergoing reciprocal movement. It is desirable to stop the reciprocal movement of the permanent magnets <b>320</b>A and <b>320</b>B while the magnetic particles are passing through the interface between the second plug <b>210</b> and the third plug <b>220</b> so that the magnetic particles can make passage through the interface while the permanent magnet <b>320</b>A or <b>320</b>B is held still proximate to the tube side surface. In this way, it is possible to avoid the magnetic particles M from entering the third plug while the washing liquid forming the second plug is still present in abundance around the magnetic particles M (see <figref>FIGS. 5B and 5D</figref>). As the plunger <b>130</b> sends the liquids further, the third plug moves to the opening <b>140</b>, and the fourth plug <b>230</b> forming the eluent comes to lie on the axis along which the permanent magnets <b>320</b>A and <b>320</b>B are undergoing reciprocal movement. The sending of the liquids is suspended upon the magnetic particles M having moved to the position near the middle of the fourth plug relative to the tube longitudinal direction, and the permanent magnets <b>320</b>A and <b>320</b>B are moved reciprocally while heating the eluent with the heating section <b>340</b> from the tube side surface to elute the adsorbed nucleic acid from the magnetic particles M into the eluent <b>230</b> (see <figref>FIG. 5E</figref>). This completes the elution of the nucleic acid into the eluent for amplification reaction. The plunger <b>130</b> is then pushed toward the opening <b>140</b> to discharge the eluent <b>230</b> with the eluted nucleic acid through the opening <b>140</b> (see <figref>FIG. 5F</figref>), and this liquid is charged into an amplification reaction vessel with a part of or all of the oil forming the third plug <b>220</b> and the fifth plug <b>240</b>. In this way, the introduction of the liquid with the eluted extract into the amplification reaction vessel can be automated.</p>
+      <p id="p-00036-en" num="0036">The entire disclosure of Japanese Patent Application No. 2014-038183, filed Feb. 28, 2014 is expressly incorporated by reference herein.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A device for purifying a target substance, comprising:
+<claim-text>a mount for installing a capillary containing a liquid plug and having a longitudinal direction;</claim-text><claim-text>a magnetic force applying mechanism that applies a magnetic force to the capillary to retain a magnetic body detachably retaining the target substance;</claim-text><claim-text>a control mechanism that restricts movement of the magnetic body along the longitudinal direction of the capillary; and</claim-text><claim-text>a liquid sending mechanism that moves the liquid along the longitudinal direction of the capillary while the movement of the magnetic body is being restricted by the control mechanism.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en" independent="true">
+      <claim-text>
+        <b>2</b>. A device for purifying a target substance, comprising:
+<claim-text>a capillary containing a liquid plug and having a longitudinal direction;</claim-text><claim-text>a magnetic force applying mechanism that applies a magnetic force to the capillary to retain a magnetic body detachably retaining the target substance;</claim-text><claim-text>a control mechanism that restricts movement of the magnetic body along the longitudinal direction of the capillary; and</claim-text><claim-text>a liquid sending mechanism that moves the liquid along the longitudinal direction of the capillary while the movement of the magnetic body is being restricted by the control mechanism.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>,
+<claim-text>wherein the target substance is a nucleic acid, and</claim-text><claim-text>wherein the capillary includes:
+<claim-text>a first plug of oil;</claim-text><claim-text>a second plug of a washing liquid that undergoes phase separation from the oil, and washes the magnetic body detachably retaining the nucleic acid;</claim-text><claim-text>a third plug of oil;</claim-text><claim-text>a fourth plug of an eluent that undergoes phase separation from the oil, and elutes the nucleic acid from the magnetic body detachably retaining the nucleic acid; and</claim-text><claim-text>a fifth plug of oil,</claim-text><claim-text>the first plug, the second plug, the third plug, the fourth plug, and the fifth plug being contained inside the capillary in this order.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The device according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>,
+<claim-text>wherein the target substance is a nucleic acid, and</claim-text><claim-text>wherein the capillary includes:
+<claim-text>a first plug of oil;</claim-text><claim-text>a second plug of a washing liquid that undergoes phase separation from the oil, and washes the magnetic body detachably retaining the nucleic acid;</claim-text><claim-text>a third plug of oil;</claim-text><claim-text>a fourth plug of an eluent that undergoes phase separation from the oil, and elutes the nucleic acid from the magnetic body detachably retaining the nucleic acid; and</claim-text><claim-text>a fifth plug of oil,</claim-text><claim-text>the first plug, the second plug, the third plug, the fourth plug, and the fifth plug being contained inside the capillary in this order.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, comprising a moving mechanism that moves the magnetic body within a plane that crosses the longitudinal direction of the capillary.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The device according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, comprising a moving mechanism that moves the magnetic body within a plane that crosses the longitudinal direction of the capillary.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the magnetic force applying mechanism includes a permanent magnet.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the liquid sending mechanism includes a pressure applying member.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The device according to <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the pressure applying member is a plunger.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the liquid sending mechanism includes a suction member.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The device according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the suction member is a vacuum pump.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The device according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the capillary has both ends with detachable sealing members.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en" independent="true">
+      <claim-text>
+        <b>13</b>. A method for purifying a target substance, comprising:
+<claim-text>introducing a magnetic body detachably retaining the target substance into a capillary having a liquid plug;</claim-text><claim-text>externally applying a magnetic force to the capillary to retain the magnetic body inside the liquid;</claim-text><claim-text>eluting the target substance from the magnetic body inside the liquid; and</claim-text><claim-text>moving the liquid with the eluted target substance out of the capillary by moving the liquid along the longitudinal direction of the capillary while restricting movement of the magnetic body.</claim-text></claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>,
+<claim-text>wherein the target substance is a nucleic acid, and</claim-text><claim-text>wherein the capillary includes:
+<claim-text>a first plug of oil;</claim-text><claim-text>a second plug of a washing liquid that undergoes phase separation from the oil, and washes the magnetic body detachably retaining the nucleic acid;</claim-text><claim-text>a third plug of oil;</claim-text><claim-text>a fourth plug of an eluent that undergoes phase separation from the oil, and elutes the nucleic acid from the magnetic body detachably retaining the nucleic acid; and</claim-text><claim-text>a fifth plug of oil,</claim-text><claim-text>the first plug, the second plug, the third plug, the fourth plug, and the fifth plug being contained inside the capillary in this order,</claim-text></claim-text><claim-text>wherein the magnetic body detachably retaining the target substance is introduced into the capillary from an end closer to the first plug,</claim-text><claim-text>wherein the magnetic body moves into the eluent under a magnetic force externally applied to the capillary,</claim-text><claim-text>wherein the target substance elutes from the magnetic body in the eluent, and</claim-text><claim-text>wherein the eluent with the eluted target substance moves to an end closer to the fifth plug, and discharges from the capillary at the end closer to the fifth plug.</claim-text></claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>, further comprising moving the magnetic body within a plane that crosses the longitudinal direction of the capillary.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the liquid with the eluted target substance is moved along the longitudinal direction of the capillary by applying pressure inside the capillary.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the pressure is applied with a plunger.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the liquid with the eluted target substance is moved along the longitudinal direction of the capillary by creating suction inside the capillary.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method according to <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein the suction is created with a vacuum pump.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The method according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>,
+<claim-text>wherein the capillary has detachable sealing members at the both ends, and</claim-text><claim-text>wherein the capillary is vertically held, and the liquid with the eluted target substance is moved along the longitudinal direction of the capillary by opening and closing the sealing members. </claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247185A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247185A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247185A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247185A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150247185A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247185A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150247185A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247185A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150247185A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247185A1-20150903-D00005.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150247185A1.PDF" type="pdf" size="399920" pages="11" />
+</lexisnexis-patent-document>

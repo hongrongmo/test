@@ -27,15 +27,34 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CountDownLatch;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import org.ei.common.georef.DocumentView.MultiValueLookupValueDecorator;
 import org.ei.dataloading.awss3.AmazonS3Service;
+import org.ei.dataloading.upt.loadtime.vtw.ArchiveVTWPatentAsset;
 
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
@@ -60,6 +79,7 @@ public class CafeDownloadFileFromS3AllTypes {
 	static int updateNumber;
 	static String ani_DeletionTempTable = "cafe_weekly_deletion";
 	static String deletionSqlldrFileName = "cafeANIDeletionFileLoader.sh";
+	static int numOfThreads = 1;
 
 
 	static int curRecNum = 0;
@@ -68,7 +88,7 @@ public class CafeDownloadFileFromS3AllTypes {
 	File S3dir;    // to hold downloaded bulk of s3 keys/files
 	private static String currDir;   // to hold current working dir to use fro zip downloaded cafe keys
 
-	private GetANIFileFromCafeS3Bucket objectFromS3;
+	//private GetANIFileFromCafeS3Bucket objectFromS3;  // 05/19/2017 moved to multithreading class instead
 	private AmazonS3 s3Client;
 
 	private long epoch;
@@ -79,6 +99,13 @@ public class CafeDownloadFileFromS3AllTypes {
 	//05/24/2016 hold cafe_inventory key/epoch List
 	Map <String,Long> cafeInventory_List = new HashMap<String,Long>();
 	private PrintWriter out;
+
+	/* 05/16/2017 use multithreading instead to be able to download large # of files 
+	 * instead of one single thread that crashed for APR "APR-06-17" that has total 4M+ to download
+	 * APR download for archive "APR-06-17" failed after downloaded 2M+ out of total 4M+ due to SQLRecoverableException. so need to implement multithreading
+	 */
+	private List<LinkedHashMap<String, String>> keys_to_be_downloaded = new ArrayList<LinkedHashMap<String,String>>();
+
 
 	//08/01/2016 combine Keys List for action "d" for direct deletion from ES & DB without dowbload from S3 bucket
 	private HashMap<String,String> keys_to_be_deleted = new HashMap<String,String>();
@@ -135,7 +162,7 @@ public class CafeDownloadFileFromS3AllTypes {
 			}
 		}
 
-		if(args.length >11)
+		if(args.length >12)
 		{
 			// # of downloaded cafe key files to include in one zip file for later process/convert
 			if(args[6] !=null)
@@ -180,6 +207,17 @@ public class CafeDownloadFileFromS3AllTypes {
 				if(doc_type.equalsIgnoreCase("ani"))
 					System.out.println("ANI deletion sqlldrfile: " + deletionSqlldrFileName);
 			}
+			if(args[12] !=null)
+			{
+				Pattern pattern = Pattern.compile("^\\d*$");
+				Matcher match = pattern.matcher(args[12]);
+				if(match.find())
+					numOfThreads = Integer.parseInt(args[12]);
+				else {
+					System.out.println("did not find numOfThreads or numOfThreads has wrong format!!!");
+					System.exit(1);
+				}
+			}
 		}
 
 
@@ -197,6 +235,49 @@ public class CafeDownloadFileFromS3AllTypes {
 			downloadFile.getCafeInv_FilesInfo();
 			downloadFile.getSnsArch_FilesInfo();
 			downloadFile.end();
+
+
+			// download files from s3 bucket using thread (s)
+			if(downloadFile.keys_to_be_downloaded.size() >0)
+			{
+				double listSize = downloadFile.keys_to_be_downloaded.size()/numOfThreads;
+				int subListSize = (int)listSize;
+				int start = 0;
+				int last = (subListSize -1);
+				CountDownLatch latch = new CountDownLatch(numOfThreads);
+				
+				
+				System.out.println("list size to download: " + downloadFile.keys_to_be_downloaded.size());
+				if(numOfThreads ==1)
+					last = subListSize -1;
+				
+				
+				System.out.println("STARTING................." + new Date().getTime());
+				for(int i=0;i<numOfThreads;i++)
+				{
+					GetANIFileFromCafeS3Bucket objectFromS3 = new GetANIFileFromCafeS3Bucket(downloadFile.s3Client,database,url,driver,username,password,downloadFile.S3dir);
+					
+					s3FileDownload thread = downloadFile.new s3FileDownload("Thread " + i,latch, start,last, objectFromS3);
+					thread.start();
+					
+					//Thread.sleep(1000);
+					synchronized (thread) {
+						start = last + 1;
+						if(i<(numOfThreads-2))
+							last = start + (subListSize -1);
+						else
+							last = downloadFile.keys_to_be_downloaded.size() -1;
+						
+						System.out.println("***********************");	
+					}
+				}
+				
+				latch.await();
+				
+				System.out.println("In Main thread after completion of " + numOfThreads + " threads");
+				System.out.println("FINISHED................." + new Date().getTime());
+			}
+			
 
 
 			// zip downloaded cafe keys/files
@@ -252,7 +333,7 @@ public class CafeDownloadFileFromS3AllTypes {
 			}
 
 			// for parsing ANI/Abstract CPX File
-			objectFromS3 = new GetANIFileFromCafeS3Bucket(s3Client,database,url,driver,username,password,S3dir);
+			//objectFromS3 = new GetANIFileFromCafeS3Bucket(s3Client,database,url,driver,username,password,S3dir);  // 05/19/2017 moved to multithreadig class
 
 			/* for writing newly archived sqs message info from sns_archive (unique, most recent epoch) including ones that has correspondence in cafe_inventory
 			 * with sns_archive.epoch > cafe_inventory.epoch
@@ -310,8 +391,8 @@ public class CafeDownloadFileFromS3AllTypes {
 		{
 			stmt = con.createStatement();
 
-			String cafeInventory_list = "select key,epoch from CAFE_INVENTORY where key in "+
-					"(select distinct key from sns_archive where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR')='" + archive_date + "') and doc_type='" + doc_type + "'";
+			String cafeInventory_list = "select key,epoch from CAFE_INVENTORY where doc_type='" + doc_type + "' and key in "+
+					"(select distinct key from sns_archive where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR')='" + archive_date + "')";
 
 			rs = stmt.executeQuery(cafeInventory_list);
 
@@ -365,8 +446,8 @@ public class CafeDownloadFileFromS3AllTypes {
 					"GROUP BY key) x "+
 					"JOIN sns_archive t ON x.key =t.key "+
 					"AND x.epoch = t.epoch "+
-					"where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR')='" + archive_date + "' "+
-					"order by x.key";
+					"where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR')='" + archive_date + "' ";
+			//"order by x.key"; commented out for performance 05/08/2017
 
 
 			System.out.println("execute query: " + snsArchive_UniqueRecentEpoch_List);
@@ -501,12 +582,14 @@ public class CafeDownloadFileFromS3AllTypes {
 
 		StringBuffer keys = new StringBuffer();
 
+		LinkedHashMap<String, String> keyBucketPair;
 		try 
 		{
 			while (rs2.next())
 			{
 				strBuf = new StringBuffer();
-
+				keyBucketPair = new LinkedHashMap<String,String>();
+				
 				if(rs2.getString("KEY") !=null)
 				{
 					key = rs2.getString("KEY");
@@ -582,9 +665,17 @@ public class CafeDownloadFileFromS3AllTypes {
 							{
 								keys_to_be_deleted.put(key, pui);
 							}
+							//05/17/2017 moved to multithreading class
 							else
 							{
-								errorCode = objectFromS3.getFile(bucket, key);
+								//errorCode = objectFromS3.getFile(bucket, key);
+								
+								/*
+								 * originally added 05/17/2017 to download cafe files from s3 bucket later in multi-threads instead 
+								 * modified 06/07/2017 by placing it hear instead of outside epoch check so now count in out file should match physically downloaded files 
+								 */
+								keyBucketPair.put(key,bucket);
+								keys_to_be_downloaded.add(keyBucketPair);
 							}
 
 							//write Keys info for later load to cafe_inventory 
@@ -609,9 +700,18 @@ public class CafeDownloadFileFromS3AllTypes {
 						{
 							keys_to_be_deleted.put(key,pui);
 						}
+						
+						//05/17/2017 moved to multithreading class
 						else
 						{
-							errorCode = objectFromS3.getFile(bucket, key);
+							//errorCode = objectFromS3.getFile(bucket, key);
+							
+							/*
+							 * originally added 05/17/2017 to download cafe files from s3 bucket later in multi-threads instead 
+							 * modified 06/07/2017 by placing it hear instead of outside epoch check so now count in out file should match physically downloaded files 
+							 */ 
+							keyBucketPair.put(key,bucket);
+							keys_to_be_downloaded.add(keyBucketPair);
 						}
 
 						//write Keys info for later load to cafe_inventory 
@@ -633,6 +733,7 @@ public class CafeDownloadFileFromS3AllTypes {
 				keys.append(aniKey);
 			}
 			System.out.println("Total Keys of action 'd' [" + keys + " ]");
+
 		} 
 
 		// for resultSet
@@ -671,7 +772,7 @@ public class CafeDownloadFileFromS3AllTypes {
 				if(bucket !=null && key !=null)
 				{
 					System.out.println("Get file... " +  bucket+"/"+key + " for action: " +  action);
-					objectFromS3.getFile(bucket, key);
+					//objectFromS3.getFile(bucket, key);  // 05/19/2017 temp comment out because i moved objectFromS3 to multithreading class. when needed return it back
 				}
 
 			}
@@ -759,6 +860,7 @@ public class CafeDownloadFileFromS3AllTypes {
 		byte[] buf = new byte[1024];
 
 
+		System.out.println("zip starting....");
 		// create zip files if any files were downloaded, otherwise no zip file should be created
 		if(xmlFiles.length >0)
 		{
@@ -1225,7 +1327,7 @@ public class CafeDownloadFileFromS3AllTypes {
 		}
 
 
-		
+
 	}
 	public void DbBulkDelete(String tableName, String backupTable) throws IOException
 	{	
@@ -1469,5 +1571,113 @@ public class CafeDownloadFileFromS3AllTypes {
 				password);
 		return con;
 	}
+
+
+
+	//added 05/17/2017 to download cafe s3 files using multithreads
+	public class s3FileDownload extends Thread  
+	{
+		private Thread th;
+		private String threadName = null;
+		private CountDownLatch latch;
+		
+		int startIndex;
+		int lastIndex;
+
+		GetANIFileFromCafeS3Bucket objectFromS3;
+		
+		
+		public s3FileDownload (String name, CountDownLatch latch, int start, int last, GetANIFileFromCafeS3Bucket obj)
+		{
+			threadName = name;
+			this.latch = latch;
+			
+			
+			startIndex = start;
+			lastIndex = last;
+
+			objectFromS3 = obj;
+			
+			if(startIndex <-1 || lastIndex <-1)
+			{
+				System.out.println("invalid startIndex: " + startIndex + " or lastIndex: " + lastIndex + "!! exit...");
+				System.exit(1);
+			}
+		}
+
+		public void start()
+		{
+			if(th ==null)
+			{
+				try 
+				{
+					th = new Thread(this, threadName);
+					th.start();
+				} 
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+		}
+		public void run() 
+		{
+			String errorCode = null;
+			
+			System.out.println("Running Thread: " + threadName);
+			
+			System.out.println("starting download files for " + threadName + ": start: " + startIndex + " last: " + lastIndex);
+			
+						
+			try 
+			{
+				
+				for(int j=startIndex; j<=lastIndex;j++)
+				{
+					for(String key : keys_to_be_downloaded.get(j).keySet())
+						errorCode = objectFromS3.getFile(keys_to_be_downloaded.get(j).get(key),key);
+				}
+				
+				System.out.println("finished download files for " + threadName );
+				
+				latch.countDown();
+			}
+
+			catch(AmazonServiceException ase)
+			{
+				System.out.println("Caught an AmazonServiceException, which " +"means your request made it " +
+						"to Amazon S3, but was rejected with an error response" +
+						" for some reason.");
+				System.out.println("Error Message:    " + ase.getMessage());
+				System.out.println("HTTP Status Code: " + ase.getStatusCode());
+				System.out.println("AWS Error Code:   " + ase.getErrorCode());
+				System.out.println("Error Type:       " + ase.getErrorType());
+				System.out.println("Request ID:       " + ase.getRequestId());
+			}
+			catch(AmazonClientException ace)
+			{
+				System.out.println("Caught an AmazonClientException, which " +
+						"means the client encountered " +
+						"an internal error while trying to " +
+						"communicate with S3, " +
+						"such as not being able to access the network.");
+				System.out.println("Error Message: " + ace.getMessage());
+			}
+			catch (InterruptedException e) 
+			{
+				System.out.println("caught an InterruptedException for cafe download file from s3 bucket!!!");
+				System.out.println("Reason: " + e.getMessage()); 
+				e.printStackTrace();
+			}
+
+			catch (Exception e) 
+			{
+				System.out.println("Exception for thread: " + threadName + " !!!");
+				System.out.println("Reason: " + e.getMessage()); 
+				e.printStackTrace();
+			}
+
+		}
+	} 
 
 }

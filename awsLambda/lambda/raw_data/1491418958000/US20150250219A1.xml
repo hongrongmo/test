@@ -1,0 +1,1640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150250219A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="022139" date-changed="20160112" time-changed="151859">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121232418">
+        <country>US</country>
+        <doc-number>20150250219</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14720302</doc-number>
+        <date>20150522</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150917">
+      <classification-ipcr sequence="1">
+        <text>A23L   1/29        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>29</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A21D  13/00        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61K   9/28        20060101A I20060506RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>28</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20060506</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A61K  33/44        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>33</main-group>
+        <subgroup>44</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>A61K  45/06        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>45</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150917">
+      <classification-cpc sequence="1">
+        <text>A23L   1/293       20130101 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>293</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A21D  13/008       20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>21</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>008</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A23L   1/0156      20130101 LI20150223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>0156</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A23L   1/2362      20130101 LI20150223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>2362</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A23L   1/30        20130101 LI20150223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A23V2002/00        20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>V</subclass>
+        <main-group>2002</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61K   9/0056      20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>0056</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61K   9/2018      20130101 LA20150223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>2018</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61K   9/2063      20130101 LA20150223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>2063</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A61K   9/2086      20130101 LI20150223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>2086</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>A61K  33/44        20130101 LI20150223BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>33</main-group>
+        <subgroup>44</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150223</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>A61K  45/06        20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>45</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">22</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">DECONTAMINANT EDIBLE PRODUCT, METHODS OF PRODUCTION AND USES THEREOF</invention-title>
+    <references-cited date-changed="20160112">
+      <patent-citations name="patcit" date-changed="20160112" />
+      <citation>
+        <patcit num="1" dnum="US9066857B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>9066857</doc-number>
+            <kind>B2</kind>
+            <name>STANG MICHAEL A [US]</name>
+            <date>20150630</date>
+          </document-id>
+          <application-date>
+            <date>20100630</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20150910">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12827679</doc-number>
+              <date>20100630</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9066857</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007203</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>11604275</doc-number>
+              <date>20061127</date>
+            </document-id>
+            <parent-status>ABANDONED</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12827679</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <continuation-in-part>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>WO</country>
+              <doc-number>/US2005/018802</doc-number>
+              <date>20050527</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+            <parent-pct-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>PCT/US2005/018802</doc-number>
+                <date>20050527</date>
+              </document-id>
+            </parent-pct-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>11604275</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation-in-part>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>60574676</doc-number>
+          <date>20040527</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>DeNovo, Inc.</orgname>
+            <address>
+              <city>Baltimore</city>
+              <state>MD</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>STANG</last-name>
+            <first-name>Michael A.</first-name>
+            <address>
+              <city>Baltimore</city>
+              <state>MD</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>US05018802</doc-number>
+        <date>20050527</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2005117842</doc-number>
+        <date>20051215</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150910">
+      <main-family family-id="173569472">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150250219</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150522</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173569470">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150250219</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150522</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The invention relates to an edible product containing a decontaminant. Particularly, the invention relates to an edible product, for instance, a food-like product, containing an effective amount of activated charcoal to mitigate, substantially reduce or cause the cessation of at least one adverse effect associated with the ingestion of a toxic substance. The invention also relates to methods for manufacturing such a decontaminant edible product and uses thereof.</p>
+  </abstract>
+  <legal-data date-changed="20151023">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20151002</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015250219A1</docdb-publication-number>
+      <docdb-application-id>444306590</docdb-application-id>
+      <new-owner>DENOVO INC., MARYLAND</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:STANG, MICHAEL A.;REEL/FRAME:036716/0697</free-text-description>
+      <effective-date>
+        <date>20151001</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <related-apps>
+      <heading id="h-00001-en" level="1">1. CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is a continuation-in-part of PCT International Application Number PCT/US2005/018802, which was filed May 27, 2005, which application claims the benefit of U.S. provisional application No. 60/574,676, filed May 27, 2004, each of which is incorporated herein by reference in its entirety.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">2. FIELD OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">The invention relates to an edible product containing a decontaminant. Particularly, the invention relates to an edible product, for example, a food-like product containing an effective amount of activated charcoal to mitigate, substantially reduce or cause the cessation of adverse effects associated with the ingestion of a toxic substance. The invention also relates to methods for manufacturing such a decontaminant edible product, for example, a food-like product and uses thereof.</p>
+      <heading id="h-00003-en" level="1">3. BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00003-en" num="0003">The ingestion of toxic substances has historically been and continues to be a significant problem. While efforts in recent years to mitigate ingestion of toxic substances have arisen, such as conspicuous labeling, tamper-proof sealing, and limiting the number of tablets in bottles of children's medicines, a significant numbers of poisoning incidents continue to occur. Moreover, an overwhelming percentage of these incidents occur in the residence, and the majority of the victims tend to be young children.</p>
+      <p id="p-00004-en" num="0004">In the emergency treatment of poisoning, unless a specific antidote exists, which is uncommon, the effort centers on two main objectives: (i) general support and stabilization and (ii) decontamination. As decontamination and treatment must begin immediately in such toxicological emergencies, often without the benefit of full and thorough clinical information on the patient, it is particularly important that any drug or therapeutic substance administered to the patient be substantially free of adverse effects. Sorbents, which when introduced into the patient's gastrointestinal tract resist decomposition and adsorb the ingested toxins until eventual excretion by the patient, have been employed for decontamination. Of those sorbents, activated charcoal has emerged as the decontaminant of choice. Its administration to poisoning victims has now surpassed the administration of syrup of ipecac as the single most important general toxicological treatment measure.</p>
+      <p id="p-00005-en" num="0005">Activated charcoal is a fine, black, powdery substance which is tasteless, odorless, and non-toxic. Activated charcoal is generally formed by oxidation (activation) of combustion residue derived from a controlled process performed on wood, peat, or other organic material producing a substance composed of extremely porous particles with extraordinarily high internal surface area, typically ranging between about 900 m<sup>2</sup>/g and about 2000 m<sup>2</sup>/g. Activated charcoal exhibits great adsorptivity and thus has proven to be quite effective as a decontaminant when introduced in sufficient quantities in a timely manner into the gastrointestinal tract of a poisoning victim. The chief mechanism of action of activated charcoal is by its direct binding with toxins in the gastrointestinal tract. A secondary mechanism, called intestinal dialysis, occurs when activated charcoal in the intestine is able to remove toxins from blood within the intestinal blood vessels. Toxins bound to the activated charcoal in the gastrointestinal tract are excreted in the stool.</p>
+      <p id="p-00006-en" num="0006">Activated charcoal is currently available in several forms to be orally administered to individuals who have ingested a toxin. In the most widely used form, activated charcoal is contained in a suspension such as commercially available ACTIDOSE AQUA and CHARCOAID 2000. Activated charcoal is also available extensively in Europe and to a more limited extent in the United States simply in its powdered or granulated form for mixture within a drinkable liquid prior to ingestion. In yet another form, activated charcoal is contained in tablets or capsules for the treatment of gas and upset stomach. Use of these tablets or capsules for decontamination in toxicological treatment however is not readily feasible due to the large number that would be required and the impracticality of administration to children.</p>
+      <p id="p-00007-en" num="0007">In whatever form activated charcoal is delivered to the gastrointestinal tract (e.g., suspended in a liquid, compressed within a tablet or capsule), the activated charcoal is likely to have beneficial effects if the necessary amount can be expeditiously delivered to the gastrointestinal tract of the victim. Therein lies the single greatest obstacle to optimal utilization of activated charcoal as a decontaminant in toxicological treatment. Except for the tablet or capsule form, which presents its own obstacles to ingestion, the antidotal substances are extremely unpalatable. Liquid antidotal suspensions of activated charcoal, for instance, form a black gritty liquid bearing a striking resemblance to old engine crank case oil, which is off-putting to children and adults alike.</p>
+      <p id="p-00008-en" num="0008">Whereas to an adult poisoning victim, the noxiousness of an activated charcoal-containing antidote may simply represent an unpleasant consequence that must be tolerated to avoid the far greater consequences of the poisoning, it would hardly be such a trivial matter to a young child victim. Children will simply refuse activated charcoal in a form that is not appealing to them.</p>
+      <p id="p-00009-en" num="0009">Aspiration is the most serious risk of activated charcoal administration and, although rare, can be life-threatening. It usually occurs in the patient who is vomiting, is uncooperative, or has altered mental status and is most often associated with the placement of a nasogastric or orogastric tube in the absence of airway protection.</p>
+      <p id="p-00010-en" num="0010">In cases where activated charcoal must be administered to an uncooperative patient, there is no choice but to introduce it through a nasogastric or orogastric tube. This procedure often requires physically restraining the patient. It also carries the risk of trauma to the mouth, pharynx, esophagus and stomach. Inadvertent placement into the tracheo-bronchial tree can result not only in trauma to these areas, but in massive charcoal aspiration which can be fatal.</p>
+      <p id="p-00011-en" num="0011">Efforts have been made to render the currently available forms of activated charcoal more palatable, but those efforts have at best yielded only products that may be somewhat less noxious but certainly not palatable especially to young children. Those efforts at times have led to the introduction of substances or components, which may actually diminish the adsorptivity of the activated charcoal, thereby undermining the singular central function of the antidote.</p>
+      <p id="p-00012-en" num="0012">There is a continued need for an antidotal product containing ample quantities of activated charcoal, which is palatable and in which the adsorptivity of the activated charcoal is not diminished in any substantial measure. In addition, the product should be familiar in form and taste to a young child.</p>
+      <heading id="h-00004-en" level="1">4. SUMMARY OF THE INVENTION</heading>
+      <p id="p-00013-en" num="0013">The invention encompasses an edible, toxin-decontaminant product that comprises a therapeutically or prophylactically effective amount of activated charcoal, which is useful in mitigating, substantially reducing, or causing the cessation of at least one adverse effect in a subject that ingested a toxic or poisonous substance or ingested a substance causing illness.</p>
+      <p id="p-00014-en" num="0014">In one embodiment, the invention encompasses an edible, toxin-decontaminant product comprising a plurality of ingredients, which comprises activated charcoal, wherein the ingredients are processed to substantially remove water, for example, by heat to produce the product.</p>
+      <p id="p-00015-en" num="0015">In another embodiment, the invention encompasses an edible, toxin-decontaminant product comprising activated charcoal and comprising one or more flavoring agents, wherein the ingredients are processed to substantially remove water, for example, by heat to produce the product.</p>
+      <p id="p-00016-en" num="0016">In another embodiment, the invention encompasses an edible, toxin-decontaminant product comprising activated charcoal and comprising one or more complexing or thickening agents, wherein the ingredients are processed to substantially remove water, for example, by heat to produce the product.</p>
+      <p id="p-00017-en" num="0017">In another embodiment, the invention encompasses an edible, toxin-decontaminant product comprising activated charcoal and comprising one or more emulsifying agents, wherein the ingredients are processed to substantially remove water, for example, by heat to produce the product.</p>
+      <p id="p-00018-en" num="0018">In another embodiment, the invention encompasses an edible, toxin-decontaminant product comprising activated charcoal and comprising one or more agents to improve porosity and texture, wherein the ingredients are processed to substantially remove water, for example, by heat to produce the product.</p>
+      <p id="p-00019-en" num="0019">In another embodiment, the invention encompasses an edible, toxin-decontaminant product comprising activated charcoal and comprising water, wherein the ingredients are processed to substantially remove water, for example, by heat to produce the product.</p>
+      <p id="p-00020-en" num="0020">In another embodiment, the invention encompasses an edible, toxin-decontaminant product comprising activated charcoal and a plurality of ingredients optionally comprising one or more flavoring agents; optionally comprising one or more complexing or thickening agents; optionally comprising one or more emulsifying agents; water; optionally comprising ammonia, and optionally comprising an agent to improve porosity and texture, wherein the ingredients are processed to substantially remove water, for example, by heat to produce the product.</p>
+      <p id="p-00021-en" num="0021">In another embodiment, the invention encompasses an edible, toxin-decontaminant product comprising activated charcoal and a plurality of ingredients comprising one or more flavoring agents; one or more complexing or thickening agents; one or more emulsifying agents; water; optionally ammonia, and an agent to improve porosity and texture, wherein the ingredients are processed to substantially remove water, for example, by heat to produce the product.</p>
+      <p id="p-00022-en" num="0022">In another embodiment, the invention encompasses a method of producing an edible, toxin-decontaminant product, which comprises activated charcoal and a plurality of ingredients comprising one or more flavoring agents; one or more complexity or thickening agents; and one or more emulsifying agents; optionally ammonia, adding water to produce a first mixture, for instance, a dough; adding an agent to improve porosity and texture, blending to produce a second mixture; and baking the second mixture to produce the product.</p>
+      <p id="p-00023-en" num="0023">In another embodiment, the invention encompasses a gastrointestinal decontaminant produced by the steps of combining activated charcoal and a plurality of ingredients comprising one or more flavoring agents; one or more complexing or thickening agents; and one or more emulsifying agents; adding water to produce a first mixture, for instance, a dough; adding a porosity or texturing agent, and processing the ingredients to substantially remove water to produce a first product; blending together one or more flavoring agents, lecithin, salt, sugar, and shortening to produce a filling mixture composition; and sandwiching said filling mixture composition between two of said first product.</p>
+      <p id="p-00024-en" num="0024">In yet another embodiment, the invention encompasses an edible, toxin-decontaminant product that contains a therapeutically or prophylactically effective amount of activated charcoal and one or more second active agents, which is useful in mitigating, substantially reducing, or causing the cessation of at least one adverse effect in a subject associated with the ingestion of a toxic or poisonous substance or the ingestion of a substance causing illness.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">5. BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 1</figref> illustrates the absorption of concentrated sodium salicylate in simulated gastric acid solution by an activated charcoal edible product containing 2.1 g activated charcoal as compared with ACTIDOSE AQUA containing the same amount of activated charcoal;</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 2</figref> illustrates the absorption of concentrated sodium salicylate in simulated gastric acid solution by an activated charcoal edible product containing 10 g activated charcoal as compared with ACTIDOSE AQUA containing the same amount of activated charcoal;</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 3</figref> illustrates the absorption of concentrated sodium salicylate in simulated gastric acid solution by an illustrative activated charcoal edible product of the invention with varying amounts of cream filling;</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 4</figref> illustrates the absorption of concentrated sodium salicylate in simulated gastric acid solution by illustrative 2.1 activated charcoal edible products of the invention of varying formulations;</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 5</figref> illustrates the absorption of concentrated sodium salicylate in simulated gastric acid solution by an illustrative activated charcoal edible product of the invention containing 2.1 g activated charcoal;</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 6</figref> illustrates the absorption of concentrated sodium salicylate in simulated gastric acid solution by illustrative activated charcoal edible-product of the invention, containing 20 g activated charcoal;</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 7</figref> illustrates the absorption of concentrated sodium salicylate in simulated gastric acid solution by an illustrative activated charcoal edible product containing 2.1 g activated charcoal as compared with ACTIDOSE AQUA containing the same amount of activated charcoal; and</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 8</figref> illustrates the absorption of concentrated sodium salicylate in simulated gastric acid solution by an illustrative activated charcoal edible product containing 20 g activated charcoal as compared with ACTIDOSE AQUA containing the same amount of activated charcoal.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">6. DETAILED DESCRIPTION OF THE MENTION</heading>
+      <heading id="h-00007-en" level="1">6.1 Definitions</heading>
+      <p id="p-00033-en" num="0033">As used herein and unless otherwise indicated, the term “about” will be understood by persons of ordinary skill in the art and will vary to some extent on the context in which the term is used. If there are uses of the term, which are not clear to persons of ordinary skill in the art given the context in which it is used, “about” will mean up to plus or minus 10% of the particular term or amount.</p>
+      <p id="p-00034-en" num="0034">As used herein and unless otherwise indicated, the term “adverse effect(s)” refers to any negative effect on a physiological or physical parameter of a subject. Examples of adverse effects include, but are not limited to, dry mouth, nausea, vomiting, sweating, fever, chills, tremors, or abnormal vital signs, including, but not limited to, for example, increased blood pressure or increased heart rate.</p>
+      <p id="p-00035-en" num="0035">As used herein and unless otherwise indicated, the term “baked” or “baking” refer to placing the combined ingredients that compose the edible product in an oven or other chamber at a defined temperature and allowing the ingredients to produce the product, for instance a food product, for a defined amount of time. The temperature at which the ingredients are “baked” or the “baking” refers to the oven temperature and does not mean heating the actual ingredients to this temperature.</p>
+      <p id="p-00036-en" num="0036">As used herein and unless otherwise indicated, the terms “biohydrolyzable amide,” “biohydrolyzable ester,” “biohydrolyzable carbamate,” “biohydrolyzable carbonate,” “biohydrolyzable ureide,” “biohydrolyzable phosphate” mean an amide, ester, carbamate, carbonate, ureide, or phosphate, respectively, of a compound that either: 1) does not interfere with the biological activity of the compound but can confer upon that compound advantageous properties in vivo, such as uptake, duration of action, or onset of action; or 2) is biologically inactive but is converted in vivo to the biologically active compound. Examples of biohydrolyzable esters include, but are not limited to, lower alkyl esters, lower acyloxyalkyl esters (such as acetoxymethyl, acetoxyethyl, aminocarbonyloxy-methyl, pivaloyloxymethyl, and pivaloyloxyethyl esters), lactonyl esters (such as phthalidyl and thiophthalidyl esters), lower alkoxyacyloxyalkyl esters (such as methoxycarbonyloxy-methyl, ethoxycarbonyloxyethyl and isopropoxycarbonyloxyethyl esters), alkoxyalkyl esters, choline esters, and acylamino alkyl esters (such as acetamidomethyl esters). Examples of biohydrolyzable amides include, but are not limited to, lower alkyl amides, a amino acid amides, alkoxyacyl amides, and alkylaminoalkyl-carbonyl amides. Examples of biohydrolyzable carbamates include, but are not limited to, lower alkylamines, substituted ethylenediamtnes, aminoacids, hydroxyalkylamines, heterocyclic and heteroaromatic amines, and polyether amines.</p>
+      <p id="p-00037-en" num="0037">As used herein and unless otherwise indicated, the term “causing the cessation of adverse effects” advantageous partial or complete conclusion or termination of at least one adverse effect associated with the ingestion of a poison or toxin. In an illustrative embodiment, the term “causing the cessation of adverse effects” refers to the partial or complete conclusion or termination of more than one adverse effect associated with the ingestion of a poison or toxin, in a particular illustrative embodiment, the term “causing the cessation of adverse effects” refers to the partial or complete conclusion or termination of all adverse effects associated with the ingestion of a poison or toxin.</p>
+      <p id="p-00038-en" num="0038">As used herein and unless otherwise indicated, the term “coloring agents” are agents that give the edible product a more pleasing appearance, and in addition help the manufacturer to control the product during its preparation and help the user to identify the product. Any of the approved certified water-soluble FD&amp;C dyes, mixtures thereof, or their corresponding lakes may be used. A color lake is the combination by adsorption of a water-soluble dye to a hydrous oxide of a heavy metal, resulting in an insoluble form of the dye. In other embodiments, coloring agents used outside the food industry, for example, pharmaceutical coloring agents, may be used.</p>
+      <p id="p-00039-en" num="0039">As used herein and unless otherwise indicated, the term “complexing agent” and “thickening agent” are used interchangeably and refer to any substance that increases the viscosity of the product. As used herein, these terms included binding agents or binders. Examples of “complexing agents” and “thickening agents” include, but are not limited to, sodium stearol lactylate, modified food starch, Inscosity, and high fructose corn syrup. In other embodiments, agents used outside of the food industry for instance pharmaceutical additives, such as PVP, may be used.</p>
+      <p id="p-00040-en" num="0040">As used herein and unless otherwise indicated, the term “dough” refers to a mixture, preferably a thick, soft mixture of one or more materials, preferably dry materials, which may include flour and one or more liquids.</p>
+      <p id="p-00041-en" num="0041">As used herein and unless otherwise indicated, the term “edible product” refers to an edible composition of the invention containing &amp; therapeutically or prophylactically effective amount of activated charcoal and optionally a second active agent or a pharmaceutically acceptable salt, solvate, clathrate, hydrate, or prodrug thereof. Examples of illustrative embodiments of the edible product include, but are not limited to, breads, cakes, muffins, pastries, or cookies containing a therapeutically or prophylactically effective amount of activated charcoal and optionally a second active agent or a pharmaceutically acceptable salt, solvate, clathrate, hydrate, or prodrug thereof.</p>
+      <p id="p-00042-en" num="0042">As used herein and unless otherwise indicated, the term “effective amount” means an amount of activated charcoal or a second active agent or a pharmaceutically acceptable salt, solvate, clathrate, hydrate, or prodrug thereof that is sufficient to provide the desired local or systemic effect and performance at a reasonable benefit/risk ratio attending any medical treatment. Particularly, the term “effective amount” means an amount of activated charcoal or a second active agent or a pharmaceutically acceptable salt, solvate, clathrate, hydrate, or prodrug thereof that is sufficient to mitigate, substantially reduce or cause the cessation of at least one adverse effect associated with the ingestion of a toxic substance, poisonous substance, or an amount of a substance causing illness.</p>
+      <p id="p-00043-en" num="0043">As used herein and unless otherwise indicated, the term “emulsifying agent” refers to a substance having both hydrophilic and hydrophobic character that acts to stabilize an emulsion by coating particles of a dispersed phase and preventing coagulation of colloidal particles. In additional illustrative embodiments, agents used outside of the food industry, for instance, pharmaceutical additives may be used. Examples of “emulsifying agents” include, but are not limited to, monoglycerides and diglycerides. In other embodiments, agents used outside of the food industry for instance pharmaceutical additives may be used.</p>
+      <p id="p-00044-en" num="0044">As used herein and unless otherwise indicated, the term “fat replacer” refers to a substance that attempts to recreate the attributes of fat, while also significantly reducing fat and calorie content. In other embodiments, agents used outside of the food industry, for instance, pharmaceutical additives may be used.</p>
+      <p id="p-00045-en" num="0045">As used herein and unless otherwise indicated, the terms “gastrointestinal decontaminant,” and “toxin decontaminant” are used interchangeably and refer to a edible product of the invention containing activated charcoal and optionally a second active agent or a pharmaceutically acceptable salt, solvate, clathrate, hydrate, or prodrug thereof.</p>
+      <p id="p-00046-en" num="0046">As used herein and unless otherwise indicated, the term “herbal ingredient(s)” refers to naturally occurring herbs including, but not limited to, clover, dandelion, saw palmetto, dill, eucalyptus or ginko.</p>
+      <p id="p-00047-en" num="0047">As used herein and unless otherwise indicated, the term “homeopathic ingredient(s)” refers to small doses of medicines, herbs, or both that stimulate a bodily function such as the immune system.</p>
+      <p id="p-00048-en" num="0048">As used herein and unless otherwise indicated, the term “ingestion” refers to oral consumption.</p>
+      <p id="p-00049-en" num="0049">As used herein and unless otherwise indicated, the term “mitigate” or “mitigate adverse effects” are used interchangeably and refer to making less severe, intense, harsh, rigorous, painful or ameliorate at least one adverse effect associated with the ingestion of a toxin, poison or substance causing illness in a subject.</p>
+      <p id="p-00050-en" num="0050">As used herein and unless otherwise indicated the term “neotame” refers to (N—N-(3,3-dimethylbutyl)-L-a-aspartyl-L-phenylalanine-1-methyl ester) (i.e., Neotame®).</p>
+      <p id="p-00051-en" num="0051">As used herein and unless otherwise indicated, the term “palatable” and “edible” are used interchangeably and refer to the ability of a subject to orally ingest an edible product of the invention.</p>
+      <p id="p-00052-en" num="0052">As used herein and unless otherwise indicated, the term “pharmaceutical agent” refers to second active agents as set forth in section 5.3 herein. Illustrative examples of “pharmaceutical agents” of the invention include, but are not limited to, antiemetics, antibiotics, antidiarrheals, or antacids.</p>
+      <p id="p-00053-en" num="0053">As used herein and unless otherwise indicated, the term “pharmaceutically acceptable” refers to materials and compositions that are physiologically tolerable and do not typically produce a severe allergic or similar untoward reaction, such as gastric upset, dizziness and the like, when administered to a human. Typically, as used herein, the term “pharmaceutically acceptable” means approved by a regulatory agency of the Federal or a state government or listed in the U.S. Pharmacopeia or other generally recognized pharmacopeia for use in animals, and more particularly in humans.</p>
+      <p id="p-00054-en" num="0054">As used herein and unless otherwise indicated, the term “pharmaceutically acceptable clathrate” means a crystal lattice that contains spaces (e.g., channels) that have a guest molecule (e.g., a solvent or water) trapped within.</p>
+      <p id="p-00055-en" num="0055">As used herein and unless otherwise indicated, the term “pharmaceutically acceptable hydrate” means a stoichiometric or non-stoichiometric amount of water bound by non-covalent intermolecular forces.</p>
+      <p id="p-00056-en" num="0056">As used herein and unless otherwise indicated, the term “pharmaceutically acceptable prodrug” means a derivative of a compound can hydrolyze, oxidize, or otherwise react under biological conditions (in vitro or in vivo) to provide the compound. Examples of prodrugs include, but are not limited to, compounds that comprise biohydrolyzable moieties such as biohydrolyzable amides, biohydrolyzable esters, biohydrolyzable carbamates, biohydrolyzable carbonates, biohydrolyzable ureides, and biohydrolyzable phosphate analogues. Other examples of prodrugs include compounds that comprise oligonucleotides, peptides, lipids, aliphatic and aromatic groups, or NO, NO<sub>2</sub>, ONO, and ONO<sub>2 </sub>moieties. Prodrugs can typically be prepared using well known methods, such as those described in <i>Burger's Medicinal Chemistry and Drug Discovery, </i>172 178, 949 982 (Manfred E. Wolff ed., 5th ed. 1995), and Design of Prodrugs (H. Bundgaard ed., Elselvier, N.Y. 1985).</p>
+      <p id="p-00057-en" num="0057">As used herein and unless otherwise indicated, the phrase “pharmaceutically acceptable salt(s),” includes, but is not limited to, salts of acidic or basic groups. Compounds that are basic in nature are capable of forming a wide variety of salts with various inorganic and organic acids. The acids that may be used to prepare pharmaceutically acceptable acid addition salts of such basic compounds are those that form non-toxic acid addition salts, (i.e., salts containing pharmacologically acceptable anions), including, but not limited to, sulfuric, citric, maleic, acetic, oxalic, hydrochloride, hydrobromide, hydroiodide, nitrate, sulfate, bisulfate, phosphate, acid phosphate, isonicotinate, acetate, lactate, salicylate, citrate, acid citrate, tartrate, oleate, tannate, pantothenate, bitartrate, ascorbate, succinate, maleate, gentisinate, fumarate, gluconate, glucaronate, saccharate, formate, benzoate, glutamate, methanesulfonate, ethanesulfonate, benzenesulfonate, p-toluenesulfonate and pamoate (i.e., 1,1′-methylene-bis-(2-hydroxy-3-naphthoate)) salts. Compounds that include an amino moiety may form pharmaceutically acceptable salts with various amino acids, in addition to the acids mentioned above. Compounds that are acidic in nature are capable of forming base salts with various pharmacologically acceptable cations. Examples of such salts include alkali metal or alkaline earth metal salts and, particularly, calcium, magnesium, sodium lithium, zinc, potassium, and iron salts.</p>
+      <p id="p-00058-en" num="0058">As used herein and unless otherwise indicated, the term “pharmaceutically acceptable solvate” means a stoichiometric or non-stoichiometric amount of a solvent bound by non-covalent intermolecular forces. Preferred solvents are volatile, non-toxic, and/or acceptable for administration to humans in trace amounts.</p>
+      <p id="p-00059-en" num="0059">As used herein and unless otherwise indicated, the terms “poisonous substance,” “poison,” “toxin,” and “toxic substance” are used interchangeably and refer to a chemical that adversely affects health by causing injury, illness, or death. These terms further include, but are not limited to, any substance, which is harmful to living tissue when ingested orally. Determining factors include concentration, exposure time, particle size, the substance's affinity for tissue and sensitivity of the exposed tissue to that substance. Examples of poisonous substances, poisons, toxins or toxic substances include, but are not limited to, cleaning products (e.g., bleach, detergent, floor cleaner, furniture polish); cosmetics (e.g., nail polish, nail polish remover, make-up), perfumes, plants, pesticides (e.g., bug killers, weed killers, lawn products), prescription or non-prescription drugs.</p>
+      <p id="p-00060-en" num="0060">As used herein and unless otherwise indicated, the term “processed to substantially remove water” refers to any method acceptable in the food industry to remove at least a portion of water, for example to remove from about 10% to about 90%, from about 20% to about 80%, from about 30% to about 70%, from about 40% to about 60% of water in a mixture. In some illustrative embodiments, the processed product will retain or comprise about 2% to about 35% water, about 8% to about 30% water, about 13% to about 25% water, or about 18% to about 22% water. Such methods include, but are not limited to, baking—as defined herein, frying, desiccation (i.e., drying) or any other means available.</p>
+      <p id="p-00061-en" num="0061">As used herein and unless otherwise indicated, the term “prophylactically effective” refers to an amount of activated charcoal capable of mitigating or substantially reducing adverse effects associated with the ingestion of a toxin or poison. In one embodiment, the edible product of the invention is administered as a preventative measure to a subject, preferably a human, who potentially ingested a toxin or poison. Accordingly, the compositions of the invention may be used for the prevention of at least one adverse effect and concurrently treating another (e.g. prevention of adverse effects of poison ingestion while treating emesis or increased heart rate).</p>
+      <p id="p-00062-en" num="0062">As used herein and unless otherwise indicated, the phrase “substance causing illness” refers to any substance that caused a detrimental effect and induces substances that may act in a therapeutic or prophylactic manner in minute levels, but become toxic when the quantity is larger. Examples of substances causing illness include, but are not limited to, nutrients, therapeutic drugs, vitamins, minerals, herbs, prophylactic drugs. Specific examples of substance(s) causing illness include, but are not limited to, St. John's wart, saw palmetto, acetaminophen, aspirin, adriamycin, alcohol, amiodarone, chloramphenical, cisplatin, dapsone, dilantin, disulfiram, glutethimide, hydrlazine, isoniazid, vitamin A, vitamin D, vitamin B6, metronidazole, nitrofirantoin, furadantin, macrodantin, penicillin, perhexiline, taxed, vincristine, or Zoloft, misomidazole, or lithium.</p>
+      <p id="p-00063-en" num="0063">As used herein, the term “substantially reduces” refers to the ability of an edible product of the invention to measurably reduce the effects of at least one adverse effect associated with ingestion of a toxin or poison. In a preferred embodiment, substantially reduces refers to the ability of a edible product of the invention to reduce all measurable adverse effects associated with ingestion of a toxin or poison.</p>
+      <p id="p-00064-en" num="0064">As used herein, the term “subject” can be a human, a mammal, or an animal. The subject being treated is a patient in need of treatment, preferably a human. In many instances, the subject is a child.</p>
+      <p id="p-00065-en" num="0065">As used herein, the terms “surface area” and “internal surface area” may be used interchangeably.</p>
+      <p id="p-00066-en" num="0066">As used herein and unless otherwise indicated, the term “therapeutically effective” refers to an amount of activated charcoal able to cause an amelioration or substantial reduction of at least one adverse effect associated wish the ingestion of a toxin or poison, or at least one discernible symptom thereof. “Therapeutically effective” also refers to an amount of activated charcoal to result in an amelioration of at least one measurable physical parameter, not necessarily discernible by the patient. In yet another embodiment, the term “therapeutically effective” refers to an amount of an activated charcoal to inhibit the progression of at least one adverse effect, either physically (e.g., stabilization of a discernible symptom), physiologically (e.g., stabilization of a physical parameter), or both. In yet another embodiment, the term “therapeutically effective” refers to an amount of activated charcoal resulting in a delayed onset of a disease or disorder. The amount of activated charcoal, which constitutes a “therapeutically effective amount” will vary depending on the toxin or poison ingested, the severity of the condition, and the age and body weight of the subject to be treated, but can be determined routinely by one of ordinary skill in the art-having regard to his/her own knowledge and to this disclosure.</p>
+      <heading id="h-00008-en" level="1">6.2 Description</heading>
+      <p id="p-00067-en" num="0067">The invention encompasses an edible product, such as a food product, containing a therapeutically or prophylactically effective amount of activated charcoal. In an illustrative embodiment, the edible product is in the form of a snack (e.g., a cookie sandwich or pastry product), which is perceived as palatable, for example, by children. The edible product of the invention generally exhibits the appearance, the texture, the friability, and the sweet flavor, which typically characterize snack products. In a particular embodiment, the edible product is in the form of two wafers sandwiching a cream. However, one of ordinary skill in the art will readily recognize that the edible product of the invention can resemble any dessert product including, but not limited to, a candy product, candy bar, cupcake, cookie, a wafer, a pie, a pastry, a health food bar or a donut. Optionally, the product may have a coating of material including, but not limited to, chocolate or sugar-based glaze. In addition, the product can optionally contain flavor bits or inclusions such as, but not limited to, jimmies, flavor nuggets, cookie pieces, and chocolate chips to enhance flavor, texture, and appearance.</p>
+      <p id="p-00068-en" num="0068">In one embodiment, the invention encompasses an edible, toxin-decontaminant product comprising a plurality of ingredients, which comprises activated charcoal, wherein the ingredients are processed by heat or drying to produce the product.</p>
+      <p id="p-00069-en" num="0069">In another embodiment, the invention encompasses an edible, toxin-decontaminant edible product comprising a plurality of ingredients including one or more of the following: (i) one or snore flavoring agents; (ii) one or more complexing or thickening agents; (iii) activated charcoal; (iv) one or more emulsifying agents; (v) water; and (vi) soy protein crisps; wherein the ingredients are processed to substantially remove water, for example, by baking or frying to produce the product. Table 1 discloses approximate weight percents and preferred weight percents of each ingredient after baking the ingredients at a predetermined oven temperature.</p>
+      <p id="p-00070-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="77pt" align="center" />
+              <colspec colname="3" colwidth="63pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Ingredient</entry>
+                  <entry>Approximated Weight %<sup>1</sup></entry>
+                  <entry>Preferred Weight %<sup>1</sup></entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Activated Charcoal</entry>
+                  <entry>40%-70%</entry>
+                  <entry>50% </entry>
+                </row>
+                <row>
+                  <entry>Flavoring Agent</entry>
+                  <entry> 5%-15%</entry>
+                  <entry>9%</entry>
+                </row>
+                <row>
+                  <entry>Complexing/Thickening</entry>
+                  <entry>0.5%-4%  </entry>
+                  <entry>2%</entry>
+                </row>
+                <row>
+                  <entry>Agent</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Emulsifying Agent</entry>
+                  <entry>0.5%-4%  </entry>
+                  <entry>2%</entry>
+                </row>
+                <row>
+                  <entry>Water</entry>
+                  <entry> 2%-15%</entry>
+                  <entry>5%</entry>
+                </row>
+                <row>
+                  <entry>Porosity/Texture</entry>
+                  <entry> 5%-15%</entry>
+                  <entry>11% </entry>
+                </row>
+                <row>
+                  <entry>Improving Agent</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="left" id="entry-00001-en">
+                    <sup>1</sup>Weight percentages are determined in the edible product after baking the ingredients.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00071-en" num="0070">In an illustrative embodiment, the activated charcoal is characterized by an internal surface area of from about 800 m<sup>2</sup>/g to about 3,000 m<sup>2</sup>/g; in another illustrative embodiment, the activated charcoal is characterized by an internal surface area of from about 1500 m<sup>2</sup>/g to about 2,500 m<sup>2</sup>/g; in yet another illustrative embodiment, the activated charcoal is characterized by an internal surface area of about 2,000 m<sup>2</sup>/g. However, any ingestable activated charcoal may be used for example the activated charcoal in the product may be in one or mote forms such as powder, granules, or brittle chips and can vary in source material, pore size distributions and adsorptivity. In addition, the product cars contain more than one type of activated charcoal.</p>
+      <p id="p-00072-en" num="0071">In another illustrative embodiment, the product includes activated charcoal in an approximate weight range of from about 20% to about 80% thereof. In another illustrative embodiment, the product includes activated charcoal in an approximate weight range of from about 30% to about 70% thereof. In another illustrative embodiment, the product includes activated charcoal in an approximate weight range of from about 45% to about 65% thereof. In another illustrative embodiment, the product includes activated charcoal in an approximate weight of about 60% thereof.</p>
+      <p id="p-00073-en" num="0072">In another embodiment, the flavoring agent is vanilla flavor, chocolate flavor, cocoa, salt, sugar, or a sweetener or combinations thereof; although, any flavoring agent can be used. In an illustrative embodiment, the flavoring agent is in the range of from about 0.001% to about 15%. In a particular illustrative embodiment, the product includes vanilla flavor in the approximating weight range of about 0.01% to about 1% thereof. In yet another illustrative embodiment, the product includes the vanilla flavor in the approximating weight of about 0.05%. In another particular illustrative embodiment, the product includes chocolate flavor in an approximate weight range of about 0.5% to about 3% thereof. In yet another illustrative embodiment, the product includes chocolate flavor in the approximate weight of about 2% thereof. In another particular illustrative embodiment, the product includes salt in an approximate weight range of about 0.1% to about 1% thereof. In an illustrative embodiment, the product includes the salt in the approximating weight of about 0.4% thereof. In another particular illustrative embodiment, the flavoring agent is sweetener in the approximate weight range of about 0.001% to about 10% thereof. In another particular illustrative embodiment, the product includes sweetener in an approximate weight range of about 0.001% to about 5% thereof. In an illustrative embodiment, the product includes a sweetener in the approximate weight of about 2% thereof. In another particular illustrative embodiment, the sweetener present in the product is neotame in the approximate weight range of about 0.001% to about 1.5% thereof. In another particular illustrative embodiment, the product includes sugar in the approximating weight range of about 2% to about 6% thereof. In yet another illustrative embodiment, the product includes the sugar in the approximating weight of about 4.5% thereof. One of ordinary skill in the art will readily understand that the amount of sweetener used is dependent on the specific sweetener. Illustrative examples of sweeteners that can be used in an embodiment of the invention include, but are not limited to, aspartame, sucralose or neotame or mixtures thereof.</p>
+      <p id="p-00074-en" num="0073">In another embodiment, the complexing or thickening agent is sodium stearoyl lactylate or modified food starch or combinations thereof; although, any complexing or thickening agent may be used. In an illustrative embodiment, the product includes the complexing or thickening agent in an approximate weight range of about 0.5% to about 4% thereof. In a particular illustrative embodiment, the product includes sodium stearoyl lactylate in an approximate weight range of about 0.1% to about 2% thereof. In another particular illustrative embodiment, the product includes sodium stearoyl lactylate in the approximate weight of about 0.9% thereof. In another particular illustrative embodiment, the product includes modified food starch in the approximate weight range of about 0.1% to about 2% thereof. In another particular illustrative embodiment, the product includes the modified food starch in the approximate weight of about 0.9% thereof.</p>
+      <p id="p-00075-en" num="0074">In another embodiment, the emulsifying agent is a mono or diglyceride; although or combinations thereof, any emulsifying agent may be used. In an illustrative embodiment, the product includes the emulsifying agent in an approximate weight range of about 0.5% to about 4% thereof. In a particular illustrative embodiment, the product includes an emulsifying agent in the approximate weight range of about 1% to about 3% thereof. In yet another illustrative embodiment, the product includes the emulsifying agent in the approximate weight of about 2% thereof.</p>
+      <p id="p-00076-en" num="0075">In another illustrative embodiment, the product includes water in the approximating weight range of about 15% to about 60% thereof. In a particular illustrative embodiment, the product includes the water in the approximate weight of about 25% thereof.</p>
+      <p id="p-00077-en" num="0076">In another embodiment, the agent to improve porosity and texture is soy protein crisp or another protein product such as a rice protein crisp or is glycerine or combinations thereof. In an illustrative embodiment, the product includes the agent to improve porosity and texture in an approximate weight range of about 5% to about 15% thereof. In a particular illustrative embodiment, the product includes soy protein crisp rice in the approximate weight range of about 5% to about 15% thereof. In another particular illustrative embodiment, the product includes the soy protein crisp rice in the approximate weight of about 11% thereof. In another particular embodiment, the product includes glycerine in the approximate weight range of about 6% to about 8% thereof.</p>
+      <p id="p-00078-en" num="0077">In one embodiment, the baking is done at an oven temperature of from about 250° F. to about 450° F., wherein the combined ingredients are placed in the oven for a time of from about 5 to about 35 minutes. In another embodiment, the combined ingredients are placed in the oven at an oven temperature of about 350° F. for a time of about 5 to about 15 minutes. In yet another embodiment, the baking is done at an oven temperature of about 350° F. for a time of about 10 minutes.</p>
+      <p id="p-00079-en" num="0078">In another embodiment, the invention encompasses a method of producing an edible, toxin-decontaminant product comprising:</p>
+      <p id="p-00080-en" num="0079">(a) combining a plurality of ingredients including: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>(i) optionally one or more flavoring agents;</li><li>(ii) optionally one or more complexing or thickening agents;</li><li>(iii) activated charcoal; and</li><li>(iv) optionally one or more emulsifying agents;</li></ul></li></ul></p>
+      <p id="p-00081-en" num="0084">(b) blending the components to produce a first mixture;</p>
+      <p id="p-00082-en" num="0085">(c) optionally adding water to produce a mixture, for instance, a dough;</p>
+      <p id="p-00083-en" num="0086">(d) optionally adding soy protein crisp rice or rice crisp and blending to produce a second mixture; and</p>
+      <p id="p-00084-en" num="0087">(e) baking the second mixture to produce the product</p>
+      <p id="p-00085-en" num="0088">In many embodiments, the instances as described herein may produce a dough.</p>
+      <p id="p-00086-en" num="0089">Table 2 illustrates an illustrative embodiment of the invention with approximate weight percents and preferred weight percents of each ingredient prior to baking.</p>
+      <p id="p-00087-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="77pt" align="center" />
+              <colspec colname="3" colwidth="63pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Ingredient</entry>
+                  <entry>Approximated Weight %<sup>1</sup></entry>
+                  <entry>Preferred Weight %<sup>1</sup></entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Activated Charcoal</entry>
+                  <entry>20%-70%</entry>
+                  <entry>35% </entry>
+                </row>
+                <row>
+                  <entry>Flavoring Agent</entry>
+                  <entry>3%-9%</entry>
+                  <entry>5%</entry>
+                </row>
+                <row>
+                  <entry>Complexing/Thickening</entry>
+                  <entry>0.5%-2%  </entry>
+                  <entry>1%</entry>
+                </row>
+                <row>
+                  <entry>Agent</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Emulsifying Agent</entry>
+                  <entry>0.5%-2%  </entry>
+                  <entry>1%</entry>
+                </row>
+                <row>
+                  <entry>Water</entry>
+                  <entry>45%-60%</entry>
+                  <entry>51% </entry>
+                </row>
+                <row>
+                  <entry>Porosity/Texture</entry>
+                  <entry>4%-8%</entry>
+                  <entry>7%</entry>
+                </row>
+                <row>
+                  <entry>Improving Agent</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="left" id="entry-00002-en">
+                    <sup>1</sup>Weight percentages are determined prior to baking the ingredients.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00088-en" num="0090">Table 3 illustrates another illustrative embodiment of the invention with approximate weight percents and preferred weight percents of each ingredient prior to baking.</p>
+      <p id="p-00089-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="77pt" align="center" />
+              <colspec colname="3" colwidth="63pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" rowsep="1">TABLE 3</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Ingredient</entry>
+                  <entry>Approximated Weight %<sup>1</sup></entry>
+                  <entry>Preferred Weight %<sup>1</sup></entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Activated Charcoal</entry>
+                  <entry>20%-70%</entry>
+                  <entry>24%</entry>
+                </row>
+                <row>
+                  <entry>Flavoring Agent</entry>
+                  <entry>0.1%-9%  </entry>
+                  <entry>1.5% </entry>
+                </row>
+                <row>
+                  <entry>Complexing/Thickening</entry>
+                  <entry> 0%-40%</entry>
+                  <entry>27%</entry>
+                </row>
+                <row>
+                  <entry>Agent</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Emulsifying Agent</entry>
+                  <entry> 0%-12%</entry>
+                  <entry> 7%</entry>
+                </row>
+                <row>
+                  <entry>Water</entry>
+                  <entry>15%-60%</entry>
+                  <entry>23%</entry>
+                </row>
+                <row>
+                  <entry>Porosity/Texture</entry>
+                  <entry> 4%-30%</entry>
+                  <entry>17%</entry>
+                </row>
+                <row>
+                  <entry>Improving Agent</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Ammonia</entry>
+                  <entry>  0%-0.5%</entry>
+                  <entry>0.15%  </entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="left" id="entry-00003-en">
+                    <sup>1</sup>Weight percentages are determined prior to baking the ingredients.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00090-en" num="0091">In an illustrative embodiment, the activated charcoal is characterized by an internal surface area of from about 800 m<sup>2</sup>/g to about 3,000 m<sup>2</sup>/g; in another illustrative embodiment, the activated charcoal is characterized by an internal surface area of from about 1500 m<sup>2</sup>/g to about 2,500 m<sup>2</sup>/g; in yet another illustrative embodiment, the activated charcoal is characterized by an internal surface area of about 2,000 m<sup>2</sup>/g.</p>
+      <p id="p-00091-en" num="0092">In another illustrative embodiment, the method includes activated charcoal in an approximate weight range of from about 20% to about 80% thereof. In another illustrative embodiment, the method includes activated charcoal in an approximate weight range of from about 25% to about 75% thereof. In another illustrative embodiment, the method includes activated charcoal in an approximate weight range of from about 30% to about 70% thereof.</p>
+      <p id="p-00092-en" num="0093">In another embodiment, the flavoring agent is vanilla flavor, chocolate flavor, salt, sugar, or a sweetener or combinations thereof, although any flavoring agent can be used. In an illustrative embodiment, the method includes vanilla flavor in the approximate weight range of about 0.002% to about 15% thereof. In another illustrative embodiment, the method includes the vanilla flavor in the approximate weight of about 0.01% to about 1%. In yet another illustrative embodiment, the method includes the vanilla flavor in the approximate weight of about 0.05%. In another illustrative embodiment, the method includes chocolate flavor in an approximate weight range of about 0.5% to about 3% thereof. In yet another illustrative embodiment, the method includes chocolate flavor in the approximate weight of about 2% thereof. In an illustrative embodiment, the method includes salt in an approximate weight range of about 0.1% to about 1% thereof. In an illustrative embodiment, the method includes the salt in the approximating weight of about 0.4% thereof. In an illustrative embodiment, the method includes sugar in the approximate weight range of about 2% to about 6% thereof. In yet another illustrative embodiment, the method includes the sugar in the approximate weight of about 4.5%. In an illustrative embodiment, the method includes sweetener in an approximate weight range of about 0.001% to about 10% thereof. In an illustrative embodiment, the method includes a sweetener in the approximate weight of about 2% thereof. One of ordinary skill in the art will readily understand that the amount of sweetener used is dependent on the specific sweetener. Illustrative examples of sweeteners that can be used in an embodiment of the invention include, but are not limited to, aspartame, sucralose or neotame or mixtures thereof.</p>
+      <p id="p-00093-en" num="0094">In another embodiment, the complexing or thickening agent is sodium stearoyl lactylate or modified food starch or combinations thereof; although, any complexing or thickening agent may be used. In an illustrative embodiment, the method includes the complexing or thickening agent in an amount of about 0.5% to about 4%. In an illustrative embodiment, the method includes sodium stearoyl lactylate in an approximate weight range of about 0.1% to about 2% thereof. In yet another illustrative embodiment, the method includes sodium stearoyl lactylate in the approximate weight of about 0.9% thereof. In another illustrative embodiment, the method includes modified food starch in the approximate weight range of about 0.1% to about 2% thereof. In another illustrative embodiment, the method includes the modified food starch in the approximate weight of about 0.9% thereof,</p>
+      <p id="p-00094-en" num="0095">In another embodiment, the emulsifying agent is a mono or diglyceride or combinations thereof; although any emulsifying agent can be used. In an illustrative embodiment, the method includes an emulsifying agent in the approximate weight range of about 0.5% to about 4% thereof. In a particular illustrative embodiment, the method includes an emulsifying agent in the approximate weight range of about 1% to about 3% thereof. In yet another illustrative embodiment, the method includes the emulsifying agent in the approximate weight of about 2% thereof.</p>
+      <p id="p-00095-en" num="0096">In another illustrative embodiment, the method includes water in the approximate weight range of about 15% to about 60% thereof. In another illustrative embodiment, the method includes the water in the approximate weight of about 25% thereof.</p>
+      <p id="p-00096-en" num="0097">In another embodiment, the agent to improve porosity and texture is soy protein crisp or another protein product such as rice crisp or is glycerine or combinations thereof. In an illustrative embodiment, the method includes the agent to improve porosity and texture in an approximate weight range of about 5% to about 15% thereof. In a particular illustrative embodiment, the method includes soy protein crisp rice in the approximate weight range of about 5% to about 15% thereof. In another particular illustrative embodiment, the method includes the soy protein crisp rice in the approximate weight of about 11% thereof. In another particular embodiment, the method includes glycerine in the approximate weight range of about 6% to about 8% thereof.</p>
+      <p id="p-00097-en" num="0098">In one embodiment, the baking is done at an oven temperature of from about 250° F. to about 450° F., wherein the combined ingredients are placed in the oven for a time of from about 5 to about 15 minutes. In another embodiment, the baking is done at an oven temperature of about 350° F., to for a time of about 10 minutes.</p>
+      <p id="p-00098-en" num="0099">In another embodiment, the invention encompasses a gastrointestinal decontaminant produced by the steps of:</p>
+      <p id="p-00099-en" num="0100">(a) combining a plurality of ingredients including: <ul id="ul-00003-en" list-style="none"><li><ul id="ul-00004-en" list-style="none"><li>(i) optionally one or more flavoring agents;</li><li>(ii) optionally one or more complexing or thickening agents;</li><li>(iii) activated charcoal; and</li><li>(iv) optionally one or more emulsifying agents;</li></ul></li></ul></p>
+      <p id="p-00100-en" num="0105">(b) blending the components to produce a mixture;</p>
+      <p id="p-00101-en" num="0106">(c) optionally adding water to produce a mixture, for instance, a dough;</p>
+      <p id="p-00102-en" num="0107">(d) optionally adding an agent to increase texture or porosity to the mixture, and blending;</p>
+      <p id="p-00103-en" num="0108">(e) baking the ingredients to produce a first product;</p>
+      <p id="p-00104-en" num="0109">(f) optionally blending together one or more flavoring agents, lecithin, salt, sugar, and shortening to produce a filling mixture composition; and</p>
+      <p id="p-00105-en" num="0110">(g) sandwiching said filling mixture composition between two of said first product.</p>
+      <p id="p-00106-en" num="0111">In an illustrative embodiment, the activated charcoal is characterized by an internal surface area of from about 800 m<sup>2</sup>/g to about 3,000 m<sup>2</sup>/g; in another illustrative embodiment, the activated charcoal is characterized by an internal surface area of from about 1500 m<sup>2</sup>/g to about 2,500 m<sup>2</sup>/g; in yet another illustrative embodiment, the activated charcoal is characterized by an internal surface area of about 2,000 m<sup>2</sup>/g.</p>
+      <p id="p-00107-en" num="0112">In another illustrative embodiment, the product includes activated charcoal in an approximate weight range of from about 10% to about 80% thereof. In another illustrative embodiment, the product includes activated charcoal in an approximate weight range of from about 20% to about 60% thereof. In another illustrative embodiment, the product includes activated charcoal in an approximate weight range of from about 25% to about 45% thereof. In a particular illustrative embodiment, the product includes activated charcoal in an approximate weight of about 25% thereof.</p>
+      <p id="p-00108-en" num="0113">In another embodiment, the flavoring agent is vanilla flavor, chocolate flavor, salt, sugar, or a sweetener including, but not limited to, sucrose, glucose, fructose, lactose, acesulfame-K, dextrose, sucralose, saccharin, and aspartame or neotame or combinations thereof. In an illustrative embodiment, the flavoring agent is in the range of from about 0.0001% to about 15%. In a particular illustrative embodiment, the product includes vanilla flavor in the approximate weight range of about 0.01% to about 5% thereof. In yet another illustrative embodiment, the product includes the vanilla flavor in the approximate weight of about 0.05%. In another particular illustrative embodiment, the product includes chocolate flavor in an approximate weight range of about 0.5% to about 3% thereof. In yet another illustrative embodiment, the product includes chocolate flavor in the approximate weight of about 2% thereof. In another illustrative embodiment, the product includes neotame in an amount of about 0.001% to about 1%. In another illustrative embodiment, the product includes neotame in an amount of about 0.002% to about 0.1%. In another particular illustrative embodiment, the product includes salt in an approximate weight range of about 0.1% to about 1% thereof. In an illustrative embodiment, the product includes the salt in the approximate weight of about 0.4% thereof. In another particular illustrative embodiment, the product includes sugar in the approximating weight range of about 2% to about 6% thereof. In yet another illustrative embodiment, the product includes the sugar in the approximate weight of about 4.5% thereof.</p>
+      <p id="p-00109-en" num="0114">In another embodiment, the complexing or thickening agent is sodium stearoyl lactylate, modified food starch, Inscosity, or high fructose corn syrup or combinations thereof. In an illustrative embodiment, the product includes the complexing or thickening agent in an approximate weight range of about 0.5% to about 40% thereof. In a particular illustrative embodiment, the product includes sodium stearoyl lactylate in an approximate weight range of about 5% to about 30% thereof. In another particular illustrative embodiment, the product includes sodium stearoyl lactylate in the approximate weight of about 25% thereof. In another particular illustrative embodiment, the product includes modified food starch in the approximate weight range of about 0.1% to about 2% thereof. In another particular illustrative embodiment, the product includes the modified food starch in the approximate weight range of about 0.9% thereof. In another particular illustrative embodiment, the product includes high fructose corn syrup in the approximate weight range of about 5% to about 40% thereof. In another particular illustrative embodiment, the product includes the high fructose corn syrup in the approximate weight range of about 27% thereof.</p>
+      <p id="p-00110-en" num="0115">In another embodiment, the emulsifying agent is a mono or diglyceride or combinations thereof. Particular examples of emulsifying agents include, but are not limited to, atmul, emplex and lecithin. In an illustrative embodiment, the product includes the emulsifying agent in an approximate weight range of about 0.5% to about 12% thereof. In a particular illustrative embodiment, the product includes an emulsifying agent in the approximate weight range of about 2% to about 9% thereof. In yet another illustrative embodiment, the product includes the emulsifying agent in the approximate weight of about 7% thereof.</p>
+      <p id="p-00111-en" num="0116">In another illustrative embodiment, the product includes water in the approximate weight range of about 15% to about 60% thereof. In a particular illustrative embodiment, the product includes the water in the approximate weight of about 25% thereof.</p>
+      <p id="p-00112-en" num="0117">In another embodiment, the agent to improve porosity and texture is soy protein crisp, rice crisp, or glycerine, or combinations thereof. In an illustrative embodiments the product includes the agent to improve, porosity and texture in an approximate weight range of about 4% to about 30% thereof. In a particular illustrative embodiment, the product includes soy protein crisp in the approximate weight range of about 7% to about 13% thereof. In another particular illustrative embodiment, the product includes the soy protein crisp rice in the approximate weight of about 11% thereof.</p>
+      <p id="p-00113-en" num="0118">In another embodiment, the product optionally contains ammonia in an amount of about 0.5% to about 0.15%. Examples of ammonia suitable for use in the product include, but are not limited to, baker's ammonia, bicarbonate of ammonia, or ammonium bicarbonate or combinations thereof.</p>
+      <p id="p-00114-en" num="0119">In one embodiment, the baking is done at an oven temperature of from about 250° F. to about 450° F. wherein the combined ingredients are placed in the oven for a time of from about 5 to about 15 minutes. In another embodiment, the baking is done at an oven temperature of about 350° F. to for a time of about 10 minutes.</p>
+      <p id="p-00115-en" num="0120">In another embodiment, the invention encompasses a method of producing a toxin-decontaminant product for ingestion into the gastrointestinal tract of a patient comprising:</p>
+      <p id="p-00116-en" num="0121">(a) mixing a plurality of materials including a sweetener, sugar, salt, vanilla flavoring, chocolate flavoring, activated charcoal, modified food starch, monoglycerides and sodium stearoyl lactylate;</p>
+      <p id="p-00117-en" num="0122">(b) adding water to produce a mixture, for instance, a dough and mixing the mixture to produce a mixture of component materials;</p>
+      <p id="p-00118-en" num="0123">(c) adding an agent to improve porosity and texture and blending the composition; and</p>
+      <p id="p-00119-en" num="0124">(e) processing to remove water, for example, by baking the mixture at a predetermined temperature for a predetermined time.</p>
+      <p id="p-00120-en" num="0125">In an illustrative embodiment, the activated charcoal is characterized by an internal surface area of from about 800 m<sup>2</sup>/g to about 3,000 m<sup>2</sup>/g; in another illustrative embodiment, the activated charcoal is characterized by an internal surface area of from about 1500 m<sup>2</sup>/g to about 2,500 m<sup>2</sup>/g; in yet another illustrative embodiment, the activated charcoal is characterized by an internal surface area of about 2,000 m<sup>2</sup>/g.</p>
+      <p id="p-00121-en" num="0126">In another illustrative embodiment, the method includes activated charcoal in an approximate weight range of from about 20% to about 80% thereof. In another illustrative embodiment, the method includes activated charcoal in an approximate weight range of from about 25% to about 75% thereof. In another illustrative embodiment, the method includes activated charcoal in an approximate weight range of from about 30% to about 70% thereof.</p>
+      <p id="p-00122-en" num="0127">In another embodiment, the flavoring agent is vanilla flavor, chocolate flavor, salt, sugar, or a sweetener. In an illustrative embodiment, the method includes vanilla flavor in the approximate weight range of about 0.01% to about 1% thereof. In yet another illustrative embodiment, the product includes the vanilla flavor in the approximate weight of about 0.03%. In another illustrative embodiment, the method includes chocolate flavor in an approximate weight range of about 0.5% to about 2% thereof. In yet another illustrative embodiment, the method includes chocolate flavor in the approximate weight of about 1% thereof. In an illustrative embodiment, the product includes salt in an approximate weight range of about 0.1% to about 1% thereof. In an illustrative embodiment, the method includes the salt in the approximate weight of about 0.1% thereof. In an illustrative embodiment, the method includes sugar in the approximate weight of about 1.5% to about 4% thereof. In yet another illustrative embodiment, the product includes the sugar in the approximate weight of about 2.5% thereof. In an illustrative embodiment, the method includes sweetener in an approximate weight range of about 0.5% to about 2% thereof. In another illustrative embodiment, the method includes a sweetener in an approximate weight range of about 0.001% to about 10% thereof. In an illustrative embodiment, the method includes a sweetener in the approximate weight of about 2% thereof; however, one of ordinary skill in the art will readily understand that the amount of sweetener used is dependent on the specific sweetener. Illustrative examples of sweeteners that can be used in an embodiment of the invention include, but are not limited to, sucrose, glucose, fructose, lactose, acesulfame-K, dextrose, sucralose, saccharin, and aspartame or neotame, or mixtures thereof.</p>
+      <p id="p-00123-en" num="0128">In another embodiment, the complexing or thickening agent is sodium stearoyl lactylate or modified food starch. In an illustrative embodiment, the method includes sodium stearoyl lactylate in an approximate weight range of about 0.1% to about 2% thereof. In yet another illustrative embodiment, the method includes sodium stearoyl lactylate in the approximate weight of about 0.5% thereof. In another illustrative embodiment, the method includes modified food starch in the approximate weight range of about 0.1% to about 2% thereof. In another illustrative embodiment, the method includes the modified food starch in the approximate weight of about 0.5% thereof.</p>
+      <p id="p-00124-en" num="0129">In another embodiment, the emulsifying agent is a mono- or diglyceride. In an illustrative embodiment, the method includes an emulsifying agent in the approximate weight range of about 0.1% to about 2% thereof. In yet another illustrative embodiment, the method includes the emulsifying agent in the approximate weight of about 0.5% thereof.</p>
+      <p id="p-00125-en" num="0130">In another illustrative embodiment, the method includes water in the approximate weight range of about 45% to about 60% thereof. In another illustrative embodiment, the method includes the water in the approximate weight of about 53% thereof.</p>
+      <p id="p-00126-en" num="0131">In another embodiment, the agent to improve porosity and texture is soy protein crisp. In an illustrative embodiment, the method includes soy protein crisp in the approximate weight range of about 4% to about 8% thereof. In another illustrative embodiment, the method includes the soy protein crisp rice in the approximate weight of about 6.6% thereof.</p>
+      <p id="p-00127-en" num="0132">In one embodiment, the baking is done at an oven temperature of from about 250° F. to about 450° F., wherein the combined ingredients are placed in the oven for a time of from about 5 to about 15 minutes. In another embodiment, the baking is done at an oven temperature of about 350° F. to for a time of about 10 minutes.</p>
+      <p id="p-00128-en" num="0133">In yet another embodiment, the invention encompasses a method of producing a toxin-decontaminant product for ingestion into the gastrointestinal tract of a patient comprising: mixing a plurality of materials including a sweetener, sugar, salt, vanilla flavoring, chocolate flavoring, activated charcoal, modified food starch, monoglycerides, and sodium stearoyl lactylate; adding water to produce a mixture, for instance, a dough and mixing said mixture to produce a mixture of component materials; adding soy protein rice crisps and blending the composition; and baking the mixture at a predetermined temperature for a predetermined time.</p>
+      <p id="p-00129-en" num="0134">In another embodiment, the invention encompasses molding, forming or extruding the ingredients using methods known in the art to produce the product in a particular shape or size.</p>
+      <heading id="h-00009-en" level="1">6.2.1 Illustrative Embodiments</heading>
+      <heading id="h-00010-en" level="1">6.2.1.1 Wafers Sandwiching a Cream</heading>
+      <p id="p-00130-en" num="0135">In one embodiment, the invention encompasses an edible product comprising a pair of biscuit-like wafers and a creamy filling sandwiched therebetween. The wafers may include coloring to make the edible product appealing and easily identified by young children in order to entice them to eat the edible product of the subject invention.</p>
+      <p id="p-00131-en" num="0136">In an illustrative embodiment, a pair of disk-shaped wafers are produced. The wafers exhibit a compressed granular texture and a degree of friability akin to that of a cookie. The degree of friability is such that the wafers are easily crumbled by the average biting force generated by even a very young child. The degree of friability is also such that the crumbled wafers may thereafter be effectively disintegrated by the subsequent chewing action generated by the given young child.</p>
+      <p id="p-00132-en" num="0137">Subject to the allowable ranges of their component composition weight percentages, the wafers exhibit a degree of rich, sweet flavor to accompany their cookie-like crumbly texture, wherein in an illustrative embodiment, the sweet flavor of the wafers is sufficient to encourage substantial chewing prior to ingestion into the user's gastrointestinal tract.</p>
+      <p id="p-00133-en" num="0138">Each wafer includes activated charcoal, in addition to one or more flavoring agents, one or more complexing or thickening agents, one or more emulsifying agents; water, and an agent to improve porosity and texture in the approximate weight range proportions indicated in Table 2.</p>
+      <p id="p-00134-en" num="0139">The combination of activated charcoal, one or more flavoring agents, one or more complexing or thickening agents, one or more emulsifying agents; water, and an agent to improve porosity and texture in the approximate weight range proportions followed by baking the ingredients results in a product having, for example, a cookie-like wafer appearance, which has a consistency emulating that of a baked cookie.</p>
+      <p id="p-00135-en" num="0140">In another embodiment, to further add to the appeal and sweet flavor of the edible product, a cookie is prepared having a cream filling. In such a form, therapeutically or prophylactically effective amounts of activated charcoal arc ingested by a subject who has ingested a poison or toxin in an amount sufficient to mitigate, substantially reduce, or cause the cessation of at least one adverse effect associated with the ingestion of the toxin or poison.</p>
+      <p id="p-00136-en" num="0141">In another illustrative embodiment, to enhance the sweet flavor of the wafers, and to enhance the emulation of a cookie treat, a creamy white filling is sandwiched between a pair of wafers. The precise consistency, color, and taste of the filling is not integral to the invention; however, it is preferable that the filling be of a consistency and color appealing to children and that its flavor exhibit a sufficient sweet component to supplement or augment the sweet flavor of the wafers. The pleasant taste further encourages the child to likewise ingest addition “edible product of the invention,” which make up the required pharmacological activated charcoal dosage.</p>
+      <p id="p-00137-en" num="0142">An important factor in the proper use of activated charcoal or any other decontaminant in toxicological treatment is, in addition to its ingestion in significant doses by the victim, the promptness with which the ingestion occurs. The edible product of the invention is such that a therapeutically or prophylactically effective amount of activated charcoal is found in the edible product and is ingested with chewing in an ordinary fashion (i.e., the way a subject would chew and swallow any other ingestable food).</p>
+      <p id="p-00138-en" num="0143">In one embodiment, the activated charcoal is administered at the site at which the poisoning incident occurs, which in most cases is the victim's home, immediately following the discovery of the accidental or purposeful ingestion, before the ingested toxins have had the opportunity to be extensively absorbed into the bloodstream,</p>
+      <p id="p-00139-en" num="0144">The edible product produced by the inventive method, given its inherent palatability, could easily be administered in the home or any other setting outside a medical institution, and by any individual. Hence, the edible product of the invention would not only expand the usage of activated charcoal as a decontaminant, but it would actually enhance, in a significant manner, the effectiveness of that usage.</p>
+      <heading id="h-00011-en" level="1">6.2.1.2 Leavening Agents</heading>
+      <p id="p-00140-en" num="0145">In the illustrative embodiments set forth above, the ingredients were blended and processed to remove water, for example by baking, in the absence of a leavening agent.</p>
+      <p id="p-00141-en" num="0146">In another illustrative embodiment, the edible product contains a leavening agent to allow the edible product to rise and increase in volume. Embodiments of the Invention in the form of a wafer, cracker, or pie crusts can utilize leavening to make them flaky or lighter in texture. Leavening can occur mainly during cooking, such as for pie crusts. In other cases most of the leavening happens prior to baking, as for example wife many yeast breads, or more often, leavening may occur partially before and partially when the product is heated. The type of leavening used may depend on the product, for example whether the un-baked product is a batter or a dough.</p>
+      <p id="p-00142-en" num="0147">Several types of leavening agents can be combined to give the maximum amount of lift to the product. For example, a recipe might require sugar and butter to be creamed, representing one type of leavening (i.e., air) and call for baking powder as well, which is another type of leavening (i.e., carbon dioxide).</p>
+      <p id="p-00143-en" num="0148">In addition, the batter or dough should be suitable for holding the expanded shape, before, during, and after cooking. For example a cake containing flour will rise in the oven and hold the volume even after the cake cools and the leavening gases contract. The structure of the cake is strong enough after cooking so that foe air cells remain. On the other hand, many cheesecakes and soufflés which have little flour will attain a high volume in the oven but will collapse when the product is cooled. The egg protein-based walls of the little air cells are not strong enough to hold up the weight of the cake when the heated air cools and contracts.</p>
+      <heading id="h-00012-en" level="1">6.2.1.3 Cream Filling</heading>
+      <p id="p-00144-en" num="0149">The optional cream to be included in an embodiment of the edible product of the invention may be used to enhance the palatability and flavor of the wafers, for example, the cream may improve the texture or month feel of the product. In an illustrative embodiment, a creamy white filling is sandwiched between a pair of wafers. The precise consistency, color and taste of the filling is not important to the invention. Thus, the color, texture, and its flavor should supplement or augment the sweet flavor of the wafers themselves.</p>
+      <p id="p-00145-en" num="0150">In one embodiment, the optional cream filling comprises one or more flavoring agents, shortening, lecithin, salt, and sugar. In another embodiment, the optional cream filling is a reduced fat cream filling that comprises sugar, glycerine, shortenings and a fat replacer. In still another embodiment, the optional cream filling is a non-fat cream filling that comprises one or more flavoring agents, lecithin, salt, glycerine, a fat replacer, and one or more emulsifying agents.</p>
+      <p id="p-00146-en" num="0151">In a particular embodiment, the flavoring agent is vanilla or chocolate flavoring. In another particular embodiment, the flavoring is vanilla flavoring. In a particular illustrative embodiment, the flavoring in the optional cream is present in an approximate weight percent of from about 0.05% to about 1%. In another particular illustrative embodiment, the flavoring in the optional cream is in an approximate weight percent of about 0.2%.</p>
+      <p id="p-00147-en" num="0152">In another particular embodiment, the shortening is vegetable cubed shortening. In another particular embodiment, the shortening in the optional cream is present in an approximate weight percent of from about 25% to about 35%. In another particular illustrative embodiment, the shortening in the optional cream is in an approximate weight percent of about 31%.</p>
+      <p id="p-00148-en" num="0153">In another particular embodiment, the lecithin in the optional cream is present in an approximate weight percent of from about 0.01% to about 0.5%. In another particular illustrative embodiment, the lecithin in the optional cream is present in an approximate weight percent of about 0.05%.</p>
+      <p id="p-00149-en" num="0154">In another particular embodiment, the salt in the optional cream is present in an approximate weight percent of from about 0.1% to about 1%. In another particular illustrative embodiment, the salt in the optional cream is present in an approximate weight percent of about 0.25%.</p>
+      <p id="p-00150-en" num="0155">In another particular embodiment, the sugar is powdered sugar. In another particular embodiment, the sugar in the optional cream is present in an approximate weight percent of from about 65% to about 75%. In another particular illustrative embodiment, the sugar in the optional cream is present in an approximate weight percent of about 69%.</p>
+      <p id="p-00151-en" num="0156">In another embodiment, the fat replacer is a carbohydrate-based, protein-based, or non-digestible or non-absorbable fat-based fat replacer. Illustrative examples of fat replacers include, but are not limited to, cellulose, maltodextrins, gums, starches, fiber, polydextrose, and olestra. In another particular embodiment, the fat replacer in the optional cream is present in an approximate weight percent of from about 5% to about 15%. In another particular illustrative embodiment, the fat replacer in the optional cream is present in an approximate weight percent of about 11%.</p>
+      <p id="p-00152-en" num="0157">In an illustrative embodiment the optional filling is formulated as follows:</p>
+      <p id="p-00153-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="77pt" align="left" />
+              <colspec colname="3" colwidth="70pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Ingredient</entry>
+                  <entry>Approximated Weight %<sup>1</sup></entry>
+                  <entry>Preferred Weight %<sup>1</sup></entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="77pt" align="center" />
+              <colspec colname="3" colwidth="70pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Sugar</entry>
+                  <entry>30%-95%</entry>
+                  <entry>65%</entry>
+                </row>
+                <row>
+                  <entry>Glycerine</entry>
+                  <entry>10%-50%</entry>
+                  <entry>35%</entry>
+                </row>
+                <row>
+                  <entry>Flavoring </entry>
+                  <entry>0%-5%</entry>
+                  <entry>0.3% </entry>
+                </row>
+                <row>
+                  <entry>(Vanilla Extract)</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Water</entry>
+                  <entry> 0%-20%</entry>
+                  <entry> 0%</entry>
+                </row>
+                <row>
+                  <entry>Marshmallow Cream</entry>
+                  <entry> 0%-70%</entry>
+                  <entry> 0%</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="left" id="entry-00004-en">
+                    <sup>1</sup>Weight percentages are determined prior to baking the ingredients.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00013-en" level="1">6.3 Combination Therapy</heading>
+      <p id="p-00154-en" num="0158">In certain embodiments of the invention, the edible product of the invention can be used in combination therapy with one or more second active agents. The edible product of the invention and the second active agent may act additively or, more preferably, synergistically. In one embodiment, the edible product comprising activated charcoal is administered concurrently with the administration of the second active agent, which can be part of the edible product.</p>
+      <p id="p-00155-en" num="0159">In another embodiment, the edible product of the invention is administered prior or subsequent to administration of second active agent. The duration of administration of each drug or second active agent can be, for example, several minutes or several hours.</p>
+      <p id="p-00156-en" num="0160">In certain embodiments, when a edible product of the invention is administered concurrently with a second active agent that potentially produces adverse side effects including, but not limited to, toxicity, the therapeutic agent can advantageously be administered at a dose that falls below the threshold at which the adverse side is elicited.</p>
+      <p id="p-00157-en" num="0161">In one illustrative embodiment, the edible products of the invention can be administered together with an antiemetic agent. Antiemetic agents for use in combination with the edible products of the invention include, but are not limited to, cinnarizine, compazine, diphenhydramine, kytril, marinol, meclizine HCl, metoclopramide, promethazine, scopolamine, and zofran.</p>
+      <p id="p-00158-en" num="0162">In another embodiment, the edible products of the invention can be administered together with an antibiotic agent. Antibiotic drugs for use in combination with the edible product of the invention include, but are not limited to, aminoglycosides, streptomycin, neomycin, anamycin, amikacin, gentamicin, tobramycin, streptomycin B, dihydrostreptomycin, spectinomycin, penicillin, ampicillin, hetacillin, amoxicillin, carbenicillin, cephalosporins, cephaloridine, cephalothin sodium, cephaloglycin dihydratem, cephalexin monohydrate, tetracycline, tetracycline hydrochloride, oxytetracycline hydrochloride, chlorotetracycline hydrochloride, doxocycline monohydrate, methacydine hydrochloride, 7-chloro-6-dimethyltetracycline, erythamycin, sulfonamides, carbomycin, oleanodmycin, troleandomycin, polymixin B collistin, and chloramphenicol.</p>
+      <p id="p-00159-en" num="0163">In yet another embodiment, the edible products of the invention can be administered together with an antidiarrheal agent. Antidiarrheal drugs for use in combination with the edible product of the invention include, but are not limited to, loperamide, diphenoxylate, atropine, tincture of opium, paregoric, morphine sulfate, codeine, and methadone.</p>
+      <p id="p-00160-en" num="0164">In another embodiment, the second agent may be a cathartic agent or an agent that induces catharsis. As an example, the second agent may be sorbitol.</p>
+      <p id="p-00161-en" num="0165">In one embodiment the second active agent is administered as a combination with the edible product. In a particular embodiment, the second active agent is baked with the wafer portion of the illustrative edible product described herein. In another particular embodiment, the second active agent is not baked with the wafer portion of the illustrative edible product described herein. In another embodiment, the second active agent is mixed with the cream and then sandwiched between two wafers of the invention,</p>
+      <p id="p-00162-en" num="0166">Without further description, it is believed that one of ordinary skill in the art can, using the preceding description and the following illustrative examples, make and utilize the compounds of the present invention and practice the claimed methods. The following illustrative examples therefore, specifically point out embodiments of the present invention, and are not to be construed as limiting in any way the remainder of the disclosure.</p>
+      <heading id="h-00014-en" level="1">6.4 Therapeutic/Prophylactic Administration and Compositions</heading>
+      <p id="p-00163-en" num="0167">The edible products of the Invention are administered to achieve efficacious levels of activated charcoal to a subject in need thereof to mitigate, cause the cessation of, or substantially reduce adverse effects associated with the ingestion of a toxin or poison. Thus, the edible product of the invention may be administered orally and chewed to allow the activated charcoal to achieve a therapeutic or prophylactic surface area. A therapeutic or prophylactic surface area is typically achieved by ordinary chewing and swallowing.</p>
+      <p id="p-00164-en" num="0168">Due to the activity of the edible product of the invention, it is useful in veterinary and human medicine. As described above, the edible product of the invention is useful in mitigating, causing the cessation, or substantially reducing adverse effects associated with the ingestion of a toxin or poison.</p>
+      <p id="p-00165-en" num="0169">The invention provides methods of treatment and prophylaxis by administration to a patient a therapeutically effective amount of activated charcoal comprised in an edible product of the invention. The subject may be an animal, including, but not limited, to an animal such a cow, horse, sheep, pig, chicken, turkey, quail, cat, dog, mouse, rat, rabbit, guinea pig, etc., and is more preferably a mammal, and most preferably a human. In some instances, the patient is a child.</p>
+      <p id="p-00166-en" num="0170">The compositions of the invention are intended to be administered orally and may be administered together with another biologically active agent. (See, e.g., section 5.4.1 below). Administration can be at any time after ingestion of a toxin or poison, preferably within about 1 to about 3 hours and snore preferably within about 1 hour and most preferably immediately after ingestion of a toxin or poison,</p>
+      <p id="p-00167-en" num="0171">In an illustrative embodiments, it is desirable to administer the edible product of the invention locally to the gastrointestinal tract of the subject. This may be achieved, for example, and not by way of limitation, by oral administration.</p>
+      <p id="p-00168-en" num="0172">The present compositions will contain a therapeutically effective amount of activated charcoal, optionally with an additional therapeutic, preferably in purified form, wherein the additional therapeutic is in a suitable amount of a pharmaceutically acceptable vehicle so as to provide the form for proper administration to the patient,</p>
+      <p id="p-00169-en" num="0173">The term “vehicle” refers to a diluent, adjuvant, excipient, or carrier with which a composition of the invention is administered.</p>
+      <p id="p-00170-en" num="0174">In an illustrative embodiment, the second active agents of the invention are formulated in accordance with routine procedures as a pharmaceutical composition adapted for intravenous administration to human beings. Generally, the Ingredients are supplied either separately or mixed together in unit dosage form, for example, as a dry lyophilized powder or water free concentrate in a hermetically sealed container such as an ampoule or sachette indicating the quantity of active agent. Where the composition of the invention is to be administered by intravenous infusion, it can be dispensed, for example, with an infusion bottle containing sterile pharmaceutical grade water or saline. Where the compound of the invention is administered by injection, an ampoule of sterile water for injection or saline can be provided so that the ingredients may be mixed prior to administration.</p>
+      <p id="p-00171-en" num="0175">The edible product of the invention for oral delivery can also contain one or more optional agents, for example, pharmaceutical additives such as, PVP; sweetening agents such as fructose, aspartame or saccharin; flavoring agents such as peppermint, oil of wintergreen, saccharine, aspartame, neotame, or cherry; coloring agents; and preserving agents, to provide a pharmaceutically palatable preparation that do not interfere with the preparation of the edible product. In another embodiment, products of the invention may comprise additional coatings or frostings. For example, products of the invention may be enclosed in a chocolate coating as a single wafer or a filled cookie or sandwich cookie. The coating may also decrease the friable nature of the product and increase product stability or shelf life.</p>
+      <p id="p-00172-en" num="0176">The amount of the decontaminant edible product of the invention that will be effective in the treatment or prevention of ingestion of a particular toxin or poison will depend on the nature of the toxin or poison, and cart be readily determined by clinicians. In one embodiment, the edible product of the invention is such that it can be administered by a parent or non-clinician, wherein such parent or non-clinician suspects that a child or animal ingested a poison or toxin.</p>
+      <p id="p-00173-en" num="0177">The precise dose to be employed in the compositions will also depend on the seriousness of the toxicity or poisoning, and should be decided according to the judgment of the practitioner and each patient's circumstances. However, the edible product of the invention is such that it can be administered to a subject suspected of ingesting a poison or toxin as one or more individual units and without worry of any adverse effect associated with administration of the edible product provided it is used appropriately.</p>
+      <heading id="h-00015-en" level="1">6.4.1 Oral Administration</heading>
+      <p id="p-00174-en" num="0178">The oral formulations of the invention may contain inert ingredients, which allow for protection against the stomach environment, and release of the biologically active material in the intestine. Such formulations, or enteric coatings, are well known in the art. For example, tablets containing a fusion protein in admixture with non-toxic pharmaceutically acceptable excipients, which are suitable for manufacture of tablets, may be used. These excipients may be inert diluents, such as calcium carbonate, sodium carbonate, lactose, calcium phosphate or sodium phosphate; granulating and disintegrating agents, for example, maize starch, gelatin or acacia, and lubricating agents, for example, magnesium stearate, stearic acid, or talc.</p>
+      <p id="p-00175-en" num="0179">The therapeutically or prophylactically effective amount of edible product may be measured in a numbers of ways, including calculated to alleviate symptoms associated with a specific toxin or poison in a subject, such as the symptoms of poison or toxin ingestion.</p>
+      <heading id="h-00016-en" level="1">6.5 Package Containing Edible Product</heading>
+      <p id="p-00176-en" num="0180">In a further embodiment, the invention provides a package containing products of the invention. The package will typically comprise a label. Suitable packages include, for example, boxes, cellophane containers or wraps and the like. The package may be formed from a variety of materials such as cellophane or plastic. The package holds the edible product that includes activated carbon in a therapeutically or prophylactically effective amount to mitigate, cause the cessation, or substantially reduce at least one adverse effect associated with the ingestion of a poison or toxin. In addition, the edible product in the package may contain a second active agent. The label on the container typically indicates that the edible product is used for a specific therapy, and may also indicate directions for in vivo use, such as those described above.</p>
+      <p id="p-00177-en" num="0181">Without further description, it is believed that a person of ordinary skill in the art can, using the preceding description and the following working examples, make and utilize the invention and practice the claimed methods. For example, a skilled artisan would readily be able to determine the administration of the edible product of the present invention. The following working examples therefore, specifically point out the illustrative embodiments of the invention, and are not to be construed as limiting in any way the remainder of the disclosure.</p>
+      <heading id="h-00017-en" level="1">7. EXAMPLES</heading>
+      <heading id="h-00018-en" level="1">7.1 In Vitro Testing</heading>
+      <p id="p-00178-en" num="0182">A rapid test method based on Trinder's Reagent was used in order to determine adsorptivity of the activated charcoal cookie formulation. Tests were conducted in vitro by mixing a predetermined amount of a test substance into a stock solution. The in vitro stock solution used in each test consisted of 1 g/L of sodium salicylate dissolved in a simulated gastric fluid solution containing 2.0 g/L of NaCl, 7.0 mL/L of 12 N strength concentrated HCl and distilled water. The simulated gastric fluid was characterized in this form by a pH level of 1.2, the salicylate of this pH level being more than 99.99% in the form of undissociated salicylic acid, which is very similar in its properties to aspirin, or acetylsalicylic acid.</p>
+      <p id="p-00179-en" num="0183">Equilibrium adsorption tests for determining the total amount of salicylate that a given test substance may potentially adsorb, if allowed to attain equilibrium conditions, was conducted with the following procedures. First, a predetermined amount of the substance to be tested was placed in a glass vial, and 20 mL of the stock solution was added to that vial. The vial was thereafter continuously shaken by placement on a shaking table for approximately 15 hours. This caused the test substance to fully disintegrate such that the activated charcoal contained therein attained virtually perfect adsorption equilibrium with the salicylate in the stock solution.</p>
+      <p id="p-00180-en" num="0184">Kinetic tests were conducted generally by performing the following steps. Approximately 500 mL of the stock solution was poured into a <b>1</b> liter glass container. A predetermined quantity of the given test substance was then introduced into the solution in the glass container. The container was then placed on a shaking table and shaken thereby at a 60 cycles per minute oscillation frequency. Samples were taken at various times. Activated charcoal was filtered from each sample and the solution analysed calorimetrically to determine the salicylic concentration corresponding to the given sample time.</p>
+      <p id="p-00181-en" num="0185">
+        <figref>FIG. 3</figref> illustrates comparative kinetic effects of varying amounts of filling on the adsorptivity of 2.1 g of activated charcoal. For this test, a cookie weighing approximately 6.80 grams (5.15 g wafers and 1.65 g filling) was crushed to simulate chewing, and then introduced into a given volume of the stock solution. This study illustrates the effect of adsorptivity on varying amounts of cream filling on the decontaminant and demonstrates no effect on adsorptivity of the activated charcoal.</p>
+      <p id="p-00182-en" num="0186">The superior adsorption performance of the subject decontaminant, edible product made in accordance with the inventive method is apparent from <figref>FIG. 2</figref> when curve <b>1</b> is compared with curve <b>2</b>, plotting the decrease in salicylate concentration upon introduction therein of 10.06 ml of ACTIDOSE AQUA, a liquid suspension commercially marketed by PADDOCK LABS, INC., Minneapolis, Minn. That amount of ACTIDOSE AQUA was determined to contain approximately the equivalent amount of activated charcoal as contained in the cookie sample from which curve <b>1</b> was derived. Comparison of the two curves indicates that the cookie produced by the instant inventive method not only reduced the salicylate concentration in the simulated gastric fluid solution at a significantly faster rate, but also yielded a significantly greater overall reduction in the concentration than a comparable amount of ACTIDOSE AQUA suspension. For instance, the salicylate concentration, 5 minutes subsequent to introduction of the subject cookie, was substantially below 0.2 g/L. Whereas, the salicylate concentration 5 minutes subsequent to introduction of the ACTIDOSE AQUA was observed to be approximately 0.5 g/L. After 30 minutes, the salicylate concentration had diminished to approximately 0.03 g/L with the subject cookie, whereas it had begun to level off at approximately 0.15 g/L with ACTIDOSE AQUA.</p>
+      <p id="p-00183-en" num="0187">
+        <figref>FIGS. 5-8</figref> illustrate kinetic tests on illustrative edible decontaminant product of the invention. In one illustrative embodiment illustrated in <figref>FIGS. 5 and 7</figref>, 2.1 g of activated charcoal (essentially a 1:1 ratio with sodium salicylate) were added to illustrate the absolute degree to which the other ingredients interfere with activated charcoal. In another illustrative embodiment illustrated in <figref>FIGS. 6 and 8</figref>, 20 g of activated charcoal (essentially a 10:1 ratio with sodium salicylate) were added to illustrate how the product would perform in a clinical situation. <figref>FIGS. 7 and 8</figref> further illustrate an illustrative embodiment of the invention in comparison with ACTIDOSE AQUA using 2.1 g and 20 g of activated charcoal, respectively.</p>
+      <heading id="h-00019-en" level="1">7.2 Illustrative Embodiments of the Invention</heading>
+      <p id="p-00184-en" num="0188">Table 4 describes an illustrative embodiment of a mixture of ingredients of the edible product of the invention prior to baking.</p>
+      <p id="p-00185-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="35pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" rowsep="1">TABLE 4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ingredient</entry>
+                  <entry>Percent Weight %<sup>1</sup></entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Neotame</entry>
+                  <entry>0.001%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Activated Charcoal</entry>
+                  <entry>  24%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Cocoa</entry>
+                  <entry>   1%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Salt</entry>
+                  <entry> 0.2%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Rice Crisps</entry>
+                  <entry>11.14%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Sunnet Sweetner</entry>
+                  <entry> 0.67%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Lecithin</entry>
+                  <entry> 1.6%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Atmul</entry>
+                  <entry> 3.55%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Emplex</entry>
+                  <entry> 1.37%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Mix 3 minutes on low </entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>then add the following:</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ammonia</entry>
+                  <entry> 0.16%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Water</entry>
+                  <entry>  53%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Glycerin</entry>
+                  <entry> 6.05%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>H.F. Corn Syrup</entry>
+                  <entry>27.09    </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="left" id="entry-00005-en">
+                    <sup>1</sup>Weight percentages are determined prior to baking the ingredients</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00186-en" num="0189">In another illustrative embodiment of Table 4, the Sunnet Sweetener can be reduced or eliminated altogether and/or one or more flavoring agents, for example, chocolate flavoring or neotame may be added in a greater amount.</p>
+      <p id="p-00187-en" num="0190">Table 5 describes another illustrative embodiment of a mixture of ingredients of the edible product of the invention prior to baking.</p>
+      <p id="p-00188-en" num="0000">
+        <tables id="tables-00006-en" num="00006">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="84pt" align="left" />
+              <colspec colname="2" colwidth="63pt" align="center" />
+              <colspec colname="3" colwidth="70pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" rowsep="1">TABLE 5</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Ingredient</entry>
+                  <entry>Preferred Weight %<sup>1</sup></entry>
+                  <entry>Weight % Range<sup>1</sup></entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>Activated Charcoal</entry>
+                  <entry>22%</entry>
+                  <entry>10-80%</entry>
+                </row>
+                <row>
+                  <entry>Water</entry>
+                  <entry>31%</entry>
+                  <entry> 0-80%</entry>
+                </row>
+                <row>
+                  <entry>H.F. Corn Syrup</entry>
+                  <entry>19%</entry>
+                  <entry> 0-55%</entry>
+                </row>
+                <row>
+                  <entry>Rice Crisps</entry>
+                  <entry> 8%</entry>
+                  <entry> 0-50%</entry>
+                </row>
+                <row>
+                  <entry>Glycerine</entry>
+                  <entry> 3%</entry>
+                  <entry> 0-10%</entry>
+                </row>
+                <row>
+                  <entry>Flavor Bits/Inclusions</entry>
+                  <entry>17%</entry>
+                  <entry> 0-35%</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="left" id="entry-00006-en">
+                    <sup>1</sup>Weight percentages are determined prior to baking the ingredients</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00189-en" num="0191">Table 6 describes another illustrative embodiment of a mixture of ingredients of the edible product of the invention after baking.</p>
+      <p id="p-00190-en" num="0000">
+        <tables id="tables-00007-en" num="00007">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="63pt" align="center" />
+              <colspec colname="3" colwidth="70pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" rowsep="1">TABLE 6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ingredient</entry>
+                  <entry>Preferred Weight % <sup>1</sup></entry>
+                  <entry>Weight % Range<sup>1</sup></entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Activated Charcoal</entry>
+                  <entry>34%</entry>
+                  <entry>10-80% </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Water</entry>
+                  <entry> 4%</entry>
+                  <entry>1-30%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>H.F. Corn Syrup</entry>
+                  <entry>20%</entry>
+                  <entry>0-40%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Rice Crisps</entry>
+                  <entry>13%</entry>
+                  <entry>0-30%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Glycerine</entry>
+                  <entry> 5%</entry>
+                  <entry>0-20%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Flavor bits/Inclusions</entry>
+                  <entry>26%</entry>
+                  <entry>0-50%</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="left" id="entry-00007-en">
+                    <sup>1</sup>Weight percentages are determined prior to baking the ingredients.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00191-en" num="0192">Table 7 below illustrates the adsorptivity of 2 g/L of NaSal using a 0.80 Cookie (2.1 g equivalent activated charcoal) and 7.7 cookies (20 g equivalent activated charcoal),</p>
+      <p id="p-00192-en" num="0000">
+        <tables id="tables-00008-en" num="00008">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="21pt" align="center" />
+              <colspec colname="2" colwidth="77pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="77pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" rowsep="1">TABLE 7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Coated</entry>
+                  <entry />
+                  <entry>Coated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Wafer 0.8</entry>
+                  <entry />
+                  <entry>Wafer 7.7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Cookie</entry>
+                  <entry />
+                  <entry>Cookie</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Time</entry>
+                  <entry>(e.g., 2.1 g)</entry>
+                  <entry>Time</entry>
+                  <entry>(e.g., 20 g)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(min.)</entry>
+                  <entry>Conc.</entry>
+                  <entry>(min.)</entry>
+                  <entry>Conc.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="21pt" align="char" char="." />
+              <colspec colname="2" colwidth="77pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="char" char="." />
+              <colspec colname="4" colwidth="77pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>2.5</entry>
+                  <entry>0.701</entry>
+                  <entry>1</entry>
+                  <entry>0.129</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>5</entry>
+                  <entry>0.636</entry>
+                  <entry>2.5</entry>
+                  <entry>0.060</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>10</entry>
+                  <entry>0.559</entry>
+                  <entry>5</entry>
+                  <entry>0.040</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>15</entry>
+                  <entry>0.512</entry>
+                  <entry>7.5</entry>
+                  <entry>0.032</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>20</entry>
+                  <entry>0.486</entry>
+                  <entry>10</entry>
+                  <entry>0.024</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>25</entry>
+                  <entry>0.471</entry>
+                  <entry>12.5</entry>
+                  <entry>0.023</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>30</entry>
+                  <entry>0.435</entry>
+                  <entry>15</entry>
+                  <entry>0.023</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>40</entry>
+                  <entry>0.435</entry>
+                  <entry>20</entry>
+                  <entry>0.019</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>50</entry>
+                  <entry>0.425</entry>
+                  <entry>25</entry>
+                  <entry>0.017</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>60</entry>
+                  <entry>0.412</entry>
+                  <entry>30</entry>
+                  <entry>0.017</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00193-en" num="0193">Although the present invention has been described in detail with reference to examples above, it is understood that various modifications can be made without departing from the spirit of the invention. Accordingly, the invention is limited only by the following claims. All cited patents, patent applications and publications referred to in this application are herein incorporated by reference in their entirety.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>. An edible, toxin-decontaminant product comprising a plurality of ingredients, said plurality comprising:
+<claim-text>(a) a dry friable wafer in an amount of about 10 g and comprising about 2% water, which allows the wafer to maintain consistency without crumbling;</claim-text><claim-text>(b) activated charcoal in an amount effective to mitigate, substantially reduce or cause the cessation of at least on adverse effect associated with the ingestion of a toxin substance.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The product of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein one or more of ingredients comprises a dough.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The product of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the dough comprises one or more flavoring agents.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The product of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the dough comprises one or more complexing or thickening agents or mixtures thereof.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The product of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the dough comprises one or more emulsifying agents or mixtures thereof.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The product of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the dough comprises an agent to improve porosity and texture.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>-<b>9</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>10</b>. The product of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a pharmaceutical agent, a homeopathic agent, or an herbal ingredient.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>11</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>12</b>. The product of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said activated charcoal is characterized by an internal surface area of from about 800 m<sup>2</sup>/g to about 3,000 m<sup>2</sup>/g.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>13</b>. The product of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said activated charcoal is characterized by an internal surface area of about 2,000 m<sup>2</sup>/g.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>14</b>. The product of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the product includes the activated charcoal in the approximate weight range of from about 20% to about 70% thereof.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>15</b>. The product of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the product includes the activated charcoal in the approximate weight range of from about 25% thereof.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>16</b>. The product of <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the flavoring agent is vanilla flavor, chocolate flavor, salt, sugar, or a sweetener or mixtures thereof.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>17</b>. The product of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the complexing or thickening agent is sodium stearoyl lactylate, high fructose corn syrup, or modified food starch or mixtures thereof.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>18</b>. The product of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the emulsifying agent is a monoglyceride or diglyceride or mixtures thereof.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>19</b>. The product of <claim-ref idref="clm-00014-en">claim 16</claim-ref>, wherein the product includes the flavoring agent in the approximate weight range of about 0.001% to about 9% thereof.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>20</b>-<b>40</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>41</b>. The product of <claim-ref idref="clm-00001-en">claim 1</claim-ref> suitable for administration to an animal.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>42</b>. The product of <claim-ref idref="clm-00001-en">claim 1</claim-ref> suitable for administration to a human.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>43</b>. The product of <claim-ref idref="clm-00020-en">claim 42</claim-ref>, wherein the human is a child.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>44</b>-<b>95</b>. (canceled)</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150250219A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250219A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150250219A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250219A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150250219A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250219A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150250219A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250219A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150250219A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250219A1-20150910-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150250219A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250219A1-20150910-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150250219A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250219A1-20150910-D00007.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150250219A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250219A1-20150910-D00008.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150250219A1.PDF" type="pdf" size="1012539" pages="23" />
+</lexisnexis-patent-document>

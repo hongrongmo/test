@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150251095A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021952" date-changed="20151208" time-changed="150701">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121230588">
+        <country>US</country>
+        <doc-number>20150251095</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14366444</doc-number>
+        <date>20140109</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151208">
+      <classification-ipcr sequence="1">
+        <text>A63F  13/50        20140101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20140101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>50</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A63F  13/335       20140101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20140101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>335</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A63F  13/352       20140101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20140101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>352</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A63F  13/86        20140101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20140101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>86</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>G06F   3/048       20130101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20130101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>G</section>
+        <class>06</class>
+        <subclass>F</subclass>
+        <main-group>3</main-group>
+        <subgroup>048</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151208">
+      <classification-cpc sequence="1">
+        <text>A63F  13/50        20140902 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20140902</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>50</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A63F  13/30        20140902 LI20151130BHEP        </text>
+        <cpc-version-indicator>
+          <date>20140902</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151130</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A63F  13/335       20140902 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20140902</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>335</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A63F  13/352       20140902 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20140902</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>352</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A63F  13/86        20140902 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20140902</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>F</subclass>
+        <main-group>13</main-group>
+        <subgroup>86</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>G06F   3/048       20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>06</class>
+        <subclass>F</subclass>
+        <main-group>3</main-group>
+        <subgroup>048</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>G06F   9/44        20130101 LI20150806BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>06</class>
+        <subclass>F</subclass>
+        <main-group>9</main-group>
+        <subgroup>44</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150806</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>G06T  15/005       20130101 LI20150806BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>06</class>
+        <subclass>T</subclass>
+        <main-group>15</main-group>
+        <subgroup>005</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150806</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>G06T2200/16        20130101 LA20150806BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>06</class>
+        <subclass>T</subclass>
+        <main-group>2200</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150806</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">21</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">VIDEO GAMING DEVICE WITH REMOTE RENDERING CAPABILITY</invention-title>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>SQUARE ENIX HOLDINGS CO., LTD.</orgname>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>JP</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Perrin</last-name>
+            <first-name>Cyril</first-name>
+            <address>
+              <city>Antony</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP14050727</doc-number>
+        <date>20140109</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2015104849</doc-number>
+        <date>20150716</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150910">
+      <main-family family-id="173567884">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150251095</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20140109</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173567883">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150251095</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20140109</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A gaming device for playing a video game. The gaming device executes game software to output rendering commands representing a virtual world of the video game and has a local rendering module for processing the rendering commands to generate an Image data stream of the virtual world. The gaming device has a remote rendering controller for generating second rendering commands for processing by a remote rendering module to generate a rendered graphics output also depicting the virtual world.</p>
+  </abstract>
+  <legal-data date-changed="20150925">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20140618</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015251095A1</docdb-publication-number>
+      <docdb-application-id>444308292</docdb-application-id>
+      <new-owner>SQUARE ENIX HOLDINGS CO., LTD., JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:PERRIN, CYRIL;REEL/FRAME:033129/0468</free-text-description>
+      <effective-date>
+        <date>20140331</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">The invention relates to a video gaming device that interfaces with a remote rendering server to perform image rendering. The invention also relates to a server arrangement that performs image rendering functions under control of the remote video gaming device. The invention also relates to various methods and devices for performing remote rendering operations in the context of video gaming.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">Many video games today allow spectating, which is the ability of a participant to view the game action without directly being involved in it.</p>
+      <p id="p-00003-en" num="0003">Spectating an online video game that is being run over a private network requires the spectator to invest in gaming equipment that can interface with the other gaming devices connected to the private network. This means that a spectator can watch the game only through the intermediary of a gaming device running the same game software that would be required to directly participate in the game. This is obviously a disadvantage in that it limits access, from a spectating point of view, to online games.</p>
+      <p id="p-00004-en" num="0004">Therefore, there is a need to develop improved gaming devices and associated systems and techniques for facilitating access to spectators to video game action.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00005-en" num="0005">As embodied and broadly described herein, the invention provides a gaming device for playing a video game. The gaming device executes game software to produce first rendering commands representing a virtual world of the video game and a local rendering module for processing the rendering commands to generate an image data stream of the virtual world. The gaming device also has a remote rendering controller for generating second rendering commands for processing by a remote rendering module to generate a rendered graphics output also depicting the virtual world. An output releases the image data stream and transmits the second rendering commands to a data communication network for transmission to the remote rendering module.</p>
+      <p id="p-00006-en" num="0006">As embodied and broadly described herein, the invention also provides a server arrangement for performing remote rendering of video game graphics. The server arrangement receives rendering commands transmitted to the server input over a data network from a remote location, the rendering commands representing a virtual world of a video game, the video game being played by players controlling respective virtual characters in the virtual world. The server arrangement also receives identification information to identify one or more spectators. The server arrangement has a rendering module for processing the rendering commands to generate an image data stream depicting the virtual world and an output for transmitting the image data stream to the one or more spectators over a data network.</p>
+      <p id="p-00007-en" num="0007">As embodied and broadly described herein, the invention further provides a method for allowing a spectator to spectate an online video game played over a network. The method including executing by a Central Processing Unit (CPU) game software to generate rendering commands representing a virtual world of a video game, processing the rendering commands with a rendering module to generate an image data stream and outputting the image data stream to a display device. The method also includes processing with the CPU the first rendering commands to derive second rendering commands and transmitting the second rendering commands to a remote server for rendering and delivery of a rendered output to at least one spectator.</p>
+      <p id="p-00008-en" num="0008">As embodied and broadly described herein, the invention also provides a method for performing distributed rendering of a video game. The method including processing with a first rendering module at a first network node in a data network rendering commands representing a virtual world of a video game to generate an image data stream for display to a player that controls a virtual character in the video game. The method also includes processing at a second node in the data network that is remote from the first node second rendering commands derived from the first rendering commands with a second rendering module to produce a rendered output depicting the virtual world and the virtual character of the player and transmitting the rendered output to at least one spectator for viewing.</p>
+      <p id="p-00009-en" num="0009">As embodied and broadly described herein, the invention further includes a machine readable storage medium encoded with non transitory program code for execution by a CPU for generating rendering commands to perform remote rendering of video game scenes, the program code including remote rendering program instructions for processing first rendering commands output by game software for driving a local rendering module, to derive second rendering commands for processing by a remote rendering module to generate an image data stream of the video game scenes. The program code also includes program instructions for transmitting the second rendering commands to a remote rendering module over a data network.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 1</figref> is a block diagram illustrating a data network and the various network nodes collectively implementing an online video game infrastructure, according to a non-limiting example of implementation of the invention;</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 2</figref> is a more detailed block diagram of the gaming device shown in <figref>FIG. 1</figref>, illustrating the various functional modules of the gaming device and their relationship to some external components;</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 3</figref> is a block diagram of a computing platform on which the gaming device shown in <figref>FIGS. 1 and 2</figref> is implemented;</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 4</figref> is a block diagram illustrating in greater detail the structure of the remote rendering server shown in <figref>FIGS. 1 and 2</figref>;</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 5</figref> is a flowchart illustrating a process that is performed during execution of the game software by the gaming device shown in <figref>FIGS. 1 and 2</figref>;</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 6</figref> is a flowchart of a process performed by the remote rendering controller of the gaming device shown in <figref>FIGS. 1 and 2</figref>;</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 7</figref> is a flowchart of a process performed by the rendering module of the remote rendering server;</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 8</figref> illustrates the local display that is associated with the gaming device and shows a graphical user interface allowing the game player to identify a spectator to which the game action can be streamed; and</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 9</figref> is a flowchart illustrating the process for selecting the spectator to receive the game action stream by using the graphical user interface shown in <figref>FIG. 8</figref>.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DESCRIPTION OF AN EXAMPLE IMPLEMENTATION OF THE INVENTION</heading>
+      <p id="p-00019-en" num="0019">In a specific and non-limiting example of implementation, the invention provides a gaming device that outputs rendering commands that are rendered remotely. The rendered output is available to spectators that wish to observe the game action.</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 1</figref> illustrates the data communication infrastructure allowing playing the video game and also providing spectators with access to the video game action. The data communication infrastructure includes a data network <b>10</b> such as the Internet that can be used to exchange data between nodes of that network. A gaming device <b>12</b>, which constitutes an individual node of the data network <b>10</b>, allows a local player to play a video game. The video game is an online video game, in other words, other players at remote gaming devices also participate in the game. Such multiplayer gaming action is generally considered to provide a superior game experience than a single gamer action. Alternatively, the video game is a single player game.</p>
+      <p id="p-00021-en" num="0021">The gaming device <b>12</b> outputs image data to a local display <b>14</b>, such as a television set. The local display <b>14</b> shows to the local player images of the virtual world in which the virtual game character of the player evolves. While not shown in the drawings, it is to be understood that the local player interacts with the video game through controls such as game pads or any other suitable device allowing the requisite degree of player input. Such game pads allow the player to control the movement of the virtual game character, change the settings of the gaming device and optionally specify the address or identity of a spectator that is to receive the gaming action stream.</p>
+      <p id="p-00022-en" num="0022">When the online video game is being played, the gaming device sends game metrics to a game-hosting server <b>16</b>. The game-hosting server <b>16</b> receives the game metrics from all the gaming devices involved in the game, aggregates them and broadcasts them back to the individual gaming devices <b>12</b>. In this fashion, the gaming device <b>12</b> can generate the interactive, multiplayer virtual environment.</p>
+      <p id="p-00023-en" num="0023">As the game is being played, the gaming device <b>12</b> generates rendering commands that are transmitted to a remote rendering server <b>18</b>. The rendering commands constitute a representation of the virtual world of the game and they are used as input to a rendering module at the remote rendering server <b>18</b>. The rendering module processes the rendering commands and generates an image data stream that is transmitted through the data network <b>10</b> to spectators <b>20</b>.</p>
+      <p id="p-00024-en" num="0024">The above-described architecture is useful and beneficial in the sense that it does not require the individual spectators to be involved in any way in the exchange of game metrics required when a participant is actively involved in the game and controls a virtual game character. Spectators only need to connect to the remote rendering server <b>18</b> to access the image data stream conveying the video game action.</p>
+      <p id="p-00025-en" num="0025">The gaming device <b>12</b> is based on a computer platform that is generically illustrated in <figref>FIG. 1</figref>. The computer platform has a Central Processing Unit (CPU) <b>22</b> (in practice, multiple CPUs can be used to increase the processing power), a machine-readable storage <b>24</b> which is more commonly referred to as “memory”, a Graphics Processing Unit (GPU) <b>26</b> and an Input/output interface <b>28</b>.</p>
+      <p id="p-00026-en" num="0026">These components are interconnected by a data bus <b>30</b> over which data and other signals are exchanged.</p>
+      <p id="p-00027-en" num="0027">The memory <b>24</b> globally refers to both volatile and non-volatile storage used for storing program instructions and data on which the program instructions operate. In practice, the memory <b>24</b> could be of distributed nature and could include multiple components that may be located at a single node or can be at several different nodes of the network.</p>
+      <p id="p-00028-en" num="0028">The GPU <b>26</b> is a hardware accelerator that increases image rendering performance. As it is well known to those skilled in the art, the GPU is a specialized processor that can perform image processing functions more efficiently and rapidly than a general purpose CPU.</p>
+      <p id="p-00029-en" num="0029">The input/output interface <b>28</b> refers globally to the various hardware and software components allowing exchange of data with external devices. For example, signals that convey player commands generated by the game pads are directed to the CPU through the input/output interface <b>28</b>. Similarly, signals and data generated by the internal processing are output and directed to external devices through the Input/output interface <b>28</b>.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 2</figref> illustrates in greater detail the internal structure of the gaming device <b>12</b>. Note that the internal representation provided is a blend of hardware and software intended to illustrate functional modules rather than specific hardware components.</p>
+      <p id="p-00031-en" num="0031">The gaming device <b>12</b> has a game software <b>32</b> that implements the game logic as a result of execution of game software <b>32</b> by the CPU <b>22</b>. The game logic runs according to player inputs, in particular those of the local player at the game pads and also inputs from players at remote gaming devices. It is beyond the scope of this specification to discuss the particulars of the game software <b>32</b> as it is highly dependent on the game scenario, game type etc. Suffice it to say that the execution of the game software <b>32</b> outputs data that is supplied to a rendering module to generate the images of the virtual world that are displayed to the local player on the display <b>14</b>. In addition, the execution of the game software <b>32</b> generates game metrics, which describe the actions of the virtual character controlled by the local player. Examples of game metrics include the location of the virtual player in the game map, its direction and speed of movement, actions by the player such as firing a weapon, using a particular tool to achieve a certain task, body postures, specific character settings such as weapons inventory and degree of health remaining, among others.</p>
+      <p id="p-00032-en" num="0032">The game metrics are output by the gaming device <b>12</b> and sent to the game hosting server <b>16</b> which aggregates them and broadcasts them back to the individual gaming devices <b>12</b>. In this fashion, each gaming device has access to the game metrics of other players in order to create a complete representation of the virtual world and its action including not only the game character controlled by the local player but also the game characters controlled by the remote players.</p>
+      <p id="p-00033-en" num="0033">The gaming device <b>12</b> further includes a local rendering module <b>34</b>, which receives from the game software <b>32</b> the data describing the virtual world of the game and the action. This data, also referred to as “rendering commands” includes instructions telling the local rendering module <b>34</b> how to process geometry information, which provides a mathematical representation of the objects making up the virtual world scenes and game characters, in order to generate a visible image that can be displayed to the local player. In a specific form of implementation, the output of the local rendering module <b>34</b> is an Image data stream that can be fed to a television set or to a video monitor for display. The image data stream can be a succession of still image frames. Alternatively the image data stream can be organized to provide information on movements, such as for example a video stream encoded according to the h264 standard for video compression.</p>
+      <p id="p-00034-en" num="0034">A remote rendering controller <b>36</b> is provided to generate the rendering commands for driving the remote rendering server <b>18</b>. The remote rendering controller <b>36</b>, which can be implemented in software. Intercepts the rendering commands output as a result of execution of the game software <b>32</b> and converts them in a format suitable for transmission and processing by the remote rendering server <b>18</b>. Note that the processing of the intercepted rendering commands may be minimal or extensive.</p>
+      <p id="p-00035-en" num="0035">For example, the remote rendering controller <b>36</b> may simply packetize the intercepted rendering commands for transmission to the remote rendering server <b>18</b> through the data network <b>10</b>. In this case, the rendering commands that are delivered at the remote rendering server <b>18</b> (after re-assembly) are essentially identical to the rendering commands that are input in the local rendering module <b>34</b>.</p>
+      <p id="p-00036-en" num="0036">In another form of implementation, the remote rendering controller <b>36</b> will, in addition to packetizing the data, encode it for more efficient transmission. Different types of encoding can be contemplated according to the intended application. In such instance, the remote rendering controller <b>36</b> is provided with a suitable encoder that can be hardware- or software-implemented. As a corollary to the encoder, a complementary decoding function will also be required at the remote rendering server <b>18</b>.</p>
+      <p id="p-00037-en" num="0037">In a specific and non-limiting example of implementation, the remote rendering controller <b>36</b> collects all the rendering commands produced by the game software <b>32</b> in one frame (typically 33 ms) and sends those commands to the remote rendering server <b>18</b> for execution. In this fashion, the rendering commands are being effectively sent to the remote rendering server <b>18</b> in batches, where each batch contains image data for a single still image.</p>
+      <p id="p-00038-en" num="0038">In addition to the generation of the rendering commands for processing by the remote rendering server <b>18</b>, the remote rendering controller <b>36</b> can also output spectator identifiers, to identify one or more spectators that are to receive the game action stream, as it will be discussed in greater detail later.</p>
+      <p id="p-00039-en" num="0039">The gaming device <b>12</b> also has an output <b>38</b> that releases the various data streams internally generated, to external devices. For instance, the output of the local rendering module <b>34</b>, which is the Image data stream, is released from the output to the local display <b>14</b>. In a specific form of implementation, the image stream can be encoded into the well-known HDMI format that includes both video and audio sub-components. Evidently, other formats can also be used without departing from the spirit of this invention.</p>
+      <p id="p-00040-en" num="0040">The rendering commands generated by the remote rendering controller <b>36</b> are also released through the output <b>38</b>. In this instance, the output connects to the Internet such that the rendering commands can be transmitted to the remote rendering server <b>18</b>. In this example, the output <b>38</b> has the necessary data transmission functions such that it can interface with the data network <b>10</b>.</p>
+      <p id="p-00041-en" num="0041">As it will be apparent to the reader skilled in the art, the output <b>38</b> is not necessarily a dedicated software or hardware function, rather it represents the overall functionality allowing the various signals that are generated internally to be released to external devices. Accordingly, the structure of the output <b>38</b> may be of distributed nature and components thereof may be integrated in other functions or modules of the gaming device <b>12</b>. For example, the output function as it relates to the image stream released from the local rendering module <b>34</b> may be integrated into the local rendering module <b>34</b> that could, in addition to performing the image rendering operation, encode the rendered output in the HDMI format.</p>
+      <p id="p-00042-en" num="0042">Similarly, the rendering commands transmission function can be integrated into the remote rendering controller <b>36</b> that could in addition to performing the data processing on the rendering commands, encode them and then packetize the encoded output in a format suitable for transmission to the data network <b>10</b>.</p>
+      <p id="p-00043-en" num="0043">Although not shown in the drawings, the gaming device <b>12</b> would also include an input function through which external signals are channeled for internal processing. An example of such external signals would be the control signals generated by the game pads on which the player inputs commands to control the movements and actions of the virtual character.</p>
+      <p id="p-00044-en" num="0044">
+        <figref>FIG. 4</figref> is a more detailed block diagram of the remote rendering server <b>18</b> shown in <figref>FIGS. 1 and 2</figref>. The remote rendering server <b>18</b> includes a rendering module <b>42</b> for performing image rendering on the rendering commands received from the gaming device <b>12</b>. The remote rendering module <b>42</b> is based on a GPU (not shown) to more efficiently perform the image rendering operation. In a specific example, the remote rendering module <b>42</b> can be the same as the local rendering module <b>34</b> in the gaming device <b>12</b>. However, this is not necessary in all cases as implementations are possible where a different rendering module may be used. For instance, the rendering module <b>42</b> may be designed such as to output the image stream in a different format that is better suited for video streaming over the Internet.</p>
+      <p id="p-00045-en" num="0045">The MPEG-4 is an example of such format. Furthermore, the rendering module <b>42</b> can be specifically designed according to the resolution or simply the type of displays on which the spectators will be watching the game action and that can be significantly different from the display connected to directly integrated into the gaming device <b>12</b>. For example, the rendering module <b>42</b> can be optimized to generate an image data stream adapted for mobile devices, instead of larger displays of the type that the gaming device <b>12</b> would normally connect to.</p>
+      <p id="p-00046-en" num="0046">The rendered image data stream generated by the rendering module <b>42</b> is transmitted to various spectators through an output <b>44</b>. The output <b>44</b>, which broadly designates an output function of the remote rendering server <b>18</b>, performs a number of tasks such as managing the list of spectators, which are to receive the image data stream, among others. The spectator management function would require maintaining a list of the IP addresses of the spectators that are to receive the image data stream. Accordingly, the image data stream received from the rendering module <b>42</b> is broadcast to the IP addresses in the list of spectators.</p>
+      <p id="p-00047-en" num="0047">The remote rendering server <b>18</b> also has an input <b>46</b> connecting to the Internet that receives the rendering commands generated by the gaming device <b>12</b>. Accordingly, the rendering commands transmitted from the gaming device <b>12</b> are received at the input <b>46</b>, pre-processed and supplied to the rendering module <b>42</b>. In its simplest form, the pre-processing function would include re-assembling the data extracted from the packets to produce a continuous and coherent data stream that the rendering module <b>42</b> can process. If the gaming device <b>12</b> encodes the rendering commands, the Input <b>46</b> would then apply a suitable decoding function before supplying the rendering commands to the rendering module <b>42</b>.</p>
+      <p id="p-00048-en" num="0048">Under the optional scenario where the gaming device <b>12</b>, in addition to generating the rendering commands, also generates one or more identifiers of the spectators that are to receive the rendered output, those identifiers would also be received by the remote rendering server <b>18</b> through the input <b>46</b>. The identifiers of the spectators can be the IP addresses of the terminals at which the spectators would be watching the game action. Those IP addresses can be passed to the IP address list maintained by the output <b>44</b>. This communication function is shown by the arrow <b>48</b>.</p>
+      <p id="p-00049-en" num="0049">
+        <figref>FIG. 5</figref> is a flowchart illustrating the various steps of the process during execution of the game software <b>32</b>. The process starts substantively at step <b>50</b>, where the game software <b>32</b> receives the player inputs. As discussed earlier, the player inputs are generated by the player operating the game pads, in particular buttons, joysticks and other control devices that are used to indicate desired motions or actions of the virtual game character. Signals from the game pads are input in the gaming device <b>12</b> and directed to the game software <b>32</b>. While not shown explicitly in the flowchart, additional player inputs will also exist when the gaming device is used for playing multiplayer games. In such instance, in addition to the player inputs that are generated locally, the game software <b>32</b> will also be receiving game metrics, which inherently convey player inputs, from participating gaming devices.</p>
+      <p id="p-00050-en" num="0050">At step <b>52</b>, the game software <b>32</b> is executed to implement the game logic. The game logic is highly dependent on the particular type of game and scenario and it will not be described in detail. Suffice it to say that the game logic is the set of rules that determine an outcome based on player inputs.</p>
+      <p id="p-00051-en" num="0051">At step <b>54</b> the game software <b>32</b> outputs rendering commands and game metrics. The rendering commands describe the virtual world of the game which is to be displayed to the local player. The rendering commands is the information that is supplied to the local rendering module <b>34</b> and processed to generate individual pixel values expressed in terms of color and intensity that compose the image the local player is to see. Generally, the rendering commands include instructions that tell the local rendering module <b>34</b> how to handle or manipulate geometry data. The geometry data constitutes a mathematical description of the various components of the virtual world scenes. An example of geometry data is vertex coordinates that define the location of the vertices making up the image mesh.</p>
+      <p id="p-00052-en" num="0052">A simple example of a rendering command could be instructions to the GPU <b>26</b> to create a certain visual effect or a transformation to move a certain object in the image.</p>
+      <p id="p-00053-en" num="0053">Note that the rendering commands may, in addition to the instructions convey the geometry data as well</p>
+      <p id="p-00054-en" num="0054">The rendering commands are passed to the rendering module <b>34</b> via its Application Programming Interface (API) <b>80</b> (shown in <figref>FIG. 2</figref>). DirectX or OpenGL are examples of APIs that can be used to by the game software <b>32</b> to interact with the GPU <b>26</b> of the rendering module <b>34</b>, via a device driver <b>82</b>.</p>
+      <p id="p-00055-en" num="0055">As to the game metrics, as discussed earlier they represent in the context of the particular game which is being played, the actions of the virtual character associated with the game player such as motion of the character, actions being performed etc.</p>
+      <p id="p-00056-en" num="0056">The rendering commands and the game metrics are two separate streams of information, which are directed to different components of the gaming device <b>12</b>. The rendering commands are directed to the local rendering module <b>34</b> while the game metrics are output and are transmitted through the Internet to the game hosting server <b>16</b>.</p>
+      <p id="p-00057-en" num="0057">
+        <figref>FIG. 6</figref> is a flowchart of the process performed by the remote rendering controller <b>36</b>. At step <b>56</b>, the remote rendering controller <b>36</b> intercepts and processes the rendering commands generated by the game software <b>32</b>. The processing function can vary depending on the intended application and it can be as simple as dispatching the rendering commands to the remote rendering server <b>18</b>. In most applications, however, a more substantive processing will be performed in order to more efficiently transmit the rendering commands. An example of such processing is to encode the rendering commands to reduce the amount of data that needs to be transmitted. Any suitable encoding process can be used without departing from the spirit of the invention. Such encoding is mostly effective with the rendering commands.</p>
+      <p id="p-00058-en" num="0058">Another type of processing that can also be performed by the remote rendering controller <b>36</b> is to packetize the rendering commands such that they can be transmitted to the remote rendering server <b>18</b> over the Internet.</p>
+      <p id="p-00059-en" num="0059">At step <b>58</b>, the remote rendering controller <b>36</b> outputs the processed rendering commands to the output function <b>44</b> such that the rendering commands stream can be transmitted to the remote rendering server <b>18</b>.</p>
+      <p id="p-00060-en" num="0060">Step <b>60</b> is an optional step. The remote rendering controller <b>36</b> outputs the identifier of the recipient of the remotely rendered image stream, which typically would be a spectator. The identifier can be any type of identification data which can uniquely distinguish the spectator from other spectators. An example of such an identifier is the IP address of the terminal at which the spectator is located.</p>
+      <p id="p-00061-en" num="0061">
+        <figref>FIG. 7</figref> is a flowchart of a process implemented by the rendering module <b>42</b> of the remote rendering server <b>18</b>. The process starts at step <b>62</b> where the rendering commands from the gaming device <b>12</b> are input into the rendering module <b>42</b>. This step assumes that initially the necessary processing has been performed on the data transmitted over the Internet in order to make it suitable for processing by the rendering module <b>42</b>. Such processing may include decoding the rendering commands in the event they have been encoded prior to transmission.</p>
+      <p id="p-00062-en" num="0062">At step <b>64</b>, the image based on the rendering commands is rendered. The rendered output can be in any suitable format, the MPEG-4 format being one example. Step <b>66</b> is an optional step that describes the scenario where the gaming device <b>12</b> also sends the identifier of one or more spectators to which the game action stream is to be delivered. As indicated previously, the identifier can be the IP address of the terminal of the spectator. At step <b>68</b>, the image data stream is sent to the spectators. The transmission would typically involve placing the individual video frames in suitable packets prior to transmission.</p>
+      <p id="p-00063-en" num="0063">
+        <figref>FIG. 8</figref> illustrates a graphical user interface that can be used by the local player at the gaming device <b>12</b> to select one or more spectators that are to receive the game action stream. This graphical user interface is generated and controlled by the game software <b>32</b> or the operating system running the console <b>12</b> and includes a control mechanism that presents the game player with a series of options among which the game player can select one or more spectators for receiving the game action stream. In a specific example of implementation, the game software <b>32</b> generates on the local display <b>14</b> the graphical user interface that includes a list <b>70</b> of spectators for selection by the local player. The list of spectators can be a static list in the sense that it would be pre-loaded by the player in the gaming device <b>12</b>. This static list would include a series of entries where each entry is associated to an individual spectator. The spectators could be friends, relatives or acquaintances of the game player that may be interested to receive the game action feed when the player is playing the game. Each entry in the list includes a name for the respective spectator, which can be the real name of the person or pseudonym and also includes the identifier, such as the IP address of the terminal that is associated with the spectator.</p>
+      <p id="p-00064-en" num="0064">Alternatively, other types of identifiers can be considered that can eventually be resolved into an IP address. For example, an email address can be specified.</p>
+      <p id="p-00065-en" num="0065">Another possibility is to create a dynamic list that does not require the local player to manually input all the list entries. Such a dynamic list requires some sort of communication mechanism between the gaming console <b>12</b> and the spectator's terminal <b>20</b>. For example, the gaming device <b>12</b> can send a request to a spectator terminal <b>20</b> to accept an invitation for a game action stream and if the spectator accepts the invitation, a response is sent to a gaming device <b>12</b> that is used to create an entry in the list that contains all the relevant information necessary to properly identify the spectator. The communication between the gaming device <b>12</b> and the spectator terminal <b>20</b> can be made by using email, text messaging etc.</p>
+      <p id="p-00066-en" num="0066">To perform the spectator selection, the local player uses a pointing device <b>72</b> to designate one or more spectators in the list. The output of the selection is sent to the game software <b>32</b> and the associated spectator identifiers are sent to the remote rendering server <b>18</b>, as previously described.</p>
+      <p id="p-00067-en" num="0067">
+        <figref>FIG. 9</figref> is a flowchart of the process for selecting one or more spectators that are to receive the video game action stream. At step <b>74</b>, the selection of the spectator is received which is performed as described previously by using the graphical user interface. At step <b>76</b>, the identifiers of the spectators so selected are sent to the remote rendering server <b>18</b>.</p>
+      <p id="p-00068-en" num="0068">In a possible variant, the remote rendering controller <b>36</b> is responsible for generating the GUI for performing the spectator selection. The remote rendering controller “injects” in the flow of data directed to the local rendering module <b>34</b> the data necessary to generate the GUI on the display <b>14</b>. Player interactions with the GUI on the display <b>14</b>, such as selections of the spectators etc., are intercepted and directed to the remote rendering controller <b>36</b> for processing. In this fashion, neither the game software <b>32</b> nor the operating system of the gaming device <b>12</b> are involved with the spectator designation or selection process. The advantage of this form of implementation is that the game software <b>32</b> and the operating system of the gaming device <b>12</b> do not require modification to implement the spectator selection functionality. The remote rendering controller <b>36</b>, which can be an add-on software module, performs all the necessary functions to provide access to spectators to the game action. Thus, a gaming device that originally has not been designed to provide spectator access to the gaming action can be upgraded with this feature by installing the software module implementing the remote rendering controller <b>36</b>.</p>
+      <p id="p-00069-en" num="0069">The description of the invention above was done in the context of a multi-player gaming device. Note that the invention applies equally well to a single player gaming device in which the game software is executed and generates rendering commands that are directed to the local rendering module in order to generate an image data stream for the game player to see. The single player gaming device would also include a remote rendering controller, identical to the remote rendering controller <b>36</b> which intercepts the rendering commands and transmits them to the remote rendering server <b>18</b>. The only distinction with the multi-player gaming device is that no game metrics need to be output since the game logic is constrained to the local gaming device.</p>
+      <p id="p-00070-en" num="0070">Also note that the remote rendering server <b>18</b> can work equally well with rendering instructions generated from a multi-player gaming device than rendering instructions generated from a single player gaming device.</p>
+      <p id="p-00071-en" num="0071">Persons skilled in the art should appreciate that the above-discussed embodiments are to be considered illustrative and not restrictive. Also it should be appreciated that additional elements that may be needed for operation of certain embodiments of the present invention have not been described or illustrated as they are assumed to be within the purview of the person of ordinary skill in the art. Moreover, certain embodiments of the present invention may be free of, may lack and/or may function without any element that is not specifically disclosed herein.</p>
+      <p id="p-00072-en" num="0072">Those skilled in the art will also appreciate that additional adaptations and modifications of the described embodiments can be made. The scope of the invention, therefore, is not to be limited by the above description of specific embodiments but rather is defined by the claims attached hereto.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A gaming device for playing a video game, the gaming device comprising:
+<claim-text>(a) game software to output first rendering commands representing a virtual world of the video game;</claim-text><claim-text>(b) a local rendering module for processing the rendering commands to generate an image data stream of the virtual world;</claim-text><claim-text>(c) a remote rendering controller for generating second rendering commands for processing by a remote rendering module to generate a rendered graphics output depicting the virtual world;</claim-text><claim-text>(d) an output for:
+<claim-text>(i) releasing the image data stream;</claim-text><claim-text>(ii) transmitting the second rendering commands to a data communication network for transmission to the remote rendering module.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. A gaming device as defined in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the remote rendering controller derives the second rendering commands from the first rendering commands.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. A gaming device as defined in <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the first rendering commands includes rendering instructions, the local rendering module processing geometry data according to the rendering instructions to generate the image data stream.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. A gaming device as defined in <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the geometry data include vertex data.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. A gaming device as defined in <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the second rendering commands includes rendering instructions, the remote rendering module processing geometry data according to the rendering instructions to generate the rendered graphics output.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. A gaming device as defined in <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the remote rendering controller encodes the second rendering commands for transmission to the remote rendering module.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. A gaming device as defined in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the game software is a locally executed game software, the output transmits game metrics derived from the locally executed game software to the data communication network for transmission to a remote game hosting server aggregating game metrics from multiple remote gaming devices.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. A gaming device as defined in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the second rendering commands include data packetized for transmission to the remote rendering module.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. A gaming device as defined in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the remote rendering controller generates identification information to identify one or more spectators to which an output of the remote rendered module depicting the virtual world is to be sent via the data network.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. A gaming device as defined in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, configured to generate a Graphical User Interface (GUI) on a display displaying the image data stream, the GUI providing a player playing the video game at the gaming device with a plurality of spectator selection options.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. A gaming device as defined in <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the gaming device is responsive to selection of an option by the player via the GUI to transmit to the remote rendering module identification information associated with the option selected by the player.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en" independent="true">
+      <claim-text>
+        <b>12</b>. A server arrangement for performing remote rendering of video game graphics, the server arrangement including:
+<claim-text>(a) an input for receiving:
+<claim-text>(i) rendering commands transmitted to the input over a data network from a remote location, the rendering commands representing a virtual world of a video game, the video game being played by at least one player controlling a virtual character in the virtual world;</claim-text><claim-text>(ii) identification information to identify one or more spectators;</claim-text><claim-text>(iii) a rendering module for processing the rendering commands to generate an image data stream depicting the virtual world;</claim-text></claim-text><claim-text>(b) an output for transmitting the image data stream to the one or more spectators over the data network.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. A server arrangement as defined in <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the rendering commands include rendering instructions, the rendering module processing geometry data according to the rendering instructions to generate the image data stream.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. A server arrangement as defined in <claim-ref idref="clm-00013-en">claim 13</claim-ref>, including a machine-readable storage for holding a list of identifiers of spectators that are to receive the Image data stream.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. A server arrangement as defined in <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein in response to reception of the identification information at the input, the server arrangement loading the Identification information in the list.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en" independent="true">
+      <claim-text>
+        <b>16</b>. A method for allowing a spectator to spectate a video game, the method including:
+<claim-text>(a) executing by a CPU game software to generate rendering commands depicting a virtual world of a video game;</claim-text><claim-text>(b) processing with a rendering module the rendering commands to generate an image data stream;</claim-text><claim-text>(c) outputting the image data stream to a display device;</claim-text><claim-text>(d) wherein the rendering commands are first rendering commands, including deriving second rendering commands from the first rendering commands;</claim-text><claim-text>(e) transmitting the second rendering commands via a data network to a remote server for rendering and delivery of a rendered output to at least one spectator.</claim-text></claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en" independent="true">
+      <claim-text>
+        <b>17</b>. A method for performing distributed rendering of a video game, the method including:
+<claim-text>(a) processing at a first network node in a data network rendering commands depicting a virtual world of a video game with a first rendering module to generate an image data stream for display to a player that controls a virtual character in the video game;</claim-text><claim-text>(b) processing at a second node in the data network that is remote from the first node second rendering commands derived from the first rendering commands with a second rendering module to produce a rendered output depicting the virtual world and the virtual character of the player;</claim-text><claim-text>(c) transmitting the rendered output to at least one spectator for viewing.</claim-text></claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en" independent="true">
+      <claim-text>
+        <b>18</b>. A machine readable storage medium encoded with non transitory program code for execution by a CPU for generating rendering commands to perform remote rendering of video game scenes of a video game, the program code including:
+<claim-text>(a) remote rendering program instructions for processing first rendering commands output by game software for driving a local rendering module, to derive second rendering commands for processing by a remote rendering module to generate an image data stream of the video game scenes;</claim-text><claim-text>(b) program instructions for transmitting the second rendering commands to a remote rendering module over a data network.</claim-text></claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. A machine readable storage medium as defined in <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein the program code includes program instructions to generate a Graphical User Interface (GUI) on a display displaying an image data stream produced by the local rendering module on the basis of the first rendering commands, the GUI providing a player playing the video game with a plurality of spectator selection options.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. A machine readable storage medium as defined in <claim-ref idref="clm-00019-en">claim 19</claim-ref>, wherein the program code includes program instructions responsive to selection of an option by the player via the GUI to transmit to the remote rendering module identification information associated with the option selected by the player.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. A machine readable storage medium as defined in <claim-ref idref="clm-00020-en">claim 20</claim-ref>, wherein the identification information identifies at least one spectator to which the image data stream produced by the remote rendering module is to be transmitted. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150251095A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150251095A1-20150910-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150251095A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251095A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150251095A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251095A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150251095A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251095A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150251095A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251095A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150251095A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251095A1-20150910-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150251095A1_00007.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150251095A1-20150910-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150251095A1.PDF" type="pdf" size="519930" pages="12" />
+</lexisnexis-patent-document>

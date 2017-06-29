@@ -13,12 +13,18 @@ import java.io.InputStream;
 
 import java.io.PrintWriter;
 import java.net.URI;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.json.JsonObject;
 
 import org.apache.log4j.Logger;
 import org.ei.dataloading.upt.loadtime.vtw.ArchiveVTWPatentRefeed;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.AmazonWebServiceResponse;
@@ -59,6 +65,7 @@ public class AusAffESIndex {
 
 	
 	private int recsPerbulk = 10;
+	private String action;
 	private int curRecNum = 1;
 
 	private int status = 0;
@@ -68,6 +75,9 @@ public class AusAffESIndex {
 	private final static Logger logger = Logger.getLogger(AusAffESIndex.class);
 
 	 AmazonHttpClient client = null;
+	 ExecutionContext context;
+	 MyHttpResponseHandler<Void> responseHandler;
+	 MyErrorHandler errorHandler;
 	 
 	 
 	 
@@ -75,16 +85,17 @@ public class AusAffESIndex {
 	private static long endTime = System.currentTimeMillis();
 	private static long midTime = System.currentTimeMillis();
 		
-		
+	private List<String> esIndexed_docs_list = new ArrayList<String>();	
 	 
 	public AusAffESIndex()
 	{
 		
 	}
 	
-	public AusAffESIndex(int bulkSize, String esDomain)
+	public AusAffESIndex(int bulkSize, String esDomain, String esAction)
 	{
 		recsPerbulk = bulkSize;
+		action = esAction;
 		
 		HOST = esDomain;
 		ENDPOINT_ROOT = "http://" + HOST;
@@ -96,23 +107,26 @@ public class AusAffESIndex {
 		System.out.println("Time after initializing AusAffIndex class "+(endTime-startTime)/1000.0+" seconds");
 		System.out.println("total Time used "+(endTime-startTime)/1000.0+" seconds");
 
-		
+		init();
 	}
 	
 	// initialize the Client 
 	private void init()
 	{
-		/*context = new ExecutionContext(true);
+		try {
+			context = new ExecutionContext(true);
+			client = AmazonHttpClientService.getInstance().getAmazonHttpClient();
 
-		ClientConfiguration clientConfiguration = new ClientConfiguration();
-		clientConfiguration.setConnectionTimeout(ClientConfiguration.DEFAULT_CONNECTION_TIMEOUT);
-		clientConfiguration.setConnectionMaxIdleMillis(ClientConfiguration.DEFAULT_CONNECTION_MAX_IDLE_MILLIS);
-		client = new AmazonHttpClient(clientConfiguration);
 
-		responseHandler = new MyHttpResponseHandler<Void>();
-		errorHandler = new MyErrorHandler();*/
-		
-		//System.out.println("do nothing");
+			responseHandler = new MyHttpResponseHandler<Void>();
+			errorHandler = new MyErrorHandler();
+		} 
+		catch (IOException e) 
+		{
+			System.out.println("Failed to create AmazonHttpClient!!!!!");
+			System.out.println("Reason: " + e.getMessage());
+			e.printStackTrace();
+		}
 	}
 
 	// shutdown the Client 
@@ -120,11 +134,14 @@ public class AusAffESIndex {
 	{
 		try
 		{
-			if(client !=null)
+			AmazonHttpClientService.getInstance().end();
+			
+			// uncomment when initialize and create HTTP client in this class instead of AmazonHttpClientService
+			/*if(client !=null)
 			{
 				client.shutdown();
 				System.out.println("AmazonHttpClient Client was shutdown successfully");
-			}
+			}*/
 		}
 		
 		catch(Exception e)
@@ -166,7 +183,9 @@ public class AusAffESIndex {
 	/// Send the request to the ES server
 	private void sendRequest(Request<?> request) 
 	{
-		 ExecutionContext context = new ExecutionContext(true);
+		// moved to init
+		
+		 /*ExecutionContext context = new ExecutionContext(true);
 
 	       ClientConfiguration clientConfiguration = new ClientConfiguration();
 	       clientConfiguration.setConnectionTimeout(ClientConfiguration.DEFAULT_CONNECTION_TIMEOUT);
@@ -176,12 +195,13 @@ public class AusAffESIndex {
 	       client = new AmazonHttpClient(clientConfiguration);
 
 	       MyHttpResponseHandler<Void> responseHandler = new MyHttpResponseHandler<Void>();
-	       MyErrorHandler errorHandler = new MyErrorHandler();
+	       MyErrorHandler errorHandler = new MyErrorHandler();*/
 
 	       try
 	       {
 	    	   Response<Void> response = client.execute(request, responseHandler, errorHandler, context);
-		       System.out.println(response.getAwsResponse());
+		       //System.out.println(response.getAwsResponse());  // only for debugging
+	    	   
 	       }
 	       catch(Exception e)
 	       {
@@ -223,8 +243,8 @@ public class AusAffESIndex {
 
 		
 		
-		// Shutdown client
-		end();
+		// Shutdown client, Uncomment when initialize and create HTTP client in this class instead of AmazonHttpClientService
+		//end();
 
 	}
 	public static void main(String[] args) {
@@ -263,12 +283,15 @@ public class AusAffESIndex {
 
 			String responseString = IOUtils.toString(responseStream);
 
-			logger.info(responseString);
+			//logger.info(responseString); // only for debugging
 			//System.out.println(responseString);
 			// set status for DB deletion
 			setStatusCode(Integer.toString(response.getStatusCode()));
 			
-
+			// save list of successfully indexed profiles for lated DB update status="indexed" so do not re-index unless there is later update
+			parseESIndexJSONResponse(responseString);
+			
+			
 			AmazonWebServiceResponse<T> awsResponse = new AmazonWebServiceResponse<T>();
 			return awsResponse;
 		}
@@ -401,4 +424,62 @@ public int getStatusCode()
 {
 	return status;
 }
+
+
+public void parseESIndexJSONResponse(String esResponseString)
+{
+	int count = 0;
+	JSONObject index;
+	
+	JSONParser parser = new JSONParser();
+	try
+	{
+		Object obj = parser.parse(esResponseString);
+
+		JSONObject jsonObject = (JSONObject) obj;
+
+		//Items
+		JSONArray items = (JSONArray) jsonObject.get("items");
+
+
+		@SuppressWarnings("unchecked")
+		Iterator<JSONObject> indexesIterator = (Iterator<JSONObject>)items.iterator();
+
+		while(indexesIterator.hasNext())
+		{
+			//indexes list
+			 JSONObject indexes = indexesIterator.next();
+			
+			 if(action !=null && !(action.equalsIgnoreCase("delete")))
+				 index = (JSONObject)indexes.get("index");
+			 else
+				 index = (JSONObject)indexes.get("delete");
+			String _id = (String)index.get("_id");
+			String result = (String)index.get("result");
+			Long status = (Long)index.get("status");
+			if(status != null && (status == 200 || status == 201))
+				esIndexed_docs_list.add(_id);
+			else
+				System.out.print("doc: " + _id + " with status: " + status + " and result: " + result + " failed to index to ES!!!!");
+			
+			count ++;
+		}
+		
+		System.out.println("Total indexed count: " + count);
+		
+	}
+	catch (org.json.simple.parser.ParseException e) 
+	{
+		logger.info("Failed to parse AWS ES JSON Response String!!!!");
+		logger.error(e.getMessage());
+		e.printStackTrace();
+	}
+
+}
+
+public List<String> getESIndexedDocsList()
+{
+	return esIndexed_docs_list;
+}
+
 }

@@ -1,0 +1,1125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247202A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021514" date-changed="20151102" time-changed="070822">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140313">
+        <country>US</country>
+        <doc-number>20150247202</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14430398</doc-number>
+        <date>20130920</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="regional">
+        <country>EP</country>
+        <doc-number>12185629</doc-number>
+        <date>20120924</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C12Q   1/68        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>68</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>G06F  19/00        20110101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20110101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>G</section>
+        <class>06</class>
+        <subclass>F</subclass>
+        <main-group>19</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C12Q   1/6886      20130101 FI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>1</main-group>
+        <subgroup>6886</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C12Q2600/158       20130101 LA20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>2600</main-group>
+        <subgroup>158</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C12Q2600/16        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>2600</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C12Q2600/178       20130101 LA20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>2600</main-group>
+        <subgroup>178</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>G06F  19/345       20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>06</class>
+        <subclass>F</subclass>
+        <main-group>19</main-group>
+        <subgroup>345</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">19</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">MICRORNA BASED METHOD FOR DIAGNOSIS OF COLORECTAL TUMORS AND OF METASTASIS</invention-title>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>MAX-PLANCK-GESELLSCHAFT ZUR FÖRDERUNG DER WISSENSCHAFTEN E.V.</orgname>
+            <address>
+              <city>München</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>DE</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Schweiger</last-name>
+            <first-name>Michal-Ruth</first-name>
+            <address>
+              <city>Berlin</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Lehrach</last-name>
+            <first-name>Hans</first-name>
+            <address>
+              <city>Berlin</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>EP13069633</doc-number>
+        <date>20130920</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014044827</doc-number>
+        <date>20140327</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="164879556">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247202</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130920</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014044827</doc-number>
+            <kind>A1</kind>
+            <date>20140327</date>
+          </document-id>
+          <application-date>
+            <date>20130920</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2711430</doc-number>
+            <kind>A1</kind>
+            <date>20140326</date>
+          </document-id>
+          <application-date>
+            <date>20120924</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2898097</doc-number>
+            <kind>A1</kind>
+            <date>20150729</date>
+          </document-id>
+          <application-date>
+            <date>20130920</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="164879555">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247202</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130920</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014044827</doc-number>
+            <kind>A1</kind>
+            <date>20140327</date>
+          </document-id>
+          <application-date>
+            <date>20130920</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2711430</doc-number>
+            <kind>A1</kind>
+            <date>20140326</date>
+          </document-id>
+          <application-date>
+            <date>20120924</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2898097</doc-number>
+            <kind>A1</kind>
+            <date>20150729</date>
+          </document-id>
+          <application-date>
+            <date>20130920</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The invention encompasses the identification and selection of novel miRNAs as biomarkers so as to provide a method for the diagnosis of colorectal cancer. The miRNAs identified are differentially expressed in subjects with colorectal cancer compared to subjects without colorectal cancer. Further, some of the identified miRNAs were found to play a critical role for the progression of colorectal cancer into metastasis and, thus, facilitate a differential diagnosis between tumor and metastasis. Nucleic acids which are capable of specifically detecting the miRNAs identified are also encompassed within the scope of the invention as are sets of said nucleic acids, which arc particularly suited for being used in multiplex RT-PCR or in array techniques. Further encompassed are compositions and kits containing said nucleic acids and nucleic acids for use in diagnosing colorectal cancer.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">The present invention is in the field of medicine, more in particular in the field of molecular medicine and diagnostics. The invention relates in particular to the diagnosis of colorectal tumors and metastasis.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">MicroRNAs are evolutionarily conserved, small (20-25 nucleotides) non-protein-coding molecules that regulate gene expression at the post-transcriptional level. These single stranded RNAs participate in the regulation of various cellular processes, such as cell differentiation, cell cycle progression, metabolism and apoptosis. Here they influence, among other biological systems, immunity and cancer.</p>
+      <p id="p-00003-en" num="0003">The regulatory potential of microRNAs is due to the fact that each microRNA targets multiple mRNAs and one mRNA can be regulated by different microRNAs. Through base pairing with the 3′UTR of mRNA targets they negatively regulate gene expression at the level of translation. The transcription of the primary microRNA, which contains a local fold back structure, is mediated predominantly by RNA Polymerase II in the nucleus and is processed by the Drosha/Pasha nuclease complex. The resulting hairpin structure, called pre-miRNA, is transported to the cytoplasm, where it undergoes further processing by Dicer, liberating a ˜22 bp double stranded microRNA duplex structure that consists of the mature and the complementary mature star sequence. The mature microRNA is incorporated into the miRISC complex (miRNA-containing RNA-induced silencing complex) and binds preferentially to the 3′UTR of mRNA target molecules.</p>
+      <p id="p-00004-en" num="0004">With the initial discovery of microRNAs in 1993, a new class of gene regulation was Found. Ambros, Lee and colleagues revealed that the gene lin-4 is transcribed into a 22 nucleotide RNA molecule, which inhibits the protein synthesis of Lin-14 by nearly perfect complementary binding to its 3′ untranslated region (3′UTR). This process affects temporal progression of cell differentiation in the nematode <i>Caenorliabditis elegans</i>. At the moment, more than 1000 (1049) microRNA sequences have been identified in the human genome (miRBase v16, 2010). It is predicted that approximately 3% of the human genome encodes for microRNAs and ˜30% of the protein-encoding genes are regulated by miRNAs. In 2002 Calin et al. were the first who described the association between microRNAs and cancer. They demonstrated that in over 65% of B cell chronic lymphocytic leukemia (B-CLL) patients, the miRNA genes miR-15 and miR-16 are located within a deletion on chromosome 13, which is the most frequent abnormality in B-CLL. In these cases both miRNAs are not expressed and lead to B-CLL.</p>
+      <p id="p-00005-en" num="0005">According to the World Health Organization (WHO) colorectal cancer is the third most common cancer worldwide and a major cause of cancer mortality with an incidence of approximately 1 million cases). At early stages of CRC a curative treatment is achieved by surgical resection or by chemotherapy which is often applied in an adjuvant or neo adjuvant manner.</p>
+      <p id="p-00006-en" num="0006">Once the tumor metastasizes it is incurable. It is therefore important to detect CRC as early as possible and biomarkers for screening purposes would be highly desirable.</p>
+      <heading id="h-00003-en" level="1">DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00007-en" num="0007">The invention encompasses the identification and selection of novel miRNAs as biomarkers so as to provide a method for the diagnosis of colorectal cancer. The miRNAs identified are differentially expressed in subjects with colorectal cancer compared to subjects without colorectal cancer. Further, some of the identified miRNAs were found to play a critical role for the progression of colorectal cancer into metastasis and, thus, facilitate a differential diagnosis between tumor and metastasis.</p>
+      <p id="p-00008-en" num="0008">Nucleic acids which are capable of specifically detecting the miRNAs identified are also encompassed within the scope of the invention as are sets of said nucleic acids, which are particularly suited for being used in multiplex RT-PCR or in array techniques. Further encompassed are compositions and kits containing said nucleic acids and nucleic acids for use in diagnosing colorectal cancer.</p>
+      <p id="p-00009-en" num="0009">The following detailed description of the invention refers, in part, to the accompanying drawings and does not limit the invention.</p>
+      <heading id="h-00004-en" level="1">DEFINITIONS</heading>
+      <p id="p-00010-en" num="0010">The following definitions are provided for specific terms which are used in the following.</p>
+      <p id="p-00011-en" num="0011">As used herein, the term “biomarker” refers to a miRNA that is differentially expressed, i.e. upregulated or downregulated, wherein the status (up-/downregulation) of said biomarker can be used for diagnosing colorectal cancer or a stage of colorectal cancer as compared with those not having colorectal cancer or can be used for differentially diagnosing colorectal cancer.</p>
+      <p id="p-00012-en" num="0012">As used herein, the term “composition” refers to any mixture. It can be a solution, a suspension, liquid, powder, a paste, aqueous, non-aqueous or any combination thereof.</p>
+      <p id="p-00013-en" num="0013">As used herein, the term, “diagnosis” refers to the identification of the disease (colorectal cancer) at any stage of its development, and also includes the determination of predisposition of a subject to develop the disease. In a preferred embodiment of the invention, diagnosis of colorectal cancer occurs prior to the manifestation of symptoms. Subjects with a higher risk of developing the disease are of particular concern. The diagnostic method of the invention also allows confirmation of colorectal cancer in a subject suspected of having colorectal cancer. “Differential diagnosis” refers to differentiating between tumour and metastasis, thereby facilitating the differentiation between an individual having metastasis-free colorectal cancer and an individual having metastatic colorectal cancer.</p>
+      <p id="p-00014-en" num="0014">As used herein, the term “differential expression” refers to a difference in the level of expression of the miRNA of one or more biomarkers, as measured by the amount of miRNA, in one sample as compared with the level of expression of the same one or more biomarkers of the invention in a second sample or with regard to a predetermined reference value. Differential expression can be determined, e.g. by array hybridization, next generation sequencing, RT-PCR and as would be understood by a person skilled in the art.</p>
+      <p id="p-00015-en" num="0015">As used herein, the terms “hybridizing to” and “hybridization” are interchangeable used with the terms “specific for” and “specifically binding” and refer to the sequence specific non-covalent binding interactions with a complementary nucleic acid, for example, interactions between a target nucleic acid sequence and a target specific nucleic acid primer or probe. In a preferred embodiment a nucleic acid, which hybridizes is one which hybridizes with a selectivity of greater than 70%, greater than 80%, greater than 90% and most preferably of 100% (i.e. cross hybridization with other DNA species preferably occurs at less than 30%, less than 20%, less than 10%). As would be understood to a person skilled in the art, a nucleic acid, which “hybridizes” to the DNA product of a genomic region of the invention can be determined taking into account the length and composition.</p>
+      <p id="p-00016-en" num="0016">As used herein, a “kit” is a packaged combination optionally including instructions for use of the combination and/or other reactions and components for such use.</p>
+      <p id="p-00017-en" num="0017">The term nucleic acid is here used in its broadest sense and comprises ribonucleic acids (RNA) and deoxyribonucleic acids (DNA) from all possible sources, in all lengths and configurations, such as double-stranded, single-stranded, circular, linear or branched. All sub-units and sub-types are also comprised, such as monomeric nucleotides, oligomers, plasmids, viral and bacterial nucleic acids, as well as genomic and non-genomic DNA and RNA from animal and plant cells or other eukaryotes or prokaryotes, mRNA (messenger RNA) in processed and unprocessed form, tRNA (transfer RNA), hn-RNA (heterogeneous nuclear RNA), rRNA (ribosomal RNA), LNA (locked nucleic acid), mtRNA (mitochondrial), nRNA (nuclear RNA), siRNA (short interfering RNA), snRNA (small nuclear RNA), snoRNA (small nucleolar RNA), scaRNA (Small Cajal Body specific RNA), microRNA, dsRNA (doubled-stranded RNA), ribozyme, riboswitch, viral RNA, dsDNA (double-stranded DNA), ssDNA (single-stranded DNA), plasmid DNA, cosmid DNA, chromosomal DNA, viral DNA, mtDNA (mitochondrial DNA), nDNA (nuclear DNA), snDNA (small nuclear DNA) or the like or as well as all other conceivable nucleic acids.</p>
+      <p id="p-00018-en" num="0018">The term “primer”, as used herein, refers to an nucleic acid, whether occurring naturally as in a purified restriction digest or produced synthetically, which is capable of acting as a point of initiation of synthesis when placed under conditions in which synthesis of a primer extension product, which is complementary to a nucleic acid strand, is induced, i.e., in the presence of nucleotides and an inducing agent such as a DNA polymerase and at a suitable temperature and pH. The primer may be either single-stranded or double-stranded and must be sufficiently long to prime the synthesis of the desired extension product in the presence of the inducing agent. The exact length of the primer will depend upon many factors, including temperature, source of primer and the method used. For example, for diagnostic applications, depending on the complexity of the target sequence, the nucleic acid primer typically contains 15-25 or more nucleotides. Oligonucleotide primers may be prepared using any suitable method, such as, for example, the phosphotriester and phosphodiester methods or automated embodiments thereof. In one such automated embodiment diethylophosphoramidites are used as starting materials and may be synthesized as described by Beaucage et al., Tetrahedron Letters, 22:1859-1862 (1981). One method for synthesizing oligonucleotides on a modified solid support is described in U.S. Pat. No. 4,458,006, which is hereby incorporated by reference.</p>
+      <p id="p-00019-en" num="0019">As used herein, the term “probe” means nucleic acid and analogs thereof and refers to a range of chemical species that is substantially complementary to a specific nucleic acid sequence. The probe or the target sequences may be single- or double-stranded DNA. A probe is at least 8 nucleotides in length and less than the length of a complete polynucleotide target sequence. A probe may be 8 nt to 100 nt, preferably 10 nt to 50 nt, more preferably 12 nt to 40 nt, even more preferably 14 nt to 30, most preferably 15 nt to 25 nt in length. Probes can include nucleic acids modified so as to have a tag which is detectable by fluorescence, chemiluminescesice and the like (“labelled probe”). The labelled probe can also be modified so as to have both a detectable tag and a quencher molecule, for example Taqman® and Molecular Beacon® probes. Suitable probes include the LightCycler probe (Roche), the TaqMan probe (Life Technologies), a molecular beacon probe, a Scorpion primer, a Sunrise primer, a LUX primer and an Amplifluor primer. Probes may be situated between the primer pairs.</p>
+      <p id="p-00020-en" num="0020">The term “sample” is used herein to refer to colorectal tissue, blood, urine, semen, colorectal secretions or isolated colorectal cells originating from a subject, preferably from colorectal tissue, colorectal secretions or isolated colorectal cells, most preferably to colorectal tissue.</p>
+      <p id="p-00021-en" num="0021">As used herein, the terms “subject” and “patient” are used interchangeably to refer to an animal (e.g., a mammal, a fish, an amphibian, a reptile, a bird and an insect). In a specific embodiment, a subject is a mammal (e.g., a non-human mammal and a human). In another embodiment, a subject is a primate (e.g., a chimpanzee and a human). In another embodiment, a subject is a human. In another embodiment, the subject is a male human with or without colorectal cancer.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00022-en" num="0022">To address the need in the art for an enhanced diagnosis of colorectal cancer, the peculiarities of the miRNA expression profile across the whole genome of colorectal cancer positive samples were examined in comparison to colorectal cancer negative samples. The inventors found miRNAs, that are subject to a differential expression level. Therefore, the invention teaches the analysis of those miRNAs that are differentially expressed in samples from patients having colorectal cancer. Most astonishingly, the inventors found miRNAs, which facilitate a differential diagnosis between tumour and metastatic samples.</p>
+      <p id="p-00023-en" num="0023">The herein disclosed methods are also particularly useful for early diagnosis of colorectal cancer. The method is useful for further diagnosing patients having symptoms associated with colorectal cancer. The method of the present invention can further be of particular use with patients having an enhanced risk of developing colorectal cancer (e.g., patients having a familial history of colorectal cancer and patients identified as having a mutant oncogene). The method of the present invention may further be of particular use in monitoring the efficacy of treatment of a colorectal cancer patient (e.g. the efficacy of chemotherapy).</p>
+      <p id="p-00024-en" num="0024">While the herein disclosed biomarkers are particularly useful in diagnosing colorectal cancer, the inventors surprisingly found that said biomarkers are equally useful in diagnosing cancer in general. Such cancers include cancers of for example, adipose tissue, brain, breast, colon, endometrium, kidney, liver, lung, lymph node, muscle, ovary, pancreas, prostate, stomach, testis and thyroid gland. Accordingly, the means and methods of the herein disclosed invention are not limited to the diagnosis of colorectal cancer, but can be also applied to any cancer, preferably selected from the list of adipose tissue, brain, breast, colon, endometrium, kidney, liver, lung, lymph node, muscle, ovary, pancreas, prostate, stomach, testis and thyroid gland.</p>
+      <p id="p-00025-en" num="0025">The present invention contemplates a method for differential diagnosis of colon cancer in a patient, comprising the steps of, determining in a sample of a subject the amount of one or more of the micro RNAs (miRNA) selected from the list of Table 1, comparing the amount of miRNA determined to a predetermined reference value, wherein if the miRNA is, in comparison to said reference value, either down-regulated or up-regulated as designated in Table 1, the sample is designated as metastatic.</p>
+      <p id="p-00026-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="35pt" align="left" />
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="147pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>microRNA</entry>
+                  <entry>regulation in metastatic sample</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>name</entry>
+                  <entry>as compared to reference value</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>miR-194-1</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-202</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-551b</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-129-2</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-658</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-497</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-3152</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-378c</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-605</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-559</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-184</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-1248</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-450b</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-1975</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-3122</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-542</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-4286</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-503</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-877</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-1292</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00027-en" num="0026">The herein disclosed methods make use of determining the expression level of miRNAs. The most widely used miRNA detection method is Northern blotting, which is considered as the standard of miRNA detection methods. This method, however, is time-consuming and has low sensitivity. RT-PCR is the most sensitive method thus far. The state-of-the-art microarrays are unrivalled in terms of parallelism and throughput. Preferred in the context of the present invention are miRNA array techniques and RT-PCR, mostly preferred RT-PCR.</p>
+      <p id="p-00028-en" num="0027">The amount of the same miRNA present in a benign sample may serve as a predetermined reference in the case of a differential diagnosis. The reference value may be deduced from literature. The reference value may have alternatively been determined in a separate experiment, preferably by using the same experimental setting as used in the inventive method.</p>
+      <p id="p-00029-en" num="0028">Preferably the analyzed miRNAs are selected from the group comprising mir-202, mir-497, mir-3152, mir-450b, mir-194-1, mir-3122, mir-551b, mir-559, mir-658 and mir-129-2. More preferably the analyzed miRNAs are selected from the group comprising mir-202, mir-497, mir-3152, mir-450b and mix-194-1. Most preferably the analyzed miRNAs are mir-202 and/or mir-497.</p>
+      <p id="p-00030-en" num="0029">As will be understood by the person skilled in the art, comparing the amount of miRNA in a sample to a reference value relates to a correlation that serves as a basis for diagnosis. For example, it preferably relates to the ratio of the amount of miRNA in a sample to a predetermined reference value which corresponds to the amount of miRNA of a reference sample.</p>
+      <p id="p-00031-en" num="0030">The present invention further contemplates a method for diagnosis of colon cancer in a patient, comprising the following steps of, determining in a sample of a subject the amount of one or more of the micro RNAs (miRNA) selected from the list of Table 2, comparing the amount of miRNA determined to a predetermined reference value, wherein if the miRNA is, in comparison to said reference value, either down-regulated or up-regulated as designated in Table 2, the sample is designated as cancerous.</p>
+      <p id="p-00032-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="147pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>microRNA </entry>
+                  <entry>regulation in cancerous sample </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>name</entry>
+                  <entry>as compared ro reference value</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-1224</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-202</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-147b</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-3154</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-3065</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-3150</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-3152</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-497</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-585</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-378b</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-3175</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-450a2</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-449b</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-1286</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-3117</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-1323</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-450a-1</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-323b</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-450b</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-452</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00033-en" num="0031">Preferably the analyzed miRNAs are selected from the group comprising mir-202, mir-497, mir-3065, mir-450-2, mir-3154, mir-585, mir-3175, mir-1224, mir-3117 and mir-1286.</p>
+      <p id="p-00034-en" num="0032">More preferably the analyzed miRNAs are selected from the group comprising mir-202, mir-497, mir-3065, mir-450a-2 and mir-3154. Most preferably the analyzed miRNAs are mir-202 and/or mir-497.</p>
+      <p id="p-00035-en" num="0033">In the case of a (non-differential) diagnosis, the reference value represents the amount of the miRNA of the same biomarker present in benign tissue. The reference value may be taken from literature or may have been determined in a separate experiment as outlined above.</p>
+      <p id="p-00036-en" num="0034">In one embodiment of the method, the sample comprises cells obtained from a patient. Any sample which includes cells originating from the colon may be used. The cells may be found in a colorectal tissue sample collected, for example, by a colorectal tissue biopsy or histology section, or the metastasis tissue including among others liver, lung or bone marrow biopsy if metastatic spreading has occurred. In another embodiment, the patient sample is a colorectal-associated body fluid. Such fluids include, for example, lymph, blood, urine, semen, preferably from colorectal secretions, isolated colorectal cells, and most preferably from colorectal tissue. For metastatic cancer the fluids may include ascites or material from a bronchoalveolar lavage. From the samples cellular or cell free miRNA is isolated using standard molecular biological technologies and then forwarded to the analysis method.</p>
+      <p id="p-00037-en" num="0035">To translate the raw data generated by the detection assay (i.e. expression level) into data of predictive value for a clinician, a computer-based analysis program can be used.</p>
+      <p id="p-00038-en" num="0036">The profile data may be prepared in a format suitable for interpretation by a treating clinician. For example, rather than providing raw expression level, the prepared format may represent a diagnosis or risk assessment (e.g. likelihood of cancer being present or the subtype of cancer) for the subject, along with recommendations for particular treatment options.</p>
+      <p id="p-00039-en" num="0037">In one embodiment of the present invention, a computing device comprising a client or server component may be utilized. <figref>FIG. 4</figref> is an exemplary diagram of a client/server component, which may include a bus <b>210</b>, a processor <b>220</b>, a main memory <b>230</b>, a read only memory (ROM) <b>240</b>, a storage device <b>250</b>, an input device <b>260</b>, an output device <b>270</b>, and a communication interface <b>280</b>. Bus <b>210</b> may include a path that permits communication among the elements of the client/server component.</p>
+      <p id="p-00040-en" num="0038">Processor <b>220</b> may include a conventional processor or microprocessor, or another type of processing logic that interprets and executes instructions. Main memory <b>230</b> may include a random access memory (RAM) or another type of dynamic storage device that stores information and instructions for execution by processor <b>220</b>. ROM <b>240</b> may include a conventional ROM device or another type of static storage device that stores static information and instructions for use by processor <b>220</b>. Storage device <b>250</b> may include a magnetic and/or optical recording medium and its corresponding drive.</p>
+      <p id="p-00041-en" num="0039">Input device <b>260</b> may include a conventional mechanism that permits an operator to input information to the client/server component, such as a keyboard, a mouse, a pen, voice recognition and/or biometric mechanisms, etc. Output device <b>270</b> may include a conventional mechanism that outputs information to the operator, including a display, a printer, a speaker, etc. Communication interface <b>280</b> may include any transceiver-like mechanism that enables the client/server component to communicate with other devices and/or systems. For example, communication interface <b>280</b> may include mechanisms for communicating with another device or system via a network.</p>
+      <p id="p-00042-en" num="0040">As will be described in detail below, the client/server component, consistent with the principles of the invention, may perform certain measurement determinations of expression, calculations of expression level, and/or correlation operations relating to the diagnosis of colorectal cancer. It may further optionally output the presentation of status results as a result of the processing operations conducted. The client/server component may perform these operations in response to processor <b>220</b> executing software instructions contained in a computer-readable medium, such as memory <b>230</b>. A computer-readable medium may be defined as a physical or logical memory device and/or carrier wave.</p>
+      <p id="p-00043-en" num="0041">The software instructions may be read into memory <b>230</b> from another computer-readable medium, such as data storage device <b>250</b>, or from another device via communication interface <b>280</b>. The software instructions contained in memory <b>230</b> may cause processor <b>220</b> to perform processes that will be described later. Alternatively, hardwired circuitry may be used in place of or in combination with software instructions to implement processes consistent with the principles of the invention. Thus, implementations consistent with the principles of the invention are not limited to any specific combination of hardware circuitry and software.</p>
+      <p id="p-00044-en" num="0042">
+        <figref>FIG. 5</figref> is a flowchart of exemplary processing of expression level for miRNAs present in biological samples according to an implementation consistent with the principles of the present invention. Processing may begin with determining the amount of miRNA of a sample for a biomarker <b>510</b> as compared to a predetermined reference value <b>520</b>. The processor may then quantify the expression level <b>530</b>, as described above, e.g. as the ratio of the amount of miRNA present in said sample to the predetermined reference value, which corresponds to the amount of miRNA present in a reference sample for the same biomarker(s). The expression level may then be evaluated either via a computing device <b>540</b> or by human analysis to determine if the biomarker(s) meet or exceed a predetermined expression threshold. If the threshold is met or exceeded, the computing device may then, optionally, present a status result indicating a positive diagnosis of colorectal cancer <b>550</b>. Alternatively, if the threshold is not met, then the computing device may, optionally, present a status result indicating that the threshold is not satisfied <b>560</b>.</p>
+      <p id="p-00045-en" num="0043">In the case of a differential diagnosis the computing device may, optionally, present a status result indicating a metastasis <b>550</b> or a tumour <b>560</b>, depending on whether the threshold is met or not.</p>
+      <p id="p-00046-en" num="0044">It is noted that the output displaying results may differ depending on the desired presentation of results. For example, the output may be quantitative in nature, e.g., displaying the measurement values of the biomarker in relation to the predetermined reference value. The output may be qualitative, e.g., the display of a color or notation indicating a positive result for colorectal cancer, or a negative results for colorectal cancer, or where applicable a positive result for tumour or metastasis, as the case may be. Notably, this process may be repeated multiple times using different miRNAs, as set forth in Tables 1 and 2. The computing device may alternatively be programmed to permit the analysis of more than one miRNA at one time.</p>
+      <p id="p-00047-en" num="0045">The invention also relates to a nucleic acid that is able to specifically detect one of the miRNAs disclosed herein. That means that the nucleic acid may hybridize under stringent conditions to a sequence corresponding to the miRNA, or to the reverse complement thereof. The sequence may be DNA or RNA. In a preferred embodiment the miRNA is reverse transcribed into cDNA for which the nucleic acid is specific.</p>
+      <p id="p-00048-en" num="0046">In one embodiment the nucleic acid is 15 to 30 nt in length. In a preferred embodiment said nucleic acid, is 15 to 25 nt in length.</p>
+      <p id="p-00049-en" num="0047">In one embodiment said nucleic acid is a primer. The inventive primers being able to specifically detect one of the inventive miRNAs can be used for the analysis methods of the miRNA expression. Accordingly, they are used for amplification of a sequence comprising the miRNA or parts thereof in the inventive method for the diagnosis of colorectal cancer. Within the context of the invention, the primers selectively hybridize under stringent conditions to a RNA or DNA sequence corresponding to the miRNA, or to the reverse complement thereof, as defined above.</p>
+      <p id="p-00050-en" num="0048">The expression level may be determined by a probe. Hence, in another embodiment said nucleic acid is a probe. The inventive probes are able to specifically detect a miRNA. Within the context of the invention, the probes selectively hybridize under stringent conditions to a RNA or DNA sequence corresponding to the miRNA, or to the reverse complement thereof, as defined above.</p>
+      <p id="p-00051-en" num="0049">The present invention further relates to a set of the herein disclosed nucleic acids, each of which is able to specifically detect a (different) miRNA disclosed herein. A set of nucleic acids means at least two nucleic acids, preferably, three, four, five, six, seven, eight, nine or even ten and more nucleic acids. A set of nucleic acids is particularly useful for increasing the confidence of diagnosis. A set of nucleic acids is preferably used in a multiplex fashion, such as multiplex RT-PCR or micro-array techniques.</p>
+      <p id="p-00052-en" num="0050">The nucleic acid for performing the method according to the invention is advantageously formulated in a stable composition. Accordingly, the present invention relates to a composition for the diagnosis of colorectal cancer comprising one of the herein disclosed nucleic acids or a set of nucleic acids as defined above. The composition may include other substances known to the skilled person, such as stabilizers.</p>
+      <p id="p-00053-en" num="0051">Further encompassed by the present invention is a kit for the diagnosis of colorectal cancer comprising a nucleic acid as defined herein, or a set of nucleic acids as defined herein, or a composition as defined herein.</p>
+      <p id="p-00054-en" num="0052">The kit may comprise a container for a primer or a set of primers as described herein. The kit may also comprise one or more probes as described herein. The kit may comprise containers of substances for reverse transcribing and amplifying one or more miRNAs, such as containers comprising dNTFs (each of the four deoxynocleotides dATP, dCTP, dGTP, and dTTP), buffers, reverse transcriptase and DNA polymerase. The kit may also comprise nucleic acid template(s) for a positive control and/or negative control reaction.</p>
+      <p id="p-00055-en" num="0053">The present invention also relates to the use of the herein described nucleic acid, set of nucleic acids, or composition for the diagnosis of colorectal cancer.</p>
+      <heading id="h-00006-en" level="1">EXAMPLES</heading>
+      <p id="p-00056-en" num="0054">In order to investigate the genome-wide miRNA expression in human colorectal cancer we used the Illumina high throughput sequencing technology. We sequenced and determined the differences of microRNA expression in normal, matching tumor and metastasis-tissues from 8 different colon cancer patients. Altogether we analyzed 24 smallRNA samples and identified several alterations in the miRNA expression patterns.</p>
+      <p id="p-00057-en" num="0055">For each sample we aimed to sequence more than 25 million reads of which 8 million could be aligned uniquely and of which 71.34% were located on miRNA regions as taken from miRBase15. Approximately 730 miRNAs could be detected over all experiments containing the sequencing of patients and cell lines. In regard to the reproducibility of the approach we achieved for technical replicates of SW480 and SW620 cell lines a pearson's correlation coefficient of 0.97 and 0.86, respectively.</p>
+      <p id="p-00058-en" num="0056">In addition, to estimate the reliability of our next generation sequencing results we analyzed the smallRNA fraction of two colorectal cancer cell lines (SW480 and SW620) in 2 technical replicates. The reproducibility for the technical replicate pairs was very good with a Pearson correlation coefficient of 0.9 for SW480 and 0.86 for SW620. Furthermore, we validated the generated NGS data with TaqMan assays for 4 up-regulated (miR-31, miR-135b, miR-183, miR-96) and 6 down-regulated microRNAs (miR-1, miR-145, miR-133a, miR-133b, miR-150, miR-375) in up to sixteen patients. The miRNAs were selected on the basis of their expression level and on their profile in the literature. The microRNAs miR-31 (FC=31.02, p-value=0.003), miR-135b (FC=21.08, p-value=0.0001), miR-183 (FC=7.63, p-value=0.001) and miR-96 (FC=5.82, p-value=0.004) are among the top five up-regulated tumor specific candidates, MiR-1 (FC=13.9, p-value=0.0004), miR-145 (FC=2.68, p-value=0.002) are significantly down-regulation in tumor and metastases (p-value&lt;0.05).</p>
+      <p id="p-00059-en" num="0057">We identified several miRNAs to be differentially regulated in tumor and metastasis tissue, some of which have already been described in the literature as differentially regulated in cancerous tissues. For microRNA-135b, known in the literature as up-regulated in cancer, we found a 21-fold up-regulation in the colon cancer samples (p-value=0.0001) and a 28-fold higher expression in metastasis tissue (FC=28.94, p-value=0.00156). For microRNA-1 we observed a strong down-regulation in both malignant tissues with more than 10-fold down-regulation in tumor (FC miR-1-1=13.9, p-value=0.00042; FC miR-1-2=10.06, p-value=0.00179) and metastasis tissue (FC miR-1-1=18.34, p-value=0.00409; FC miR-1-2=14.12, p-value=0.00092) in metastases tissue. MicroRNA-133, which is clustered on the same chromosomal locus as microRNA-1 was also found down-regulated. The genome locus of miR-133a-2 which is clustered together with miR-1-1 on chromosome 20 showed a 1.4-fold down-regulation in tumor and a 1.33-fold decreased expression in metastases, whereas the p-value for both expression values were not significant. MiR-133a-1, which is localized in a cluster with miR-1-2 on chromosome 18 is not present in our NGS data set.</p>
+      <p id="p-00060-en" num="0058">Most importantly, we found a number of biomarkers for colorectal cancer having diagnostic capabilities that have previously been not associated with cancer and/or colorectal cancer as listed in tables 1 and 2.</p>
+      <p id="p-00061-en" num="0059">To identify miRNAs that could play a critical role for the progression of colorectal cancer into metastasis, we compared the expression of miRNAs in the tumor with those in the metastases tissue of each colon cancer patient. We identified a small number of significantly deregulated miRNAs for the metastases. Based on our significance criteria (p-value&lt;0.05) we determined 6 microRNA candidates that were up-regulated in the metastases as compared to the tumor, miR-184 showed the most significant up-regulation of 5-fold (FC=5.09, p-value=0.01695).</p>
+      <p id="p-00062-en" num="0060">A higher number of down-regulated miRNAs could be observed for the metastases compared to the tumor tissue. We identified 11 candidates, of which miR-1266 showed the strongest down-regulation of 3.16-fold (p-value=0.00644).</p>
+      <p id="p-00063-en" num="0061">Overall, we detected an absolute number of 559 miRNAs that were present in all tissues of the patients. Analyzing the intersections of the regulated microRNAs as observed between normal, tumor and metastases tissue, resulted in 19 miRNAs specifically up-regulated in the tumor and 29 miRNAs specifically up-regulated in the metastases when compared to the normal tissue. For the down-regulated miRNAs as compared to the normal tissue, we determined 13 tumor specific and 16 metastases specific miRNAs.</p>
+      <p id="p-00064-en" num="0062">The higher numbers of metastasis-specific regulated miRNAs supports the assumption that the metastasis is a progression of tumor tissue. We identified one microRNA, miR-559, which is down-regulated in all malign tissues as compared to the normal tissue with an even stronger down-regulation in the metastasis as compared to the tumor tissue.</p>
+      <p id="p-00065-en" num="0063">The biomarkers listed in Table 1 have been shown to exhibit differential diagnostic capabilities.</p>
+      <p id="p-00066-en" num="0064">We next investigated if it is possible to separate the different tissues based on their miRNA profile. For this, we used principal component analyses as well as unsupervised hierarchical clustering approaches for normal, tumor and metastases tissue of the 8 CRC patients. On the miRNA level we found tumor and metastasis tissues significantly different from normal tissues, but less distinctive between each other. The cluster analysis indicated a strong correlation within the groups of tissues for the expression levels of the candidate microRNAs and it divided the malign and benign colon tissue in two different groups. Tumor and metastasis tissues did not show a separation using absolute expression levels, which could indicate similarity of both malign tissues.</p>
+      <p id="p-00067-en" num="0065">So far we were able to identify malign colon tissues based on a set of 41 miRNAs. However, suggesting miRNAs for a potential clinical application as biomarkers this number is still too high. We therefore asked whether it is possible to narrow down the number of marker miRNAs and found miRNA-1 and miRNA 135 to nearly completely separate benign and tumor tissues suggesting that these miRNAs are important deregulators in colon tumors.</p>
+      <p id="p-00068-en" num="0066">Since miRNA-1 and miRNA-135 are the most significant de-regulated miRNAs in colorectal tumors we asked whether these miRNAs are specific for colorectal tissues or are general tumor suppressors and oncogenes. We thus performed a screen on 15 additional different tumor entities with 320 different tissue samples. For each tumor entity we used normal and tumor tissues (adipose tissue, brain, breast, colon, endometrium, kidney, liver, lung, lymph node, muscle, ovary, pancreas, prostate, stomach, testis and thyroid gland). Here we found that miRNA-1 showed constantly a significantly decreased expression over all tissues. The most significant down-regulations wore in muscle (FC=20.28), ovary (FC=88.87) and prostate tissues (FC=45.94). The expression analysis of miRNA-135b delivered a variable pattern across all cancer tissues investigated. In colon cancer we could observe an up-reguiation (FC=9.23) as expected. In endometrium and stomach we estimated a significant up-regulation for the tumor tissue as well (endometrium=15.44-fold, stomach=5.7-fold) (<figref>FIG. 3</figref>). However, in 7 tissues (adipose tissue, brain, colon, endometrium, lung, ovary and stomach) we found an increased expression level of miRNA-135b. In the majority of the investigated tissues, such as breast, kidney, liver, iyrnph node, muscle, pancreas, prostate, testis and thyroid gland miR-135b showed a down-regulation.</p>
+      <p id="p-00069-en" num="0067">MiR-497 has been demonstrated to be suited for diagnosis of cancer in general.</p>
+      <p id="p-00070-en" num="0068">Our genome-wide analyses of micro RNA expression in colon cancer patients and colon cancer cell lines delivered a range of interesting microRNA candidates, in specific miR-1 and miR-135b, both were top deregulated candidates in tumor and metastases. In contrast to the extremely down-regulated miR-1 we found microRNA-135b up-regulated in the colon tumor tissues. This specific microRNA is already known in the context of CRC.</p>
+      <p id="p-00071-en" num="0069">Some authors (Nagel, R. et al. <i>Cancer Res </i>68, 5795-802 (2008); Bandres, E. et al. <i>Mol Cancer </i>5, 29 (2006); Wang, Y. X. et al. <i>J Dig Dis </i>11, 50-4; Necela, B. M., Carr, J. M., Asmann, Y. W. &amp; Thompson, E. A. <i>PLoS One </i>6, e18501.) revealed a genetic mechanism for the control of the Wnt signaling pathway depending on the expression levels of miR-135b and miR-135a. An up-regulation of these microRNA showed a negatively correlation to the APC expression in vitro. This leads to the assumption that alterations in the miR-135 expression contributes to colorectal cancer pathogenesis. Less is known about the contribution of miR-135b to the progression of metastases. An indication for an involvement could be the even higher expression in the metastases tissue of our CRC patients. Compared the 21-fold up-regulation in the tumor we observed here a significant 28-fold up-regulating over all analyzed patients. This aids the assumption that miR-135b could play a critical role in further stages of colon cancer. Not only miR-135b showed a considerable increased expression in malign tissues, we also determined and validated microRNA candidates, such as miR-31, miR-183 and miR-96. For those candidates literature entries could be found that demonstrate an association between the up-regulation and CRC progression.</p>
+      <p id="p-00072-en" num="0070">By comparing the expression of significantly deregulated microRNAs for the three tissues (normal, tumor, metastases), we identified a total of 29 miRNAs whose expression was down-regulated and 17 miRNAs whose expression was up-regulated in tumor and metastases as compared to the normal tissue. A special microRNA that became highlighted during the intersection analysis was microRNA-559, which effects on the proto-oncogene ERBB2. The ERBB2 or HER2 gene (Human Epidermal growth factor Receptor 2) encodes a member of the epidermal growth factor (EGF) receptor family of receptor tyrosine kinases. The receptors of this family are involved in signal transduction pathways leading to cell growth and differentiation and the overexpression of ERBB2 is decidedly associated to the onset of certain types of cancer including 20-30% of breast and ovarian carcinomas. The human epidermal growth factor receptor 2 is an example for an approved candidate for targeted cancer therapies. Due to the fact, that we found miR-559 constantly and significantly down-regulated in our colon cancer samples and that microRNAs in general become more and more attractive for the development of new therapies that specifically target oncogenes, promoted microRNA-559 to be a promising candidate for further studies and possibly for the development of targeted therapies in colon cancer treatment. The overlap analyses between the various comparisons of normal, tumor and metastases tissue also elucidated interesting microRNA candidates, such as miR-1, miR-135b, miR-129, miR-215, miR-497 and miR-493, which were over both malign tissues significantly deregulated. Those candidates were investigated in further analyses including a microRNA expression screen over different tumor entities.</p>
+      <p id="p-00073-en" num="0071">Analyzing the biomarker candidates we determined that a down-regulation of microRNAs is a more common phenomenon than an up-regulation of microRNAs in different cancer tissues, which is more heterogeneous. In general there is a trend of microRNA down-regulation reported in different studies, for example, by Lu et al. in 2005 (Lu, J. et al. Nature 435, 834-8 (2005)), in connection with different human cancer entities. These findings lead to the assumption, that major components of the microRNA biogenesis machinery, like DICER, might be deregulated in various cancers. The inhibition of DICER machinery could be an initial event for the onset of cancer considering the fact that a general down-regulation of DICER should contribute an inevitably reduction of mature microRNA biogenesis. The abated regulation of down-stream targets, such as oncogenes could lead to their up-regulation.</p>
+      <p id="p-00074-en" num="0072">For an additional microRNA we could observe a down-regulation over the unity of all tumor samples including microRNA screening experiments. MicroRNA-215 is already described in the context of colon cancer by Georges et al. (Georges, S. A. et al. <i>Cancer Res </i>68, 10105-12 (2008)) and Braun et al. (Braun, C. J. et al. <i>Cancer Res </i>68, 10094-104 (2008)), in 2008 and Song et al. (Song, B. et al. <i>Mol Cancer </i>9, 96 (2010)) in 2010. They described the correlation between miR-215 (which is arranged in a cluster with miR-192 and milR-194) and a cell cycle arrest at G2-phase due to a p53-dependent up-regulation of p21 in colon cancer cells.</p>
+      <p id="p-00075-en" num="0073">To assess the possibility of selected microRNA candidates to function as biomarkers for clinical applications was one of the major questions of this work. For the set of differentially expressed microRNAs we performed PCA analyses and hierarchical clustering and achieved a distinct separation of malign and benign tissue. On a smaller set of microRNAs (miR-1, miR-135b, miR-129, miR-493*, miR-215 and miR-497) we applied PCA analyses on different cancer entities and for brain, breast, colon, kidney, muscle, prostate, stomach, testis and thyroid gland we separated tumor from normal tissue. Narrowing down the set of microRNAs that open a chance for clinical applications we investigated miR-1 and miR-135b, our top candidates, and achieved a nearly full parting of tumor and normal tissue for colon cancer. Altogether our data suggest and support the relevance of our selected miRNA candidates to function as markers for cancer diagnosis and they provide the potential to deliver novel therapeutic targets, not only for colon cancer. To find candidates that indicate the development of the tumor into distant sites are more delicate. This could be caused by the similarity of both tissues.</p>
+      <p id="p-00076-en" num="0074">The primary colon carcinoma tissue and matched normal colonic epithelium as well as liver metastases tissue used for the NGS experiments were obtained from patients diagnosed with CRC and undergoing surgical resection. The samples were snap frozen immediately and stored at −80° C.</p>
+      <p id="p-00077-en" num="0075">Colon cancer cell lines SW480 and SW620 were cultured in a humified atmosphere of 90% air, 5% CO<sub>2 </sub>using Dulbecco's Modified Eagle's Medium (DMEM) medium and 10% fetal calf serum (FCS) and 1% penicillin/streptomycin.</p>
+      <p id="p-00078-en" num="0076">RNA was extracted applying Trizol (Invitrogen) reagent according to the manufacture's protocol and the RNA integrity was assessed using the Agilent BioAnalyzer 2100technology (Agilent).</p>
+      <p id="p-00079-en" num="0077">In total 243 tumor samples and 87 normal tissue samples were selected from a tissue bank established at the Institute of Pathology (Medical University of Graz, Austria) to estimate the microRNA expression in a variety of human cancer types. This archive consists of tumor and normal tissue samples obtained from different organs, such as adipose tissue, brain, breast, colon, endometrium, kidney, liver, lung, lymphatic system, muscle, ovary, pancreas, prostate, stomach, testis and thyroid gland. All samples were reviewed and diagnosed histopathologically and RNA quality was assessed by automated electrophoresis.</p>
+      <p id="p-00080-en" num="0078">SmallRNA preparation from human colon tissue and cell lines for Solexa sequencing included the following steps: smallRNA isolation, cDNA library preparation, sequencing and was performed by Illumina's DGE smallRNA sample prep kit following the manufacture's instructions. In short 10 μg total RNA was size-fractionated on a denaturing 15% TBE-urea polyamide gel and smallRNA fragments of 20-30 bases in length were purified. To generate cDNA the Illumina 3′ adapter (sequence) and 5′ adapter (sequence) were ligated to the size selected RNA molecules to enable reverse transcription and an amplification step as well as the sequencing procedure. To remove unligated adapters, the ligation products of the desired size range between 70-90 bases in length were purified from a 10% TBE-urea polyacrylamide gel. The precipitated RNA was converted to single-stranded cDNA using Superscript II revese transcriptase (Invitrogen) and Illumina's smallRNA RT-Primer (sequence). Followed by a PCR-amplification step in 15 cycles using Phusion DNA Polymerase and Illumina's small RNA primer set (sequences) the amplification products were seperated on a 6% TBE polyacrylamide gel. The corresponding gel fragment of approximately 92 bases in length was excised. The purified DNA was quantified and diluted to 10 nM for cluster generation and sequencing on Illumina Genome Analyzer.</p>
+      <p id="p-00081-en" num="0079">Primary Data Analysis</p>
+      <p id="p-00082-en" num="0080">Sequences were obtained using Illumina Genome Analyser IIx and images from the instrument were processed using the manufacturer's software to generate FASTQ sequence files. All reads were mapped against Illumina adaptor sequences using blat [PMID 11932250] and adaptor signatures were clipped from the reads subsequently. In detail; clipping always starts from one of the ends of a read and reads with a length less than 16 bp after clipping were omitted from analysis.</p>
+      <p id="p-00083-en" num="0081">Analysis of mRNA Expression</p>
+      <p id="p-00084-en" num="0082">Adaptor-clipped reads were mapped to the human genome version GRCh37 (hg19) with the bwa. 0.5.8 alignment tool [PMID 19451168] using default parameters. As a measure for miRNA expression, reads on target regions were counted. A read had to have at least one base within the target region to be evaluated “on target”. Log2 ratios were calculated using the read counts per target to compare different conditions. Ratios were subsequently normalized for each comparison by centering the median of log2 ratios to zero. Differential expression was evaluated using student's t-test on the log2 ratios (samples versus controls). To validate the miRNA expression analysis strategy we compared sequencing data to TaqMan data for 10 different miRNAs in up to 8 patients: Normalized log2 ratios from both datasets were plotted against each other and a linear model (y=mx+b) was fitted for two comparisons: tumor vs benign and metastasis vs benign. We calculated the Pearson product-moment correlation for both comparisons to demonstrate the agreement of both datasets.</p>
+      <p id="p-00085-en" num="0083">Analysis of mRNA Expression</p>
+      <p id="p-00086-en" num="0084">Adaptor-clipped reads were mapped to the human genome version GRCH37 (hg19) using transcript models taken from Ensembl v64 with TopHat [PMID 19289445] using the parameters -u -N -max-bundle-length 350000000 -max-bundle-frags 50000000. Differential expression as well as unknown transcript models were determined using the Cufflinks software bundle [PMID 21697122]. In detail transcript models from all tissues were merged for each patient using cuffcompare and differential expression was determined using cuffdiff with upper quartile normalization.</p>
+      <p id="p-00087-en" num="0085">For real-time quantification of mature microRNAs we used TaqMan® MicroRNA Assays (Applied Biosystems) and performed a two-step RT-PCR according to the manufacturer's protocol.</p>
+      <p id="p-00088-en" num="0086">In the reverse transcription reaction, single-stranded cDNA was synthesized from 25 ng total RNA using 50 nM looped RT primer (PN 4427975; has-miR-1, has-miR-135b, has-miR-215, has-miR-493*, has-miR-497, . . . , has-miR-<b>129-3</b>p, Assay ID: 001184 and has-miR-9, Assay ID: 000583), 1× Reverse Transcription buffer, 0.25 mM each of dNTPs, 0.25 U/μl RNase Inhibitor and 3.33 U/μl MultiScribe® Reverse Transcription per 15 μl reaction (TaqMan® MicroRNA Reverse Transcription Kit, Applied Biosystems PN 4366596). The reaction was incubated in a thermal cycler (Applied Biosystems 9700 Thermocyeler) for 30 min at 16° C., 30 min at 42° C., followed by 5 min incubation at 85° C. to inactivate the Multiscribe Reverse Transcriptase and then hold at 4° C. The cDNA was diluted 10-fold before preparing for PCR reaction.</p>
+      <p id="p-00089-en" num="0087">For the quantification of the RT-products TaqMan® minor groove binding (MGB) probes were used in a 10 μl PCR reaction, containing 1 μl of the 10-fold diluted cDNA, 1× TaqMan® MicroRNA Assay (PCR Primer/Probe/dNTP mix) and 1× TaqMan® Universal PcR master mix. The real-time PCR was performed in a 384-well plate using standard protocols on an Applied Biosystems 7900HT Fast Real-Time PCR System, including 10 min incubation at 95° C. to activate the AmpliTaq® Gold enzyme, followed by 40 amplification cycles of 95° C. for 15 s and 60° C. for 1 min. All reactions were typically run in triplicates.</p>
+      <p id="p-00090-en" num="0088">Total RNA from cells was isolated using Trizol reagent according to the manufactures protocol. In the following step, DNA was digested using RNase-free DNase kit (Qiagen) and cDNA was synthesized from total RNA using gene specific primers for miR-1 target genes. The concentration of the cDNA was quantified using NanoDrop Spectophotometer.</p>
+      <p id="p-00091-en" num="0089">The relative quantification of microRNA and mRNA expression was calculated using the comparative “delta CT” method. Default threshold settings were applied to determine the Ct value, which is defined as the fractional cycle number at which the fluorescence passes the fixed threshold.</p>
+      <heading id="h-00007-en" level="1">FIGURE CAPTIONS</heading>
+      <p id="p-00092-en" num="0090">
+        <figref>FIG. 1A</figref>: Differential expression of miRNAs in colon tumor tissues. Significant top 25 up- and down-regulated miRNAs comparing tumor versus normal colon samples, sorted by median log2ratio. Analysis of 16 colorectal cancer samples (normal and tumor tissue) using NGS technology delivered a range of tumor specific deregulated miRNAs. All depicted miRNAs sufficed a p-value threshold ≦0.05. A star indicates samples with a p-value of below ≦0.01.</p>
+      <p id="p-00093-en" num="0091">
+        <figref>FIG. 1B</figref>: Differential expression of miRNAs in colon metastasis tissues. Significant top 25 up- and down-regulated miRNAs comparing metastasis versus normal colon samples, sorted by median log2 ratio. Analysis of 16 colorectal cancer samples (normal and tumor tissue) using NGS technology delivered a range of tumor specific deregulated miRNAs. All depicted miRNAs sufficed a p-value threshold ≦0.05. A star indicates samples with a p-value of below ≦0.01.</p>
+      <p id="p-00094-en" num="0092">
+        <figref>FIG. 2A</figref>: Upper graph: Validation of 10 microRNA expression pattern in tumor vs normal tissue for 3 colon cancer patients. Lower graph: Validation of 10 microRNA expression pattern in metastases vs normal tissue for 3 colon cancer patients.</p>
+      <p id="p-00095-en" num="0093">
+        <figref>FIG. 2B</figref>: Upper graph: Validation of miR-1, miR-135b, miR-145 and miR-31 expression in tumor vs normal tissue for 16 colon cancer patients. Lower graph: Validation of miR-1, miR-135b, miR-145 and miR-31 expression in metastases vs normal tissue for 8 colon cancer patients</p>
+      <p id="p-00096-en" num="0094">
+        <figref>FIG. 3</figref>: Down-regulation of miR-497 in 15 additional tumor entities. QPCRs for miR-497 were performed in 330 additional tumor and normal samples and ratios were calculated between normal and tumor.</p>
+      <p id="p-00097-en" num="0095">
+        <figref>FIG. 4</figref> is an exemplary diagram of a computing device comprising a client and/or server according to an implementation consistent with the principles of the invention.</p>
+      <p id="p-00098-en" num="0096">
+        <figref>FIG. 5</figref> is a flowchart of exemplary processing of methylation status for biomarker(s) present in biological samples according to an implementation consistent with the principles of the present invention.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method for differential diagnosis of colon cancer in a patient, comprising the following steps of,
+<claim-text>a. determining in a sample of a subject the amount of one or more of the micro RNAs (miRNA) selected from the list of Table 1,</claim-text><claim-text>b. comparing the amount of miRNA determined to a predetermined reference value,</claim-text><claim-text>c. wherein if the miRNA is, in comparison to said reference value, either down-regulated or up-regulated as designated in Table 1, the sample is designated as metastatic.</claim-text></claim-text>
+      <claim-text>
+        <tables id="tablesc-00001-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="35pt" align="left" />
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="147pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>microRNA</entry>
+                  <entry>regulation in metastatic sample</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>name</entry>
+                  <entry>as compared to reference value</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>miR-194-1</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-202</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-551b</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-129-2</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-658</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-497</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-3152</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-378c</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-605</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-559</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-184</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-1248</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-450b</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-1975</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-3122</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-542</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-4286</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-503</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-877</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>miR-1292</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the predetermined reference value represents the amount of said miRNA present in tumor or benign tissue.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the analyzed miRNAs are selected from the group comprising mir-202, mir-497, mir-3152, mir-450b, mir-194-l, mir-3122, mir-551b, mir-559, mir-658 and mir-129-2.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en" independent="true">
+      <claim-text>
+        <b>4</b>. A method for diagnosis of colon cancer in a patient, comprising the following steps of,
+<claim-text>a. determining in a sample of a subject the amount of one or more of the micro RNAs (miRNA) selected from the list of Table 2,</claim-text><claim-text>b. comparing the amount of miRNA determined to a predetermined reference value,</claim-text><claim-text>c. wherein if the miRNA is, in comparison to said reference value, either down-regulated or up-regulated as designated in Table 1, the sample is designated as cancerous</claim-text></claim-text>
+      <claim-text>
+        <tables id="tablesc-00002-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="147pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>microRNA </entry>
+                  <entry>regulation in cancerous sample </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>name</entry>
+                  <entry>as compared ro reference value</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-1224</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-202</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-147b</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-3154</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-3065</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-3150</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-3152</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-497</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-585</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-378b</entry>
+                  <entry>down-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-3175</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-450a2</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-449b</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-1286</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-3117</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-1323</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-450a-1</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-323b</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-450b</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hsa-mir-452</entry>
+                  <entry>up-regulated</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method according to <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the predetermined reference value represents the amount of said miRNA present in benign tissue.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method according to <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the analyzed miRNAs are selected from the group comprising mir-202, mir-497, mir-3065, mir-450a-2, mir-3154, mir-585, mir-3175, mir-1224, mir-3117 and mir-1286.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the amount of miRNA is determined by using miRNA array techniques or RT-PCR.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the sample originates from blood, urine, semen, preferably from colorectal secretions, isolated colorectal cells, and most preferably from colorectal tissue.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the determining step is conducted by a computing device.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the comparison step is conducted by a computing device.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising outputting for presentation on a display associated with the computing device.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. A nucleic acid that is capable to specifically detect one of the miRNAs of <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The nucleic acid according to <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the nucleic acid is 15 to 30 nt in length.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The nucleic acid according to <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the nucleic acid is a primer or a probe.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The nucleic acid according to <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein the probe is labelled, preferably, wherein the probe is a TaqMan probe.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. A set of nucleic acids according to <claim-ref idref="clm-00012-en">claim 12</claim-ref> for use in multiplex RT-PCR or in microarray techniques.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. A composition for the diagnosis of colorectal cancer comprising a nucleic acid according to <claim-ref idref="clm-00012-en">claim 12</claim-ref>.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. A kit for the diagnosis of colorectal cancer comprising a nucleic acid according to <claim-ref idref="clm-00012-en">claim 12</claim-ref>.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. Use of the nucleic acid of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, for the diagnosis or differential diagnosis of colorectal cancer.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247202A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247202A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247202A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247202A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150247202A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247202A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150247202A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247202A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150247202A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247202A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150247202A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247202A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150247202A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247202A1-20150903-D00007.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150247202A1.PDF" type="pdf" size="928802" pages="17" />
+</lexisnexis-patent-document>

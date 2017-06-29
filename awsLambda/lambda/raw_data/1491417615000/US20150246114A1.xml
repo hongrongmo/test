@@ -1,0 +1,2751 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150246114A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021317" date-changed="20151223" time-changed="182831">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121139237">
+        <country>US</country>
+        <doc-number>20150246114</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14422846</doc-number>
+        <date>20130816</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151223">
+      <classification-ipcr sequence="1">
+        <text>A61K  39/235       20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>235</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61K   9/08        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61K  39/02        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A61K  39/155       20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>155</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>A61K  39/175       20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>175</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>A61K  39/23        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>23</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="7">
+        <text>A61K  47/10        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="8">
+        <text>A61K  47/18        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="9">
+        <text>A61K  47/26        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>26</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="10">
+        <text>A61K  47/42        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>42</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="11">
+        <text>C12N   7/00        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>7</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151223">
+      <classification-cpc sequence="1">
+        <text>A61K  39/235       20130101 FI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>235</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K   9/08        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61K  39/0225      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>0225</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61K  39/12        20130101 LI20151214BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151214</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61K  39/145       20130101 LI20151214BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>145</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151214</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61K  39/155       20130101 LI20140220BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>155</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140220</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61K  39/175       20130101 LI20140228BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>175</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140228</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61K  39/23        20130101 LI20140228BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>23</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140228</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61K  47/10        20130101 LI20140220BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140220</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A61K  47/183       20130101 LI20140220BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>183</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140220</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>A61K  47/20        20130101 LI20140220BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140220</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>A61K  47/22        20130101 LI20140220BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>22</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140220</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>A61K  47/26        20130101 LI20140220BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>26</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140220</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>A61K  47/42        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>47</main-group>
+        <subgroup>42</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>A61K2039/521       20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>2039</main-group>
+        <subgroup>521</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="16">
+        <text>A61K2039/5252      20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>2039</main-group>
+        <subgroup>5252</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="17">
+        <text>A61K2039/5254      20130101 LA20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>2039</main-group>
+        <subgroup>5254</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="18">
+        <text>A61K2039/552       20130101 LA20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>2039</main-group>
+        <subgroup>552</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="19">
+        <text>A61K2039/70        20130101 LA20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>2039</main-group>
+        <subgroup>70</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="20">
+        <text>C12N   7/00        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>7</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="21">
+        <text>C12N2710/10034     20130101 LA20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2710</main-group>
+        <subgroup>10034</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="22">
+        <text>C12N2750/14034     20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2750</main-group>
+        <subgroup>14034</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="23">
+        <text>C12N2750/14322     20130101 LA20151214BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2750</main-group>
+        <subgroup>14322</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151214</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="24">
+        <text>C12N2760/18034     20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2760</main-group>
+        <subgroup>18034</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="25">
+        <text>C12N2760/18434     20130101 LA20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2760</main-group>
+        <subgroup>18434</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="26">
+        <text>C12N2760/18634     20130101 LA20151214BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2760</main-group>
+        <subgroup>18634</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151214</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">27</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">LIQUID STABLE VIRUS VACCINES</invention-title>
+    <related-documents date-changed="20150903">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61691507</doc-number>
+          <date>20120821</date>
+        </document-id>
+      </provisional-application>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61777164</doc-number>
+          <date>20130312</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Intervet Inc.</orgname>
+            <address>
+              <city>Summit</city>
+              <state>NJ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Qiao</last-name>
+            <first-name>Zhisong</first-name>
+            <address>
+              <city>Omaha</city>
+              <state>NE</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>O'Connell</last-name>
+            <first-name>Kevin</first-name>
+            <address>
+              <city>Omaha</city>
+              <state>NE</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>EP13067169</doc-number>
+        <date>20130816</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014029702</doc-number>
+        <date>20140227</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173462094">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246114</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130816</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173462093">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150246114</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130816</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention discloses liquid stable vaccines that comprise a live attenuated virus, 10-30% sugar additive, and an amino acid. The present invention also discloses the manufacture of such vaccines and methods of protecting an animal by administration of such vaccines.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application claims priority under 35 U.S.C. §119(e) of provisional application U.S. Ser. Nos. 61/691,507 filed Aug. 21, 2012; and 61/777,164 filed Mar. 12, 2013, the contents of which are hereby incorporated by reference in their entireties.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">The present invention pertains to liquid stable vaccines that comprise a live attenuated virus. The invention also pertains to the manufacture of such vaccines and methods of vaccinating animal subjects.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">There are a significant number of viruses that can infect dogs and/or cats. While symptoms due to the corresponding virus infections for example, can include mild cold-like symptoms, others can be rapidly fatal, as in the case of canine distemper virus (CDV) infections [see e.g., US2010/0196420]. Indeed, CDV triggers a multi-systemic infection that may involve the ocular, respiratory, gastrointestinal, integument, and nervous systems. The mortality rate from canine parvovirus (CPV) is also relatively high [see e.g., US2009/0010955]. CPV is primarily an enteric pathogen that infects dogs, especially young dogs, and is characterized by acute diarrhea, fever, and leukopenia in dogs and puppies more than 4 to 5 weeks old. Even younger puppies can suffer myocardial disease. Canine distemper virus and canine parvovirus are the two most important canine viruses to protect puppies/dogs from.</p>
+      <p id="p-00004-en" num="0004">Additional canine viruses include: canine parainfluenza (CPI) virus, which is a highly contagious virus that causes respiratory illnesses contributing to the contraction of upper respiratory diseases and infectious tracheobronchitis; canine adenovirus type-1 (CAV1) which leads to infectious hepatitis; and canine influenza virus (CIV) which is highly contagious and can cause a severe type of respiratory disease. CIV has been reported to be capable of causing 100% infection with 80% morbidity, and up to 5-8% mortality in severe infections [Crawford et al., <i>Science </i>310(5747):482-485 (2005); U.S. Pat. No. 7,959,929 B2].</p>
+      <p id="p-00005-en" num="0005">Similarly, there are a number of feline viruses that afflict cats including feline calicivirus (FCV), feline leukemia virus (FeLV), feline panleukopenia virus (FPLV), feline coronavirus (FCoV), and feline rhinotracheitis (FVR) virus.</p>
+      <p id="p-00006-en" num="0006">It is now widely accepted that the best way of preventing disease due to canine or feline virus infections is to vaccinate them against these viruses. Indeed, canine distemper virus vaccines have significantly reduced the prevalence of the corresponding disease. Similarly, infectious canine hepatitis has been extremely limited by canine adenovirus-2 vaccines (CAV2). The use of live attenuated CAV2 in vaccines in place of closely related CAV1 eliminates concerns regarding the interstitial nephritis and corneal opacity observed in dogs that have been inoculated with live attenuated CAV1 [Taguchi et al., <i>Can Vet J. </i>52(9): 983-986 (2011)].</p>
+      <p id="p-00007-en" num="0007">Moreover, multivalent live attenuated virus vaccines can be safely administered that limit the number of vaccine injections required. Accordingly, there are several commercially available multivalent live attenuated virus vaccines that protect against canine distemper, canine infectious hepatitis, canine parvovirus, and canine parainfluenza virus. In addition, newer multivalent vaccines further protect against canine influenza virus as well.</p>
+      <p id="p-00008-en" num="0008">Heretofore, attenuated canine and feline viruses have been unstable when stored in liquid solutions. Therefore, most live attenuated canine or feline virus vaccines are lyophilized, i.e., freeze-dried, prior to their long-term storage. The live attenuated canine or feline virus is commonly mixed as a suspension in water with a protective agent, frozen, and then dehydrated by sublimation and secondary drying during the lyophilization process. The low temperatures of freezing and drying by sublimation, together with the low surface to volume ratios involved, can require long drying periods and thereby, significantly increase manufacturing time and costs.</p>
+      <p id="p-00009-en" num="0009">In addition, there are inherent inconsistencies in large commercial drying processes due to: the inability to adjust the shelf temperature across the entire product load, variable freezing rates across the dryer, edge effects, and radiant energy effects. Increasing the drying temperature to reduce drying times is often not an option since the drying temperature has to remain significantly below the glass-transition temperature of the protective protein matrix. Moreover, the long inconsistent drying times and/or high drying temperatures often lead to structural damage to the live attenuated viruses, along with a significant loss of their biologic activity.</p>
+      <p id="p-00010-en" num="0010">Consequently, in order to account for the inherent loss in efficacy, lyophilized canine and/or feline vaccines that comprise live attenuated viruses are stored with augmented titers. However, such increased titers can lead to significant adverse events should the lyophilization process actually lead to less loss of activity than anticipated. Therefore, great care is required to formulate a vaccine to contain a virus titer that is not only safely below the amount that leads to adverse events, but that also maintains sufficient efficacy in view of the virus titer loss due to lyophilization and subsequent storage. Therefore, there is a need for new live attenuated canine and/or feline virus vaccines that can reliably retain their virus titers at a safe and efficacious level.</p>
+      <p id="p-00011-en" num="0011">The citation of any reference herein should not be construed as an admission that such reference is available as “prior art” to the instant application.</p>
+      <heading id="h-00004-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00012-en" num="0012">In order to overcome the deficiencies of current vaccines, the present invention provides novel liquid stable, live, attenuated virus vaccines, as well as their corresponding immunogenic compositions. In certain embodiments, the live attenuated virus is a live attenuated canine virus. In other embodiments, the live attenuated virus is a live attenuated feline virus. The present invention also provides methods of administering such vaccines to an animal. The present invention further provides methods of preventing a disease in an animal through administering a vaccine of the present invention. In particular embodiments, the animal is a canine In other embodiments, the animal is a feline.</p>
+      <p id="p-00013-en" num="0013">Accordingly, the present invention provides liquid stable vaccines that comprise a live attenuated virus. In certain embodiments the live attenuated virus is a recombinant virus. In particular embodiments of this type the recombinant virus is employed as a recombinant vector that encodes a heterogeneous protein. In more particular embodiments of this type, the heterogeneous protein is a virus or bacterial antigen.</p>
+      <p id="p-00014-en" num="0014">In particular embodiments, the vaccine comprises a sugar additive and an amino acid. In certain embodiments of this type, the vaccine comprises 10 to 30% sugar additive. In particular embodiments, the vaccine comprises 12 to 27% sugar additive. In certain embodiments, the vaccine comprises 15 to 25% sugar additive. In related embodiments the vaccine comprises 15 to 20% sugar additive. In other embodiments, the vaccine comprises 20 to 25% sugar additive. In more particular embodiments, the vaccine comprises 16 to 18% sugar additive. In even more particular embodiments, the vaccine comprises 17% sugar additive.</p>
+      <p id="p-00015-en" num="0015">In particular embodiments of the liquid stable virus vaccines of the present invention the sugar additive is sucrose. In other embodiments the sugar additive is sorbitol. In still other embodiments, the sugar additive is mannitol. In yet other embodiments, the sugar additive is trehalose. In still other embodiments, the sugar additive is dextrose. In particular embodiments the sugar additive is actually a combination of two or more sugar additives. In a particular embodiment of this type, the sugar additive is a combination of sucrose and sorbitol. In a more particular embodiment of this type, the sugar additive is a combination of 15% sucrose and 10% sorbitol.</p>
+      <p id="p-00016-en" num="0016">The liquid stable vaccines of the present invention can range in pH from pH 6.0 to pH 8.0. In certain embodiments the pH range is from pH 6.5 to pH 7.8. In particular embodiments the pH range is from pH 6.8 to pH 7.5. In more particular embodiments the pH range is from pH 7.0 to pH 7.4. In an even more particular embodiment the pH is 7.2.</p>
+      <p id="p-00017-en" num="0017">The liquid stable vaccines of the present invention can comprise a buffer. In a particular embodiment of this type, the buffer comprises 2.5 to 50 mM Tris. In a related embodiment, the buffer comprises 5 to 25 mM Tris. In particular embodiments, the buffer comprises 10 to 20 mM Tris. In yet other embodiments the buffer can comprise 2.5 to 50 mM histidine. In particular embodiments the buffer comprises 2.5 to 50 mM Tris and 2.5 to 50 mM histidine. In more particular embodiments the buffer comprises 5 to 25 mM Tris and 5 to 25 mM histidine. In still more particular embodiments the buffer comprises 10 to 20 mM Tris and 10 to 20 mM histidine. In other embodiments the buffer comprises 2.5 to 50 mM phosphate. In a related embodiment, the buffer comprises 5 to 25 mM phosphate. In particular embodiments, the buffer comprises 10 to 20 mM phosphate.</p>
+      <p id="p-00018-en" num="0018">The liquid stable vaccines of the present invention comprise an amino acid. In certain embodiments the amino acid is arginine. In other embodiments, the amino acid is methionine. In still other embodiments, the amino acid is glycine. In yet other embodiments, the amino acid is glutamic acid. In related embodiments, the liquid stable vaccines comprise both arginine and methionine. In other embodiments, the liquid stable vaccines comprise both arginine and glycine. In yet other embodiments, the liquid stable vaccines comprise both glycine and methionine. In related embodiments, the liquid stable vaccines comprise both glutamic acid and methionine. In other embodiments, the liquid stable vaccines comprise both glutamic acid and glycine. In yet other embodiments, the liquid stable vaccines comprise both glutamic acid and arginine. In related embodiments, the liquid stable vaccines comprise arginine, glutamic acid, and methionine. In other embodiments, the liquid stable vaccines comprise arginine, glutamic acid, and glycine. In yet other embodiments, the liquid stable vaccines comprise arginine, glutamic acid, and methionine. In still other embodiments, the liquid stable vaccines comprise arginine, glycine, and methionine. In yet other embodiments, the liquid stable vaccines comprise arginine, glycine, and methionine. In particular embodiments, the liquid stable vaccines comprise arginine, glycine, methionine, and glutamic acid.</p>
+      <p id="p-00019-en" num="0019">In particular embodiments the final concentration of arginine, or glutamic acid, or glycine in the liquid stable vaccine is 0.15 to 0.6 M. In related embodiments, the final concentration of arginine, or glutamic acid, or glycine in the liquid stable vaccine is 0.2 to 0.5 M. In more particular embodiments, the final concentration of arginine, or glutamic acid, or glycine in the liquid stable vaccine is 0.25 to 0.35 M. In even more particular embodiments, the final concentration of arginine, or glutamic acid, or glycine in the liquid stable vaccine is 0.3 M.</p>
+      <p id="p-00020-en" num="0020">In particular embodiments the final combined concentration of arginine, and/or glutamic acid, and/or glycine in the liquid stable vaccine is 0.15 to 0.6 M. In related embodiments, the final combined concentration of arginine, and/or glutamic acid, and/or glycine in the liquid stable vaccine is 0.2 to 0.5 M. In more particular embodiments, the final combined concentration of arginine, and/or glutamic acid, and/or glycine in the liquid stable vaccine is 0.25 to 0.35 M.</p>
+      <p id="p-00021-en" num="0021">In even more particular embodiments, the final combined concentration of arginine, and/or glutamic acid, and/or glycine in the liquid stable vaccine is 0.3 M.</p>
+      <p id="p-00022-en" num="0022">In particular embodiments the final concentration of methionine in the liquid stable vaccine is 0.025 to 0.3 M. In related embodiments, the final concentration of methionine in the liquid stable vaccine is 0.04 to 0.15 M. In more particular embodiments, the final concentration of methionine in the liquid stable vaccine is 0.06 to 0.09 M. In even more particular embodiments, the final concentration of methionine in the liquid stable vaccine is 0.07 M.</p>
+      <p id="p-00023-en" num="0023">The liquid stable vaccines of the present invention also can comprise a stabilizer protein. The stabilizer protein can be an intact protein and/or a protein hydrolysate. In particular embodiments the stabilizer protein is gelatin. In more particular embodiments the stabilizer protein contained by the liquid stable vaccine of the present invention is 0.4 to 1.6% gelatin.</p>
+      <p id="p-00024-en" num="0024">In alternative embodiments the stabilizer protein is a hydrolysate of whole casein. In particular embodiments of this type the stabilizer protein contained by the liquid stable vaccine of the present invention is 0.5-2.0% of a hydrolysate of whole casein. In certain embodiments the hydrolysate of whole casein is a proteolytic hydrolysate of whole casein.</p>
+      <p id="p-00025-en" num="0025">In addition, the liquid stable vaccines of the present invention can also further comprise an alcohol. In particular embodiments of this type the alcohol is ethanol. In more particular embodiments the liquid stable vaccine comprises 0.25 to 1.0% ethanol. In related embodiments, the liquid stable vaccines of the present invention can also comprise dextran sulfate. In particular embodiments the liquid stable vaccine comprises 1 to 20 mM dextran sulfate. In more particular embodiments the liquid stable vaccine comprises 2.5 to 10 mM dextran sulfate. In even more particular embodiments the liquid stable vaccine comprises 5 mM dextran sulfate.</p>
+      <p id="p-00026-en" num="0026">In addition, the liquid stable vaccines of the present invention can also further comprise a chelating agent. Such chelating agents can include, but are not limited to: ethylenediaminetetraacetic acid (EDTA), 1,2-bis(o-aminophenoxy)ethane-N,N,N′,N′-tetraacetic acid (BAPTA), ethylene glycol tetraacetic acid (EGTA), dimercaptosuccinic acid (DMSA), diethylene triamine pentaacetic acid (DTPA), and 2,3-Dimercapto-1-propanesulfonic acid (DMPS). The concentration of such chelating agents in the liquid vaccines of the present invention can vary from about 50 μM to 10 mM.</p>
+      <p id="p-00027-en" num="0027">In certain embodiments the chelating agent is EDTA. In particular embodiments the liquid stable vaccine comprises 50 μM to 10 mM EDTA. In certain embodiments to this type, the liquid stable vaccine comprises 50 to 200 μM EDTA. In other embodiments, the liquid stable vaccine comprises 250 μM to 7.5 mM EDTA. In still other embodiments, the liquid stable vaccine comprises 0.5 mM to 5.0 mM EDTA. In yet other embodiments, the liquid stable vaccine comprises 1.0 mM to 3.0 mM EDTA. In more particular embodiments, the liquid stable vaccine comprises about 2 mM EDTA.</p>
+      <p id="p-00028-en" num="0028">The liquid stable vaccines of the present invention can further comprise an adjuvant. In particular embodiments of this type, the adjuvant is aluminum phosphate. In other such embodiments, the adjuvant is aluminum hydroxide. In still other embodiments, the adjuvant is a low molecular weight copolymer adjuvant which can form cross-linkage in solution to become a high molecular weight gel. In yet other embodiments, the adjuvant is made up of gel particles of sodium acrylate in water. In still other embodiments the adjuvant is a combination of two or more such adjuvants.</p>
+      <p id="p-00029-en" num="0029">In certain embodiments the liquid stable vaccines of the present invention can further comprise a free radical scavenger and/or an antioxidant. In related embodiments, the liquid stable vaccines of the present invention are maintained in sealed containers that have an inert gas such as argon, nitrogen, or helium, above the liquid (e.g., have been back-filled with the inert gas).</p>
+      <p id="p-00030-en" num="0030">The liquid stable vaccines of the present invention can comprise a live attenuated canine virus. In certain embodiments the live attenuated canine virus is canine distemper virus. In other embodiments the live attenuated canine virus is canine adenovirus type 2. In yet other embodiments the live attenuated canine virus is canine parvovirus (CPV). In one particular embodiment of this type, the canine parvovirus is a canine parvovirus 2 (CPV-2). In yet another particular embodiment of this type, the canine parvovirus is a canine parvovirus 2a (CPV-2a). In still another particular embodiment of this type, the canine parvovirus is a canine parvovirus 2b (CPV-2b). In yet another particular embodiment of this type, the canine parvovirus is a canine parvovirus 2c (CPV-2c). In a specific embodiment of this type, the CPV-2c is ATCC accession No. PTA-13492. In yet another embodiment the canine parvovirus is a recombinant canine parvovirus that has been constructed to comprise a heterogenous CPV-2c/CPV-2 genome, i.e., the region encoding the capsid proteins is from a CPV-2c isolate and the region encoding the nonstructural proteins is from a CPV-2 isolate.</p>
+      <p id="p-00031-en" num="0031">In still other embodiments the live attenuated canine virus is canine parainfluenza virus. In particular embodiments the canine parainfluenza virus is a recombinant vector. In more particular embodiments the recombinant canine parainfluenza virus encodes and expresses a heterogeneous protein. In certain embodiments of this type, the heterogeneous protein is a non-canine antigen. In more particular embodiments the antigen is a poultry viral or bacterial antigen. In certain embodiments, the recombinant canine parainfluenza virus is a recombinant parainfluenza Virus 5.</p>
+      <p id="p-00032-en" num="0032">In yet other embodiments the live attenuated canine virus is canine coronavirus. In still other embodiments the live attenuated canine virus is canine pneumovirus. In yet other embodiments the live attenuated canine virus is infectious canine hepatitis virus. In still other embodiments the live attenuated canine virus is canine herpes virus. In yet other embodiments the live attenuated canine virus is rabies virus. In still other embodiments the live attenuated canine virus is canine minute virus. In yet other embodiments the live attenuated canine virus is canine influenza virus. In alternative embodiments the live attenuated virus is a pseudorabies virus.</p>
+      <p id="p-00033-en" num="0033">The liquid stable vaccines of the present invention can comprise a live attenuated feline virus. In certain embodiments the live attenuated feline virus is feline herpesvirus (FHV). In other embodiments the live attenuated feline virus is feline calicivirus (FCV). In yet other embodiments the live attenuated feline virus is feline pneumovirus (FPN). In still other embodiments the live attenuated feline virus is feline parvovirus (FPV). In yet other embodiments the live attenuated feline virus is feline leukemia virus (FeLV). In still other embodiments the live attenuated feline virus is feline infectious peritonitis virus (FIPV). In yet other embodiments the live attenuated feline virus is feline immunodeficiency virus (FIV). In still other embodiments the live attenuated feline virus is borna disease virus (BDV). In yet other embodiments the live attenuated feline virus is feline influenza virus. In still other embodiments the live attenuated feline virus is feline panleukopenia virus (FPLV). In yet other embodiments the live attenuated feline virus is feline coronavirus (FCoV). In still other embodiments the live attenuated feline virus is feline rhinotracheitis virus (FVR).</p>
+      <p id="p-00034-en" num="0034">In addition, the present invention provides liquid stable vaccines that are multivalent vaccines. In particular embodiments the multivalent vaccines of the present invention comprise only live attenuated virus vaccines. Such multivalent vaccines can contain any combination of live attenuated viruses. In particular embodiments of this type, the multivalent vaccine comprises a live attenuated canine distemper virus and a live attenuated canine parvovirus. In related embodiments the multivalent vaccine comprises a live attenuated canine distemper virus and a live attenuated canine adenovirus type 2. In other embodiments the multivalent vaccine comprises a live attenuated canine distemper virus and a live attenuated canine parainfluenza virus. In still other embodiments the multivalent vaccine comprises a live attenuated canine distemper virus, a live attenuated canine parvovirus, and a live attenuated canine parainfluenza virus. In yet other embodiments the multivalent vaccine comprises a live attenuated canine distemper virus, a live attenuated canine parvovirus, and a live attenuated canine adenovirus type 2.</p>
+      <p id="p-00035-en" num="0035">In still other embodiments the multivalent vaccine comprises a live attenuated canine distemper virus, a live attenuated canine parainfluenza virus, and a live attenuated canine adenovirus type 2. In yet other embodiments the multivalent vaccine comprises a live attenuated canine distemper virus, a live attenuated canine parvovirus, a live attenuated canine parainfluenza virus, and a live attenuated canine adenovirus type 2. In particular embodiments the multivalent vaccine comprises a live attenuated canine distemper virus, a live attenuated canine parvovirus, a live attenuated canine parainfluenza virus, a live attenuated canine adenovirus type 2, and a live attenuated canine coronavirus. In related embodiments the multivalent vaccine comprises a live attenuated canine distemper virus, a live attenuated canine parvovirus, a live attenuated canine parainfluenza virus, a live attenuated canine adenovirus type 2, and a live attenuated feline coronavirus. In particular embodiments of this type, the multivalent vaccine comprises a live attenuated canine distemper virus, a live attenuated canine adenovirus type 2, a live attenuated canine parvovirus, a live attenuated canine parainfluenza virus, and a live attenuated canine influenza virus.</p>
+      <p id="p-00036-en" num="0036">In other embodiments the present invention provides liquid stable vaccines that are multivalent vaccine that comprise a live attenuated canine adenovirus type 2 and a live attenuated canine parainfluenza virus. In yet other embodiments the multivalent vaccine comprises a live attenuated canine adenovirus type 2 and a live attenuated canine parvovirus. In yet other embodiments the multivalent vaccine comprises a live attenuated canine parvovirus and a live attenuated canine parainfluenza virus. In still other embodiments the multivalent vaccine comprises a live attenuated canine adenovirus type 2, a live attenuated canine parvovirus, and a live attenuated canine parainfluenza virus. In particular embodiments of this type, the multivalent vaccine comprises a live attenuated canine adenovirus type 2, a live attenuated canine parvovirus, a live attenuated canine parainfluenza virus, and a live attenuated canine influenza virus.</p>
+      <p id="p-00037-en" num="0037">Alternatively, the liquid stable vaccines of the present invention can further comprise a killed virus and/or a killed bacterium (e.g., a bacterin) and/or a sub-fraction of a bacterin. Accordingly, any of the liquid stable vaccines of the present invention that comprise one or more live attenuated virus vaccines can further comprise a killed virus and/or killed bacterium and/or a sub-fraction of a bacterin. In particular embodiments, the killed virus is a canine influenza virus. In other embodiments, the killed virus is a canine pneumovirus. In still other embodiments, the killed virus is a canine coronavirus. In yet other embodiments, a liquid stable vaccine of the present invention can comprise two or more of these killed canine viruses.</p>
+      <p id="p-00038-en" num="0038">In certain embodiments, the killed bacterium is a <i>Bordetella bronchiseptica. </i>In yet other embodiments the killed bacterium is a <i>Mycoplasma </i>species. In still other embodiments the killed bacterium is an <i>Ehrlichia canis. </i>In yet other embodiments the killed bacterium is an <i>Anaplasma </i>species. In yet other embodiments the killed bacterium is a <i>Leptospira. </i>In one such embodiment, the <i>Leptospira </i>is <i>Leptospira canicola. </i>In another embodiment, the <i>Leptospira </i>is <i>Leptospira grippotyphosa. </i>In yet another embodiment, the <i>Leptospira </i>is <i>Leptospira hardjo. </i>In still another embodiment the <i>Leptospira </i>is <i>Leptospira icterohaemorrhagiae. </i>In yet another embodiment the <i>Leptospira </i>is <i>Leptospira Pomona. </i>In still another embodiment the <i>Leptospira </i>is <i>Leptospira interrogans. </i>In yet another embodiment the <i>Leptospira </i>is <i>Leptospira autmnalis. </i>In still another embodiment the <i>Leptospira </i>is <i>Leptospira Bratislava. </i>In yet other embodiments, a liquid stable vaccine of the present invention can comprise two or more of these killed bacteria. In a particular embodiment the liquid stable vaccine comprises <i>Leptospira canicola, Leptospira grippotyphosa, Leptospira Pomona, </i>and <i>Leptospira icterohaemorrhagia. </i></p>
+      <p id="p-00039-en" num="0039">The present invention further provides methods of aiding in the protection of a feline or canine against a clinical disease that arises from a canine or feline virus infection comprising administering a vaccine of the present invention to the animal. In certain embodiments the administration is performed mucosally. In other embodiments the administration is performed parenterally. In still other embodiments the administration is performed intradermally. In yet other embodiments the administration is performed transdermally. In more specific embodiments, a vaccine of the present invention is administered to the animal subcutaneously. In other specific embodiments, a vaccine of the present invention is administered to the animal intramuscularly. The present invention also includes the use of primary and/or booster vaccines.</p>
+      <p id="p-00040-en" num="0040">In particular embodiments, the animal subject is a canine and the method comprises administering to the canine a liquid stable vaccine of the present invention that comprises a live attenuated virus. In specific embodiments the liquid stable vaccine comprises a live attenuated canine distemper virus, a live attenuated canine adenovirus type 2, a live attenuated canine parvovirus, and a live attenuated canine parainfluenza virus. In certain embodiments of this type, the liquid stable vaccine comprises a live attenuated canine distemper virus, a live attenuated canine adenovirus type 2, a live attenuated canine parvovirus, a live attenuated canine parainfluenza virus, and a live attenuated canine influenza virus. In other embodiments of this type, the liquid stable vaccine comprises a live attenuated canine distemper virus, a live attenuated canine adenovirus type 2, a live attenuated canine parvovirus, a live attenuated canine parainfluenza virus, and a killed attenuated canine influenza virus.</p>
+      <p id="p-00041-en" num="0041">Methods of making any and all of the liquid stable vaccines of the present invention are also provided. In certain embodiments the method comprises combining a therapeutically effective amount of a live attenuated virus with a 10-30% sugar additive, an amino acid, and a buffered solution at pH 6.0 to pH 8.0 to form a liquid stable vaccine. The amino acid can be arginine, glycine, glutamic acid, methionine, or combinations of arginine, glycine, glutamic acid and/or methionine. In particular embodiments the arginine and/or glycine and/or glutamic acid has a final concentration of 0.15 to 0.6 M in the liquid stable vaccine. In certain embodiments the methionine has a final concentration of 0.025 to 0.3 M in the liquid stable vaccine. In particular embodiments the therapeutically effective amount of a live attenuated virus is a therapeutically effective amount of a live attenuated canine virus. In specific embodiments of this type, the therapeutically effective amount of a live attenuated canine virus includes therapeutically effective amounts of a live attenuated canine distemper virus, a live attenuated canine adenovirus type 2, a live attenuated canine parvovirus, and a live attenuated canine parainfluenza virus.</p>
+      <p id="p-00042-en" num="0042">These and other aspects of the present invention will be better appreciated by reference to the following Detailed Description.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00043-en" num="0043">In contrast to killed virus vaccines, the liquid stable live virus vaccines of the present invention are attenuated. Heretofore, particular care would need to be taken when formulating such an attenuated live virus vaccine to maintain the titer of the attenuated viruses at a level that is safely below that which can lead to a significant adverse event.</p>
+      <p id="p-00044-en" num="0044">Indeed, most live attenuated canine or feline virus vaccines are lyophilized, and lyophilization can lead to substantial declines in the efficacy of the attenuated live virus vaccines both due to the lyophilization process itself, as well as over time during long-term storage.</p>
+      <p id="p-00045-en" num="0045">The present invention has overcome this problem by providing liquid stable vaccines that remain efficacious, even during storage, without needing to increase the initial titer of the live attenuated viral antigen above a reliably safe level. As an additional benefit, the present invention provides a means for lowering the cost of manufacture of the vaccines provided by significantly reducing the amount of live attenuated viruses necessary to make such a safe and efficacious vaccine. In addition, the live attenuated virus vaccines of the present invention are more convenient to use than their lyophilized counterparts. Accordingly, the present invention provides safe and efficacious live attenuated virus vaccines that can be stored as liquids at refrigerated temperatures and still remain stable for 12 to 18 months or even longer.</p>
+      <p id="p-00046-en" num="0046">Moreover surprisingly, the liquid stable live virus vaccines of the present invention can include canine and/or feline viruses of any type. Thus, the liquid stable live virus vaccines of the present invention can include both enveloped and non-enveloped viruses. In addition, the liquid stable live virus vaccines of the present invention can include live attenuated viruses having single-stranded RNA genomes, single-stranded DNA genomes, or double-stranded DNA genomes.</p>
+      <p id="p-00047-en" num="0047">In addition, the liquid stable live virus vaccines of the present invention can also comprise recombinant canine or feline vectors that are either alone, and/or with other such recombinant vectors, and/or with live attenuated canine or feline viruses and/or in combination with killed bacteria and/or killed canine or feline viruses. Such recombinant canine or feline vectors can further encode one or more heterologeous viral or bacterial antigens. A particular example of such a recombinant vector is a recombinant canine parainfluenza Virus 5, which recently has been described by Li et al., [<i>J. of Virology </i>87(10) 5985-5993 (2013); hereby incorporated by reference in its entirety].</p>
+      <p id="p-00048-en" num="0048">Recombinant vectors of the liquid stable live virus vaccines of the present invention, such as a recombinant parainfluenza Virus 5, can encode a heterologeous antigen from a canine virus, and/or a feline virus, and/or a human virus, and/or a simian virus, and/or a bovine virus, and/or an ovis virus, and/or a swine virus, and/or a poultry virus (e.g., a chicken virus). In particular embodiments, the liquid stable live virus vaccines of the present invention comprise a recombinant parainfluenza Virus 5 that encodes one or more antigens from one or more chicken viruses.</p>
+      <p id="p-00049-en" num="0049">Surprisingly, in the presence of a chelator (e.g., 2 mM EDTA) and/or an adjuvant (e.g., aluminium phosphate) the liquid stable live virus vaccines of the present invention retain their stability even when killed bacteria are included in the formulation (see, Example 2 below). Accordingly, the liquid stable live virus vaccines of the present invention can further comprise one or more killed canine or feline viruses and/or bacteria (e.g., bacterins), and/or subfractions of a bacterin.</p>
+      <p id="p-00050-en" num="0050">The use of singular terms for convenience in the description is in no way intended to be so limiting. Thus, for example, reference to a “sugar additive” includes reference to one or more of such sugar additives, unless otherwise specified. The use of plural terms is also not intended to be limiting, unless otherwise specified. Similarly, a chemical compound that can be referred to as an acid or its corresponding base, unless otherwise specified, when denoted herein as either is intended to mean either form of the compound. Thus, the use of the term glutamic acid is meant to include glutamate and vice versa.</p>
+      <p id="p-00051-en" num="0051">As used herein, a “vaccine” is a composition that is suitable for application to an animal (including, in certain embodiments, humans) which upon administration to the animal induces an immune response strong enough to minimally aid in the protection from a clinical disease arising from an infection with a wild-type micro-organism, i.e., strong enough for aiding in the prevention of the clinical disease, and/or preventing, ameliorating, or curing the clinical disease. Unless expressly indicated otherwise, the use of the term vaccine includes multivalent vaccines.</p>
+      <p id="p-00052-en" num="0052">As used herein, a “multivalent vaccine” is a vaccine that comprises two or more different antigens. In a particular embodiment of this type, the multivalent vaccine stimulates the immune system of the recipient against two or more different pathogens.</p>
+      <p id="p-00053-en" num="0053">As used herein, a “liquid stable” vaccine is a vaccine maintained as a liquid (including a liquid multivalent vaccine) that remains efficacious for at least one year when stored at or below 7° C. (e.g., in a standard refrigerator, and/or at 0° C.-7° C.). In particular embodiments a liquid stable vaccine remains efficacious when stored at or below 7° C. for at least 1.5 years. In more particular embodiments a liquid stable vaccine remains efficacious when stored at or below 7° C. for at least 2 years. In still more particular embodiments a liquid stable vaccine remains efficacious when stored at or below 7° C. for at least 2.5 to 3 years.</p>
+      <p id="p-00054-en" num="0054">As used herein, the terms “protect”, “protecting”, “provide protection to”, “providing protection to”, and “aids in the protection” do not require complete protection from any indication of infection. For example, “aids in the protection” can mean that the protection is sufficient such that, after challenge, symptoms of the underlying infection are at least reduced, and/or that one or more of the underlying cellular, physiological, or biochemical causes or mechanisms causing the symptoms are reduced and/or eliminated. It is understood that “reduced,” as used in this context, means relative to the state of the infection, including the molecular state of the infection, not just the physiological state of the infection.</p>
+      <p id="p-00055-en" num="0055">As used herein, the term “therapeutically effective amount” is an amount of a given antigen, e.g., live attenuated virus, which is sufficient to provide protection to and/or aid in the protection from the pathogen that the antigen is being administered to protect against, when provided in a single administration and/or when intended, provided as an initial administration with one or more subsequent booster administration(s).</p>
+      <p id="p-00056-en" num="0056">As used herein, an “efficacious” vaccine comprises a therapeutically effective amount of a given antigen.</p>
+      <p id="p-00057-en" num="0057">As used herein, the term “pharmaceutically acceptable” is used adjectivally to mean that the modified noun is appropriate for use in a pharmaceutical product. When it is used, for example, to describe an excipient in a pharmaceutical vaccine, it characterizes the excipient as being compatible with the other ingredients of the composition and not disadvantageously deleterious to the intended recipient.</p>
+      <p id="p-00058-en" num="0058">The term “carrier” refers to a diluent, adjuvant, excipient, or vehicle with which the compound is administered. Pharmaceutical acceptable carriers can be sterile liquids, such as water and/or oils, including those of petroleum, animal, vegetable or synthetic origin, such as peanut oil, soybean oil, mineral oil, sesame oil and the like. Water or aqueous solution saline solutions and aqueous dextrose and glycerol solutions can be employed as carriers, particularly for injectable solutions.</p>
+      <p id="p-00059-en" num="0059">As used herein, an “adjuvant” is a substance that is able to favor or amplify the cascade of immunological events, ultimately leading to a better immunological response, i.e., the integrated bodily response to an antigen. An adjuvant is in general not required for the immunological response to occur, but favors or amplifies this response.</p>
+      <p id="p-00060-en" num="0060">As used herein, “systemic administration” is administration into the circulatory system of the body (comprising the cardiovascular and lymphatic system), thus affecting the body as a whole rather than a specific locus such as the gastro-intestinal tract (via e.g., oral or rectal administration) and the respiratory system (via e.g., intranasal administration). Systemic administration can be performed e.g., by administering into muscle tissue (intramuscular), into the dermis (intradermal, transdermal, or supradermal), underneath the skin (subcutaneous), underneath the mucosa (submucosal), in the veins (intravenous) etc.</p>
+      <p id="p-00061-en" num="0061">“Parenteral administration” includes subcutaneous injections, submucosal injections, intravenous injections, intramuscular injections, intradermal injections, and infusion.</p>
+      <p id="p-00062-en" num="0062">As used herein, the term “canine” includes all domestic dogs, <i>Canis lupus familiaris </i>or <i>Canis familiaris, </i>unless otherwise indicated.</p>
+      <p id="p-00063-en" num="0063">Canine parvovirus “CPV” was first isolated in 1978 and was named CPV-2 to distinguish it from canine parvovirus Minute virus (CMV or CPV-1). Approximately a year after the initial isolation of CPV-2, a genetic variant, CPV-2a, was identified. In the mid-1980's, a second genetic variant, CPV-2b, was identified. CPV-2a and CPV-2b soon completely displaced CPV-2. Today, CPV-2a is no longer detected in the United States [Parrish and Kawaoka, <i>Annu Rev. Microbiol., </i>59:553-586 (2005)]. A fourth CPV variant in this family, CPV-2c, was first described in 2000 [see, U.S. Pat. No. 8,227,593; U.S. Pat. No. 8,258,274; Hong et al., <i>J. Vet. Diagn. Invest. </i>(5):535-9 (2007)]. U.S. provisional application 61/739,067 filed Dec. 19, 2013, the contents of which are hereby incorporated by reference in their entireties, describes a specific attenuated CPV-2c isolate (ATCC accession No. PTA-13492) that was subsequently deposited on January 24, 2013 with the American Type Culture Collection (ATCC) 10801 University Boulevard, Manassas, Va. 20110-2209, U.S.A., under conditions that satisfy the requirements of the Budapest Treaty on the International Recognition of the Deposit of Microorganisms for the Purposes of Patent Procedure. In addition, a recombinant canine parvovirus has been constructed that comprises a heterogenous CPV-2c/CPV-2 genome, i.e., the region encoding the capsid proteins is from a CPV-2c isolate and the region encoding the nonstructural proteins is from a CPV-2 isolate [WO2011107534 (A1); US 20120328652; WO2012007589 (A1) the contents of which are hereby incorporated by reference in their entireties]. As used herein, a vaccine of the present invention that comprises “canine parvovirus” can comprise one or more of these CPV types/variants/isolates, including the recently constructed recombinant canine parvovirus that comprises the heterogenous CPV-2c/CPV-2 genome.</p>
+      <p id="p-00064-en" num="0064">As used herein, the term “feline” refers to any member of the Felidae family. Members of this family include wild, zoo, and domestic members, such as any member of the subfamilies</p>
+      <p id="p-00065-en" num="0065">Felinae, e.g., cats, lions, tigers, pumas, jaguars, leopards, snow leopards, panthers, North American mountain lions, cheetahs, lynx, bobcats, caracals or any cross breeds thereof. Cats also include domestic cats, pure-bred and/or mongrel companion cats, show cats, laboratory cats, cloned cats, and wild or feral cats.</p>
+      <p id="p-00066-en" num="0066">As used herein a “sugar additive” is a 5 to 12 carbon sugar (e.g., sucrose, maltose, trehalose, dextrose, lactose, glucose, fructose, galactose) or sugar alcohol/polyol (e.g., sorbitol, mannitol, arabitol, inositol, maltitol). Unless otherwise specifically stated to the contrary, the percent (%) of the sugar additive is provided as a weight (w) of the sugar additive to the volume (v) of the vaccine, (w/v) in the vaccine.</p>
+      <p id="p-00067-en" num="0067">As used herein, unless otherwise specifically stated to the contrary, the percent (%) of a solid additive, e.g., sugar additive or gelatin, in a vaccine is based on a 1% solution being lg of solid/100 ml of vaccine volume (w/v).</p>
+      <p id="p-00068-en" num="0068">As used herein, unless otherwise specifically stated to the contrary, the percent (%) of a liquid additive, e.g., ethanol, in a vaccine is based on a 1% solution being 1 ml of liquid additive/100 ml of vaccine volume (v/v).</p>
+      <p id="p-00069-en" num="0069">As used herein, unless otherwise specifically stated to the contrary, the pH value provided is the pH value determined/measured at 25° C.</p>
+      <p id="p-00070-en" num="0070">As used herein the term “approximately” is used interchangeably with the term “about” and signifies that a value is within twenty-five percent of the indicated value i.e., a concentration of “about” 2 mM EDTA can be 1.5 mM to 2.5 mM EDTA.</p>
+      <p id="p-00071-en" num="0071">The hydrolysate of whole casein that can be used in the liquid stable vaccines of the present invention can be obtained by a number of procedures including e.g., as an acid hydrolysate or an enzymatic hydrolysate. Such hydrolysates contain in the form of mixed amino acids and peptides all amino acids originally present in casein. One pancreatic hydrolysate of whole casein that can be used in the liquid stable vaccines of the present invention is sold as CASEIN HYDROLYSATE ENZYMATIC® by MP Biomedicals. Comparable products are sold under the name of NZ-AMINE®, NZ-AMINE® A, NZ-AMINE® AS, and NZ-AMINE® B, and Tryptone by Sigma-Aldrich.</p>
+      <p id="p-00072-en" num="0072">Because the liquid stable vaccines of the present invention ideally range in pH from pH 6.0 to pH 8.0, the liquid stable vaccines of the present invention can comprise a buffer. Buffers for use in the liquid stable vaccines of the present invention include but are not limited to: Tris, Tris-Histidine, BIS-Tris, BIS-Tris-Propane, potassium and/or sodium phosposphate, sodium or potassium pyrophosphate, imidazole, PIPES, ACES, MOPS, MOPSO, BES, TES, tricine, glycylglycine, and HEPES. The buffers can be brought to the desired pH with the use of any suitable counterion.</p>
+      <p id="p-00073-en" num="0073">The vaccines of the present invention can either contain an adjuvant or alternatively not contain an adjuvant, often depending on the antigen(s) that the vaccine contains. Examples of adjuvants for use in the vaccines of the present invention include aluminum phosphate, e.g., REHYDROPHOS® (General Chemical, Parsippany, N.J.) and/or aluminum hydroxide, e.g., REHYDROGEL®, REHYDROGEL® HPA, or REHYDROGEL® LV (General Chemical, Parsippany, N.J.), and/or a low molecular weight copolymer adjuvant which can form cross-linkage in solution to become a high molecular weight gel, e.g., POLYGEN™ (MVP Laboratories, Omaha), and/or an adjuvant made up of gel particles of sodium acrylate in water, e.g., MONTANIDE™ PET GEL A™ (Seppic, Paris France). When added, the amount of adjuvant is usually between about 1% and 20% (v/v) in the vaccine. In particular embodiments the amount of adjuvant is between about 2% to 10% (v/v). In Example 2 provided below, the adjuvant is about 5% (v/v).</p>
+      <p id="p-00074-en" num="0074">The vaccines of the present invention can also contain a chelator. Examples of appropriate chelators include, ethylenediaminetetraacetic acid (EDTA), 1,2-bis(o-aminophenoxy)ethane-N,N,N′,N′-tetraacetic acid (BAPTA), ethylene glycol tetraacetic acid (EGTA), dimercaptosuccinic acid (DMSA), and diethylene triamine pentaacetic acid (DTPA),2,3-Dimercapto-1-propanesulfonic acid (DMPS).</p>
+      <p id="p-00075-en" num="0075">Multivalent Vaccines: The present invention provides liquid stable multivalent vaccines. A liquid stable multivalent canine vaccine of the present invention for example, can include two or more of the following: canine distemper virus, canine adenovirus type 2, canine parvovirus, canine parainfluenza virus, canine influenza virus, canine pneumovirus, canine coronavirus, canine herpes virus, infectious canine hepatitis virus, canine minute virus, rabies virus, and pseudorabies virus. Such liquid stable vaccines can be also be combined with one or more attenuated or killed antigens such as canine influenza virus, canine coronavirus, <i>Bordetella bronchiseptica, </i>a <i>Mycoplasma </i>species, <i>Ehrlichia canis, </i>an <i>Anaplasma </i>species, <i>Leptospira canicola, Leptospira grippotyphosa, Leptospira hardjo, Leptospira icterohaemorrhagiae, Leptospira pomona, Leptospira interrogans, Leptospira autmnalis, </i>and <i>Leptospira Bratislava </i>and stored, or alternatively prior to administration.</p>
+      <p id="p-00076-en" num="0076">In addition, a liquid stable multivalent feline vaccine of the present invention can comprise one or more of the following feline pathogens: a feline herpesvirus, feline calicivirus, feline pneumovirus, feline parvovirus, feline leukemia virus, feline infectious peritonitis virus, feline immunodeficiency virus, borna disease virus, feline influenza virus, and avian influenza. Such liquid stable vaccines can be subsequently combined with attenuated or killed <i>Chlamydophila felis </i>and/or <i>Bartonella </i>spp. (e.g., <i>B. henselae</i>) and stored, or alternatively prior to administration.</p>
+      <p id="p-00077-en" num="0077">The vaccines of the present invention can also contain an anti-bacterial such as an antibiotic. Examples of such antibiotics can include: 10-100 μg/mL gentamicin, 0.5-5.0 μg/mL amphotericin B, 10-100 μg/mL tetracycline, 10-100 units/mL nystatin (mycostatin), 10-100 units/mL penicillin, 10-100 μg streptomycin, 10-100 μg polymyxin B, and 10-100 μg neomycin.</p>
+      <p id="p-00078-en" num="0078">Vaccine Administration: The liquid stable virus vaccines of the present invention may be administered by any conventional means, for example, by systemic administration, including by parenteral administration such as, without limitation, subcutaneous or intramuscular administration. The liquid stable virus vaccines of the present invention also may be administered by mucosal administration, such as by intranasal, oral, intratracheal, rectal, and/or ocular administration. Alternatively, the vaccines may be administered via a skin patch, scarification, or topical administration. It is contemplated that a liquid stable virus vaccine of the present invention also may be administered via the drinking water and/or food of the recipient animal subjects. It is further contemplated that such vaccines may be administered in the form of a treat or toy.</p>
+      <p id="p-00079-en" num="0079">The vaccines (including multivalent vaccines) of the present invention also may be administered as part of a combination therapy, i.e., a therapy that includes, in addition to the vaccine itself, administering one or more additional active agents, therapies, etc. In that instance, it should be recognized the amount of vaccine that constitutes a “therapeutically effective” amount may be more or less than the amount of vaccine that would constitute a “therapeutically effective” amount if the vaccine were to be administered alone. Other therapies may include those known in the art, such as, e.g., analgesics, fever-reducing medications, expectorants, anti-inflammation medications, antihistamines, and/or administration of fluids.</p>
+      <p id="p-00080-en" num="0080">The immunogenicity level may be determined experimentally by challenge dose titration study techniques generally known in the art. Such techniques typically include vaccinating a number of animal subjects with the vaccine at different dosages and then challenging the animal subjects with the virulent virus to determine the minimum protective dose.</p>
+      <p id="p-00081-en" num="0081">Factors affecting the preferred dosage regimen may include, for example, the species or breed (e.g., of a canine or feline), age, weight, sex, diet, activity, lung size, and condition of the subject; the route of administration; the efficacy, safety, and duration-of-immunity profiles of the particular vaccine used; whether a delivery system is used; and whether the vaccine is administered as part of a drug and/or vaccine combination. Thus, the dosage actually employed can vary for specific animals, and, therefore, can deviate from the typical dosages set forth above. Determining such dosage adjustments is generally within the skill of those in the art of vaccine development using conventional means.</p>
+      <p id="p-00082-en" num="0082">Similarly, the volume with which such a dose can be administered typically lies between 0.1 mL (typical for intradermal or transdermal application) and 5.0 mL. A typical range for the administration volume is between 0.2 and 2.0 mL, and about 1.0 to 2.0 mL for intramuscular or subcutaneous administration.</p>
+      <p id="p-00083-en" num="0083">It is contemplated that the vaccine may be administered to the vaccine recipient at a single time or alternatively, two or more times over days, weeks, months, or years. In some embodiments, the vaccine is administered at least two times. In certain such embodiments, for example, the vaccine is administered twice, with the second dose (e.g., a booster) being administered at least 2 weeks after the first dose. In particular embodiments, the vaccine is administered twice, with the second dose being administered no longer than 8 weeks after the first dose. In other embodiments, the second dose is administered from 1 week to 2 years after the first dose, from 1.5 weeks to 8 weeks after the first dose, or from 2 to 4 weeks after the first dose. In other embodiments, the second dose is administered about 3 weeks after the first dose.</p>
+      <p id="p-00084-en" num="0084">In the above embodiments, the first and subsequent dosages may vary, such as in amount and/or form. Often, however, the dosages are the same in amount and form. When only a single dose is administered, the amount of vaccine in that dose alone generally comprises a therapeutically effective amount of the vaccine. When, however, more than one dose is administered, the amounts of vaccine in those doses together may constitute a therapeutically effective amount. In addition, a vaccine may be initially administered, and then a booster may be administered e.g., from 2 to 12 weeks later. However, subsequent administrations of the vaccine may be made on an annual (1-year) or bi-annual (2-year) basis, regardless as to whether a booster was administered or not.</p>
+      <p id="p-00085-en" num="0085">The present invention may be better understood by reference to the following non-limiting</p>
+      <p id="p-00086-en" num="0086">Examples, which are provided as exemplary of the invention. The following Examples are presented in order to more fully illustrate embodiments of the invention. They should in no way be construed, however, as limiting the broad scope of the invention.</p>
+      <heading id="h-00006-en" level="1">EXAMPLES</heading>
+      <heading id="h-00007-en" level="1">Example 1  </heading>
+      <heading id="h-00008-en" level="1">Stability of Liquid Canine Virus Vaccines</heading>
+      <heading id="h-00009-en" level="1">Materials and Methods</heading>
+      <heading id="h-00010-en" level="2">Materials: </heading>
+      <p id="p-00087-en" num="0087">Cell culture grade sucrose and sorbitol are purchased from Fisher Scientific. Molecular grade L-Arginine hydrochloride, L-Methionine, L-Histidine, and sodium chloride with a purity of more than 98% are purchased from Sigma. Dextran sulfate with an average molecular weight 10,000 at a purity &gt;95% is purchased from Sigma. Molecular biology grade ethanol (&gt;99%), TWEEN 80, TWEEN 20, 1.0M Tris (pH 8.0) and EDTA (pH 8.0) solutions are purchased from Sigma. 20% Gelatin bloom 250 solution and 7.61% NZ Amine AS solution were prepared from the best available commercial reagents.</p>
+      <heading id="h-00011-en" level="2">Bulking Antigen Preparation: </heading>
+      <p id="p-00088-en" num="0088">The following solutions have been prepared and sterilized by 0.2 μm filtration: 80% sucrose, 70% sorbitol, 1.0 M L-Arginine (pH 7.2), 5% L-Methioinine, 5 mM dextran sulfate. Bulk antigens CDV, CAV2, CPV, and CPI having titers between 6.5 to 9.5 were frozen at −80° C. to be thawed immediately before blending.</p>
+      <heading id="h-00012-en" level="2">Liquid Vaccine Blending and Filling: </heading>
+      <p id="p-00089-en" num="0089">The procedure to make a liquid vaccine CDV, CAV2, CPV, and CPI blend (1.0 mL per dose) is as follows: one dose amount of antigens are blended into different formulations as shown in Table 1 below, with target titers of 5.0 to 7.5 (Log<sub>10 </sub>TCID<sub>50</sub>) for the viral antigens. Prepare and label a 200 mL sterilized container, and then add each stabilizer and excipient component to the container following the calculated amount based on the final concentration of each component as shown in Table 1 below.</p>
+      <p id="p-00090-en" num="0090">Adjust with doubly distilled water (ddH2O) to the target volume for stabilizers and excipients. Mix on stirring plate for at least 10 min until all components are fully dissolved. Cool down and keep the stabilizer solution at 4° C. until the antigens are ready.</p>
+      <p id="p-00091-en" num="0091">Thaw the frozen antigen in a 37° C. water bath with occasional shaking until almost all ice is melted. Some of the antigens have visible cell debris in the solution, so mix the antigens thoroughly before pipetting. The thawed antigen should be kept at 2-8° C. for no more than 8 hours prior to usage. Add an appropriate amount of CDV, CAV2, CPV, and CPI to the labeled container with the stabilizer solutions. Mix on the stirring plate until the antigens and stabilizers are homogeneously blended. Try to avoid generating bubbles and foams during this mixing step. Measure the pH at 25° C. and adjust the pH with either 1M HCL or 1M NaOH to the target pH if the pH is not within 7.2±0.1. Keep the vaccine blend at 2-8° C. until dispensing in the same day or aliquot into small volume and frozen at &lt;−70° C. for future use. Dispense vaccine blend into 2 mL glass ampule vials at 1 mL per vial. Add argon gas to the ampule vials after filling to help prevent oxidation during storage, and then heat seal the ampule. Label the ampule with sample name, lot number, storage temperature, date and then transfer into boxes, and store at different temperature as designated.</p>
+      <heading id="h-00013-en" level="2">Stability Testing at Accelerated Temperature and Real-Time: </heading>
+      <p id="p-00092-en" num="0092">Liquid samples were stored at 25° C.±1° C. and 4° C.±1° C., respectively in the corresponding incubators. 25° C. was used for accelerated stability testing for screening purposes, while the samples stored at 4° C. were the real-time stability samples. At the designated time point, 3 vials from each formulation was retrieved and the titer of each antigen was measured by cell culture based titration assay and reported as a median tissue culture infective dose (TCID<sub>50</sub>) and/or as a 50% fluorescent antibody infective dose (FAID<sub>50</sub>).</p>
+      <heading id="h-00014-en" level="1">Analytical Methods</heading>
+      <heading id="h-00015-en" level="2">CPI Potency: </heading>
+      <p id="p-00093-en" num="0093">Dilutions of virus samples are inoculated onto dog kidney (DK) cells. After 4-6 days, monolayers are fixed and stained with fluorescein-conjugated CPI antiserum, and the virus titer is calculated by the Spearman-Karber Method [Cunningham, C. H. <i>A Laboratory Guide in Virology, </i>7<sup>th </sup>edition, Burgess Publishing Co., Minneapolis, Minn. (1973); Kaplan, M. M. and Koprowski, H., <i>Laboratory Techniques in Rabies, World Health Organization, Switzerland, </i>(1973)]</p>
+      <heading id="h-00016-en" level="2">CDV Potency: </heading>
+      <p id="p-00094-en" num="0094">Dilutions of virus samples were inoculated onto Vero cells. After 5-7 days, monolayers are observed for cytopathic effect, and the virus titer is calculated by the Spearman-Karber Method, as cited above.</p>
+      <heading id="h-00017-en" level="2">CAV2 Potency: </heading>
+      <p id="p-00095-en" num="0095">Dilutions of virus samples were inoculated onto DK cells. After 7 days, monolayers are observed for cytopathic effect, and the virus titer is calculated by the Spearman-Karber Method, as cited above.</p>
+      <heading id="h-00018-en" level="2">CPV Potency: </heading>
+      <p id="p-00096-en" num="0096">Dilutions of virus samples were inoculated onto DK cells. After 3 days, monolayers are stained with fluorescein-conjugated CPV antiserum, and the virus titer is calculated by the Spearman-Karber Method, as cited above.</p>
+      <heading id="h-00019-en" level="1">Results</heading>
+      <heading id="h-00020-en" level="2">Accelerated Stability Testing at 25° C.: </heading>
+      <p id="p-00097-en" num="0097">Two studies have been carried out for liquid formulation screening. The first study includes formulations L-001 to L-008 and the second study includes formulations L-009 to L-026. (See Table 1 for details of the formulations.) Liquid samples stored in sealed glass ampule vials with 1 mL per vial per dose are tested at different time points after storage at 25° C. or 4° C. For 25° C. storage samples, the stability data for CDV, CAV2 and CPI are shown in Table 2. CPV was not tested for 25° C. storage since the liquid CPV is considered as the most stable fraction among the four viruses. For Study 1 samples that were incubated at 25° C. (L-001 to L-008) day 0, week 6, and week 8 data are used to compare the different formulations. For Study 2 samples that were incubated at 25° C. (L-009 to L-026) day 0, week 6, and week 12 samples are used for formulation screening. Additional time points in between have been tested and the trend is similar. Based on the degradation trend, the relative stability of each formulation are manually ranked as shown in Table 2 with five “+” being most stable and one “+” being the least stable. Each virus fraction is ranked individually and then the overall ranking accommodates all 3 viruses. Based on the ranking and comparison, a number of trends were observed. Accordingly, among the three saccharides tested (sucrose, sorbitol and glycerol), the stabilizing contribution of sucrose and sorbitol were significantly better than glycerol. There is also a strong preference for the higher concentration of sugar with 17%-25% combined sugar performing better than formulations with less than 10%. Among stabilizers from proteins or amino acids, 0.3M L-Arginine had the highest stability contribution, followed by 1% Methionine, 0.8% Gelatin and 1% NZ Amine. Among the other stabilizers, dextran sulfate and the free radical scavengers (FRS) appeared to contribute to the stability of the liquid CPV, CDV, CAV2 and CPI formulations, and although their presence does not significantly change the stability profile, they also had no negative effects on the stability. Therefore, in certain cases, it would be preferred that dextran sulfate and/or the FRS be included in the final formulation for the long-term storage stability of a liquid live feline or canine virus vaccine at 25° C. On the other hand, TWEEN 80 and TWEEN 20 were found to be detrimental to the stability of the virus formulations.</p>
+      <heading id="h-00021-en" level="2">Real Time Stability Testing at 4° C.: </heading>
+      <p id="p-00098-en" num="0098">Long-term storage stability of liquid live CPV, CDV, CAV2 and CPI vaccines at 4° C. was also monitored and the data is presented in Table 3. The projected virus titer at 24 months at 4° C. is extrapolated from the data points at month 12 and month 18 for L-001 to L-008, and month 6 and 12 for L-009 to L-026 (see, Table 3 below). The minimum dose titer requirement for each virus at the expiration is listed at the bottom of Table 3 below, and is used to determine which formulation can provide a stable product at 4° C. There are ten formulations (L-009, L-011, L-012, L-014, L-15, L-016, L-018, L-019, L-025 and L-026) that were highly likely to produce a stable product, while formulations L-003 and L-007 have great potential to produce a stable product with a 2-years shelf life at 4° C. Among the four viruses examined, CDV appears to be the most labile. All ten formulations appear capable of providing greater than 3 years of stability at 0-8° C. for CAV2, CPV and CPI, and at least 2 years of stability at 0-8° C. for CDV.</p>
+      <p id="p-00099-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="441pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Liquid Live Canine Virus Vaccine Formulations</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="385pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>Formulation Name</entry>
+                  <entry>Formulation Details</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>L-001</entry>
+                  <entry>25% Sorbitol, 10 mM Tris, 10 mM Histidine, pH 7.2</entry>
+                </row>
+                <row>
+                  <entry>L-002</entry>
+                  <entry>15% Sorbitol, 10% Sucorse, 10 mM Tris, 10 mM Histidine, pH 7.2</entry>
+                </row>
+                <row>
+                  <entry>L-003</entry>
+                  <entry>10% Sorbitol, 15% Sucorse, 10 mM Tris, 10 mM Histidine, pH 7.2</entry>
+                </row>
+                <row>
+                  <entry>L-004</entry>
+                  <entry>15% Sorbitol, 10% Sucorse, 0.01% Tween 20, 10 mM Tris, 10 mM Histidine, pH 7.2</entry>
+                </row>
+                <row>
+                  <entry>L-005</entry>
+                  <entry>75 mM NaCl, 5% Sucrose, 0.1 mM EDTA, 0.5% Ethanol, 0.02% Tween 80, 10 mM Tris, 10 mM Histidine, pH 7.2</entry>
+                </row>
+                <row>
+                  <entry>L-006</entry>
+                  <entry>75 mM NaCl, 5% Sucrose, 0.1 mM EDTA, 0.5% Ethanol, 0.02% Tween 80, 0.3M L-Arginine, 10 mM Tris, 10 mM Histidine, pH 7.2</entry>
+                </row>
+                <row>
+                  <entry>L-007</entry>
+                  <entry>17% Sucrose, 0.8% Gelatin, 1.0% NZ Amine, 0.3M L-Arginine, 10 mM Tris, 10 mM Histidine, pH 7.2</entry>
+                </row>
+                <row>
+                  <entry>L-008</entry>
+                  <entry>3.8% Sucrose, 0.8% Gelatin, 1.0% NZ Amine, 10 mM Tris, 10 mM Histidine, pH 7.2</entry>
+                </row>
+                <row>
+                  <entry>L-009</entry>
+                  <entry>25% Sucrose, 1.6% Gelatin, 2.0% NZ Amine, 0.1 mM EDTA, 0.5% Ethanol, 10 mM Tris, 10 mM Histidine, pH 7.2</entry>
+                </row>
+                <row>
+                  <entry>L-010</entry>
+                  <entry>25% Sucrose, 0.8% Gelatin, 1.0% NZ Amine, 0.01% Tween 80, 10 mM Tris, 10 mM Histidine, pH 7.2</entry>
+                </row>
+                <row>
+                  <entry>L-011</entry>
+                  <entry>25% Sucrose, 0.3M Arginine, 50 uM Dextran Sulfate, 10 mM Tris, 10 mM Histidine, pH 7.2</entry>
+                </row>
+                <row>
+                  <entry>L-012</entry>
+                  <entry>25% Sucrose, 1% Methionine, 10 mM Tris, 10 mM Histidine, pH 7.2</entry>
+                </row>
+                <row>
+                  <entry>L-013</entry>
+                  <entry>15% Sucrose, 10% Sorbitol, 1.6% Gelatin, 2.0% NZ Amine, 0.01% Tween 80, 10 mM Tris, 10 mM Histidine, pH 7.2</entry>
+                </row>
+                <row>
+                  <entry>L-014</entry>
+                  <entry>15% Sucrose, 10% Sorbitol, 0.8% Gelatin, 1.0% NZ Amine, 0.1 mM EDTA, 0.5% Ethanol, 10 mM Tris, 10 mM Histidine, pH 7.2</entry>
+                </row>
+                <row>
+                  <entry>L-015</entry>
+                  <entry>15% Sucrose, 10% Sorbitol, 0.3M Arginine, 10 mM Tris, 10 mM Histidine, pH 7.2</entry>
+                </row>
+                <row>
+                  <entry>L-016</entry>
+                  <entry>15% Sucrose, 10% Sorbitol, 1% Methionine, 50 uM Dextran Sulfate, 10 mM Tris, 10 mM Histidine, pH 7.2</entry>
+                </row>
+                <row>
+                  <entry>L-017</entry>
+                  <entry>17% Sucrose, 0.3M L-Arginine, 1.6% Gelatin, 2.0% NZ Amine, 50 uM Dextran Sulfate, 10 mM Tris, 10 mM Histidine, pH 7.2</entry>
+                </row>
+                <row>
+                  <entry>L-018</entry>
+                  <entry>17% Sucrose, 0.3M L-Arginine, 0.8% Gelatin, 1.0% NZ Amine, 10 mM Tris, 10 mM Histidine, pH 7.2</entry>
+                </row>
+                <row>
+                  <entry>L-019</entry>
+                  <entry>17% Sucrose, 0.3M L-Arginine, 0.1 mM EDTA, 0.5% Ethanol, 10 mM Tris, 10 mM Histidine, pH 7.2</entry>
+                </row>
+                <row>
+                  <entry>L-020</entry>
+                  <entry>17% Sucrose, 0.3M L-Arginine, 1% Methionine, 0.01% Tween 80, 10 mM Tris, 10 mM Histidine, pH 7.2</entry>
+                </row>
+                <row>
+                  <entry>L-021</entry>
+                  <entry>40% Glycerol, 1.6% Gelatin, 2.0% NZ Amine, 10 mM Tris, 10 mM Histidine, pH 7.2</entry>
+                </row>
+                <row>
+                  <entry>L-022</entry>
+                  <entry>40% Glycerol, 0.8% Gelatin, 1.0% NZ Amine, 50 uM Dextran Sulfate, 10 mM Tris, 10 mM Histidine, pH 7.2</entry>
+                </row>
+                <row>
+                  <entry>L-023</entry>
+                  <entry>40% Glycerol, 0.3M Arginine, 0 01% Tween 80, 10 mM Tris, 10 mM Histidine, pH 7.2</entry>
+                </row>
+                <row>
+                  <entry>L-024</entry>
+                  <entry>40% Glycerol, 1% Methionine, 0.1 mM EDTA, 0.5% Ethanol, 10 mM Tris, 10 mM Histidine, pH 7.2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="left" id="entry-00001-en">The unit of concentrations is: Sucrose (w/v), Sorbitol (w/v), Glycerol (v/v), Gelatin (w/v), NZ Amine (w/v), L-Arginine (M), Methionine (w/v), TWEEN (v/v), dextran sulfate (uM), ethanol (v/v), EDTA (mM), histidine (mM), Tris ( mM), NaCl (M).</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00100-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="350pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Accelerated Stability Testing for Liquid Canine Virus Vaccine Formulations</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="322pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Titer (Log<sub>10 </sub>TCID<sub>50</sub>) of each virus fraction during storage at 25° C. (weeks)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="91pt" align="center" />
+              <colspec colname="2" colwidth="91pt" align="center" />
+              <colspec colname="3" colwidth="91pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>CDV</entry>
+                  <entry>CAV</entry>
+                  <entry>CPI</entry>
+                  <entry>25° C. Overall</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="14" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="28pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="21pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <colspec colname="9" colwidth="28pt" align="center" />
+              <colspec colname="10" colwidth="21pt" align="center" />
+              <colspec colname="11" colwidth="21pt" align="center" />
+              <colspec colname="12" colwidth="21pt" align="center" />
+              <colspec colname="13" colwidth="28pt" align="center" />
+              <colspec colname="14" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>0</entry>
+                  <entry>6</entry>
+                  <entry>8</entry>
+                  <entry>Rank</entry>
+                  <entry>0</entry>
+                  <entry>2</entry>
+                  <entry>8</entry>
+                  <entry>Rank</entry>
+                  <entry>0</entry>
+                  <entry>6</entry>
+                  <entry>8</entry>
+                  <entry>Rank</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry namest="1" nameend="14" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>L-001</entry>
+                  <entry>5.47</entry>
+                  <entry>3.94</entry>
+                  <entry>3.67</entry>
+                  <entry>+++++</entry>
+                  <entry>5.33</entry>
+                  <entry>5.95</entry>
+                  <entry>6.50</entry>
+                  <entry>+++++</entry>
+                  <entry>7.09</entry>
+                  <entry>6.00</entry>
+                  <entry>6.11</entry>
+                  <entry>++++</entry>
+                  <entry>++++</entry>
+                </row>
+                <row>
+                  <entry>L-002</entry>
+                  <entry>5.47</entry>
+                  <entry>3.56</entry>
+                  <entry>3.83</entry>
+                  <entry>+++++</entry>
+                  <entry>5.33</entry>
+                  <entry>6.06</entry>
+                  <entry>6.33</entry>
+                  <entry>+++++</entry>
+                  <entry>7.09</entry>
+                  <entry>6.67</entry>
+                  <entry>6.61</entry>
+                  <entry>+++++</entry>
+                  <entry>++++</entry>
+                </row>
+                <row>
+                  <entry>L-003</entry>
+                  <entry>5.47</entry>
+                  <entry>3.89</entry>
+                  <entry>3.78</entry>
+                  <entry>+++++</entry>
+                  <entry>5.33</entry>
+                  <entry>5.83</entry>
+                  <entry>6.39</entry>
+                  <entry>+++++</entry>
+                  <entry>7.09</entry>
+                  <entry>6.50</entry>
+                  <entry>6.72</entry>
+                  <entry>+++++</entry>
+                  <entry>++++</entry>
+                </row>
+                <row>
+                  <entry>L-004</entry>
+                  <entry>5.47</entry>
+                  <entry>3.06</entry>
+                  <entry>3.40</entry>
+                  <entry>++++</entry>
+                  <entry>5.33</entry>
+                  <entry>6.28</entry>
+                  <entry>6.28</entry>
+                  <entry>+++++</entry>
+                  <entry>7.09</entry>
+                  <entry>6.33</entry>
+                  <entry>6.06</entry>
+                  <entry>++++</entry>
+                  <entry>++++</entry>
+                </row>
+                <row>
+                  <entry>L-005</entry>
+                  <entry>5.47</entry>
+                  <entry>1.50</entry>
+                  <entry />
+                  <entry>+</entry>
+                  <entry>5.33</entry>
+                  <entry>6.17</entry>
+                  <entry />
+                  <entry>+</entry>
+                  <entry>7.09</entry>
+                  <entry>1.50</entry>
+                  <entry />
+                  <entry />
+                  <entry>+</entry>
+                </row>
+                <row>
+                  <entry>L-006</entry>
+                  <entry>5.47</entry>
+                  <entry>1.56</entry>
+                  <entry />
+                  <entry>+</entry>
+                  <entry>5.33</entry>
+                  <entry>5.33</entry>
+                  <entry />
+                  <entry>+</entry>
+                  <entry>7.09</entry>
+                  <entry>1.72</entry>
+                  <entry />
+                  <entry />
+                  <entry>+</entry>
+                </row>
+                <row>
+                  <entry>L-007</entry>
+                  <entry>5.47</entry>
+                  <entry>3.67</entry>
+                  <entry>3.89</entry>
+                  <entry>+++++</entry>
+                  <entry>5.33</entry>
+                  <entry>5.78</entry>
+                  <entry>5.94</entry>
+                  <entry>+++++</entry>
+                  <entry>7.09</entry>
+                  <entry>5.72</entry>
+                  <entry>6.72</entry>
+                  <entry>+++++</entry>
+                  <entry>+++++</entry>
+                </row>
+                <row>
+                  <entry>L-008</entry>
+                  <entry>5.47</entry>
+                  <entry>1.56</entry>
+                  <entry>1.50</entry>
+                  <entry>+</entry>
+                  <entry>5.33</entry>
+                  <entry>6.78</entry>
+                  <entry>7.11</entry>
+                  <entry>+++++</entry>
+                  <entry>7.09</entry>
+                  <entry>6.17</entry>
+                  <entry>6.33</entry>
+                  <entry>++++</entry>
+                  <entry>+</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="14" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>0</entry>
+                  <entry>4</entry>
+                  <entry>9</entry>
+                  <entry>Rank</entry>
+                  <entry>0</entry>
+                  <entry>6</entry>
+                  <entry>12</entry>
+                  <entry>Rank</entry>
+                  <entry>0</entry>
+                  <entry>6</entry>
+                  <entry>12</entry>
+                  <entry>Rank</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="14" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>L-009</entry>
+                  <entry>5.56</entry>
+                  <entry>4.50</entry>
+                  <entry>3.00</entry>
+                  <entry>++</entry>
+                  <entry>5.72</entry>
+                  <entry>5.78</entry>
+                  <entry>5.92</entry>
+                  <entry>+++++</entry>
+                  <entry>7.44</entry>
+                  <entry>5.83</entry>
+                  <entry>5.84</entry>
+                  <entry>+++</entry>
+                  <entry>++</entry>
+                </row>
+                <row>
+                  <entry>L-010</entry>
+                  <entry>5.63</entry>
+                  <entry>2.00</entry>
+                  <entry>1.50</entry>
+                  <entry>+</entry>
+                  <entry>5.75</entry>
+                  <entry>1.50</entry>
+                  <entry>1.50</entry>
+                  <entry>+</entry>
+                  <entry>7.27</entry>
+                  <entry>1.50</entry>
+                  <entry>1.50</entry>
+                  <entry>+</entry>
+                  <entry>+</entry>
+                </row>
+                <row>
+                  <entry>L-011</entry>
+                  <entry>5.83</entry>
+                  <entry>5.11</entry>
+                  <entry>3.92</entry>
+                  <entry>++++</entry>
+                  <entry>5.95</entry>
+                  <entry>5.11</entry>
+                  <entry>5.25</entry>
+                  <entry>++++</entry>
+                  <entry>7.17</entry>
+                  <entry>6.67</entry>
+                  <entry>7.17</entry>
+                  <entry>+++++</entry>
+                  <entry>++++</entry>
+                </row>
+                <row>
+                  <entry>L-012</entry>
+                  <entry>5.63</entry>
+                  <entry>4.39</entry>
+                  <entry>4.09</entry>
+                  <entry>++++</entry>
+                  <entry>5.75</entry>
+                  <entry>5.33</entry>
+                  <entry>5.75</entry>
+                  <entry>+++++</entry>
+                  <entry>7.27</entry>
+                  <entry>6.50</entry>
+                  <entry>6.00</entry>
+                  <entry>+++</entry>
+                  <entry>++++</entry>
+                </row>
+                <row>
+                  <entry>L-013</entry>
+                  <entry>5.63</entry>
+                  <entry>2.00</entry>
+                  <entry>1.50</entry>
+                  <entry>+</entry>
+                  <entry>5.75</entry>
+                  <entry>1.50</entry>
+                  <entry>1.50</entry>
+                  <entry>+</entry>
+                  <entry>7.27</entry>
+                  <entry>1.50</entry>
+                  <entry>1.50</entry>
+                  <entry>+</entry>
+                  <entry>+</entry>
+                </row>
+                <row>
+                  <entry>L-014</entry>
+                  <entry>5.63</entry>
+                  <entry>4.72</entry>
+                  <entry>3.34</entry>
+                  <entry>++</entry>
+                  <entry>5.75</entry>
+                  <entry>5.39</entry>
+                  <entry>5.92</entry>
+                  <entry>+++++</entry>
+                  <entry>7.27</entry>
+                  <entry>6.00</entry>
+                  <entry>5.84</entry>
+                  <entry>+++</entry>
+                  <entry>++</entry>
+                </row>
+                <row>
+                  <entry>L-015</entry>
+                  <entry>5.61</entry>
+                  <entry>4.72</entry>
+                  <entry>4.25</entry>
+                  <entry>+++++</entry>
+                  <entry>5.39</entry>
+                  <entry>5.39</entry>
+                  <entry>5.42</entry>
+                  <entry>+++++</entry>
+                  <entry>7.34</entry>
+                  <entry>6.61</entry>
+                  <entry>6.75</entry>
+                  <entry>++++</entry>
+                  <entry>+++++</entry>
+                </row>
+                <row>
+                  <entry>L-016</entry>
+                  <entry>5.63</entry>
+                  <entry>4.89</entry>
+                  <entry>4.09</entry>
+                  <entry>++++</entry>
+                  <entry>5.75</entry>
+                  <entry>5.72</entry>
+                  <entry>5.67</entry>
+                  <entry>+++++</entry>
+                  <entry>7.27</entry>
+                  <entry>6.06</entry>
+                  <entry>6.42</entry>
+                  <entry>++++</entry>
+                  <entry>++++</entry>
+                </row>
+                <row>
+                  <entry>L-017</entry>
+                  <entry>5.63</entry>
+                  <entry>4.83</entry>
+                  <entry>3.59</entry>
+                  <entry>+++</entry>
+                  <entry>5.75</entry>
+                  <entry>5.61</entry>
+                  <entry>5.67</entry>
+                  <entry>+++++</entry>
+                  <entry>7.27</entry>
+                  <entry>6.17</entry>
+                  <entry>5.92</entry>
+                  <entry>+++</entry>
+                  <entry>+++</entry>
+                </row>
+                <row>
+                  <entry>L-018</entry>
+                  <entry>5.72</entry>
+                  <entry>4.78</entry>
+                  <entry>4.00</entry>
+                  <entry>++++</entry>
+                  <entry>5.67</entry>
+                  <entry>5.33</entry>
+                  <entry>5.50</entry>
+                  <entry>+++++</entry>
+                  <entry>7.61</entry>
+                  <entry>6.11</entry>
+                  <entry>6.75</entry>
+                  <entry>++++</entry>
+                  <entry>++++</entry>
+                </row>
+                <row>
+                  <entry>L-019</entry>
+                  <entry>5.63</entry>
+                  <entry>4.67</entry>
+                  <entry>4.09</entry>
+                  <entry>++++</entry>
+                  <entry>5.75</entry>
+                  <entry>5.00</entry>
+                  <entry>5.67</entry>
+                  <entry>+++++</entry>
+                  <entry>7.27</entry>
+                  <entry>6.39</entry>
+                  <entry>7.00</entry>
+                  <entry>+++++</entry>
+                  <entry>++++</entry>
+                </row>
+                <row>
+                  <entry>L-020</entry>
+                  <entry>5.22</entry>
+                  <entry>1.78</entry>
+                  <entry>1.50</entry>
+                  <entry>+</entry>
+                  <entry>5.78</entry>
+                  <entry>1.50</entry>
+                  <entry>1.50</entry>
+                  <entry>+</entry>
+                  <entry>7.39</entry>
+                  <entry>1.50</entry>
+                  <entry>1.50</entry>
+                  <entry>+</entry>
+                  <entry>+</entry>
+                </row>
+                <row>
+                  <entry>L-021</entry>
+                  <entry>5.63</entry>
+                  <entry>4.50</entry>
+                  <entry>3.09</entry>
+                  <entry>++</entry>
+                  <entry>5.75</entry>
+                  <entry>5.28</entry>
+                  <entry>5.67</entry>
+                  <entry>+++++</entry>
+                  <entry>7.27</entry>
+                  <entry>5.33</entry>
+                  <entry>4.83</entry>
+                  <entry>++</entry>
+                  <entry>++</entry>
+                </row>
+                <row>
+                  <entry>L-022</entry>
+                  <entry>5.63</entry>
+                  <entry>4.00</entry>
+                  <entry>1.92</entry>
+                  <entry>+</entry>
+                  <entry>5.75</entry>
+                  <entry>5.17</entry>
+                  <entry>5.34</entry>
+                  <entry>++++</entry>
+                  <entry>7.27</entry>
+                  <entry>5.44</entry>
+                  <entry>5.17</entry>
+                  <entry>+++</entry>
+                  <entry>+</entry>
+                </row>
+                <row>
+                  <entry>L-023</entry>
+                  <entry>5.63</entry>
+                  <entry>1.95</entry>
+                  <entry>1.50</entry>
+                  <entry>+</entry>
+                  <entry>5.75</entry>
+                  <entry>1.50</entry>
+                  <entry>1.50</entry>
+                  <entry>+</entry>
+                  <entry>7.27</entry>
+                  <entry>1.50</entry>
+                  <entry>1.50</entry>
+                  <entry>+</entry>
+                  <entry>+</entry>
+                </row>
+                <row>
+                  <entry>L-024</entry>
+                  <entry>5.67</entry>
+                  <entry>4.17</entry>
+                  <entry>1.83</entry>
+                  <entry>+</entry>
+                  <entry>5.94</entry>
+                  <entry>5.17</entry>
+                  <entry>5.75</entry>
+                  <entry>+++++</entry>
+                  <entry>6.94</entry>
+                  <entry>5.17</entry>
+                  <entry>4.67</entry>
+                  <entry>++</entry>
+                  <entry>+</entry>
+                </row>
+                <row>
+                  <entry>L-025</entry>
+                  <entry>5.78</entry>
+                  <entry>4.72</entry>
+                  <entry>3.92</entry>
+                  <entry>++++</entry>
+                  <entry>5.83</entry>
+                  <entry>5.39</entry>
+                  <entry>5.84</entry>
+                  <entry>+++++</entry>
+                  <entry>7.00</entry>
+                  <entry>6.39</entry>
+                  <entry>7.00</entry>
+                  <entry>+++++</entry>
+                  <entry>++++</entry>
+                </row>
+                <row>
+                  <entry>L-026</entry>
+                  <entry>5.63</entry>
+                  <entry>4.45</entry>
+                  <entry>3.92</entry>
+                  <entry>++++</entry>
+                  <entry>5.75</entry>
+                  <entry>5.28</entry>
+                  <entry>5.59</entry>
+                  <entry>+++++</entry>
+                  <entry>7.27</entry>
+                  <entry>6.50</entry>
+                  <entry>6.59</entry>
+                  <entry>++++</entry>
+                  <entry>++++</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="14" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="14" align="left" id="entry-00002-en">1) Study 1: Formulations L001-L008; Study 2: Formulations L-009 to L-026. These studies were performed at different time points.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="14" align="left" id="entry-00003-en">2) CPV was not included in the 25° C. accelerated stability testing because it was shown to be relatively stable.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="14" align="left" id="entry-00004-en">3) Ranking is based on the relative degradation curve extrapolated from these three time points, with five “+” being the best and one “+” being the worst. The overall ranking takes consideration of ranking for individual virus and is determined by the least stable fraction.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00101-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="392pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 3</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Real Time Stability of Liquid Canine Virus Vaccine Formulations at 4° C.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="364pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Titer (Log<sub>10 </sub>TCID<sub>50</sub>) of each virus fraction during storage at 4° C. (months)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="84pt" align="center" />
+              <colspec colname="2" colwidth="84pt" align="center" />
+              <colspec colname="3" colwidth="84pt" align="center" />
+              <colspec colname="4" colwidth="84pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Overall</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>CDV</entry>
+                  <entry>CAV</entry>
+                  <entry>CPI</entry>
+                  <entry>CPV</entry>
+                  <entry>Ranking</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="18" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="28pt" align="left" />
+              <colspec colname="2" colwidth="21pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="21pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <colspec colname="9" colwidth="21pt" align="center" />
+              <colspec colname="10" colwidth="21pt" align="center" />
+              <colspec colname="11" colwidth="21pt" align="center" />
+              <colspec colname="12" colwidth="21pt" align="center" />
+              <colspec colname="13" colwidth="21pt" align="center" />
+              <colspec colname="14" colwidth="21pt" align="center" />
+              <colspec colname="15" colwidth="21pt" align="center" />
+              <colspec colname="16" colwidth="21pt" align="center" />
+              <colspec colname="17" colwidth="21pt" align="center" />
+              <colspec colname="18" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>0</entry>
+                  <entry>12</entry>
+                  <entry>18</entry>
+                  <entry>24*</entry>
+                  <entry>0</entry>
+                  <entry>12</entry>
+                  <entry>18</entry>
+                  <entry>24*</entry>
+                  <entry>0</entry>
+                  <entry>12</entry>
+                  <entry>18</entry>
+                  <entry>24*</entry>
+                  <entry>0</entry>
+                  <entry>12</entry>
+                  <entry>18</entry>
+                  <entry>24*</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry namest="1" nameend="18" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>L-001</entry>
+                  <entry>5.47</entry>
+                  <entry>3.72</entry>
+                  <entry>2.67</entry>
+                  <entry>1.61</entry>
+                  <entry>5.33</entry>
+                  <entry>5.67</entry>
+                  <entry>5.39</entry>
+                  <entry>5.11</entry>
+                  <entry>7.09</entry>
+                  <entry>6.11</entry>
+                  <entry>5.22</entry>
+                  <entry>4.33</entry>
+                  <entry>6.00</entry>
+                  <entry>6.28</entry>
+                  <entry>6.39</entry>
+                  <entry>6.19</entry>
+                  <entry>+</entry>
+                </row>
+                <row>
+                  <entry>L-002</entry>
+                  <entry>5.47</entry>
+                  <entry>3.56</entry>
+                  <entry>3.00</entry>
+                  <entry>2.44</entry>
+                  <entry>5.33</entry>
+                  <entry>5.67</entry>
+                  <entry>5.66</entry>
+                  <entry>5.66</entry>
+                  <entry>7.09</entry>
+                  <entry>6.67</entry>
+                  <entry>5.83</entry>
+                  <entry>5.00</entry>
+                  <entry>6.00</entry>
+                  <entry>6.55</entry>
+                  <entry>6.51</entry>
+                  <entry>6.46</entry>
+                  <entry>+</entry>
+                </row>
+                <row>
+                  <entry>L-003</entry>
+                  <entry>5.47</entry>
+                  <entry>3.78</entry>
+                  <entry>3.39</entry>
+                  <entry>2.99</entry>
+                  <entry>5.33</entry>
+                  <entry>5.78</entry>
+                  <entry>5.78</entry>
+                  <entry>5.78</entry>
+                  <entry>7.09</entry>
+                  <entry>6.72</entry>
+                  <entry>6.45</entry>
+                  <entry>6.17</entry>
+                  <entry>6.00</entry>
+                  <entry>6.33</entry>
+                  <entry>6.33</entry>
+                  <entry>6.33</entry>
+                  <entry>+++</entry>
+                </row>
+                <row>
+                  <entry>L-004</entry>
+                  <entry>5.47</entry>
+                  <entry>2.83</entry>
+                  <entry>3.00</entry>
+                  <entry>2.80</entry>
+                  <entry>5.33</entry>
+                  <entry>5.83</entry>
+                  <entry>5.89</entry>
+                  <entry>5.69</entry>
+                  <entry>7.09</entry>
+                  <entry>6.67</entry>
+                  <entry>5.99</entry>
+                  <entry>5.31</entry>
+                  <entry>6.00</entry>
+                  <entry>6.39</entry>
+                  <entry>6.39</entry>
+                  <entry>6.39</entry>
+                  <entry>+++</entry>
+                </row>
+                <row>
+                  <entry>L-007</entry>
+                  <entry>5.47</entry>
+                  <entry>3.83</entry>
+                  <entry>3.17</entry>
+                  <entry>2.50</entry>
+                  <entry>5.33</entry>
+                  <entry>5.78</entry>
+                  <entry>5.83</entry>
+                  <entry>5.63</entry>
+                  <entry>7.09</entry>
+                  <entry>6.78</entry>
+                  <entry>6.83</entry>
+                  <entry>6.63</entry>
+                  <entry>6.00</entry>
+                  <entry>5.11</entry>
+                  <entry>4.78</entry>
+                  <entry>4.45</entry>
+                  <entry>+++</entry>
+                </row>
+                <row>
+                  <entry>L-008</entry>
+                  <entry>5.47</entry>
+                  <entry>2.56</entry>
+                  <entry>1.72</entry>
+                  <entry>0.88</entry>
+                  <entry>5.33</entry>
+                  <entry>6.22</entry>
+                  <entry>5.94</entry>
+                  <entry>5.66</entry>
+                  <entry>7.09</entry>
+                  <entry>6.22</entry>
+                  <entry>6.11</entry>
+                  <entry>6.00</entry>
+                  <entry>6.00</entry>
+                  <entry>5.95</entry>
+                  <entry>6.28</entry>
+                  <entry>6.08</entry>
+                  <entry>+</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="18" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>0</entry>
+                  <entry>6</entry>
+                  <entry>12</entry>
+                  <entry>24*</entry>
+                  <entry>0</entry>
+                  <entry>6</entry>
+                  <entry>12</entry>
+                  <entry>24*</entry>
+                  <entry>0</entry>
+                  <entry>6</entry>
+                  <entry>12</entry>
+                  <entry>24*</entry>
+                  <entry>0</entry>
+                  <entry>6</entry>
+                  <entry>12</entry>
+                  <entry>24*</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="18" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>L-009</entry>
+                  <entry>5.56</entry>
+                  <entry>3.72</entry>
+                  <entry>4.06</entry>
+                  <entry>3.86</entry>
+                  <entry>5.72</entry>
+                  <entry>6.28</entry>
+                  <entry>6.22</entry>
+                  <entry>6.16</entry>
+                  <entry>7.44</entry>
+                  <entry>6.50</entry>
+                  <entry>6.22</entry>
+                  <entry>5.94</entry>
+                  <entry>6.00</entry>
+                  <entry>4.72</entry>
+                  <entry>4.89</entry>
+                  <entry>4.69</entry>
+                  <entry>+++++</entry>
+                </row>
+                <row>
+                  <entry>L-011</entry>
+                  <entry>5.83</entry>
+                  <entry>4.33</entry>
+                  <entry>4.39</entry>
+                  <entry>4.19</entry>
+                  <entry>5.95</entry>
+                  <entry>5.61</entry>
+                  <entry>5.83</entry>
+                  <entry>5.63</entry>
+                  <entry>7.17</entry>
+                  <entry>7.28</entry>
+                  <entry>7.16</entry>
+                  <entry>7.05</entry>
+                  <entry>6.00</entry>
+                  <entry>6.06</entry>
+                  <entry>5.61</entry>
+                  <entry>5.17</entry>
+                  <entry>+++++</entry>
+                </row>
+                <row>
+                  <entry>L-012</entry>
+                  <entry>5.63</entry>
+                  <entry>4.33</entry>
+                  <entry>4.50</entry>
+                  <entry>4.30</entry>
+                  <entry>5.75</entry>
+                  <entry>6.22</entry>
+                  <entry>5.78</entry>
+                  <entry>5.34</entry>
+                  <entry>7.27</entry>
+                  <entry>7.28</entry>
+                  <entry>6.89</entry>
+                  <entry>6.50</entry>
+                  <entry>6.00</entry>
+                  <entry>6.50</entry>
+                  <entry>6.67</entry>
+                  <entry>6.47</entry>
+                  <entry>+++++</entry>
+                </row>
+                <row>
+                  <entry>L-014</entry>
+                  <entry>5.63</entry>
+                  <entry>3.94</entry>
+                  <entry>3.94</entry>
+                  <entry>3.94</entry>
+                  <entry>5.75</entry>
+                  <entry>6.17</entry>
+                  <entry>6.00</entry>
+                  <entry>5.83</entry>
+                  <entry>7.27</entry>
+                  <entry>7.00</entry>
+                  <entry>6.67</entry>
+                  <entry>6.34</entry>
+                  <entry>6.00</entry>
+                  <entry>6.06</entry>
+                  <entry>5.94</entry>
+                  <entry>5.83</entry>
+                  <entry>+++++</entry>
+                </row>
+                <row>
+                  <entry>L-015</entry>
+                  <entry>5.61</entry>
+                  <entry>4.06</entry>
+                  <entry>4.39</entry>
+                  <entry>4.19</entry>
+                  <entry>5.39</entry>
+                  <entry>6.11</entry>
+                  <entry>5.89</entry>
+                  <entry>5.67</entry>
+                  <entry>7.34</entry>
+                  <entry>7.33</entry>
+                  <entry>7.33</entry>
+                  <entry>7.13</entry>
+                  <entry>6.00</entry>
+                  <entry>6.22</entry>
+                  <entry>6.05</entry>
+                  <entry>5.88</entry>
+                  <entry>+++++</entry>
+                </row>
+                <row>
+                  <entry>L-016</entry>
+                  <entry>5.63</entry>
+                  <entry>3.95</entry>
+                  <entry>4.00</entry>
+                  <entry>3.80</entry>
+                  <entry>5.75</entry>
+                  <entry>5.89</entry>
+                  <entry>5.83</entry>
+                  <entry>5.77</entry>
+                  <entry>7.27</entry>
+                  <entry>7.00</entry>
+                  <entry>6.94</entry>
+                  <entry>6.88</entry>
+                  <entry>6.00</entry>
+                  <entry>6.61</entry>
+                  <entry>5.83</entry>
+                  <entry>5.05</entry>
+                  <entry>+++++</entry>
+                </row>
+                <row>
+                  <entry>L-017</entry>
+                  <entry>5.63</entry>
+                  <entry>4.22</entry>
+                  <entry>4.06</entry>
+                  <entry>3.89</entry>
+                  <entry>5.75</entry>
+                  <entry>6.22</entry>
+                  <entry>6.17</entry>
+                  <entry>6.11</entry>
+                  <entry>7.27</entry>
+                  <entry>7.39</entry>
+                  <entry>7.00</entry>
+                  <entry>6.62</entry>
+                  <entry>6.00</entry>
+                  <entry>5.06</entry>
+                  <entry>4.56</entry>
+                  <entry>4.06</entry>
+                  <entry>+++</entry>
+                </row>
+                <row>
+                  <entry>L-018</entry>
+                  <entry>5.72</entry>
+                  <entry>4.17</entry>
+                  <entry>4.33</entry>
+                  <entry>4.13</entry>
+                  <entry>5.67</entry>
+                  <entry>6.22</entry>
+                  <entry>5.89</entry>
+                  <entry>5.55</entry>
+                  <entry>7.61</entry>
+                  <entry>7.00</entry>
+                  <entry>7.11</entry>
+                  <entry>6.91</entry>
+                  <entry>6.00</entry>
+                  <entry>5.33</entry>
+                  <entry>5.17</entry>
+                  <entry>5.00</entry>
+                  <entry>+++++</entry>
+                </row>
+                <row>
+                  <entry>L-019</entry>
+                  <entry>5.63</entry>
+                  <entry>4.33</entry>
+                  <entry>4.11</entry>
+                  <entry>3.89</entry>
+                  <entry>5.75</entry>
+                  <entry>5.89</entry>
+                  <entry>6.06</entry>
+                  <entry>5.86</entry>
+                  <entry>7.27</entry>
+                  <entry>7.17</entry>
+                  <entry>7.22</entry>
+                  <entry>7.02</entry>
+                  <entry>6.00</entry>
+                  <entry>6.16</entry>
+                  <entry>6.39</entry>
+                  <entry>6.19</entry>
+                  <entry>+++++</entry>
+                </row>
+                <row>
+                  <entry>L-021</entry>
+                  <entry>5.63</entry>
+                  <entry>1.50</entry>
+                  <entry>1.50</entry>
+                  <entry>1.50</entry>
+                  <entry>5.75</entry>
+                  <entry>1.50</entry>
+                  <entry>1.50</entry>
+                  <entry>1.50</entry>
+                  <entry>7.27</entry>
+                  <entry>n/d</entry>
+                  <entry>n/d</entry>
+                  <entry>n/d</entry>
+                  <entry>n/d</entry>
+                  <entry>n/d</entry>
+                  <entry>n/d</entry>
+                  <entry>n/d</entry>
+                  <entry>+</entry>
+                </row>
+                <row>
+                  <entry>L-022</entry>
+                  <entry>5.63</entry>
+                  <entry>1.50</entry>
+                  <entry>1.50</entry>
+                  <entry>1.50</entry>
+                  <entry>5.75</entry>
+                  <entry>1.50</entry>
+                  <entry>1.50</entry>
+                  <entry>1.50</entry>
+                  <entry>7.27</entry>
+                  <entry>n/d</entry>
+                  <entry>n/d</entry>
+                  <entry>n/d</entry>
+                  <entry>n/d</entry>
+                  <entry>n/d</entry>
+                  <entry>n/d</entry>
+                  <entry>n/d</entry>
+                  <entry>+</entry>
+                </row>
+                <row>
+                  <entry>L-025</entry>
+                  <entry>5.78</entry>
+                  <entry>4.17</entry>
+                  <entry>4.72</entry>
+                  <entry>4.52</entry>
+                  <entry>5.83</entry>
+                  <entry>6.33</entry>
+                  <entry>6.00</entry>
+                  <entry>5.67</entry>
+                  <entry>7.00</entry>
+                  <entry>7.22</entry>
+                  <entry>6.83</entry>
+                  <entry>6.44</entry>
+                  <entry>6.00</entry>
+                  <entry>5.33</entry>
+                  <entry>5.17</entry>
+                  <entry>5.00</entry>
+                  <entry>+++++</entry>
+                </row>
+                <row>
+                  <entry>L-026</entry>
+                  <entry>5.63</entry>
+                  <entry>4.00</entry>
+                  <entry>4.95</entry>
+                  <entry>4.75</entry>
+                  <entry>5.75</entry>
+                  <entry>6.22</entry>
+                  <entry>6.39</entry>
+                  <entry>6.19</entry>
+                  <entry>7.27</entry>
+                  <entry>7.17</entry>
+                  <entry>7.05</entry>
+                  <entry>6.94</entry>
+                  <entry>6.00</entry>
+                  <entry>5.44</entry>
+                  <entry>5.11</entry>
+                  <entry>4.78</entry>
+                  <entry>+++++</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="91pt" align="center" />
+              <colspec colname="2" colwidth="21pt" align="center" />
+              <colspec colname="3" colwidth="63pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="63pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="63pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <colspec colname="9" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Minimum Expiration Titer</entry>
+                  <entry>3.70</entry>
+                  <entry />
+                  <entry>4.80</entry>
+                  <entry />
+                  <entry>5.10</entry>
+                  <entry />
+                  <entry>4.30</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="left" id="entry-00005-en">1) n/d, not determined;</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="left" id="entry-00006-en">2) The minimum expiration titer is the product specification on the vaccine product at the end of 2 years shelf life at 4° C.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="left" id="entry-00007-en">3) Denoted as 24* above, the titer for 24 months at 4° C. is extrapolated from the previous three time points i.e, the projected virus titer at 24 months at 4° C. is extrapolated from the data points at Time “0”, month 12, and month 18 for L-001 to L-008; and Time “0”, month 6, and 12 for L-009 to L-026.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="left" id="entry-00008-en">4) Time “0” titer is from the blend immediately after mixing and preparation of vaccine mixture. .</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00022-en" level="1">Example 2</heading>
+      <heading id="h-00023-en" level="1">Stability of Liquid Vaccines of Live Canine Viruses With Killed Bacteria</heading>
+      <heading id="h-00024-en" level="1">Materials and Methods</heading>
+      <heading id="h-00025-en" level="2">Materials:</heading>
+      <p id="p-00102-en" num="0099">Cell culture grade Sucrose and Sorbitol are purchased from Fisher. Molecular grade L-Arginine hydrochloride, L-Methionine, L-Histidine, Sodium chloride with purity more than 98% are purchased from Sigma. Dextran Sulfate with average molecular weight 10,000 at a purity &gt;95% is purchased from Sigma. Molecular biology grade Ethanol (&gt;99%), Tween 80, Tween 20, 1.0M Tris (pH 8.0) and EDTA (pH 8.0) solutions, Gentamycin (50 mg/mL), Amphotericin B (25 mg/mL) are purchased from Sigma. 20% Gelatin bloom 250 solution and 7.61% NZ Amine AS solution was prepared internally.</p>
+      <heading id="h-00026-en" level="2">Bulking Antigen Preparation:</heading>
+      <p id="p-00103-en" num="0100">The following solutions have been prepared and sterilized by 0.2 μm filtration: 80% Sucrose, 70% Sorbitol, 1.0M Arginine (pH 7.2), 5% L-Methioinine, 5 mM Dextran Sulfate.</p>
+      <p id="p-00104-en" num="0101">Bulk DA2PPv antigens CDV, CAV2, CPV and CPI are obtained with titers at 6.7, 7.8, 8.0 and 9.2, respectively. Bulk antigens are frozen at −80° C. and are thawed immediately before blending.</p>
+      <p id="p-00105-en" num="0102">Bulk <i>Leptospira </i>antigens are obtained with a concentration around 2×10<sup>10 </sup>bacteria per milliliter. Bulk <i>Leptospira </i>antigens are stored at 4° C.</p>
+      <heading id="h-00027-en" level="2">Liquid Vaccine Blending and Filling:</heading>
+      <p id="p-00106-en" num="0103">The procedure to make liquid DA2PPv vaccine blend (1.0 mL per dose) is as follows: One dose amount of antigens will be blended into different formulations as shown in Table 4 with a target titer of 5.5, 6.1, 6.0 and 7.0 for virus CDV, CAV2, CPV and CPI, respectively, following standard procedures for a multivalent CDV, CAV2, CPI, and CPV (DA2PPv) product. For formulations with the four <i>leptospira </i>antigens, the target concentration of each <i>leptospira </i>fraction is at around 1×10<sup>9 </sup>cells per milliliter. A 200 mL sterilized container is prepared and labeled, and then each stabilizer and excipient component are added to the container following the calculated amount based on the final concentration of each component as shown in Table 4 below.</p>
+      <p id="p-00107-en" num="0104">Adjust with doubly distilled (dd) H<b>2</b><sub>2</sub>O to the target volume for stabilizers and excipients. Mix on stirring plate for at least 10 min until all components are fully dissolved. Cool down and keep the stabilizer solution at 4° C. until the antigens are ready. Thaw the frozen DA2PPv antigen in 37° C. water bath with occasionally shaking until almost all ice is melted. Some of the antigens will have visible cell debris in the solution, so mix the antigens thoroughly before pipetting. The thawed antigen should be kept at 2-8° C. for no more than 8 hours before usage. Add appropriate amount of CDV, CAV2, CPV and CPI to the labeled container with the stabilizer solutions. Aliquot appropriate amount of the bulk 4 <i>Leptospira </i>(Lepto) antigens to the vaccine blend. Mix on the stirring plate until the antigens and stabilizers are homogeneously blended. Try to avoid generating bubbles and foams during this mixing step. Measure the pH at 25° C. and adjust the pH with either 1M HCL or 1M NaOH to the target pH, if the pH is not within 7.2±0.1. Keep the vaccine blend at 2-8° C. until dispensing in the same day or aliquot into small volume and frozen at &lt;−70° C. for future use. Dispense vaccine blend into 2 mL glass ampule vials at 1 mL per vial. Fill the ampule vials with argon gas after filling to prevent oxidation during storage and then heat seal the ampule. Label the ampule with sample name, lot number, storage temperature, date and then transfer into boxes and store at different temperature as designated.</p>
+      <heading id="h-00028-en" level="2">Stability Testing at Accelerated Temperature and Real-Time:</heading>
+      <p id="p-00108-en" num="0105">Liquid DA2PPv or DA2PPv-Lepto 4 samples will be stored at 25±1° C. incubator. The 25° C. was used as accelerated stability testing for screening purpose. At a designated time point, 3 vials from each formulation will be retrieved, and the titer of each antigen will be measured by cell culture based TCID50 or FAID50.</p>
+      <heading id="h-00029-en" level="1">Analytical Methods</heading>
+      <heading id="h-00030-en" level="2">CPI Potency:</heading>
+      <p id="p-00109-en" num="0106">The CPI virus titer in the DA2PPv vaccine will be determined. Briefly, dilutions of virus will be inoculated onto dog kidney cells (DK cells). After 4-6 days, monolayers will be fixed and stained with fluorescein-conjugated CPI antiserum, and the virus titer calculated by the Spearman-Karber Method (see, Example 1 above).</p>
+      <heading id="h-00031-en" level="2">CDV Potency:</heading>
+      <p id="p-00110-en" num="0107">The CDV virus titer in the DA2PPv vaccine will be determined. Briefly, dilutions of virus will be inoculated onto Vero cells. After 5-7 days, monolayers will be observed for cytopathic effect, and the virus titer calculated by the Spearman-Karber Method.</p>
+      <heading id="h-00032-en" level="2">CAV-2 Potency:</heading>
+      <p id="p-00111-en" num="0108">The CAV-2 virus titer in the DA2PPv vaccine will be determined. Briefly, dilutions of virus will be inoculated onto DK cells. After 7 days, monolayers will be observed for cytopathic effect, and the virus titer calculated by the Spearman-Karber Method.</p>
+      <heading id="h-00033-en" level="2">CPV Potency:</heading>
+      <p id="p-00112-en" num="0109">The CPV virus titer in the DA2PPv vaccine will be determined. Briefly, dilutions of virus will be inoculated onto DK cells. After 3 days, monolayers will be stained with fluorescein-conjugated CPV antiserum, and the virus titer calculated by the Spearman-Karber Method.</p>
+      <heading id="h-00034-en" level="1">Results and Conclusions</heading>
+      <heading id="h-00035-en" level="2">Accelerated Stability Testing at 25° C.:</heading>
+      <p id="p-00113-en" num="0110">Vaccines listed in formulation Table 4 were blended as described in the methods above. Formulation L-037 is the same as previously identified L-015 formulations above (see, Table 1) except it contains Gentamycin and Amphotericin B. Formulation L-040, L-043 and L-045 contain both the four live canine viral fractions, i.e., DA2PPv and the four killed <i>Leptospira </i>antigens (Canicola, Grippo, Pomona, and Ictero). Liquid vaccine samples were stored in sealed glass ampule vials with 1 mL per vial per dose. They were tested at different time points after storage at 25° C. The stability data for CDV, CAV2 and CPI are shown in Table 5. CPV was not tested for 25° C. storage since the liquid CPV is considered to be the most stable fraction among the four live viruses. Based on the stability data shown in Table 5, the following have been observed:</p>
+      <p id="p-00114-en" num="0000">1) The antibiotics as preservatives do not negatively affect the virus stability of DA2PPv in formulation L-015. <br /> 2) The presence of the four killed <i>Leptospira </i>antigens decrease the stability of the live attenuted CDV and CPI in the liquid formulation. <br /> 3) A supplement of 2 mM EDTA to the L-040 formulation provides a stable DA2PPv formulation even in the presence of the four killed <i>Leptospira </i>antigens. <br /> 4) This liquid stable formulation also can be used for DA2PPv combo with the four killed <i>Leptospira </i>antigens in the presence of REHYDROPHOS adjuvants. </p>
+      <p id="p-00115-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="294pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 4</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Formulation table for liquid stable DA2PPv and Lepto 4 Combination Vaccine</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="91pt" align="center" />
+              <colspec colname="2" colwidth="161pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Antigens</entry>
+                  <entry>Excipients and Stabilizers</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="left" />
+              <colspec colname="3" colwidth="35pt" align="left" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <colspec colname="8" colwidth="49pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>Formulation</entry>
+                  <entry />
+                  <entry>Lepto 4</entry>
+                  <entry>Sucrose</entry>
+                  <entry>Sorbitol</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Name</entry>
+                  <entry>DA2PPv viruses</entry>
+                  <entry>bacteria</entry>
+                  <entry>(w/v)</entry>
+                  <entry>(w/v)</entry>
+                  <entry>L-Arg</entry>
+                  <entry>EDTA</entry>
+                  <entry>Preservatives</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>L-037</entry>
+                  <entry>DA2PPv</entry>
+                  <entry>—</entry>
+                  <entry>15%</entry>
+                  <entry>10%</entry>
+                  <entry>0.3M</entry>
+                  <entry />
+                  <entry>Gentamicin</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Amphotericin</entry>
+                </row>
+                <row>
+                  <entry>L-040</entry>
+                  <entry>DA2PPv</entry>
+                  <entry>Lepto 4</entry>
+                  <entry>15%</entry>
+                  <entry>10%</entry>
+                  <entry>0.3M</entry>
+                  <entry />
+                  <entry>Gentamicin</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Amphotericin</entry>
+                </row>
+                <row>
+                  <entry>L-043</entry>
+                  <entry>DA2PPv</entry>
+                  <entry>Lepto 4</entry>
+                  <entry>15%</entry>
+                  <entry>10%</entry>
+                  <entry>0.3M</entry>
+                  <entry>2 mM</entry>
+                  <entry>Gentamicin</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Amphotericin</entry>
+                </row>
+                <row>
+                  <entry>L-045</entry>
+                  <entry>DA2PPv</entry>
+                  <entry>Lepto 4 +</entry>
+                  <entry>15%</entry>
+                  <entry>10%</entry>
+                  <entry>0.3M</entry>
+                  <entry />
+                  <entry>Gentamicin</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Adjuvant</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Amphotericin</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00009-en">Note:</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00010-en">The final volume is 1 mL per dose for each formulation.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00011-en">The concentration for sucrose and sorbitol is weight by volume (w/v). The concentration for arginine (L-Arg) is in molar concentration.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00012-en">The concentration for EDTA is in millimolar.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00013-en">All blends contain: 10 mM Histidine and 10 mM Tris as buffer. Final pH of the blend was adjusted to target pH 7.2.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00014-en">All formulations contain: 24 μg/mL Gentamycin and 0.4 μg/mL Amphotericin B antibiotics as preservatives.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00015-en">All formulations contain: DA2PPv virus antigens including CDV, CAV2, CPV-2c and CPI viruses.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00016-en">Lepto 4 contains four Leptospira strains (Canicola, Grippo, Pomona and Ictero) with 10 million killed bacteria for each strain in one dose.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="left" id="entry-00017-en">For L-045, the Lepto 4 was blended with adjuvant REHYDROPHOS first, incubated for &gt;20 mins at room temperature, and then mixed with other viral fractions.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00116-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="378pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 5</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>DAPPv Vaccine Stability at 25° C. in Liquid Formulations</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="336pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Virus Titer (Log10 TCID50) at 25° C.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="112pt" align="center" />
+              <colspec colname="2" colwidth="112pt" align="center" />
+              <colspec colname="3" colwidth="112pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>CDV</entry>
+                  <entry>CAV2</entry>
+                  <entry>CPI</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="13" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="center" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <colspec colname="8" colwidth="28pt" align="center" />
+              <colspec colname="9" colwidth="28pt" align="center" />
+              <colspec colname="10" colwidth="28pt" align="center" />
+              <colspec colname="11" colwidth="28pt" align="center" />
+              <colspec colname="12" colwidth="28pt" align="center" />
+              <colspec colname="13" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Formulations</entry>
+                  <entry>Time 0</entry>
+                  <entry>Week 1</entry>
+                  <entry>Week 2</entry>
+                  <entry>Week 3</entry>
+                  <entry>Time 0</entry>
+                  <entry>Week 1</entry>
+                  <entry>Week 2</entry>
+                  <entry>Week 3</entry>
+                  <entry>Time 0</entry>
+                  <entry>Week 1</entry>
+                  <entry>Week 2</entry>
+                  <entry>Week 3</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="13" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>L-037</entry>
+                  <entry>5.19</entry>
+                  <entry>5.38</entry>
+                  <entry>5.19</entry>
+                  <entry>5.04</entry>
+                  <entry>5.13</entry>
+                  <entry>5.50</entry>
+                  <entry>5.53</entry>
+                  <entry>5.00</entry>
+                  <entry>6.26</entry>
+                  <entry>6.14</entry>
+                  <entry>6.39</entry>
+                  <entry>6.14</entry>
+                </row>
+                <row>
+                  <entry>L-040</entry>
+                  <entry>5.57</entry>
+                  <entry>5.57</entry>
+                  <entry>4.47</entry>
+                  <entry>4.07</entry>
+                  <entry>5.38</entry>
+                  <entry>5.66</entry>
+                  <entry>5.78</entry>
+                  <entry>5.32</entry>
+                  <entry>6.57</entry>
+                  <entry>6.17</entry>
+                  <entry>5.70</entry>
+                  <entry>5.48</entry>
+                </row>
+                <row>
+                  <entry>L-043</entry>
+                  <entry>5.82</entry>
+                  <entry>5.82</entry>
+                  <entry>5.16</entry>
+                  <entry>4.91</entry>
+                  <entry>5.32</entry>
+                  <entry>5.57</entry>
+                  <entry>5.35</entry>
+                  <entry>5.60</entry>
+                  <entry>6.51</entry>
+                  <entry>6.10</entry>
+                  <entry>5.82</entry>
+                  <entry>5.89</entry>
+                </row>
+                <row>
+                  <entry>L-045</entry>
+                  <entry>5.57</entry>
+                  <entry>5.50</entry>
+                  <entry>5.13</entry>
+                  <entry>4.82</entry>
+                  <entry>5.50</entry>
+                  <entry>5.66</entry>
+                  <entry>5.60</entry>
+                  <entry>5.63</entry>
+                  <entry>6.51</entry>
+                  <entry>5.98</entry>
+                  <entry>5.73</entry>
+                  <entry>5.60</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="13" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="13" align="left" id="entry-00018-en">Note:</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="13" align="left" id="entry-00019-en">The antigen input for all 4 formulations are same. The titer at time 0 should be the same theoretically. The variation of the virus titer at time 0 might be a result of assay variation combined with the formulation difference.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="13" align="left" id="entry-00020-en">The titer of CPV is not shown since CPV has been shown to be relatively stable in most of these formulations. Only CDV, CAV2 and CPI titer are measured during this 25° C. accelerated stability study.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>We claim:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>. A liquid stable vaccine that comprises a live attenuated canine or feline virus, 10-30% (w/v) sugar additive, and an amino acid; wherein the liquid stable vaccine has a pH of 6.0 to 8.0; and wherein the amino acid is selected from the group consisting of arginine and methionine; wherein when the amino acid is arginine, its final concentration in the liquid stable vaccine is 0.15 to 0.6 M; and
+<claim-text>wherein when the amino acid is methionine, its final concentration in the liquid stable vaccine is 0.025 to 0.3 M.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The liquid stable vaccine of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the live attenuated canine virus is selected from the group consisting of canine distemper virus, canine adenovirus type 2, canine parvovirus, and canine parainfluenza virus.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The liquid stable vaccine of <claim-ref idref="clm-00002-en">claim 2</claim-ref> wherein the canine parvovirus (CPV) is selected from the group consisting of CPV-2, CPV-2a, CPV-2b, CPV-2c, and a recombinant CPV comprising a heterogenous CPV-2c/CPV-2 genome.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The liquid stable vaccine of <claim-ref idref="clm-00001-en">claim 1</claim-ref>. that further comprises a component selected from the group consisting of 0.4 to 1.6% (w/v) gelatin; 0.5-2.0% (w/v) of a proteolytic hydrolysate of whole casein; 0.25 to 1.0% (v/v) ethanol; 50 to 200 μM EDTA; a buffer; and any combination thereof.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>-<b>8</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>9</b>. The liquid stable vaccine of <claim-ref idref="clm-00004-en">claim 4</claim-ref> wherein the buffer comprises 2.5 to 50 mM Tris or 2.5 to 50 mM Tris and 2.5 to 50 mM histidine.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>10</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>11</b>. The liquid stable vaccine of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the sugar additive is selected from the group consisting of sucrose, sorbitol, and a combination of sugar and sorbitol.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>12</b>. The liquid stable vaccine of <claim-ref idref="clm-00008-en">claim 11</claim-ref>, wherein the live attenuated canine virus is canine distemper virus.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>13</b>. The liquid stable vaccine of <claim-ref idref="clm-00009-en">claim 12</claim-ref> that further comprises a live attenuated canine parvovirus (CPV).</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>14</b>-<b>17</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>18</b>. The liquid stable vaccine of <claim-ref idref="clm-00010-en">claim 13</claim-ref> that further comprises a live attenuated canine adenovirus type 2</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>19</b>. The liquid stable vaccine of <claim-ref idref="clm-00012-en">claim 18</claim-ref> that further comprises a live attenuated canine parainfluenza virus.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>20</b>. The liquid stable vaccine of <claim-ref idref="clm-00013-en">claim 19</claim-ref> wherein the canine parainfluenza virus is a recombinant vector that encodes and expresses a heterogeneous antigen.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>21</b>. The liquid stable vaccine of <claim-ref idref="clm-00014-en">claim 20</claim-ref> wherein the heterogeneous antigen is a poultry virus antigen.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>22</b>. The liquid stable vaccine of <claim-ref idref="clm-00004-en">claim 4</claim-ref> that further comprises a chelator.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>23</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>24</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>25</b>. The liquid stable vaccine of <claim-ref idref="clm-00001-en">claim 1</claim-ref> that further comprises an adjuvant.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>26</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>27</b>. The liquid stable vaccine of <claim-ref idref="clm-00019-en">claim 25</claim-ref>, wherein the vaccine further comprises a killed virus.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>28</b>. The liquid stable vaccine of <claim-ref idref="clm-00021-en">claim 27</claim-ref> wherein the killed virus is selected from the group consisting of canine influenza virus, canine pneumovirus, canine coronavirus, or any combination thereof.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>29</b>. The liquid stable vaccine of <claim-ref idref="clm-00019-en">claim 25</claim-ref>, wherein the vaccine further comprises a killed bacterium.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>30</b>-<b>32</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>33</b>. A method of vaccinating a canine against at least one of the following: canine distemper virus, canine adenovirus type 2, canine parvovirus, and canine parainfluenza virus comprising administering to the canine the liquid stable vaccine of <claim-ref idref="clm-00002-en">claim 2</claim-ref>.</claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>
+        <b>34</b>. The method of <claim-ref idref="clm-00025-en">claim 33</claim-ref>, wherein said administering is performed by subcutaneous injection.</claim-text>
+    </claim>
+    <claim num="27" id="clm-00027-en">
+      <claim-text>
+        <b>35</b>. A method of making the liquid stable vaccine of <claim-ref idref="clm-00001-en">claim 1</claim-ref> that comprises combining a therapeutically effective amount of a live attenuated canine or feline virus with a 10-30% (w/v) sugar additive, an amino acid, and a buffered solution at pH 6.0 to pH 8.0 to form a liquid stable vaccine;
+<claim-text>wherein the amino acid is selected from the group consisting of arginine and methionine; wherein when the amino acid is arginine, its final concentration in the liquid stable vaccine is 0.15 to 0.6 M; and wherein when the amino acid is methionine, its final concentration in the liquid stable vaccine is 0.025 to 0.3 M.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <image file="US20150246114A1.PDF" type="pdf" size="950137" pages="14" />
+</lexisnexis-patent-document>

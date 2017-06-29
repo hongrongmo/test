@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150265140A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150924" time-inserted="020949" date-changed="20151009" time-changed="020526">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121423025">
+        <country>US</country>
+        <doc-number>20150265140</doc-number>
+        <kind>A1</kind>
+        <date>20150924</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14440974</doc-number>
+        <date>20131021</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150924">
+      <priority-claim sequence="1" kind="national">
+        <country>DE</country>
+        <doc-number>102012110766</doc-number>
+        <date>20121109</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151001">
+      <unexamined-printed-without-grant>
+        <date>20150924</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151001">
+      <classification-ipcr sequence="1">
+        <text>A61B   1/00        20060101AFI20150924BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151001">
+      <classification-cpc sequence="1">
+        <text>A61B   1/00149     20130101 FI20150924BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>1</main-group>
+        <subgroup>00149</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B  19/26        20130101 LI20150925BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>19</main-group>
+        <subgroup>26</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150925</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61B2017/00477     20130101 LA20140204BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2017</main-group>
+        <subgroup>00477</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140204</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150924" lang="eng" format="original">INSTRUMENT HOLDER FOR MOUNTING A MEDICAL INSTRUMENT ON A JOINT ARM</invention-title>
+    <parties date-changed="20150924">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>MAQUET GMBH</orgname>
+            <address>
+              <city>Rastatt</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>DE</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hafner</last-name>
+            <first-name>Dieter</first-name>
+            <address>
+              <city>Offenburg</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Wyslucha</last-name>
+            <first-name>Ulrich</first-name>
+            <address>
+              <city>Weingarten</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>EP13071948</doc-number>
+        <date>20131021</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014072163</doc-number>
+        <date>20140515</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151211">
+      <main-family family-id="165665662">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015533097</doc-number>
+            <kind>A</kind>
+            <date>20151119</date>
+          </document-id>
+          <application-date>
+            <date>20131021</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150265140</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20131021</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104661611</doc-number>
+            <kind>A</kind>
+            <date>20150527</date>
+          </document-id>
+          <application-date>
+            <date>20131021</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>102012110766</doc-number>
+            <kind>A1</kind>
+            <date>20140515</date>
+          </document-id>
+          <application-date>
+            <date>20121109</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2916764</doc-number>
+            <kind>A1</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20131021</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014072163</doc-number>
+            <kind>A1</kind>
+            <date>20140515</date>
+          </document-id>
+          <application-date>
+            <date>20131021</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="165665661">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015533097</doc-number>
+            <kind>A</kind>
+            <date>20151119</date>
+          </document-id>
+          <application-date>
+            <date>20131021</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150265140</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20131021</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104661611</doc-number>
+            <kind>A</kind>
+            <date>20150527</date>
+          </document-id>
+          <application-date>
+            <date>20131021</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>102012110766</doc-number>
+            <kind>A1</kind>
+            <date>20140515</date>
+          </document-id>
+          <application-date>
+            <date>20121109</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2916764</doc-number>
+            <kind>A1</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20131021</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014072163</doc-number>
+            <kind>A1</kind>
+            <date>20140515</date>
+          </document-id>
+          <application-date>
+            <date>20131021</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150924" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">An instrument holder (<b>50</b>) is described for mounting a medical instrument (<b>102</b>) on a joint arm (<b>10</b>), said instrument holder comprising a housing (<b>56</b>), a holder formed on the housing (<b>56</b>) in order to hold the medical instrument (<b>102</b>), and a coupling device (<b>52</b>) formed on the housing (<b>56</b>) in order to attach the housing (<b>56</b>) to the joint arm (<b>10</b>). The holder has a receiving groove (<b>80</b>) adapted to a part (<b>104</b>) of the medical instrument (<b>102</b>), in which receiving groove (<b>80</b>) this instrument part (<b>104</b>) is receivable, and an elastic pull strap (<b>82</b>) that is attachable to the housing (<b>56</b>) in such a manner that it surrounds the receiving groove (<b>80</b>) together with the instrument part (<b>104</b>) arranged in the receiving groove (<b>80</b>) in order to hold the instrument (<b>102</b>).</p>
+  </abstract>
+  <legal-data date-changed="20151009">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150716</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015265140A1</docdb-publication-number>
+      <docdb-application-id>444777985</docdb-application-id>
+      <new-owner>MAQUET GMBH, GERMANY</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:HAFNER, DIETER;WYSLUCHA, ULRICH;SIGNING DATES FROM 20150414 TO 20150416;REEL/FRAME:036107/0520</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150924">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is entitled to the benefit of and incorporates by reference subject matter disclosed in International Patent Application No. PCT/EP2013/071948 filed on Oct. 21, 2013 and German Patent Application No. 10 2012 110 766.1 filed Nov. 9, 2012.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00002-en" num="0002">The present invention relates to an instrument holder for mounting a medical instrument, in particular an endoscope, on a joint arm, comprising a housing, a holder formed on the housing in order to hold the medical instrument, and a coupling device formed on the housing in order to attach the housing to the joint arm.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">For surgical applications nowadays increasingly assistance systems are used comprising a joint arm, which is for example attachable to the slide rail of an operating table. A medical instrument is coupled to the free end of the freely movable joint arm. For example, in laparoscopy, a rigid endoscope provided with an optical system is mounted on the joint arm and oriented such that the target region to be examined or to be treated surgically can be seen into by the surgeon.</p>
+      <p id="p-00004-en" num="0004">In order to couple different instruments selectively with the joint arm, such assistance systems often include an instrument holder as mechanical interface between instrument and joint arm. Such an instrument holder includes a coupling device, which is attached to the free end of the joint arm, as well as a holder for the medical instrument. The holder is for example formed as screw clamp and has to be operated by the surgeon or an assistant with both hands in order to attach the medical instrument to the instrument holder.</p>
+      <heading id="h-00004-en" level="1">SUMMARY</heading>
+      <p id="p-00005-en" num="0005">It is the object of the invention to provide an instrument holder which has a simple design and can be easily operated.</p>
+      <p id="p-00006-en" num="0006">The invention solves this object by the instrument holder for mounting a medical instrument on a joint arm, comprising: a housing, a holder formed on the housing in order to hold the medical instrument, and a coupling device formed on the housing in order to attach the housing to the joint arm, wherein the holder has a receiving groove adapted to a part of the medical instrument, in which receiving groove said instrument part is receivable, and an elastic pull strap that is attachable to the housing in such a manner that it surrounds the receiving groove together with the instrument part arranged in the receiving groove in order to hold the instrument.</p>
+      <p id="p-00007-en" num="0007">According to the invention, the holder has a receiving groove adapted to a part of the medical instrument, in which receiving groove this instrument part is receivable, and an elastic pull strap, which is attachable to the housing in such a manner that it surrounds the receiving groove together with the instrument part arranged in the receiving groove in order to hold the instrument.</p>
+      <p id="p-00008-en" num="0008">The use of a an elastic pull strap which clamps the instrument in the receiving groove has the advantage over conventionally used screw clamps that one can readjust the instrument attached to the instrument holder within certain limits without having to detach the instrument from the instrument holder. For example, it is possible to rotate the instrument about its longitudinal axis without opening the pull strap. The instrument holder according to the invention thus allows, in addition to the required stability with which the instrument is to be held, also a certain flexibility of the instrument movement and thus simplifies the handling significantly.</p>
+      <p id="p-00009-en" num="0009">The housing of the instrument holder on which on the one hand the holder for the medical instrument and on the other hand the coupling device for attaching the instrument holder to the joint arm are formed, for example can be produced cost-effectively in the form of a plastic injection-moulded article. Thus, it is possible to design the instrument holder according to the invention as sterile disposable.</p>
+      <p id="p-00010-en" num="0010">In order to attach the medical instrument to the instrument holder coupled with the joint arm, the user only has to arrange the instrument in the receiving groove and then has to pull the pull strap, using its elasticity, over the receiving groove and to mount it in a suitable manner on the housing of the instrument holder. For this, he requires only hand. The same applies to detaching of the instrument from the instrument holder. The invention thus allows for a particularly simple one-hand operation of the instrument holder.</p>
+      <p id="p-00011-en" num="0011">Preferably, the pull strap has a first strap portion, which is attached on one side of the receiving groove, and a second strap portion, which is mountable on the other side of the receiving groove on the housing under elastic expansion on the pull strap, whereby a third strap portion positioned between the first and the second strap portion surrounds the receiving groove in an elastically expanded state. In a particularly preferred embodiment, the pull strap thus surrounds the receiving groove transversely to the longitudinal extension thereof, wherein the first strap portion is fixed on one side and the second strap portion is fixed on the other side of the receiving groove. The portion of the instrument, which is fitted into the receiving groove, is thus particularly reliably locked.</p>
+      <p id="p-00012-en" num="0012">The second strap portion is preferably mountable via a pin/hole-connection on the housing. Thus, it is possible to pull the pull strap in a particularly simple manner over the receiving groove and to clamp it on the housing of the instrument holder. Also the first strap portion of the pull strap can be mounted via a corresponding pin/hole-connection on the housing.</p>
+      <p id="p-00013-en" num="0013">In an advantageous embodiment, the second strap portion has a mounting hole and the housing has a mounting projection engaging the mounting hole, which mounting projection has a locking nose at its free end pointing away from the receiving groove. Consequently, the locking nose points into a direction which acts against the tension generated by the elastic deformation of the pull strap. This ensures that the second strap portion of the pull strap does not slip from the mounting projection.</p>
+      <p id="p-00014-en" num="0014">A corresponding embodiment is also advantageous for attaching the first strap portion on the other side of the receiving groove. In this case, the pull strap is detachable in its entirety from the housing. Alternatively, it is also possible to attach the first strap portion firmly to the housing, so that the second strap portion constitutes the free end of a pull strap firmly attached to the housing.</p>
+      <p id="p-00015-en" num="0015">Preferably, the first, the second and the third strap portion form a straight, elongated element in the untensioned state of the pull strap. Thereby the width of the elongated element is preferably equal to the length of the receiving groove over which the pull strap extends for holding the medical instrument.</p>
+      <p id="p-00016-en" num="0016">In a particularly preferred embodiment, the pull strap has a fourth strap portion adjacent to the third strap portion, which fourth strap portion projects in the untensioned state of the pull strap at an angle, preferably at a right angle, from the straight element. This fourth strap portion forms a handle portion, at which the user grabs the pull strap in order to pull it over the receiving groove. Preferably, the surface of the fourth strap portion is grooved or surface-treated in another manner in order to prevent slipping of the user's fingers from the pull strap.</p>
+      <p id="p-00017-en" num="0017">The pull strap is preferably formed from an elastomer, e.g. from rubber or silicon. Any kind of materials can be used for the pull strap, provided that the latter has the desired elasticity. Thereby the elasticity of the pull strap is for example in a shore hardness range of 20 to 100, preferably in a shore hardness range of 30 to 90 and particularly preferred in a shore hardness range of 45 to 75. The material thickness of the pull strap is for example in a range of 1 to 12 mm, preferably in a range of 2 to 10 mm and particularly preferred in a range of 3 to 7 mm. Relevant for the measurement of the elasticity of the pull strap is that the pull strap is tensible with the force of one hand.</p>
+      <p id="p-00018-en" num="0018">The receiving groove is preferably trapezoid in cross section. Such a trapezium shape is particularly well suited for holding the medical instrument as it as it has a self-centering and tolerance-compensating effect. Of course, the receiving groove is however not limited to a trapezoid cross section. Many different shapes are possible for the receiving groove. It is advantageous, if the instrument clamped in the receiving groove is pressed against two walls tapered in the direction of the groove bottom. Due to the wedge effect realized in this manner a great clamping effect can be achieved with a small clamping force. This is for example also possible with a triangular cross section or a half-ellipsoidal cross section.</p>
+      <p id="p-00019-en" num="0019">In a particularly preferred embodiment, the receiving groove is formed in an elastic receiving piece, which rests in a fitting opening formed in the housing. The fitting opening provides the possibility to attach different receiving pieces for different medical instruments, which differ for example in their cross section shape, in particular their diameter, as instrument holder. The instrument holder is thus usable for different instruments.</p>
+      <p id="p-00020-en" num="0020">As the receiving piece as well as the pull strap are formed elastically, it allows a certain flexibility in the orientation of the medical instrument attached to the instrument holder without having to move the joint arm itself. The elasticity of the receiving piece thereby is for example in a shore hardness range of 20 to 100, preferably in a shore hardness range of 30 to 90 and particularly preferred in a shore hardness range of 50 to 75. The softer the receiving piece is, the more likely the receiving piece has a certain “adhesive effect”, which favors the fixing of the instrument in the receiving groove.</p>
+      <p id="p-00021-en" num="0021">Preferably, the receiving piece and the fitting opening engage in a dovetail joint manner. A dovetail joint allows for a particularly reliable attachment of the receiving piece in the fitting opening.</p>
+      <p id="p-00022-en" num="0022">In a particularly preferred embodiment, the housing of the instrument holder is rotatable relative to the coupling device about a rotational axis. This allows for a rotation of the instrument attached to the instrument holder without having to adjust the joint arm.</p>
+      <p id="p-00023-en" num="0023">In a preferred embodiment, the coupling device comprises a locking plate with a first toothing, which is in locking engagement with a second toothing formed on the housing, wherein the second toothing is detachable from the first toothing against the biasing force exerted by a biasing element along the rotational axis in order to rotate the housing relative to the locking plate about the rotational axis. The two toothings can for example be formed such that the housing can be rotated in predetermined angle intervals relative to the locking plate.</p>
+      <p id="p-00024-en" num="0024">Preferably, the instrument holder is formed such that is sterilizable. In this case, the instrument holder is preferably a disposable. However, it is also possible to design the instrument holder for multiple use, in particular sterilizable multiple times.</p>
+      <p id="p-00025-en" num="0025">According to a further aspect of the invention, an assistance system is provided comprising a joint arm, a medical instrument and an instrument holder of the above-described type for mounting the medical instrument on the joint arm. The medical instrument is for example an endoscope, which is used in laparoscopy, to give the surgeon the possibility to see into the target region to be treated.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00026-en" num="0026">The invention will be explained in more detail in the following on the basis of the Figures, wherein:</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 1</figref> shows a joint arm, which is part of the assistance system according to the invention;</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 2</figref> shows an instrument holder according to the invention, which is to be mounted on the joint arm according to <figref>FIG. 1</figref>;</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 3</figref> shows an exploded view of the instrument holder;</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 4</figref> shows a perspective view of the housing of the instrument holder;</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 5</figref> shows a further perspective view of the housing of the instrument holder;</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 6</figref> shows a view of the assembled housing;</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 7</figref> shows a view of the assembled housing with another receiving piece;</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 8</figref> shows an illustration showing how the housing of the instrument holder is rotated relative to the locking plate;</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIG. 9</figref> shows an illustration showing how the pull strap is positioned around an endoscope; and</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIG. 10</figref> shows an illustration showing how the endoscope is rotatably held by means of the pull strap.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00037-en" num="0037">
+        <figref>FIG. 1</figref> shows a joint arm <b>10</b>, which is part of an assistance system according to the invention.</p>
+      <p id="p-00038-en" num="0038">The joint arm <b>10</b> includes a plurality of rigid holding members <b>12</b>, <b>14</b>, <b>16</b>, <b>18</b>, <b>20</b> and <b>22</b> which are coupled via joints <b>24</b>, <b>26</b>, <b>28</b>, <b>30</b> and <b>32</b> to each other. At one end of the joint arm <b>10</b> a mounting device <b>34</b> is arranged, which serves to attach the joint arm <b>10</b> to a not shown slide rail of an operating table. At the other end of the joint arm <b>10</b> a handle <b>36</b> is positioned, which can be manually operated by the user in order to unlock with the joint arm <b>10</b>.</p>
+      <p id="p-00039-en" num="0039">If no operating force is exerted on the handle <b>36</b>, the holding members <b>12</b>, <b>14</b>, <b>16</b>, <b>18</b>, <b>20</b> and <b>22</b> of the joint arm <b>10</b> are rigidly coupled to each other via the joints <b>24</b>, <b>26</b>, <b>28</b>, <b>30</b> and <b>32</b>. In this state, the joint arm forms a rigid unit.</p>
+      <p id="p-00040-en" num="0040">If the user presses the handle <b>36</b>, the holding members <b>24</b>, <b>26</b>, <b>28</b>, <b>30</b> and <b>32</b>, which are coupled to each other via the joints <b>24</b>, <b>26</b>, <b>28</b>, <b>30</b> and <b>32</b>, become movable relative to each other via an unlocking mechanism, which is not part of the present invention and therefore is not described in more detail here, so that the user can orient the joint arm <b>10</b> in space as desired. If the user subsequently releases the handle <b>36</b> again, the joints <b>24</b> to <b>32</b> are locked and the joint arm <b>10</b> is fixed in its changed orientation.</p>
+      <p id="p-00041-en" num="0041">
+        <figref>FIG. 2</figref> shows an instrument holder <b>50</b>, which is part of the assistance system according to the invention. In order to couple the instrument holder <b>50</b> to the joint arm <b>10</b> a quick coupling <b>42</b> is provided which is put with one end on a locking plug <b>40</b>, which is arranged at the handle <b>36</b> (cf. <figref>FIG. 1</figref>). The quick coupling <b>42</b> has two unlocking buttons <b>44</b> and <b>46</b>, which are pressed in order to detach the quick coupling <b>42</b> from the joint arm <b>10</b>.</p>
+      <p id="p-00042-en" num="0042">The instrument holder <b>50</b> is adapted to the quick coupling <b>42</b>. For this, the instrument holder <b>50</b> includes a coupling device <b>52</b> with a further locking plug <b>54</b>, which can be put into the quick coupling <b>42</b>.</p>
+      <p id="p-00043-en" num="0043">The instrument holder <b>50</b> is shown in <figref>FIG. 3</figref> in an exploded view.</p>
+      <p id="p-00044-en" num="0044">The instrument holder <b>50</b> includes as basic component a housing <b>56</b> produced in form of an integral plastic injection-moulded article, which is illustrated in different perspectives in <figref>FIGS. 4 and 5</figref>.</p>
+      <p id="p-00045-en" num="0045">As shown in the exploded view of <figref>FIG. 3</figref>, when assembling the instrument holder <b>50</b> the coupling device <b>52</b> is attached to the housing <b>56</b>. The coupling device <b>52</b> is formed from a circular locking plate, which includes a first circumferential toothing <b>58</b> on its side facing the housing <b>56</b>. Inside of the toothing <b>58</b> a threaded shank <b>60</b> is positioned, which is inserted into a mounting opening <b>62</b> (cf. <figref>FIG. 4</figref>) formed in the housing <b>56</b>. If the threaded shank <b>60</b> is inserted in the mounting opening <b>62</b>, a compression coil spring <b>64</b> and a washer <b>66</b> are successively put on the threaded shank <b>60</b>. Subsequently, a screw <b>68</b> is screwed in the threaded shank <b>60</b>, thus tightening the locking plate <b>52</b> against the spring force exerted by the compression coil spring <b>64</b> on the housing <b>56</b>.</p>
+      <p id="p-00046-en" num="0046">As shown in <figref>FIG. 5</figref>, the housing <b>56</b> includes a second toothing <b>70</b>, which surrounds the mounting hole <b>62</b>. The second toothing <b>70</b> of the housing <b>56</b> is engaged with the first toothing <b>58</b> formed on the locking plate <b>52</b>. The locking plate <b>52</b> can be lifted from the housing <b>56</b> so far against the spring force exerted by the compression coil spring <b>64</b> that the first toothing <b>58</b> formed on the locking plate <b>52</b> is detached from the first toothing <b>70</b> formed in the housing <b>56</b>. In this state, the housing <b>56</b> can be rotated about a rotational axis R (cf. <figref>FIG. 3</figref>), which is coincident with the center axis of the threaded shank <b>60</b>, relative to the locking plate <b>52</b>. In this manner, the instrument holder <b>50</b> can be rotated relative to the quick coupling <b>42</b> and thus to the joint arm <b>10</b>. A lid <b>72</b> closes the housing <b>56</b>.</p>
+      <p id="p-00047-en" num="0047">The housing <b>56</b> includes at its end facing away from the locking plate <b>52</b> a fitting opening <b>76</b>, in which an elastic receiving piece <b>78</b> is inserted. The receiving piece <b>78</b> is e.g. produced from rubber or silicon and rests positively in the fitting opening <b>76</b>. As can best be seen in in the illustration according to <figref>FIG. 6</figref>, the receiving piece <b>78</b> and the fitting opening <b>76</b> engage positively in a dovetail joint manner.</p>
+      <p id="p-00048-en" num="0048">The receiving piece <b>78</b> includes on its side facing away from the fitting opening <b>76</b> a receiving groove <b>80</b> being trapezoid in cross section, which serves to receive a part of the medical instrument, which shall be held with the instrument holder <b>50</b>. Correspondingly, shape and size of the receiving groove <b>80</b> are adapted to this instrument part.</p>
+      <p id="p-00049-en" num="0049">As can be seen from the illustrations according to <figref>FIGS. 6 and 7</figref>, different elastic receiving pieces <b>78</b>, <b>78</b>′ can be provided, the respective receiving groove <b>80</b>, <b>80</b>′ of which is adapted to the medical instrument just being used. For this, said parts of the receiving pieces <b>78</b>, <b>78</b>′, which are adapted to the fitting opening <b>76</b> and form the dovetail joint therewith, are formed identically. Only the receiving grooves <b>80</b>, <b>80</b>′ are different.</p>
+      <p id="p-00050-en" num="0050">The instrument holder <b>50</b> further includes an elastic pull strap <b>82</b>, which serves to clamp the instrument part positioned in the receiving groove <b>80</b> of the mounting piece <b>78</b> in the receiving groove <b>80</b>. The pull strap <b>82</b>, which is e.g. produced from rubber or silicon, has a first strap portion <b>84</b>, in which a mounting hole <b>86</b> is formed. The first strap portion <b>84</b> is put with its mounting hole <b>86</b> on a mounting projection <b>88</b>, so that the first strap portion <b>84</b> is fastened at an outer wall <b>90</b> of the housing <b>56</b>. For this, the mounting projection <b>88</b> is so broad that the mounting hole <b>86</b>, when it is put on the mounting projection <b>88</b>, is elastically deformed causing the first strap portion <b>84</b> to be fixed on the mounting projection <b>88</b>. In this fixed state, the end surface of the first strap portion <b>84</b> abuts an abutment projection <b>92</b>, which projects perpendicularly from the housing wall <b>90</b> of the housing <b>56</b>.</p>
+      <p id="p-00051-en" num="0051">The pull strap <b>82</b> has a second strap portion <b>94</b> and a third strap portion <b>96</b>, which is arranged between the first strap portion <b>84</b> and the second strap portion <b>94</b>. In the second strap portion <b>94</b> a second mounting hole <b>98</b> is formed which is put on a second mounting projection <b>100</b> (cf. <figref>FIGS. 4 and 5</figref>). The second mounting projection <b>100</b> has a locking nose <b>101</b>, which points away from the receiving groove <b>80</b>. It is positioned at a housing wall <b>102</b>, which faces away from the housing wall <b>90</b>, at which the first mounting projection <b>88</b> is formed. The two mounting projections <b>88</b> and <b>100</b> are thus positioned on different sides of the receiving groove <b>80</b>.</p>
+      <p id="p-00052-en" num="0052">The second strap portion <b>94</b> is put with its mounting hole <b>98</b> on the mounting projection <b>100</b> in order to attach the pull strap <b>82</b> to the housing <b>56</b> such that said pull strap <b>82</b> surrounds with its third strap portion <b>96</b> the receiving groove <b>80</b> formed in the mounting piece <b>78</b> together with the instrument part held therein and is thus pulled apart elastically in its longitudinal direction. Due to the elastic deformation of the pull strap <b>82</b> the third strap portion <b>96</b> surrounding the receiving groove <b>80</b> presses the instrument part into the receiving groove <b>80</b>.</p>
+      <p id="p-00053-en" num="0053">The pull strap <b>82</b> further has a fourth strap portion <b>99</b>, which is adjacent to the second strap portion <b>94</b> at a right angle. The fourth strap portion <b>99</b> has a grooved surface and forms a handle portion, at which the user can grab the pull strap <b>82</b>.</p>
+      <p id="p-00054-en" num="0054">As mentioned above, the two mounting projections <b>88</b> and <b>100</b> are positioned on different sides of the fitting opening <b>76</b> and thus of the receiving groove <b>80</b> formed in the mounting piece <b>78</b>. The distance, along which the pull strap <b>82</b> extends starting from the first mounting projection <b>88</b> over the receiving groove <b>80</b> up to the second mounting projection <b>100</b>, is shorter than the distance between the two mounting holes <b>86</b> and <b>98</b> in the untensioned state of the pull strap <b>82</b>. This ensures that the pull strap <b>82</b> in the tensioned state, in which the first mounting projection <b>88</b> engages the first mounting hole <b>86</b> and the second mounting projection <b>100</b> engages the second mounting hole <b>98</b>, is sufficiently expanded in order to press the instrument part with a sufficiently great holding force into the receiving groove <b>80</b>.</p>
+      <p id="p-00055-en" num="0055">Below, the operating mode of the instrument holder <b>5</b> is explained with reference to the <figref>FIGS. 2</figref>, <b>8</b>, <b>9</b> and <b>10</b>.</p>
+      <p id="p-00056-en" num="0056">For attaching the instrument holder <b>50</b> to the quick coupling <b>40</b> connected to the joint arm <b>10</b> the locking plug <b>54</b>, which is formed on the locking plate <b>52</b>, is put in the direction of arrow A (cf. <figref>FIG. 2</figref>) into the quick coupling <b>42</b>. When the instrument holder <b>50</b> is subsequently rotated in the direction of arrow B, it engages audibly and is locked with the quick coupling <b>42</b>.</p>
+      <p id="p-00057-en" num="0057">
+        <figref>FIG. 8</figref> shows how the locked instrument holder <b>50</b> can be rotated relative to the quick coupling <b>42</b> in order to attach the instrument holder <b>50</b> for example to an already oriented endoscope. For this, the housing <b>56</b> is lifted a little from the locking plate <b>52</b> in the direction of arrow A against the spring force exerted by the compression coil spring <b>64</b>, so that the two toothings <b>58</b> and <b>70</b> disengage. In this disengaged state, the housing <b>56</b> can be rotated relative to the locking plate <b>52</b>, as indicated by arrow B in <figref>FIG. 8</figref>. To illustrate this process the instrument holder <b>50</b> is shown in two rotation positions in <figref>FIG. 8</figref>.</p>
+      <p id="p-00058-en" num="0058">In <figref>FIG. 9</figref> it is illustrated how an endoscope <b>102</b> is attached to the instrument holder <b>50</b>. For this, a tube portion <b>104</b> of the endoscope <b>102</b> is positioned in the receiving groove <b>80</b> of the mounting piece <b>78</b>. Subsequently, the operator grabs the grooved handle portion <b>99</b> of the pull strap <b>82</b> and turns the pull strap <b>82</b> down, as indicated by the arrow in <figref>FIG. 9</figref>.</p>
+      <p id="p-00059-en" num="0059">Finally, the user clamps the tube portion <b>104</b> of the endoscope <b>102</b> in the receiving groove <b>80</b> by hooking the mounting projection <b>100</b> in the mounting hole <b>98</b> of the pull strap <b>82</b>, as shown in <figref>FIG. 10</figref>. The illustration according to <figref>FIG. 10</figref> also indicates that the endoscope <b>102</b> can be rotated about its longitudinal axis, although it is held in the receiving groove <b>80</b> by the pull strap <b>82</b>. The pull strap <b>82</b> thus allows a limited rotational movement of the endoscope <b>102</b> arranged in the receiving groove <b>80</b> without having to detach the pull strap <b>82</b>. In static operation, in which no external force acts on the endoscope, the latter is thus held securely in the receiving groove <b>80</b> by the pull strap <b>82</b>. In dynamic operation, in which the user exerts a rotary force on the endoscope <b>102</b>, the pull strap <b>82</b>, on the other hand, allows a rotational movement of the endoscope <b>102</b> about its longitudinal axis. This is in particular advantageous when using angular optics. An active detachment of the endoscope, such as it is for example intended with customary screw clamps, is thus not required.</p>
+      <p id="p-00060-en" num="0060">Although various embodiments of the present invention have been described and shown, the invention is not restricted thereto, but may also be embodied in other ways within the scope of the subject-matter defined in the following claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150924">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. An instrument holder for mounting a medical instrument on a joint arm, comprising:
+<claim-text>a housing,</claim-text><claim-text>a holder formed on the housing in order to hold the medical instrument, and</claim-text><claim-text>a coupling device formed on the housing in order to attach the housing to the joint arm,</claim-text><claim-text>wherein the holder has a receiving groove adapted to a part of the medical instrument, in which receiving groove said instrument part is receivable, and an elastic pull strap that is attachable to the housing in such a manner that it surrounds the receiving groove together with the instrument part arranged in the receiving groove in order to hold the instrument.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The instrument holder according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the pull strap has a first strap portion, which is attached on one side of the receiving groove, and a second strap portion, which is mountable on the other side of the receiving groove on the housing under elastic expansion of the pull strap, whereby a third strap portion positioned between the first and the second strap portion surrounds the receiving groove in an elastically expanded state.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The instrument holder according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the second strap portion is mountable via a pin/hole-connection on the housing.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The instrument holder according to <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the second strap portion has a mounting hole and the housing has a mounting projection engaging the mounting hole, which mounting projection includes a locking nose at its free end, which locking nose points away from the receiving groove.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The instrument holder according to that <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the first, the second and the third strap portion form a straight, elongated element in the untensioned state of the pull strap.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The instrument holder according to <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the pull strap has a fourth strap portion adjacent to the second strap portion, which extends at an angle from the straight element in the untensioned state of the pull strap.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The instrument holder according to that <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the pull strap is formed from an elastomer.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The instrument holder according to that <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the pull strap holds the instrument part in such a manner in the receiving groove that the instrument part is rotatable about its longitudinal axis against the holding force exerted by the pull strap.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The instrument holder according to that <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the receiving groove is formed in an elastic receiving piece, which rests in a fitting opening formed in the housing.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The instrument holder according to <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the receiving piece and the fitting opening engage in a dovetail joint manner.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The instrument holder according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the receiving piece is formed from an elastomer.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The instrument holder according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the housing is rotatable relative to the coupling device about a rotational axis (R).</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The instrument holder according to <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the coupling device comprises a locking plate having a first toothing, which is in locking engagement with a second toothing formed on the housing, wherein the second toothing is detachable against the biasing force exerted by a biasing element along the rotational axis (R) from the first toothing, in order to rotate the housing relative to the locking plate plate about the rotational axis (R).</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The instrument holder according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the locking plate is mounted on the housing by means of a screwed connection, which is formed from a threaded shank and a screw element inserted into the threaded shank, and is pressed against the housing by means of a compression spring, in which the threaded shank is inserted.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. A joint arm system, comprising a joint arm, a medical instrument, preferably an endoscope, and an instrument holder according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> for mounting the medical instrument on the joint arm.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The instrument holder according to <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the first, the second and the third strap portion form a straight, elongated element in the untensioned state of the pull strap.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The instrument holder according to <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the first, the second and the third strap portion form a straight, elongated element in the untensioned state of the pull strap.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The instrument holder according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the pull strap is formed from an elastomer.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The instrument holder according to <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the pull strap is formed from an elastomer.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The instrument holder according to <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the pull strap is formed from an elastomer.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150265140A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150265140A1-20150924-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150265140A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150265140A1-20150924-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150265140A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150265140A1-20150924-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150265140A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150265140A1-20150924-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150265140A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150265140A1-20150924-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150265140A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150265140A1-20150924-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150265140A1_00007.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150265140A1-20150924-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150265140A1.PDF" type="pdf" size="511915" pages="11" />
+</lexisnexis-patent-document>

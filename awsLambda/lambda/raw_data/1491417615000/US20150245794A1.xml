@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150245794A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021558" date-changed="20150914" time-changed="041954">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140855">
+        <country>US</country>
+        <doc-number>20150245794</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14658528</doc-number>
+        <date>20150316</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>A61B   5/1455      20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>1455</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61B   5/00        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>A61B   5/14552     20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>14552</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B   5/0205      20130101 LI20130425BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0205</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130425</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61B   5/0261      20130101 LI20130425BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0261</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130425</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61B   5/0295      20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0295</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61B   5/14551     20130101 LI20130425BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>14551</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130425</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61B   5/7207      20130101 LA20150318BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>7207</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150318</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61B   5/7278      20130101 LI20130425BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>7278</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130425</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61B   5/7282      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>7282</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">18</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">PERFUSION INDEX SMOOTHER</invention-title>
+    <related-documents date-changed="20150903">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13627855</doc-number>
+              <date>20120926</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>8983564</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14006585</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>11871620</doc-number>
+              <date>20071012</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>8280473</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13627855</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>60851346</doc-number>
+          <date>20061012</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>MASIMO CORPORATION</orgname>
+            <address>
+              <city>Irvine</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Al-Ali</last-name>
+            <first-name>Ammar</first-name>
+            <address>
+              <city>San Juan Capistrano</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173464146">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150245794</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150316</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173464145">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150245794</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150316</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">An embodiment of the present disclosure seeks to smooth a perfusion index measurement through use of a baseline perfusion index measurement and/or through the use of multiple PI calculations. The combination of the baseline perfusion index measurement reduces an error between a calculated measurement of PI and actual conditions.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">PRIORITY CLAIM TO RELATED PROVISIONAL APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">The present application is a continuation of U.S. application Ser. No. 13/627,855, filed Sep. 26, 2012, entitled “Perfusion Index Smoother,” which is a continuation of U.S. application Ser. No. 11/871,620, filed Oct. 12, 2007, entitled “Perfusion Index Smoother,” now U.S. Pat. No. 8,280,473, which claims priority benefit under 35 U.S.C. §119(e) of U.S. Provisional Application Ser. No. 60/851,346, filed Oct. 12, 2006, entitled “Perfusion Index Smoother,” which is incorporated herein by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">RELATED CASES</heading>
+      <p id="p-00002-en" num="0002">The present application is related to U.S. Pat. Nos. 6,334,065, 6,606,511 and the continuation, continuation-in-part, and divisional applications thereof. The foregoing disclosure is incorporated herein by reference and included in the present filing.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND OF THE DISCLOSURE</heading>
+      <p id="p-00003-en" num="0003">1. Field of the Disclosure</p>
+      <p id="p-00004-en" num="0004">The present disclosure relates in general to patient monitoring and in particular to oximeter patient monitors capable of determining perfusion index measurements.</p>
+      <p id="p-00005-en" num="0005">2. Description of the Related Art</p>
+      <p id="p-00006-en" num="0006">Oximeter systems providing measurements of a monitored patient have become the standard of care in many patient care settings, including surgical, post surgical, neonatal, general ward, home care, physical training, and the like. In general, oximeter systems accept one or more noninvasive signals from an optical sensor or probe capable of emitting multiple wavelengths of light into a tissue site and capable of detecting light after attenuated by the tissue site. The optical sensor generally outputs intensity signal data. <figref>FIG. 1</figref> illustrates a photoplethysmograph intensity signal <b>100</b> output by an oximeter sensor. An oximeter does not directly detect absorption, and hence does not directly measure a standard plethysmograph waveform. However, the standard plethysmograph can be derived by observing that the detected intensity signal <b>100</b> is merely an out of phase version of an absorption profile known to one of skill in the art. That is, the peak detected intensity <b>102</b>, generally corresponds to a minimum absorption, and minimum detected intensity <b>104</b>, generally corresponds to a maximum absorption. Further, a rapid rise in absorption during an inflow phase of the plethysmograph is reflected in a rapid decline <b>106</b> in intensity. Likewise, a gradual decline in absorption during the outflow phase of the plethysmograph is reflected in a gradual increase <b>108</b> in detected intensity.</p>
+      <p id="p-00007-en" num="0007">
+        <figref>FIG. 2</figref> illustrates a flow calculator <b>200</b> which receives a processed signal <b>202</b> responsive to at least one of the intensity signals output from the sensor. In an embodiment, the flow calculator outputs an indication of blood flow, such as, for example, a perfusion index (PI) <b>204</b>. In an embodiment, the PI <b>204</b> comprises a relative indication of pulse strength at a monitoring site. For example, the PI <b>204</b> may be defined as the ratio of the wavelength's (A) AC signal to the DC signal, or the percentage of pulsatile signal to non-pulsatile signal, according to the following:</p>
+      <p id="p-00008-en" num="0000">[in-line-formulae]PI=(λ<sub>max</sub>−λ<sub>min</sub>)/λ<sub>DC </sub>[/in-line-formulae]</p>
+      <p id="p-00009-en" num="0008">where λ<sub>max </sub>is the maximum value, λ<sub>min </sub>is the minimum value, and λ<sub>DC </sub>is the average value of the signal <b>202</b>.</p>
+      <p id="p-00010-en" num="0009">Once calculated, the PI <b>204</b> may advantageously be displayed in a wide number of ways, including rising LEDs or other display elements, text, graphics, or other visual elements including color, flashing, and the like, trended data, trace data, or the like. <figref>FIG. 3A</figref> illustrates a display output for an oximeter patient monitor <b>302</b> including a textual PI display <b>304</b> (shown as “3.25 PI”) ranging from 1.0 to 20. <figref>FIG. 3B</figref> illustrates a display output for a handheld oximeter patient monitor <b>322</b> including a PI bar <b>324</b> ranging from, for example, “&lt;0.1%” to “&gt;5%” with steps of “&lt;0.1%,” “0.25%,” “0.5%,” “1%,” “1.25%,” “1.5%,” “1.75%,” “2%,” “3%,” and “&gt;5%.” An artisan will recognize from the disclosure herein that various steps and a wide variety of scalars or other mathematical mapping can be used to make PI numbers more readily understandable to a caregiver. However, using the foregoing scale, the PI bar <b>324</b> can be used as a diagnostic tool during low perfusion for the accurate prediction of illness severity, especially in neonates. Moreover, the rate of change in the PI bar <b>324</b> can be indicative of blood loss, sleep arousal, sever hypertension, pain management, the presence or absence of drugs, or the like. According to one embodiment, a measurement below about “1.25%” may indicate medical situations in need of caregiver attention, specifically in monitored neonates. Because of the relevance of about “1.25%”, the PI bar <b>324</b> may advantageously include level indicia that switch sides of the PI bar <b>324</b>, thus highlighting any readings below about that threshold. Moreover, behavior of the PI bar <b>324</b>, as discussed below, may advantageously draw attention to monitored values below such a threshold.</p>
+      <p id="p-00011-en" num="0010">The PI bar <b>324</b> may advantageously activate LEDs from a bottom toward a top such that the bar “fills” to a level proportional to the measured value. In one embodiment, the PI bar <b>324</b> shows a static value of perfusion for a given time period, such as, for example, one or more pulses. In another embodiment, or functional setting, the PI bar <b>324</b> may advantageously pulse with a pulse rate, may hold the last reading and optionally fade until the next reading, may indicate historical readings through colors or fades, traces or the like. Additionally, the PI bar <b>324</b> may advantageously change colors, flash, increasingly flash, or the like to indicate worsening measured values of perfusion.</p>
+      <p id="p-00012-en" num="0011">As discussed above, the monitors <b>302</b>, <b>322</b> may include output functionality that outputs, for example, trend perfusion data, such that a caregiver can monitor measured values of perfusion over time. Alternatively or additionally, the monitors <b>302</b>, <b>322</b> may display historical trace data on an appropriate display indicating the measured values of perfusion over time. In an embodiment, the trend data is uploaded to an external computing device through, for example, a multipurpose sensor connector or other input output systems such as USB, serial or parallel ports, computing networks, or the like. Additional information regarding the calculation and use of PI is disclosed in the '065 patent, assigned to Masimo Corporation (“Masimo”) of Irvine, Calif., and incorporated by reference herein.</p>
+      <heading id="h-00004-en" level="1">SUMMARY OF THE DISCLOSURE</heading>
+      <p id="p-00013-en" num="0012">Aspects of the present disclosure include a system which provides a more accurate indication of PI. In one embodiment, the wavelength used to determine PI is in the infrared (IR) spectrum. IR wavelengths are more independent of saturation than are wavelengths in the Red (R) spectrum. As a result, when the saturation changes, the PI calculated from a R wavelength tends to vary greater than the PI calculated from a IR wavelength. Although the IR intensity signal data is less responsive to saturation than various other intensity channels, the IR intensity signal remains somewhat susceptible to motion-induced noise, distortion and the like. In general, PI measurements during lower signal quality or distortion generally trends the PI too high. As understood by an artisan from the disclosure herein, higher PI measurements should correlate to better perfusion through the tissue site, and lower PI measurements should correlate to lower perfusion through the tissue site. Thus, noise may cause a patient monitor to give a caregiver the indication that a patient has better perfusion through a measurement site than is actually the case.</p>
+      <p id="p-00014-en" num="0013">Based at least thereon, embodiments of the present disclosure seek to reduce an error between a calculated measurement of PI and actual conditions. In an embodiment, a baseline perfusion index (“baseline PI”) is determined and used to improve measurements during motion conditions. For example, a smoother may advantageously determine a baseline PI during strong signal quality, high signal confidence conditions, and use that baseline PI or a statistical combination of baseline PIs instead of or in addition to the current PI that is being influenced by noise. In an embodiment, the smoother selects the lower PI value as the output PI value. This is because motion noise tends to increase PI, thus the lower PI value tends to be the more accurate value.</p>
+      <p id="p-00015-en" num="0014">In an embodiment, PI is calculated using at least two different calculation techniques. The two different calculations are analyzed and a PI indication is determined. In an embodiment, the lower of the two PI values is chosen. In an embodiment, the PI values are averaged or statistically analyzed to determine a more accurate value for PI.</p>
+      <p id="p-00016-en" num="0015">In an embodiment, a method of smoothing a perfusion index measurement in an oximeter system is disclosed. The method includes the steps of establishing a baseline perfusion index during quality signal conditions of a signal responsive to intensity signals acquired from a detector capable of detecting light attenuated by body tissue and leveraging the baseline perfusion index during poor signal conditions. In an embodiment, leveraging includes outputting the baseline perfusion index when a current perfusion index measurement is higher than the baseline perfusion index. In an embodiment, leveraging includes outputting a current perfusion index measurement when the baseline perfusion index is higher than the current perfusion index measurement. In an embodiment, the signal is responsive to an IR intensity signal.</p>
+      <p id="p-00017-en" num="0016">In an embodiment, an oximeter is disclosed. The oximeter includes an input capable of receiving intensity signal data responsive to intensity signals acquired from a detector capable of detecting light attenuated by body tissue, a memory storing a baseline Perfusion Index (PI) and a processor programmed to output the baseline PI when the signal data includes motion-induced noise and a current PI derived from the signal data is not lower than the baseline PI. In an embodiment, an alarm is included which is configured to alert a caregiver when the output meets predetermined criteria. In an embodiment, the processor is programmed to output the current PI when the signal data is relatively calm or when the current PI is lower than the baseline PI.</p>
+      <p id="p-00018-en" num="0017">In an embodiment, a method of determining an indication of perfusion index in a patient monitor is disclosed. The method includes the steps of receiving plethysmographic data, calculating two or more indications of perfusion index using at least two different calculation techniques, and determining a final indication of perfusion index based on the indications of perfusion index. In an embodiment, the final indication of perfusion index is determined by selecting the lowest indication of perfusion index. In an embodiment, the final indication of perfusion index is determined by statistical analysis. In an embodiment, the final indication of perfusion index is determined by averaging the indications of perfusion index.</p>
+      <p id="p-00019-en" num="0018">In an embodiment, a method of determining an indication of perfusion index is disclosed. The method includes the steps of receiving plethysmographic data and determining an indication of perfusion index by utilizing at least one calculation techniques to determine a resulting indication of perfusion index. In an embodiment, determining the indication of perfusion index includes utilizing the calculation technique that will result in the lowest perfusion index value.</p>
+      <p id="p-00020-en" num="0019">In an embodiment, an oximeter is disclosed. The oximeter includes an input capable of receiving intensity signal data responsive to intensity signals acquired from a detector capable of detecting light attenuated by body tissue, a first calculator configured to calculate a first indication of perfusion index using a first calculation technique, a second calculator configured to calculate a second indication of perfusion index using a second calculation technique and a processor configured to utilize at least one of the first and second calculators to determine a resulting indication of perfusion index. In an embodiment, the processor is configured to select the calculator which calculates the lowest indication of perfusion index. In an embodiment, the processor utilizes both calculation techniques. In an embodiment, the processor is further configured to select the lowest indication of perfusion index as the resulting indication of perfusion index.</p>
+      <p id="p-00021-en" num="0020">In an embodiment, a method of determining an indication of a physiological condition using data responsive to intensity signals acquired from a detector capable of detecting light attenuated by body tissue is disclosed. The method includes the steps of determining one or more indications of pulse information from data responsive to intensity signals acquired from a detector capable of detecting light attenuated by body tissue, determining a first indication of amplitude data for a single pulse based on the one or more indications of pulse information, determining a second indication of amplitude data for a plurality of pulses based on the one or more indications of pulse information, determining a final indication of amplitude data based on the first and second indications and outputting the final indication. In an embodiment, the amplitude data is used to determine an indication of perfusion. In an embodiment, determining a final indication includes selecting the lowest indication of amplitude from the first and second indications of amplitude. In an embodiment, determining a final indication includes averaging the first and second indications of amplitude. In an embodiment, determining a final indication is based on a statistical analysis of the first and second indications of amplitude. In an embodiment, the combination includes an averaged combination of pulses. In an embodiment, the combination includes a maximum and minimum amplitude of a plurality of pulses. In an embodiment, the combination includes a statistical combination of pulses.</p>
+      <p id="p-00022-en" num="0021">For purposes of summarizing the disclosure, certain aspects, advantages and novel features of the disclosure have been described herein. Of course, it is to be understood that not necessarily all such aspects, advantages or features will be embodied in any particular embodiment of the disclosure.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00023-en" num="0022">A general architecture that implements the various features of the disclosure will now be described with reference to the drawings. The drawings and the associated descriptions are provided to illustrate embodiments of the disclosure and not to limit its scope.</p>
+      <p id="p-00024-en" num="0023">
+        <figref>FIG. 1</figref> illustrates a graph showing an intensity “plethysmograph” oximetry waveform.</p>
+      <p id="p-00025-en" num="0024">
+        <figref>FIG. 2</figref> illustrates a flow calculator capable of determining measurements for a perfusion index.</p>
+      <p id="p-00026-en" num="0025">
+        <figref>FIGS. 3A-3B</figref> illustrate patient monitors capable of calculating and displaying the measurements of <figref>FIG. 2</figref>.</p>
+      <p id="p-00027-en" num="0026">
+        <figref>FIG. 4</figref> illustrates a simplified block diagram of a smoothed perfusion index generator, according to an embodiment of the disclosure.</p>
+      <p id="p-00028-en" num="0027">
+        <figref>FIG. 5</figref> illustrates a flow chart of a smoothing process, according to an embodiment of the disclosure.</p>
+      <p id="p-00029-en" num="0028">
+        <figref>FIG. 6</figref> illustrates another embodiment of a simplified block diagram of a smoothed perfusion index generator.</p>
+      <p id="p-00030-en" num="0029">
+        <figref>FIG. 7</figref> illustrates a simplified block diagram of an embodiment of a PI determination system using multiple PI calculation techniques.</p>
+      <p id="p-00031-en" num="0030">
+        <figref>FIG. 8</figref> illustrates a flow chart of a PI decision process, according to another embodiment of the disclosure.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00032-en" num="0031">
+        <figref>FIG. 4</figref> illustrates a simplified block diagram of a smoothed perfusion index generator <b>400</b>, according to an embodiment of the disclosure. As shown, the generator <b>400</b> includes a flow calculator <b>402</b>, ad smoother <b>404</b> and optional indications of noise, including a measure of distortion <b>406</b>, signal quality <b>408</b>, and waveform quality <b>410</b>. In an embodiment, a data signal <b>420</b> responsive to an intensity signal is input into the flow calculator <b>402</b>, and a current value <b>422</b> of PI is calculated. A skilled artisan will recognize a number of calculations that can determine values of perfusion, including, for example, the foregoing ratio of the AC signal to the DC signal. The current value <b>422</b> of PI, which in an embodiment is subject to noise and distortion in the data signal <b>420</b>, is input into the smoother <b>404</b>, which reduces an error between the current value <b>422</b> of PI and actual perfusion conditions. For example, the smoother <b>404</b> may advantageously determine a baseline PI, and depending upon an indication of some or all of an amount of distortion, noise, signal quality, and/or waveform quality in the data signal <b>422</b>, substitute or combine the baseline PI for or with the current value <b>422</b> to generate an output PI <b>430</b>.</p>
+      <p id="p-00033-en" num="0032">In an embodiment, the wavelength used to determine PI is in the infrared (IR) spectrum. IR wavelengths are more independent of saturation than are wavelengths in, for example, the Red (R) spectrum. As a result, when the saturation changes, the PI calculated from a R wavelength tends to vary greater than the PI calculated from a IR wavelength.</p>
+      <p id="p-00034-en" num="0033">In an embodiment, the distortion signal <b>406</b> may comprise a Boolean value indicating whether the data signal <b>422</b> includes, for example, motion-induced noise. Although an artisan will recognize from the disclosure herein a number of methodologies for deriving the distortion signal <b>406</b>, derivation of a Boolean distortion signal is disclosed in U.S. Pat. No. 6,606,511, incorporated herein by reference. Alternatively, or in addition to, the signal quality signal <b>408</b> may comprise a Boolean value indicating whether the data signal <b>422</b> meets various waveform criteria Although an artisan will recognize from the disclosure herein a number of methodologies for deriving the signal quality signal <b>408</b>, derivation of a Boolean distortion signal is disclosed in the '511 patent. Alternatively, or in addition to, a feature extractor <b>440</b> may advantageously produce waveform quality outputs <b>410</b>, indicative of waveform quality or waveform shape. Although an artisan will recognize from the disclosure herein a number of methodologies for deriving the waveform quality signal <b>410</b>, derivation thereof is disclosed in the '065 patent.</p>
+      <p id="p-00035-en" num="0034">Thus, the smoother <b>404</b> accepts one or more or different indicators of the quality of the data signal <b>420</b>, and determines how to smooth the PI output to reduces errors between data trends and actual perfusion conditions. In an embodiment, the smoothing may advantageously comprise statistical weighting, other statistical combinations, or simply passing the PI <b>422</b> through to the output, depending upon one or more of the quality signals <b>406</b>, <b>408</b>, <b>410</b>, or logical combinations thereof. In an embodiment, the smoother <b>404</b> selects the lowest PI value to pass to the output PI <b>422</b>. This is because motion noise tends to increase PI, thus the lower PI value tends to be the more accurate value.</p>
+      <p id="p-00036-en" num="0035">Upon the output of a smoothed PI measurement, a monitor may advantageously audibly and/or visually presents the measurement to a caregiver, and when the measurement meets certain defined thresholds or behaviors, the monitor may advantageously audibly and/or visually alert the caregiver. In other embodiments, the monitor may communicate with other computing devices to alert the caregiver, may compare longer term trend data before alarming, or the like.</p>
+      <p id="p-00037-en" num="0036">
+        <figref>FIG. 5</figref> illustrates a flow chart of a smoothing process <b>500</b>, according to an embodiment of the disclosure. In block <b>502</b>, data is acquired responsive to one or more of multiple channel intensity signals. In block <b>504</b>, a determination is made whether distortion is present, whether signal quality is good, whether there is motion-induced-noise or the like. When acceptable noise levels exist, in block <b>506</b>, the baseline PI becomes the current PI and in block <b>508</b>, the baseline PI is output. However, when unacceptable signal quality or the like is detected, the current PI is compared to the baseline PI. When the current PI is smaller than the baseline PI, in block <b>506</b>, the baseline PI becomes the current PI. However, when the current PI is greater than or equal to the baseline PI, the baseline PI is output in block <b>510</b>. Thus, the smoothing process <b>500</b> determines when a baseline PI can be acquired in quality monitoring conditions, and then uses that baseline PI to avoid drift or other errors that may deteriorate the accuracy of the PI output. An artisan will recognize from the disclosure herein that the baseline PI could be reset periodically, some or all iterations, when other occurrences or measurements suggest a reinitialization, when various trends occur, or the like.</p>
+      <p id="p-00038-en" num="0037">
+        <figref>FIG. 6</figref> illustrates another embodiment of a simplified block diagram of a smoothed perfusion index generator <b>600</b>. As shown, the generator <b>600</b> includes a smoother <b>604</b> and optional indications of noise, including a measure of distortion <b>606</b>, signal quality <b>608</b>, waveform quality <b>610</b>, and Pleth Feature Extractor similar to those described with respect to <figref>FIG. 4</figref>. In an embodiment, a data signal <b>620</b> responsive to an intensity signal is input into the PI Analyzer <b>602</b>, and a PI value <b>422</b> is outputted for use by the smoother <b>604</b>. In an embodiment, the PI Analyzer employs multiple different calculation techniques to determine a more accurate indication of PI. In an embodiment, based on the indications of distortion signal quality, waveform quality and/or other indications of signal quality, a specific calculation technique is used to determine a PI output value <b>622</b>.</p>
+      <p id="p-00039-en" num="0038">
+        <figref>FIG. 7</figref> illustrates a simplified block diagram of an embodiment of a PI determination system <b>700</b> using multiple PI calculation techniques. As shown, pleth data <b>720</b> is input into the system. The pleth data <b>720</b> is then routed to at least two different PI calculators <b>702</b>, <b>704</b>. In an embodiment, more than two different types of calculation techniques can be used. The at least two PI calculators <b>702</b>, <b>704</b> output PI indications for input into the PI selector <b>706</b>. The PI selector <b>706</b> determines a PI value to output. In an embodiment, the PI selector chooses the lowest PI value. In general, the lower PI value should be the more accurate value, particularly in the presence of motion induced noise. This is because motion induced noise tends to raise PI values. In an embodiment, the PI selector <b>706</b> averages or otherwise analyzes the PI values using statistical modeling in order to determine a more accurate value of PI.</p>
+      <p id="p-00040-en" num="0039">In an embodiment, one of the PI calculators <b>702</b>, <b>704</b> determines a PI value based on pulse by pulse determination of PI, such as, for example, using the following PI formula as described above:</p>
+      <p id="p-00041-en" num="0000">[in-line-formulae]PI=(λ<sub>max</sub>−λ<sub>min</sub>)/λ<sub>DC </sub>[/in-line-formulae]</p>
+      <p id="p-00042-en" num="0040">In an embodiment, one of the PI calculators <b>702</b>, <b>704</b> determines a PI value based on a fixed or variable interval of pleth data including more than one pulse, in effect calculating a bulk PI.</p>
+      <p id="p-00043-en" num="0041">
+        <figref>FIG. 8</figref> illustrates a flow chart of a PI decision process <b>800</b>, according to another embodiment of the disclosure. At block <b>802</b>, the process <b>800</b> receives pleth data <b>802</b>. The process then moves to block <b>804</b> where the process <b>800</b> calculates at least two different PI indications, such as, for example, as described with respect to <figref>FIG. 7</figref>. The process <b>800</b> then moves to block <b>806</b> where an indication of PI is determined based on the different calculations, again, such as, for example, as described with respect to <figref>FIG. 7</figref>. The process <b>800</b> then repeats itself for each PI value determination.</p>
+      <p id="p-00044-en" num="0042">While the above perfusion index determination system has been described in certain embodiments herein, other embodiments of the present disclosure will be known to those of skill in the art from the descriptions herein. Moreover, the described embodiments have been presented by way of example only, and are not intended to limit the scope of the disclosure. Moreover, those of skill in the art understand that information and signals can be represented using a variety of different technologies and techniques. For example, data, instructions, commands, information, signals, bits, symbols, and chips that can be referenced throughout the above description may be represented by voltages, currents, electromagnetic waves, magnetic fields or particles, optical fields or particles, or any combination thereof.</p>
+      <p id="p-00045-en" num="0043">Those of skill in the art further appreciate that the various illustrative logical blocks, modules, circuits, and algorithm steps described in connection with the embodiments disclosed herein can be implemented as electronic hardware, computer software, or combinations of both. To illustrate this interchangeability of hardware and software, various illustrative components, blocks, modules, circuits, and steps have been described above generally in terms of their functionality. Whether such functionality is implemented as hardware or software depends upon the particular application and design constraints imposed on the overall system. Skilled artisans can implement the described functionality in varying ways for each particular application, but such implementation decisions should not be interpreted as causing a departure from the scope of the present disclosure.</p>
+      <p id="p-00046-en" num="0044">The various illustrative logical blocks, modules, and circuits described in connection with the embodiments disclosed herein can be implemented or performed with a general purpose processor, a digital signal processor (DSP), an application specific integrated circuit (ASIC), a field programmable gate array (FPGA) or other programmable logic device, discrete gate or transistor logic, discrete hardware components, or any combination thereof designed to perform the functions described herein. A general purpose processor can be a microprocessor, but in the alternative, the processor can be any conventional processor, controller, microcontroller, or state machine. A processor can also be implemented as a combination of computing devices, e.g., a combination of a DSP and a microprocessor, a plurality of microprocessors, one or more microprocessors in conjunction with a DSP core, or any other such configuration.</p>
+      <p id="p-00047-en" num="0045">The steps of a method or algorithm described in connection with the embodiments disclosed herein can be embodied directly in hardware, in a software module executed by a processor, or in a combination of the two. A software module can reside in RAM memory, flash memory, ROM memory, EPROM memory, EEPROM memory, registers, hard disk, a removable disk, a CD-ROM, or other form of storage medium known in the art. A storage medium is coupled to the processor, such that the processor can read information from, and write information to, the storage medium. In the alternative, the storage medium can be integral to the processor. The processor and the storage medium can reside in an ASIC. The ASIC can reside in a user terminal, physiological monitor and/or sensor. The processor and the storage medium can reside as discrete components in a user terminal, physiological monitor and/or sensor.</p>
+      <p id="p-00048-en" num="0046">Although the foregoing disclosure has been described in terms of certain preferred embodiments, other embodiments will be apparent to those of ordinary skill in the art from the disclosure herein. Additionally, other combinations, omissions, substitutions and modifications will be apparent to the skilled artisan in view of the disclosure herein. Moreover, it is contemplated that various aspects and features of the disclosure described can be practiced separately, combined together, or substituted for one another, and that a variety of combination and subcombinations of the features and aspects can be made and still fall within the scope of the disclosure. Furthermore, the systems described above need not include all of the modules and functions described in the preferred embodiments. Accordingly, the present disclosure is not intended to be limited by the recitation of the preferred embodiments, but is to be defined by reference to the appended claims.</p>
+      <p id="p-00049-en" num="0047">Additionally, all publications, patents, and patent applications mentioned in this specification are herein incorporated by reference to the same extent as if each individual publication, patent, or patent application was specifically and individually indicated to be incorporated by reference.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method of determining an indication of perfusion index in a patient monitor, the method comprising:
+<claim-text>receiving pleth data;</claim-text><claim-text>calculating at least two indications of perfusion index using at least two different calculation techniques; and</claim-text><claim-text>determining a final indication of perfusion index based on the at least two indications of perfusion index.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the final indication of perfusion index is determined by selecting the lowest indication of perfusion index.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the final indication of perfusion index is determined by statistical analysis.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the final indication of perfusion index is determined by averaging the at least two indications of perfusion index.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en" independent="true">
+      <claim-text>
+        <b>5</b>. A method of determining an indication of perfusion index, the method comprising:
+<claim-text>receiving pleth data; and</claim-text><claim-text>determining an indication of perfusion index by utilizing at least one of a first calculation technique and a second calculation technique to determine a resulting indication of perfusion index.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein determining the indication of perfusion index comprises utilizing the calculation technique that will result in the lowest perfusion index value.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en" independent="true">
+      <claim-text>
+        <b>7</b>. An oximeter comprising:
+<claim-text>an input capable of receiving intensity signal data responsive to intensity signals acquired from a detector capable of detecting light attenuated by body tissue,</claim-text><claim-text>a first calculation calculator configured to calculate a first indication of perfusion index using a first calculation technique;</claim-text><claim-text>a second calculator configured to calculate a second indication of perfusion index using a second calculation technique; and</claim-text><claim-text>a processor configured to utilize at least one of the first and second calculators to determine a resulting indication of perfusion index.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the processor is configured to select the calculator which calculates the lowest indication of perfusion index.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the processor utilizes both calculation techniques.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the processor is further configured to select the lowest indication of perfusion index as the resulting indication of perfusion index.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en" independent="true">
+      <claim-text>
+        <b>11</b>. A method of determining an indication of a physiological condition using data responsive to intensity signals acquired from a detector capable of detecting light attenuated by body tissue, the method comprising:
+<claim-text>determining one or more indications of pulse information from data responsive to intensity signals acquired from a detector capable of detecting light attenuated by body tissue;</claim-text><claim-text>determining a first indication of amplitude data for a pulse based on the one or more indications of pulse information;</claim-text><claim-text>determining a second indication of amplitude data for a combination of pulses based on the one or more indications of pulse information;</claim-text><claim-text>determining a final indication of amplitude data based on the first and second indications; and</claim-text><claim-text>outputting the final indication as an indication of perfusion index.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the amplitude data is used to determine an indication of perfusion.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein determining a final indication further comprises selecting the lowest indication of amplitude from the first and second indications of amplitude.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein determining a final indication further comprises averaging the first and second indications of amplitude.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein determining a final indication is based on a statistical analysis of the first and second indications of amplitude.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the combination comprises an averaged combination of pulses.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the combination comprises a maximum and minimum amplitude of a plurality of pulses.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the combination comprises a statistical combination of pulses. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150245794A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150245794A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150245794A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245794A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150245794A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245794A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150245794A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245794A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150245794A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245794A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150245794A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245794A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150245794A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245794A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150245794A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245794A1-20150903-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150245794A1_00009.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150245794A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150245794A1.PDF" type="pdf" size="482046" pages="13" />
+</lexisnexis-patent-document>

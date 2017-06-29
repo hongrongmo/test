@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2940181A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091029" date-changed="20151217" time-changed="202827">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121938997">
+        <country>EP</country>
+        <doc-number>2940181</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>13869621</doc-number>
+        <date>20131111</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>jpn</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012287499</doc-number>
+        <date>20121228</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2012287499</doc-number>
+        <kind>A</kind>
+        <date>20121228</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2013080395</doc-number>
+        <kind>W</kind>
+        <date>20131111</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>2012287499</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>2013080395</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>JP20120287499</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>WO2013JP80395</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151105">
+      <request-for-examination>
+        <date>20150717</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151217">
+      <classification-ipcr sequence="1">
+        <text>C23C  16/34        20060101AFI20140718BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140718</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>B23B  27/14        20060101ALI20140718BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>23</class>
+        <subclass>B</subclass>
+        <main-group>27</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140718</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>B23B  51/00        20060101ALI20140718BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>23</class>
+        <subclass>B</subclass>
+        <main-group>51</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140718</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>B23C   5/16        20060101ALI20140718BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>5</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140718</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>C23C  16/32        20060101ALI20140718BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>32</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140718</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>C23C  16/36        20060101ALI20140718BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>36</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140718</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="7">
+        <text>C23C  16/38        20060101ALI20140718BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>38</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140718</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="8">
+        <text>C23C  16/40        20060101ALI20140718BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>40</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140718</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="9">
+        <text>C23C  16/52        20060101ALI20140718BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>52</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140718</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151217">
+      <classification-cpc sequence="1">
+        <text>C23C  28/042       20130101 FI20150204BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>28</main-group>
+        <subgroup>042</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150204</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B23B  27/14        20130101 LI20151104BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>23</class>
+        <subclass>B</subclass>
+        <main-group>27</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151104</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>B23B  51/00        20130101 LI20151104BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>23</class>
+        <subclass>B</subclass>
+        <main-group>51</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151104</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>B23C   5/16        20130101 LI20151104BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>5</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151104</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C23C  16/32        20130101 LI20151104BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>32</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151104</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C23C  16/34        20130101 LI20151207BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>34</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151207</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C23C  16/36        20130101 LI20151104BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>36</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151104</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C23C  16/38        20130101 LI20151104BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>38</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151104</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C23C  16/40        20130101 LI20140902BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>40</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140902</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>C23C  16/52        20130101 LI20151104BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>52</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151104</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>C23C  16/56        20130101 LI20151205BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>56</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151205</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>C23C  28/044       20130101 LI20150204BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>28</main-group>
+        <subgroup>044</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150204</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>C23C  28/42        20130101 LI20141108BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>28</main-group>
+        <subgroup>42</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141108</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>Y10T 428/25        20130101 LA20151023BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>428</main-group>
+        <subgroup>25</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151023</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>Y10T 428/257       20130101 LA20151023BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>428</main-group>
+        <subgroup>257</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151023</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">5</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">OBERFLÄCHENBESCHICHTETES ELEMENT UND HERSTELLUNGSVERFAHREN DAFÜR</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">SURFACE COATED MEMBER, AND MANUFACTURING METHOD FOR SAME</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">ÉLÉMENT DE SURFACE ENDUIT, ET SON PROCÉDÉ DE FABRICATION</invention-title>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Sumitomo Electric Hardmetal Corp.</orgname>
+            <registered-number>100229316</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>1-1, Koyakita 1-chome</address-1>
+              <city>Itami-shi, Hyogo 664-0016</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>PASEUTH, Anongsack</name>
+            <address>
+              <address-1>c/o SUMITOMO ELECTRIC HARDMETAL CORP. 1-1 Koyakita 1-chome</address-1>
+              <city>Itami-shi Hyogo 664-0016</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>YAMAGATA, Kazuo</name>
+            <address>
+              <address-1>c/o SUMITOMO ELECTRIC HARDMETAL CORP. 1-1 Koyakita 1-chome</address-1>
+              <city>Itami-shi Hyogo 664-0016</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>OKUNO, Susumu</name>
+            <address>
+              <address-1>c/o SUMITOMO ELECTRIC HARDMETAL CORP. 1-1 Koyakita 1-chome</address-1>
+              <city>Itami-shi Hyogo 664-0016</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>KANAOKA, Hideaki</name>
+            <address>
+              <address-1>c/o SUMITOMO ELECTRIC HARDMETAL CORP. 1-1 Koyakita 1-chome</address-1>
+              <city>Itami-shi Hyogo 664-0016</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5">
+          <addressbook lang="eng">
+            <name>MORIMOTO, Hiroyuki</name>
+            <address>
+              <address-1>c/o SUMITOMO ELECTRIC HARDMETAL CORP. 1-1 Koyakita 1-chome</address-1>
+              <city>Itami-shi Hyogo 664-0016</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6">
+          <addressbook lang="eng">
+            <name>ITOH, Minoru</name>
+            <address>
+              <address-1>c/o Hokkaido Sumiden Precision Co. Ltd. 776 Azanaie Naie-cho</address-1>
+              <city>Sorachi-gun Hokkaido 079-0304</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Grünecker Patent- und Rechtsanwälte PartG mbB</name>
+            <registered-number>100060488</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Leopoldstraße 4</address-1>
+              <city>80802 München</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13080395</doc-number>
+        <date>20131111</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014103533</doc-number>
+        <date>20140703</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151203">
+      <main-family family-id="166468937">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014129562</doc-number>
+            <kind>A</kind>
+            <date>20140710</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104870685</doc-number>
+            <kind>A</kind>
+            <date>20150826</date>
+          </document-id>
+          <application-date>
+            <date>20131111</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5618429</doc-number>
+            <kind>B2</kind>
+            <date>20141105</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150101448</doc-number>
+            <kind>A</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20131111</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150345013</doc-number>
+            <kind>A1</kind>
+            <date>20151203</date>
+          </document-id>
+          <application-date>
+            <date>20131111</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014103533</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131111</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940181</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131111</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="166468935">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014129562</doc-number>
+            <kind>A</kind>
+            <date>20140710</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104870685</doc-number>
+            <kind>A</kind>
+            <date>20150826</date>
+          </document-id>
+          <application-date>
+            <date>20131111</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5618429</doc-number>
+            <kind>B2</kind>
+            <date>20141105</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150101448</doc-number>
+            <kind>A</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20131111</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150345013</doc-number>
+            <kind>A1</kind>
+            <date>20151203</date>
+          </document-id>
+          <application-date>
+            <date>20131111</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014103533</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131111</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940181</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131111</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A surface coated member having improved stability and a longer service life is provided. The surface coated member of the present invention includes a base member and a hard coating formed on a surface thereof. The above-described hard coating is constituted of one or more layers. At least one layer among the layers is a layer including hard particles. The hard particles include a multilayer structure having a first unit layer and a second unit layer being layered alternately. The above-described first unit layer includes a first compound. The first compound is made of one or more kind of element selected from the group consisting of a periodic table group 4 element, a periodic table group 5 element, a periodic table group 6 element, and Al, and one or more kind of element selected from the group consisting of B, C, N, and O. The above-described second unit layer includes a second compound. The second compound is made of one or more kind of element selected from the group consisting of a periodic table group 4 element, a periodic table group 5 element, a periodic table group 6 element, and Al, and one or more kind of element selected from the group consisting of B, C, N, and O.<img id="imga-00001-en" wi="45" he="56" img-content="drawing" file="imgaf001.tif" img-format="tif" /></p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <heading id="h-00001-en">TECHNICAL FIELD</heading>
+    <p id="p-00001-en" num="0001">The present invention relates to a surface coated member including a base member and a hard coating formed on a surface thereof, and a method for manufacturing the same.</p>
+    <heading id="h-00002-en">BACKGROUND ART</heading>
+    <p id="p-00002-en" num="0002">As a recent technical trend, producing a thinner and shorter surface coated member for a cutting tool or the like is on the main stream for the purpose of reducing a load on a global environment and efficiently utilizing a resource. Accordingly, providing a metal material having a higher strength and higher hardness used for a surface coated member is proceeding to secure a service life of a surface coated member and maintain its reliability. On the other hand, at metal working sites, it has been strongly requested to achieve improved accuracy of a worked part and reduced working cost to compete with newly emerging countries. Further, with the improvement in the performance of machining tools, the expectation for further high-speed working with a surface coated member is increasing. In the high-speed working, since a cutting edge of a surface coated member is exposed to a high-temperature and high-pressure environment, a surface coated member capable of having a longer service life even under a harsh environment will be requested in the future.</p>
+    <p id="p-00003-en" num="0003">For example, Japanese Patent Laying-Open No. <patcit id="pcit-00001" dnum="JP7205362A"><text>7-205362</text></patcit> (PTD 1) discloses a hard coating which coats a surface of a base member of a surface coated member. In the hard coating, the composition thereof is changed continuously with nitride, carbide, carbonitride, or boride of two or more kinds of elements selected from group 4, 5, 6 elements, Al, and Si at a cycle of 0.4 nm to 50 nm. The above-described hard coating is formed by a PVD (Physical Vapor Deposition) method. Specifically, TiN layers and AlN layers are formed continuously on a base material surface with use of solid Ti, solid Al, and N<sub>2</sub> gas by bringing Ti ion and Al ion, which are generated by a vacuum discharge, and N<sub>2</sub> gas to be in contact with a base member heated to 500°C. Since the hard coating formed by this method has a large distortion in its structure, a surface coated member having this hard coating can have a superior wear resistance and toughness.</p>
+    <p id="p-00004-en" num="0004">Moreover, for example, Japanese National Patent Publication No. <patcit id="pcit-00002" dnum="JP2008545063A"><text>2008-545063</text></patcit> (PTD 2) discloses a member having a Ti<sub>1-x</sub>Al<sub>x</sub>N coating as a surface coated member. This Ti<sub>1-x</sub>Al<sub>x</sub>N coating has a single layer structure of a cubic crystal NaCl structure having a stoichiometric coefficient of 0.75 &lt;x≤0.93 and having a lattice constant afcc of 0.412 nm to 0.405 nm. The above-described Ti<sub>1-x</sub>Al<sub>x</sub>N coating is formed by a CVD (Chemical Vapor Deposition) method. Specifically, a first gas mixture constituted of AlCl<sub>3</sub>, TiCl<sub>4</sub>, H<sub>2</sub>, and argon and a second gas mixture constituted of NH<sub>3</sub> and N<sub>2</sub> as a nitrogen source are introduced into a CVD reactor vessel of a hot wall type accommodating a base member to perform a thermal CVD method. The above-described coating formed by this method has a higher Al content in the coating as compared to the Ti<sub>1-x</sub>Al<sub>x</sub>N coating produced by a generally known PVD method. Therefore, a surface coated member having this coating has a higher oxidation resistance and a higher hardness and can exhibit a superior wear resistance at a high temperature.</p>
+    <heading id="h-00003-en">CITATION LIST</heading>
+    <heading id="h-00004-en">PATENT DOCUMENTS</heading>
+    <p id="p-00005-en" num="0005">
+      <ul id="ul-00001-en" list-style="none" compact="compact">
+        <li>PTD 1: Japanese Patent Laying-Open No. <patcit id="pcit-00003" dnum="JP7205362A"><text>7-205362</text></patcit></li>
+        <li>PTD 2: Japanese National Patent Publication No. <patcit id="pcit-00004" dnum="JP2008545063A"><text>2008-545063</text></patcit></li>
+      </ul>
+    </p>
+    <heading id="h-00005-en">SUMMARY OF INVENTION</heading>
+    <heading id="h-00006-en">TECHNICAL PROBLEM</heading>
+    <p id="p-00006-en" num="0006">However, as to PTD 1, there is a case where the hard coating formed by the PVD method contains impurities such as metals of Ti, Al, and alloy of those. Such impurities are referred to as droplets, which inhibit formation of the hard coating and causes falling of the hard coating during metal working. Moreover, from the part where the hard coating has fallen as a starting point, chipping, fracture, and the like of the hard coating is likely to occur. Consequently, it becomes difficult to obtain a longer service life of a surface coated member, and there is a case where the work quality and surface roughness of the work material are deteriorated.</p>
+    <p id="p-00007-en" num="0007">Moreover, as to PTD 2, although the Ti<sub>1-x</sub>Al<sub>x</sub>N coating has a stoichiometric coefficient of 0.75&lt;x≤0.93, generally, there is a tendency to cause a large distortion in a crystal structure when x is greater than 0.7 in this composition. It is well known that a Ti<sub>1-x</sub>Al<sub>x</sub>N crystal of a cubic crystal NaCl structure is modified into a hexagonal crystal wurzite structure to mitigate the distortion. Particularly, there is a tendency that this modification is accelerated at a high temperature.</p>
+    <p id="p-00008-en" num="0008">During the metal working, a cutting tool and a work material repeat contact and release, and a load is applied to a surface of a cutting edge of the surface coated member in the cycles of heating and cooling. Therefore, a great thermal load is applied all the time to the surface coated member during the metal working, and a thermal fatigue occurs. This thermal fatigue accelerates the above-described modification. Further, along with the repeated cutting, the hard coating which has once modified is likely to cause chipping and fracture. Therefore, also in the technique disclosed in PTD 2, there is a limit on a longer service life of a surface coated member in a high-speed working.</p>
+    <p id="p-00009-en" num="0009">The present invention was made in view of the circumstance described above, and its object is to provide improved stability and a longer service life to a surface coated member and to provide a method for manufacturing the same.</p>
+    <heading id="h-00007-en">SOLUTION TO PROBLEM</heading>
+    <p id="p-00010-en" num="0010">The present invention concerns a surface coated member including a base member and a hard coating formed on a surface thereof. The hard coating is constituted of one or more layers. At least one layer among the above-described layers is a layer including hard particles. The hard particles include a multilayer structure having first unit layers and second unit layers being layered alternately. The first unit layer includes a first compound. The first compound is made of one or more kind of element selected from the group consisting of a periodic table group 4 element, a periodic table group 5 element, a periodic table group 6 element, and Al, and one or more kind of element selected from the group consisting of B, C, N, and O. The second unit layer includes a second compound. The second compound is made of one or more kind of element selected from the group consisting of a periodic table group 4 element, group 5 element, group 6 element, and Al, and at least one element selected from the group consisting of B, C, N, and O.</p>
+    <p id="p-00011-en" num="0011">Preferably, the above-described surface coated member includes an intermediate layer between the first unit layer and the second unit layer, and a composition of the intermediate layer is changed continuously in its thickness direction from a composition of the first compound to a composition of the second compound.</p>
+    <p id="p-00012-en" num="0012">Preferably, in the above-described surface coated member, the layer including hard particles includes a grain boundary layer in a grain boundary of the hard particles, said grain boundary layer including the first compound or the second compound.</p>
+    <p id="p-00013-en" num="0013">Moreover, the present invention concerns a method for manufacturing a surface coated member including a base member and a hard coating. The hard coating is formed on a surface of the base member and constituted of one or more layers. The method includes a CVD step of forming at least one layer among the above-described layers by a CVD method. The CVD step includes an ejection step of ejecting a mixture gas, containing two or more kinds of elements selected from the group consisting of a periodic table group 4 element, a periodic table group 5 element, a periodic table group 6 element, and Al, and one or more kind of element selected from the group consisting of B, C, N, and O, to the surface of the base member, and a cooling step of cooling the base member after the ejection step.</p>
+    <p id="p-00014-en" num="0014">Preferably, in the above-described manufacturing method, the base member is cooled at a rate greater than or equal to 7°C/min in the cooling step.</p>
+    <heading id="h-00008-en">ADVANTAGEOUS EFFECTS OF INVENTION</heading>
+    <p id="p-00015-en" num="0015">According to the surface coated member of the present invention, the various characteristics such as a wear resistance and a welding resistance are improved. Therefore, it exhibits a superior effect of having improved stability and a longer service life. Moreover, according to the method for manufacturing a surface coated member of the present invention, various characteristics such as a wear resistance and a welding resistance are improved, so that a surface coated member having improved stability and a longer service life can be manufactured.</p>
+    <heading id="h-00009-en">BRIEF DESCRIPTION OF DRAWINGS</heading>
+    <p id="p-00016-en" num="0016">
+      <figref>Fig. 1</figref> is a schematic cross-sectional view representing a CVD device used in a CVD step of the present invention.</p>
+    <heading id="h-00010-en">DESCRIPTION OF EMBODIMENT</heading>
+    <p id="p-00017-en" num="0017">Hereinafter, the present invention will be described in detail.</p>
+    <heading id="h-00011-en">&lt;Surface Coated Member&gt;</heading>
+    <p id="p-00018-en" num="0018">A surface coated member of the present invention has a configuration including a base member and a hard coating formed on a surface thereof. Preferably, such a coating coats an entire surface of the base member. However, even when a part of the base member is not coated with this coating, or a configuration of the coating is partially different, it does not depart from the scope of the present invention.</p>
+    <p id="p-00019-en" num="0019">Examples of such a surface coated member of the present invention include a cutting tool, a wear resistant tool, a mold component, an automobile part, and the like. Among those, the surface coated member can be suitably used as a cutting tool such as a drill, an end mill, a cutting edge replaceable-type cutting tip for a drill, a cutting edge replaceable-type cutting tip for an end mill, a cutting edge replaceable-type cutting tip for milling, a cutting edge replaceable-type cutting tip for turning, a metal saw, a gear cutting tool, a reamer, a tap, or the like.</p>
+    <heading id="h-00012-en">&lt;Base Member&gt;</heading>
+    <p id="p-00020-en" num="0020">The base member used in the surface coated member of the present invention can be anything as long as it has been conventionally known as a base member of this kind. For example, it is preferable that the base member is made of any of cemented carbide (for example, WC-base cemented carbide or a material containing WC and Co or carbonitride of Ti, Ta, Nb, or the like), a cermet (mainly composed of TiC, TiN, TiCN, or the like), a high-speed steel, a ceramic material (titanium carbide, silicon carbide, silicon nitride, aluminum nitride, aluminum oxide, and the like), a cubic crystal boron nitride sintered body, and a diamond sintered body.</p>
+    <p id="p-00021-en" num="0021">Among those various kinds of base members, it is particularly preferable to select WC-based cemented carbide or a cermet (particularly, TiCN-base cermet). This is because these base members are particularly superior in balance between a hardness and a strength at a high temperature and have superior characteristics as a base member of a surface coated member for the above-described application.</p>
+    <p id="p-00022-en" num="0022">It should be noted that, when the surface coated member is a cutting edge replaceable-type cutting tip or the like, such a base member includes the one having a chip breaker and the one having no chip breaker, and a cutting-edge ridgeline portion has a shape including a sharp edge (a ridge at which a cutting face and a flank intersect), a honing (the one having an R shape given to a sharp edge), a negative land (the beveled one), and a combination of the honing and negative land.</p>
+    <heading id="h-00013-en">&lt;Hard Coating&gt;</heading>
+    <p id="p-00023-en" num="0023">The hard coating of the present invention is constituted of one or more layers, and at least one among the layers is a layer including hard particles. Preferably, the hard coating of the present invention has a thickness of 3 to 30 µm. When the thickness is less than 3 µm, there is a case where a wear resistance is not sufficient. When the thickness exceeds 30 µm, there is a case where peeling or breaking of the hard coating occurs frequently due to a great stress applied between the hard coating and the base member during the intermittent working.</p>
+    <p id="p-00024-en" num="0024">In the hard coating of the present invention, other layer may be included as long as at least one layer of hard particles is included. Other layers may include, for example, an Al<sub>2</sub>O<sub>3</sub> layer, a TiB<sub>2</sub> layer, a TiBN layer, an AlN layer (wurtzite type), a TiN layer, a TiCN layer, a TiBNO layer, a TiCNO layer, a TiAIN layer, a TiAlCN layer, a TiAlON layer, a TiAlONC layer, and the like.</p>
+    <p id="p-00025-en" num="0025">For example, adhesion between the base member and the hard coating can be improved by including the TiN layer, TiC layer, TiCN layer, or TiBN layer as a base layer directly above the base member. Moreover, the oxidation resistance of the hard coating can be improved by including the Al<sub>2</sub>O<sub>3</sub> layer. Moreover, including an outermost layer made of the TiN layer, TiC layer, TiCN layer, TiBN layer, or the like can provide a distinctive characteristic on whether or not the cutting edge of the surface coated member is used. It should be noted that other layer may be typically formed to have a thickness of 0.1 to 10 µm.</p>
+    <p id="p-00026-en" num="0026">It should be noted that, in the present invention, when the composition of each layer constituting the hard coating is expressed by the chemical formula such as "TiN" and "TiCN," the chemical formula not particularly specifying an atomic ratio does not indicate that the atomic ratio of each element is only "1" but includes all of the conventionally known atomic ratio.</p>
+    <p id="p-00027-en" num="0027">Moreover, the hard coating of the present invention can have an indentation hardness greater than or equal to 3000 kgf/mm<sup>2</sup>. It should be noted that the indentation hardness can be measured by cutting a sample along a flat plane including a normal line with respect to the surface of the hard coating of the cutting tool and pressing an indentor at a load of 25 gmHv with respect to a hard particle layer in a direction perpendicular to the cut plane.</p>
+    <heading id="h-00014-en">&lt;Layer Including Hard Particles&gt;</heading>
+    <p id="p-00028-en" num="0028">The hard coating of the present invention is constituted of one or more layers, and at least one layer among the layers is a layer including hard particles (hereinafter, also referred to as "hard particle layer"). The hard particle layer of the present invention suitably has a thickness greater than or equal to 1 µm and less than or equal to 20 µm, more preferably greater than or equal to 1 µm and less than or equal to 15 µm. When the thickness is less than 1 µm, there is a case where the wear resistance is insufficient. When the thickness exceeds 20 µm, there is a case where peeling or breaking of the hard coating frequently occurs due to a great stress applied to the hard coating and the base member during the intermittent working. It should be noted that, even when the hard particle layer of the present invention partially includes the configuration other than the hard particles, for example, includes an amorphous phase or a wurtzite hard phase, it does not depart from the scope of the present invention as long as the effect of the present invention is exhibited.</p>
+    <heading id="h-00015-en">&lt;Hard Particles&gt;</heading>
+    <p id="p-00029-en" num="0029">The hard particles of the present invention include a multilayer structure having the first unit layers and the second unit layers being layered alternately. It should be noted that, even when the hard particles of the present invention partially include the configuration other than the multilayer structure, for example, include an amorphous phase or a wurtzite hard phase, it does not depart from the scope of the present invention as long as the effect of the present invention is exhibited.</p>
+    <p id="p-00030-en" num="0030">The above-described first unit layer includes a first compound made of one or more kind of element selected from the group consisting of a periodic table group 4 element, a periodic table group 5 element, a periodic table group 6 element, and Al, and one or more kind of element selected from the group consisting of B, C, N, and O. The above-described second unit layer includes a second compound made of one or more kind of element selected from the group consisting of a periodic table group 4 element, a periodic table group 5 element, a periodic table group 6 element, and Al, and one ore more kind of element selected from the group consisting of B, C, N, and O. It goes without saying that the composition of the first compound and the composition of the second compound are different.</p>
+    <p id="p-00031-en" num="0031">The first compound and second compound made of one or more kind of element selected from the group consisting of a periodic table group 4 element, a periodic table group 5 element, a periodic table group 6 element, and Al, and one or more kind of element selected from the group consisting of B, C, N, and O respectively include TiC, TiN, TiCN, TiNO, TiCNO, TiB<sub>2</sub>, TiO<sub>2</sub>, TiBN, TiBNO, TiCBN, ZrC, ZrO<sub>2</sub>, HfC, HfN, TiAIN, TiAlCrN, TiZrN, TiCrN, AlCrN, CrN, VN, N, AlTiCrN, TiAlCN, ZrCN, ZrCNO, Al<sub>2</sub>O<sub>3</sub>, AlN, AICN, ZrN, TiAlC, NbC, NbN, NbCN, Mo<sub>2</sub>C, WC, W<sub>2</sub>C and the like. It should be noted that even when inevitable impurities are included in the first compound and second compound, it does not depart from the scope of the present invention.</p>
+    <p id="p-00032-en" num="0032">The first unit layer and second unit layer of the present invention may have a configuration of a single composition or a configuration in which respective compositions are changed in the respective thickness directions. Such a configuration in which the composition is changed will be described for easy understanding by referring to the case where the composition at a midpoint in the thickness direction of the first unit layer is Al<sub>0.9</sub>Ti<sub>0.1</sub>N and where the composition at a midpoint in the thickness direction of the second unit layer is Al<sub>0.1</sub>Ti<sub>0.9</sub>N.</p>
+    <p id="p-00033-en" num="0033">In the above-described case, the first unit layer, as to its composition in the thickness direction, contains Al<sub>0.9</sub>Ti<sub>0.1</sub>N at the midpoint, and the composition can be changed, from the midpoint to the side in contact with the adjacent second unit layer, into the composition having the atomic ratio of Al being gradually reduced from Al<sub>0.9</sub>Ti<sub>0.1</sub>N. Moreover, the second unit layer, as to its composition in the thickness direction, contains Al<sub>0.1</sub>Ti<sub>0.9</sub>N at the midpoint, and the composition can be changed, from the midpoint to the side in contact with the adjacent first layer, into the composition having the atomic ratio of Ti being gradually reduced from Al<sub>0.1</sub>Ti<sub>0.9</sub>N. In other words, in this case, there is no clear boundary in the composition between the first unit layer and the second unit layer.</p>
+    <p id="p-00034-en" num="0034">Moreover, in the above-described multilayer structure, the thickness in the layer cycle is preferably greater than or equal to 0.5 nm and less than or equal to 20 nm. It is difficult to set the layer cycle to be less than 0.5 nm in the sense of manufacturing technique. This is because, when the layer cycle exceeds 20 nm, the distortion between the unit layers is alleviated, and the superior characteristic as the hard phase is deteriorated. Herein, the thickness of the layer cycle represents a distance from one first unit layer to other adjacent first unit layer across the second unit layer adjacent to the one first unit layer (when an intermediate layer described later is included between the first unit layer and the second unit layer, the intermediate layer adjacent to the second unit layer is included). It should be noted that this distance is a distance connecting midpoints of each of the first unit layer and the other first unit layer in the thickness direction of each layer.</p>
+    <p id="p-00035-en" num="0035">The number of layers (the total number of layers) constituting this multilayer structure layer is not particularly limited but is preferably greater than or equal to 10 layers and less than or equal to 1000 layers. This is because, when the number of layers is less than 10 layers, the crystal grains in each layer become coarse and large, so that there is a case where the hardness of the hard particles is lowered, and it shows a tendency that each unit layer becomes thinner when the number exceeds 1000 layers and each of the layers is mixed.</p>
+    <p id="p-00036-en" num="0036">It should be noted that the multilayer structure and the particle diameter of the hard particles can be confirmed by means of a scanning electron microscope (SEM), a transmission electron microscope (TEM), a scanning electron microscope energy dispersive X-ray spectroscopy (EDX), an X-ray diffraction method, and the like. Since it is difficult to obtain hard particles having a particle diameter of less than 10 nm in the sense of manufacturing technique, and the particles having a particle diameter larger than 1000 nm causes falling and chipping, the particle diameter of hard particles is preferably greater than or equal to 10 nm and less than or equal to 1000 nm.</p>
+    <p id="p-00037-en" num="0037">In the present invention, the cause of improvement in the various characteristics such as the wear resistance and the welding resistance of the surface coated member by coating the base member with hard coating including a hard particle layer is unknown, but the following cause is presumed. In other words, among the plurality of layers constituting the hard coating, at least one of the layers is constituted of a hard particle layer, so that the hard coating can have a region of a granular structure in its thickness direction. Accordingly, the toughness of the hard coating is improved. Moreover, even when a crack occurs on the surface of the hard coating, development of the crack into the base member can be suppressed effectively. Then, this effect is particularly fostered when each particle in the granular structure has a multilayer structure.</p>
+    <heading id="h-00016-en">&lt;Intermediate Layer&gt;</heading>
+    <p id="p-00038-en" num="0038">The hard coating of the present invention can include an intermediate layer between the first unit layer and the second unit layer. The composition of this intermediate layer is changed continuously in its thickness direction from the composition of the first compound to the composition of the second compound from the side in contact with the first unit layer to the side in contact with the second unit layer. For example, in the case where the composition of the first compound is TiN and where the composition of the second compound is AlN, the intermediate layer can have the configuration having an atomic ratio of Ti reduced and an atomic ratio of Al increased from the side in contact with the first unit layer to the side in contact with the second unit layer. Moreover, for example, in the case where the first compound is TiAIN and where the second compound is AlN, the intermediate layer can have the configuration having an tomic ratio of at least Ti reduced continuously from the side in contact with the first unit layer to the side in contact with the second unit layer.</p>
+    <p id="p-00039-en" num="0039">Moreover, the thickness of the intermediate layer is not particularly limited. For example, the thickness of the intermediate layer may be substantially equal to or smaller than the thickness of the first unit layer or second unit layer. Moreover, the thickness of the intermediate layer may be exceedingly greater than the respective thickness of the first unit layer or second unit layer. In other words, the thickness of the first unit layer and second unit layer may be exceedingly smaller than the intermediate layer.</p>
+    <p id="p-00040-en" num="0040">In the present invention, the hard particle layer includes the intermediate layer between the first unit layer and the second unit layer, so that various characteristics such as the wear resistance and chipping resistance of the surface coated member further improves. However, the cause is not clear. For example, it is considered that the cause is related to the fact that a large distortion is accumulated in the hard particle layer since providing the intermediate layer changes the composition continuously between the first unit layer and the second unit layer. Moreover, it is considered that the cause is related to the fact that, since the layer becomes more thermally stable, the modification due to a thermal shock becomes more unlikely to occur, and the adhesion strength with the first unit layer and the second unit layer becomes higher due to the presence of the intermediate layer.</p>
+    <p id="p-00041-en" num="0041">Moreover, the intermediate layer can be recognized as the first unit layer and/or second unit layer. For example, the case is assumed where the first compound is TiN, and the second compound is AlN, and the composition of the intermediate layer is Ti<sub>x</sub>Al<sub>y</sub>N, and the atomic ratio x of Ti decreases continuously from 1 to 0 and the atomic ratio y of Al continuously increases from 0 to 1 from the side in contact with the first unit layer to the side in contact with the second unit layer. In this case, for example, in the intermediate layer, the region having the atomic ratio x/y of Ti and Al is greater than or equal to 1 can be recognized as the first unit layer, and the region having the atomic ratio x/y of less than 1 can be considered as the second unit layer. In this case, the first unit layer and second unit layer have no clear boundary. It should be noted that, when the thickness of the first unit layer and/or second unit layer is exceedingly smaller than the intermediate layer, the region including the first compound in the first unit layer becomes a maximum point of the Ti concentration in the thickness direction of the layer cycle, and the region including the second compound in the second unit layer becomes a maximum point of the Al concentration in the thickness direction of the layer cycle.</p>
+    <heading id="h-00017-en">&lt;Preferable Structure of Hard Particle Layer&gt;</heading>
+    <p id="p-00042-en" num="0042">Moreover, in the hard particle layer of the present invention, preferably, the first compound and second compound are Ti<sub>x</sub>Al<sub>y</sub>N respectively (however, the values of x and y are different respectively in the first compound and second compound), and more preferably, TiN and AlN. Although the cause of this is not clear, the following cause is presumed. In other words, in this case, the first compound and second compound can be TiN having an fcc crystal structure (in the following, also referred to as "fcc-TiN") and AlN having an fcc crystal structure (in the following, also referred to as "fcc-AlN"), and the intermediate layer can change the composition in its thickness direction significantly. In such a configuration, being different from the layer such as fcc-Ti<sub>0.1</sub>Al<sub>0.9</sub>N having an even composition, distortion caused by the difference in the thermal expansion coefficient is present in the layer. With the presence of this distortion, a shift from the fcc crystal structure to an hcp crystal structure caused by a thermal load becomes particularly unlikely to occur. Consequently, the various characteristics such as the wear resistance and welding resistance improve.</p>
+    <p id="p-00043-en" num="0043">The matter which should be focused is that, when the thickness of the layer cycle exceeds 100 nm, AlN of the mechanically stable hexagonal crystal wurtzite structure is precipitated, and the above-described superior characteristics are deteriorated.</p>
+    <heading id="h-00018-en">&lt;Grain Boundary Layer&gt;</heading>
+    <p id="p-00044-en" num="0044">The hard particle layer of the present invention can have a grain boundary layer constituted of the first compound or second compound at the grain boundary between the hard particles, in other words, at the upper most surface of the hard particles. For example, in the case where the first compound and second compound are TiN and AlN respectively, the composition of the grain boundary layer is TiN or AlN. Having this grain boundary layer further improves the various characteristics such as the wear resistance and chipping resistance of the surface coated member. However, the cause of it is not clear. For example, it is surmised that the presence of the grain boundary layer improves the heat resistance of the hard particles, or the excessive particle growth of the hard particles is suppressed. It should be noted that, as to the grain boundary layer, the thickness thereof is preferably greater than or equal to 10 nm and less than or equal to 100 nm in view of the balance between the strength and toughness.</p>
+    <p id="p-00045-en" num="0045">As described above in detail, according to the surface coated member of the present invention, the base member is coated with a hard coating including the hard particle layer, so that the various characteristics such as the wear resistance and welding resistance of the surface coated member improves. Thus, the present invention can provide a surface coated member having improved stability and a longer service life.</p>
+    <heading id="h-00019-en">&lt;Method for Manufacturing Surface Coated Member&gt;</heading>
+    <p id="p-00046-en" num="0046">A method for manufacturing a surface coated member according to the present invention is a method for manufacturing a surface coated member including a base member and a hard coating formed on a surface thereof and constituted of one or more layers. The method includes a CVD step of forming at least one layer among the layers by a CVD method. The CVD step includes an ejection step of ejecting a mixture gas, which contains two or more kinds of elements selected from the group consisting of a periodic table group 4 element, a periodic table group 5 element, a periodic table group 6 element, and Al, and one or more element selected from the group consisting of B, C, N, and O, to the surface of the base member, and a cooling step of cooling the base member after the ejection step. It should be noted that, the method for manufacturing a surface coated member of the present invention can include other step as long as the above-described CVD step is performed. Other step may include, for example, a thermal treatment step such as annealing, a surface preparation step such as a surface grinding or a shot blasting, and a CVD step for providing another hard layer. In the following, each step of the present invention will be described in detail.</p>
+    <heading id="h-00020-en">&lt;CVD Step&gt;</heading>
+    <p id="p-00047-en" num="0047">The CVD step of the present invention is a step of forming at least one layer among the layers constituting the hard coating of the present invention by the CVD method. In this CVD step, the CVD device shown in <figref>Fig. 1</figref> can be used.</p>
+    <p id="p-00048-en" num="0048">Referring to <figref>Fig. 1</figref>, a plurality of base member setting jigs 3 retaining base members 2 can be provided in a CVD device 1, and these are covered in a reactor vessel 4 made of heat-resistant alloy steel. Moreover, a temperature-adjusting device 5 is arranged around reactor vessel 4, and the temperature in reactor vessel 4 can be controlled by this temperature-adjusting device 5.</p>
+    <p id="p-00049-en" num="0049">In CVD device 1, a feed pipe 8 having two feed ports 6, 7 is arranged. Feed pipe 8 is arranged so as to pass through the region having base member setting jigs 3 arranged therein, and a plurality of through holes are formed in the portion near base member setting jigs 3. In feed pipe 8, each gas introduced into the pipe from feed ports 6, 7 are not mixed in feed pipe 8 and are introduced into reactive vessel 4 through different through holes. Feed pipe 8 can rotate its axis as a center axis. Moreover, an exhaust pipe 9 is arranged in CVD device 1, and exhaust gas can be discharged from an exhaust port 10 of exhaust pipe 9 to outside. It should be noted that, the jigs in reactor vessel 4 are typically made of black lead.</p>
+    <p id="p-00050-en" num="0050">In this step, the CVD device shown in <figref>Fig. 1</figref> is used to perform the ejection step and cooling step described below, so that the above-described hard particle layers can be formed.</p>
+    <heading id="h-00021-en">&lt;Ejection Step&gt;</heading>
+    <p id="p-00051-en" num="0051">In this step, with use of the above-described CVD device, mixture gas containing two or more kinds of elements selected from the group consisting of a periodic table group 4 element, a periodic table group 5 element, a periodic table group 6 element, and Al, and one or more kind of element selected from the group consisting of B, C, N, and O is ejected to the surface of the base member.</p>
+    <p id="p-00052-en" num="0052">Specifically, for example, first gas containing two or more kinds of elements selected from the group consisting of a periodic table group 4 element, a periodic table group 5 element, a periodic table group 6 element, and Al is introduced from feed pipe 6 to feed pipe 8, and second gas containing one or more kind of element selected from the group consisting of B, C, N, and O are introduced from feed port 7 to feed pipe 8. It should be noted that the first gas may be mixture gas, for example, first mixture gas of source gas containing the group 4 element, source gas containing the group 5 element, and carrier gas. The second gas may also be mixture gas, for example, second mixture gas of source gas containing B, source gas containing C, and carrier gas.</p>
+    <p id="p-00053-en" num="0053">Since a plurality of through holes are formed in feed pipe 8 on the upper side of the drawing, the introduced first gas (or first mixture gas) and second gas (or second mixture gas) are ejected to reactor vessel 4 from different through holes. At this time, feed pipe 8 is rotated about its axis as indicated by the rotating arrow in the drawing. Therefore, the first gas (or first mixture gas) and second gas (or second mixture gas), as evenly mixture gas, are ejected to the surfaces of base members 2 set on base member setting jigs 3.</p>
+    <p id="p-00054-en" num="0054">As the gas containing two or more kinds of elements selected from the group consisting of a periodic table group 4 element, a periodic group 5 element, a periodic table group 6 element, or Al, chloride gas of these can be favorably used. Moreover, boron chloride gas such as BCl<sub>3</sub> gas can be used as gas containing B. Hydrocarbon gas such as CH<sub>4</sub> can be used as gas containing C. Gas containing nitrogen such as ammonia or N<sub>2</sub> can be used as gas containing N. H<sub>2</sub>O (vapor) can be used as gas containing O. It should be noted that the hydrocarbon gas is preferably unsaturated hydrocarbon.</p>
+    <p id="p-00055-en" num="0055">Moreover, in this step, the temperature in reactor vessel 4 is preferably within the range of 700 to 900°C, and the pressure in reactor vessel 4 is preferably 0.1 to 13 kPa. Moreover, H<sub>2</sub> gas, N<sub>2</sub> gas, and Ar gas can be used as carrier gas. It should be noted that the composition of the first unit layer, second unit layer, intermediate layer, grain boundary layer, and the like can be controlled by a mixing ratio of the source gas. The thickness of the hard particle layer can be controlled by adjusting a flow of the source gas and a film-forming time. The respective thicknesses and layer cycles of the first unit layer, the second unit layer, and the intermediate layer can be controlled by adjusting the film-forming time and the cooling rate. The number of layers of the hard particle layers can be controlled by adjusting the rotating speed of feed pipe 8 and the film-forming time.</p>
+    <heading id="h-00022-en">&lt;Cooling Step&gt;</heading>
+    <p id="p-00056-en" num="0056">Next, in this step, base members 2 are cooled after the ejection step. For example, base members 2 set on base member setting jigs 3 can be cooled by temperature-adjusting device 5. Typically, base members 2 subjected to the thermal CVD treatment in a CVD furnace are cooled naturally by leaving. In this case, the cooling rate does not exceed 5°C/min, and the cooling rate becomes lower as the temperature of base members 2 is lowered. On the other hand, according to the present invention, base members 2 are cooled at a rate which is at least higher than the natural cooling, in other words, cooled at a rate higher than or equal to 5°C/min. More preferably, base members 2 are cooled at a rate higher than or equal to 7°C/m. Moreover, in this cooling step, it is preferable to cool base members 2 at least to the temperature lower than or equal to 300°C. Accordingly, more even hard particle layers can be formed.</p>
+    <p id="p-00057-en" num="0057">The above-described hard particle layers can be formed by the method described above in detail. Therefore, by forming the hard coating with use of the manufacturing method, a surface coated member having improved characteristics such as the wear resistance and welding resistance can be manufactured. Thus, the present invention can provide a surface coated member having improved stability and a longer service life.</p>
+    <heading id="h-00023-en">Examples</heading>
+    <p id="p-00058-en" num="0058">In the following, examples of the present invention will be described in detail. However, the present invention is not limited to the examples.</p>
+    <heading id="h-00024-en">&lt;Preparation of Base Member&gt;</heading>
+    <p id="p-00059-en" num="0059">A base member A and a base member B described in the Table 1 below were prepared. Specifically, the material powders of the blend compositions described in Table 1 were evenly mixed and press-formed into a predetermined shape, and thereafter sintered at 1300 to 1500°C for one to two hours, so that base members made of cemented carbide having two kinds of shapes including CNMG120408NUX and SEET13T3AGSN-G were obtained. In other words, two different kinds of shapes were provided for each base member.</p>
+    <p id="p-00060-en" num="0060">Both of the two kinds of shapes described above are manufactured by Sumitomo Electric Hardmetal Division. CNMG120408NUX is a shape of a cutting edge replaceable-type cutting tip for turning, and SEET13T3AGSN-G is a shape of a cutting edge replaceable-type cutting tip for rotary cutting (milling). <tables id="tables-00001-en" num="0001"><img id="img-00001-en" wi="117" he="46" img-content="table" file="EP2940181A1_00003.PNG" img-format="png" original="imgb0001.tif" /></tables></p>
+    <heading id="h-00025-en">&lt;Formation of Hard Coating&gt;</heading>
+    <p id="p-00061-en" num="0061">A hard coating was formed on the surface of each base member obtained as described above. Specifically, the CVD device shown in <figref>Fig. 1</figref> was used, and the base members were set on base member setting jigs 3, and a thermal CVD method was conducted to form the hard coating on the base members. The conditions for forming each hard coating were as described in Table 2 and Table 3, and a flow of source gas, a mixing ratio of source gas, a film-forming time, and a cooling rate were adjusted so as to obtain each thickness described in Table 4. It should be noted that Table 2A shows forming conditions for hard particle layers, and Table 2B shows forming conditions for conventional hard layers, and Table 3 shows forming conditions for other layers.</p>
+    <p id="p-00062-en" num="0062">As shown in Table 2A, there were seven forming conditions a to g for the hard particle layers. As shown in Fig. 2B, x and y were conditions for Comparative Examples (Conventional Art). In the forming conditions a to g, AlCl<sub>3</sub> gas was used as source gas containing Al, and TiCl<sub>4</sub> gas was used as source gas containing Ti, and these source gases were introduced from feed port 6 to feed pipe 8 as first mixture gas together with the carrier gas constituted of H<sub>2</sub> gas and N<sub>2</sub> gas. Moreover, with use of NH<sub>3</sub> gas as source gas containing N, the source gas together with carrier gas constituted of N<sub>2</sub> gas were introduced from feed port 7 to feed pipe 8 as the second mixture gas. Then, feed pipe 8 was rotated to allow the first mixture gas and second mixture gas to be ejected from the through holes of feed pipe 8 to thereby eject the mixture gas evenly containing the first mixture gas and second mixture gas toward the surfaces of the base members. After that, with temperature-adjusting device 5, the base member was cooled after the ejection step.</p>
+    <p id="p-00063-en" num="0063">Specifically, in the forming condition a for example, the first mixture gas was obtained by mixing AlCl<sub>3</sub> gas of 0.065 mol/min, TiCl<sub>4</sub> gas of 0.025 mol/min, and H<sub>2</sub> gas and N<sub>2</sub> gas of 2.9 mol/min and 1.0 mol/min, and the first mixture gas was introduced from feed pipe 6 into reactor vessel 4. Thus, the atomic ratio of Al/Ti in the first mixture gas was 2.6. Moreover, the second mixture gas was obtained by mixing NH<sub>3</sub> gas of 0.09 mol/min and N<sub>2</sub> gas of 0.9 mol/min, and the second mixture gas was introduced from feed pipe 7 into reactor vessel 4. Reactor vessel 4 at this time was retained in the condition with the pressure of 1.3 kPa and the temperature of 800°C. Then, the first mixture gas and second mixture gas were ejected from the through holes of feed pipe 3 by the rotation of feed pipe 8, so that mixture gas constituted of evenly mixed first mixture gas and second mixture gas was ejected to the surface of the base member. After that, reactor vessel 4 was cooled at a cooling rate of 10°C/min until the temperature of the base member after the heat ejection step reached 200°C.</p>
+    <p id="p-00064-en" num="0064">Moreover, referring to Table 2A, the forming condition a provides "TiN (2 nm)/AlN (6nm)." This indicates that the thickness of the TiN layer as the first unit layer was 2 nm, and the thickness of the AlN layer as the second unit layer was 6 nm, and the layers were layered alternately. The "layer cycle" indicates a distance from a midpoint in the thickness direction of TiN layer to a midpoint in the thickness direction of an adjacent TiN layer through one AlN layer, in other words, a sum of the thickness of one TiN layer and the thickness of one AlN layer. It should be noted that the thickness of the hard particle layer was controlled by the film-forming time, and the layer cycle of TiN and AlN in the hard particle layer was controlled by the cooling rate of feed pipe 8.</p>
+    <p id="p-00065-en" num="0065">Moreover, each layer other than the hard particle layers described in Table 3 were also formed in a similar manner except for that all of the gases such as source gas and carrier gas were introduced from feed port 6 and that the base member was cooled by the natural cooling after the thermal CVD treatment. It should be noted that the "Remainder" in Table 3 indicates that H<sub>2</sub> takes up the remainder of the source gas (reaction gas). Moreover, "Total Gas Amount" indicates a total amount of flow introduced into the CVD furnace per unit time with gas in the reference condition (0°C, 1 atmospheric pressure) as ideal gas.</p>
+    <p id="p-00066-en" num="0066">In the forming condition x, the hard coating was formed with use of the PVD method disclosed in PTD 1, and the hard coating was formed with use of the CVD method disclosed in PTD 2 in the forming condition y. It should be noted that, in the forming condition x, a layer (AlN/TiN layer) of a layered structure in which the TiN layer having a thickness of 4 nm and the AlN layer having a thickness of 4 nm were alternately layered was formed. In the forming condition y, a layer constituted mainly of the composition of Ti<sub>0.1</sub>Al<sub>0.9</sub>N (Ti<sub>0.1</sub>Al<sub>0.9</sub>N layer) was formed. <tables id="tables-00002-en" num="0002"><img id="img-00002-en" wi="134" he="204" img-content="table" file="EP2940181A1_00004.PNG" img-format="png" original="imgb0002.tif" /></tables><tables id="tables-00003-en" num="0003"><img id="img-00003-en" wi="165" he="49" img-content="table" file="EP2940181A1_00005.PNG" img-format="png" original="imgb0003.tif" /></tables><tables id="tables-00004-en" num="0004"><table frame="all"><title>[Table 3]</title><tgroup cols="5"><colspec colnum="1" colname="col1" colwidth="31mm" /><colspec colnum="2" colname="col2" colwidth="54mm" /><colspec colnum="3" colname="col3" colwidth="22mm" /><colspec colnum="4" colname="col4" colwidth="29mm" /><colspec colnum="5" colname="col5" colwidth="31mm" /><thead><row><entry align="center" valign="middle">Configuration of Cover</entry><entry align="center" valign="middle">Film-Forming Conditions</entry><entry namest="col3" nameend="col5" align="center" valign="middle">Reaction Atmosphere</entry></row><row><entry align="center" valign="middle">Composition</entry><entry align="center" valign="middle">Reaction Gas Composition (Volume%)</entry><entry align="center" valign="middle">Pressure (kPa)</entry><entry align="center" valign="middle">Temperature (°C)</entry><entry align="center" valign="middle">Total Gas Amount (L/min)</entry></row></thead><tbody><row><entry valign="middle">TiN(Base Layer)</entry><entry valign="middle">TiCl<sub>4</sub>=2.0%, N<sub>2</sub>=39.7%, H<sub>2</sub>=Remainder</entry><entry align="center" valign="middle">6.7</entry><entry align="center" valign="middle">915</entry><entry align="center" valign="middle">63.8</entry></row><row><entry valign="middle">TiN(Outermost layer)</entry><entry valign="middle">TiCl<sub>4</sub>=0.5%, N<sub>2</sub>=41.2%, H<sub>2</sub>=Remainder</entry><entry align="center" valign="middle">79.8</entry><entry align="center" valign="middle">980</entry><entry align="center" valign="middle">45.9</entry></row><row><entry valign="middle">TiCN</entry><entry valign="middle">TiCl<sub>4</sub>=2.0%, CH<sub>3</sub>CN=0.7%, H<sub>2</sub>=Remainder</entry><entry align="center" valign="middle">9</entry><entry align="center" valign="middle">860</entry><entry align="center" valign="middle">50.5</entry></row><row><entry valign="middle">TiBNO</entry><entry valign="middle">TiCl<sub>4</sub>=36.7%, BCl<sub>3</sub>=0.1%, CO=1.6%, CO<sub>2</sub>=1.7%, N<sub>2</sub>=61.7%, H<sub>2</sub>=Remainer</entry><entry align="center" valign="middle">6.7</entry><entry align="center" valign="middle">980</entry><entry align="center" valign="middle">80.3</entry></row><row><entry valign="middle">TiCNO</entry><entry valign="middle">TiCl<sub>4</sub>=2.1%, CO=3.2%, CH4=2.8%, N<sub>2</sub>=23.7%, H<sub>2</sub>=Remainder</entry><entry align="center" valign="middle">16.0</entry><entry align="center" valign="middle">1030</entry><entry align="center" valign="middle">70.5</entry></row><row><entry valign="middle">Al<sub>2</sub>O<sub>3</sub></entry><entry valign="middle">AlCl<sub>3</sub>=1.6%, CO<sub>2</sub>=4.5%, H<sub>2</sub>S=0.2%, HCl=3.5%, H<sub>2</sub>=Remainder</entry><entry align="center" valign="middle">6.7</entry><entry align="center" valign="middle">1000</entry><entry align="center" valign="middle">46.2</entry></row></tbody></tgroup></table></tables></p>
+    <heading id="h-00026-en">&lt;Production of Surface Coated Member&gt;</heading>
+    <p id="p-00067-en" num="0067">A hard coating was formed on the base member in accordance with the above-described conditions of Table 2 and Table 3 to produce a cutting tool as surface coated members of Examples 1 to 15 and Comparative Examples 1 to 6 shown in following Table 4.</p>
+    <p id="p-00068-en" num="0068">For example, the cutting tool of Example 13 employs base member B described in Table 1 as a base member. A TiN layer (base layer) having a thickness of 1.0 µm was formed as a base layer on the surface of base member B in the condition of Table 3. A TiCN layer having a thickness of 3.0 µm was formed on the TiN layer (base layer) in the condition of Table 3. A hard particle layer having a thickness of 5.0 µm was formed on the TiCN layer in the forming condition f of Table 2. A TiN layer (outermost layer) having a thickness of 0.5 µm was formed on the hard particle layer in the condition of Table 3. Accordingly, a hard coating having a total thickness of 9.0 µm was formed on the base member. The blank (hyphen) in Table 4 indicates that the corresponding layer is not formed.</p>
+    <p id="p-00069-en" num="0069">It should be noted that, as to the base layer and the layer including a multilayer structure, there is a layer which has the same composition but different thickness. For example, although the hard particle layer of Example 1 is a layer having a thickness of 5 µm formed by the forming condition a, the hard particle layer of Example 6 is a layer having a thickness of 8 µm formed in forming condition a. The difference in the thicknesses of these layers was controlled by adjusting a forming time of a layer, in other words, a total time of ejecting the first gas and second gas alternately onto the surface of the base member. <tables id="tables-00005-en" num="0005"><table frame="all"><title>[Table 4]</title><tgroup cols="6"><colspec colnum="1" colname="col1" colwidth="34mm" /><colspec colnum="2" colname="col2" colwidth="18mm" /><colspec colnum="3" colname="col3" colwidth="30mm" /><colspec colnum="4" colname="col4" colwidth="27mm" /><colspec colnum="5" colname="col5" colwidth="28mm" /><colspec colnum="6" colname="col6" colwidth="31mm" /><thead><row><entry morerows="1" align="center" valign="middle" /><entry morerows="1" align="center" valign="middle">Kind of Base</entry><entry namest="col3" nameend="col6" align="center" valign="middle">Layer Configuration and Thickness of Each Layer</entry></row><row><entry align="center" valign="middle">Base Layer (µm)</entry><entry align="center" valign="middle">Hard Particle Layer (µm)</entry><entry align="center" valign="middle">Outermost Layer (µm)</entry><entry align="center" valign="middle">Total Layer Thickness (µm)</entry></row></thead><tbody><row><entry align="center" valign="middle">Example 1</entry><entry align="center" valign="middle">A</entry><entry align="center" valign="middle">TiN (0.5)-TiCN (2.5)</entry><entry align="center" valign="middle">a (5.0)</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">8.0</entry></row><row><entry align="center" valign="middle">Example 2</entry><entry align="center" valign="middle">A</entry><entry align="center" valign="middle">TiN (0.5)-TiCN (2.5)</entry><entry align="center" valign="middle">b (3.0)</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">6.0</entry></row><row><entry align="center" valign="middle">Example 3</entry><entry align="center" valign="middle">A</entry><entry align="center" valign="middle">TiN (0.5)-TiCN (2.5)</entry><entry align="center" valign="middle">d (7.5)</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">10.5</entry></row><row><entry align="center" valign="middle">Example 4</entry><entry align="center" valign="middle">A</entry><entry align="center" valign="middle">TiN (0.5)-TiCN (2.5)</entry><entry align="center" valign="middle">f (12.0)</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">15.0</entry></row><row><entry align="center" valign="middle">Example 5</entry><entry align="center" valign="middle">A</entry><entry align="center" valign="middle">TiN (1.5)</entry><entry align="center" valign="middle">c (10.0)</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">11.5</entry></row><row><entry align="center" valign="middle">Example 6</entry><entry align="center" valign="middle">A</entry><entry align="center" valign="middle">TiN (1.5)</entry><entry align="center" valign="middle">a (8.0)</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">9.5</entry></row><row><entry align="center" valign="middle">Example 7</entry><entry align="center" valign="middle">A</entry><entry align="center" valign="middle">TiN (1.5)</entry><entry align="center" valign="middle">g (3.7)</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">5.2</entry></row><row><entry align="center" valign="middle">Example 8</entry><entry align="center" valign="middle">A</entry><entry align="center" valign="middle">TiN (1.5)</entry><entry align="center" valign="middle">e (15.0)</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">16.5</entry></row><row><entry align="center" valign="middle">Example 9</entry><entry align="center" valign="middle">A</entry><entry align="center" valign="middle">TiN (0.5)-TiCN (5.0)</entry><entry align="center" valign="middle">d (6.0)</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">11.5</entry></row><row><entry align="center" valign="middle">Example 10</entry><entry align="center" valign="middle">B</entry><entry align="center" valign="middle">TiN (1.0)</entry><entry align="center" valign="middle">a (5.0)</entry><entry align="center" valign="middle">TiN (1.0)</entry><entry align="center" valign="middle">6.0</entry></row><row><entry align="center" valign="middle">Example 11</entry><entry align="center" valign="middle">B</entry><entry align="center" valign="middle">TiN (1.0)</entry><entry align="center" valign="middle">d (6.5)</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">7.5</entry></row><row><entry align="center" valign="middle">Example 12</entry><entry align="center" valign="middle">B</entry><entry align="center" valign="middle">TiN (1.0)</entry><entry align="center" valign="middle">g (5.5)</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">6.5</entry></row><row><entry align="center" valign="middle">Example 13</entry><entry align="center" valign="middle">B</entry><entry align="center" valign="middle">TiN (1.0)-TiCN (3.0)</entry><entry align="center" valign="middle">f (5.0)</entry><entry align="center" valign="middle">TiN (0.5)</entry><entry align="center" valign="middle">9.0</entry></row><row><entry align="center" valign="middle">Example 14</entry><entry align="center" valign="middle">B</entry><entry align="center" valign="middle">TiN (1.0)-TiCN (3.0)</entry><entry align="center" valign="middle">a (4.0)</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">8.0</entry></row><row><entry align="center" valign="middle">Example 15</entry><entry align="center" valign="middle">B</entry><entry align="center" valign="middle">TiN (1.0)-TiCN (3.0)</entry><entry align="center" valign="middle">b (2.5)</entry><entry align="center" valign="middle">TiBN (0.3)-Al<sub>2</sub>O<sub>3</sub>(1.0)</entry><entry align="center" valign="middle">7.8</entry></row><row><entry align="center" valign="middle">Comparative Example 1</entry><entry align="center" valign="middle">A</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">x (10.0)</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">10.0</entry></row><row><entry align="center" valign="middle">Comparative Example 2</entry><entry align="center" valign="middle">A</entry><entry align="center" valign="middle">TiN (0.5)-TiCN (2.5)</entry><entry align="center" valign="middle">x (5.0)</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">8.0</entry></row><row><entry align="center" valign="middle">Comparative Example 3</entry><entry align="center" valign="middle">B</entry><entry align="center" valign="middle">TiN (1.0)</entry><entry align="center" valign="middle">x (5.0)</entry><entry align="center" valign="middle">TiN (1.0)</entry><entry align="center" valign="middle">7.0</entry></row><row><entry align="center" valign="middle">Comparative Example 4</entry><entry align="center" valign="middle">A</entry><entry align="center" valign="middle">TiN (0.5)-TiCN (2.5)</entry><entry align="center" valign="middle">y (5.0)</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">8.0</entry></row><row><entry align="center" valign="middle">Comparative Example 5</entry><entry align="center" valign="middle">A</entry><entry align="center" valign="middle">TiN (1.5)</entry><entry align="center" valign="middle">y (10.0)</entry><entry align="center" valign="middle">TiN (0.5)</entry><entry align="center" valign="middle">11.5</entry></row><row><entry align="center" valign="middle">Comparative Example 6</entry><entry align="center" valign="middle">B</entry><entry align="center" valign="middle">TiN (1.0)-TiCN (3.0)</entry><entry align="center" valign="middle">y (5.0)</entry><entry align="center" valign="middle">-</entry><entry align="center" valign="middle">9</entry></row></tbody></tgroup></table></tables></p>
+    <heading id="h-00027-en">&lt;Observation of Hard Particle Layer&gt;</heading>
+    <p id="p-00070-en" num="0070">When the coated hard coating was observed with use of a transmission electron microscope and an X-ray diffraction method, a granular structure constituted of hard particles was observed in the hard particle layer formed in each condition shown in Table 2A. Moreover, each hard particle had a layered structure in which the fcc-TiN and fcc-AlN are alternately layered. Further, a layer made of fine fcc-TiN was present in the grain boundary of each hard particles. On the other hand, in each layer formed in each condition shown in Table 2B, the granular structure was not observed.</p>
+    <p id="p-00071-en" num="0071">It should be noted that, although the respective thicknesses of layers constituted of fcc-TiN and layers constituted of fcc-AlN are shown in Table 2A based on the above-described observation, this is based on that, in the microscope observation, in the region where the layer structure is observed, the region having a higher atomic ratio in Ti than Al is considered as TiN, and the region having a higher atomic ratio in Al than Ti is considered as AlN. In other words, the layer constituted of fcc-TiN is changed in its composition from TiN to AlN continuously as it came closer to the adjacent layer constituted of fcc-AlN, and the layer constituted of fcc-AlN was continuosly changed in its composition from AlN to TiN as it came closer to the adjacent layer constituted of fcc-TiN. In this case, in the thickness direction of the hard particle layer, the region having the highest atomic ratio in Ti can be considered as the first unit layer, and the region having the highest atomic ratio in Al can be considered as the second unit layer, and the region therebetween having its composition changed can be considered as the intermediate layer.</p>
+    <heading id="h-00028-en">&lt;Cutting Experiment&gt;</heading>
+    <p id="p-00072-en" num="0072">With use of the cutting tool obtained as described above, the following five kinds of cutting experiments were conducted.</p>
+    <heading id="h-00029-en">&lt;Cutting Experiment 1&gt;</heading>
+    <p id="p-00073-en" num="0073">As to the cutting tools of Examples and Comparative Examples described in the following Table 5 (the base member having a shape of CNMG120408NUX was used), the machining time to obtain the flank wear amount (Vb) of 0.20 mm under the following cutting condition was measured, and the final damage form of the cutting edge was observed. The result is shown in Table 5. It indicates that, as the machining time is longer, the wear resistance is superior. Moreover, it indicates that, as the final damage form is closer to the normal wear, the welding resistance is superior.</p>
+    <heading id="h-00030-en">&lt;Cutting Conditions&gt;</heading>
+    <p id="p-00074-en" num="0074">Work Material: SUS316 round bar outer periphery cutting<br /> Peripheral Speed: 200 m/min<br /> Feed Rate: 0.15 mm/rev<br /> Cutting Amount: 1.0 mm<br /> Cutting Liquid: Present <tables id="tables-00006-en" num="0006"><table frame="all"><title>[Table 5]</title><tgroup cols="3"><colspec colnum="1" colname="col1" colwidth="38mm" /><colspec colnum="2" colname="col2" colwidth="30mm" /><colspec colnum="3" colname="col3" colwidth="32mm" /><thead><row><entry align="center" valign="middle" /><entry align="center" valign="middle">Cutting Time (min)</entry><entry align="center" valign="middle">Final Damage Form</entry></row></thead><tbody><row><entry align="center" valign="middle">Example 1</entry><entry align="center" valign="middle">17.0</entry><entry align="center" valign="middle">Normal Wear</entry></row><row><entry align="center" valign="middle">Example 3</entry><entry align="center" valign="middle">15.0</entry><entry align="center" valign="middle">Normal Wear</entry></row><row><entry align="center" valign="middle">Example 7</entry><entry align="center" valign="middle">19.0</entry><entry align="center" valign="middle">Normal Wear</entry></row><row><entry align="center" valign="middle">Example 9</entry><entry align="center" valign="middle">20.0</entry><entry align="center" valign="middle">Normal Wear</entry></row><row><entry align="center" valign="middle">Comparative Example 1</entry><entry align="center" valign="middle">7.0</entry><entry align="center" valign="middle">Normal Wear</entry></row><row><entry align="center" valign="middle">Comparative Example 2</entry><entry align="center" valign="middle">6.0</entry><entry align="center" valign="middle">Fracture</entry></row><row><entry align="center" valign="middle">Comparative Example 4</entry><entry align="center" valign="middle">13.0</entry><entry align="center" valign="middle">Normal Wear</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00075-en" num="0075">As is clear from Table 5, the cutting tools of the Examples according to the present invention were, as compared to the cutting tools of Comparative Examples, superior in both the wear resistance and welding resistance, and had improved stability and a longer service life. It should be noted that, in the final damage form of Table 5, the "Normal Wear" indicates a damage form constituted of only wear without occurrence of chipping or loss (having a smooth worn surface), and the "Fracture" indicates a large loss occurred in the cutting edge.</p>
+    <heading id="h-00031-en">&lt;Cutting Experiment 2&gt;</heading>
+    <p id="p-00076-en" num="0076">As to the cutting tools of the Examples and Comparative Examples described in the following Table 6 (the base member having a shape of CNMG120408NUX is used), the machining time to obtain the flank wear amount (Vb) of 0.20 mm under the following cutting condition was measured, and the final damage form of the cutting edge was observed. The result is shown in Table 6. It indicates that, as the machining time is longer, the wear resistance is superior. Moreover, it indicates that, as the final damage form is closer to the normal wear, the welding resistance is superior.</p>
+    <heading id="h-00032-en">&lt;Cutting Conditions&gt;</heading>
+    <p id="p-00077-en" num="0077">Work Material: FCD700 round bar outer periphery cutting<br /> Peripheral Speed: 150 m/min<br /> Feed Rate: 0.15 mm/rev<br /> Cutting Amount: 1.0 mm<br /> Cutting Liquid: Present <tables id="tables-00007-en" num="0007"><table frame="all"><title>[Table 6]</title><tgroup cols="3"><colspec colnum="1" colname="col1" colwidth="38mm" /><colspec colnum="2" colname="col2" colwidth="30mm" /><colspec colnum="3" colname="col3" colwidth="46mm" /><thead><row><entry align="center" valign="middle" /><entry align="center" valign="middle">Cutting Time (min)</entry><entry align="center" valign="middle">Final Damage Form</entry></row></thead><tbody><row><entry align="center" valign="middle">Example 1</entry><entry align="center" valign="middle">18.0</entry><entry align="center" valign="middle">Normal Wear</entry></row><row><entry align="center" valign="middle">Example 4</entry><entry align="center" valign="middle">23.0</entry><entry align="center" valign="middle">Normal Wear</entry></row><row><entry align="center" valign="middle">Example 5</entry><entry align="center" valign="middle">20.0</entry><entry align="center" valign="middle">Normal Wear</entry></row><row><entry align="center" valign="middle">Example 8</entry><entry align="center" valign="middle">17.0</entry><entry align="center" valign="middle">Normal Wear</entry></row><row><entry align="center" valign="middle">Comparative Example 2</entry><entry align="center" valign="middle">9.0</entry><entry align="center" valign="middle">Fracture</entry></row><row><entry align="center" valign="middle">Comparative Example 4</entry><entry align="center" valign="middle">13.0</entry><entry align="center" valign="middle">Front Boundary Fine Chipping</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00078-en" num="0078">As is clear from Table 6, the cutting tools of the Examples according to the present invention were, as compared to the cutting tools of Comparative Examples, superior in both the wear resistance and welding resistance, and had improved stability and a longer service life. It should be noted that, in the final damage form of Table 6, the "Normal Wear" indicates a damage form constituted of only wear without occurrence of chipping or loss (having a smooth worn surface), and the "Fracture" indicates a large loss occurred in the cutting edge, and the "Front Boundary Fine Chipping" indicates fine chipping occurred in the cutting edge part forming the machined surface.</p>
+    <heading id="h-00033-en">&lt;Cutting Experiment 3&gt;</heading>
+    <p id="p-00079-en" num="0079">As to the cutting tools of Examples and Comparative Examples described in the following Table 7 (the base member having a shape of CNMG120408NUX was used), the machining time (minute) to occurrence of fracture or chipping in the tool cutting edge under the following cutting condition was measured. The result is shown in Table 7. It indicates that, as the machining time is longer, the fatigue resistant toughness is superior.</p>
+    <heading id="h-00034-en">&lt;Cutting Conditions&gt;</heading>
+    <p id="p-00080-en" num="0080">Work Material: SCM435 groove material<br /> Cutting Speed: 200 m/min<br /> Feed Rate: 0.3 mm/s<br /> Cutting Amount: 1.0 mm<br /> Cutting Liquid: Present <tables id="tables-00008-en" num="0008"><table frame="all"><title>[Table 7]</title><tgroup cols="2"><colspec colnum="1" colname="col1" colwidth="38mm" /><colspec colnum="2" colname="col2" colwidth="30mm" /><thead><row><entry align="center" valign="middle" /><entry align="center" valign="middle">Cutting Time (min)</entry></row></thead><tbody><row><entry align="center" valign="middle">Example 1</entry><entry align="center" valign="middle">6.0</entry></row><row><entry align="center" valign="middle">Example 2</entry><entry align="center" valign="middle">7.0</entry></row><row><entry align="center" valign="middle">Example 3</entry><entry align="center" valign="middle">4.0</entry></row><row><entry align="center" valign="middle">Example 5</entry><entry align="center" valign="middle">4.0</entry></row><row><entry align="center" valign="middle">Example 6</entry><entry align="center" valign="middle">4.5</entry></row><row><entry align="center" valign="middle">Comparative Example 2</entry><entry align="center" valign="middle">5.0</entry></row><row><entry align="center" valign="middle">Comparative Example 4</entry><entry align="center" valign="middle">3.0</entry></row><row><entry align="center" valign="middle">Comparative Example 5</entry><entry align="center" valign="middle">1.0</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00081-en" num="0081">As is clear from Table 7, the cutting tools of the Examples according to the present invention were, as compared to the cutting tools having hard coating formed by the conventional CVD method, superior in the fatigue resistant toughness, and therefore were had improved stability and a longer service life.</p>
+    <heading id="h-00035-en">&lt;Cutting Experiment 4&gt;</heading>
+    <p id="p-00082-en" num="0082">As to the cutting tools of the Examples and Comparative Examples described in the following Table 8 (the base member having the shape of ET13T3AGSN-G was used), the path number and cutting distance to obtain the cutting or flank wear amount (Vb) of 0.20 mm under the following cutting condition was measured, and the final damage form of the cutting edge was observed. The result is shown in Table 8. It indicates that, as the path number is larger (as the cutting distance is longer), the wear resistance is superior. Moreover, it indicates that, as the final damage form is closer to the normal wear, the shock resistance is superior.</p>
+    <p id="p-00083-en" num="0083">It should be noted that the path number is obtained by repeatedly performing the rotational cutting with use of a cutter having one cutting tool (a cutting edge replaceable-type cutting tip) from one end to the other end of one side surface (the surface of 300 mm x 80 mm) of the following work material (shape: a block-like shape of 300 mm x 100 mm x 80 mm) and obtaining the frequency of repetition (the path number with a value after the decimal point indicates that the above-described condition is obtained on the way from one end to the other end). The cutting distance indicates a total distance of the work material cut before reaching the above-described condition and corresponds to a product of the path number and the die length (300 mm) of the above-described side surface.</p>
+    <heading id="h-00036-en">&lt;Cutting Conditions&gt;</heading>
+    <p id="p-00084-en" num="0084">Work Material: FC250 block material<br /> Peripheral Speed: 300 m/min<br /> Feed Rate: 0.3 mm/s<br /> Cutting Amount: 2.0 mm<br /> Cutting Liquid: Present<br /> Cutter: WGC4160R (manufactured by Sumitomo Electric Hardmetal Division) <tables id="tables-00009-en" num="0009"><table frame="all"><title>[Table 8]</title><tgroup cols="4"><colspec colnum="1" colname="col1" colwidth="38mm" /><colspec colnum="2" colname="col2" colwidth="24mm" /><colspec colnum="3" colname="col3" colwidth="33mm" /><colspec colnum="4" colname="col4" colwidth="32mm" /><thead><row><entry align="center" valign="middle" /><entry align="center" valign="middle">Path Number</entry><entry align="center" valign="middle">Cutting Distance(m)</entry><entry align="center" valign="middle">Final Damage Form</entry></row></thead><tbody><row><entry align="center" valign="middle">Example 10</entry><entry align="center" valign="middle">12.6</entry><entry align="center" valign="middle">3.8</entry><entry align="center" valign="middle">Normal Wear</entry></row><row><entry align="center" valign="middle">Example 11</entry><entry align="center" valign="middle">11.5</entry><entry align="center" valign="middle">3.5</entry><entry align="center" valign="middle">Normal Wear</entry></row><row><entry align="center" valign="middle">Example 13</entry><entry align="center" valign="middle">14.0</entry><entry align="center" valign="middle">4.2</entry><entry align="center" valign="middle">Normal Wear</entry></row><row><entry align="center" valign="middle">Example 15</entry><entry align="center" valign="middle">15.0</entry><entry align="center" valign="middle">4.5</entry><entry align="center" valign="middle">Normal Wear</entry></row><row><entry align="center" valign="middle">Comparative Example 3</entry><entry align="center" valign="middle">6.0</entry><entry align="center" valign="middle">1.8</entry><entry align="center" valign="middle">Normal Wear</entry></row><row><entry align="center" valign="middle">Comparative Example 6</entry><entry align="center" valign="middle">8.0</entry><entry align="center" valign="middle">2.4</entry><entry align="center" valign="middle">Normal Wear</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00085-en" num="0085">As is clear from Table 8, the cutting tools of the example according to the present invention were, as compared to the cutting tools of the Comparative Examples, superior in the wear resistance, and therefore had improved stability and a longer service life. It should be noted that, in the final damage form of Table 8, the "Normal Wear" indicates a damage form constituted only of wear without chipping or loss (having a smooth worn surface).</p>
+    <heading id="h-00037-en">&lt;Cutting Experiment 5&gt;</heading>
+    <p id="p-00086-en" num="0086">As to the cutting tools of the Examples and Comparative Examples described in the following Table 9 (the cutting tool having the shape of SEET13T3AGSN-G was used), the path number and cutting distance to obtain the cutting or flank wear amount (Vb) of 0.20 mm under the following cutting condition was measured, and the final damage form of the cutting edge was observed. The result is shown in Table 9. It indicates that, as the path number is larger (in other words, the cutting distance is longer), the wear resistance is superior. Moreover, it indicates that, as the final damage form is closer to the normal wear, the shock resistance is superior.</p>
+    <heading id="h-00038-en">&lt;Cutting Condition&gt;</heading>
+    <p id="p-00087-en" num="0087">Work Material: SUS304 block material<br /> Peripheral Speed: 160 m/min<br /> Feed Rate: 0.3 mm/s<br /> Cutting Amount: 2.0 mm<br /> Cutting Liquid: Absent<br /> Cutter: WGC4160R (manufactured by Sumitomo Electric Hardmetal Division) <tables id="tables-00010-en" num="0010"><table frame="all"><title>[Table 9]</title><tgroup cols="4"><colspec colnum="1" colname="col1" colwidth="38mm" /><colspec colnum="2" colname="col2" colwidth="24mm" /><colspec colnum="3" colname="col3" colwidth="33mm" /><colspec colnum="4" colname="col4" colwidth="32mm" /><thead><row><entry align="center" valign="middle" /><entry align="center" valign="middle">Path Number</entry><entry align="center" valign="middle">Cutting Distance(m)</entry><entry align="center" valign="middle">Final Damage Form</entry></row></thead><tbody><row><entry align="center" valign="middle">Example 10</entry><entry align="center" valign="middle">7.0</entry><entry align="center" valign="middle">2.1</entry><entry align="center" valign="middle">Normal Wear</entry></row><row><entry align="center" valign="middle">Example 12</entry><entry align="center" valign="middle">8.0</entry><entry align="center" valign="middle">2.4</entry><entry align="center" valign="middle">Normal Wear</entry></row><row><entry align="center" valign="middle">Example 13</entry><entry align="center" valign="middle">10.0</entry><entry align="center" valign="middle">3.0</entry><entry align="center" valign="middle">Normal Wear</entry></row><row><entry align="center" valign="middle">Example 14</entry><entry align="center" valign="middle">11.0</entry><entry align="center" valign="middle">3.3</entry><entry align="center" valign="middle">Normal Wear</entry></row><row><entry align="center" valign="middle">Comparative Example 3</entry><entry align="center" valign="middle">2.5</entry><entry align="center" valign="middle">0.8</entry><entry align="center" valign="middle">Chipping</entry></row><row><entry align="center" valign="middle">Comparative Example 6</entry><entry align="center" valign="middle">5.5</entry><entry align="center" valign="middle">1.7</entry><entry align="center" valign="middle">Chipping</entry></row></tbody></tgroup></table></tables></p>
+    <p id="p-00088-en" num="0088">As is clear from Table 9, the cutting tools of the Examples according to the present invention were, as compared to the cutting tools of the Comparative Examples, were superior in both the wear resistance and shock resistance, and had improved stability and a longer service life. It should be noted that, in the final damage form of Table 9, the "Normal Wear" indicates a damage form constituted of only wear without occurrence of chipping or loss, and the "chipping" indicates a small loss occurred in the cutting edge part.</p>
+    <p id="p-00089-en" num="0089">As described above, the embodiment and examples of the present invention were described. However, the appropriate combinations of each embodiment and example described above was expected from the original.</p>
+    <p id="p-00090-en" num="0090">It is to be understood that the embodiments and examples disclosed herein are only by way of example in all aspects, and not to be taken by way of limitation. The scope of the present invention is not limited by the description above, but rather by the terms of the appended claims, and is intended to include any modifications within the scope and meaning equivalent to the terms of the claims.</p>
+    <heading id="h-00039-en">REFERENCE SIGNS LIST</heading>
+    <p id="p-00091-en" num="0091">1 CVD device; 2 base member; 3 base member setting jig; 4 reactor vessel; 5 temperature-adjusting device; 6, 7 feed port; 8 feed pipe; 9 exhaust pipe; 10 exhaust port.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>A surface coated member comprising a base member and a hard coating formed on a surface thereof,<br />
+said hard coating being constituted of one or more layers,<br />
+at least one layer among said layers being a layer including hard particles,<br />
+said hard particles including a multilayer structure having first unit layers and second unit layers being layered alternately,<br />
+said first unit layer including a first compound, said first compound being made of one or more kind of element selected from the group consisting of a periodic table group 4 element, a periodic table group 5 element, a periodic table group 6 element, and Al, and one or more kind of element selected from the group consisting of B, C, N, and O,<br />
+said second unit layer including a second compound, said second compound being made of one or more kind of element selected from the group consisting of a periodic table group 4 element, a periodic table group 5 element, a periodic table group 6 element, and Al, and one or more kind of element selected from the group consisting of B, C, N, and O.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The surface coated member according to claim 1, wherein<br />
+said surface coated member includes an intermediate layer between said first unit layer and said second unit layer, and<br />
+a composition of said intermediate layer is changed continuously in its thickness direction from a composition of said first compound to a composition of said second compound.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The surface coated member according to claim 1 or 2, wherein said layer including said hard particles includes a grain boundary layer in a grain boundary of said hard particles, said grain boundary including said first compound or said second compound.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en" independent="true">
+      <claim-text>A method for manufacturing a surface coated member including a base member and a hard coating, said hard coating being formed on a surface of said base member and constituted of one or more layers, the method comprising:
+<claim-text>a CVD step of forming at least one layer among said layers by a CVD method,</claim-text><claim-text>said CVD step including:
+<claim-text>an ejection step of ejecting a mixture gas, containing two or more kinds of elements selected from the group consisting of a periodic table group 4 element, a periodic table group 5 element, a periodic table group 6 element, and Al, and one or more kind of element selected from the group consisting of B, C, N, and O, to a surface of said base member; and</claim-text><claim-text>a cooling step of cooling said base member after said ejection step.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The method for manufacturing a surface coated member according to claim 4, wherein, said base member is cooled at a rate greater than or equal to 7°C/min in said cooling step.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2940181A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2940181A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2940181A1_00003.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0001.tif" inline="yes" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2940181A1_00004.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0002.tif" inline="yes" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2940181A1_00005.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0003.tif" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP2940181A1_00006.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+  </drawings>
+  <image file="EP2940181A1.PDF" type="pdf" size="375704" pages="21" />
+</lexisnexis-patent-document>

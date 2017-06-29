@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2939546A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091129" date-changed="20160126" time-changed="192222">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121939620">
+        <country>EP</country>
+        <doc-number>2939546</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>14425049</doc-number>
+        <date>20140429</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>ita</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>EP</country>
+        <doc-number>14425049</doc-number>
+        <kind>A</kind>
+        <date>20140429</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>EP20140425049</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20160126">
+      <classification-ipcr sequence="1">
+        <text>A23L   1/00        20060101AFI20140929BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140929</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A23C  19/09        20060101ALI20140929BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>19</main-group>
+        <subgroup>09</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140929</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A23G   1/30        20060101ALI20140929BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>23</class>
+        <subclass>G</subclass>
+        <main-group>1</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140929</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A23L   1/06        20060101ALI20140929BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140929</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>A23L   1/08        20060101ALI20140929BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140929</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>A23L   1/212       20060101ALI20140929BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>212</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140929</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160126">
+      <classification-cpc sequence="1">
+        <text>A23L   1/212       20130101 FI20140909BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>212</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140909</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A23C  19/0908      20130101 LI20160119BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>19</main-group>
+        <subgroup>0908</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160119</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A23C2270/15        20130101 LA20160119BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>2270</main-group>
+        <subgroup>15</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160119</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A23G   1/54        20130101 LI20151218BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>G</subclass>
+        <main-group>1</main-group>
+        <subgroup>54</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151218</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A23L   1/08        20130101 LI20140909BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140909</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A23L   1/36        20130101 LI20151111BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>36</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151111</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A23V2002/00        20130101 LA20160119BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>V</subclass>
+        <main-group>2002</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160119</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <combination-set>
+        <group-number>1</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>A23V2002/00        20130101 LA20160119BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>23</class>
+            <subclass>V</subclass>
+            <main-group>2002</main-group>
+            <subgroup>00</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20160119</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>A23V2200/08        20130101 LA20160119BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>A</section>
+            <class>23</class>
+            <subclass>V</subclass>
+            <main-group>2200</main-group>
+            <subgroup>08</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20160119</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">15</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">Kit aus Teilen mit einem Käsenahrungsmittel und eine natürliche Nahrungsmittelzubereitung</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">Kit of parts containing a cheese food product, and a natural food preparation</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">Kit de pièces contenant un produit alimentaire à base de fromage et une préparation alimentaire naturelle</invention-title>
+    <references-cited date-changed="20151110">
+      <patent-citations name="patcit" date-changed="20151110" />
+      <non-patent-citations name="nplcit" date-changed="20151110" />
+      <citation>
+        <patcit num="1" dnum="GB316850A" dnum-type="publication number">
+          <document-id>
+            <country>GB</country>
+            <doc-number>316850</doc-number>
+            <kind>A</kind>
+            <name>EGIDIO GALBANI</name>
+            <date>19290808</date>
+          </document-id>
+          <application-date>
+            <date>19290122</date>
+          </application-date>
+        </patcit>
+        <category>X</category>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="EP1929882A1" dnum-type="publication number">
+          <document-id>
+            <country>EP</country>
+            <doc-number>1929882</doc-number>
+            <kind>A1</kind>
+            <name>UNILEVER NV [NL]</name>
+            <date>20080611</date>
+          </document-id>
+          <application-date>
+            <date>20061206</date>
+          </application-date>
+        </patcit>
+        <category>I</category>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="FR2867951A1" dnum-type="publication number">
+          <document-id>
+            <country>FR</country>
+            <doc-number>2867951</doc-number>
+            <kind>A1</kind>
+            <name>CHENE VERT SA [FR]</name>
+            <date>20050930</date>
+          </document-id>
+          <application-date>
+            <date>20040323</date>
+          </application-date>
+        </patcit>
+        <category>X</category>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US2008038440A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080038440</doc-number>
+            <kind>A1</kind>
+            <name>DELPIERRE PHILLIP [US], et al</name>
+            <date>20080214</date>
+          </document-id>
+          <application-date>
+            <date>20060809</date>
+          </application-date>
+        </patcit>
+        <category>I</category>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="EP1417891A1" dnum-type="publication number">
+          <document-id>
+            <country>EP</country>
+            <doc-number>1417891</doc-number>
+            <kind>A1</kind>
+            <name>CEPOSA AG [CH]</name>
+            <date>20040512</date>
+          </document-id>
+          <application-date>
+            <date>20031108</date>
+          </application-date>
+        </patcit>
+        <category>I</category>
+      </citation>
+      <citation>
+        <patcit num="6" dnum="US5194283A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>5194283</doc-number>
+            <kind>A</kind>
+            <name>DUPAS CHRISTIAN [FR], et al</name>
+            <date>19930316</date>
+          </document-id>
+          <application-date>
+            <date>19890821</date>
+          </application-date>
+        </patcit>
+        <category>A</category>
+      </citation>
+      <citation>
+        <patcit num="7" dnum="US2004009266A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040009266</doc-number>
+            <kind>A1</kind>
+            <name>VIOLI LAUREEN S [US], et al</name>
+            <date>20040115</date>
+          </document-id>
+          <application-date>
+            <date>20021008</date>
+          </application-date>
+        </patcit>
+        <category>A</category>
+      </citation>
+      <citation>
+        <patcit num="8" dnum="JPH02186938A" dnum-type="publication number">
+          <document-id>
+            <country>JP</country>
+            <doc-number>H02186938</doc-number>
+            <kind>A</kind>
+            <name>KIRIN BREWERY</name>
+            <date>19900723</date>
+          </document-id>
+        </patcit>
+        <category>I</category>
+      </citation>
+      <citation>
+        <nplcit num="1">
+          <text>Anonymous:  "Cara's Creature Comforts: March 2012", , 1 January 2012 (2012-01-01), XP055139053, Retrieved from the Internet: URL:http://carascreaturecomforts.blogspot.de/2012_03_01_archive.html [retrieved on 2014-09-09]</text>
+        </nplcit>
+        <category>I</category>
+      </citation>
+      <citation>
+        <nplcit num="2">
+          <text>Sarah Paterson-Farrand:  "Zoe's Lunchbox: First Day of Preschool", , 5 September 2013 (2013-09-05), XP055139436, Retrieved from the Internet: URL:http://www.zoeslunchbox.com/2013/09/first-day-of-preschool.html [retrieved on 2014-09-10]</text>
+        </nplcit>
+        <category>X</category>
+      </citation>
+      <citation>
+        <nplcit num="3">
+          <text>Anonymous:  "GNPD - Baked-Camembert Cheese Snacks", , 1 July 2008 (2008-07-01), XP055139164, Retrieved from the Internet: URL:http://www.gnpd.com/sinatra/recordpage/941118/from_search/4aDEvrEP9Q/ [retrieved on 2014-09-09]</text>
+        </nplcit>
+        <category>I</category>
+      </citation>
+      <citation>
+        <nplcit num="4">
+          <text>None</text>
+        </nplcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Beretta, Marco</orgname>
+            <registered-number>101458612</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Piazzale Libia, 7</address-1>
+              <city>20135 Milano</city>
+              <country>IT</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="2" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Suardi, Paola</orgname>
+            <registered-number>101458605</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Piazzale Libia, 7</address-1>
+              <city>20135 Milano</city>
+              <country>IT</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="3" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Sofisti, Michele</orgname>
+            <registered-number>101541481</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Chemin du Pontet 2</address-1>
+              <city>2013 Colombier (Milvignes) NE</city>
+              <country>CH</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>Beretta, Marco</name>
+            <address>
+              <address-1>Piazzale Libia, 7</address-1>
+              <city>20135 Milano</city>
+              <country>IT</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>Suardi, Paola</name>
+            <address>
+              <address-1>Piazzale Libia, 7</address-1>
+              <city>20135 Milano</city>
+              <country>IT</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Pontremoli, Guido</name>
+            <registered-number>101489477</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Botti &amp; Ferrari S.r.l. Via P. Bulloni, 33</address-1>
+              <city>25121 Brescia</city>
+              <country>IT</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <patent-family date-changed="20151217">
+      <main-family family-id="174442080">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015165482</doc-number>
+            <kind>A8</kind>
+            <date>20151217</date>
+          </document-id>
+          <application-date>
+            <date>20141223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2939546</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20140429</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015165482</doc-number>
+            <kind>A1</kind>
+            <date>20151105</date>
+          </document-id>
+          <application-date>
+            <date>20141223</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="174442079">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015165482</doc-number>
+            <kind>A8</kind>
+            <date>20151217</date>
+          </document-id>
+          <application-date>
+            <date>20141223</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2939546</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20140429</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015165482</doc-number>
+            <kind>A1</kind>
+            <date>20151105</date>
+          </document-id>
+          <application-date>
+            <date>20141223</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention relates to a kit of parts comprising a solid three-dimensional piece made of cheese and, separately, a sweet, savoury or sweet and sour natural food preparation, for example based on fruit or vegetables. <img id="imga-00001-en" wi="146" he="116" img-content="drawing" file="imgaf001.tif" img-format="tif" /></p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <p id="p-00001-en" num="0001">The present invention relates to a kit of parts comprising at least a food product with a hollow three-dimensional shape made of cheese, and, separately, a natural food preparation based, for example, on fruit, vegetables or seeds.</p>
+    <heading id="h-00001-en">
+      <u>Background art</u>
+    </heading>
+    <p id="p-00002-en" num="0002">The pairing of cheese with sweet/sweet and sour preparations is one of the best known and renowned culinary combinations, widely appreciated and disseminated throughout the world. Typically, cheese is paired with fruit preserves or honey using the amounts of cheese or fruit preserve preferred by the consumer and obtaining a final more or less sweet flavour. In this regard it should be noted that said pairing, in order to be appreciated and give rise to an optimal sensory effect, requires the use of the right amount and variety of the savoury component (cheese) and sweet component (for example fruit preserve). Practically speaking, in fact, it is necessary to consider, on the one hand, the type of milk used to prepare the cheese and any aging of the latter, and, on the other hand, the amount of sugar and/or intensity of the flavour of the preparation it is desired to pair with it. Particular attention must be devoted to ensure that one of the two flavours does not overpower the other, thus becoming dominant and completely covering the other flavour. An improper sweet/savoury pairing can also provoke an effect that is opposite the desired one, i.e. the final flavour obtained is not very pleasing or is unnaturally altered. Another problem can be tied to the reproducibility of the final flavour given by the combinations of flavours, since at times it is difficult to dose the ingredients again in an exact and substantially unchanged manner.</p>
+    <p id="p-00003-en" num="0003">The applicant has now found that it is possible to combine the right amounts of cheese and of a sweet, savoury or sweet and sour natural food preparation using a kit of parts, which separately comprises a hollow three-dimensional piece made of cheese, and a natural food preparation, preferably pre-dosed. In this manner, the two components can be simply and conveniently paired, making it possible to achieve the right sensory combinations and provide a particular practicality and reproducibility of use.</p>
+    <heading id="h-00002-en">
+      <u>Description of the figures</u>
+    </heading>
+    <p id="p-00004-en" num="0004">
+      <ul id="ul-00001-en" list-style="none" compact="compact">
+        <li>
+          <figref>Figure 1a</figref>: embodiment of the present kit, in which the internal components are illustrated: 4 cheese elements in the shape of a hollow cube, and 4 snap-and-squeeze monodose sachets containing honey.</li>
+        <li>
+          <figref>Figure 1b</figref>: final packaging of the kit of the invention shown in figure 1 a, with dimensions of approximately 8x8x2 cm, assembled and ready for use.</li>
+        <li>
+          <figref>Figure 2</figref>: snap-and-squeeze monodose sachet, in which the natural food preparation of the present kit of parts is contained.</li>
+        <li>
+          <figref>Figure 3</figref>: final product obtainable using the present kit, which illustrates the pairing of a hollow cubic piece with dimensions of approximately 2x2x2 cm and a chocolate-based cream.</li>
+        <li>
+          <figref>Figure 4</figref>: kit of parts of the invention comprising 4 portions of cheese and a snap-and-squeeze sachet for the kit.</li>
+      </ul>
+    </p>
+    <heading id="h-00003-en">
+      <u>Description of the invention</u>
+    </heading>
+    <p id="p-00005-en" num="0005">In a first aspect, the invention relates to a kit of parts comprising at least: <ul id="ul-00002-en" list-style="none" compact="compact"><li>a food product in a hollow three-dimensional shape made of cheese; and separately</li><li>a natural food preparation, preferably honey or one derived from fruit, vegetables or seeds.</li><li>In a further aspect, the invention relates to the use of the present kit to prepare a food product, characterized in that it has a solid hollow piece made of cheese containing a natural food preparation.</li></ul></p>
+    <p id="p-00006-en" num="0006">The present kit makes it possible to prepare a final product in which the cavity of the solid piece of cheese is completely or partially filled with the preferred natural food preparation contained in one or more special containers, as illustrated, for example, in <figref>figure 2</figref>. Thanks to the present kit, in fact, the user can combine the two food components to achieve a final product with excellent organoleptic and sensory properties, with a series of advantages as described below in detail.</p>
+    <p id="p-00007-en" num="0007">The term "hollow three-dimensional piece" indicates a three-dimensional piece having at least one concavity, more or less deep, formed on at least one face. Thanks to its shape, the cheese of the present kit can be paired with a certain amount of the chosen natural food preparation, included in the present kit in at least one container, as described below in detail. Among the cheeses utilizable in the present invention, any type of cheese can be used, preferably a hard or semi-hard cheese, i.e. one having a consistency that enables the formation of at least one concavity for combining the food components of the present kit. "Hard cheeses" means cheeses having a low water content (for example less than 40%), whereas "semi-hard cheeses" means cheeses having a water content generally comprised between 40 and 45%. In either case, both aged and fresh cheeses can be used, irrespective of whether they are made from cow's, goat's or sheep's milk.</p>
+    <p id="p-00008-en" num="0008">Preferred, non-limiting examples of cheeses that can be used in the present invention are: Emmenthal, Pecorino, Bra, Grana cheese, Parmigiano Reggiano, Asiago, Montasio, Provolone, Caciocavallo, Bettelmat, Gruyere, Toma, Valtellina Casera, Bitto, Fontina, Monte Veronese, Gorgonzola Verde and the like. In one particularly preferred embodiment, the cheese of the present kit is obtained by means of the process described in the co-pending Italian patent application No. <patcit id="pcit-00001" dnum="ITMI20132121A"><text>MI2013A002121</text></patcit>.</p>
+    <p id="p-00009-en" num="0009">Preferably, the kit of parts of the invention comprises at least a hollow three-dimensional piece made of cheese having at least a partial or complete concavity. Said piece can be individually packaged or accommodated in special compartments of the kit, for example having the same shape as the three-dimensional piece made of cheese, as is apparent from the appended figure 1. In this case, the compartments containing the hollow pieces of cheese can be sealed, for example with a heat-sealed film, so as to maintain the freshness of the product and avoid any contact with one or more containers of the natural food preparation, or with the outside packaging of the kit itself.</p>
+    <p id="p-00010-en" num="0010">"Partial concavity" is meant to indicate a cavity with a solid bottom, which can have a variable depth, and, for example, which can reach the centre of the piece, without involving the opposite face. "Complete concavity", on the other hand is meant to indicate a cavity that joins two opposite faces of the piece, thereby forming a sort of crown of cheese. The choice of the type of cavity can be made based on the intensity of the flavour of the selected cheese (for example, whether aged or not) or of the aroma of the selected natural food preparation, so that it may be convenient to have larger or smaller amounts of the natural food preparation to be combined to prepare the final product.</p>
+    <p id="p-00011-en" num="0011">Non-limiting examples of preferred shapes of cheese to be used in the present kit can be: cube, parallelepiped, star, flower, heart, truncated cone, prism, sphere and the like, having at least one concavity.</p>
+    <p id="p-00012-en" num="0012">In any case, the kit of the invention makes it possible to pair the selected cheese in the appropriate hollow three-dimensional shape with the most suitable natural food preparation, for example a sweet, sweet and sour, or savoury one, so as to obtain a wide range of flavours in a simple and reproducible manner. Solely by way of example, for kits of the invention containing cheeses with an intense flavour (such as aged cheeses), it may be preferable to use a sweet natural preparation, for example honey or chocolate cream. For cheeses with a more delicate flavour, on the other hand, a pairing with natural preparations with a savoury or sweet and sour flavour, for example containing hot red pepper, can prove to be optimal. Therefore, thanks to the possibility of combining different types and amounts of the two food components, the present kit enables the combination of flavours to be appreciated in a simple, practical manner, without any waste of raw materials.</p>
+    <p id="p-00013-en" num="0013">The natural food preparation of the kit can be sweet, savoury or sweet and sour and can also be liquid, solid or, preferably, semi-solid. Preferred liquid preparations are: vinegar, preferably apple, balsamic or wine vinegar and the like.</p>
+    <p id="p-00014-en" num="0014">In one embodiment, said preparation is obtained from fruit and/or vegetables. In this regard, the preferred preparations are selected from among: jams, preserves, compotes, mostarda and jelly, of fruit and/or vegetables. The terms "jam", "compote" and "preserve" comprise within their meaning any fruit and/or vegetable-based preparation (in pieces and/or homogenized) and sugar, which may or may not be cooked. As is well known, depending mainly on the sugar content, the percentage and form of the fruit or vegetables (i.e. in pieces or substantially homogeneous) and cooking times, such preparations are indicated in the art with the generic name of jam, compote or preserve. The term "mostarda", on the other hand, is meant to indicate, in general terms, a semi-solid preparation based on fruit or vegetables, sugar and mustard (as a general reference see: http://it.wikipedia.org/wiki/Mostarda). Non-limiting examples of preferred fruit are selected from among: oranges, lemons, cherries, strawberries, apricots, pears, plums, figs, exotic fruits in general, apples and the like. Preferred vegetables can be pumpkins, onions, celery, fennel, hot red pepper, tomatoes, horseradish, rhubarb and the like.</p>
+    <p id="p-00015-en" num="0015">Natural preparations obtained from seeds are equally preferred. Particularly preferred are preparations of natural origin comprising white or dark, milk or plain or gianduia (hazelnut) chocolate, in solid or, preferably, creamy form; sauces or preparations obtained from seeds, preferably mustard.</p>
+    <p id="p-00016-en" num="0016">In a further embodiment, said preparation is honey, either single-flower or multi-flower, generally known with the name of millefiori. Non-limiting examples of honey are: orange, millefiori, chestnut, lime and the like.</p>
+    <p id="p-00017-en" num="0017">The present kit can comprise the sweet, savoury or sweet and sour natural food preparation packaged in at least one container, preferably sealed and/or reclosable or open. In one embodiment, said container is selected from among: vials, packages or thermoformed trays, bottles, tubes, rigid containers in general, or preferably tear-open or, preferably, snap-and-squeeze sachets. The container can contain an amount of natural food preparation comprised between about 2 mL and 40 mL. In one embodiment, the container is monodose, intended to be used for only one piece of cheese contained in the kit, or else it is usable for a single kit, containing, for example, 4 pieces of cheese. In this regard, the kit comprises at least one container having an amount of product comprised between about 2 mL and about 14 mL, even more preferably comprised between about 10 mL and 12 mL. In the case of monodose containers for one piece of cheese, the kit of the invention will be characterized in that it contains the same number of hollow pieces of cheese and monodose containers, of the same natural preparation or also a different one. Advantageously, in this manner it is possible to prepare kits having different combinations of the components, all highly reproducible and storable over time. In one equally preferred embodiment, the present kit comprises a container as defined here, for every 2 or every 4 pieces of cheese. In <figref>figure 4</figref>, on the other hand, the kit of the invention is represented as comprising a monodose container for a kit of 4 pieces of cheese.</p>
+    <p id="p-00018-en" num="0018">Even more preferably, the natural food preparation of the invention is contained in at least one sealed snap-and-squeeze monodose sachet, for example of the Easysnap<sup>®</sup> type (produced by Easypack solution SrL) as illustrated in <figref>figure 2</figref>.</p>
+    <p id="p-00019-en" num="0019">Generally, the sachet has no air inside it, thus enabling prolonged storage of its contents. Moreover, the sachet proves to be particularly convenient from a practical viewpoint, as regards both disposal and use. The squeeze opening, in fact, makes it possible to measure out the flow of the natural preparation contained therein directly into the cavity of the cheese, without using additional means and without generating waste material deriving from breakage of the sachet, as in the case of tear-open containers. A further advantage of this type of preferred container lies in the fact that thanks to the control of the outflow during squeezing, the risk of spilling the contents outside the piece of cheese is considerably reduced, thus avoiding inconvenience for the end consumer.</p>
+    <p id="p-00020-en" num="0020">If the natural food preparation to be paired with the cheese with the present kit is in a semisolid, non-drip form (for example jam or jelly), the present kit can also contain an additional component that the consumer can use for combining the food components of the kit. In this regard, said additional component is preferably an item of cutlery, a spoon, a plate, a spatula or a kitchen utensil having dimensions and characteristics in terms of shape and material that are suitable for being contained in the kit of the invention. For example, the kit can contain a compartment in which a hollow piece of cheese is accommodated, a compartment in which a sealed tray of fruit preserve is present, and a compartment accommodating a spatula that can be used to remove the fruit preserve from the tray and deposit it in the cavity of the cheese.</p>
+    <p id="p-00021-en" num="0021">The kit of parts of the invention can be made using cellulosic material, typically cardboard, or also plastic or bioplastic material, preferably food-grade PET. In an equally preferred embodiment, the kit of the invention is made with recycled or recyclable material, so that a very low environmental impact is obtained. In this regard, in a further embodiment, the non-edible parts of the present kit are all made using the same type of material, even more preferably of cellulosic origin or food-grade PET. Disposal of the kit at the end of use is facilitated in this manner, since all of the residual components are disposed of with a single separate collection. The kit of the invention can be single-serving (i.e. containing one piece of cheese) or multi-serving, for example 2, 4, 6 or 8 servings, with combinations with the same or different natural preparations. A 4-serving embodiment, having dimensions of approximately 8x8x2cm is represented in figure 1 a. Advantageously, it is possible to obtain, store, transport and reproduce a vast range of food combinations, it being possible to combine, in a single kit, different types and hollow pieces of cheese and/or natural preparations, as described above in detail. The food components can be accommodated in the kit of the invention in separate containers or packaged individually in a single container. In other words, the kit can have separate compartments for accommodating the various components or it can have a single compartment containing cheese and a natural food preparation packaged individually, as illustrated, for example, in Fig. 1 b. As described here in detail, the present kit of parts allows a direct interaction between the food components contained therein, a necessary condition for the obtainment and reproducibility of the final food product, as represented, for example, in <figref>figure 3</figref>.</p>
+    <p id="p-00022-en" num="0022">Thanks to the presence of the two separate components, moreover, it is possible to maintain the freshness and flavour of the foods also for a long time, unlike in cases where the final product is prepared and then packaged as a piece of cheese and natural preparation that are already combined.</p>
+    <p id="p-00023-en" num="0023">The end user can therefore purchase the present kit and by keeping it under suitable conditions (for example, chilled in a refrigerator) he/she can combine the food components contained therein even a number of days after the purchase date, while maintaining their sensory properties.</p>
+    <p id="p-00024-en" num="0024">The ease of use and reproducibility of the final product, together with the fact that no food is wasted, makes the invention applicable also on a large scale, for example through large-scale retailers.</p>
+    <p id="p-00025-en" num="0025">The extreme versatility of the kit makes it possible, finally, to vary the number, doses and/or the types of food components so as to obtain sensory combinations tailored to different demands of the consumer and target market.</p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>A kit of parts comprising at least:
+<claim-text>a food product with a hollow three-dimensional shape, made of cheese; and separately</claim-text><claim-text>a natural food preparation, preferably honey or one derived from fruit, vegetables or seeds.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The kit of parts according to claim 1, wherein said natural food preparation is selected from among: jam, compote, jelly or mostarda based on fruit or vegetables.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The kit of parts according to claim 1, wherein said natural food preparation is honey.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The kit of parts according to claim 1, wherein said natural food preparation is white or dark, milk, plain or gianduia chocolate in a solid or, preferably, creamy form.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The kit of parts according to the preceding claims, wherein said food product with a hollow three-dimensional shape is made with a hard or semi-hard cheese, preferably selected from among: Emmenthal, Pecorino, Bra, Grana cheese, Parmigiano Reggiano, Asiago, Montasio, Provolone, Caciocavallo, Bettelmat, Gruyere, Toma, Valtellina casera, Bitto, Fontina, Monte Veronese and Gorgonzola Verde, or obtained by means of the process of co-pending Italian patent application No. MI2013A002121.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>The kit of parts according to the preceding claims, wherein said natural food preparation is contained in at least one sealed or open container, preferably selected from among: vials, packages or thermoformed trays, bottles, tubes, rigid containers in general, or, preferably, tear-open or snap-and-squeeze sachets.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>The kit of parts according to claim 6, wherein said container is at least one sealed snap-and-squeeze sachet.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>The kit of parts according to the preceding claims, wherein said container comprises from 2 mL to 40 mL of said natural food preparation.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>The kit of parts according to the preceding claims, wherein said container comprises from 2 mL to 14 mL of said natural food preparation, preferably 10 to 12 mL.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>The kit of parts according to claims 6 -9, wherein said container is a monodose container for a piece of cheese or kit.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>The kit of parts according to any one of the preceding claims, comprising the same number of hollow three-dimensional pieces made of cheese and of containers comprising the natural food preparation.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>The kit of parts according to claims 1 -10, comprising a container containing the natural food preparation for every 2 or 4 hollow three-dimensional pieces made of cheese.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>The kit of parts according to any one of the preceding claims, further comprising: an item of cutlery, a spoon, a plate, a spatula or a kitchen utensil.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>The kit of parts according to any one of the preceding claims, made of material of cellulosic origin or, preferably, of food-grade PET.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>A use of the kit according to claims 1 -14 to prepare a food product with a solid hollow shape, made of cheese, and containing a natural food preparation.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2939546A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2939546A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2939546A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0002.tif" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2939546A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0003.tif" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2939546A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0004.tif" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP2939546A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0005.tif" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="EP2939546A1_00007.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+  </drawings>
+  <image file="EP2939546A1.PDF" type="pdf" size="1300305" pages="14" />
+</lexisnexis-patent-document>

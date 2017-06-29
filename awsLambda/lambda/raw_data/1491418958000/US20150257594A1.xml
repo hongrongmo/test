@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257594A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030216" date-changed="20151002" time-changed="033525">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121315873">
+        <country>US</country>
+        <doc-number>20150257594</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14427386</doc-number>
+        <date>20130626</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>KR</country>
+        <doc-number>1020120100922</doc-number>
+        <date>20120912</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>A47J  37/07        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>37</main-group>
+        <subgroup>07</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>A47J  37/0754      20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>37</main-group>
+        <subgroup>0754</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A47J  27/12        20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>27</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A47J  37/06        20130101 LI20140411BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>37</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140411</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A47J  37/0763      20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>37</main-group>
+        <subgroup>0763</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">10</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">ROASTER</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Sejin Hightech Co., Ltd</orgname>
+            <address>
+              <city>Incheon</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>KR</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kim</last-name>
+            <first-name>Young Bong</first-name>
+            <address>
+              <city>Incheon</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>KR13005653</doc-number>
+        <date>20130626</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014042342</doc-number>
+        <date>20140320</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151105">
+      <main-family family-id="164794966">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257594</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20130626</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014042342</doc-number>
+            <kind>A1</kind>
+            <date>20140320</date>
+          </document-id>
+          <application-date>
+            <date>20130626</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104853658</doc-number>
+            <kind>A</kind>
+            <date>20150819</date>
+          </document-id>
+          <application-date>
+            <date>20130626</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2842467</doc-number>
+            <kind>A1</kind>
+            <date>20150304</date>
+          </document-id>
+          <application-date>
+            <date>20130626</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015531645</doc-number>
+            <kind>A</kind>
+            <date>20151105</date>
+          </document-id>
+          <application-date>
+            <date>20130626</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020140034510</doc-number>
+            <kind>A</kind>
+            <date>20140320</date>
+          </document-id>
+          <application-date>
+            <date>20120912</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101415926</doc-number>
+            <kind>B1</kind>
+            <date>20140630</date>
+          </document-id>
+          <application-date>
+            <date>20120912</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="164794965">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257594</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20130626</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014042342</doc-number>
+            <kind>A1</kind>
+            <date>20140320</date>
+          </document-id>
+          <application-date>
+            <date>20130626</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104853658</doc-number>
+            <kind>A</kind>
+            <date>20150819</date>
+          </document-id>
+          <application-date>
+            <date>20130626</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2842467</doc-number>
+            <kind>A1</kind>
+            <date>20150304</date>
+          </document-id>
+          <application-date>
+            <date>20130626</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015531645</doc-number>
+            <kind>A</kind>
+            <date>20151105</date>
+          </document-id>
+          <application-date>
+            <date>20130626</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020140034510</doc-number>
+            <kind>A</kind>
+            <date>20140320</date>
+          </document-id>
+          <application-date>
+            <date>20120912</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101415926</doc-number>
+            <kind>B1</kind>
+            <date>20140630</date>
+          </document-id>
+          <application-date>
+            <date>20120912</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A roaster comprises a main container equipped with the space in the inner portion; an upper supporter including a flame hole equipped at the side facing the bottom side of the main container, and a roasting plate supporting part equipped at the circumference position of the flame hole, and is combined to the main container; a fuel vessel which has a fuel filling part is formed in the inner space and a spacer equipped in the outer periphery position of the fuel filling part, and which is positioned in the main container to be positioned at the opposite direction to the flame hole of the upper supporter and which is arranged as the state separated from the spacer.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150601</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257594A1</docdb-publication-number>
+      <docdb-application-id>444510870</docdb-application-id>
+      <new-owner>SEJIN HIGHTECH CO., LTD, KOREA, REPUBLIC OF</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:KIM, YOUNG BONG;REEL/FRAME:035753/0844</free-text-description>
+      <effective-date>
+        <date>20150529</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">BACKGROUND OF INVENTION</heading>
+      <p id="p-00001-en" num="0001">1. Field of the Invention</p>
+      <p id="p-00002-en" num="0002">The invention relates to a roaster, and more specifically, to a roaster which has the structure the heat of the flame is to the utmost a little bit delivered to the around while the heat of the flame is to the fullest a lot delivered to the roasting object food so that the thermal efficiency may be raised and therefore may be used in the indoor like as the general home as well as in the outdoor with convenience and safety.</p>
+      <p id="p-00003-en" num="0003">Moreover, the invention relates to a new roaster which can be conveniently used for various uses like as the user may feel funny more while eating roasted meat because it has special structure like as the user may eat the other food like the pot stew besides eating the roasted meat.</p>
+      <p id="p-00004-en" num="0004">And the invention relates to new roaster which uses mainly charcoal as fuel. The roaster according to the invention minimizes the conditions that the heat at the charcoal fire flame source is transmitted to the around and the around container portion is overheated. Accordingly the invention has the various useful functions like as preventing the user to be scalded while roasting the meat.</p>
+      <p id="p-00005-en" num="0005">2. Description of the Related Art</p>
+      <p id="p-00006-en" num="0006">Generally, the methods for roasting the meat may be classified roughly as an indirect roasting method for roasting the meat using the indirect cookware and a direct roasting method for directly roasting the meat by the direct fire roaster like as a charcoal fire roaster etc. In case of the indirect roasting method utilizing the indirect cookware like as an oven, the indirect cookware heats the inner portion of the predetermined section to make the meat roasted by the convection heat and heated air. In case of the direct roasting method, the direct fire roaster directly exposes food to the flame like as the charcoal fire and so on etc to make the meat roasted by the direct flame. When the meat is roasted by direct fire flame, if the charcoal fire is used for roasting the meat, there is various advantages like as the scent of charcoal may be permeated into the meat so that the taste of the meat get better.</p>
+      <p id="p-00007-en" num="0007">The conventional roaster of the prior art includes a support container wherein the flame outlet port is equipped in the central part and the tray (<b>26</b>) of the trench-type is equipped around the flame outlet port and the oil generated while roasting the meat may be collected in the water filled in the tray, a roasting plate which is supported on the support container and has flam inlet port in the central portion. In case of the prior roaster, the flame comes up through the central part flame outlet of the roasting plate support stand and flame inlet port of the roasting plate so that the meat (for example, pork belly and so on) is roasted as the direct fire type.</p>
+      <p id="p-00008-en" num="0008">Meanwhile, there are many cases that said roaster is used in the indoor like as the general home or in the outdoor. What is importantly considered in the roaster is that the heat of the flame is to the utmost a little bit delivered to the around while the heat of the flame is to the utmost a lot delivered to the roasting object meat so that the loss of fire is reduced to the utmost. If the heat of the flame is not burnt down around the meat to the utmost while the heat of the flame is delivered to the meat to the utmost, it will be good for the safety or the thermal efficiency.</p>
+      <p id="p-00009-en" num="0009">However, in case of the prior roaster, there is disadvantages that it is not preferable for the safety or the thermal efficiency described in the above because the flame for roasting the meat is not concentrated to the roasting plate and is transmitted to the surroundings around the position where the meat is being roasted so that the loss of the heat may be increased so much. That is, because there are many cases the heat of fire is directly transmitted to the roasting plate from the downside of the support container which supports the roasting plate, the oil falling down from the roasting plate may be received in the tray so that the heat transmission may be decreased by the water filled in the tray. But, even if said roaster is used at the state that water is filled up in the roasting plate support container, it is insufficient that said roaster solve the problem due to the direct overheat by the flame, and said roaster is undesirable character because the loss of heat is so much while the fuel (the source of the flame) is under combustion. And there is a problem that it is difficult to expect the convenience like as the user may roast to eat the meat after he/she moves said roaster to desired place (for example, to the outdoor from the indoor or to the indoor from the outdoor) because the heat of the roaster is transmitted to the other part around the part where the meat is roasted. That is, said roaster of the prior art has the problem it is difficult as to the portability of the food cooking place.</p>
+      <heading id="h-00002-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00010-en" num="0010">The invention has been made to solve the foregoing problems with the prior art, and therefore the purpose of the invention is to provide a roaster which has the structure the heat of the flame is to the utmost a little bit delivered to the around while the heat of the flame is a lot delivered to the roasting object food and the thermal efficiency may be raised so that the user may use in the outdoor as well as in the indoor like as general home and so on at the safe and convenient state.</p>
+      <p id="p-00011-en" num="0011">Moreover, the invention relates to a new roaster which can be conveniently used for various uses like as the user may feel funny more while eating roasted meat because it has special structure like as the user may eat the other food like the pot stew besides eating the roasted meat.</p>
+      <p id="p-00012-en" num="0012">And, the invention relates to new roaster which uses mainly charcoal as fuel and minimizes the conditions that the heat at the charcoal fire flame source is transmitted to the around and the around container portion is overheated so that the various useful functions like as preventing the user to be scalded while roasting the meat may be expected.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00013-en" num="0013">The above and other aspects, features and advantages of certain exemplary embodiments of the invention will be more apparent from the following description taken in conjunction with the accompanying drawings, in which:</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 1</figref> is a disassembled perspective view of the main part of the invention.</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 2</figref> is a perspective view showing the active using state of the main part illustrated in <figref>FIG. 1</figref>.</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 3</figref> is a perspective view showing the state covering the lid on the main part in <figref>FIG. 2</figref>.</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 4</figref> is a perspective view of the main container which is the main part illustrated in <figref>FIG. 1</figref>.</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 5</figref> is a plane view of <figref>FIG. 4</figref>.</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 6</figref> is a bottom view of <figref>FIG. 4</figref>.</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 7</figref> is a perspective view of the fire fuel vessel which is the other main part in <figref>FIG. 1</figref>.</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 8</figref> is a perspective view showing the bottom surface of <figref>FIG. 7</figref>.</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 9</figref> is a perspective view of the fuel vessel illustrated in <figref>FIG. 1</figref>.</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 10</figref> is a perspective view showing the bottom surface of <figref>FIG. 9</figref>.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 11</figref> is a semi-cutted perspective view of the main part illustrated in <figref>FIG. 2</figref>.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 12</figref> is a A-A line cross-sectional view of <figref>FIG. 2</figref>.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 13</figref> is a B-B line cross-sectional view of <figref>FIG. 2</figref>.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 14</figref> is a perspective view showing the disassembled state of the main part of according to another embodiment of the invention.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 15</figref> is a perspective view showing the active using state of another embodiment illustrated in <figref>FIG. 14</figref>.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 16</figref> is a perspective view showing the dissembled state of the main part according to the other embodiment of the invention.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 17</figref> is a perspective view showing the active using state of the other embodiment illustrated in <figref>FIG. 16</figref>.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00031-en" num="0031">The invention will now be described more fully hereinafter with reference to the accompanying drawings, in which exemplary embodiments thereof are shown.</p>
+      <p id="p-00032-en" num="0032">Referring to the attached drawings, the roaster according to the invention comprises a main container <b>10</b> equipped with space in the inner portion; an upper supporter <b>20</b> which has a flame hole <b>21</b> equipped at the surface facing the lower side of the main container <b>10</b> and a roasting plate supporting part <b>22</b> equipped at the periphery of the flame hole <b>21</b> and which is mounted at the main container <b>10</b>; a fuel vessel <b>30</b> which has a fuel filling part <b>32</b> in the inner portion and a spacer <b>34</b> equipped at the outer part of the fuel filling part <b>32</b> and which is arranged at the position facing the flame hole <b>21</b> of the upper supporter <b>20</b> as well as is installed at the position separated from the main container <b>10</b> by the spacer <b>34</b>. The lower end portion of the spacer <b>34</b> is contacted to the bottom surface <b>13</b> comprising the inner space of the main container <b>10</b> so that the configuration in which the fuel vessel <b>30</b> is arranged at the state discrete from the main container <b>10</b> is achieved.</p>
+      <p id="p-00033-en" num="0033">The main container <b>10</b> may has a pot shape equipped with the space in the inner portion. At this time, the main container <b>10</b> may have lower container part <b>10</b>A equipped with a space in the inner portion and a supporting portion for hanging the upper supporter <b>20</b> in the upper part, and upper container part <b>10</b>B detachably combined in the upper portion of the lower container part <b>10</b>A.</p>
+      <p id="p-00034-en" num="0034">The projection part is consecutively equipped in the upper circumference of the upper container part <b>10</b>B. The lower part of the upper supporter <b>20</b> is mounted on the projection part. Accordingly, the invention may have the configuration wherein the upper supporter <b>20</b> may be combined at the upper position of the main container <b>10</b>. Moreover, the upper container part <b>10</b>B has the consecutively continued hanger projection at the position which is more higher than the position of the projection part. The hanger piece extended to the lower side in the upper part side of the lower container part <b>10</b>A is mounted on the hanger projection so that the main container <b>10</b> may be configured in the structure wherein the lower container part <b>10</b>A is hung on the upper part of the upper container part <b>10</b>B. The contact part of the lower container part <b>10</b>A and the upper container part <b>10</b>B are welded together so that the upper container part <b>10</b>B is integrally fixed on the lower container part <b>10</b>A.</p>
+      <p id="p-00035-en" num="0035">The lower container part <b>10</b>A can be formed with the jar shape that the upper portion is open. Two cap binding holes which is symmetrical based on the central part are formed in the lower container part <b>10</b>A. And the hand insert cap <b>11</b> is combined with the cap binding holes. At this time, the hand insert cap <b>11</b> is formed in cap shape which has the opening part in the top end so that the user put his/her hand into the hand insert cap. It becomes the form that the hand insert cap <b>11</b> enters into the inside of the lower container part <b>10</b>A in the state where the hand insert cap <b>11</b> is inserted in the cap binding hole of the lower container part <b>10</b>A. The user can put hand inside two symmetrical hand insert caps <b>11</b> and can move the roaster of the present invention. At this time, the hand insert cap <b>11</b> may be formed with the material having low thermal conductance like the synthetic resin so that the user does not feel hot by the hand although the user puts hand into the hand insert cap <b>11</b>. And the hand insert cap <b>11</b> includes through-holes. Air circulates inside and outside of the main container <b>10</b> through the through-holes of the hand insert cap <b>11</b>. In that way, it may be prevented that the hand insert cap <b>11</b> becomes hot by the heat generated in the charcoal heating source of the fuel vessel <b>30</b>.</p>
+      <p id="p-00036-en" num="0036">Space is formed inside of the upper container part <b>10</b>B. The air blowing hole <b>18</b> is equipped in the position facing the flame hole <b>21</b> equipped at the central part of the upper supporter <b>20</b>. And the bottom surface of the inner space of the main container <b>10</b> (so to speak, the bottom surface <b>13</b> of the upper container part <b>10</b>B is configured to be closed except for the air blowing hole <b>18</b>. At this time, the air blowing hole <b>18</b> is formed by air supply boss <b>19</b> of tube shape. The air supply boss <b>19</b> is a part of the air blowing unit. That is, the air supply boss <b>19</b> is extended to the upper side through the boss combining hole formed in the central position of the bottom surface <b>13</b> so that the air blowing hole <b>18</b> is formed inside the air supply boss <b>19</b> which is upwardly protruded from the bottom surface <b>13</b> of the inner space of the upper container part <b>10</b>B.</p>
+      <p id="p-00037-en" num="0037">In the present invention includes air blowing unit for blowing the air of constant pressure (the air of necessary pressure that the charcoal filled in the inner fuel charge area of the fuel vessel <b>30</b> is burnt well) to the internal space of the upper container part <b>10</b>B (in other words, the internal space of the main container <b>10</b>). At this time, the air blowing unit comprises a case <b>16</b> forming the air supply space connected with the air blowing hole <b>18</b>, air supply boss <b>19</b> which is positioned in the case <b>16</b> to be protruded to the upper portion of the bottom surface <b>13</b> of the main container <b>10</b>, and a ventilation fan <b>17</b> which is supported in the case <b>16</b> in order to be connected with the air supply boss <b>19</b>, and wherein the fuel vessel <b>30</b> is admitted inside the main container <b>10</b> to be arranged in the upper position of the air blowing unit, the combining hole <b>35</b><i>h </i>formed on the bottom surface of the fuel vessel <b>30</b> is connected to the air supply boss <b>19</b> so that the fuel vessel <b>30</b> may be steadily arranged inside the main container <b>10</b> as well as the inner portion fuel charge area unit is connected to the inner portion of the air supply boss <b>19</b>.</p>
+      <p id="p-00038-en" num="0038">In other words, the boss combining hole <b>35</b><i>h </i>is provided at the central location of the upper container part <b>10</b>B of the main container <b>10</b>. The air supply boss <b>19</b> is inserted in the boss combining hole <b>35</b><i>h </i>formed on the upper container part <b>10</b>B and is fixed by the fixing means. Accordingly, the air blowing unit consisted of the case <b>16</b> etc. is arranged between the bottom surface of the upper container part <b>10</b>B and the upper side of the lower container part <b>10</b>A of the main container <b>10</b>. Therefore, the air blowing hole <b>18</b> connected with the ventilation fan <b>17</b> arranged in the internal space of the lower container part <b>10</b>A is penetrated toward the bottom surface from the upper side of the internal bottom surface <b>13</b> in the main container <b>10</b>. In the meantime, a supporting board <b>17</b><i>a </i>is combined in the bottom part of the lower container part <b>10</b>A. The hole connected with the space of the inner portion is formed at the bottom part of the lower container part <b>10</b>A. The supporting board <b>17</b><i>a </i>is combined in the hole formed at the bottom of the lower container part <b>10</b>A. A plurality of holes is provided at the supporting board <b>17</b><i>a</i>. When the ventilation fan <b>17</b> arranged in the inner space of the main container <b>10</b> is being rotated, air may flow in the inner space of the main container <b>10</b>. At this time, the hole takes the structure of being arranged along the columnar direction as the constant interval based on the central part of the supporting board <b>17</b><i>a</i>. In the meantime, the ventilation fan <b>17</b> is installed at the place near the boss combining hole formed at the case <b>16</b> by the support means like as bracket and bolt or wire etc. The fan motor of the ventilation fan <b>17</b> is connected electrically to the battery <b>14</b><i>a </i>installed inside the main container <b>10</b> by means of battery case <b>14</b>. Speed controller <b>44</b> is mounted on the specified position (exactly speaking, the specified position of the lower container part <b>10</b>A) of the main container <b>10</b>. Blast control lever (the control lever which controls the amount of wind as rotary dial type) is mounted on the main container <b>10</b>. Blast control lever is protruded on the outer surface of the main container <b>10</b>. Blast control lever is connected to the speed controller <b>44</b> by circuits. The rotational force of the ventilation fan <b>17</b> is controlled with the rotation operation of the blast control lever of the speed controller so that the air supply amount necessary for the fuel burn may be controlled properly. When the ventilation fan <b>17</b> rotates, the outside air is supplied through the hole of the supporting board <b>17</b><i>a </i>equipped in the bottom of the main container <b>10</b> so that air necessary for the fuel burn can be supplied to the inner portion of the fuel vessel <b>30</b> (to be described below) through the ventilation fan <b>17</b> and the air blowing hole <b>18</b> formed in the inner portion of the air supply boss <b>19</b> which is connected to the upper portion from the bottom surface <b>13</b> of the internal space of the main container <b>10</b>. At this time, said ventilation fan <b>17</b> is combined to the inner space of the upper container part <b>10</b>B which is the main part of the main container <b>10</b> by the supporter like bracket, the air supply boss <b>19</b> equipped in the case <b>16</b> is combined in the boss combining hole <b>35</b><i>h </i>formed in the bottom surface <b>13</b> of the main container <b>10</b>, and the ventilation fan <b>17</b> is arranged at the state downwardly inclined about the bottom surface of the upper container part <b>10</b>B with a certain angle. And the chamber part isolated from the outside by the case <b>16</b> is formed between the bracket which supports the ventilation fan <b>17</b> and the upper container part <b>10</b>B. Accordingly, the air blown from the ventilation fan <b>17</b> may pass through the chamber part formed by the case <b>16</b> and may directly flow up toward the inner space of the fuel vessel <b>30</b> through the air blowing hole <b>18</b> of the main container <b>10</b>. The air blown from the ventilation fan <b>17</b> does not leak toward the other position. In the meantime, the ventilation fan <b>17</b> is arranged to slope upward about the bottom surface <b>13</b> of the main container <b>10</b> (in other words, the bottom surface <b>13</b> of the upper container part <b>10</b>B) by a predetermined angle. When blowing air with the ventilation fan <b>17</b>, the ascending current appears and the rising supply of air is promoted. Therefore, air supply to the fuel vessel <b>30</b> is more smoothly made. And the combustion efficiency can be more improved.</p>
+      <p id="p-00039-en" num="0039">The supporting board <b>17</b><i>a </i>can be combined in the bottom part of the lower container part <b>10</b>A. The hole connected with the space of the inner portion is formed in the bottom part of the lower container part <b>10</b>A and the supporting board <b>17</b><i>a </i>is combined in the hole formed at the bottom part of the lower container part <b>10</b>A. And, the supporting board <b>17</b><i>a </i>may have the hole in which air is flowed in the rotation of the ventilation fan <b>42</b> arranged in the inner space of the main container <b>10</b>. At this time, the hole can take the structure of being arranged along the columnar direction as the constant interval based on the central part of the supporting board <b>17</b><i>a. </i></p>
+      <p id="p-00040-en" num="0040">The upper supporter <b>20</b> is detachably combined in the upper end portion of the main container <b>10</b>. The upper supporter <b>20</b> has flame hole which penetrate from the upper surface to the lower surface at the center. Tray <b>26</b> which is continued to be closed-loop shape at the lower position of the roasting plate supporting part <b>22</b> is provided in the circumference of the flame hole <b>21</b>. The outer circumference part of the roasting plate <b>4</b> lies on the roasting plate supporting part <b>22</b> of the upper supporter <b>20</b>. Moreover, the upper supporter <b>20</b> has a plurality of circulating air through-holes <b>23</b> based on the central part. Overheat of the air supporter <b>20</b> is prevented while air circulates through this circulating air through-holes <b>23</b> to inside and outside of the upper supporter <b>20</b>.</p>
+      <p id="p-00041-en" num="0041">At this time, the upper supporter <b>20</b> can be formed by the method of curling work and so on in order that the tray <b>26</b> and the roasting plate supporting part <b>22</b> become one body. The curl portion is formed in the lower end portion of the upper supporter <b>20</b> which is placed on the projection part of the main container <b>10</b>, and the curl portion is also formed in the end portion of the flame hole <b>21</b> positioned at the central part of the upper supporter <b>20</b>. This curl portion removes the sharp part in the upper supporter <b>20</b> so that it is safe to handle the upper supporter as well as the upper supporter <b>20</b> is not twisted owing to heat of the flame. The shape of the container may be strongly maintained without affect of heat.</p>
+      <p id="p-00042-en" num="0042">The invention has the fuel vessel <b>30</b> equipped with the fuel filling part <b>32</b> in the inner portion. At this time, the fuel vessel <b>30</b> has the spacer <b>34</b> equipped in the outer periphery position of the fuel filling part <b>32</b>. The fuel vessel <b>30</b> is installed in the main container so that the fuel vessel <b>30</b> be arranged in the position which is in opposite directions to the flame hole <b>21</b> of the upper supporter <b>20</b>. The bottom side of the fuel vessel <b>30</b> is spatially located from the surface of the main container <b>10</b> by the spacer <b>34</b> extended toward the lower direction from the bottom side of the fuel vessel <b>30</b>.</p>
+      <p id="p-00043-en" num="0043">In the present invention, the fire fuel vessel <b>35</b> is combined in the upper container part <b>10</b>B comprising the main container <b>10</b>. The fire fuel vessel <b>35</b> is formed of the cylinder pot-shape of which the upper end portion is opened. And center downward projection groove portion <b>35</b><i>a </i>is provided at the bottom part of the fire fuel vessel <b>35</b>. The diameter between the inner wall of the center downward projection groove portion <b>35</b><i>a </i>is relatively shorter than that of the other part. And the upper position of the center downward projection groove portion <b>35</b><i>a </i>is provided with the spacer supporting part <b>35</b><i>b</i>. Moreover, the central part of the fire fuel vessel <b>35</b> (specifically, the center of the bottom part of the downward projection groove portion) may be provided with the combining hole <b>35</b><i>h </i>for being inserted in the air supply boss <b>19</b> comprising the air blowing unit. And the peripheral wall around the combining hole <b>35</b><i>h </i>is extended to the upward direction so that the fire fuel filling groove <b>35</b><i>c </i>of ditch shape is formed around the combining hole <b>35</b><i>h </i>of the fire fuel vessel <b>35</b> and alcohol or the solidity fire fuel etc is charged in this fire fuel filling groove <b>35</b><i>c. </i></p>
+      <p id="p-00044-en" num="0044">The upper end portion of the space <b>34</b> is combined in the spacer supporting part <b>35</b><i>b </i>comprising the bottom part of the fire fuel vessel <b>35</b>. Multiple spacers <b>34</b> are arranged in the spacer supporting part <b>35</b><i>b </i>of the fire fuel vessel <b>35</b> based on the central part as the radial direction.</p>
+      <p id="p-00045-en" num="0045">Therefore, in the state the fire fuel vessel <b>35</b> is accommodated in the internal space of the main container <b>10</b>, only the lower end portion of the spacer <b>34</b> is contacted with the bottom surface <b>13</b> of the main container <b>10</b> (specifically, the bottom surface <b>13</b> of the upper container part <b>10</b>B) so that the lower part of the fire fuel vessel <b>35</b> is spatially located in the bottom surface <b>13</b> of the main container <b>10</b>. That is, center downward projection groove portion <b>35</b><i>a </i>of which the diameter is relatively shorter than that of the other part is provided at the bottom part of the fire fuel vessel <b>35</b>, the upper position of the center downward projection groove portion <b>35</b><i>a </i>is provided with the spacer supporting part <b>35</b><i>b</i>, and multiple spacers <b>34</b> are equipped in the spacer supporting part <b>35</b><i>b</i>. Accordingly, only the lower end portion of the spacer <b>34</b> is partly contacted with the internal bottom surface <b>13</b> of the main container <b>10</b> and the bottom side and sidewall part of the fire fuel vessel <b>35</b> are arranged respectively as the state spatially located in the bottom surface <b>13</b> and side of the main container <b>10</b>.</p>
+      <p id="p-00046-en" num="0046">Moreover, the state that the other part besides the lower part of the fire fuel vessel <b>35</b> is spaced from the main container <b>10</b>. At this time, the combining hole <b>35</b><i>h </i>of the central part of the fire fuel vessel <b>35</b> is combined in the air supply boss <b>19</b> of the air blowing unit so that the fire fuel vessel <b>35</b> is steadily arranged in the combination position without the phenomenon it is contacted with the main container <b>10</b> owing to sway.</p>
+      <p id="p-00047-en" num="0047">In the meantime, the spacer <b>34</b> is formed of rod shape which has the regular length as well as the projection part may be formed at the upper circumference of the spacer <b>34</b>. And the bottom part of the fire fuel vessel <b>35</b> includes the spacer fixing hole. If the upper part of the spacer <b>34</b> is inserted in the spacer fixing hole formed in the bottom part of the fire fuel vessel <b>35</b>, the projection part of the outer periphery of the spacer <b>34</b> hangs on the bottom part bottom surface of the fire fuel vessel <b>35</b>. If the upper side terminal of the spacer <b>34</b> protruded to the inner portion of the fire fuel vessel <b>35</b> is pressed to be extended to side portion so that the spacer fixing piece <b>35</b><i>b </i>is formed. Accordingly, the spacer <b>34</b> is steadily fixed in the spacer supporting part <b>35</b><i>b </i>of the fire fuel vessel <b>35</b> by the projection part hanging on the outer surface of the bottom part of the fire fuel vessel <b>35</b> and the spacer fixture piece hanging in the inside of the fire fuel vessel <b>35</b>. Accordingly, the coupling structure between the fire fuel vessel <b>35</b> and the spacer <b>34</b> may be simple and the task for the coupling structure formation is rapidly done by this mode.</p>
+      <p id="p-00048-en" num="0048">Moreover, the lever latch <b>39</b> is equipped in one side of the fire fuel vessel <b>35</b>, the lever(not shown) is set up on the lever latch <b>39</b> and the user may carry out the fire fuel vessel <b>35</b> from the main container <b>10</b>.</p>
+      <p id="p-00049-en" num="0049">And, the curl portion can be equipped in the upper end portion of the fire fuel vessel <b>35</b>. The curl portion of the upper end of the fire fuel vessel <b>35</b> removes the sharp part in the fire fuel vessel <b>35</b> and even when handling the fire fuel vessel <b>35</b> is safe and the phenomenon that the fire fuel vessel <b>35</b> is twisted with the heat of the flame is prevented.</p>
+      <p id="p-00050-en" num="0050">Moreover, the fuel vessel <b>30</b> is mounted in the inside of the fire fuel vessel <b>35</b> and it is arranged inside the main container <b>10</b>. At this time, the upper portion the fuel vessel <b>30</b> is comprised of the cylinder pot-shape whose upper portion is open. The outer circumference of the upper portion of this fuel vessel <b>30</b> is disposed to face the inner circumference of the flame outlet of the upper supporter <b>20</b> as well as it is arranged as the state separated in a predetermined interval with the inner periphery of the flame outlet.</p>
+      <p id="p-00051-en" num="0051">The downward projection groove portion <b>32</b><i>a </i>may be formed at the bottom part of the fuel vessel <b>30</b>. The diameter between the inner wall surface of the downward projection groove portion <b>32</b><i>a </i>is relatively shorter than that of the other part. And it becomes the state where the downward projection groove portion <b>32</b><i>a </i>of this fuel vessel <b>30</b> is inserted in the center downward projection groove portion <b>35</b><i>a </i>of the fire fuel vessel <b>35</b>. Therefore the state where the fuel vessel <b>30</b> is steadily arranged in the fire fuel vessel <b>35</b> without sway and the upper circumference of the fuel vessel <b>30</b> is separated in a fixed interval with the inner circumference of the flame outlet of the upper supporter <b>20</b> can be maintained. And since this spacing state is maintained, the phenomenon may be more certainly prevented that the heat of the fuel which is burnt in the fuel vessel <b>30</b> is delivered to the upper supporter <b>20</b> and the main container <b>10</b>.</p>
+      <p id="p-00052-en" num="0052">Moreover, the upper end portion of the fire fuel vessel <b>35</b> is arranged near the flame hole <b>21</b> formed at the upper supporter <b>20</b> as well as is arranged as the state separated in a fixed interval on the surface of the upper supporter <b>20</b>. The downward projection groove portion <b>35</b><i>a </i>of the fire fuel vessel <b>35</b> is arranged as the state separated in a fixed interval due to the spacer <b>34</b> from the internal space bottom surface <b>13</b> of the main container <b>10</b> and the combining hole <b>35</b><i>h </i>of the fire fuel vessel <b>35</b> is inserted in the air supply boss <b>19</b> fixed to the main container <b>10</b>. Therefore the fire fuel vessel <b>35</b> may steadily arranged inside the main container <b>10</b> as well as be spaced from the main container <b>10</b> and upper supporter <b>20</b>. And since this spacing state is maintained, it can be more authentically prevented the phenomenon that the heat of the fuel which is burnt in the fuel vessel <b>30</b> (exactly speaking, the fuel vessel <b>30</b>) is delivered through the fire fuel vessel <b>35</b> to the upper supporter <b>20</b> and main container <b>10</b>.</p>
+      <p id="p-00053-en" num="0053">Moreover, the lever latch <b>31</b> formed by the work method of cutting toward the inside is equipped in one side of the fuel vessel <b>30</b>. The user may set up the lever on the lever latch <b>31</b> and carry out the fuel vessel <b>30</b> from the main container <b>10</b>.</p>
+      <p id="p-00054-en" num="0054">And the curl portion is also provided in the upper end portion of the fuel vessel <b>30</b>. By the curl portion, the sharp part may be removed to be safe for handling and the curvature phenomenon etc owing to heat may be prevented.</p>
+      <p id="p-00055-en" num="0055">At this time, in the bottom part of the fuel vessel <b>30</b>, the air guide part which guides so that the air blown up from the ventilation fan <b>17</b> rise up to the inner portion of the fuel vessel <b>30</b> and the air hole <b>37</b> which guides so that the rising air by the air guide part may be blown into the inner portion of the fuel vessel <b>30</b>. At this time, the bottom part of the fuel vessel <b>30</b> is comprised of the dome-shaped convexly protruded to the upper side, the air guide part includes multiple guide wing parts <b>38</b>W of groove type which are comprised of the dome-shaped convexly protruded to the upper side and the height from the base end part to the top end part becomes gradually higher and which are arranged as the windmill equation wing shape around the radial direction based on the central part of the bottom part of the fuel vessel <b>30</b>. And the air hole <b>37</b> comprises the multiple air hole groups in which the diameter becomes gradually smaller to the direction which becomes estranged from one side position of the top end part of the guide wing part <b>38</b>W while being arranged in one side position of the top end part of the guide wing part <b>38</b>W.</p>
+      <p id="p-00056-en" num="0056">Therefore, the blown air upwardly goes up with the rotation of the ventilation fan <b>17</b> through the air blowing hole <b>18</b> of the air supply boss <b>19</b> inserted in the combining hole <b>35</b><i>h </i>of the bottom part of the fire fuel vessel <b>35</b>, and the air blown up from the ventilation fan <b>17</b> is crashed to the outer lower surface of the bottom portion of the fuel vessel <b>30</b>, rotates along the guide wing part <b>38</b>W like as windmill and is blown into the inner portion of the fuel vessel <b>30</b> through the respective air holes <b>37</b>. Accordingly, oxygen is evenly supplied to all of the fuel (in the present invention, the charcoal mainly very much used as the direct fire meat roasting) filled in the fuel vessel <b>30</b>, the combustion of fuel is evenly comprised as well as the combustion efficiency is more enhanced. In the result, the direct fire efficiency of food is more enhanced.</p>
+      <p id="p-00057-en" num="0057">Moreover, the fuel vessel <b>30</b> includes the hanging support part which is extended to the radius outer direction as well as is extended to the horizontal direction at the higher position than the bottom part in which the air hole <b>37</b> is formed, and the section contact unit <b>33</b> of projection type more protruded to the lower side is equipped in the hanging supporting part. This section contact unit <b>33</b> is contacted to the upper side of the spacer supporting part <b>35</b><i>b </i>of the fire fuel vessel <b>35</b> and the remnant side and the outer periphery of the hanging supporting part are located in the fire fuel vessel <b>35</b>. The remnant side and the outer periphery of the hanging supporting part may have the space which is not contacted to the fire fuel vessel <b>35</b>. Therefore, when the fuel (in the present invention, charcoal is used as fuel) filled in the fuel vessel <b>30</b> is burnt, the amount of the heat delivered to the fire fuel vessel <b>35</b> may be minimized sufficiently.</p>
+      <p id="p-00058-en" num="0058">In other words, the center downward projection groove portion <b>35</b><i>a </i>the diameter of which is shorter than that of the other part may be formed at the bottom part of the fire fuel vessel <b>35</b>, the spacer supporting part <b>35</b><i>b </i>is formed in the upper position of the center downward projection groove portion <b>35</b><i>a</i>, and the spacer supporting part <b>35</b><i>b </i>is arranged to be contacted to the section contact unit <b>33</b> of embossing form which is protruded downwardly from the upper part of the fuel vessel <b>30</b>. Accordingly, because the state may be acquired that the contact surface between the fuel vessel <b>30</b> and the fire fuel vessel <b>35</b> is minimized, the amount of the heat transferred from the fuel vessel <b>30</b> to the fire fuel vessel <b>35</b>. And the fire fuel vessel <b>35</b> is located to have predetermined space from the main container <b>10</b> by the spacer <b>34</b> provided at the lower part. Therefore, in the result, the extent in which the heat is delivered from the fuel vessel <b>30</b> to the other part like the main container <b>10</b> is minimized.</p>
+      <p id="p-00059-en" num="0059">Moreover, the invention can further include roasting grill <b>80</b> installed on the upper supporter <b>20</b>, and secondary roasting plate <b>86</b> which is installed at the roasting grill <b>80</b> and covers the fuel vessel <b>30</b> installed in order to be connected with the upper supporter <b>20</b>. At this time, the roasting grill <b>80</b> includes the placing part <b>81</b> of predetermined area in which multiple linear type wires are connected to the inner position of the ring-shaped border wire. And in the roasting grill <b>80</b>, the secondary roasting plate supporting member <b>82</b> is equipped in the position which is in opposite directions to the flame hole <b>21</b> of the central part of the upper supporter <b>20</b> and the fuel vessel <b>30</b>. The circumference of the supplementary roasting plate <b>86</b> is supported by the secondary roasting plate supporting member <b>82</b> so that the roasting grill <b>80</b> may be placed on the position covering the fuel vessel <b>30</b>.</p>
+      <p id="p-00060-en" num="0060">The secondary roasting plate <b>86</b> has panel structure the central part of which is comprised of the convex dome shape, multiple flame holes are formed in the secondary roasting plate <b>86</b>, and the area of the secondary roasting plate <b>86</b> can cover the flame hole <b>21</b> of the upper supporter <b>20</b>. And although oil is generated from the meat when the meat is put on the secondary roasting plate <b>86</b> and is being baked, the oil does not fall down to the fuel vessel <b>30</b> in which charcoal is filled but is oozed to the oil receiver tray <b>26</b> provided at the periphery of the flame hole <b>21</b> of the upper supporter <b>20</b>. At this time, the supplementary roasting plate <b>86</b> may include the roasting plate body, the fire hole provided at the roasting plate body, the cover protrusion piece <b>28</b> which hides the fire hole of the roasting plate body at the upper position and forms the flame hole connecting some part of the fire hole to the upper side from the bottom surface of the roasting plate body, the blocking protrusion <b>32</b> which is equipped in the end forming the fire hole part of this cover protrusion piece and protects the oil of the meat baking in the upper part of the roasting plate body from flowing into the flame hole part. Moreover, the upper side of the roasting plate body is comprised of the roast surface the central part of which is bulging to the upper portion and slopes downward to the outer side of the radius direction, and the top-end part and both end parts of the cover protrusion piece facing the central part of the roasting plate body are connected to the roasting plate body and the blocking protrusion is equipped in the base part of the cover protrusion piece and the flame hole part is formed between the base part of the blocking protrusion and the fire hole. And the second blocking protrusion which is arranged in the lower position of the blocking protrusion and is extended upwardly may be provided while the heat of fire ball of the roasting plate body is arranged in the fire hole of the roasting plate.</p>
+      <p id="p-00061-en" num="0061">Therefore, the oil which is generated when roasting the meat put on the supplementary roasting plate <b>86</b> may be blocked by the blocking protrusion and the second blocking protrusion and cannot come to the flame hole part of the secondary roasting plate <b>86</b> and it below flows to be collected in the tray <b>26</b> of the upper supporter <b>20</b>. That is, the oil which is generated when roasting meat does not run out from the fire hole part of the secondary roasting plate <b>86</b> towards the charcoal fire and the oil oozes to the tray <b>26</b> of the upper supporter <b>20</b> to be collected.</p>
+      <p id="p-00062-en" num="0062">In the meantime, the supplementary roasting plate supporting member <b>82</b> is the ring shape wire while the supplementary roasting plate <b>86</b> is comprised of the circular plate shape. And in the state where the secondary roasting plate <b>86</b> is put on the central part of the placing part <b>81</b> of the roasting grill <b>80</b>, the state where the secondary roasting plate <b>86</b> is steadily arranged among the center of the roasting grill <b>80</b> can be maintained by the secondary roasting plate supporting member <b>82</b> of the ring shape wire structure.</p>
+      <p id="p-00063-en" num="0063">Moreover, the wire handle <b>84</b> wherein the lower part side is contacted with the upper supporter <b>20</b> to make the placing part <b>81</b> spaced from the upper portion of the upper supporter <b>20</b> and the upper part side can be utilized as the gripping lever is further provided in the circumference of the roasting grill <b>80</b>. In the present invention, two columnar wire handles <b>84</b> are equipped. The user may grip the upper side columnar wire <b>84</b><i>a </i>of the wire handle <b>84</b> by hand in order to handle the roasting grill <b>80</b>. That is, the user may grip the upper side columnar wire <b>84</b><i>a </i>of two columnar wire handles <b>84</b> by both hands to lift up the roasting grill <b>80</b> or place the roasting grill <b>80</b> on the upper supporter <b>20</b>. Moreover, the columnar wire <b>84</b><i>b </i>of the columnar wire handle <b>84</b> may put on the roasting plate supporting part <b>22</b> of the projection form of the upper supporter <b>20</b> to make the roasting grill <b>80</b> set steadily in the upper supporter <b>20</b> as well as to make the thermal conductivity minimized.</p>
+      <p id="p-00064-en" num="0064">Moreover, the invention may further include the wire grill <b>90</b> which is supported in the upper supporter <b>20</b> and is installed to be attachable and detachable. At this time, the wire grill <b>90</b> comprises wire grill panel portion <b>92</b> which is comprised of the structure arranged in the concentric and is installed in order to face the inner space of the upper supporter <b>20</b>, a plurality of wire feet <b>94</b> which is installed in the wire grill panel portion <b>92</b> and has wire support piece <b>94</b><i>a </i>prolonged toward the lower direction, and wherein the wire support piece <b>94</b><i>a </i>is contacted to the roasting plate supporting part <b>22</b> equipped in the upper supporter <b>20</b>. Multiple wire feet <b>94</b> may be arranged as the radial direction based on the central part of the panel portion <b>92</b>. The invention may have the structure that three wire feet <b>94</b> are arranged along radial direction based on the central part of the panel portion <b>92</b> as the constant interval.</p>
+      <p id="p-00065-en" num="0065">Therefore, after the roasting plate <b>4</b> may be lifted up form the upper supporter <b>20</b> and the wire support piece <b>94</b><i>a </i>equipped in the wire foot <b>94</b> of the wire grill may be placed on the roasting plate supporting part <b>22</b> of the projection form protruded to the center direction in the inner periphery of the upper supporter <b>20</b>, the wire grill panel part <b>92</b> may be placed on the upper supporter <b>20</b>.</p>
+      <p id="p-00066-en" num="0066">According to the invention of the above configuration, in orderly manner, the main container <b>10</b>, the fire fuel vessel <b>35</b>, the fuel vessel <b>30</b> and the upper supporter <b>20</b> are combined in the lower part, the roasting plate <b>4</b> is combined in the upper supporter <b>20</b>, and if necessary, the lid <b>2</b> is combined with the lid supporting part equipped in the upper supporter <b>20</b>. And then, the spacer <b>34</b> extended to the lower part of the fire fuel vessel <b>35</b> is contacted to the bottom surface <b>13</b> of the internal space of the main container <b>10</b>, the bottom surface <b>13</b> of the fire fuel vessel <b>35</b> is arranged to be spaced from the main container <b>10</b>, and the fuel vessel <b>30</b> is admitted inside the fire fuel vessel <b>35</b> and the internal space bottom surface <b>13</b> is arranged to be spatially separated from the upper supporter <b>20</b> and main container <b>10</b>.</p>
+      <p id="p-00067-en" num="0067">In this state, the roasting plate <b>4</b> may be placed on the roasting plate supporting part <b>22</b> of the upper supporter <b>20</b> in the state putting fuel (the fire fuel may be employ the fuel of the general purpose like alcohol or the solid fuel) for the fire (ignition) on the concave fire fuel filling groove <b>35</b><i>c </i>equipped in the fire fuel vessel <b>35</b>, firstly the fire fuel may be lighted, the water of predetermined height may be filled in the tray <b>26</b> equipped in the upper supporter <b>20</b>. And after the charcoal fuel is filled in the fuel vessel <b>30</b>, if the fuel vessel <b>30</b> in which charcoal is filled is combined in the fire fuel vessel <b>35</b>, the charcoal filled in the fuel vessel <b>30</b> may be ignited by the fire of the fire fuel(of course, the charcoal may be ignited by blowing air by the ventilation fan <b>17</b>). The burning charcoal may become the start flame source, and the user may roast food (the boned rib etc) put on the roasting plate <b>4</b> by the heat of this flame as direct fire type. And the oil generated from the roasting meat etc is collected in the tray <b>26</b> equipped in the upper supporter <b>20</b>.</p>
+      <p id="p-00068-en" num="0068">At this time, the important point of the invention is that the contact area between the fuel vessel <b>30</b> and the main container <b>10</b> may be minimized, the heat of the flame is to the utmost a lot delivered to the roasting object food, the heat of the flame is to the utmost a little bit delivered to the around and the thermal efficiency is raised. Therefore, the invention may be used in the outdoor and in the indoor including the general home etc in the state which is safe and convenient. That is, as described above, the spacer <b>34</b> extended to the lower side is equipped in the bottom part of the fire fuel vessel <b>35</b>, only the lower end portion of the spacer of the fire fuel vessel <b>35</b> is contacted to the bottom surface <b>13</b> of the main container <b>10</b> while the remaining part of the fire fuel vessel <b>35</b> except for the lower end portion of the spacer <b>34</b> is spaced from the main container <b>10</b> as well as the fuel vessel <b>30</b> is arranged to be spaced from the main container <b>10</b> and the upper supporter <b>20</b>. Accordingly, the sate that the heat generated while the charcoal fuel is burnt in the fuel vessel <b>30</b> is not delivered to the other part except the part roasting meat and the main container <b>10</b> itself is not hot may be maintained. Therefore the state is good for the safety side or the thermal efficiency side.</p>
+      <p id="p-00069-en" num="0069">And the invention is good for the portability like as the user move the roaster of the invention to another place to use etc because the main container <b>10</b> supporting the part roasting meat may be maintained in the state that is not hot but cold or normal temperature. In this respect, the invention has another advantage. In other words, since the normal temperature state that the heat is not delivered to the other part (in other words, the main container <b>10</b> part) except the part which roasts meat may be maintained sufficiently, there is no case that the user may get burnt in the hand even when he/she grips the main container by the hand in order that he/she moves the roaster of the invention to desired place (for example, the outdoor to the indoor or the outdoor to the indoor) and therefore the invention may provide the convenience etc like as the user may move to necessary place and roast meat to eat. That is, the invention be excellent as to the portability of the food cooking place. In this point, the invention has great meaning. Particularly, in the present invention, the fire fuel vessel <b>35</b> supporting the fuel vessel <b>30</b> at the lower position is contacted to the fuel vessel <b>30</b> by the section contact part <b>33</b> of embossing annular projection form protruded to the lower part of the fuel vessel <b>30</b> at least area and the heat transmission from the fuel vessel <b>30</b> to the fire fuel vessel <b>35</b> may be minimized while the fire fuel vessel <b>35</b> is spaced form the main container <b>10</b> as well as only the lower end portion of the spacer <b>34</b> for the support is contacted to the bottom surface <b>13</b> of the inner portion of the main container <b>10</b> so that the contact area between the fire fuel vessel <b>35</b> and the main container <b>10</b> may be minimized. Therefore, in the result, when the charcoal fuel is burnt, the heat from the fuel vessel <b>30</b> and the fire fuel vessel <b>35</b> is to the utmost a little bit delivered and the safety in use is maximized. The invention is very important in the point that the structure of the safety enhancement due to the minimum of this thermal conduction etc may be to the utmost simple.</p>
+      <p id="p-00070-en" num="0070">In the meantime, the upper supporter <b>20</b> supporting the roasting plate <b>4</b> and the main container <b>10</b> may be configured to maintain the state combined with each other by the locking device <b>70</b>. In the present invention, the locking device <b>70</b> may be provided in the outer periphery of the upper supporter <b>20</b>. And it is comprised of the locking hook which is provided in the outer periphery of the upper supporter <b>20</b> and is equipped with the locking holding portion, and locking hanger which is rotatably coupled in the main container <b>10</b> by the medium of the hinge section. In the end portion of the locking hanger, the locking projection interlocked in the locking holding portion of the locking hook is provided. If the locking hanger is downwardly circulated around the hinge section, the locking projection of the locking hanger hangs on the locking holding portion of the locking hook so that the locking state may be maintained. Moreover, the locking device <b>70</b> includes the locking piece which is rotatably coupled in the outer periphery of the upper supporter <b>20</b> by the medium of the hinge section and is equipped with the locking hole and the locking latch piece equipped in the outer periphery of the main container <b>10</b>. If the locking piece is downwardly rotated based of the hinge section, the locking hole of the locking piece may be combined in the locking latch piece protruded to the outer periphery of the main container <b>10</b> so that the locking operation may be maintained. Like the above, all of the means to lock together the upper supporter <b>20</b> for supporting the roasting plate <b>4</b> and the main container <b>10</b> may be adopted as the locking device <b>70</b>.</p>
+      <p id="p-00071-en" num="0071">In the meantime, in the present invention, the blown air with the rotation of the ventilation fan <b>17</b> upwardly goes up through the air blowing hole <b>18</b> of the air supply boss <b>19</b> inserted in the combining hole <b>35</b><i>h </i>of the bottom part of the fire fuel vessel <b>35</b>, and the air blown up from the ventilation fan <b>17</b> is crashed to the outer lower surface of the bottom portion of the fuel vessel <b>30</b>, rotates along the guide wing part <b>38</b>W like as windmill(whirlpool rotation) and is blown into the inner portion of the fuel vessel <b>30</b> through the respective air holes <b>37</b>. Accordingly, oxygen is evenly supplied to all of the fuel (in the present invention, the charcoal mainly very much used as the direct fire meat roasting) filled in the fuel vessel <b>30</b>, the combustion of fuel is evenly comprised as well as the combustion efficiency is more enhanced. In the result, the direct fire efficiency of food is more enhanced. In addition to this, since the air supply boss <b>19</b> and the air blowing hole <b>18</b> by the air supply boss <b>19</b> are arranged in the lower central part position of the fuel vessel <b>30</b> as the direct direction and air intensively goes up to the central part of lower side position of the fuel vessel <b>30</b>, the fuel combustion efficiency may be improved more. This point is one of the characteristics of the invention.</p>
+      <p id="p-00072-en" num="0072">Moreover, in the present invention, in the upper portion of the fire fuel vessel <b>35</b>, the cover member may be more equipped. The penetration hole connected with the inner portion of the fire fuel vessel <b>35</b> may be equipped in this cover member <b>60</b>. The penetration hole is penetrated from the upper surface toward the bottom surface of the cover member. Multiple penetration holes may be formed in the total surface of the cover member. And, the flange part extended toward the outer side of the radius direction may be further provided in the circumference of the cover member. At this time, the flange part of the cover member is arranged beneath the flame hole <b>21</b> formed in the central part of the upper supporter <b>20</b> and the cover member covers the upper side opening of the fire fuel vessel <b>35</b>. The flange part of the cover member hangs on the peripheral wall of the flame hole of the upper supporter <b>20</b>. In the present invention, the external diameter of the flange part of the cover member is relatively greater than that of the flame hole <b>21</b> of the upper supporter <b>20</b>. The flange part of the cover member hangs on the peripheral wall of the surrounding of the flame hole <b>21</b> in the lower position of the flame hole <b>21</b> of the upper supporter <b>20</b>. In the meantime, in drawing, it is illustrated that the penetration hole of the cover member is formed with the circular form. But the shape of the penetration hole may be comprised of the other form. That is, the penetration hole of the cover member may be organized in the form of the square hall and the penetration hole arranged in the most outer position may be organized in the form of the slot hole. And it should understood that the shape of the penetration hole of the cover member may be selected as the various shapes if necessary besides the above-described shape.</p>
+      <p id="p-00073-en" num="0073">Therefore, in the state the upper supporter <b>20</b> is placed on the main container <b>10</b> and the roasting plate <b>4</b> is placed on the upper supporter <b>20</b>, the user may roast meat to eat it. Although the case is happened that the user may mistakenly drop down the invention while moving the invention to the desired place and the invention are overturned (exactly speaking, the main container <b>10</b>, the upper supporter <b>20</b> and the roasting plate <b>4</b> are overturned), the main container <b>10</b> and the upper supporter <b>20</b> are maintained to be combined by the locking device <b>60</b> and the cover member is maintained to hang on the upper supporter <b>20</b> (concretely speaking, the flange part of the circumference of the cover member may be maintained to hang on the upper supporter <b>20</b>) and the case that the cover member is broken away from the fire fuel vessel <b>35</b> is prevented. Therefore the case is prevented that the fuel (for example, charcoal) filled in the fuel vessel <b>30</b> spill over so that the user may use the invention more safely and conveniently. That is, the upper side of the fuel vessel <b>30</b> is covered up with the cover member so that the flame may be induced to the roasting plate <b>4</b> through the penetration hole of the cover member and the safety in use may be guaranteed sufficiently.</p>
+      <p id="p-00074-en" num="0074">In the meantime, according to the invention, the roasting plate <b>4</b> is carried out from the upper supporter <b>20</b>, and the roasting grill <b>80</b> and the secondary roasting plate <b>86</b> may be set up on the upper supporter <b>20</b> instead of the roasting plate <b>4</b>, meat may be roasted at the same time the stew pot may be heated. The invention may prevent the case that meat is burnt out excessively when the user roasts meat while sharing the chat and may help the user to roast to eat meat more deliciously. That is, after the roasting plate <b>4</b> is carried out the upper supporter <b>20</b>, the roasting grill <b>80</b> is set up in the upper supporter <b>20</b>, the secondary roasting plate <b>86</b> is set up in the position which is in opposite directions to the flame hole <b>21</b> of the upper supporter <b>20</b> and the center of the fuel vessel <b>30</b> of the roasting grill <b>80</b>, and meat may be roasted on the secondary roasting plate <b>86</b>. When meat is roasted sufficiently to eat, the user may eat the roasted meat or if the user wants to eat the roasted meat later sharing the chat, he/she may place the roasted meat on the placing part <b>81</b> (it becomes in the form of the wire mesh) positioned at the outside of the part where the secondary roasting plate <b>86</b> is placed on among all the section of the roasting grill <b>80</b>. Then, the roasted meat placed on the placing part <b>81</b> of the roasting grill <b>80</b> does not get cold with the indirect heat coming up from the fuel vessel <b>30</b> and the appropriately warm state is maintained. Therefore, although the user eat the roasted meat relatively slower while sharing the chat, the taste of meat may not be lost. The user may eat the meat more deliciously. In the mean time, instead of the roasted meat, if the stew pot is placed on the placing part <b>81</b> positioned at the outside of the part where the secondary roasting plate <b>86</b>, the stew pot may maintain the stew at the appropriately warm state with the indirect heat which also comes up from the fuel vessel <b>30</b>. Therefore, there is the effect that the user may properly enjoy the taste of the stew while eating meat. That is, according to the roasting grill <b>80</b> and the secondary roasting plate <b>86</b>, the user may roast to eat meat as well as may enjoy the pot stew or the soup etc with appropriately warm state. Therefore, the invention may contribute the user to cheerfully take meat. Especially, although time goes by while sharing the chat, there is no case that meat gets cold the stew pot or the soup etc gets cold, the invention may contribute the user to eat meat to the utmost cheerfully.</p>
+      <p id="p-00075-en" num="0075">Moreover, the invention has the advantage that the user may use the invention more usefully when he/she wants to heat to eat the food containing soup like as pot stew more quickly because the invention has the wire grill <b>90</b> which is supported in the upper supporter <b>20</b> and is installed to be attachable and detachable. That is, after the user roast meat on the roasting plate <b>4</b> (or the secondary roasting plate <b>86</b>) to eat all the meat, carries out the roasting plate <b>4</b> from the upper supporter <b>20</b>, and sets up the wire grill <b>90</b> on the upper supporter <b>20</b>, if he/she puts the stew pot on the central position (the position which is in opposite directions to the flame hole <b>21</b> and fuel vessel <b>30</b> of the upper supporter <b>20</b>) of the wire grill <b>90</b>, the stew in the stew pot may be boiled more quickly so that the user may boil to eat the stew more quickly after he/she eat the roasted meat enough. Moreover, in the wire grill <b>90</b>, because the top end part (the end opposite to the end equipped with the wire support piece <b>94</b><i>a</i>) of the wire foot <b>94</b> is equipped based on the central part of the wire grill <b>90</b> along the columnar direction and the hanging portion formed by the end parts of these wire feet <b>94</b> supports the pot like as the stew pot so that the pot may not be shifted and the user may boil to eat the stew etc more safely and conveniently.</p>
+      <p id="p-00076-en" num="0076">Further, the main container <b>10</b> called main part of the invention may have multiple air circulating holes which is penetrated toward inside and outside. Since air circulates through this air circulation holes to inside and outside of the main container <b>10</b>, the conducted heat delivered to the heating source of the fuel vessel <b>30</b> is more authentically minimized.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A roaster comprising: a main container equipped with the space in the inner portion; an upper supporter including a flame hole equipped at the side facing the bottom side of the main container, and a roasting plate supporting part equipped at the circumference position of the flame hole, and is combined to the main container; a fuel vessel which has a fuel filling part is formed in the inner space and a spacer equipped in the outer periphery position of the fuel filling part, and which is positioned in the main container to be positioned at the opposite direction to the flame hole of the upper supporter and which is arranged as the state separated from the spacer.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The roaster of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the spacer is configured to be below prolonged from the bottom side of the fuel vessel to the bottom surface of the space of the main container, and wherein the lower part of the fuel vessel may be spaced from the bottom surface of the space of the main container by the spacer and the lower end portion of the spacer may be contacted to the bottom surface of the main container and the heat transmission to the main container may be minimized in the fuel vessel.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The roaster of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, further comprising a fire fuel vessel in which the bottom side is disposed to be positioned spaced from the bottom surface of the space of the main container by the spacer while being allowed between the fuel vessel and the main container.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The roaster of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein air blowing hole in the position which is in opposite directions to the flame hole of the upper supporter may be formed at the bottom surface of the space of main container, and wherein the bottom surface of the space of the main container is configured to be closed except for the air blowing hole.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The roaster of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, further comprising air blowing unit which is connected to the air blowing hole of main container, and wherein the air blowing unit includes a case forming the air supply space connected with the air blowing hole, air supply boss which is positioned in the case to be protruded to the upper portion of the bottom surface of the main container, and a ventilation fan which is supported in the case in order to be connected with the air supply boss, and wherein the fuel vessel is admitted inside the main container to be arranged in the upper position of the air blowing unit, the combining hole formed on the bottom surface of the fuel vessel is connected to the air supply boss so that the fuel vessel may be steadily arranged inside the main container as well as the inner portion fuel charge area unit is connected to the inner portion of the air supply boss.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The roaster of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising roasting grill installed on the upper supporter, and secondary roasting plate which is installed at the roasting grill and covers the fuel vessel installed in order to be connected with the upper supporter.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The roaster of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising wire grill installed to be attachable and detachable in the upper supporter.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The roaster of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the wire grill includes wire grill panel portion which is comprised of the structure arranged in the concentric and is installed in order to face the inner space of the upper supporter, a plurality of wire feet which is installed in the wire grill panel portion and has wire support piece prolonged toward the lower direction, and wherein the wire support piece is contacted to the roasting plate supporting part equipped in the upper supporter.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en" independent="true">
+      <claim-text>
+        <b>9</b>. A roaster comprising: a main container equipped with the space in the inner portion; an upper supporter including a flame hole equipped at the side facing the bottom side of the main container, and a roasting plate supporting part equipped at the circumference position of the flame hole, and is combined to the main container; a fuel vessel which has a fuel filling part is formed in the inner space and a spacer equipped in the outer periphery position of the fuel filling part, and which is positioned in the main container to be positioned at the opposite direction to the flame hole of the upper supporter; roasting grill installed on the upper supporter, and secondary roasting plate which is installed at the roasting grill and covers the fuel vessel installed in order to be connected with the upper supporter.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en" independent="true">
+      <claim-text>
+        <b>10</b>. A roaster comprising: a main container equipped with the space in the inner portion; an upper supporter including a flame hole equipped at the side facing the bottom side of the main container, and a roasting plate supporting part equipped at the circumference position of the flame hole, and is combined to the main container; a fuel vessel which has a fuel filling part is formed in the inner space and a spacer equipped in the outer periphery position of the fuel filling part, and which is positioned in the main container to be positioned at the opposite direction to the flame hole of the upper supporter; wire grill installed to be attachable and detachable in the upper supporter, and wherein the wire grill includes wire grill panel portion which is comprised of the structure arranged in the concentric and is installed in order to face the inner space of the upper supporter, a plurality of wire feet which is installed in the wire grill panel portion and has wire support piece prolonged toward the lower direction, and wherein the wire support piece is contacted to the roasting plate supporting part equipped in the upper supporter. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257594A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257594A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257594A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257594A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257594A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257594A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257594A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257594A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257594A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257594A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257594A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257594A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257594A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257594A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257594A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257594A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150257594A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257594A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150257594A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257594A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150257594A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257594A1-20150917-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150257594A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257594A1-20150917-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150257594A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257594A1-20150917-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150257594A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257594A1-20150917-D00013.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150257594A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257594A1-20150917-D00014.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150257594A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257594A1-20150917-D00015.TIF" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150257594A1_00017.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257594A1-20150917-D00016.TIF" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150257594A1_00018.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257594A1-20150917-D00017.TIF" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150257594A1_00019.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257594A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257594A1.PDF" type="pdf" size="1241053" pages="27" />
+</lexisnexis-patent-document>

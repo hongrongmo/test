@@ -1,0 +1,1437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150252222A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021809" date-changed="20160104" time-changed="154655">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121229216">
+        <country>US</country>
+        <doc-number>20150252222</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14430740</doc-number>
+        <date>20131009</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150910">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012226078</doc-number>
+        <date>20121011</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20160104">
+      <classification-ipcr sequence="1">
+        <text>C09D 183/16        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>183</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>B05D   3/06        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>05</class>
+        <subclass>D</subclass>
+        <main-group>3</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160104">
+      <classification-cpc sequence="1">
+        <text>C09D 183/16        20130101 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>183</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B05D   3/067       20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>05</class>
+        <subclass>D</subclass>
+        <main-group>3</main-group>
+        <subgroup>067</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C01B  21/068       20130101 LI20150819BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>21</main-group>
+        <subgroup>068</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150819</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C08J   7/00        20130101 LI20150819BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>7</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150819</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C08J   7/047       20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>7</main-group>
+        <subgroup>047</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C08J   7/123       20130101 LI20141103BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>7</main-group>
+        <subgroup>123</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141103</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C08J2483/16        20130101 LA20140627BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>2483</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140627</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C23C  18/122       20130101 LI20141216BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>18</main-group>
+        <subgroup>122</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141216</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C23C  18/1233      20130101 LI20141216BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>18</main-group>
+        <subgroup>1233</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141216</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>C23C  18/1241      20130101 LI20141216BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>18</main-group>
+        <subgroup>1241</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141216</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>C23C  18/1245      20130101 LI20141216BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>18</main-group>
+        <subgroup>1245</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141216</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>C23C  18/14        20130101 LI20141216BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>18</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141216</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">METHOD FOR FORMING DENSE SILICIC FILM</invention-title>
+    <references-cited date-changed="20151027">
+      <patent-citations name="patcit" date-changed="20151027" />
+      <citation>
+        <patcit num="1" dnum="US2005279255A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050279255</doc-number>
+            <kind>A1</kind>
+            <name>SUZUKI TADASHI [JP], et al</name>
+            <date>20051222</date>
+          </document-id>
+          <application-date>
+            <date>20050429</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US2010166977A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20100166977</doc-number>
+            <kind>A1</kind>
+            <name>BRAND ET AL STEFAN [DE]</name>
+            <date>20100701</date>
+          </document-id>
+          <application-date>
+            <date>20060708</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>AZ ELECTRONIC MATERIALS (LUXEMBOURG) S.A.R.L.</orgname>
+            <role>02</role>
+            <address>
+              <city>SOMERVILLE</city>
+              <state>NJ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Ozaki</last-name>
+            <first-name>Yuki</first-name>
+            <address>
+              <city>Shizuoka</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Sakurai</last-name>
+            <first-name>Takaaki</first-name>
+            <address>
+              <city>Shizuoka</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kobayashi</last-name>
+            <first-name>Masakazu</first-name>
+            <address>
+              <city>Shizuoka</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13077487</doc-number>
+        <date>20131009</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014057980</doc-number>
+        <date>20140417</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150910">
+      <main-family family-id="165276093">
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201425482</doc-number>
+            <kind>A</kind>
+            <date>20140701</date>
+          </document-id>
+          <application-date>
+            <date>20131009</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252222</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20131009</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104718030</doc-number>
+            <kind>A</kind>
+            <date>20150617</date>
+          </document-id>
+          <application-date>
+            <date>20131009</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014077082</doc-number>
+            <kind>A</kind>
+            <date>20140501</date>
+          </document-id>
+          <application-date>
+            <date>20121011</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150068986</doc-number>
+            <kind>A</kind>
+            <date>20150622</date>
+          </document-id>
+          <application-date>
+            <date>20131009</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014057980</doc-number>
+            <kind>A1</kind>
+            <date>20140417</date>
+          </document-id>
+          <application-date>
+            <date>20131009</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2907587</doc-number>
+            <kind>A1</kind>
+            <date>20150819</date>
+          </document-id>
+          <application-date>
+            <date>20131009</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="165276092">
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201425482</doc-number>
+            <kind>A</kind>
+            <date>20140701</date>
+          </document-id>
+          <application-date>
+            <date>20131009</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252222</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20131009</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104718030</doc-number>
+            <kind>A</kind>
+            <date>20150617</date>
+          </document-id>
+          <application-date>
+            <date>20131009</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014077082</doc-number>
+            <kind>A</kind>
+            <date>20140501</date>
+          </document-id>
+          <application-date>
+            <date>20121011</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150068986</doc-number>
+            <kind>A</kind>
+            <date>20150622</date>
+          </document-id>
+          <application-date>
+            <date>20131009</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014057980</doc-number>
+            <kind>A1</kind>
+            <date>20140417</date>
+          </document-id>
+          <application-date>
+            <date>20131009</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2907587</doc-number>
+            <kind>A1</kind>
+            <date>20150819</date>
+          </document-id>
+          <application-date>
+            <date>20131009</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention provides a dense silicic film and a producing method thereof. This method comprises coating a composition for coating film, which comprises a polymer having a silazane bond on a substrate, on a substrate, irradiating with light having a maximal peak in the range of 160-179 nm wavelength, and then irradiating with light having 10-70 nm wavelength longer maximal peak wavelength than the light used in the previous irradiation.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to methods for producing silicic dense film, which can be used for manufacturing semiconductor devices.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND ART</heading>
+      <p id="p-00002-en" num="0002">Silicic films, which are relatively hard and dense, are used in various applications, specifically a hard-coat film, a gas barrier film and a reinforcement film for substrates and circuits and the like in the semiconductor manufacturing industry. Various silicic films for such applications have been investigated. Non-Patent Document 1 discloses a method for forming a SiON layer by coating polysilazane on a substrate, drying, and then irradiating with excimer laser (wavelength 172 nm) in an inert gas atmosphere. Patent Document 1 also discloses a method for forming a high-performance gas barrier film using a similar method. Thus, methods for high-performance silicic films have been investigated by using a composition having Si—N, Si—H and N—H bonds.</p>
+      <p id="p-00003-en" num="0003">In particular, Patent Document 1 discloses a method of repeating manufacturing steps for forming film to obtain more stable film. However, the present inventors have found that density of the film may be insufficient when irradiation light is limited to 172 nm wavelength. Patent Document 2 also discloses a method for forming a siliceous film by coating polysilazane containing a catalyst on a substrate, drying, and then irradiating with vacuum ultraviolet (wavelength under 230 nm) and ultraviolet (wavelength 230-300 nm) simultaneously, tandemly or alternately in a water vapor atmosphere. However, there is still room for improvement in terms of density of the siliceous film.</p>
+      <p id="p-00004-en" num="0004">Patent Document 3 also discloses that gas barrier performance is degraded in consequence of increased concentration of Si—O bonds in a formed film, which is irradiated with vacuum ultraviolet light in a high-oxygen atmosphere. According to this disclosure, a film having many Si—N bonds, not Si—O bonds, is considered to be preferred to achieve a high-performance gas barrier film.</p>
+      <heading id="h-00003-en" level="1">PRIOR ART DOCUMENTS</heading>
+      <heading id="h-00004-en" level="1">Patent Documents</heading>
+      <p id="p-00005-en" num="0000">
+        <ul id="ul-00001-en" list-style="none">
+          <li>[Patent document 1] Japanese Patent Laid-Open No. 2011-146226</li>
+          <li>[Patent document 2] Japanese Patent Publication No. 2009-503157</li>
+          <li>[Patent document 3] Japanese Patent Laid-Open No. 2011-143327</li>
+        </ul>
+      </p>
+      <heading id="h-00005-en" level="1">Non-Patent Documents</heading>
+      <p id="p-00006-en" num="0000">
+        <ul id="ul-00002-en" list-style="none">
+          <li>[Non-Patent document 1] Journal of Photopolymer Science and Technology Volume 23, Number 2 (2010) 225-230</li>
+        </ul>
+      </p>
+      <heading id="h-00006-en" level="1">DISCLOSURE OF INVENTION</heading>
+      <heading id="h-00007-en" level="1">Problem to be Solved by the Invention</heading>
+      <p id="p-00007-en" num="0009">To solve the above problems, it is an object of the present invention to provide a method for forming silicic dense (high-density silicon based) film that contains a low content of Si—O bonds.</p>
+      <heading id="h-00008-en" level="1">Means for Solving Problem</heading>
+      <p id="p-00008-en" num="0010">The present invention resides in a method for forming silicic dense film comprising:</p>
+      <p id="p-00009-en" num="0000">(1) a composition preparing step, in which a composition for a coating film comprising a polymer having a silazane bond and a solvent is prepared; <br /> (2) a coating step, in which a coated film is formed by coating said composition for a coating film on a substrate; <br /> (3) the first irradiating step, in which said coated film is irradiated with light having a maximal peak in the range of 160-179 nm wavelength; and <br /> (4) the second irradiating step, in which coated film after the first irradiating step is irradiated with light having 10-70 nm wavelength longer maximal peak wavelength than the light used in the first irradiating step. </p>
+      <p id="p-00010-en" num="0011">The prevent invention also resides in a dense silicic film formed by said method.</p>
+      <heading id="h-00009-en" level="1">Effect of the Invention</heading>
+      <p id="p-00011-en" num="0012">The present invention enables to form a dense and excellent gas barrier performance silicic film as a result of a low content of Si—O bonds and a high content of Si—N bonds.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00010-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00012-en" num="0013">
+        <figref>FIG. 1</figref> is IR spectra after irradiation process (broken line) and after superheated steam process (solid line) at Example 5.</p>
+      <p id="p-00013-en" num="0014">
+        <figref>FIG. 2</figref> is IR spectra after irradiation process (broken line) and after superheated steam process (solid line) at Example 1.</p>
+      <p id="p-00014-en" num="0015">
+        <figref>FIG. 3</figref> is IR spectra after irradiation process (broken line) and after superheated steam process (solid line) at Example 37.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00011-en" level="1">BEST MODE FOR CARRYING OUT THE INVENTION</heading>
+      <p id="p-00015-en" num="0016">Embodiments of the present invention are described in detail.</p>
+      <p id="p-00016-en" num="0017">In the present invention, a dense silicic film is provided on one or both sides of a substrate. The substrate is not limited and can be freely selected from metallic materials, ceramics and organic materials. Specifically, a bare silicon wafer and a silicon wafer coated with, for example, a thermal oxide film can be used. A dense silicic film can be formed on not only one side but also both sides of a substrate. In this case, a substrate should be selected according to the intended use.</p>
+      <p id="p-00017-en" num="0018">In a method for forming a gas barrier film according to the present invention, a substrate surface is coated with a composition for a coating film comprising a polymer having a silazane bond and a solvent. The polymer having a silazane bond used in the present invention is not limited and can be freely selected unless it impairs the effect of the invention. Typically, a polysilazane compound can be used. When a polysilazane compound is used, either an inorganic or organic compound can be selected. Examples of the inorganic polysilazane compound include a perhydropolysilazane which has a straight-chain structure comprising structural units represented by the following formulas (I):</p>
+      <p id="p-00018-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="16.76mm" wi="48.77mm" alt="embedded image" img-content="chem" file="US20150252222A1_00002.PNG" img-format="png" original="US20150252222A1-20150910-C00001.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00019-en" num="0019">The perhydropolysilazane, which can be produced by any of the known processes, includes a chain structure part and a cyclic structure part in the molecule, and is represented by the following formula:</p>
+      <p id="p-00020-en" num="0000">
+        <chemistry id="chem-00002-en" num="00002">
+          <img id="img-00002-en" he="10.75mm" wi="51.14mm" alt="embedded image" img-content="chem" file="US20150252222A1_00003.PNG" img-format="png" original="US20150252222A1-20150910-C00002.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00021-en" num="0020">An organo polysilazane also can be used. Examples also include an organo polysilazane compound or a modification compound thereof, which has a skeleton mainly comprising a structural unit represented by the following formula (II)</p>
+      <p id="p-00022-en" num="0000">
+        <chemistry id="chem-00003-en" num="00003">
+          <img id="img-00003-en" he="16.43mm" wi="48.77mm" alt="embedded image" img-content="chem" file="US20150252222A1_00004.PNG" img-format="png" original="US20150252222A1-20150910-C00003.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00023-en" num="0000">wherein each of R<sup>1</sup>, R<sup>2 </sup>and R<sup>3 </sup>is independently a hydrogen atom, an alkyl group, an alkenyl group, a cycloalkyl group, an aryl group, an alkoxy group, an amino group or a silyl group and at least one of R<sup>1</sup>, R<sup>2 </sup>and R<sup>3 </sup>is a hydrogen atom. Here, groups other than a hydrogen atom are optionally substituted by one or more groups such as a halogen atom such as fluorine, an alkyl group, an alkoxy group, an amino group, a silyl group or an alkylsilyl group. Specifically, examples which may use for R<sup>1</sup>, R<sup>2 </sup>and R<sup>3 </sup>include: a fluoroalkyl group, a perfluoroalkyl group, a silylalkyl group, a trisilylalkyl group, an alkylsilylalkyl group, a trialkylsilyl group, an alkoxysilylalkyl group, a fluoroalkoxy group, a silylalkoxy group, an alkylamino group, an dialkylamino group, an alkylaminoalkyl group, an alkylsilyl group, a dialkylsilyl group, an alkoxysilyl group, a dialkoxysilyl group and a trialkoxysilyl group.</p>
+      <p id="p-00024-en" num="0021">The molecular weight of the polysilazane compound used in the present invention is not limited but the average molecular weight of the compound in terms of polystyrene is preferably 1,000 to 20,000, more preferably 1,000 to 10,000.</p>
+      <p id="p-00025-en" num="0022">Further, examples of the polymer having a silazane bond include a metallosilazane, a borosilazane and a siloxazane. Two or more polymers can be used in combination.</p>
+      <p id="p-00026-en" num="0023">The composition for a coating film used in the present invention contains a solvent capable of dissolving the above polymer. Such a solvent is not limited and can be freely selected as long as it can dissolve the above components. Preferred examples of the solvent include:</p>
+      <p id="p-00027-en" num="0000">(a) aromatic compounds, such as benzene, toluene, xylene, ethylbenzene, diethylbenzene, trimethylbenzene, triethylbenzene and tetrahydronaphthalene; <br /> (b) saturated hydrocarbon compounds, such as n-pentane, i-pentane, n-hexane, i-hexane, n-heptane, i-heptane, n-octane, i-octane, n-nonane, i-nonane, n-decane and i-decane; <br /> (c) alicyclic hydrocarbon compounds, such as ethylcyclohexane, methylcyclohexane, cyclohexane, cyclohexene, p-menthane, decahydronaphthalene, dipentene and limonene; <br /> (d) ethers, such as dipropyl ether, dibutyl ether, diethyl ether, dipentyl ether, dihexyl ether, methyl tertiary butyl ether (hereinafter, referred to as MTBE) and anisole; and <br /> (e) ketones, such as methyl isobutyl ketone (hereinafter, referred to as MIBK). <br /> Among them, more preferred are (b) saturated hydrocarbon compounds, (c) alicyclic hydrocarbon compounds, (d) ethers and (e) ketones. </p>
+      <p id="p-00028-en" num="0024">These solvents can be used in combination of two or more to control the evaporation rate, to reduce the hazardousness to the human body and to control the solubility of the components.</p>
+      <p id="p-00029-en" num="0025">Commercially available solvents can be adopted as these solvents. Examples include: PEGASOL 3040, EXXSOL D30, EXXSOL D40, EXXSOL D80, Solvesso 100, Solvesso 150, Isopar H, Isoper L (trade name, manufactured by Exxon Mobil Corporation), New Solvent A (trade name, manufactured by JX Nippon Oil &amp; Energy Co.), Shellsol MC311, Shellsol MC811, Sol Eight Deluxe, New Shell Bright Sol (trade name, manufactured by Shell Chemicals Japan Ltd.) If a mixture of solvents is adopted in the present invention, the mixture preferably contains aromatic hydrocarbons in an amount of 30 wt % or less based on the total weight of the mixture so as to reduce the hazardousness to the human body.</p>
+      <p id="p-00030-en" num="0026">Further, the composition for a coating film used in the present invention can contain an amine compound or a metal-complex compound. These compounds function as a catalyst for use in curing reaction of coated compound on a substrate.</p>
+      <p id="p-00031-en" num="0027">It is possible to use one of the optional as an amine compound, but may be suitably, for example, aliphatic amines, aromatic amines or heterocyclic amines. Aliphatic amines or aromatic amines may be any of primary amines, secondary amines or tertiary amines. Further, these may have any number of nitrogen atoms such as monoamine, diamine, or triamine. Examples of heterocycle amines include a compound comprising pyrrole ring, pyridine ring, pyrazine ring, pyrimidine ring or triazole ring. Also, these amine compounds are optionally substituted by freely-selected substituent, for example, a group selected from the group consisting of alkoxy group, alkylene group, silyl group and alkylsilyl group.</p>
+      <p id="p-00032-en" num="0028">Preferred examples of an amine compound include:</p>
+      <p id="p-00033-en" num="0000">dipropylamine, diisopropylamine, tripropylamine, butylamine, dibutylamine, tributylamine, isobutylamine, diisobutylamine, tent-butylamine, pentylamine, tripentylamine, hexylamine, N-methylhexylamine, N,N-dimethylhexylamine, N,N-dimethyl-2-ethylhexylamine, heptylamine, octylamine, di-n-octylamine, N-methyl di-n-octylamine, tri-n-octylamine, N,N,N′,N′-tetramethyldiaminomethane, N,N′-dimethylethylenediamine, N,N,N′,N′-tetramethylethylenediamine, N,N,N′,N′-tetramethyl-1,3-propanediamine, N,N,N′,N′-tetramethyl-1,4-butanediamine, N,N-di-tert-butylethylenediamine, N,N,N′,N′-tetramethylhexamethylenediamine, N,N,N′,N′-tetramethyl-1,8-octanediamine, allylamine, diallylamine, triallylamine, N-methyldiallylamine, N,N-dimethylallylamine, benzylamine, dibenzylamine, N-methylbenzylamine, N,N-dimethylbenzylamine, pyrrol, pyrroline, pyridine, picolin, lutidine, pyrazine, aminopyridine, aminomethylpyridine, phenylpyridine, vinylpyridine, aminopyrazine, 2-methoxyethylamine, 3-methoxypropylamine, 3-ethoxypropylamine, 3-propoxypropylamine, 3-isopropoxypropylamine, 3-butoxypropylamine, bis(2-aminoethylether), bis(3-aminopropylether), 3-(2-dimethylaminoethoxyl)propylamine, hexamethyldisilazane, tetramethyldisilazane and heptamethyldisilazane.</p>
+      <p id="p-00034-en" num="0029">An amine compound is not limited unless it impairs the effects of the present invention. However it should be noted that using alcoholamine or some N-heterocyclic amines may cause increase Si—O bonds during curing reaction.</p>
+      <p id="p-00035-en" num="0030">A metal complex compound is also freely-selected as long as it accelerates curing reaction of a coated film. Preferred examples of the metal are selected from the group consisting of nickel, titanium, platinum, rhodium, cobalt, iron, iridium, aluminum, ruthenium, palladium, rhenium and tungsten. Further, it is preferable to comprise a ligand selected from the group consisting of acetylacetonato group, carbonyl group or carboxylate group. The carboxylate group is preferably a residue of carboxylic acid selected from the group consisting of formic acid, acetic acid, propionic acid, butyric acid, octane acid, lauric acid, stearic acid, oleic acid, lactic acid, succinic acid and citric acid.</p>
+      <p id="p-00036-en" num="0031">Preferred example of the metal complex compound include: tris(acetylacetonato)aluminium, tris(acetylacetonato)iron, tris(acetylacetonato)rhodium, tris(acetylacetonato)cobalt, tris(acetylacetonato)ruthenium, bis(acetylacetonato)palladium, hexacarbonyltungsten, dodecacarbonyltrirhthenium, dodecacarbonyldirhenium, palladium acetate, nickel benzoate, nickel octanoate, nickel oleate, iron formate, cobalt benzoate, cobalt citrate, cobalt formate, rhodium acetate(III), rhodium acetate(II), titanium oleate, aluminum gluconate, aluminum benzoate, and aluminum butyrate.</p>
+      <p id="p-00037-en" num="0032">The composition used in the present invention can optionally contain other additives. Examples of the optional additives include crosslinking accelerators and viscosity modifiers. Further, the composition can contain a phosphorus compound, for example tris(trimethylsilyl)phosphate, for the sake of Na-gettering effect in the semiconductor manufacturing process.</p>
+      <p id="p-00038-en" num="0033">The above polymer and, if necessary, other additives are dissolved or dispersed in the above solvent to prepare the composition for a coating film in the present invention. In this preparation, there are no particular restrictions on the order of dissolving the components in the solvent. Further, the solvent can be replaced after the components are made to react.</p>
+      <p id="p-00039-en" num="0034">Further, the contained amount of each component depends on the application of the composition. To achieve adequate film thickness, the content of the polymer is preferably 0.1 to 40 wt %, more preferably 0.1 to 20 wt %, and further preferably 0.1 to 10 wt %. When the composition comprises the amine compound, the content of the amine compound is preferably more than a certain amount to accelerate curing reaction and less than a certain amount to maintain preservation stability of the composition. Thus, the content of the amine compound is preferably 0.005 to 0.50 mmol per 1 g polymer, more preferably 0.01 to 0.30 mmol. When the composition comprises the metal complex compound, the content of the metal complex compound is preferably more than a certain amount to accelerate adequate curing reaction and less than a certain amount to maintain preservation stability of the composition. Thus, the content of the metal complex compound is preferably 0.005 to 0.10 mmol per 1 g polymer, more preferably 0.01 to 0.06 mmol. When the composition comprises the metal complex compound, it is also possible to use a cosolvent such as anisole to promote the solubility.</p>
+      <p id="p-00040-en" num="0035">A coating method to apply above composition on a substrate can be adopted from known methods, such as spin coating, dip coating, spray coating, roll coating, print-transfer coating and the like. Among them, spin coating is preferred. Thickness of a coated film is preferred to be set in order to cure efficiently when irradiated with UV light in the manner described later. When dense silicic films are formed on both sides of a substrate, it can be coated sequentially one side by one, or simultaneously on both sides.</p>
+      <p id="p-00041-en" num="0036">The coated film formed on a substrate surface is then optionally dried to remove excess solvent. In this step, if the coated film is dried at relatively high temperature, the solvent can be efficiently removed. However, that is not preferred because such external thermal energy leads to increase the thermal energy cost. Consequently, the coated film is preferably dried without applying thermal energy. When the coated film is dried nevertheless at high temperature, the drying temperature is preferably 150° C. or below, more preferably 100° C. or below.</p>
+      <p id="p-00042-en" num="0037">The coated film can also be dried under reduced pressure. Specifically, negative pressure can be applied to the coated substrate by means of for example a vacuum pump, a rotary pump, so as to accelerate evaporation of the solvent in the coated film and thereby to promote the drying.</p>
+      <p id="p-00043-en" num="0038">The coated film, from which is removed excess solvent by drying, may be optionally blown by an inert gas such as nitrogen. This process can remove attached-matter on the surface of the coated film and enhance efficiency of light irradiation. Furthermore, it is possible to remove, for example, solvent on the surface by infrared-ray irradiation.</p>
+      <p id="p-00044-en" num="0039">Subsequently, the coated film is irradiated with light. The conditions of the UV irradiation in the first irradiation step or the second irradiation step are properly selected according to the thickness, constituent hardness, and the like of the aimed gas barrier film.</p>
+      <p id="p-00045-en" num="0040">First, irradiation light used in the first irradiation step has a maximal peak in the range of 160-179 nm wavelength, preferably 165-175 nm wavelength. This first irradiation step is supposed to accelerate curing near-surface of the coated film (described later in detail).</p>
+      <p id="p-00046-en" num="0041">As light sources for the irradiation, any light sources, typically Xenon excimer laser, can be used as long as it emits light of said specific wavelength. A lamp which emits light having wide-range wavelength also can be used by selecting said specific wavelength with a filter or a spectrometer.</p>
+      <p id="p-00047-en" num="0042">Then, at the second irradiating step, the coated film is irradiated with light, which has a longer maximal peak wavelength than the light used in the first irradiating step and the peak wavelength is equal to or less than 230 nm, preferably in the range of 180-230 nm. This second irradiation step is supposed to accelerate curing deep part of the coated film (described later in detail). The light used in the second irradiation step may be any light that the maximal peak wavelength is longer than that used in the first irradiation step, but it should be noted that too small difference of the maximal peaks may result in the insufficient curing reaction because different part is not irradiated by the first and second irradiations. Thus, the difference of the maximal peaks of the light in the first and second irradiation steps preferably equal to or more than 10 nm wavelength, more preferably equal to or more 15 nm wavelength.</p>
+      <p id="p-00048-en" num="0043">Additionally, the coated film can be irradiated with light. The wavelength of the light is not limited. As the curing accelerated part of the film in depth direction is varied depending on wavelength of the irradiation light, it can be selected depending on objectives. In specific, longer wavelength of the irradiation light can accelerate curing of deeper part of the film and shorter wavelength of the irradiation light can accelerate curing of shallower part of the film, which has already cured. Thus, the coated film can be irradiated by any wavelength at any times after the second irradiation step.</p>
+      <p id="p-00049-en" num="0044">However, the third irradiation step, wherein the coated film after the second irradiation step is irradiated with light having longer maximal peak wavelength than the light used in the second irradiating step, is preferred to be after the second irradiation step. This third irradiation step enables to accelerate curing of the coated film in any depth and to improve density of the whole film. Here in, the light used in the third irradiation step, which has longer maximal peak wavelength than the light used in the second irradiation step, enables to accelerate curing the deeper part of the coated film. In the meanwhile, too long irradiation wavelength may not accelerate curing any more. Thus, the light used in the third irradiation step is preferred to have 10-60 nm wavelength longer maximal peak than the light used in the second irradiating step.</p>
+      <p id="p-00050-en" num="0045">Any light sources can be used as long as it emits light of said specific wavelength at each irradiation step. A lamp which emits light having relatively wide-range wavelength such as an ultraviolet lamp and a mercury lamp can be used by selecting said specific wavelength with a filer or a spectrometer.</p>
+      <p id="p-00051-en" num="0046">The mechanism that this two-step irradiation enables to obtain a dense silicic film is not fully understood, but estimated as follows. At first, the coated film, the surface of the film is cured, is formed by light having the relatively shorter wavelength in the first irradiation step. This curing film contains a high content of Si—N bonds and has excellent gas barrier performance. Thus, it reduces penetration of oxygen gas into the deep part of coated film. Additionally, when the coated film is irradiated with the light having longer wavelength, the deeper part of it is cured. As penetration of oxygen is reduced in this situation, the amount of absorbed oxygen of the curing film is reduced. Consequently, the dense coated film containing a high content of Si—N bonds is formed.</p>
+      <p id="p-00052-en" num="0047">In fact, for example, when light of 230 nm wavelength is irradiated and then light of 172 nm wavelength is irradiated, the formed film results in containing a high content of Si—O bonds and a low content of Si—N bonds.</p>
+      <p id="p-00053-en" num="0048">An atmosphere, wherein the coated film is irradiated, can be freely selected based on the aimed constituent of the film, but an atmosphere which prevents oxygen from penetrating into the coated film, specifically an atmosphere containing less oxygen, is preferred for irradiation. In particular, the oxygen concentration in an atmosphere is preferably equal to or less than 1000 ppm, more preferably equal to or less than 100 ppm. To meet this condition, irradiation can be done under vacuum, reduced pressure or inert gas atmosphere. Further, irradiation in the atmosphere, wherein inert gas is introduced after decompression, is also effective. Here in, inert gas such as nitrogen, argon, helium and mixture thereof can be used. Specifically, nitrogen is preferred from the point view of handling property and the like. In this case, nitrogen gas is inert and neither absorbed nor associated with increased concentration of nitrogen in the coated film. The irradiation is not necessarily carried out in an airtight chamber, and can be performed in a flow of inert gas. Further, the irradiation can be carried out in a mixture of inert gas with, for example, ammonia or nitrous oxide. In this case, as ammonia or nitrous oxide serves as a nitrogen source of Si—N bonds of the coated film, the content of Si—N bonds can be increased.</p>
+      <p id="p-00054-en" num="0049">The coated film can be heated at the same time as the irradiation in the first irradiation step and second irradiation step. This heating can accelerate curing reaction. The ways of heating is freely-selected such as heating atmosphere gas.</p>
+      <p id="p-00055-en" num="0050">This irradiation cures polymers including a silazane-bond in the coated film. This conversion can be monitored by means of FT-IR. Specifically, with the conversion proceeds, the absorption peaks at 3350 cm<sup>−1 </sup>and 1200 cm<sup>−1</sup>, which are attributed to N—H bonds, and the peak at 2200 cm<sup>−1</sup>, which is attributed to Si—H bonds, become weak. Consequently, the curing reaction can be confirmed by observing decrease in intensity of those peaks.</p>
+      <p id="p-00056-en" num="0051">Thus formed gas barrier film is excellent in stability, in density and in transparency, and hence can be used as a gas barrier film in a semiconductor device, a protective film or an insulating film. Further, the film can be also used as a top or bottom antireflective film in a process of producing a semiconductor device. Specifically, in a pattern formation process in which a resist pattern is formed by photolithography, it can be used as an antireflective film on the upper- or substrate-side surface of the resist layer in order to prevent reflection or interference in the resist layer. The coated film according to the present invention is advantageously used as an antireflective film, in particular, as a bottom antireflective film formed on a substrate-side surface of the resist layer.</p>
+      <p id="p-00057-en" num="0052">The present invention is further explained below by use of the following examples.</p>
+      <heading id="h-00012-en" level="2">Synthesis of Polysilazane</heading>
+      <p id="p-00058-en" num="0053">A four-necked flask, internal volume of 1 liter, was equipped with a gas inlet tube, a mechanical stirrer, and a dewar condenser. The flask was replaced with dry nitrogen deoxygenated and then the 1,500 ml of degassed dry pyridine was introduced in it and it was cooled with ice. Then, dichlorosilane 100 g was added, and adduct of white solid (SiH<sub>2</sub>Cl<sub>2</sub>.2C<sub>5</sub>H<sub>5</sub>N) was formed. The ice-cold reaction mixture was bubbled ammonia 70 g with stirring. Subsequently, it was blown for 30 minutes in the liquid layer dry nitrogen, to remove the excess ammonia.</p>
+      <p id="p-00059-en" num="0054">The reaction mixture was filtered under reduced pressure in a dry nitrogen atmosphere using a Buchner funnel, and then 1,200 ml filtrate was obtained. As a result of evaporation of the pyridine using an evaporator, a perhydropolysilazane of 40 g was obtained. GPC (eluent: CHCl<sub>3</sub>) a number average molecular weight of the perhydropolysilazane obtained was measured by, and was 800 in terms of polystyrene. Was measured that the IR (infrared absorption) spectrum, (cm<sup>−1</sup>) 3350, absorption based on the N—H 1200 wave number: Si—N—Si of 1020-820: absorption based on Si—H 2170 to show an absorption-based was confirmed.</p>
+      <heading id="h-00013-en" level="2">Preparation of Composition for Coating Film</heading>
+      <p id="p-00060-en" num="0055">In a glass beaker of capacity 100 ml, 2.5 g synthesized perhydropolysilazane and 47.5 g dibutyl ether was introduced and performed bubbling agitation by blowing for 3 minutes dry nitrogen to prepare a compound for a coating film</p>
+      <p id="p-00061-en" num="0056">Other compositions for a coating film were prepared the following with the addition of additives as described in Table 1.</p>
+      <p id="p-00062-en" num="0057">Compounds for a coating film containing an amine compound were prepared by mixing a solution in a glass beaker of capacity 100 ml, wherein 2.5 g synthesized perhydropolysilazane and 30.0 g dibutyl ether was introduced, with a solution in a glass beaker of capacity 50 ml, wherein predetermined amine compound and 17.5 g dibutyl ether was introduced, and blowing for 3 minutes dry nitrogen, that was bubbling agitation.</p>
+      <p id="p-00063-en" num="0058">Compounds for coating film containing a metal complex compound were prepared by mixing a solution in a glass beaker of capacity 100 ml, wherein 2.5 g synthesized perhydropolysilazane and 46.25 g dibutyl ether was introduced, with a solution in a glass beaker of capacity 5 ml, wherein predetermined metal complex compound and 1.25 g anisole was introduced, and by blowing for 3 minutes dry nitrogen, bubbling agitation.</p>
+      <heading id="h-00014-en" level="2">Formation of Gas Barrier Film</heading>
+      <p id="p-00064-en" num="0059">The prepared composition for a coating film was coated on a 4-inch silicon wafer of thickness 0.5 mm, using a spin coater. After the coating, the coated film was dried at 80° C. for 3 minutes on a hot plate.</p>
+      <p id="p-00065-en" num="0060">Subsequently, the coated wafer was placed into an exposure apparatus, wherein nitrogen was introduced and oxygen concentration was equal to or less than 100 ppm, and irradiated with light having maximal peak 172 nm, 190 nm, 230 nm, or 365 nm wavelength. Each irradiance was 5 mW/cm<sup>2</sup>, 16 mW/cm<sup>2</sup>, 3.5 mW/cm<sup>2 </sup>or 3.7 W/cm<sup>2</sup>. The irradiance was measured by combining Accumulated UV Meter UIT-250 with Detector VUV-S172 (light source 172 nm or 190 nm wavelength), UVD-S254 (light source 230 nm wavelength), or UVD-S365 (light source 365 nm wavelength) (all trade names, manufactured by USHIO INC.)</p>
+      <heading id="h-00015-en" level="2">Evaluation</heading>
+      <p id="p-00066-en" num="0061">After irradiation, IR spectra of the coated film were measured by the FT-IR measurement. The thickness of coated films was measured by an ellipsometer. Thickness of all films was about 100 nm.</p>
+      <p id="p-00067-en" num="0062">Then, the film was oxidation-treated in 250° C. superheated steam condition for 15 minutes. After the treatment, FT-IR was measured again.</p>
+      <p id="p-00068-en" num="0063">A density and stability of formed gas barrier film was evaluated by comparing the IR spectrum after irradiation with the IR spectrum after curing in the heated steam. Specifically, each formed film was classified into the following grades:</p>
+      <p id="p-00069-en" num="0000">A: IR spectra, which were before-and-after superheated steam treatment, showed little change of peak intensity at about 1000-1200 cm<sup>−1 </sup>attributed to Si—O bonds, <br /> B: IR spectra showed a little change of peak intensity corn in comparison with A, <br /> C: IR spectra showed a big change of peak intensity in a clearly recognizable way. <br /> In specific, <figref>FIG. 1</figref>, <figref>FIG. 2</figref> and <figref>FIG. 3</figref> are results of Example 5, Example 1, and Example 37 respectively and each evaluated as A, B and C. Thus, when a dense silicic film is formed by ultraviolet irradiation, superheated steam treatment accelerates little reaction and there is little amount of peak change. On the other hand, if ultraviolet irradiation is insufficient, superheated steam treatment accelerates the reaction and there is a big change on peak intensity corresponding to a formation of Si—O bonds. The results were shown in Table 1. </p>
+      <p id="p-00070-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="189pt" align="left" />
+              <colspec colname="1" colwidth="189pt" align="center" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>process condition</entry>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="189pt" align="left" />
+              <colspec colname="1" colwidth="63pt" align="center" />
+              <colspec colname="2" colwidth="63pt" align="center" />
+              <colspec colname="3" colwidth="63pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>The first</entry>
+                  <entry>The second</entry>
+                  <entry>The third</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>irradiation step</entry>
+                  <entry>irradiation step</entry>
+                  <entry>irradiation step</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="119pt" align="left" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="42pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <colspec colname="9" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>kind of additive and</entry>
+                  <entry>wavelength</entry>
+                  <entry>time</entry>
+                  <entry>wavelength</entry>
+                  <entry>time</entry>
+                  <entry>wavelength</entry>
+                  <entry>time</entry>
+                  <entry>Evalu-</entry>
+                </row>
+                <row>
+                  <entry>No.</entry>
+                  <entry>additive amount</entry>
+                  <entry>(nm)</entry>
+                  <entry>(min)</entry>
+                  <entry>(nm)</entry>
+                  <entry>(min)</entry>
+                  <entry>(nm)</entry>
+                  <entry>(min)</entry>
+                  <entry>ation</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="10" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="28pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="left" />
+              <colspec colname="3" colwidth="119pt" align="left" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="char" char="." />
+              <colspec colname="6" colwidth="42pt" align="center" />
+              <colspec colname="7" colwidth="21pt" align="center" />
+              <colspec colname="8" colwidth="42pt" align="center" />
+              <colspec colname="9" colwidth="21pt" align="center" />
+              <colspec colname="10" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Ex. 1</entry>
+                  <entry>Present</entry>
+                  <entry>non</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>190</entry>
+                  <entry>4</entry>
+                  <entry />
+                  <entry />
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Ex. 2</entry>
+                  <entry>Invention</entry>
+                  <entry>non</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>230</entry>
+                  <entry>4</entry>
+                  <entry />
+                  <entry />
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Ex. 3</entry>
+                  <entry />
+                  <entry>non</entry>
+                  <entry>172</entry>
+                  <entry>2</entry>
+                  <entry>190</entry>
+                  <entry>6</entry>
+                  <entry />
+                  <entry />
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Ex. 4</entry>
+                  <entry />
+                  <entry>non</entry>
+                  <entry>172</entry>
+                  <entry>2</entry>
+                  <entry>190</entry>
+                  <entry>6</entry>
+                  <entry>230</entry>
+                  <entry>4</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry>Ex. 5</entry>
+                  <entry />
+                  <entry>non</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>190</entry>
+                  <entry>4</entry>
+                  <entry>230</entry>
+                  <entry>4</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry>Ex. 6</entry>
+                  <entry />
+                  <entry>non</entry>
+                  <entry>172</entry>
+                  <entry>7</entry>
+                  <entry>190</entry>
+                  <entry>1</entry>
+                  <entry>230</entry>
+                  <entry>4</entry>
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Ex. 7</entry>
+                  <entry />
+                  <entry>octylamine, 0.30 mmol</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>190</entry>
+                  <entry>4</entry>
+                  <entry />
+                  <entry />
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Ex. 8</entry>
+                  <entry />
+                  <entry>octylamine, 0.30 mmol</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>230</entry>
+                  <entry>4</entry>
+                  <entry />
+                  <entry />
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Ex. 9</entry>
+                  <entry />
+                  <entry>octylamine, 0.30 mmol</entry>
+                  <entry>172</entry>
+                  <entry>2</entry>
+                  <entry>190</entry>
+                  <entry>6</entry>
+                  <entry />
+                  <entry />
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry>Ex. 10</entry>
+                  <entry />
+                  <entry>octylamine, 0.30 mmol</entry>
+                  <entry>172</entry>
+                  <entry>2</entry>
+                  <entry>190</entry>
+                  <entry>6</entry>
+                  <entry>230</entry>
+                  <entry>4</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry>Ex. 11</entry>
+                  <entry />
+                  <entry>octylamine, 0.30 mmol</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>190</entry>
+                  <entry>4</entry>
+                  <entry>230</entry>
+                  <entry>4</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry>Ex. 12</entry>
+                  <entry />
+                  <entry>octylamine, 0.30 mmol</entry>
+                  <entry>172</entry>
+                  <entry>7</entry>
+                  <entry>190</entry>
+                  <entry>1</entry>
+                  <entry>230</entry>
+                  <entry>4</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry>Ex. 13</entry>
+                  <entry />
+                  <entry>octylamine, 0.01 mmol</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>190</entry>
+                  <entry>4</entry>
+                  <entry />
+                  <entry />
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Ex. 14</entry>
+                  <entry />
+                  <entry>N,N,N′,N′-</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>190</entry>
+                  <entry>4</entry>
+                  <entry />
+                  <entry />
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>tetramethylhexamethylenediamine,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>0.30 mmol</entry>
+                </row>
+                <row>
+                  <entry>Ex. 15</entry>
+                  <entry />
+                  <entry>N,N,N′,N′-</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>230</entry>
+                  <entry>4</entry>
+                  <entry />
+                  <entry />
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>tetramethylhexamethylenediamine,</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>0.30 mmol</entry>
+                </row>
+                <row>
+                  <entry>Ex. 16</entry>
+                  <entry />
+                  <entry>methyldiallylamine, 0.30 mmol</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>190</entry>
+                  <entry>4</entry>
+                  <entry />
+                  <entry />
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Ex. 17</entry>
+                  <entry />
+                  <entry>methyldiallylamine, 0.30 mmol</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>230</entry>
+                  <entry>4</entry>
+                  <entry />
+                  <entry />
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Ex. 18</entry>
+                  <entry />
+                  <entry>dimethylbenzylamine, 0.30 mmol</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>190</entry>
+                  <entry>4</entry>
+                  <entry />
+                  <entry />
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Ex. 19</entry>
+                  <entry />
+                  <entry>dimethylbenzylamine, 0.30 mmol</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>230</entry>
+                  <entry>4</entry>
+                  <entry />
+                  <entry />
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Ex. 20</entry>
+                  <entry />
+                  <entry>pyrrol, 0.30 mmol</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>190</entry>
+                  <entry>4</entry>
+                  <entry />
+                  <entry />
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Ex. 21</entry>
+                  <entry />
+                  <entry>pyrrol, 0.30 mmol</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>230</entry>
+                  <entry>4</entry>
+                  <entry />
+                  <entry />
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Ex. 22</entry>
+                  <entry />
+                  <entry>methoxyethylamine, 0.30 mmol</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>190</entry>
+                  <entry>4</entry>
+                  <entry />
+                  <entry />
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Ex. 23</entry>
+                  <entry />
+                  <entry>methoxyethylamine, 0.30 mmol</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>230</entry>
+                  <entry>4</entry>
+                  <entry />
+                  <entry />
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Ex. 24</entry>
+                  <entry />
+                  <entry>hexamethyldisilazane, 0.30 mmol</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>190</entry>
+                  <entry>4</entry>
+                  <entry />
+                  <entry />
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Ex. 25</entry>
+                  <entry />
+                  <entry>hexamethyldisilazane, 0.30 mmol</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>230</entry>
+                  <entry>4</entry>
+                  <entry />
+                  <entry />
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Ex. 26</entry>
+                  <entry />
+                  <entry>Platinum(acetylacetonato), 0.03 mmol</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>190</entry>
+                  <entry>4</entry>
+                  <entry />
+                  <entry />
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Ex. 27</entry>
+                  <entry />
+                  <entry>Platinum(acetylacetonato), 0.03 mmol</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>230</entry>
+                  <entry>4</entry>
+                  <entry />
+                  <entry />
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Ex. 28</entry>
+                  <entry />
+                  <entry>Platinum(acetylacetonato), 0.03 mmol</entry>
+                  <entry>172</entry>
+                  <entry>2</entry>
+                  <entry>190</entry>
+                  <entry>6</entry>
+                  <entry />
+                  <entry />
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry>Ex. 29</entry>
+                  <entry />
+                  <entry>Platinum(acetylacetonato), 0.03 mmol</entry>
+                  <entry>172</entry>
+                  <entry>2</entry>
+                  <entry>190</entry>
+                  <entry>6</entry>
+                  <entry>230</entry>
+                  <entry>4</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry>Ex. 30</entry>
+                  <entry />
+                  <entry>Platinum(acetylacetonato), 0.03 mmol</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>190</entry>
+                  <entry>4</entry>
+                  <entry>230</entry>
+                  <entry>4</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry>Ex. 31</entry>
+                  <entry />
+                  <entry>Platinum(acetylacetonato), 0.03 mmol</entry>
+                  <entry>172</entry>
+                  <entry>7</entry>
+                  <entry>190</entry>
+                  <entry>1</entry>
+                  <entry>230</entry>
+                  <entry>4</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry>Ex. 32</entry>
+                  <entry />
+                  <entry>rhenium(carbonyl), 0.03 mmol</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>190</entry>
+                  <entry>4</entry>
+                  <entry />
+                  <entry />
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Ex. 33</entry>
+                  <entry />
+                  <entry>rhenium(carbonyl), 0.03 mmol</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>230</entry>
+                  <entry>4</entry>
+                  <entry />
+                  <entry />
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Ex. 34</entry>
+                  <entry />
+                  <entry>acetic acid palladium, 0.01 mmol</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>190</entry>
+                  <entry>4</entry>
+                  <entry />
+                  <entry />
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Ex. 35</entry>
+                  <entry />
+                  <entry>acetic acid palladium, 0.01 mmol</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>230</entry>
+                  <entry>4</entry>
+                  <entry />
+                  <entry />
+                  <entry>B</entry>
+                </row>
+                <row>
+                  <entry>Ex. 36</entry>
+                  <entry>Comparative</entry>
+                  <entry>non</entry>
+                  <entry>172</entry>
+                  <entry>8</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>C</entry>
+                </row>
+                <row>
+                  <entry>Ex. 37</entry>
+                  <entry>Example</entry>
+                  <entry>non</entry>
+                  <entry>190</entry>
+                  <entry>16</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>C</entry>
+                </row>
+                <row>
+                  <entry>Ex. 38</entry>
+                  <entry />
+                  <entry>non</entry>
+                  <entry>230</entry>
+                  <entry>16</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>C</entry>
+                </row>
+                <row>
+                  <entry>Ex. 39</entry>
+                  <entry />
+                  <entry>non</entry>
+                  <entry>230</entry>
+                  <entry>8</entry>
+                  <entry>172</entry>
+                  <entry>8</entry>
+                  <entry />
+                  <entry />
+                  <entry>C</entry>
+                </row>
+                <row>
+                  <entry>Ex. 40</entry>
+                  <entry />
+                  <entry>non</entry>
+                  <entry>230</entry>
+                  <entry>8</entry>
+                  <entry>172</entry>
+                  <entry>8</entry>
+                  <entry>190</entry>
+                  <entry>8</entry>
+                  <entry>C</entry>
+                </row>
+                <row>
+                  <entry>Ex. 41</entry>
+                  <entry />
+                  <entry>non</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry>172</entry>
+                  <entry>4</entry>
+                  <entry />
+                  <entry />
+                  <entry>C</entry>
+                </row>
+                <row>
+                  <entry>Ex. 42</entry>
+                  <entry />
+                  <entry>non</entry>
+                  <entry>172</entry>
+                  <entry>8</entry>
+                  <entry>365</entry>
+                  <entry>8</entry>
+                  <entry />
+                  <entry />
+                  <entry>C</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="10" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method for producing silicic dense film comprising:
+<claim-text>(1) a composition preparing step, in which a composition for a coating film comprising a polymer having a silazane bond and a solvent is prepared;</claim-text><claim-text>(2) a coating step, in which a coated film is formed by coating said composition for a coating film on a substrate;</claim-text><claim-text>(3) the first irradiating step, in which said coated film is irradiated with light having a maximal peak in the range of 160-179 nm wavelength; and</claim-text><claim-text>(4) the second irradiating step, in which the coated film after the first irradiating step is irradiated with light having 10-70 nm wavelength longer maximal peak wavelength than the light used in the first irradiating step.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein irradiation light, which has a maximal peak in the range of 180-230 nm wavelength, is used at said second irradiating step (4).</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein irradiation light, which has a maximal peak in the range of 165-175 nm wavelength, is used at said first irradiating step.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising (5) the third irradiating step, in which the coated film after the second irradiating step is irradiated with light having 10-60 nm wavelength longer maximal peak wavelength than the light used in the second irradiating step.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method according to <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein irradiation light, which has a maximal peak in the range of 180-230 nm wavelength, is used at the third irradiating step.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said polymer having a silazane bond is a polysilazane.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method according to <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the polysilazane is a perhydropolysilazane.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method according to <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the polysilazane is an organopolysilazane.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method according to any of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the composition for coating film further comprises an additive.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method according to <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein said additive is an amine compound.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein said amine compound is selected from the group consisting of monoamine compounds, diamine compounds, allylamine compounds, benzylamine compounds, pyrrole compounds, pyridine compounds, pyrazine compounds, alkoxyalkylamine compounds, aminoalkylether compounds, and disilazane compounds.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method according to <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein said additive is a metal complex compound.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method according to <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein said metal complex compound contains metal selected from the group consisting of nickel, titanium, platinum, rhodium, cobalt, iron, cobalt, iridium, aluminum, ruthenium, palladium, rhenium and tungsten.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method according to <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein said metal complex compound has an acetylacetonato group, a carbonyl group or a carboxylate group.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method according to <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein said carboxylate group is a residue of carboxylic acid selected from the group consisting of formic acid, acetic acid, propionic acid, butyric acid, octane acid, lauric acid, stearic acid, oleic acid, lactic acid, succinic acid and citric acid.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method according to of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein each irradiating step is carried out in an inert gas atmosphere.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method according to <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein oxygen concentration in said inert gas atmosphere is equal to or less than 1000 ppm.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method according to <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein said inert gas atmosphere is nitrogen gas atmosphere.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. A dense silicic film produced by the method according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The method according to <claim-ref idref="clm-00004-en">claim 4</claim-ref> wherein said polymer having a silazane bond is a polysilazane</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150252222A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252222A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150252222A1_00002.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252222A1-20150910-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150252222A1_00003.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252222A1-20150910-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150252222A1_00004.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252222A1-20150910-C00003.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150252222A1.PDF" type="pdf" size="520875" pages="9" />
+</lexisnexis-patent-document>

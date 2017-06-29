@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257601A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030221" date-changed="20151002" time-changed="033540">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121316066">
+        <country>US</country>
+        <doc-number>20150257601</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14208234</doc-number>
+        <date>20140313</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>A47J  43/046       20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>43</main-group>
+        <subgroup>046</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A47J  43/07        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>43</main-group>
+        <subgroup>07</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>A47J  43/0465      20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>43</main-group>
+        <subgroup>0465</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A47J  43/046       20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>43</main-group>
+        <subgroup>046</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A47J  43/0766      20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>43</main-group>
+        <subgroup>0766</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">ANTI-ROTATIONAL LATCH FOR A BLENDING APPLIANCE</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>WHIRLPOOL CORPORATION</orgname>
+            <role>02</role>
+            <address>
+              <city>Benton Harbor</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>DREES</last-name>
+            <first-name>STEVE C.</first-name>
+            <address>
+              <city>Stevensville</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>PAGET</last-name>
+            <first-name>PAUL S.</first-name>
+            <address>
+              <city>Kalamazoo</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20151022">
+      <main-family family-id="173669844">
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2015201252</doc-number>
+            <kind>A1</kind>
+            <date>20151001</date>
+          </document-id>
+          <application-date>
+            <date>20150311</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257601</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140313</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2921090</doc-number>
+            <kind>A1</kind>
+            <date>20150923</date>
+          </document-id>
+          <application-date>
+            <date>20150313</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173669842">
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2015201252</doc-number>
+            <kind>A1</kind>
+            <date>20151001</date>
+          </document-id>
+          <application-date>
+            <date>20150311</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257601</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140313</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2921090</doc-number>
+            <kind>A1</kind>
+            <date>20150923</date>
+          </document-id>
+          <application-date>
+            <date>20150313</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A jar retainer mechanism for a blending appliance includes an articulating arm pivotally coupled to a housing of the blending appliance. The articulating arm is operable between engaged and disengaged positions and includes a latch member disposed on a first end of the articulating arm. The latch member is configured to engage an engagement tab disposed on a blender jar when the articulating arm is in the engaged position and the blender jar is received laterally in a jar receiving portion. A push member is disposed on a second end of the articulating arm and is configured to displace the blender jar when the articulating arm is moved towards the disengaged position.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20140509</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257601A1</docdb-publication-number>
+      <docdb-application-id>444510884</docdb-application-id>
+      <new-owner>WHIRLPOOL CORPORATION, MICHIGAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:DREES, STEVE C.;PAGET, PAUL S.;SIGNING DATES FROM 20140314 TO 20140430;REEL/FRAME:032861/0128</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">BACKGROUND</heading>
+      <p id="p-00001-en" num="0001">The present concept generally relates to a blending appliance, and more particularly to a blending appliance having a magnetic coupler system and an anti-rotational latch mechanism retaining a blender jar on a housing of the blending appliance.</p>
+      <heading id="h-00002-en" level="1">SUMMARY</heading>
+      <p id="p-00002-en" num="0002">One aspect of the present concept includes a jar retainer mechanism for a blending appliance, wherein the blending appliance includes a housing having an upper housing member and a base portion with a jar receiving portion defined therebetween. A blender jar is configured to be laterally received in the jar receiving portion and includes an engagement tab disposed on a base portion of the blender jar. An articulating arm is coupled to the base portion of the housing and is operable between engaged and disengaged positions. The articulating arm includes a latch member configured to engage the engagement tab of the blender jar when the articulating arm is in the engaged position and the blender jar is received in the jar receiving portion.</p>
+      <p id="p-00003-en" num="0003">Another aspect of the present concept includes a jar retainer mechanism for a blending appliance having an articulating arm pivotally coupled to a housing of the blending appliance. The articulating arm is operable between engaged and disengaged positions and includes a latch member disposed on a first end of the articulating arm. The latch member is configured to engage an engagement tab disposed on the blender jar when the articulating arm is in the engaged position and the blender jar is received laterally in the jar receiving portion. A push member is disposed on a second end of the articulating arm and is configured to displace the blender jar when the articulating arm is moved towards the disengaged position.</p>
+      <p id="p-00004-en" num="0004">Yet another aspect of the present concept includes a jar retainer mechanism for a blending appliance, wherein the blending appliance includes a housing having an upper housing member and a base portion with a jar receiving portion defined therebetween. A blender jar having a base portion with an outwardly extending engagement tab is configured to be laterally received in the jar receiving portion of the housing. An articulating arm is coupled to the base portion of the housing and is operable between engaged and disengaged positions. The articulating arm includes a latch member configured to engage the engagement tab of the blender jar when the articulating arm is in the engaged position and the blender jar is received laterally in the jar receiving portion. A magnetic coupling system includes upper and lower magnetic couplers, wherein the upper magnetic coupler is disposed in the base portion of the blender jar and the lower magnetic coupler is disposed in the base portion of the housing.</p>
+      <p id="p-00005-en" num="0005">These and other aspects, objects, and features of the present concept will be understood and appreciated by those skilled in the art upon studying the following specification, claims, and drawings.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00006-en" num="0006">In the drawings:</p>
+      <p id="p-00007-en" num="0007">
+        <figref>FIG. 1</figref> is a top perspective view of one embodiment of a blender jar of the present concept;</p>
+      <p id="p-00008-en" num="0008">
+        <figref>FIG. 2</figref> is a cross-sectional view of a blending appliance having the blender jar of <figref>FIG. 1</figref> received therein;</p>
+      <p id="p-00009-en" num="0009">
+        <figref>FIG. 3A</figref> is a fragmentary top perspective view of a base-portion of a blending appliance having an anti-rotational latch mechanism exploded away;</p>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 3B</figref> is a top perspective view of the base portion and anti-rotational latch mechanism of <figref>FIG. 3A</figref>;</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 3C</figref> is a top plan view of the base portion and anti-rotational latch mechanism of <figref>FIG. 3B</figref>;</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 4A</figref> is a fragmentary top perspective view of the blender jar of <figref>FIG. 1</figref> received within the blending appliance with the anti-rotational latch in a latch position;</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 4B</figref> is a fragmentary top perspective view of the blending appliance of <figref>FIG. 4A</figref> having a portion of the housing removed;</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 5</figref> is a fragmentary top perspective view of a blender jar with an anti-rotational latch mechanism in a latched position; and</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 6</figref> is a top perspective view of the blender jar and anti-rotational latch mechanism of <figref>FIG. 5</figref> with the anti-rotational latch mechanism in an unlatched position.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00016-en" num="0016">For purposes of description herein, the terms “upper,” “lower,” “right,” “left,” “rear,” “front,” “vertical,” “horizontal,” and derivatives thereof shall relate to the concept as oriented in <figref>FIG. 1</figref>. However, it is to be understood that the concept may assume various alternative orientations, except where expressly specified to the contrary. It is also to be understood that the specific devices and processes illustrated in the attached drawings, and described in the following specification are simply exemplary embodiments of the inventive concepts defined in the appended claims. Hence, specific dimensions and other physical characteristics relating to the embodiments disclosed herein are not to be considered as limiting, unless the claims expressly state otherwise.</p>
+      <p id="p-00017-en" num="0017">Referring now to <figref>FIG. 1</figref>, the reference numeral <b>10</b> generally designates a blender jar having a side wall <b>12</b> which generally defines a blending cavity <b>14</b> accessible through an open upper end <b>16</b>. The open upper end <b>16</b> includes a spout portion <b>18</b> and further has a generally teardrop shaped configuration T. Moving from the open upper end <b>16</b> of the blender jar <b>10</b> towards a lower portion <b>20</b> of the blender jar <b>10</b>, the configuration of the side wall <b>12</b> gradually changes and tapers from the generally teardrop shaped configuration T to a generally rectangular configuration R at the lower portion <b>20</b>. Thus, the blending cavity <b>14</b> has a changing dual configuration from the open upper end <b>16</b> to the lower portion <b>20</b>. The side wall <b>12</b> further includes a plurality of ribs <b>22</b> which inwardly extend into the blending cavity <b>14</b> and taper from an upper portion <b>22</b>A to a lower portion <b>22</b>B. The inwardly extending ribs <b>22</b>, in conjunction with the varied configuration of the blending cavity <b>14</b>, are adapted to reduce a bridging effect of blender contents during a blending procedure. The inwardly extending ribs <b>22</b> along with the configuration of the blending cavity <b>14</b> help to fold blender contents into a blending path for subsequent blending by a blade assembly. A handle member <b>24</b> extends outwardly from the side wall <b>12</b> for engagement by a user. As further shown in <figref>FIG. 1</figref>, the blender jar <b>10</b> includes a jar base <b>26</b> which, in the embodiment of <figref>FIG. 1</figref>, is a generally circular dome shaped base having an engagement tab <b>30</b> extending outwardly therefrom. The engagement tab <b>30</b> is generally defined by a ramped surface <b>32</b> which culminates in a laterally extending abutment surface <b>34</b>. In use, the engagement tab <b>30</b> is adapted to couple to a latch mechanism of a blending appliance as further described below.</p>
+      <p id="p-00018-en" num="0018">Referring now to <figref>FIG. 2</figref>, the blender jar <b>10</b> is shown being received within a blending appliance <b>100</b>. The blending appliance <b>100</b> includes a housing <b>102</b> which comprises an upper housing member <b>104</b>, a motor compartment <b>106</b>, and a base portion <b>108</b>. The upper housing member <b>104</b> and base portion <b>108</b> generally extend outwardly from the housing <b>102</b> above and below the motor compartment <b>106</b>. The base portion <b>108</b> includes a support pad <b>110</b> such that a jar receiving portion <b>112</b> is defined between the upper housing member <b>104</b> and the base portion <b>108</b> for receiving the blender jar <b>10</b> in a lateral or horizontal manner along a path as indicated by arrow A. Thus, as shown in <figref>FIG. 2</figref>, the blender jar <b>10</b> is laterally received within the jar receiving portion <b>112</b> which is adjacent to the motor compartment <b>106</b>. In this way, the blender jar <b>10</b> of the present disclosure is a low profile side drive blender appliance <b>100</b> which does not include a conventional stacked configuration of a blender jar over a motor housing and drive motor. In the embodiment shown in <figref>FIG. 2</figref>, a lid <b>114</b> is disposed over the open upper end <b>16</b> of the blender jar <b>10</b> and includes an aperture <b>116</b> which is aligned with a feed chute assembly <b>118</b> that is generally disposed through the upper housing member <b>104</b>. Thus, when the blender jar <b>10</b> is horizontally received within the blender jar receiving portion <b>112</b>, the feed chute assembly <b>118</b> is aligned with the aperture <b>116</b> of the lid <b>114</b> for introducing ingredients into the blender cavity <b>14</b>. The upper housing member <b>104</b> further includes a user interface <b>120</b> in the form of a rotary dial which is adapted to control various blending operations of the blending appliance <b>100</b>.</p>
+      <p id="p-00019-en" num="0019">As further shown in <figref>FIG. 2</figref>, the blending appliance <b>100</b> includes a motor <b>122</b> having a drive shaft <b>124</b> which is coupled to a belt drive system <b>130</b> at a lower end and a ducted fan <b>132</b> at an upper end. The ducted fan <b>132</b> may also be disposed below the motor <b>122</b> and is generally adapted to draw air into and exhaust air out of the housing <b>102</b> through vents <b>134</b>, <b>136</b>, <b>138</b> disposed about the housing <b>102</b>. The motor <b>122</b> is adapted to drive a blade assembly <b>140</b> disposed within the blending cavity <b>14</b> of the blender jar <b>10</b> when the blender jar <b>10</b> is fully received within the jar receiving portion <b>112</b> of the blending appliance <b>100</b>. The motor <b>122</b> drives the blade assembly <b>140</b> through the belt drive system <b>130</b> and a magnetic coupling system <b>150</b> as further described below. As noted above, a magnetic coupler system <b>150</b> is used to drive the blade assembly <b>140</b> within the blender cavity <b>114</b> as powered by the motor <b>122</b>. <figref>FIG. 2</figref> illustrates a belt drive system <b>130</b> which is used to translate torque from the motor <b>122</b> to the magnetic coupler system <b>150</b>. It is contemplated that any number of torque translating features may be used in place of the belt drive system <b>130</b>, so long as rotational power from the motor <b>122</b> is translated to the blade assembly <b>140</b>. The magnetic coupler system <b>150</b> includes an upper magnetic coupler M<b>1</b> and a lower magnetic coupler M<b>2</b>. The lower magnetic coupler M<b>2</b> is engaged with a belt <b>131</b> of the belt drive system <b>130</b> for rotation therewith, as driven by the motor <b>122</b>.</p>
+      <p id="p-00020-en" num="0020">The lower magnetic coupler M<b>2</b> is coupled to a shaft <b>152</b> and is disposed within the base portion <b>108</b> of the blending appliance <b>100</b>. The lower magnetic coupler M<b>2</b> is disposed adjacent to the support pad <b>110</b> of the jar receiving portion <b>112</b>. The support pad <b>110</b> generally encapsulates the lower magnetic coupler M<b>2</b> within the base portion <b>108</b>. The upper magnetic coupler M<b>1</b> is disposed within the jar base <b>26</b> of the blender jar <b>10</b>. The upper magnetic coupler M<b>1</b>, as coupled to the blender jar <b>10</b>, is removable from the blending appliance <b>100</b> when the blender jar <b>10</b> is removed from the jar receiving portion <b>112</b>. The upper magnetic coupler M<b>1</b> is coupled to a shaft <b>154</b> which is further coupled to the blade assembly <b>140</b> which is fully disposed within a receptacle portion or blender cavity <b>14</b> of the blender jar <b>10</b>. The magnetic coupling system <b>150</b> magnetically couples the blender jar <b>10</b> to the base portion <b>108</b> of the blending appliance <b>100</b> through magnetic attraction generated between upper and lower magnetic couplers M<b>1</b>, M<b>2</b>. As shown in the embodiment of <figref>FIG. 2</figref>, the upper and lower magnetic couplers M<b>1</b>, M<b>2</b>, have a generally circular or disc-shaped configuration at a prescribed diameter, such that the blender jar <b>10</b> will properly seat on the support pad <b>110</b> due to the magnetic forces generated between the upper and lower magnetic couplers M<b>1</b>, M<b>2</b>. In assembly and in use, the motor <b>122</b> drives the drive belt drive system <b>130</b>, as described above, thereby driving the shaft <b>152</b> in a direction as indicated by arrow R<b>1</b>. Due to the magnetic attraction and magnetic coupling of the lower magnetic coupler M<b>2</b> to the upper magnetic coupler M<b>1</b>, the upper magnetic coupler M<b>1</b> also rotates along the rotational direction as indicated by arrow R<b>1</b>. In this way, the upper and lower magnetic couplers M<b>1</b>, M<b>2</b> drive the blade assembly <b>140</b> disposed within the blender cavity <b>14</b> of the blender jar <b>10</b> through a magnetic torque coupling, rather than a conventional mechanical coupling.</p>
+      <p id="p-00021-en" num="0021">The upper and lower magnetic couplers M<b>1</b>, M<b>2</b> may be comprised of a magnetic material or may be in the form of a polymeric housing which includes a plurality of magnetic elements or solid magnetic rings <b>160</b>, <b>162</b> disposed along interfacing surfaces of the upper and lower magnetic couplers M<b>1</b>, M<b>2</b> respectively.</p>
+      <p id="p-00022-en" num="0022">As described above, the magnetic coupling system <b>150</b> of the blending appliance <b>100</b> serves to translate torque to the blade assembly <b>140</b> without a conventional mechanical coupling between the blade assembly <b>140</b> and a gear mechanism operably coupled to the motor <b>122</b>. Without this mechanical coupling, the blender jar <b>10</b> can be horizontally received within the jar receiving portion <b>112</b> along a path as indicated by arrow A, as the generally planar lower portion of the base <b>26</b> of the jar <b>10</b> is adapted to slide unimpeded along the support pad <b>110</b> disposed on an upper portion of the base portion <b>108</b>. The magnetic coupling between the upper and lower coupling mechanisms M<b>1</b>, M<b>2</b> of the magnetic coupling system <b>150</b> may cause the blender jar <b>10</b> to move on the planar support pad <b>110</b>, such that the upper and lower magnetic couplers M<b>1</b>, M<b>2</b> can become misaligned, thereby disrupting the translation of torque to the blade assembly <b>140</b>. To counter this effect and resist rotational movement of the blender jar <b>10</b>, the blending appliance <b>100</b> of the present disclosure includes jar retaining mechanisms as further described below.</p>
+      <p id="p-00023-en" num="0023">Referring now to <figref>FIGS. 3A-3C</figref>, the base portion <b>108</b> of the blending appliance <b>100</b> is shown having a rear portion <b>108</b><i>b </i>and a front portion <b>108</b><i>a. </i>The rear portion <b>108</b><i>b </i>includes an aperture <b>170</b> through which the drive shaft <b>124</b> of the motor <b>122</b> downwardly extends to the belt drive system <b>130</b> as shown in <figref>FIG. 2</figref>. The base portion <b>108</b> further includes mounting features <b>172</b> disposed about the aperture <b>170</b> for coupling the base portion <b>108</b> to the motor housing <b>106</b>, also shown in <figref>FIG. 2</figref>. The support pad <b>110</b> is disposed on an upper portion of the front portion <b>108</b><i>a </i>of the base portion <b>108</b>. The support pad <b>110</b> includes a lip <b>174</b> which surrounds a rear portion of the support pad <b>110</b>. The lip <b>174</b> further includes raised abutment features <b>176</b> which together with the lip <b>174</b> serve to properly locate the blender jar <b>10</b> as received within the jar receiving portion <b>112</b>. As shown in <figref>FIG. 3A</figref>, a jar retainer mechanism <b>180</b> includes an articulating arm <b>182</b> which is coupled to the base portion <b>108</b> at an aperture <b>184</b> via a fastener <b>186</b>. In this way, the articulating arm <b>182</b> is adapted to pivot about a latch axis LA between a disengaged position D and an engaged position E along a path as indicated by arrow B. A biasing mechanism <b>188</b>, shown in the form of a coil spring in <figref>FIG. 3A</figref>, includes first and second arms <b>190</b>, <b>192</b> which are adapted to engage an abutment portion <b>194</b> on the articulating arm <b>182</b> and a mounting feature <b>172</b> disposed adjacent to aperture <b>184</b>. In this way, the biasing mechanism <b>188</b> biases the articulating arm <b>182</b> towards the engaged position E. The articulating arm <b>182</b> includes a latch member <b>200</b> at a first end having a ramped outer surface <b>202</b> and a generally planar abutment surface <b>204</b>. The latch member <b>200</b> is supported on the articulating arm <b>182</b> by a latch support portion <b>206</b>. A locating feature <b>208</b> is further disposed on the latch support portion <b>206</b> and generally engages a cradle feature <b>210</b> disposed on the base member <b>108</b> adjacent the lip <b>174</b>. On an opposite second end of the articulating arm <b>182</b> relative to the latch member <b>200</b>, a push member <b>212</b> is disposed which is adapted to push or displace the blender jar <b>10</b> outwardly as the latch member <b>200</b> and articulating arm <b>182</b> are moved to the disengaged position D. Thus, the latch member <b>200</b> and the push member <b>212</b> are disposed on opposite sides of the latch axis LA, and therefore move in an inverse manner relative to one another away from and towards the blender jar <b>10</b> as received on the support pad <b>110</b>.</p>
+      <p id="p-00024-en" num="0024">Referring now to <figref>FIGS. 3B and 3C</figref>, the jar retainer mechanism <b>180</b> is shown having the articulating arm <b>182</b> pivotally coupled to the base portion <b>108</b> via fastener <b>186</b>, such that the articulating arm <b>182</b> pivots at the latch axis or pivot point LA. As noted above, with reference to <figref>FIG. 2</figref>, the blender jar <b>10</b> includes a jar base <b>26</b>. As the blender jar <b>10</b> is laterally received on the support pad <b>110</b>, the jar base <b>26</b> of the blender jar <b>10</b> will engage the ramped portion <b>202</b> of latch member <b>200</b>, thereby urging the articulating arm <b>182</b> towards the disengaged position D. The movement of the articulating arm <b>182</b> to the disengaged position D is further advanced by the ramped portion <b>32</b> of the engagement tab <b>30</b> disposed on the base portion <b>26</b> of the blender jar <b>10</b> as shown in <figref>FIG. 1</figref>. As the jar assembly <b>10</b> moves further along the path as indicated by arrow A into full engagement with the housing <b>102</b> in the jar receiving portion <b>112</b>, the engagement tab <b>30</b> will slide past an innermost portion <b>205</b> of the latch member <b>200</b>, such that the articulating arm <b>182</b>, as biased by the biasing mechanism <b>188</b>, will snap-fit into the engaged position E, wherein abutment surface <b>34</b> of the engagement tab <b>30</b> is positioned to engage abutment portion <b>204</b> of the latch member <b>200</b> in an abutting relationship. As noted above, the magnetic coupling system <b>150</b>, shown in <figref>FIG. 2</figref>, is adapted to rotate the blade assembly <b>140</b> in a direction as indicated by arrow R<b>1</b>. Thus, as the contents of the blender jar <b>10</b> impart a resistance force on the blade assembly <b>140</b> along the rotational path indicated by arrow R<b>1</b>, the blender jar <b>10</b> will have a tendency to rotate in the direction as indicated by arrow R<b>1</b> in <figref>FIG. 3C</figref>. When this type of rotation of the blender jar <b>10</b> occurs, abutment surface <b>34</b> of engagement tab <b>30</b> will abut generally planar abutment portion <b>204</b> of the latch member <b>200</b>, such that the latch member <b>200</b> will retain the blender jar <b>10</b> in place for proper torque translation from the magnetic coupling system <b>150</b> to the blade assembly <b>140</b>. As further shown in <figref>FIG. 3C</figref>, the push member <b>212</b> moves along a path as indicated by arrow C as the articulating arm <b>182</b> moves to the disengaged position D. In this way, the push member <b>212</b> pushes the blender jar <b>10</b> outwardly from its fully received position on the support pad <b>110</b>. In this way, and with reference to <figref>FIG. 2</figref>, the blender jar <b>10</b> is vertically retained in the jar receiving portion <b>112</b> by the support pad <b>110</b> of the base portion <b>108</b> of the housing <b>102</b> at a lower end, and further retained by the upper housing member <b>104</b> as disposed over the open end <b>16</b> and lid <b>114</b> of the blender jar <b>10</b>. This vertical retainment of the blender jar <b>10</b> in the jar receiving portion <b>112</b> is further aided by the jar retainer mechanism <b>180</b>, which resists against rotational and lateral movement of the blender jar <b>10</b> during a blending procedure.</p>
+      <p id="p-00025-en" num="0025">Referring now to <figref>FIGS. 4A and 4B</figref>, the blender jar <b>10</b> is shown fully received within the blender jar receiving portion <b>112</b> of the housing <b>102</b> of the blending appliance <b>100</b>. As properly located for use in a blending procedure on the support pad <b>110</b>, the blender jar <b>10</b> has the engagement tab <b>30</b>, disposed outwardly from the jar base <b>26</b> of the blender jar <b>10</b> in engagement with the latch member <b>200</b>. Specifically, abutment surface <b>34</b> of the engagement tab <b>30</b> is abuttingly engaged with abutment portion <b>204</b> of the latch member <b>200</b> when the articulating arm <b>182</b> is in the engaged position E. In this way, the jar retainer mechanism <b>180</b> retains the jar <b>10</b> against rotational forces imparted on the blender jar <b>10</b> in a direction as indicated by arrow R<b>1</b> during a blending procedure. As specifically shown in <figref>FIG. 4B</figref>, push member <b>212</b>, disposed on an opposite end of the articulating arm <b>182</b> relative to the latch member <b>200</b>, is in abutting engagement with the jar base <b>26</b> of the blender jar <b>10</b> when the articulating arm <b>182</b> is in the engaged position E and the blender jar <b>10</b> is fully received within the housing <b>102</b>. As the articulating arm <b>182</b> moves to the disengaged position D along the path as indicated by arrow B, the push member <b>212</b> will inversely move to impart an outward lateral force in the direction as indicated by arrow C on the jar base <b>26</b> of the blender jar <b>10</b> to aid in the ejection of the blender jar <b>10</b> from the jar receiving portion <b>112</b>. Further, as biased by the biasing member <b>188</b> to the engaged position E, the articulating arm <b>182</b> imparts a constant force on the base portion <b>26</b> and engagement tab <b>30</b> of the blender jar <b>10</b>. Again, the ramped surface <b>32</b> of the engagement tab <b>30</b> allows the blender jar <b>10</b> to slide around the rounded innermost portion <b>205</b> of the latch <b>200</b>, for a snap-fit engagement of the latch member <b>200</b> with the engagement tab <b>30</b> without the need for the user to separately move the articulating arm <b>182</b> to the disengaged position D. Further, this snap-fit engagement provides the user with tactile feedback that the blender jar <b>10</b> is properly received within the jar receiving portion <b>112</b> and is properly seated on the support pad <b>110</b> for consistent and efficient translation of torque through the magnetic coupling system <b>150</b>.</p>
+      <p id="p-00026-en" num="0026">Referring now to <figref>FIG. 5</figref>, the jar retainer mechanism <b>180</b> is shown with the articulating arm <b>182</b> in the engaged position E, such that the latch member <b>200</b> is engaged with the engagement tab <b>30</b> in a manner as described above. When a user wishes to release the blender jar <b>10</b> from the retainer mechanism <b>180</b>, the user will generally engage the ramped surface <b>202</b> of the latch member <b>200</b> to pivot the articulating arm <b>182</b> towards the disengaged position D along a path as indicated by arrow B. In this way, the latch member <b>200</b> moves laterally from the engaged position E to release the blender jar <b>10</b>. With reference to <figref>FIG. 6</figref>, the jar retainer mechanism <b>180</b> is shown with the articulating arm <b>182</b> pivoted to the disengaged position D along the path as indicated by arrow B. As shown in <figref>FIG. 6</figref>, the latch member <b>200</b> of the articulating arm <b>182</b> is laterally spaced apart from the engagement tab <b>30</b> disposed on the jar base <b>26</b> of the blender jar <b>10</b>. Further, as noted above, when moved to the disengaged position D, the push member <b>212</b>, shown in <figref>FIG. 4B</figref>, will urge the blender jar <b>10</b> at the jar base <b>26</b> outwardly in a direction as indicated by arrow C. In this way, the jar retainer mechanism <b>180</b> serves to retain the blender jar <b>10</b> in an in-use position when the articulating arm <b>182</b> is in the engaged position E, and further aids in the release of the blender jar <b>10</b> from the jar receiving portion <b>112</b> via the push member <b>212</b> when the articulating arm <b>182</b> is moved to the disengaged position D.</p>
+      <p id="p-00027-en" num="0027">It will be understood that any described processes or steps within described processes may be combined with other disclosed processes or steps to form structures within the scope of the present concept. The exemplary structures and processes disclosed herein are for illustrative purposes and are not to be construed as limiting.</p>
+      <p id="p-00028-en" num="0028">It is also to be understood that variations and modifications can be made on the aforementioned structures and methods without departing from the concepts of the present concept, and further it is to be understood that such concepts are intended to be covered by the following claims unless these claims by their language expressly state otherwise.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A jar retainer mechanism for a blending appliance, comprising:
+<claim-text>a housing having an upper housing member and a base portion with a jar receiving portion defined therebetween;</claim-text><claim-text>a blender jar configured to be laterally received in the jar receiving portion, the blender jar having an engagement tab disposed on a jar base portion; and</claim-text><claim-text>an articulating arm coupled to the base portion of the housing and operable between engaged and disengaged positions, wherein the articulating arm includes a latch member configured to engage the engagement tab of the blender jar when the articulating arm is in the engaged position.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The jar retainer mechanism of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the engagement tab includes a ramped surface and an abutment surface.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The jar retainer mechanism of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the latch member includes an abutment portion configured to be in abutting engagement with the abutment surface of the engagement tab when the blender jar is received in the jar receiving portion.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The jar retainer mechanism of <claim-ref idref="clm-00003-en">claim 3</claim-ref>, further comprising:
+<claim-text>a biasing mechanism coupled to the articulating arm and configured to bias the articulating arm towards the engaged position.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The jar retainer mechanism of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the biasing mechanism comprises a coil spring further coupled to the base portion of the housing.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The jar retainer mechanism of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the jar includes an open upper end having a first configuration and a lower portion having a second configuration, and further wherein the second configuration is varied relative to the first configuration.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The jar retainer mechanism of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the first configuration comprises a teardrop shape, and the second configuration comprises a rectangular shape.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en" independent="true">
+      <claim-text>
+        <b>8</b>. A jar retainer mechanism for a blending appliance, comprising:
+<claim-text>an articulating arm pivotally coupled to a housing of said blending appliance, the articulating arm operable between engaged and disengaged positions relative to a blender jar as received within the housing;</claim-text><claim-text>a latch member disposed on a first end of the articulating arm, the latch member configured to engage an engagement tab disposed on the blender jar when the articulating arm is in the engaged position; and</claim-text><claim-text>a push member disposed on a second end of the articulating arm, the push member configured to displace the blender jar when the articulating arm is moved towards the disengaged position.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The jar retainer mechanism of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the engagement tab extends outwardly from a jar base portion of the blender jar.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The jar retainer mechanism of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the engagement tab includes a ramped surface and an abutment surface, wherein the ramped surface is configured to engage the latch member as the blender jar is laterally received within the housing, and further wherein the engagement of the ramped surface of the engagement tab and the latch member urges the articulating arm towards the disengaged position.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The jar retainer mechanism of <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the latch member includes an abutment portion configured to be in abutting engagement with the abutment surface of the engagement tab when the blender jar is received in the housing of the blending appliance.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The jar retainer mechanism of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, further comprising:
+<claim-text>a biasing mechanism coupled to the articulating arm and configured to bias the articulating arm towards the engaged position.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The jar retainer mechanism of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the biasing mechanism provides for a snap-fit engagement between the articulating arm and the engagement tab.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The jar retainer mechanism of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the push member is configured to laterally displace the blender jar away from the housing as the articulating arm is moved towards the disengaged position.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The jar retainer mechanism of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein the latch member and the push member are disposed on opposite sides of the articulating arm with a pivot axis of the articulating arm disposed therebetween.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en" independent="true">
+      <claim-text>
+        <b>16</b>. A jar retainer mechanism for a blending appliance, comprising:
+<claim-text>a housing having an upper housing member and a support pad with a jar receiving portion defined therebetween;</claim-text><claim-text>a blender jar having a jar base portion with an outwardly extending engagement tab, the blender jar configured to be laterally received in the jar receiving portion;</claim-text><claim-text>an articulating arm coupled to the base portion of the housing and operable between engaged and disengaged positions, wherein the articulating arm includes a latch member configured to engage the engagement tab of the blender jar when the articulating arm is in the engaged position; and</claim-text><claim-text>a magnetic coupling system having upper and lower magnetic couplers, wherein the upper magnetic coupler is disposed in the base portion of the blender jar and the lower magnetic coupler is disposed in the base portion of the housing.</claim-text></claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The jar retainer mechanism of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the blending jar is vertically retained by upper housing member at an open upper end of the blender jar and further retained by the support pad at the jar base portion of the blender jar when the jar is received in the jar receiving portion of the housing.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The jar retainer mechanism of <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein the jar is rotationally retained by the engagement of the engagement tab of the blender jar and the latch member of the articulating arm when the articulating arm is in the engaged position and the jar is received in the jar receiving portion.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The jar retainer mechanism of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, further comprising:
+<claim-text>a push member disposed on an opposite end of the articulating arm relative to the latch member, the push member configured to displace the blender jar when the articulating arm is moved towards the disengaged position.</claim-text></claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The jar retainer mechanism of <claim-ref idref="clm-00019-en">claim 19</claim-ref>, wherein the articulating arm is pivotally coupled to the base portion of the housing, and further wherein the latch member and the push member are disposed on opposite sides of a pivot axis of the articulating arm.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257601A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257601A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257601A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257601A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257601A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257601A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257601A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257601A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257601A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257601A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257601A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257601A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257601A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257601A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257601A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257601A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150257601A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257601A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150257601A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257601A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150257601A1_00011.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257601A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257601A1.PDF" type="pdf" size="862193" pages="15" />
+</lexisnexis-patent-document>

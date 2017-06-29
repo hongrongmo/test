@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257463A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030154" date-changed="20160127" time-changed="023631">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121315288">
+        <country>US</country>
+        <doc-number>20150257463</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14660691</doc-number>
+        <date>20150317</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151020">
+      <classification-ipcr sequence="1">
+        <text>A41D  13/12        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>41</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A41D  13/04        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>41</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A41D  27/20        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>41</class>
+        <subclass>D</subclass>
+        <main-group>27</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151020">
+      <classification-cpc sequence="1">
+        <text>A41D  13/1236      20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>41</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>1236</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A41D  13/04        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>41</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A41D  13/1245      20130101 LI20151016BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>41</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>1245</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151016</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A41D  27/20        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>41</class>
+        <subclass>D</subclass>
+        <main-group>27</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">18</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">MEDICAL APRON APPARATUS</invention-title>
+    <references-cited date-changed="20160127">
+      <patent-citations name="patcit" date-changed="20160127" />
+      <citation>
+        <patcit num="1" dnum="US6681404B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6681404</doc-number>
+            <kind>B1</kind>
+            <name>ADLARD TERRY K [US], et al</name>
+            <date>20040127</date>
+          </document-id>
+          <application-date>
+            <date>20030325</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US4666432A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>4666432</doc-number>
+            <kind>A</kind>
+            <name>MCNEISH KENNETH [US], et al</name>
+            <date>19870519</date>
+          </document-id>
+          <application-date>
+            <date>19850913</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US6477710B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6477710</doc-number>
+            <kind>B1</kind>
+            <name>OJOYEYI FEYISAYO [US]</name>
+            <date>20021112</date>
+          </document-id>
+          <application-date>
+            <date>20000530</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US8156878B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>8156878</doc-number>
+            <kind>B2</kind>
+            <name>LAZAR ANN PATRICIA [US], et al</name>
+            <date>20120417</date>
+          </document-id>
+          <application-date>
+            <date>20090918</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="US7364491B2" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>7364491</doc-number>
+            <kind>B2</kind>
+            <name>UPDYKE LAUREN GRACE [US]</name>
+            <date>20080429</date>
+          </document-id>
+          <application-date>
+            <date>20060719</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20150917">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61953961</doc-number>
+          <date>20140317</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Trimble</last-name>
+            <first-name>Carole</first-name>
+            <address>
+              <city>Mechanicsburg</city>
+              <state>OH</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+        <applicant sequence="2" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Peterson</last-name>
+            <first-name>Dawn</first-name>
+            <address>
+              <city>Ashville</city>
+              <state>OH</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Trimble</last-name>
+            <first-name>Carole</first-name>
+            <address>
+              <city>Mechanicsburg</city>
+              <state>OH</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Peterson</last-name>
+            <first-name>Dawn</first-name>
+            <address>
+              <city>Ashville</city>
+              <state>OH</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173668551">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257463</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150317</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173668549">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257463</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150317</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A medical apron apparatus for use by a medical patient is provided, the medical apron apparatus comprising: an apron; and at least one pocket on a surface of the apron, wherein the at least one pocket is sized and shaped to carry one or more patient medical devices. In example embodiments, the medical apron apparatus is used to manage and store patient medical devices, prevent damage to a patient's clothing, prevent an operation or surgery location on a patient, or the medical device itself.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application claims priority from U.S. Provisional Patent Application No. 61/953,961, filed on Mar. 17, 2014, which is incorporated by reference herein in its entirety.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">Many medical procedures require the use of medical devices such as drainage tubes and collection vessels for the treatment and healing process of patients undergoing and/or recuperating from such medical procedures. Loose drainage tubes present the risk of becoming caught and tangled. Caught and tangled tubes may pull at the attachment site to a patient's body causing physical pain to a patient. If pulled with enough force, drainage tubes that become caught and tangled on other objects may cause the tubes to become detached and could lead to infection. Aiding patients in juggling tubes and containment vessels in the hospital and other medical institutions results in lost productivity for nursing and therapy staff.</p>
+      <p id="p-00003-en" num="0003">Traditional methods of securing drainage tubes to a patient's clothing with pins may present a puncture risk to the drainage tubes, and again may lead to risk of infection and leakage. Pinning medical devices to a patient's clothing may make the clothing uncomfortable, tear the clothing, and provide an untidy appearance. Drainage tubing and collection vessels pinned to the outside of a patient's clothing may be unsightly and cause a patient to be self-conscious in public. What is needed is an apparatus for securing, managing, and containing patient medical devices that meets requirements for institutional use and care, as well as home care for patients.</p>
+      <heading id="h-00003-en" level="1">SUMMARY</heading>
+      <p id="p-00004-en" num="0004">In one embodiment, a medical apron apparatus for use by a medical patient is provided, the apparatus comprising: an apron; a pocket on a surface of the apron; a proximal surface proximal to the medical patient, and a distal surface; and an aperture through which a medical device may pass and be stored in the pocket on the surface of the apron.</p>
+      <p id="p-00005-en" num="0005">In another embodiment, a medical apron apparatus for use by a medical patient is provided, the medical apron apparatus comprising: an apron; an aperture on a surface of the apron, the one or more apertures operable to allow one or more medical devices or portions of the one or more medical devices to pass through the apron; and a pocket on a surface of the apron, the pocket comprising an inner volume, the inner volume formed as an area between the surface of the apron and portions of pocket material not secured to the surface of the apron, the pocket further comprising a pocket opening defined as peripheral portions of the pocket material not secured to the surface of the apron and through which the inner volume may be accessed.</p>
+      <p id="p-00006-en" num="0006">In another embodiment, a medical apron apparatus for use by a medical patient is provided, the medical apron apparatus for use by a medical patient, comprising: (1) an apron, the apron further comprising: a bib portion covering a user's torso region above a waist region, wherein the bib portion comprises at least one of: a neck strap, and one or more shoulder straps; and a waist portion covering the user's torso and limbs below the waist region, the waist portion selectively detachable from the bib portion, wherein an attachment hardware is provided in an area between the bib portion and the waist portion for securing the apron about the waist region of a user, and wherein the apron comprises a liquid-resistant, quick drying, and washable material; (2) an aperture on a surface of the apron, the aperture operable to allow one or more medical devices or portions of the one or more medical devices to pass through the apron; and (3) a pocket on the surface of the apron, the pocket comprising an inner volume, the inner volume formed as an area between the surface of the apron and portions of pocket material not secured to the surface of the apron, the pocket further comprising a pocket opening defined as peripheral portions of the pocket material not secured to the surface of the apron and through which the inner volume may be accessed, wherein a flap covering the pocket opening is selectively securable to at least the surface of the apron to selectively provide access to the inner volume.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00007-en" num="0007">The accompanying figures, which are incorporated in and constitute a part of the specification, illustrate various example systems and methods, and are used merely to illustrate various example embodiments.</p>
+      <p id="p-00008-en" num="0008">
+        <figref>FIG. 1</figref> illustrates a front elevation view of an example medical apron apparatus.</p>
+      <p id="p-00009-en" num="0009">
+        <figref>FIG. 2</figref> illustrates a rear elevation view of an example medical apron apparatus.</p>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 3</figref> illustrates a side elevation view of an example pocket on a medical apron apparatus.</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 4</figref> illustrates a front elevation view of an example medical apron apparatus with various example attachments.</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 5</figref> illustrates a perspective view of an example medical apron apparatus as worn by a medical patient.</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 6</figref> illustrates an example medical device management hardware on an example medical apron apparatus.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 1</figref> illustrates a front elevation view of a medical apron apparatus <b>100</b>. Medical apron apparatus <b>100</b> may be worn by a patient undergoing a medical treatment and post-medical treatment for use in managing medical devices such as drainage tubes, collection vessels, ostomy bags, wires, data recorders, and the like. Medical apron apparatus <b>100</b> may prevent medical devices from becoming entangled by a surrounding environment and may contribute to a patient undergoing a medical treatment and post-medical treatment being more ambulatory. In one embodiment, medical apron apparatus <b>100</b> is designed to be worn over a patient's everyday clothing. In another embodiment, medical apron apparatus is designed to be worn over medical clothing designed for patients undergoing medical treatment and post-treatment recovery.</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 1</figref> illustrates a front elevation of medical apron apparatus <b>100</b>. Medical apron apparatus <b>100</b> may comprise an apron <b>102</b> and a pocket <b>120</b>.</p>
+      <p id="p-00016-en" num="0016">Apron <b>102</b> having a surface <b>103</b> may comprise multiple parts such as a bib, or superior portion <b>104</b>, a waist, or inferior portion <b>106</b>, one or more lower trunk straps <b>108</b>, a neck strap <b>110</b> for securing apron <b>102</b> about the neck or shoulders of a patient, attachment ring <b>116</b>, one or more apertures <b>118</b>, and one or more pockets <b>120</b>. Apron <b>102</b> need not be limited for use on a user's front side, but may also be adapted for use on a user's back or dorsal side. As used herein surface <b>103</b> may refer to both a proximal surface of apron <b>102</b> closest to, or against a patient's clothing or body, and a distal surface of apron <b>102</b> farthest from, and not in contact with a patient's clothing or body.</p>
+      <p id="p-00017-en" num="0017">In one embodiment, apron <b>102</b> is of a liquid-resistant, quick-drying material, capable of sustained washing in institutional laundry facilities that is easily constructed into a garment such as: treated cotton, polyester, nylon, neoprene, spandex, and the like. In one embodiment, apron <b>102</b> is of a material that is comfortable to a wearer for prolonged wear. In another embodiment, apron <b>102</b> is of a material robust enough to support one or more medical devices. Apron <b>102</b> may be of a material that is easily washable, a material that may be easily laundered, and a material strong enough to sustain frequent washing in institutional laundries. In one embodiment, surface <b>103</b> of apron <b>102</b> is treated with a chemical coating or treatment such as waxing, waterproofing, and the like to provide a liquid resistance to apron <b>102</b>.</p>
+      <p id="p-00018-en" num="0018">Bib portion, or superior portion <b>104</b> may comprise one or more lower trunk straps <b>108</b>, and neck strap <b>110</b> for securing apron <b>102</b> about the neck or shoulders of a patient, attachment ring <b>116</b>, one or more apertures <b>118</b>, and one or more pockets <b>120</b>. Bib portion <b>104</b> may be designed as a “one size fits all” design or bib portion <b>104</b> may be constructed in different sizes to accommodate a variety of patients.</p>
+      <p id="p-00019-en" num="0019">Bib portion <b>104</b> may comprise one or more lower trunk straps <b>108</b>. Lower trunk strap <b>108</b> may comprise one or more pieces of material designed to be secured around a lower torso portion of a patient such as an abdominal area or lumbar area. In one embodiment, lower trunk strap <b>108</b> is secured around the waist of a user.</p>
+      <p id="p-00020-en" num="0020">As a result of a medical procedure, such as a surgery, it may not be ideal for a patient to secure apron <b>102</b> about the waist using lower trunk strap <b>108</b> as doing so may add pressure and cause pain to a surgical site during recovery. In one embodiment, the location of lower trunk strap <b>108</b> may be readily adjusted on bib, or superior portion <b>104</b>, and waist, or inferior portion <b>106</b> of apron <b>102</b> to provide a custom attachment point of apron <b>102</b> on each patient.</p>
+      <p id="p-00021-en" num="0021">Lower trunk strap <b>108</b> may be a single piece of material such as a strap or drawstring integrated into the construction of apron <b>102</b>. In another embodiment, lower trunk strap <b>108</b> may be a belt which interfaces with apron <b>102</b> with one or more external garment modifications such as a belt loop.</p>
+      <p id="p-00022-en" num="0022">One or more lower trunk straps <b>108</b> may be sewn to apron <b>102</b> at lower strap attachment point <b>136</b>.</p>
+      <p id="p-00023-en" num="0023">In one embodiment, one or more lower trunk straps <b>108</b> may attach to lower strap attachment point <b>136</b> on apron <b>102</b> such that one or more lower trunk straps <b>108</b> may be removed from apron <b>102</b>. Attachment hardware at lower strap attachment point <b>136</b> may be a buckle through which lower trunk strap <b>108</b> may be woven. In one embodiment, attachment hardware at lower strap attachment point <b>136</b> is a quick release buckle with a male/female portion attached at lower strap attachment point <b>136</b> and a corresponding male/female portion attached to lower trunk strap <b>108</b> such that inserting the male portion into the female portion provides a secure attachment. In another embodiment, lower trunk strap <b>108</b> has a quick connect hardware such as a carabiner or clasp thereon to interface with a loop or ring at lower strap attachment point <b>136</b>. Lower trunk strap <b>108</b> may have an attachment hardware such as a hook and loop fastener to secure trunk lower strap <b>108</b> to a corresponding hook and loop fastener at lower strap attachment point <b>136</b>.</p>
+      <p id="p-00024-en" num="0024">Lower trunk strap <b>108</b> may be elasticized or elastic such that lower trunk strap <b>108</b> may be flexible and stretch.</p>
+      <p id="p-00025-en" num="0025">One or more lower trunk straps <b>108</b> may be secured around a portion of a patient and tied to secure a lower portion of apron <b>102</b> to a patient. In one embodiment, one or more lower trunk straps <b>108</b> have a lower strap-to-lower strap attachment interface <b>142</b> such as a clasp/carabiner and ring, hook and loop, hook and eye, buttons, snaps, buckles, magnets, and the like on the ends thereof for securing lower trunk straps <b>108</b> about the body of a patient. Lower trunk straps <b>108</b> may have a lower strap adjustment hardware <b>140</b> such as a buckle, retractable reel, or other common adjustment hardware thereon for adjusting the length of lower trunk straps <b>108</b>.</p>
+      <p id="p-00026-en" num="0026">Referring now to <figref>FIG. 2</figref>, other example attachments for securing medical apron apparatus <b>100</b> to a patient are illustrated. In addition to neck strap <b>110</b>, and lower trunk strap <b>108</b>, as described above, medical apron apparatus <b>100</b> may also include one or more of shoulder strap <b>209</b>, shoulder sash <b>211</b>, upper trunk strap <b>213</b>, and leg strap <b>215</b>, all of which may be referred to generally as an “attachment,” where such attachment may be used to secure medical apron apparatus <b>100</b> to a patient.</p>
+      <p id="p-00027-en" num="0027">While neck strap <b>110</b> may be used to secure apron <b>102</b> about a neck of a patient, shoulder straps <b>209</b> and shoulder sash <b>211</b> may be used to secure apron <b>102</b> about the shoulder(s) of a patient. In one embodiment, a patient may choose to use each of neck straps <b>110</b>, shoulder strap <b>209</b>, and shoulder sash <b>211</b>. Neck strap <b>110</b>, shoulder strap <b>209</b>, and shoulder sash <b>211</b> are selectively removable from apron <b>102</b> so as to provide a custom fit for each patient who may prefer wearing apron <b>102</b> with either neck strap <b>110</b>, shoulder strap <b>209</b>, shoulder sash <b>211</b>, or any combination thereof. In another embodiment, upper straps <b>110</b> are shoulder straps similar to a bib-and-brace attachment of an overall garment. In one embodiment where shoulder straps <b>209</b> and shoulder sash <b>211</b> are used, straps similar to an overall garment, with one more shoulder sashes <b>211</b> attaching to shoulder straps <b>209</b>, or like hybrid, may be used with shoulder sash <b>209</b> extending diagonally across as user's torso and connecting to an area on apron <b>102</b> opposite a user's shoulder (relative to a median sagittal plain), such as lower strap attachment point <b>136</b>. In this embodiment, shoulder straps and back straps are the same straps and crisscross at an adjustment point (not shown), like a back strap of an overall. In another embodiment, shoulder strap <b>209</b> connects bib portion <b>104</b> to a back bib portion (not shown) similar in style to a pinafore. Neck strap <b>110</b>, shoulder strap <b>209</b>, and shoulder sash <b>211</b> may be designed so that apron <b>102</b> may be easily secured by a patient with limited mobility (e.g., arm movement) after a medical procedure, or neck strap <b>110</b>, shoulder strap <b>209</b>, and shoulder sash <b>211</b> may be designed so that a caregiver may easily attach apron <b>102</b> to a patient.</p>
+      <p id="p-00028-en" num="0028">In one embodiment, neck strap <b>110</b> is used as the primary load bearing point of apron <b>102</b> and is used alone and in combination with other attachments <b>108</b>, <b>209</b>, <b>211</b>, <b>213</b>, and <b>215</b> to secure apron <b>102</b> to patient. Neck strap <b>110</b> may be fixedly attached to apron <b>102</b> at neck strap attachment portion <b>138</b>. Neck strap attachment portion <b>138</b> may include a permanent fixture of neck strap <b>110</b> to apron <b>102</b> through sewing, stitching, riveting, adhesives, and the like. In one embodiment, neck strap attachment portion <b>138</b> may include attachment hardware <b>116</b> for selectively removing all or portion of neck strap <b>110</b> from apron <b>102</b>. In one embodiment, attachment hardware <b>116</b> is an O-ring, D-ring, or similar attachment hardware that interfaces with one or more strap attachment hardware <b>114</b> on neck strap <b>110</b> for selectively securing neck strap <b>110</b> to apron <b>102</b>. In one embodiment, strap attachment hardware <b>114</b> is a carabiner/clasp type hardware to provide a quick connection to attachment hardware <b>116</b>. Neck strap <b>110</b>, like lower trunk straps <b>108</b>, may include similar attachment embodiments as described above to attach lower straps <b>108</b> to lower strap attachment point <b>136</b> for attaching neck strap <b>110</b> to neck strap attachment portion <b>138</b>. In one embodiment, neck strap <b>110</b> includes adjustment hardware <b>112</b> thereon for adjusting a length of neck strap <b>110</b>. Adjustment hardware <b>112</b> may be a buckle through which portions of neck strap <b>110</b> are woven to shorten and slacken a length of neck strap <b>110</b>. In one embodiment, adjustment hardware <b>112</b> is a retractable reel with a clutch, which when pulled, either provides slack or retracts slack from neck strap <b>110</b>. Neck strap <b>110</b> may share similar characteristics of lower trunk straps <b>108</b>. Neck strap <b>110</b> may be a flat, rugged strap of a material such as nylon, canvas, Cordura®, and the like. Neck strap <b>110</b> may be a braided drawstring of an elasticized material. Neck strap <b>110</b> may be customized based on comfort and preference of a patient and is thus selectively removable from apron <b>102</b> to provide for patient customization. Upper trunk strap <b>213</b> may be used to secure apron <b>102</b> about a thoracic (chest) or dorsal (upper back) area on a patient, while leg strap <b>215</b> may be used to secure apron <b>102</b> about a leg of a user. All attachments <b>108</b>, <b>110</b>, <b>209</b>, <b>211</b>, <b>213</b>, and <b>215</b> may share similar characteristics and functionalities as is described above for lower trunk strap <b>108</b>, and neck strap <b>110</b>.</p>
+      <p id="p-00029-en" num="0029">With further reference to <figref>FIG. 1</figref>, apron <b>102</b> may comprise a waist, or inferior portion <b>106</b>. Waist portion <b>106</b> may cover portions of a patient's lower torso and all or part of a patient's lower limbs. Waist portion <b>106</b> may be selectively removable from bib, or superior portion <b>104</b> at a bib portion attachment point <b>144</b>.</p>
+      <p id="p-00030-en" num="0030">In one embodiment, waist portion <b>106</b> includes modular functionality that allows for one or more different waist portions <b>106</b> to attach to one or more different bib portions <b>104</b>. In this embodiment, different waist portions <b>106</b> are combined with different bib portions <b>104</b> to create a custom apron based on a patient's needs. For example, one patient may prefer use of bib portion <b>104</b> with shoulder straps as upper straps <b>110</b> combined with a short waist portion <b>106</b> which does not extend past a patient's knees. In another example, another patient may prefer use of bib portion <b>104</b> with a neck strap as an upper strap <b>110</b> with a long waist portion <b>106</b> which extends past a patient's knees. A modular arrangement may provide varying degrees of customization for a patient. Bib portion attachment point <b>144</b> may include an attachment hardware common in the art such as a zipper, hook and loop fasteners, one or more buttons and corresponding buttonholes, one or more snaps, and the like. Waist portion <b>106</b> may include one or more lower trunk straps <b>108</b> such that waist portion <b>106</b> may be worn alone without bib portion <b>104</b>. Lower trunk straps <b>108</b> secured to waist portion <b>106</b> may interact with portions of a patient's clothing (e.g. belt loops) to provide more secure fit of waist portion <b>106</b> when waist portion <b>106</b> is worn alone without bib portion <b>104</b>.</p>
+      <p id="p-00031-en" num="0031">In one embodiment, both waist portions <b>106</b> and bib portion <b>104</b> include one or more lower trunk straps <b>108</b> such that bib portion <b>104</b> and waist portion <b>106</b> may be worn alone or in combination with one another. Inferior portion <b>106</b> may fold about bib portion attachment point <b>144</b>, and inferior portion <b>106</b> may be secured to superior portion <b>104</b> via a superior portion surface attachment hardware <b>145</b> so as to give an appearance that only bib portion <b>104</b> is being worn; or waist portion <b>106</b> may be stowed without detaching waist portion <b>106</b> from bib portion <b>104</b> so as to provide added convenience when using the bathroom, or some similar activity of daily living. Superior portion surface attachment hardware <b>145</b> may be a fastener hardware such as a hook and loop fastener operable to attach to a corresponding hook and loop fastener on inferior portion <b>106</b>, a snap operable to connect to a corresponding snap on inferior portion <b>106</b>, or a strap and buckle that will store inferior portion <b>106</b> when rolled toward superior portion <b>104</b>, and like hardware.</p>
+      <p id="p-00032-en" num="0032">Both bib portion <b>104</b> and waist portion <b>106</b> may include one or more apertures <b>118</b> in surface <b>103</b> of apron <b>102</b> such that one or more medical devices or portions of one or more medical devices may be passed through apertures <b>118</b>. Apertures <b>118</b> may allow medical devices such as drainage tubes, collection vessels, ostomy bag connections, wiring, and the like, to be passed from a surface <b>103</b> of apron <b>102</b> adjacent a patient's body through apron <b>102</b> to an external surface <b>103</b> of apron <b>102</b>. In one embodiment, apertures <b>118</b> include hardware (not shown) for varying a size of apertures <b>118</b>. In this embodiment, apertures <b>118</b> use at least one of a zipper, a hook and loop fastener, a button and buttonhole, a snap, and the like to vary a size of apertures <b>118</b> to allow for larger medical devices to be passed through apron <b>102</b> via apertures <b>118</b>, while also providing a secure attachment for medical devices already passed through apertures <b>118</b> (e.g., one or more drainage tubes may be separated by buttons or hook and loop fasteners to prevent one or more drainage tubes from tangling). Apertures <b>118</b> may be designed based on a patient's medical procedure and used with modular functionality of bib portion <b>104</b> and waist portion <b>106</b> to create a customized apron <b>102</b>. For example, a patient recovering from a mastectomy may have apertures <b>118</b> on bib portion <b>104</b> corresponding to drainage tubes sites associated therewith, while a patient recovering from a gallbladder procedure may have apertures <b>118</b> on apron <b>102</b> in an area close to that procedure site. Apertures <b>118</b> may be reinforced by stitching or another garment treatment to provide for rugged use.</p>
+      <p id="p-00033-en" num="0033">Bib portion <b>104</b> and waist portion <b>106</b> of apron <b>102</b> may comprise one or more pockets <b>120</b>. One or more pockets <b>120</b> may cover apertures <b>118</b> such that medical devices passed through apertures <b>118</b> may be secured in an inner volume <b>126</b> of pockets <b>120</b>. In one embodiment, pockets <b>120</b> are located on an external surface <b>103</b> of apron <b>102</b>—that is, an external surface <b>103</b> not adjacent to a patient's body. In this embodiment, pockets <b>120</b> on external surface <b>103</b> of apron <b>102</b> allow both patient and medical personnel easy access to inner volume <b>126</b> of pockets <b>120</b> for medical care and treatment (e.g., monitoring and emptying of collection vessels).</p>
+      <p id="p-00034-en" num="0034">Pockets <b>120</b> may be comprised of a material sheet <b>122</b> having sides <b>124</b> secured to portions of apron <b>102</b>. In one embodiment, two or more sides <b>124</b> of material sheet <b>122</b> are secured to apron <b>102</b> to form pockets <b>120</b>. In one embodiment, inner volume <b>126</b> is defined by an area bounded by sides <b>124</b> of material sheet <b>122</b> connected to apron <b>102</b> and a volume between material sheet <b>122</b> and apron <b>102</b>. Material sheet <b>122</b> may have one side <b>128</b> not secured to apron <b>102</b> to define a pocket opening <b>128</b>. Material sheet <b>122</b> may be of a same material as apron <b>102</b>. Material sheet <b>122</b> may include a waterproof material configured to at least partially contain liquids that may leak within inner volume <b>126</b>.</p>
+      <p id="p-00035-en" num="0035">In one embodiment, pocket opening <b>128</b> may include a flap <b>130</b>, a portion of flap <b>130</b> secured to apron <b>102</b> and designed to cover pocket opening <b>128</b>. Another portion of flap <b>130</b> may secure to portions of apron <b>102</b> or pocket <b>120</b> via a flap securing hardware <b>132</b>. In one embodiment, flap securing hardware <b>132</b> may be a hook and loop hardware on a surface <b>103</b> of apron <b>102</b> or pocket <b>120</b> that interfaces with a corresponding hook and loop securing hardware <b>132</b> on a portion of flap <b>130</b>. Flap securing hardware <b>132</b> may also be a similar flap securing hardware <b>132</b> such as a button and button hole, snaps, a zipper, and the like, so as to provide easy access to inner volume <b>126</b> of pocket <b>120</b>.</p>
+      <p id="p-00036-en" num="0036">One or more pockets <b>120</b> may be located on both bib portion <b>102</b> and waist portion <b>106</b> of apron <b>102</b> based on patient need so as to provide support and organization of medical devices passed through apertures <b>118</b> and stored in inner volume <b>126</b> of one or more pockets <b>120</b>. In one embodiment, pocket opening <b>128</b> may not include a flap <b>130</b>, and pocket opening <b>128</b> may be secured by a hardware such as a zipper, a button and buttonhole, a snap, a hook and loop fastener, and the like.</p>
+      <p id="p-00037-en" num="0037">In another embodiment, sides <b>124</b> of pocket <b>120</b> may be secured to apron <b>102</b> by a selectively engageable hardware or adhesive such as a hook and loop fastener to selectively remove, and thus customize placement of pockets <b>120</b> on apron <b>102</b>.</p>
+      <p id="p-00038-en" num="0038">Referring to <figref>FIG. 3</figref>, a side view of pocket <b>120</b> is illustrated. Pocket <b>120</b> may comprise folded, pleated, gusset <b>346</b> to provide for expansion of pocket <b>120</b>, and thus enlarge inner volume <b>126</b> of pocket <b>120</b> to accommodate medical devices of varying sizes. In one embodiment, gusset <b>346</b> may be selectively actuated through a hardware such as a zipper, a hook and loop fastener, a button and buttonhole, snaps, and the like to selectively expand inner volume <b>126</b> of pocket <b>120</b>. In another embodiment, gusset <b>346</b> automatically expands based on a size of medical device placed within inner volume <b>126</b> of pocket <b>120</b>.</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIGS. 4 and 5</figref> illustrate views of example medical apron apparatus <b>100</b> as used with a medical device <b>448</b>. Medical device <b>448</b> may include, but is not limited to such medical devices as: a drainage bag, a specimen container, a collection container, a collection bag, an ostomy bag, a medical tubing, an IV bag, a catheter, a battery, an electronic medical monitoring device, a suction device, medical supplies, a gas canister, and a pump. Medical device <b>448</b> may be accessed through aperture <b>118</b> and medical device <b>448</b> may be stored in pocket <b>120</b>. Flap <b>130</b> may be operable to secure in both of an open position and closed position to surface <b>103</b> of apron <b>102</b> by flap securing hardware <b>132</b>.</p>
+      <p id="p-00040-en" num="0040">With reference to <figref>FIG. 6</figref>, example medical device management hardware <b>650</b> is illustrated. Surface <b>103</b> and pocket <b>120</b> of apron <b>102</b> may comprise one or more medical device management hardware <b>650</b> for securely managing a medical device <b>448</b> such as a medical tube.</p>
+      <p id="p-00041-en" num="0041">In one embodiment, medical device management hardware <b>650</b> is comprises a strap securedly attached to surface <b>103</b> of apron <b>102</b> with a hook and loop fastener (e.g. Velcro®) on one side of a strap, and a complimentary hook and loop fastener on another side of a strap, such that medical device management hardware <b>650</b> wraps around medical device <b>448</b> and secures to itself (i.e. one side of medical device management hardware <b>650</b> strap secures to another side of medical device management hardware strap <b>650</b>) to secure medical device <b>448</b> in place, prevent snags of medical device <b>448</b>, and prevent kinking of medical device <b>448</b> so as to keep medical device <b>448</b> in proper working order.</p>
+      <p id="p-00042-en" num="0042">In another embodiment, medical device management hardware <b>650</b> is a strap secured within an inner volume of pocket <b>120</b> to secure medical device <b>448</b> such as a drainage bag in an upright position to optimize function of medical device <b>448</b>, prevent spilling or leaking of medical device <b>448</b>, and the like. Medical device management hardware <b>650</b> may include straps with proper attachment hardware such as hoop and loop fasteners, buckles, rings, clasps, for attaching a securing medical device <b>448</b> to apron <b>102</b>, as well as proper adjustment hardware such as buckles and rings for adjusting a length of medical device management hardware <b>650</b> to accommodate and secure medical devices <b>448</b> of different sizes. In one embodiment, medical device management hardware may be an elastic, mesh webbing/net, through and/or under which, a medical device <b>448</b> may be secured.</p>
+      <p id="p-00043-en" num="0043">Unless specifically stated to the contrary, the numerical parameters set forth in the specification, including the attached claims, are approximations that may vary depending on the desired properties sought to be obtained according to the exemplary embodiments. At the very least, and not as an attempt to limit the application of the doctrine of equivalents to the scope of the claims, each numerical parameter should at least be construed in light of the number of reported significant digits and by applying ordinary rounding techniques.</p>
+      <p id="p-00044-en" num="0044">Notwithstanding that the numerical ranges and parameters setting forth the broad scope of the invention are approximations, the numerical values set forth in the specific examples are reported as precisely as possible. Any numerical value, however, inherently contains certain errors necessarily resulting from the standard deviation found in their respective testing measurements.</p>
+      <p id="p-00045-en" num="0045">Furthermore, while the systems, methods, and apparatuses have been illustrated by describing example embodiments, and while the example embodiments have been described and illustrated in considerable detail, it is not the intention of the applicants to restrict, or in any way limit, the scope of the appended claims to such detail. It is, of course, not possible to describe every conceivable combination of components or methodologies for purposes of describing the systems, methods, and apparatuses. With the benefit of this application, additional advantages and modifications will readily appear to those skilled in the art. Therefore, the invention, in its broader aspects, is not limited to the specific details and illustrative example and exemplary embodiments shown and described. Accordingly, departures may be made from such details without departing from the spirit or scope of the general inventive concept. Thus, this application is intended to embrace alterations, modifications, and variations that fall within the scope of the appended claims. The preceding description is not meant to limit the scope of the invention. Rather, the scope of the invention is to be determined by the appended claims and their equivalents.</p>
+      <p id="p-00046-en" num="0046">As used in the specification and the claims, the singular forms “a,” “an,” and “the” include the plural. To the extent that the term “includes” or “including” is employed in the detailed description or the claims, it is intended to be inclusive in a manner co-extensive with the term “comprising,” as that term is interpreted when employed as a transitional word in a claim. Furthermore, to the extent that the term “or” is employed in the claims (e.g., A or B) it is intended to mean “A or B or both.” When the applicants intend to indicate “only A or B, but not both,” then the term “only A or B but not both” will be employed. Similarly, when the applicants intend to indicate “one and only one” of A, B, or C, the applicants will employ the phrase “one and only one.” Also, to the extent that the terms “in” or “into” are used in the specification or the claims, it is intended to additionally mean “on” or “onto.” To the extent that the term “selectively” is used in the specification or the claims, it is intended to refer to a condition of a component wherein a user of the apparatus may activate or deactivate the feature or function of the component as is necessary or desired in use of the apparatus. To the extent that the term “operatively connected” is used in the specification or the claims, it is intended to mean that the identified components are connected in a way to perform a designated function. Finally, where the term “about” is used in conjunction with a number, it is intended to include ±10% of the number. In other words, “about 10” may mean from 9 to 11.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A medical apron apparatus for use by a medical patient, comprising:
+<claim-text>an apron;</claim-text><claim-text>a pocket on a surface of the apron;</claim-text><claim-text>a proximal surface proximal to the medical patient, and a distal surface; and</claim-text><claim-text>an aperture through which a medical device may pass and be stored in the pocket on the surface of the apron.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The medical apron apparatus of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the apron further comprises an access portion, the access portion selectively engageable to allow access through the aperture and to an inner volume of the pocket on the surface of the apron.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The medical apron apparatus of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the apron further comprises a superior portion and an inferior portion, and wherein the inferior portion is selectively attachable to the superior portion.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The medical apron apparatus of <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein an inferior portion surface attachment hardware on the inferior portion of the apron is selectively engageable with a superior portion surface attachment hardware on the surface of the superior portion, such that the inferior portion surface attachment hardware, when engaged, allows the inferior portion of the apron to be folded upon or stowed upon the superior portion.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The medical apron apparatus of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein an inner volume of the pocket is sized and shaped to retain at least one of: a drainage bag; a specimen container; a collection container; a collection bag; an ostomy bag; a medical tubing; an IV bag; a catheter; a battery; an electronic medical monitoring device; a suction device; medical supplies; a gas canister; and a pump.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The medical apron apparatus of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the apron further comprises an attachment for securing the medical apron apparatus to the medical patient, the attachment comprising at least one of:
+<claim-text>a neck strap operable to secure the medical apron apparatus about a neck of the medical patient;</claim-text><claim-text>a shoulder strap operable to secure the medical apron apparatus about a shoulder and around an axilla portion of the medical patient;</claim-text><claim-text>a shoulder sash operable to secure the medical apron apparatus about the shoulder and diagonally across a medical patient's trunk, the shoulder sash secured to a portion of the medical apron apparatus on an opposite side of the shoulder relative to a medical patient's median sagittal plane;</claim-text><claim-text>an upper trunk strap operable to secure the medical apron apparatus either around a thoracic region or dorsal region of the medical patient;</claim-text><claim-text>a lower trunk strap operable to secure the medical apron apparatus either around an abdominal, or lumbar region of the medical patient; and</claim-text><claim-text>a leg strap operable to secure the medical apron apparatus around a leg of the medical patient.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The medical apron apparatus of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the attachment is selectively removable from the medical apron apparatus, and selectively engageable to the medical apron apparatus.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The medical apron apparatus of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the attachment is adjustable.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The medical apron apparatus of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the apron further comprises a medical device management hardware on at least one of the surface of the apron or within the pocket of the apron.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The medical apron apparatus of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the medical apron apparatus is comprised of a washable material.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en" independent="true">
+      <claim-text>
+        <b>11</b>. A medical apron apparatus for use by a medical patient, comprising:
+<claim-text>an apron;</claim-text><claim-text>an aperture on a surface of the apron, the one or more apertures operable to allow one or more medical devices or portions of the one or more medical devices to pass through the apron; and</claim-text><claim-text>a pocket on a surface of the apron, the pocket comprising an inner volume, the inner volume formed as an area between the surface of the apron and portions of pocket material not secured to the surface of the apron, the pocket further comprising a pocket opening defined as peripheral portions of the pocket material not secured to the surface of the apron and through which the inner volume may be accessed.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The medical apron apparatus of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, further comprising an access portion, the access portion selectively engageable to allow access through the aperture and to the pocket on the surface of the apron.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The medical apron apparatus of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the pocket overlies the aperture such that the one or more medical devices or portions of the one or more medical devices can be passed through the aperture and secured within the inner volume.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The medical apron apparatus of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the apron further comprises a superior portion and an inferior portion, and wherein the inferior portion is selectively attachable to the superior portion.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The medical apron apparatus of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the inner volume of the pocket is sized and shaped to retain at least one of: a drainage bag, a specimen container, a collection container, a collection bag, an ostomy bag, a medical tubing, an IV bag, a catheter, a battery, an electronic medical monitoring device, a suction device, medical supplies, a gas canister, and a pump.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The medical apron apparatus of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the apron further comprises an attachment for securing the medical apron apparatus to the medical patient, the attachment comprising at least one of:
+<claim-text>a neck strap operable to secure the medical apron apparatus about a neck of the medical patient;</claim-text><claim-text>a shoulder strap operable to secure the medical apron apparatus about a shoulder and around an axilla portion of the medical patient;</claim-text><claim-text>a shoulder sash operable to secure the medical apron apparatus about the shoulder and diagonally across a medical patient's trunk, the shoulder sash secured to a portion of the medical apron apparatus on an opposite side of the shoulder relative to a medical patient's median sagittal plane;</claim-text><claim-text>an upper trunk strap operable to secure the medical apron apparatus either around a thoracic region or dorsal region of the medical patient;</claim-text><claim-text>a lower trunk strap operable to secure the medical apron apparatus either around an abdominal, or lumbar region of the medical patient; and</claim-text><claim-text>a leg strap operable to secure the medical apron apparatus around a leg of the medical patient,</claim-text></claim-text>
+      <claim-text>wherein the attachment is selectively removable from the medical apron apparatus, and selectively engageable to the medical apron apparatus.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en" independent="true">
+      <claim-text>
+        <b>17</b>. A medical apron apparatus for use by a medical patient, comprising:
+<claim-text>(1) an apron, the apron further comprising
+<claim-text>a bib portion covering a user's torso region above a waist region, wherein the bib portion comprises at least one of: a neck strap, and one or more shoulder straps; and</claim-text><claim-text>a waist portion covering the user's torso and limbs below the waist region, the waist portion selectively detachable from the bib portion, wherein an attachment hardware is provided in an area between the bib portion and the waist portion for securing the apron about the waist region of a user, and wherein the apron comprises a liquid-resistant, quick drying, and washable material;</claim-text></claim-text><claim-text>(2) an aperture on a surface of the apron, the aperture operable to allow one or more medical devices or portions of the one or more medical devices to pass through the apron; and</claim-text><claim-text>(3) a pocket on the surface of the apron, the pocket comprising an inner volume, the inner volume formed as an area between the surface of the apron and portions of pocket material not secured to the surface of the apron, the pocket further comprising a pocket opening defined as peripheral portions of the pocket material not secured to the surface of the apron and through which the inner volume may be accessed, wherein a flap covering the pocket opening is selectively securable to at least the surface of the apron to selectively provide access to the inner volume.</claim-text></claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The medical apron apparatus of claim <b>19</b>, wherein the neck strap, one or more shoulder straps, and the attachment hardware is selectively engageable to the medical apron apparatus to secure the medical apron apparatus to the medical patient, and wherein the neck strap, one or more shoulder straps, and the attachment hardware is selectively removable from the medical apron apparatus.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257463A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257463A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257463A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257463A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257463A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257463A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257463A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257463A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257463A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257463A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257463A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257463A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257463A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257463A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257463A1_00008.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257463A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257463A1.PDF" type="pdf" size="560892" pages="13" />
+</lexisnexis-patent-document>

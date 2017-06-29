@@ -1,0 +1,1612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150252453A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021833" date-changed="20150925" time-changed="020448">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121229450">
+        <country>US</country>
+        <doc-number>20150252453</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14425943</doc-number>
+        <date>20131016</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150910">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012233716</doc-number>
+        <date>20121023</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150917">
+      <classification-ipcr sequence="1">
+        <text>C22C  21/08        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>21</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C22C  21/06        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>21</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C22F   1/047       20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>047</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150917">
+      <classification-cpc sequence="1">
+        <text>C22C  21/08        20130101 FI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>21</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C22C  21/06        20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>21</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C22F   1/00        20130101 LI20140527BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140527</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C22F   1/047       20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>22</class>
+        <subclass>F</subclass>
+        <main-group>1</main-group>
+        <subgroup>047</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">8</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">ALUMINUM ALLOY PLATE FOR FORMING</invention-title>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>KABUSHIKI KAISHA KOBE SEIKO SHO (KOBE STEEL, LTD.)</orgname>
+            <role>03</role>
+            <address>
+              <city>Kobe-shi, Hyogo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Aruga</last-name>
+            <first-name>Yasuhiro</first-name>
+            <address>
+              <city>Kobe-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Matsumoto</last-name>
+            <first-name>Katsushi</first-name>
+            <address>
+              <city>Kobe-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13078079</doc-number>
+        <date>20131016</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014065175</doc-number>
+        <date>20140501</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150910">
+      <main-family family-id="165462363">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252453</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20131016</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014084492</doc-number>
+            <kind>A</kind>
+            <date>20140512</date>
+          </document-id>
+          <application-date>
+            <date>20121023</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104736732</doc-number>
+            <kind>A</kind>
+            <date>20150624</date>
+          </document-id>
+          <application-date>
+            <date>20131016</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150053810</doc-number>
+            <kind>A</kind>
+            <date>20150518</date>
+          </document-id>
+          <application-date>
+            <date>20131016</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014065175</doc-number>
+            <kind>A1</kind>
+            <date>20140501</date>
+          </document-id>
+          <application-date>
+            <date>20131016</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="165462360">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252453</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20131016</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014084492</doc-number>
+            <kind>A</kind>
+            <date>20140512</date>
+          </document-id>
+          <application-date>
+            <date>20121023</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104736732</doc-number>
+            <kind>A</kind>
+            <date>20150624</date>
+          </document-id>
+          <application-date>
+            <date>20131016</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150053810</doc-number>
+            <kind>A</kind>
+            <date>20150518</date>
+          </document-id>
+          <application-date>
+            <date>20131016</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014065175</doc-number>
+            <kind>A1</kind>
+            <date>20140501</date>
+          </document-id>
+          <application-date>
+            <date>20131016</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Provided is an Al—Mg alloy plate for molding, having excellent press formability, little stretcher strain (SS) mark generation, and not generating any new issues such as reduced bending properties as a result of age-hardening at room temperature, whilst using more accurate and simple structural indicators. As a result, the Al—Mg aluminum alloy plate comprising a specific composition including Cu has a plate structure having an average particle diameter of 0.5-6.0 nm in a minute particle (cluster) particle distribution measured using an X-ray scattering method, controls the volume fraction to at least 0.03%, is unlikely to have serration, and suppresses SS mark generation during press forming.</p>
+  </abstract>
+  <legal-data date-changed="20150925">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150304</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015252453A1</docdb-publication-number>
+      <docdb-application-id>444310961</docdb-application-id>
+      <new-owner>KABUSHIKI KAISHA KOBE SEIKO SHO (KOBE STEEL, LTD.)</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:ARUGA, YASUHIRO;MATSUMOTO, KATSUSHI;REEL/FRAME:035085/0459</free-text-description>
+      <effective-date>
+        <date>20150101</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to an Al—Mg alloy sheet having good formability. In the invention, an aluminum alloy sheet includes a hot-rolled sheet and a cold-rolled sheet, and refers to an aluminum alloy sheet subjected to heat treatments such as solution treatment or hardening treatment. Hereinafter, aluminum may be represented as Al.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND ART</heading>
+      <p id="p-00002-en" num="0002">Recently, a social demand for weight saving of vehicles such as motorcars has increased more and more out of consideration for the global environment. To meet such a social demand, aluminum alloy materials are investigated in place of steel materials such as steel sheets as materials for auto panels, particularly large body panels (outer panels and inner panels) such as panels for a hood, a door, and a roof.</p>
+      <p id="p-00003-en" num="0003">The Al—Mg (5000-series aluminum) alloy sheet (hereinafter, sometimes referred to as Al—Mg alloy sheet) including JIS 5052 alloy and JIS 5182 alloy has high ductility and strength, and therefore has been used as a material for forming (press forming) for such large body panels.</p>
+      <p id="p-00004-en" num="0004">However, as disclosed in PTL 1 and the like, when such an Al—Mg alloy sheet is subjected to a tensile test, yield elongation may occur in the vicinity of the yield point on a stress-strain curve, or saw-toothed or stepwise serrations may occur on the stress-strain curve at a relatively large amount of strain (for example, tensile elongation of 2% or more) beyond the yield point. Such phenomena on the stress-strain curve cause so-called stretcher strain (hereinafter, sometimes represented as SS mark), leading to a significant problem that reduces commercial value of the large body panel as a forming product, particularly of the outer panel the appearance of which is a commercially important factor.</p>
+      <p id="p-00005-en" num="0005">As generally known, the SS mark is classified into two types, i.e., a so-called random mark as an irregular beltlike pattern such as a flame pattern formed in a region of a relatively small amount of strain, and a parallel band as a parallel beltlike pattern formed so as to define about 50° with respect to a tension direction in a region of a relatively large amount of strain. It is known that the former (a first type) random mark is caused by yield point elongation, and the latter (a second type) parallel band is caused by the serrations on the stress-strain curve.</p>
+      <p id="p-00006-en" num="0006">There have been provided various methods for preventing such types of SS mark. For example, as a main approach, it has been known that particles of the Al—Mg alloy sheet are controllably coarsened to a certain degree. However, such an approach of particle control is not effective for preventing formation of the parallel band as the second type of the SS mark. If the particles are excessively coarsened, another problem such as surface roughening is rather caused during press forming.</p>
+      <p id="p-00007-en" num="0007">As another approach for preventing the SS mark, it has also been known that a refined material of the Al—Mg alloy sheet is subjected to working (pre-working) such as skin-pass or leveling before being press-formed into the large body panel so that a slight strain (pre-strain) is added thereto. Even in such a pre-working approach, if the material is too highly worked, the serrations on the stress-strain curve are likely to occur, easily leading to formation of a wide and clear parallel band during actual press forming.</p>
+      <p id="p-00008-en" num="0008">In contrast, PTL 1 provides a method of manufacturing the Al—Mg alloy sheet, in which formation of both the random mark and the wide parallel band is suppressed. In such a method, a rolled sheet of the Al—Mg alloy is subjected to solution treatment and hardening treatment, and is then subjected to cold working as pre-working followed by final annealing, and thereby a sheet with an average particle size of 55 μm or less and without coarse particles is produced.</p>
+      <p id="p-00009-en" num="0009">PTL 2, which makes no direct description on suppression of SS mark formation, describes that a heating curve from room temperature is obtained through measurement of thermal variation of an alloy sheet by differential scanning calorimetry (DSC), and a position and a height of an endothermic peak on the heating curve are used as guidelines for improving press formability of the alloy sheet.</p>
+      <p id="p-00010-en" num="0010">However, a demand level for a surface texture becomes strict more and more in a recent large body panel, particularly in an outer panel the appearance of which is a commercially important factor. In each of PTLs 1 and 2, the measure to suppress the SS mark formation is not enough to meet such a demand.</p>
+      <p id="p-00011-en" num="0011">In contrast, as exemplified in PTL 3, there is provided a technique in which 0.1 to 4.0% of Zn is particularly contained in the Al—Mg alloy sheet, and thereby the amount of clusters (ultrafine intermetallic compounds) formed by Al and Mg is increased as clusters that each further include Zn, so that the critical strain amount (limit strain amount) for serrations is increased, and the effect of increasing the limit strain amount is further enhanced. It is described that this makes it possible to suppress formation of both the random mark and the parallel band, and it is possible to produce an Al—Mg alloy sheet that is suppressed in SS mark formation and good in formability such as press formability into an auto panel.</p>
+      <p id="p-00012-en" num="0012">PTL 4 defines an average particle diameter in particle size distribution determined by a small-angle X-ray scattering method and average number density of peak sizes in the particle size distribution, as guidelines for indicating a relationship between the microstructure of an Al—Mg alloy sheet that also contains Zn and press formability represented by the SS mark or the like.</p>
+      <p id="p-00013-en" num="0013">However, when the Al—Mg alloy sheet contains a large amount of Zn, another issue arises, i.e., age hardening at room temperature tends to occur. This is because while PTL 3 describes the clusters (ultrafine intermetallic compounds) including Zn as the best measure to suppress SS mark formation, such clusters are easily formed at room temperature.</p>
+      <p id="p-00014-en" num="0014">In general, the Al—Mg alloy sheet is not formed into a product such as a large body panel by an automaker immediately after being manufactured by an aluminum sheet manufacturer, but is formed into the product some weeks later after that. Hence, for example, when the Al—Mg alloy sheet is formed into a product such as a large body panel after the lapse of one month from manufacturing of the sheet, age hardening proceeds, and a new (another) issue arises, i.e., bendability or press formability is rather degraded.</p>
+      <p id="p-00015-en" num="0015">As generally known, age hardening at room temperature is in general less likely to occur in the Al—Mg alloy sheet compared with a heat-treated Al—Zn—Mg (7000-series) alloy sheet. However, when such an Al—Mg alloy sheet has a high content of Zn as in PTL 3, the sheet also shows age hardening at room temperature as with the 7000-series aluminum alloy sheet.</p>
+      <p id="p-00016-en" num="0016">In contrast, PTLs 5 and 6 each devise a technique in which Cu is contained in the Al—Mg alloy sheet as an element effective for suppressing SS mark formation, in place of Zn that tends to cause age hardening at room temperature. However, even if an Al—Mg alloy sheet contains Cu, the sheet may not exhibit the effect of suppressing SS mark formation. Specifically, a formation state of the SS mark is greatly affected by an existing state (a microstructural state) of Cu in the Al—Mg alloy sheet.</p>
+      <p id="p-00017-en" num="0017">In PTL 5, therefore, the microstructure of the sheet is indirectly defined by the endothermic peaks between 180 and 280° C. on a heating curve (DSC heating curve) from room temperature determined by differential thermal analysis (DSC).</p>
+      <p id="p-00018-en" num="0018">In PTL 6, the microstructure of the sheet is more directly defined by average density of clusters including Cu atoms, each Cu atom being in specific connection with other Cu atoms adjacent thereto, in atomic clusters determined by a three-dimensional atom probe field ion microscope.</p>
+      <heading id="h-00003-en" level="1">CITATION LIST</heading>
+      <heading id="h-00004-en" level="1">Patent Literature</heading>
+      <p id="p-00019-en" num="0019" />
+      <p id="p-00020-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="35pt" align="left" />
+              <colspec colname="1" colwidth="182pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="1" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>PTL 1: Japanese Unexamined Patent Application</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Publication No. Hei7 (1995)-224364</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PTL 2: Japanese Unexamined Patent Application</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Publication No. 2006-249480</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PTL 3: Japanese Unexamined Patent Application</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Publication No. 2010-77506</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PTL 4: Japanese Unexamined Patent Application</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Publication No. 2011-38136</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PTL 5: Japanese Unexamined Patent Application</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Publication No. 2012-52220</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>PTL 6: Japanese Unexamined Patent Application</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Publication No. 2012-107316</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="1" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00005-en" level="1">SUMMARY OF INVENTION</heading>
+      <heading id="h-00006-en" level="1">Technical Problem</heading>
+      <p id="p-00021-en" num="0020">However, even if Cu is contained in the Al—Mg alloy sheet for the effect of suppressing SS mark formation, there still remains an issue of more accurately and more simply determining the existence state of clusters of the fine Cu atoms (Cu clusters) in correlation with the SS mark characteristic despite the techniques of PTLs 5 and 6.</p>
+      <p id="p-00022-en" num="0021">An object of the invention is therefore to provide an Al—Mg alloy sheet for forming that is suppressed in SS mark formation without causing the issues such as age hardening at room temperature under more accurate and simpler microstructural guidelines, and is thus improved in press formability into auto panels.</p>
+      <heading id="h-00007-en" level="1">Solution to Problem</heading>
+      <p id="p-00023-en" num="0022">To achieve the object, an aluminum alloy sheet for forming according to the invention is summarized in that the aluminum alloy sheet includes an Al—Mg alloy sheet containing, by mass percent, Mg: 2.0 to 6.0%, and Cu: more than 0.3% and 2.0% or less, with the remainder consisting of Al and inevitable impurities, and an average particle diameter in particle size distribution determined by a small-angle X-ray scattering method is 0.5 to 6.0 nm, and the volume fraction of the particles is 0.03% or more.</p>
+      <heading id="h-00008-en" level="1">Advantageous Effects of Invention</heading>
+      <p id="p-00024-en" num="0023">According to the findings of the inventors, for the Al—Mg alloy sheet containing Cu, particle size distribution (average particle diameter and volume fraction) of particles (Cu clusters) of nanometer-order or less determined by a small-angle X-ray scattering method indicates the existing state of the particles, and is in correlation with the SS mark characteristic. In other words, the inventors have found that, for the Al—Mg alloy sheet containing Cu, the particle size distribution determined by the small-angle X-ray scattering method can be a guideline for indicating the relationship between the microstructure of the sheet and the press formability typified by the SS mark characteristic of the sheet.</p>
+      <p id="p-00025-en" num="0024">The small-angle X-ray scattering method has been known in the past as a typical technique for investigating information of a nanometer-order structure (microstructure). When a substance is irradiated with X-rays, the incident X-rays reflect the information of electron density distribution in the inside of the substance, and scattered X-rays are generated around the incident X-rays. For example, if the substance contains an uneven region of particles or the electron density, scattering occurs around the incident X-rays.</p>
+      <p id="p-00026-en" num="0025">According to this principle, when an aluminum alloy microstructure contains particles of nanometer-order or less, scattering occurs around the incident X-rays. The small-angle X-ray scattering method makes it possible to accurately and simply obtain information of the particles of nanometer-order or less, such as a shape, size, and distribution, through analysis of the scattered X-rays. Consequently, the invention can reproducibly control the microstructure of the Al—Mg alloy sheet containing Cu in terms of the particle size distribution so that serrations are less likely to occur and SS mark formation can be suppressed.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00009-en" level="1">DESCRIPTION OF EMBODIMENTS</heading>
+      <p id="p-00027-en" num="0026">Hereinafter, an embodiment of the invention is specifically described on each of requirements.</p>
+      <heading id="h-00010-en" level="2">(Microstructure)</heading>
+      <p id="p-00028-en" num="0027">The invention defines the particle size distribution (average particle diameter and volume fraction) of all (total amount of) particles, which can be determined by the small-angle X-ray scattering method, not depending on compositions in the microstructure of the Al—Mg alloy sheet having a composition containing Cu. Hereinafter, such particles may be referred to as atomic cluster. The inventors have beforehand grasped that the particles defined in the invention generally include aggregates of Cu atoms (clusters of Cu atoms, i.e., Cu clusters) by an atom probe method different from the small-angle X-ray scattering method. Hence, the particles, of which the particle size distribution and the volume fraction are determined or derived by the small-angle X-ray scattering method, may be generally regarded as the clusters of Cu atoms (Cu clusters).</p>
+      <p id="p-00029-en" num="0028">However, the inventors have found that the particle size distribution (average particle diameter and volume fraction) of all (total amount of) particles not depending on compositions, which may contain particles other than the Cu clusters and can be determined by the small-angle X-ray scattering method, is in good correlation with the SS mark characteristic of the Al—Mg alloy sheet containing Cu. In claims of this application, therefore, the particles determined by the small-angle X-ray scattering method are intentionally not specified as Cu clusters. The atom probe method is a known approach using a 3D atom probe field ion microscope (3DAP), by which an atom type, the number of atoms, and an interatomic distance of an atom cluster can be analyzed.</p>
+      <p id="p-00030-en" num="0029">When Cu is selected as an element having the effect of suppressing SS mark formation in place of Zn that tends to cause age hardening at room temperature, the effect of suppressing SS mark formation is given without causing age hardening at room temperature unlike Zn. However, even if an Al—Mg alloy sheet contains Cu, the sheet may not exhibit the effect of suppressing SS mark formation, and even Al—Mg alloy sheets having the same Cu content (hereinafter, sometimes referred to as Al—Mg—Cu alloy sheet) may be greatly different in the effect of suppressing SS mark formation. Hence, while it is necessary that the Al—Mg alloy sheet contains Cu, it is further necessary to understand the microstructure state, which greatly affects an SS mark formation state, of the Al—Mg alloy sheet.</p>
+      <p id="p-00031-en" num="0030">For the microstructure state, the inventors have speculated that the effect of suppressing SS mark formation is greatly affected by the existing state (such as abundance, presence or absence, and a dispersed state) of the particles in the Al—Mg alloy sheet containing Cu. However, since such particles are each too small, existence of the particles cannot be directly determined by typical microstructure observation. The particles each have a small size of nano level or less as with the Al—Mg-based intermetallic compound in PTL 2 or 3. Consequently, the particles cannot be specified by a typical microstructure observation method such as analysis using SEM or TEM. Based on this, the invention defines the existing state of the particles in terms of the particle size distribution (average particle diameter and volume fraction) of the particles (Cu clusters) determined by the small-angle X-ray scattering method.</p>
+      <p id="p-00032-en" num="0000">(Small-Angle Scattering Method with X-Rays)</p>
+      <p id="p-00033-en" num="0031">The small-angle X-ray scattering method has been known in the past as a typical technique for investigating information of a nanometer-order structure. When a substance is irradiated with X-rays, the incident X-rays reflect the information of electron density distribution in the inside of the substance, and scattered X-rays are generated around the incident X-rays. For example, if the substance contains an uneven region of particles or the electron density, the X-rays interfere with one another and scattering occurs due to density fluctuation regardless of whether the substance is crystalline or amorphous. For a metal such as an aluminum alloy, if the aluminum alloy microstructure contains particles such as small precipitates of nanometer order, scattering is observed due to such particles. When X-rays having a wavelength of 1.54 Å generated using a Cu target are used, the scattered X-rays are generated in a measured-angle 2θ range from about 0.1 to 10 degrees. In the small-angle X-ray scattering method, it is possible to obtain information of the nanometer-order particles, such as a shape, size, and distribution, through analysis of the scattered X-rays. For example, Japanese Unexamined Patent Application Publication No. 2011-38136 uses the small-angle X-ray scattering method in order to determine the average particle diameter and the number density of peak sizes in particle size distribution relating to formation of a stretcher strain mark during press forming of the 5000-series Al—Mg alloy sheet.</p>
+      <heading id="h-00011-en" level="2">(Method of Obtaining Particle Size Distribution)</heading>
+      <p id="p-00034-en" num="0032">First, a scatter intensity profile of X-rays of an aluminum alloy sheet is obtained through determination by the small-angle X-ray scattering method in order to determine the average particle diameter in the particle size distribution and the volume fraction thereof in the aluminum alloy microstructure defined in the invention. For example, the scatter intensity profile of X-rays is obtained as a profile with a vertical axis indicating scatter intensity of X-rays (scatter intensity of scattered X-rays), and a horizontal axis indicating a wave vector q (nm<sup>−1</sup>) that varies depending on a measurement angle 2θ and a wavelength λ. The average particle diameter in the particle size distribution and the volume fraction thereof can be obtained from the scatter intensity profile.</p>
+      <p id="p-00035-en" num="0033">Specifically, fitting is performed using a nonlinear least-square method such that measured X-ray scatter intensity is approximate to the X-ray scatter intensity calculated from a theoretical formula represented by a function of particle diameter and size distribution, thereby the particle diameter and the variance can be obtained. The volume fraction of the particles can be obtained as follows: a scatter intensity profile of an object is normalized using a concurrently measured scatter intensity profile of a substance of which the precipitated amount is known, and then the volume fraction is obtained from the scatter intensity derived from the precipitated substance.</p>
+      <p id="p-00036-en" num="0034">For example, a known analysis method by Schmidt et al. (see I. S. Fedorovaand P. Schmidt: J. Appl. Cryst. 11, 405, 1978) is used as such an analysis method of analyzing the X-ray scatter intensity profile to obtain the particle size distribution. The volume fraction of the particles is determined based on Hiroshi Okuda: Microstructures in Metallic Alloys Examined by Small-Angle Scattering (SAS) (An Introduction to the Crystallographer's World), Journal of the Crystallographic Society of Japan, 41, 6 (1999).</p>
+      <heading id="h-00012-en" level="2">(Particle Diameter and Volume Fraction of Particles)</heading>
+      <p id="p-00037-en" num="0035">In the invention, as guidelines for indicating a relationship between the microstructure and press formability of the Al—Mg alloy sheet containing Cu, an average particle diameter in particle size distribution determined by the small-angle X-ray scattering method is 0.5 to 6.0 nm, and the volume fraction thereof is 0.03% or more.</p>
+      <p id="p-00038-en" num="0036">Thus, in the invention, a certain amount (certain volume fraction) or more of particles, which have a size (average particle diameter) in a certain range determined by the small-angle X-ray scattering method, are contained in the microstructure of the Al—Mg alloy sheet containing Cu. Consequently, the effect of increasing the limit strain amount is enhanced, so that serrations on the stress-strain curve is suppressed, and the parallel band caused by the serrations is suppressed, and consequently formation of the stretcher strain mark is suppressed.</p>
+      <p id="p-00039-en" num="0037">The volume fraction refers to a ratio of the total volume of all the detected particles (detectable particles) to the volume of the aluminum alloy sheet (volume of the entire aluminum alloy sheet). The producible limit (upper limit) of the volume fraction is about several percent, and further increasing the number density is difficult in manufacturing of the Al—Mg alloy sheet containing Cu. Hence, a preferred upper limit of the volume fraction is defined to be 10%.</p>
+      <p id="p-00040-en" num="0038">For the average particle diameter of less than 0.5 nm in the particle size distribution, size (particle size) is too small; hence, the effect of increasing the limit strain amount is substantially not exhibited, and the effect of suppressing formation of the stretcher strain mark is not exhibited.</p>
+      <p id="p-00041-en" num="0039">For the average particle diameter of more than 6.0 nm in the particle size distribution, size (particle size) is too large; hence, the effect of increasing the limit strain amount is also substantially not exhibited, and the effect of suppressing formation of the stretcher strain mark is not exhibited.</p>
+      <p id="p-00042-en" num="0040">For the volume fraction of the particles of less than 0.03%, the amount of particles effective for increasing the limit strain amount is insufficient; hence, the effect of increasing the limit strain amount is substantially not exhibited, and the effect of suppressing formation of the stretcher strain mark is not exhibited.</p>
+      <p id="p-00043-en" num="0041">The invention also prevents formation of a random mark as the first type of the SS mark due to occurrence of yield elongation. Consequently, it is not necessary to take a previous measure to add a pre-strain (pre-working) for preventing the formation of the random mark. In other words, it is possible to sufficiently suppress both types of the stretcher strain mark (SS mark), i.e., the random mark formed in a region of a relatively small amount of strain and the parallel band formed in a region of a relatively large amount of strain while the previous pre-strain is not added (pre-working is not performed).</p>
+      <p id="p-00044-en" num="0042">Even if a demand level for a surface texture becomes strict more and more particularly in the outer panel, the appearance of which is a commercially important factor, as a material sheet for auto panels, the invention can suppress formation of both the random mark caused by yield elongation and the parallel band relating to serrations on the stress-strain curve. As a result, performance of the material sheet for auto panels can be greatly improved.</p>
+      <heading id="h-00013-en" level="2">(Chemical Composition)</heading>
+      <p id="p-00045-en" num="0043">The chemical composition of the aluminum alloy sheet for forming basically corresponds to an aluminum alloy corresponding to JIS 5000-series Al—Mg alloy.</p>
+      <p id="p-00046-en" num="0044">The invention must satisfy various properties of a material sheet, particularly a material sheet to be formed into auto panels, such as press formability, strength, weldability, and corrosion resistance. Hence, the alloy sheet of the invention is specified to be an Al—Mg alloy sheet, which contains, by mass percent, Mg: 2.0 to 6.0%, and Cu: more than 0.3% and 2.0% or less, with the remainder consisting of Al and inevitable impurities, of the 5000 series aluminum alloy. The content of each element is represented by mass percent.</p>
+      <p id="p-00047-en" num="0045">As described above, Zn as an impurity element causes age hardening at room temperature, and degrades bendability and press formability; hence, the Zn content is intentionally minimized. When Zn is contained, the Zn content is limited to, by mass percent, less than 1.0%, preferably 0.6% or less, and more preferably 0.1% or less.</p>
+      <heading id="h-00014-en" level="2">Mg: 2.0 to 6.0%</heading>
+      <p id="p-00048-en" num="0046">Mg improves work hardenability and provides strength and durability necessary for the material sheet for auto panels. In addition, Mg allows a material to be deformed uniformly and plastically and thus increases the rupture limit of the material, and thereby improves formability of the material. When the Mg content is less than 2.0%, the material becomes insufficient in strength and durability. When the Mg content exceeds 6.0%, the sheet is difficult to be manufactured, and grain boundary fracture is rather easily caused during press forming, leading to a significant degradation in press formability. Hence, the Mg content is within a range from 2.0 to 6.0%, preferably 2.4 to 5.7%.</p>
+      <p id="p-00049-en" num="0000">Cu: More than 0.3% and 2.0% or Less</p>
+      <p id="p-00050-en" num="0047">Cu forms the clusters of atoms (atom clusters) mainly including Cu, and suppresses the SS mark formation during press forming without causing room-temperature age hardening of the sheet unlike Zn. When the content of Cu is extremely small, 0.3% or less, the formation amount of the clusters mainly including Cu is insufficient, and the effect of suppressing SS mark formation during press forming is insufficiently exhibited. When the content of Cu exceeds 2.0%, the amount of coarse crystallized grains or precipitates, which tend to become fracture origins, is increased, and consequently press formability is rather degraded. The Cu content is within a range from more than 0.3% to 2.0%, preferably from 0.5 to 1.5%.</p>
+      <p id="p-00051-en" num="0048">The content ratio of Cu to Mg, Cu/Mg, is preferably 0.08 to 0.8 in order to allow the addition effect of Cu to be exhibited. The upper limit and the lower limit of this ratio represent a range calculated from a ratio of the preferred upper limits of the Mg content and the Cu content and a ratio of the preferred lower limits thereof.</p>
+      <heading id="h-00015-en" level="2">Other Elements</heading>
+      <p id="p-00052-en" num="0049">Other elements exemplarily include Fe, Si, Mn, Cr, Zr, and Ti. Such elements are impurity elements the content of each of which increases with an increase in amount (a ratio with respect to aluminum metal) of aluminum alloy scrap in a form of a melting material. Specifically, if the 5000-series alloy, other Al-alloy scrap materials, and low-purity Al metal are used as ingot materials in addition to high-purity Al metal from the viewpoint of recycling of aluminum alloy sheets, the mixing amount (content) of each of such elements necessarily increases. Decreasing each of the elements to an amount, for example, equal to or lower than the detection limit inevitably increases manufacturing cost; hence, it is necessary to allow the element to be contained in the amount comparable with the typical standard (upper limit) of the 5000-series aluminum alloy, i.e., necessary to define the upper limit of the content of the element.</p>
+      <p id="p-00053-en" num="0050">In this regard, the aluminum alloy sheet is allowed to further contain, by mass percent, one or more elements selected among Fe: 0.5% or less, Si: 0.5% or less, Mn: 0.5% or less, Cr: 0.1% or less, Zr: 0.1% or less, and Ti: 0.05% or less. In addition, boron (B) that tends to be mixed in with Ti is allowed to be contained within a range of less than the Ti content.</p>
+      <heading id="h-00016-en" level="2">(Manufacturing Method)</heading>
+      <p id="p-00054-en" num="0051">A method of manufacturing the sheet of the invention is now specifically described.</p>
+      <p id="p-00055-en" num="0052">In the invention, a semifinished product of the sheet can be fabricated up to a rolling step before solution treatment by a method according to a typical manufacturing process of the Al—Mg alloy for forming that contains about 4.5% of Mg, such as alloy of 5182, 5082, 5083, or 5056. Specifically, the semifinished product is fabricated through the typical manufacturing steps of casting (DC casting or continuous casting), homogenization heat treatment, and hot rolling, and is thus formed into an aluminum alloy hot-rolled sheet having a thickness of 1.5 to 5.0 mm. The aluminum alloy hot-rolled sheet in this stage may be used as a product sheet. Alternatively, the hot-rolled sheet may be further cold-rolled while being selectively subjected to one or more times of intermediate annealing before or during the cold rolling, and thus formed into a cold-rolled product sheet having a thickness of 1.5 mm or less.</p>
+      <heading id="h-00017-en" level="2">Solution Treatment:</heading>
+      <p id="p-00056-en" num="0053">To produce the sheet having the microstructure of the invention, such a hot-rolled or cold-rolled sheet, which has been produced in the above way so as to have the required thickness, is first subjected to solution treatment-and-hardening treatment with rapid heating and rapid cooling. The material subjected to such solution treatment-and-hardening treatment, so-called T4-treated material, is excellent in balance between strength and formability compared with a batch-annealed material with relatively slow heating and slow cooling. In addition, atomic vacancies are introduced during the hardening treatment following the solution treatment.</p>
+      <p id="p-00057-en" num="0054">An optimum value of the solution treatment temperature must be within a range from 450 to 570° C. while being varied depending on specific alloy components. The material is preferably held at the solution treatment temperature for 180 seconds (3 minutes) or less. If the solution treatment temperature is lower than 450° C., each alloy element is insufficiently dissolved, which may degrade strength, ductility, and the like. If the solution treatment temperature exceeds 570° C., particles are excessively coarsened, leading to a problem of degradation in formability or surface roughening. If the holding time at the solution treatment temperature exceeds 180 seconds, the particles may be excessively coarsened.</p>
+      <heading id="h-00018-en" level="2">Hardening Treatment:</heading>
+      <p id="p-00058-en" num="0055">While the sheet is cooled to room temperature in the hardening treatment following the solution treatment, the sheet must be cooled at an average cooling rate of 5° C./s or more from the solution treatment temperature to 200° C. If the average cooling rate from the solution treatment temperature to 200° C. is less than 5° C./s, coarse precipitates are formed during cooling, and even if the sheet is subsequently subjected to low-temperature annealing so as to be formed into a final sheet, the SS mark is formed. This is because the amount of the particles becomes insufficient, and thus the volume fraction does not satisfy 0.03% or more. Such solution treatment-and-hardening treatment with rapid heating and rapid cooling may be continuously performed using forced air cooling in a continuous annealing line (CAL) or forced cooling such as mist cooling or water cooling. The solution treatment-and-hardening treatment may be performed in a batch type using a salt bath or the like for heating, and using water quenching, oil quenching, forced air cooling, or the like for cooling. When the solution treatment-and-hardening treatment is performed using the CAL, each of heating rate and cooling rate between room temperature and the solution treatment temperature is typically about 1 to 30° C./s.</p>
+      <heading id="h-00019-en" level="2">Low-Temperature Annealing:</heading>
+      <p id="p-00059-en" num="0056">In the invention, the sheet subjected to the hardening treatment is then aged at room temperature (left at room temperature) for 24 hours or more, and is then subjected to low-temperature annealing that heats the sheet at a temperature of higher than 100° C. and 200° C. or lower. In the low-temperature annealing treatment, the sheet is heated and held for about 0.5 to 48 hours within the temperature range.</p>
+      <p id="p-00060-en" num="0057">If the low-temperature annealing temperature is too low, or if the holding time is too short, the effect of the annealing is not exhibited, and the ultrafine particles are not formed or insufficiently formed after the annealing. Hence, a sufficient amount of particles are not produced only by controlling the cooling rate during the hardening treatment after the solution treatment, and consequently the volume fraction of 0.03% or more is not achieved. As a result, the SS mark formation is probably not prevented.</p>
+      <p id="p-00061-en" num="0058">When the low-temperature annealing treatment is performed at a temperature higher than 200° C., relatively coarse particles are formed instead of the particles by the annealing treatment at such an excessively high temperature, and the average particle diameter in the particle size distribution of the coarse particles does not satisfy 0.5 to 6.0 nm.</p>
+      <p id="p-00062-en" num="0059">The low-temperature annealing treatment is not performed immediately or continuously after the hardening treatment, but is performed after being subjected to room-temperature aging treatment for 24 hours or more, preferably 48 hours or more, following the hardening treatment. The room-temperature aging time refers to time from the end (completion) of the hardening treatment to start of heating of the low-temperature annealing (elapsed or required time).</p>
+      <p id="p-00063-en" num="0060">When the low-temperature annealing is performed following the hardening treatment (with rapid cooling), the low-temperature annealing is typically performed as early as possible after the hardening treatment from the viewpoint of productivity. In the invention, however, the sheet is sufficiently aged at room temperature after the hardening treatment. As a result, the average particle diameter in the particle size distribution can be controlled to be 0.5 to 6.0 nm, and the volume fraction thereof can also be controlled to be 0.03% or more.</p>
+      <heading id="h-00020-en" level="2">Cold Working:</heading>
+      <p id="p-00064-en" num="0061">To particularly prevent the random mark as the first type of the SS mark, the sheet of the invention is subjected to cold working (pre-working), which adds a pre-strain with a working rate of about 0.2 to 5% to the sheet, after being subjected to the low-temperature annealing treatment. In this way, the sheet is subjected to the cold working as pre-working while the working rate is adjusted such that an increase in yield strength value is within a specific range, thereby occurrence of yield elongation is steadily suppressed during press forming, so that formation of the SS mark, particularly the random mark, can be surely prevented.</p>
+      <p id="p-00065-en" num="0062">The adding amount of the pre-strain should be similar to that in typical pre-working that is previously performed for preventing formation of the random mark. For example, pre-strain with a working rate of about 0.2 to 5% is added through cold skin-pass rolling, cold rolling, cold repeated-bending by a roller leveler, or the like.</p>
+      <p id="p-00066-en" num="0063">Such a pre-strain is added (cold working is performed), thereby a large number of deformation bands can be actively introduced in the material, and occurrence of yield elongation can be steadily prevented, and consequently formation of the random mark can also be surely prevented in the Al—Mg alloy sheet with particles. If the working rate of the cold working is too small, less than 0.2%, the effect of suppressing formation of the random mark is not exhibited. If the working rate of the cold working is too large to exceed 5%, the yield strength value of the sheet becomes excessively high, and ductility and formability may be rather degraded due to work hardening.</p>
+      <p id="p-00067-en" num="0064">In the invention, the aluminum alloy sheet satisfying the definition of the particles can be manufactured through refining as a combination of the solution treatment condition, the hardening treatment condition, the low-temperature annealing following the room-temperature aging, and the subsequent cold working. Consequently, the Al—Mg alloy sheet containing Cu is enhanced in the effect of increasing the limit strain amount, and thus serrations on the stress-strain curve are suppressed and the parallel band caused by the serrations is suppressed, and thereby formation of the stretcher strain mark is suppressed. In addition, formation of the random mark as the first type of the SS mark caused by occurrence of yield elongation is also suppressed.</p>
+      <p id="p-00068-en" num="0065">Although the invention is now described in detail with an embodiment, the invention should not be limited thereto, and it will be appreciated that modifications or alterations thereof may be made within the scope without departing from the gist described before and later, all of which are included in the technical scope of the invention.</p>
+      <heading id="h-00021-en" level="1">EMBODIMENT</heading>
+      <p id="p-00069-en" num="0066">An embodiment of the invention is now described. Al—Mg alloy sheets having the compositions of the inventive examples and the comparative examples as shown in Table 1 were fabricated, and were refined under the conditions shown in Table 2 (continuation of Table 1). The refined sheets were each measured and evaluated in microstructure and mechanical properties.</p>
+      <p id="p-00070-en" num="0067">In Table 1, “−” in the content of an element represents that the content of that element is equal to or lower than the detection limit. In Tables 1 and 2, the same symbols are used, and examples designated by the same symbol are the same examples.</p>
+      <p id="p-00071-en" num="0068">In all the examples, the hot-rolled sheet and the cold-rolled sheet were each fabricated by the same procedure (condition). Specifically, an ingot 50 mm in thickness formed by book mold casting was subjected to homogenization heat treatment for 8 hours at 480° C., and was then hot-rolled at 400° C. As a result, a hot-rolled sheet having a thickness of 2.5 mm was produced. The hot-rolled sheet was cold-rolled into a thickness of 1.35 mm, and the cold-rolled sheet was subjected to intermediate annealing for 10 seconds at 400° C. in a salt bath, and was then cold-rolled into a cold-rolled sheet having a thickness of 1.0 mm.</p>
+      <p id="p-00072-en" num="0069">Such a cold-rolled sheet was subjected to solution treatment and hardening treatment down to room temperature at various conditions shown in Table 2. Subsequently, as shown in Table 2, such formed sheets were subjected to room-temperature aging treatment from the end of the hardening at room temperature to start of heating of low-temperature annealing while the aging treatment time was varied, and were then subjected to the low-temperature annealing treatment while temperature and time conditions were varied. Furthermore, each sheet subjected to the low-temperature annealing treatment was then immediately subjected to cold working for adding a pre-strain to the sheet through skin-pass rolling with a common working rate of 0.5%.</p>
+      <p id="p-00073-en" num="0070">A test specimen (1 mm thick) was cut out from each of the skin-pass-rolled sheets. The test specimen (the sheet that has just refined) was subjected to small-angle X-ray scattering measurement, microstructure measurement, and mechanical property measurement, and were evaluated in such properties within 24 hours after the skin-pass rolling (after the sheet has been finally produced) such that influence of room-temperature aging was not effective (was negligible).</p>
+      <heading id="h-00022-en" level="2">(Small-Angle X-Ray Scattering Measurement)</heading>
+      <p id="p-00074-en" num="0071">The small-angle X-ray scattering measurement was performed in common in the examples using the horizontal x-ray diffractometer SmartLab (from Rigaku Corporation) with X-rays having a wavelength of 1.54 Å, so that scatter intensity profile of the X-rays was determined in each example. In the x-ray diffractometer, X-rays are incident perpendicularly onto the surface of a test specimen, and X-rays, which are scattered back from the test specimen at a slight angle (small angle) of 0.1 to 10 degrees with respect to the incident X-rays, are measured using a detector. The test specimen was thinned into about 80 μm for measurement. The small-angle X-ray scattering measurement was performed on an across-the-width section as with a typical measurement site of this type of microstructure. An average of the measured values of five test specimens for measurement, which were sampled from appropriate places (five measurement places) in the across-the-width section of the sheet immediately after the refining, was obtained to determine each of the average particle diameter and the volume fraction (average volume fraction) in the particle size distribution defined in the invention.</p>
+      <p id="p-00075-en" num="0072">The scatter intensity profile of the X-rays was determined using an analysis software including the known analysis method by Schmidt et al., i.e., particle size and pore size analysis software NANO-Solver [Ver. 3.5] by Rigaku Corporation. Fitting was performed by a nonlinear least-square method such that the measured X-ray scatter intensity was approximate to the X-ray scatter intensity calculated with the analysis software, so that the average particle diameter (Cu clusters) was obtained. The average particle diameter was obtained as follows: assuming that each particle had a perfect spherical shape, scatter intensity was calculated using a theoretical formula, and the calculated value was fitted with the experimental value to determine the average particle diameter.</p>
+      <p id="p-00076-en" num="0073">The volume fraction of the particles (Cu clusters) was obtained as follows: a scatter intensity profile of a standard sample of which the precipitated amount was known was used to normalize the scatter intensity derived from the particles (Cu clusters), and then the scatter intensity derived from the particles was integrated to determine the volume fraction. Assuming that the particles were clusters of Cu atoms, the electron density of the particles was obtained based on that of pure copper to calculate a difference in electron density with respect to the aluminum parent phase.</p>
+      <heading id="h-00023-en" level="2">(Mechanical Properties)</heading>
+      <p id="p-00077-en" num="0074">A tensile test was performed to investigate the mechanical properties of the test specimen, and tensile strength and elongation were each measured. According to the test condition, a JIS Z2201 No. 5 test piece (25 mm×50 mm gage length (GL)×thickness) was taken from the test specimen in a direction perpendicular to the rolling direction, and was subjected to the tensile test. The tensile test was conducted at room temperature, according to JIS Z2241 (1980) (Method of tensile test for metallic materials). The tensile test was conducted at a constant cross head speed of 5 mm/min until the test piece was ruptured.</p>
+      <p id="p-00078-en" num="0000">(Properties of Sheet after Aging Variation at Room Temperature)</p>
+      <p id="p-00079-en" num="0075">To evaluate aging variation during holding at room temperature (influence of room-temperature age hardening), the test specimen was further held for one month at room temperature, and was then subjected to a tensile test under the same condition to determine an increased amount of tensile strength (amount of room-temperature age hardening) from the end of the refining treatment (from the end of fabrication). While a smaller amount of room-temperature age hardening is better, the increased amount of tensile strength per month is preferably 10 MPa or less as a rough guide.</p>
+      <heading id="h-00024-en" level="2">(Evaluation of SS Mark Formation)</heading>
+      <p id="p-00080-en" num="0076">In evaluation of the SS mark formation, the test specimen was also further held for one month at room temperature and then the SS mark formation state was evaluated in consideration that the fabricated sheet was held for a certain period before being subjected to press forming. For this evaluation, the test specimen was held for one month at room temperature, and then subjected to the tensile test to investigate the limit strain amount (critical strain amount (%)) for occurrence of the saw-toothed serrations on the stress-strain curve. Although this embodiment does not actually (directly) check the SS mark (SS mark formation) on a press-formed sheet, the critical strain amount for serrations is in good correlation with the SS mark formation state of the actually press-formed sheet. In this way, as a guideline for indicating formability of an aluminum alloy sheet, such as the SS mark formation state, the critical strain for occurrence of serrations on the stress-strain curve of the aluminum alloy sheet is preferably 8% or more. The upper limit of the critical strain amount cc (limit strain amount) is estimated to be, but not limited to, about 20% in light of limitations in manufacturing, or the like.</p>
+      <heading id="h-00025-en" level="2">(Evaluation of Press Formability)</heading>
+      <p id="p-00081-en" num="0077">A stretch forming test was conducted to evaluate stretch formability as an issue of the outer panel. In the stretch forming test, in consideration that the fabricated sheet was held for a certain period before being subjected to press forming, the test specimen was also further held for one month at room temperature, and then the stretch forming test was conducted at a forming speed of 4 mm/s, with a blank holder load of 200 kN, and at a stroke of 20 mm while a spherical-head stretch punch 101.6 mm in diameter was used, rust prevention-and-cleaning oil R-303P (from SUGIMURA Chemical Industrial, Co., Ltd.) was applied as a lubricant onto a test piece 180 mm long and 110 mm wide, and a crack occurring state was visually observed. The test specimen was evaluated as ∘ for no crack occurrence during press forming, and as x for crack occurrence in a partial or the entire region.</p>
+      <p id="p-00082-en" num="0078">As seen in Table 1, each of the inventive examples 1 to 8 contains Cu, but does not contain Zn or is limited in Zn content, and thus satisfies the composition of the Al—Mg alloy defined in the invention. As seen in Table 2, such inventive examples are each manufactured under a preferred manufacturing condition as a special combination of the above-described solution treatment-and-hardening treatment, pre-strain, room-temperature aging, and low-temperature annealing. As a result, as seen in Table 2, the microstructure of the Al—Mg alloy sheet containing Cu is successfully controlled such that an average particle diameter in particle size distribution determined by a small-angle X-ray scattering method is 0.5 to 6.0 nm, and the volume fraction thereof is 0.03% or more as defined in the invention.</p>
+      <p id="p-00083-en" num="0079">Consequently, as seen in Table 2, each of the inventive examples is small in increased amount of tensile strength (good in room-temperature aging characteristic, i.e., small in amount of room-temperature age hardening) from the end of fabrication, and is good in press formability including the SS mark characteristic. Specifically, the inventive examples each have a critical strain of 8% or more for occurrence of serrations on the stress-strain curve of the aluminum alloy sheet, some of which have a high critical-strain of 10% or more, and each show no crack occurrence even in the stretch forming test. In addition, such a good SS mark characteristic is successfully achieved without reducing a good mechanical property level including tensile strength and elongation of the 5000-series aluminum alloy sheet including JIS 5052 alloy and JIS 5182 alloy, and without room-temperature age hardening.</p>
+      <p id="p-00084-en" num="0080">However, the inventive example 8, which contains a relatively large amount, 0.6%, of Zn though within the allowable range, is inferior in room-temperature aging characteristic though within the allowable range compared with the inventive examples 3 and 6 having low Zn contents of 0.03% and 0.02%, respectively, and compared with other inventive examples containing no Zn.</p>
+      <p id="p-00085-en" num="0081">In each of the comparative examples 9 to 14, as seen in Table 2, although the alloy composition of the sheet is substantially the same as that of the inventive example 2, the manufacturing condition thereof is out of the preferred range. The comparative example 9 is too low in solution treatment temperature. The comparative example 10 is too low in cooling rate in the hardening treatment. The comparative example 11 is too short in holding time of the room-temperature aging from the end of hardening to start of the low-temperature annealing. The comparative example 12 is too short in holding time of the low-temperature annealing. The comparative example 13 is too low in low-temperature annealing temperature. The comparative example 14 is too high in low-temperature annealing temperature.</p>
+      <p id="p-00086-en" num="0082">As a result, as seen in Table 2, the comparative examples 9 to 14 each do not satisfy the particle size distribution defined in the invention. Hence, although the mechanical properties such as strength and elongation are not greatly different from those of each inventive example, the critical strain for occurrence of serrations on the stress-strain curve of the aluminum alloy sheet is low, less than 8%, and the SS mark characteristic is significantly worse than that of the inventive example. In other words, the comparative examples each have a microstructure that tends to cause the serrations.</p>
+      <p id="p-00087-en" num="0083">In each of the comparative examples 15 to 18, as seen in Table 2, although the manufacturing condition of the sheet is within the preferred range, the alloy composition thereof is out of the range of the invention. The comparative example 15 does not contain Cu. The comparative example 16 is too high in Mg content. The comparative example 17 is too low in Cu content. The comparative example 18 is too high in Zn content.</p>
+      <p id="p-00088-en" num="0084">As a result, as seen in Table 2, each of the comparative examples 15 and 17, which do not exhibit the effect of Cu, does not satisfy the particle size distribution defined in the invention although it is manufactured under a preferred condition. Hence, although the amount of room-temperature age hardening is small, strength is low, and the critical strain for occurrence of serrations on the stress-strain curve of the aluminum alloy sheet is small, less than 8%, and the SS mark characteristic is significantly worse than that of each inventive example. In other words, the comparative examples each have a microstructure that tends to cause the serrations.</p>
+      <p id="p-00089-en" num="0085">The comparative example 16 is too high in strength and is small in elongation, and shows crack occurrence during press forming, i.e., is inferior in press formability compared with the inventive example.</p>
+      <p id="p-00090-en" num="0086">The comparative example 18 is too high in Zn content, resulting in a large amount of room-temperature age hardening beyond the allowable range. Hence, the comparative example 18 shows crack occurrence during press forming, i.e., is inferior in press formability compared with the inventive example.</p>
+      <p id="p-00091-en" num="0087">The above-described embodiment supports the critical meaning of the requirements of the invention or the preferred manufacturing condition for providing the SS mark characteristic, the press formability, and the mechanical properties.</p>
+      <p id="p-00092-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="238pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Chemical composition of Al—Mg alloy sheet (mass %, the remainder Al)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="12" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <colspec colname="8" colwidth="28pt" align="center" />
+              <colspec colname="9" colwidth="28pt" align="center" />
+              <colspec colname="10" colwidth="21pt" align="center" />
+              <colspec colname="11" colwidth="21pt" align="center" />
+              <colspec colname="12" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Cu/Mg</entry>
+                </row>
+                <row>
+                  <entry>Classification</entry>
+                  <entry>Number</entry>
+                  <entry>Mg</entry>
+                  <entry>Cu</entry>
+                  <entry>Fe</entry>
+                  <entry>Si</entry>
+                  <entry>Mn</entry>
+                  <entry>Zn</entry>
+                  <entry>Cr</entry>
+                  <entry>Zr</entry>
+                  <entry>Ti</entry>
+                  <entry>ratio</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="12" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="12" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="char" char="." />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <colspec colname="6" colwidth="21pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <colspec colname="8" colwidth="28pt" align="center" />
+              <colspec colname="9" colwidth="28pt" align="center" />
+              <colspec colname="10" colwidth="21pt" align="center" />
+              <colspec colname="11" colwidth="21pt" align="center" />
+              <colspec colname="12" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Inventive </entry>
+                  <entry>1</entry>
+                  <entry>4.5</entry>
+                  <entry>0.5</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>0.11</entry>
+                </row>
+                <row>
+                  <entry>example</entry>
+                  <entry>2</entry>
+                  <entry>4.4</entry>
+                  <entry>0.5</entry>
+                  <entry>0.2</entry>
+                  <entry>0.2</entry>
+                  <entry>0.01</entry>
+                  <entry>—</entry>
+                  <entry>0.01</entry>
+                  <entry>—</entry>
+                  <entry>0.03</entry>
+                  <entry>0.11</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>3</entry>
+                  <entry>4.5</entry>
+                  <entry>1.1</entry>
+                  <entry>0.2</entry>
+                  <entry>0.1</entry>
+                  <entry>0.02</entry>
+                  <entry>0.03</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>0.02</entry>
+                  <entry>0.24</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>4</entry>
+                  <entry>4.5</entry>
+                  <entry>1.8</entry>
+                  <entry>0.1</entry>
+                  <entry>0.2</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>0.1</entry>
+                  <entry>0.01</entry>
+                  <entry>0.02</entry>
+                  <entry>0.40</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>5</entry>
+                  <entry>4.0</entry>
+                  <entry>0.7</entry>
+                  <entry>0.1</entry>
+                  <entry>0.4</entry>
+                  <entry>0.01</entry>
+                  <entry>—</entry>
+                  <entry>0.02</entry>
+                  <entry>—</entry>
+                  <entry>0.02</entry>
+                  <entry>0.18</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>6</entry>
+                  <entry>5.8</entry>
+                  <entry>0.7</entry>
+                  <entry>0.4</entry>
+                  <entry>0.2</entry>
+                  <entry>—</entry>
+                  <entry>0.02</entry>
+                  <entry>0.01</entry>
+                  <entry>—</entry>
+                  <entry>0.02</entry>
+                  <entry>0.12</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>7</entry>
+                  <entry>2.6</entry>
+                  <entry>0.4</entry>
+                  <entry>0.1</entry>
+                  <entry>0.1</entry>
+                  <entry>0.3</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>0.02</entry>
+                  <entry>0.02</entry>
+                  <entry>0.15</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>8</entry>
+                  <entry>4.7</entry>
+                  <entry>0.5</entry>
+                  <entry>0.1</entry>
+                  <entry>0.1</entry>
+                  <entry>0.05</entry>
+                  <entry>0.6</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>0.02</entry>
+                  <entry>0.11</entry>
+                </row>
+                <row>
+                  <entry>Comparative </entry>
+                  <entry>9</entry>
+                  <entry>4.4</entry>
+                  <entry>0.5</entry>
+                  <entry>0.2</entry>
+                  <entry>0.2</entry>
+                  <entry>0.01</entry>
+                  <entry>—</entry>
+                  <entry>0.01</entry>
+                  <entry>—</entry>
+                  <entry>0.02</entry>
+                  <entry>0.11</entry>
+                </row>
+                <row>
+                  <entry>example</entry>
+                  <entry>10</entry>
+                  <entry>4.4</entry>
+                  <entry>0.5</entry>
+                  <entry>0.2</entry>
+                  <entry>0.2</entry>
+                  <entry>0.01</entry>
+                  <entry>—</entry>
+                  <entry>0.01</entry>
+                  <entry>—</entry>
+                  <entry>0.02</entry>
+                  <entry>0.11</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>11</entry>
+                  <entry>4.4</entry>
+                  <entry>0.5</entry>
+                  <entry>0.2</entry>
+                  <entry>0.2</entry>
+                  <entry>0.01</entry>
+                  <entry>—</entry>
+                  <entry>0.01</entry>
+                  <entry>—</entry>
+                  <entry>0.02</entry>
+                  <entry>0.11</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>12</entry>
+                  <entry>4.4</entry>
+                  <entry>0.5</entry>
+                  <entry>0.2</entry>
+                  <entry>0.2</entry>
+                  <entry>0.01</entry>
+                  <entry>—</entry>
+                  <entry>0.01</entry>
+                  <entry>—</entry>
+                  <entry>0.02</entry>
+                  <entry>0.11</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>13</entry>
+                  <entry>4.4</entry>
+                  <entry>0.5</entry>
+                  <entry>0.2</entry>
+                  <entry>0.2</entry>
+                  <entry>0.01</entry>
+                  <entry>—</entry>
+                  <entry>0.01</entry>
+                  <entry>—</entry>
+                  <entry>0.02</entry>
+                  <entry>0.11</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>14</entry>
+                  <entry>4.4</entry>
+                  <entry>0.5</entry>
+                  <entry>0.2</entry>
+                  <entry>0.2</entry>
+                  <entry>0.01</entry>
+                  <entry>—</entry>
+                  <entry>0.01</entry>
+                  <entry>—</entry>
+                  <entry>0.02</entry>
+                  <entry>0.11</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>15</entry>
+                  <entry>4.5</entry>
+                  <entry>—</entry>
+                  <entry>0.1</entry>
+                  <entry>0.2</entry>
+                  <entry>0.4</entry>
+                  <entry>—</entry>
+                  <entry>0.03</entry>
+                  <entry>—</entry>
+                  <entry>0.02</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>16</entry>
+                  <entry>6.8</entry>
+                  <entry>0.7</entry>
+                  <entry>0.4</entry>
+                  <entry>0.1</entry>
+                  <entry>—</entry>
+                  <entry>0.01</entry>
+                  <entry>—</entry>
+                  <entry>0.03</entry>
+                  <entry>0.01</entry>
+                  <entry>0.10</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>17</entry>
+                  <entry>4.5</entry>
+                  <entry>0.2</entry>
+                  <entry>0.1</entry>
+                  <entry>0.4</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>0.01</entry>
+                  <entry>0.02</entry>
+                  <entry>0.04</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>18</entry>
+                  <entry>4.5</entry>
+                  <entry>0.5</entry>
+                  <entry>0.2</entry>
+                  <entry>0.2</entry>
+                  <entry>0.1</entry>
+                  <entry>1.5</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>0.01</entry>
+                  <entry>0.11</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="12" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00093-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <colspec colname="6" colwidth="42pt" align="center" />
+              <colspec colname="7" colwidth="42pt" align="center" />
+              <colspec colname="8" colwidth="28pt" align="center" />
+              <colspec colname="9" colwidth="70pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="9" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="9" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Particle size</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>distribution</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <colspec colname="6" colwidth="42pt" align="center" />
+              <colspec colname="7" colwidth="70pt" align="center" />
+              <colspec colname="8" colwidth="70pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>of sheet</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Room-</entry>
+                  <entry />
+                  <entry>microstructure</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>temperature</entry>
+                  <entry>Low-</entry>
+                  <entry>by small-</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="112pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="70pt" align="center" />
+              <colspec colname="6" colwidth="70pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Solution treatment</entry>
+                  <entry>aging </entry>
+                  <entry>temperature</entry>
+                  <entry>angle scattering</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <colspec colname="6" colwidth="42pt" align="center" />
+              <colspec colname="7" colwidth="70pt" align="center" />
+              <colspec colname="8" colwidth="35pt" align="center" />
+              <colspec colname="9" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Cooling</entry>
+                  <entry>treatment</entry>
+                  <entry>annealing</entry>
+                  <entry>Average</entry>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="10" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <colspec colname="6" colwidth="42pt" align="center" />
+              <colspec colname="7" colwidth="42pt" align="center" />
+              <colspec colname="8" colwidth="28pt" align="center" />
+              <colspec colname="9" colwidth="35pt" align="center" />
+              <colspec colname="10" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Holding</entry>
+                  <entry>rate in</entry>
+                  <entry>Holding</entry>
+                  <entry>Annealing</entry>
+                  <entry>Holding</entry>
+                  <entry>particle</entry>
+                  <entry>Volume</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Temperature</entry>
+                  <entry>time</entry>
+                  <entry>hardening</entry>
+                  <entry>time</entry>
+                  <entry>temperature</entry>
+                  <entry>time</entry>
+                  <entry>diameter</entry>
+                  <entry>fraction</entry>
+                </row>
+                <row>
+                  <entry>Classification</entry>
+                  <entry>Number</entry>
+                  <entry>° C.</entry>
+                  <entry>seconds</entry>
+                  <entry>° C./s</entry>
+                  <entry>h</entry>
+                  <entry>° C.</entry>
+                  <entry>h</entry>
+                  <entry>nm</entry>
+                  <entry>%</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="10" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Inventive </entry>
+                  <entry>1</entry>
+                  <entry>540</entry>
+                  <entry>300</entry>
+                  <entry>25</entry>
+                  <entry>168</entry>
+                  <entry>150</entry>
+                  <entry>24</entry>
+                  <entry>1.0</entry>
+                  <entry>0.05</entry>
+                </row>
+                <row>
+                  <entry>example</entry>
+                  <entry>2</entry>
+                  <entry>540</entry>
+                  <entry>60</entry>
+                  <entry>25</entry>
+                  <entry>72</entry>
+                  <entry>180</entry>
+                  <entry>4</entry>
+                  <entry>1.1</entry>
+                  <entry>0.06</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>3</entry>
+                  <entry>510</entry>
+                  <entry>120</entry>
+                  <entry>25</entry>
+                  <entry>216</entry>
+                  <entry>120</entry>
+                  <entry>36</entry>
+                  <entry>2.9</entry>
+                  <entry>0.09</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>4</entry>
+                  <entry>470</entry>
+                  <entry>150</entry>
+                  <entry>50</entry>
+                  <entry>48</entry>
+                  <entry>150</entry>
+                  <entry>8</entry>
+                  <entry>4.3</entry>
+                  <entry>0.11</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>5</entry>
+                  <entry>530</entry>
+                  <entry>60</entry>
+                  <entry>10</entry>
+                  <entry>240</entry>
+                  <entry>180</entry>
+                  <entry>4</entry>
+                  <entry>1.2</entry>
+                  <entry>0.07</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>6</entry>
+                  <entry>520</entry>
+                  <entry>90</entry>
+                  <entry>10</entry>
+                  <entry>192</entry>
+                  <entry>200</entry>
+                  <entry>2</entry>
+                  <entry>1.4</entry>
+                  <entry>0.07</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>7</entry>
+                  <entry>560</entry>
+                  <entry>60</entry>
+                  <entry>10</entry>
+                  <entry>24</entry>
+                  <entry>120</entry>
+                  <entry>48</entry>
+                  <entry>0.8</entry>
+                  <entry>0.04</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>8</entry>
+                  <entry>480</entry>
+                  <entry>120</entry>
+                  <entry>25</entry>
+                  <entry>480</entry>
+                  <entry>150</entry>
+                  <entry>24</entry>
+                  <entry>1.2</entry>
+                  <entry>0.05</entry>
+                </row>
+                <row>
+                  <entry>Comparative</entry>
+                  <entry>9</entry>
+                  <entry>420</entry>
+                  <entry>60</entry>
+                  <entry>25</entry>
+                  <entry>168</entry>
+                  <entry>150</entry>
+                  <entry>24</entry>
+                  <entry>2.5</entry>
+                  <entry>0.02</entry>
+                </row>
+                <row>
+                  <entry>example</entry>
+                  <entry>10</entry>
+                  <entry>540</entry>
+                  <entry>60</entry>
+                  <entry>3</entry>
+                  <entry>216</entry>
+                  <entry>150</entry>
+                  <entry>24</entry>
+                  <entry>1.9</entry>
+                  <entry>0.02</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>11</entry>
+                  <entry>540</entry>
+                  <entry>60</entry>
+                  <entry>25</entry>
+                  <entry>15</entry>
+                  <entry>150</entry>
+                  <entry>24</entry>
+                  <entry>1.1</entry>
+                  <entry>0.02</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>12</entry>
+                  <entry>540</entry>
+                  <entry>60</entry>
+                  <entry>25</entry>
+                  <entry>240</entry>
+                  <entry>150</entry>
+                  <entry>0.2</entry>
+                  <entry>0.9</entry>
+                  <entry>0.02</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>13</entry>
+                  <entry>540</entry>
+                  <entry>60</entry>
+                  <entry>25</entry>
+                  <entry>72</entry>
+                  <entry>70</entry>
+                  <entry>24</entry>
+                  <entry>0.8</entry>
+                  <entry>0.01</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>14</entry>
+                  <entry>540</entry>
+                  <entry>60</entry>
+                  <entry>25</entry>
+                  <entry>72</entry>
+                  <entry>250</entry>
+                  <entry>24</entry>
+                  <entry>7.7</entry>
+                  <entry>0.12</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>15</entry>
+                  <entry>570</entry>
+                  <entry>60</entry>
+                  <entry>10</entry>
+                  <entry>24</entry>
+                  <entry>150</entry>
+                  <entry>24</entry>
+                  <entry>—</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>16</entry>
+                  <entry>480</entry>
+                  <entry>120</entry>
+                  <entry>10</entry>
+                  <entry>192</entry>
+                  <entry>150</entry>
+                  <entry>24</entry>
+                  <entry>1.4</entry>
+                  <entry>0.07</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>17</entry>
+                  <entry>540</entry>
+                  <entry>90</entry>
+                  <entry>25</entry>
+                  <entry>72</entry>
+                  <entry>180</entry>
+                  <entry>4</entry>
+                  <entry>1.0</entry>
+                  <entry>0.02</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>18</entry>
+                  <entry>510</entry>
+                  <entry>60</entry>
+                  <entry>25</entry>
+                  <entry>72</entry>
+                  <entry>120</entry>
+                  <entry>36</entry>
+                  <entry>1.2</entry>
+                  <entry>0.06</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="10" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="char" char="." />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="252pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Sheet properties</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="28pt" align="char" char="." />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="char" char="." />
+              <colspec colname="5" colwidth="49pt" align="center" />
+              <colspec colname="6" colwidth="42pt" align="center" />
+              <colspec colname="7" colwidth="70pt" align="center" />
+              <colspec colname="8" colwidth="42pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Room-temperature</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Critical</entry>
+                  <entry />
+                  <entry />
+                  <entry>aging characteristic</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>strain for</entry>
+                  <entry>Tensile</entry>
+                  <entry />
+                  <entry>Increased amount </entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>serrations</entry>
+                  <entry>strength</entry>
+                  <entry>Elongation</entry>
+                  <entry>of tensile strength</entry>
+                  <entry>Press</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="49pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <colspec colname="6" colwidth="70pt" align="center" />
+              <colspec colname="7" colwidth="42pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Classification</entry>
+                  <entry>Number</entry>
+                  <entry>%</entry>
+                  <entry>MPa</entry>
+                  <entry>%</entry>
+                  <entry>(MPa)</entry>
+                  <entry>formability</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Inventive example</entry>
+                  <entry>1</entry>
+                  <entry>9</entry>
+                  <entry>280</entry>
+                  <entry>32</entry>
+                  <entry>0</entry>
+                  <entry>∘</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>2</entry>
+                  <entry>9</entry>
+                  <entry>288</entry>
+                  <entry>31</entry>
+                  <entry>2</entry>
+                  <entry>∘</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>3</entry>
+                  <entry>11</entry>
+                  <entry>300</entry>
+                  <entry>30</entry>
+                  <entry>2</entry>
+                  <entry>∘</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>4</entry>
+                  <entry>13</entry>
+                  <entry>320</entry>
+                  <entry>29</entry>
+                  <entry>1</entry>
+                  <entry>∘</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>5</entry>
+                  <entry>10</entry>
+                  <entry>302</entry>
+                  <entry>30</entry>
+                  <entry>1</entry>
+                  <entry>∘</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>6</entry>
+                  <entry>9</entry>
+                  <entry>313</entry>
+                  <entry>29</entry>
+                  <entry>3</entry>
+                  <entry>∘</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>7</entry>
+                  <entry>8</entry>
+                  <entry>270</entry>
+                  <entry>33</entry>
+                  <entry>1</entry>
+                  <entry>∘</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>8</entry>
+                  <entry>10</entry>
+                  <entry>301</entry>
+                  <entry>30</entry>
+                  <entry>6</entry>
+                  <entry>∘</entry>
+                </row>
+                <row>
+                  <entry>Comparative example</entry>
+                  <entry>9</entry>
+                  <entry>5</entry>
+                  <entry>267</entry>
+                  <entry>28</entry>
+                  <entry>1</entry>
+                  <entry>∘</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>10</entry>
+                  <entry>6</entry>
+                  <entry>270</entry>
+                  <entry>32</entry>
+                  <entry>1</entry>
+                  <entry>∘</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>11</entry>
+                  <entry>6</entry>
+                  <entry>284</entry>
+                  <entry>31</entry>
+                  <entry>1</entry>
+                  <entry>∘</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>12</entry>
+                  <entry>5</entry>
+                  <entry>283</entry>
+                  <entry>32</entry>
+                  <entry>2</entry>
+                  <entry>∘</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>13</entry>
+                  <entry>4</entry>
+                  <entry>261</entry>
+                  <entry>32</entry>
+                  <entry>1</entry>
+                  <entry>∘</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>14</entry>
+                  <entry>5</entry>
+                  <entry>299</entry>
+                  <entry>29</entry>
+                  <entry>1</entry>
+                  <entry>∘</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>15</entry>
+                  <entry>3</entry>
+                  <entry>245</entry>
+                  <entry>34</entry>
+                  <entry>0</entry>
+                  <entry>∘</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>16</entry>
+                  <entry>9</entry>
+                  <entry>339</entry>
+                  <entry>25</entry>
+                  <entry>2</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>17</entry>
+                  <entry>6</entry>
+                  <entry>258</entry>
+                  <entry>33</entry>
+                  <entry>0</entry>
+                  <entry>∘</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>18</entry>
+                  <entry>12</entry>
+                  <entry>318</entry>
+                  <entry>27</entry>
+                  <entry>27</entry>
+                  <entry>x</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00026-en" level="1">INDUSTRIAL APPLICABILITY</heading>
+      <p id="p-00094-en" num="0088">As described above, according to the invention, it is possible to provide the Al—Mg alloy sheet for forming, which is suppressed in formation of both the random mark caused by the yield elongation and the parallel band, and thus suppressed in SS mark formation without causing a new problem such as degradation in bendability due to age hardening at room temperature, and thereby improved in press formability into auto panels.</p>
+      <p id="p-00095-en" num="0089">As a result, the Al—Mg alloy sheet is widely used for many applications such as the motorcar, in which the sheet is press-formed to be used.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. An aluminum alloy sheet, comprising an Al—Mg alloy sheet comprising, by mass percent:
+<claim-text>Mg: 2.0 to 6.0%,</claim-text><claim-text>Cu: more than 0.3% and 2.0% or less, and Al,</claim-text><claim-text>wherein</claim-text><claim-text>the Al—Mg alloy sheet comprises particles having an average particle diameter in particle size distribution determined by a small-angle X-ray scattering method of from 0.5 to 6.0 nm, and</claim-text><claim-text>the particles have a volume fraction of 0.03% or more.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The aluminum alloy sheet according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising, by mass percent,
+<claim-text>one or more element selected from the group consisting of: Fe: 0.5% or less, Si: 0.5% or less, Mn: 0.5% or less, Cr: 0.1% or less, Zr: 0.1% or less, and Ti: 0.05% or less.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The aluminum alloy sheet according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising, by mass percent, Zn: 1.0% or less.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The aluminum alloy sheet according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, further comprising, by mass percent, Zn: 1.0% or less.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The aluminum alloy sheet according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the aluminum alloy sheet has a critical strain for occurrence of serrations on a stress-strain curve of the aluminum alloy sheet of 8% or more.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The aluminum alloy sheet according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the aluminum alloy sheet has a critical strain for occurrence of serrations on a stress-strain curve of the aluminum alloy sheet of 8% or more.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The aluminum alloy sheet according to <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the aluminum alloy sheet has a critical strain for occurrence of serrations on a stress-strain curve of the aluminum alloy sheet of 8% or more.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The aluminum alloy sheet according to <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the aluminum alloy sheet has a critical strain for occurrence of serrations on a stress-strain curve of the aluminum alloy sheet of 8% or more. </claim-text>
+    </claim>
+  </claims>
+  <image file="US20150252453A1.PDF" type="pdf" size="631343" pages="10" />
+</lexisnexis-patent-document>

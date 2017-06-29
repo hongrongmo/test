@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150252493A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021835" date-changed="20151221" time-changed="173850">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121229488">
+        <country>US</country>
+        <doc-number>20150252493</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14668697</doc-number>
+        <date>20150325</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150910">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2013052479</doc-number>
+        <date>20130314</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150917">
+      <classification-ipcr sequence="1">
+        <text>C30B  25/08        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>25</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C30B  25/12        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>25</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150917">
+      <classification-cpc sequence="1">
+        <text>C30B  25/08        20130101 FI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>25</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C30B  25/12        20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>25</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C30B  25/165       20130101 LI20150331BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>25</main-group>
+        <subgroup>165</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150331</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C30B  29/06        20130101 LI20150331BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>29</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150331</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">19</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">CEILING PORTION FOR EPITAXIAL GROWTH APPARATUS</invention-title>
+    <related-documents date-changed="20150910">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13934708</doc-number>
+              <date>20130703</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14006686</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+    </related-documents>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Applied Materials, Inc.</orgname>
+            <address>
+              <city>Santa Clara</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>OKABE</last-name>
+            <first-name>Akira</first-name>
+            <address>
+              <city>Ohmura-Shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>MORI</last-name>
+            <first-name>Yoshinobu</first-name>
+            <address>
+              <city>Ohmura-shi</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20151228">
+      <main-family family-id="167728923">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20140261159</doc-number>
+            <kind>A1</kind>
+            <date>20140918</date>
+          </document-id>
+          <application-date>
+            <date>20130703</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252492</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150325</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014179466</doc-number>
+            <kind>A</kind>
+            <date>20140925</date>
+          </document-id>
+          <application-date>
+            <date>20130314</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5602903</doc-number>
+            <kind>B2</kind>
+            <date>20141008</date>
+          </document-id>
+          <application-date>
+            <date>20130314</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252493</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150325</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="175385406">
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150131226</doc-number>
+            <kind>A</kind>
+            <date>20151124</date>
+          </document-id>
+          <application-date>
+            <date>20140313</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20140261159</doc-number>
+            <kind>A1</kind>
+            <date>20140918</date>
+          </document-id>
+          <application-date>
+            <date>20130703</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2014179466</doc-number>
+            <kind>A</kind>
+            <date>20140925</date>
+          </document-id>
+          <application-date>
+            <date>20130314</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>5602903</doc-number>
+            <kind>B2</kind>
+            <date>20141008</date>
+          </document-id>
+          <application-date>
+            <date>20130314</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>TW</country>
+            <doc-number>201500569</doc-number>
+            <kind>A</kind>
+            <date>20150101</date>
+          </document-id>
+          <application-date>
+            <date>20140313</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252492</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150325</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>105190841</doc-number>
+            <kind>A</kind>
+            <date>20151223</date>
+          </document-id>
+          <application-date>
+            <date>20140313</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252493</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150325</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014151867</doc-number>
+            <kind>A1</kind>
+            <date>20140925</date>
+          </document-id>
+          <application-date>
+            <date>20140313</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A ceiling portion for use in a processing apparatus and an epitaxial growth apparatus having the ceiling portion are disclosed herein. In one embodiment the ceiling portion includes a ring shaped support and a ceiling plate. The ring shaped support includes an inner surface having a first slope portion decreasing from a top surface of the ring shaped support towards a center of the ring shaped support and a protrusion, protruding from the inner surface, having a second slope portion decreasing in a protruding direction towards the center of the ring shaped support. The ceiling plate is coupled to the support. In another embodiment, the first slope portion and the second slope portion meet at a point, wherein an angle formed by the first slope portion and the second slope portion is less than 90 degrees.</p>
+  </abstract>
+  <legal-data date-changed="20150925">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150729</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015252493A1</docdb-publication-number>
+      <docdb-application-id>444311041</docdb-application-id>
+      <new-owner>APPLIED MATERIALS, INC., CALIFORNIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:OKABE, AKIRA;MORI, YOSHINOBU;REEL/FRAME:036200/0806</free-text-description>
+      <effective-date>
+        <date>20150415</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is a continuation of U.S. patent application Ser. No. 13/934,708 filed on Jul. 3, 2013, which claims priority to Japanese Patent Application Number 2013-052479 filed on Mar. 14, 2013, both of which are hereby incorporated by reference in its entirety.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">1. Field of the Invention</p>
+      <p id="p-00003-en" num="0003">The present invention relates to a film forming method using epitaxial growth and an epitaxial growth apparatus.</p>
+      <p id="p-00004-en" num="0004">2. Background Art</p>
+      <p id="p-00005-en" num="0005">At present, as an epitaxial growth apparatus for causing an epitaxial film to grow on a substrate using epitaxial growth, an apparatus including a process chamber and a rotatable substrate support disposed in the process chamber and configured to rotate a substrate about a rotation axis is known in which a reactant gas is introduced to the substrate in a direction parallel to the substrate to form a film on the substrate on the substrate support.</p>
+      <p id="p-00006-en" num="0006">In such an epitaxial growth apparatus, there is currently a need for an increase in growth rate. However, it is not preferable that a large amount of source gas is included in the reactant gas so as to further increase the growth rate, for example, because an increase in the film formation cost or an increase in the number of particles is caused.</p>
+      <p id="p-00007-en" num="0007">In epitaxial growth, when the thickness of a boundary layer (at a position at which the flow rate is 99% of the flow rate of the main stream of the reactant gas flow) on the surface of a substrate decreases, it is known that an increase in growth rate is expected. On the other hand, when the thickness of the boundary layer simply decreases, a flow in which the reactant gas escapes toward the circumferential edge of the substrate on the surface of the substrate is formed and it is thus difficult to adjust a film thickness distribution or a resistivity distribution.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00008-en" num="0008">In one embodiment, a ceiling portion for use in a processing apparatus is disclosed herein. The ceiling portion includes a ring shaped support and a ceiling plate. The ring shaped support includes an inner surface and a protrusion. The inner surface has a first slope portion. The inner surface decreases from a top surface of the ring shaped support towards a center of the ring shaped support. The protrusion extends from the inner surface. The protrusion includes a second slope portion decreasing in a protruding direction towards the center of the ring shaped support. The ceiling plate is coupled to the support.</p>
+      <p id="p-00009-en" num="0009">In another embodiment, a ceiling portion for use in a processing apparatus is disclosed herein. The ceiling portion includes a ring shaped support and a ceiling plate. The ring shaped support includes an inner surface and a protrusion. The inner surface has a first slope portion. The inner surface decreases from a top surface of the ring shaped support towards a center of the ring shaped support. The protrusion protrudes from the inner surface. The protrusion includes a second slope decreasing in a protruding direction towards the center of the ring shaped support. The first slope portion and the second slope portion meet at a point, wherein an angle formed by the first slope portion and the second slope portion is less than 90 degrees. The ceiling portion is coupled to the support. In another embodiment, an epitaxial growth apparatus is disclosed herein. The epitaxial growth apparatus includes a reaction chamber, a substrate mounting portion, and a support. The reaction chamber includes a ceiling portion having a ring shaped support and a ceiling plate. The ring shaped support includes an inner surface having a first slope portion decreasing from a top surface of the ring shaped support towards a center of the ring shaped support and a protrusion having a second slope portion decreasing in a protruding direction towards the center of the ring shaped support. The ceiling plate is coupled to the support. The substrate mounting portion is configured to support a substrate. The support is configured to support the ceiling portion such that the ceiling plate is separated from a ceiling surface of the epitaxial growth apparatus by a distance of at least 10 nm.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 1</figref> is a cross-sectional view illustrating the entire configuration of an epitaxial growth apparatus according to an embodiment of the present invention.</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 2</figref> is an exploded perspective view illustrating the configuration of a reaction chamber according to the embodiment of the present invention.</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 3</figref> is an exploded perspective view illustrating the outer configuration of the reaction chamber according to the embodiment of the present invention.</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 4</figref> is a perspective cross-sectional view illustrating the configuration of a ceiling portion according to the embodiment of the present invention.</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 5</figref> is a diagram schematically illustrating the inner configuration of a side wall according to the embodiment of the present invention.</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 6</figref> is a cross-sectional view illustrating a reactant gas supply path according to the embodiment of the present invention.</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIGS. 7A and 7B</figref> are diagrams schematically illustrating the reactant gas supply path according to the embodiment of the present invention.</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIGS. 8A and 8B</figref> are perspective views illustrating an example of a rectification plate according to the embodiment of the present invention.</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 9</figref> is a partial cross-sectional view illustrating an example of a susceptor ring according to the embodiment of the present invention.</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 10</figref> is a partial cross-sectional view illustrating another example of the susceptor ring according to the embodiment of the present invention.</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 11</figref> is a plan view illustrating an example of a susceptor according to the embodiment of the present invention.</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 12</figref> is a plan view illustrating another example of the susceptor according to the embodiment of the present invention.</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 13</figref> is a diagram schematically illustrating the configuration of a susceptor support according to the embodiment of the present invention.</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 14</figref> is a perspective view illustrating a susceptor shaft according to the embodiment of the present invention.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 15</figref> is a perspective view illustrating an example of a substrate lift according to the embodiment of the present invention.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 16</figref> is a perspective cross-sectional view illustrating an example of a gas discharge tube according to the embodiment of the present invention.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 17</figref> is a perspective view illustrating an example of an upper reflector according to the embodiment of the present invention.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 18</figref> is a plan view illustrating an example of a lower reflector according to the embodiment of the present invention.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 19</figref> is a graph illustrating results of examples and comparative examples.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 20</figref> is a perspective cross-sectional view illustrating the configuration of a ceiling portion of an epitaxial growth apparatus according to the related art.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 21</figref> is an exploded perspective view illustrating the outer configuration of a reaction chamber of the epitaxial growth apparatus according to the related art.</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 22</figref> is a plan view illustrating an example of an upper reflector of the epitaxial growth apparatus according to the related art.</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 23</figref> is a plan view illustrating an example of a lower reflector of the epitaxial growth apparatus according to the related art.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00033-en" num="0033">Hereinafter, an epitaxial growth apparatus according to an embodiment of the present invention and a film forming method using epitaxial growth which is performed using the epitaxial growth apparatus will be described.</p>
+      <heading id="h-00006-en" level="2">Configuration of Epitaxial Growth Apparatus</heading>
+      <p id="p-00034-en" num="0034">First, the configuration of an epitaxial growth apparatus <b>1</b> according to the embodiment of the present invention will be schematically described. <figref>FIG. 1</figref> is a cross-sectional view illustrating the entire configuration of the epitaxial growth apparatus <b>1</b>. <figref>FIG. 2</figref> is an exploded perspective view illustrating the configuration of a reaction chamber <b>2</b> of the epitaxial growth apparatus <b>1</b>. <figref>FIG. 3</figref> is an exploded perspective view illustrating the outer configuration of the reaction chamber <b>2</b> of the epitaxial growth apparatus <b>1</b>.</p>
+      <p id="p-00035-en" num="0035">The epitaxial growth apparatus <b>1</b> is a film forming apparatus that enables, for example, a film of silicon to epitaxially grow on a substrate W.</p>
+      <p id="p-00036-en" num="0036">The epitaxial growth apparatus <b>1</b> includes a reaction chamber <b>2</b>. The reaction chamber <b>2</b> includes a susceptor <b>3</b> on which the substrate W. is mounted, a side wall <b>4</b>, and a ceiling <b>5</b>.</p>
+      <p id="p-00037-en" num="0037">The susceptor <b>3</b> is a plate-like member having a circular shape when seen from the upper side and has a size slightly larger than the substrate W. The susceptor <b>3</b> is provided with a substrate concave portion <b>3</b><i>a </i>on which the substrate W is mounted. The susceptor <b>3</b> is supported by a susceptor support <b>6</b> having plural arms.</p>
+      <p id="p-00038-en" num="0038">The susceptor support <b>6</b> lifts up and down the susceptor <b>3</b> while supporting the susceptor <b>3</b>. The lifting range of the surface of the susceptor <b>3</b> on which the substrate W is mounted ranges from a film-forming position P<b>1</b> at which a film is formed on the substrate W on the susceptor <b>3</b> to a substrate-carrying position P<b>2</b> at which the substrate W is put in and out of the epitaxial growth apparatus <b>1</b>. The susceptor support <b>6</b> is configured to enable the susceptor <b>3</b> and the substrate W to rotate by rotating about the axis of the susceptor support <b>6</b> at the film-forming position P<b>1</b>.</p>
+      <p id="p-00039-en" num="0039">An annular susceptor ring <b>7</b> is disposed around the susceptor <b>3</b> at the film-forming position P<b>1</b>. Although details will be described later, the susceptor ring <b>7</b> includes a first ring <b>11</b> and a second ring <b>12</b> placed on the first ring <b>11</b>. The susceptor ring <b>7</b> is supported by a flange portion <b>13</b> disposed in the side wall <b>4</b> of the reaction chamber <b>2</b>.</p>
+      <p id="p-00040-en" num="0040">The ceiling portion <b>5</b> includes a ceiling plate <b>21</b> and a support <b>22</b> supporting the ceiling plate <b>21</b>. The ceiling plate <b>21</b> has permeability and is configured to heat the inside of the reaction chamber <b>2</b> by transmitting heat from heating means <b>23</b> (for example, a halogen lamp) disposed above the outside of the ceiling plate <b>21</b> and an upper reflector <b>26</b>. That is, the epitaxial growth apparatus <b>1</b> according to this embodiment is a cold wall type epitaxial growth apparatus. In this embodiment, the ceiling plate <b>21</b> is formed of quartz.</p>
+      <p id="p-00041-en" num="0041">The support <b>22</b> supporting the ceiling plate <b>21</b> has an annular shape. The ceiling plate <b>21</b> is fixed to an end, which is close to the substrate W, of an opening <b>24</b> inside the inner edge of the support <b>22</b>. An example of the fixing method is a welding method.</p>
+      <p id="p-00042-en" num="0042">The side wall <b>4</b> includes an annular upper side wall <b>31</b> and an annular lower side wall <b>32</b>. The flange portion <b>13</b> is disposed on the inner circumference of the lower side wall <b>32</b>. A substrate carrying port <b>30</b> is disposed below the flange portion <b>13</b>. The upper side wall <b>31</b> has a slope portion corresponding to a slope portion outside of a protrusion <b>25</b> of the support <b>22</b> on the top surface thereof. The support <b>22</b> is disposed on the slope of the upper side wall <b>31</b>.</p>
+      <p id="p-00043-en" num="0043">In the top surface of the lower side wall <b>32</b>, a part of the outer circumference thereof is cut out an a region in which the cutout is not formed serves as a mounting surface <b>33</b> on which the upper side wall <b>31</b> is mounted. A first concave portion <b>34</b> is formed in the lower side wall <b>32</b> by the cutout of the lower side wall <b>32</b>. That is, the first concave portion <b>34</b> is a concave portion formed in a part, in which the mounting surface <b>33</b> is not formed, of the top surface of the lower side wall <b>32</b>. In the upper side wall <b>31</b>, a first convex portion <b>36</b> is formed at the position corresponding to the first concave portion <b>34</b> at the time of mounting the upper side wall on the lower side wall <b>32</b> so as to correspond to the shape of the first concave portion <b>34</b> and to form a gap <b>35</b> between the first concave portion <b>34</b> and the first convex portion. The gap <b>35</b> between the first convex portion <b>36</b> and the first concave portion <b>34</b> serves as a reactant gas supply path <b>41</b> (supply path). Details of the reactant gas supply path <b>41</b> will be described later.</p>
+      <p id="p-00044-en" num="0044">In the region opposed to the first concave portion <b>34</b> of the lower side wall <b>32</b>, a part of the outer circumferential portion of the top surface of the lower side wall <b>32</b> is cut out to form a second concave portion <b>37</b>. In the upper side wall <b>31</b>, a second convex portion <b>39</b> is formed at the position corresponding to the second concave portion <b>37</b> at the time of mounting the upper side wall on the lower side wall <b>32</b> so as to correspond to the shape of the second concave portion <b>37</b> and to form a gap <b>38</b> between the second concave portion <b>37</b> and the second convex portion. A gas discharge path <b>42</b> is formed by the second concave portion <b>37</b> and the second convex portion <b>39</b> of the upper side wall <b>31</b>.</p>
+      <p id="p-00045-en" num="0045">In this way, the reactant gas supply path <b>41</b> and the gas discharge path <b>42</b> face each other in the reaction chamber <b>2</b> and the reactant gas in the reaction chamber <b>2</b> flows over the substrate W in the horizontal direction.</p>
+      <p id="p-00046-en" num="0046">A purge hole <b>44</b> through which a purge gas is discharged is formed in a wall surface <b>43</b> constituting the second concave portion <b>37</b> of the lower side wall <b>32</b>. The purge hole <b>44</b> is formed below the flange portion <b>13</b>. In that the purge hole <b>44</b> is formed in the wall surface <b>43</b> constituting the second concave portion <b>37</b>, the purge hole <b>44</b> communicates with the gas discharge path <b>42</b>. Therefore, both the reactant gas and the purge gas are discharged through the gas discharge path <b>42</b>.</p>
+      <p id="p-00047-en" num="0047">An annular platform <b>45</b> is disposed on the bottom surface side of the lower side wall <b>32</b> of the side wall <b>4</b> and the side wall <b>4</b> is placed on the platform <b>45</b>.</p>
+      <p id="p-00048-en" num="0048">An annular clamping portion <b>51</b> is disposed on the outer circumference sides of the ceiling portion <b>5</b>, the side wall <b>4</b>, and the platform <b>45</b>, and the annular clamping portion <b>51</b> clamps and supports the ceiling portion <b>5</b>, the side wall <b>4</b>, and the platform <b>45</b>. The clamping portion <b>51</b> is provided with a supply-side communication path <b>52</b> communicating with the reactant gas supply path <b>41</b> and a discharge-side communication path <b>53</b> communicating with the gas discharge path <b>42</b>. A gas introduction tube <b>55</b> is inserted into the supply-side communication path <b>52</b>. A gas discharge tube <b>58</b> is inserted into the discharge-side communication path <b>53</b>.</p>
+      <p id="p-00049-en" num="0049">A reactant gas introducing portion <b>54</b> is disposed outside the clamping portion <b>51</b>, and the reactant gas introducing portion <b>54</b> and the supply-side communication path <b>52</b> communicate with each other. In this embodiment, a first source gas and a second source gas are introduced from the reactant gas introducing portion <b>54</b>. The second source gas also serves as a carrier gas. A mixture of three or more types of gases may be used as the reactant gas. A rectifying plate <b>56</b> is disposed in the joint of the supply-side communication path <b>52</b> and the reactant gas introducing portion <b>54</b> so as to be perpendicular to the gas flow channel. The rectifying plate <b>56</b> is provided with plural holes <b>56</b><i>a </i>in a line along the circumferential direction, and the first source gas and the second source gas are mixed and rectified by causing the reactant gas to pass through the holes <b>56</b><i>a</i>. A gas discharge portion <b>57</b> is disposed outside the clamping portion <b>51</b>. The gas discharge portion <b>57</b> is disposed at a position facing the reactant gas introducing portion <b>54</b> with the center of the reaction chamber <b>2</b> interposed therebetween.</p>
+      <p id="p-00050-en" num="0050">An apparatus bottom portion <b>61</b> is disposed in the lower part of the inner circumference side of the platform <b>45</b>. Another heating means <b>62</b> and a lower reflector <b>65</b> are disposed outside the apparatus bottom portion <b>61</b> and the substrate W can be heated from the lower side.</p>
+      <p id="p-00051-en" num="0051">The center of the apparatus bottom portion <b>61</b> is provided with a purge gas introducing portion (not shown) through which the axis portion <b>63</b> of the susceptor support <b>6</b> is inserted and the purge gas is introduced. The purge gas in introduced into a lower reaction chamber part <b>64</b> formed by the apparatus bottom portion <b>61</b>, the lower side wall <b>32</b>, and the platform <b>45</b> from purge gas introducing means not shown and disposed in the purge gas introducing portion. The purge hole <b>44</b> communicates with the lower reaction chamber part <b>64</b>.</p>
+      <heading id="h-00007-en" level="2">Summary of Film Forming Method Using Epitaxial Growth</heading>
+      <p id="p-00052-en" num="0052">A film forming method using the epitaxial growth apparatus according to this embodiment will be described below.</p>
+      <p id="p-00053-en" num="0053">First, the susceptor <b>3</b> is moved to the substrate-carrying position P<b>2</b>, a substrate W is put in from the substrate carrying port <b>30</b>, and the susceptor <b>3</b> is moved to the film-forming position P<b>1</b>. For example, a silicon substrate with a diameter of 200 mm is used as the substrate W. Then, the substrate is heated from the standby temperature (for example, 800° C.) to the growth temperature (for example, 1100° C.) by the use of the heating means <b>23</b> and <b>62</b>. The purge gas (for example, hydrogen) is introduced into the lower reaction chamber portion <b>64</b> from the purge gas introducing portion. The reactant gas (for example, trichlorosilane as the first source gas and hydrogen as the second source gas) is introduced into the reaction chamber <b>2</b> through the reactant gas supply path <b>41</b> from the reactant gas introducing portion <b>54</b>. The reactant gas forms a boundary layer on the surface of the substrate W and a reaction occurs in the boundary layer. Accordingly, a silicon film is formed on the substrate W. The reactant gas is discharged from the gas discharge path <b>42</b> communicating with the reaction chamber <b>2</b>. The purge gas is discharged to the gas discharge path <b>42</b> through the purge hole <b>44</b>. After the epitaxial growth ends in this way, the temperature falls to the standby temperature and the substrate W is taken out and is moved to another chamber of a semiconductor manufacturing apparatus.</p>
+      <heading id="h-00008-en" level="2">Details of Film Forming Method Using Epitaxial Growth Apparatus</heading>
+      <p id="p-00054-en" num="0054">Details of the constituent members of the epitaxial growth apparatus <b>1</b> according to this embodiment and details of the film forming method according to this embodiment will be described below.</p>
+      <p id="p-00055-en" num="0055">
+        <figref>FIG. 4</figref> is a perspective cross-sectional view illustrating the configuration of the ceiling portion <b>5</b> in this embodiment. As shown in the drawing, the inner edge of the support <b>22</b> supporting the ceiling plate <b>21</b> has a diameter slowing decreasing toward the substrate. The ceiling plate <b>21</b> is fixed to an end portion of the inner edge facing the substrate W. When the support <b>22</b> is viewed from the rear side (bottom side), the inner circumferential portion protrudes to form a protrusion <b>25</b>. The protrusion <b>25</b> is formed to have a diameter slowly decreasing in the protruding direction. In this way, the support <b>22</b> includes two slope portions. That is, the support <b>22</b> supports the ceiling plate <b>21</b> from the upper side and the outer side of the circumferential edge at the circumferential edge of the ceiling plate <b>21</b>. On the other hand, <figref>FIG. 20</figref> is a perspective cross-sectional view illustrating an example of a ceiling portion <b>5</b>′ of an epitaxial growth apparatus according to the related art. As shown in the drawing, in the ceiling portion <b>5</b>′ of the apparatus according to the related art, a support <b>22</b>′ supports a ceiling plate <b>21</b>′ in the same plane as the ceiling plate <b>21</b>′ at the circumferential edge of the ceiling plate <b>21</b>′, and the support <b>22</b>′ has a shape having a substantially rectangular corner <b>25</b>′.</p>
+      <p id="p-00056-en" num="0056">In this way, in this embodiment, since the support <b>22</b> is formed in such a shape on which a stress is less concentrated than that in the related art, the distance H between the substrate W and the ceiling plate <b>21</b> can be reduced, that is, less than 10 mm.</p>
+      <p id="p-00057-en" num="0057">Specifically, most infrared rays from the heating means <b>23</b> passes through the ceiling plate <b>21</b> (<b>21</b>′), but the ceiling plate <b>21</b> (<b>21</b>′) absorbs radiant heat from the susceptor <b>3</b> or the substrate W. The absorbed heat is input to the support <b>22</b> (<b>22</b>′) through the joint with the support <b>22</b> (<b>22</b>′) from the ceiling plate <b>21</b> (<b>21</b>′). Here, when the distance H between the substrate W and the ceiling plate <b>21</b> (<b>21</b>′) is reduced, the amount of radiant heat absorbed increases and the amount of heat input to the support <b>22</b> (<b>22</b>′) increases. Therefore, when the support <b>22</b>′ has a substantially rectangular corner <b>25</b>′ as in the ceiling portion <b>5</b>′ in the related art, a stress may be concentrated on the corner <b>25</b>′ to generate cracks or the like.</p>
+      <p id="p-00058-en" num="0058">On the other hand, in this embodiment, by forming the protrusion <b>25</b> in the support <b>22</b> and supporting the ceiling plate <b>21</b> from the upper side and the outer side of the circumferential edge at the circumferential edge of the ceiling plate <b>21</b>, the ceiling plate <b>21</b> can be supported to the substrate side without forming the corner (<b>25</b>′) on which a stress is easily concentrated as small as possible.</p>
+      <p id="p-00059-en" num="0059">In this embodiment, since the distance between the ceiling place <b>21</b> and the substrate W is rescued to narrow the boundary layer as described above, the reactant gas is likely to escape to the outside of the substrate W and the film thickness distribution of the substrate may not be uniformized well, which should be preferably prevented. Accordingly, in this embodiment, a guide portion is disposed in the reactant gas supply path <b>41</b> to uniformize the gas flow, as described below.</p>
+      <p id="p-00060-en" num="0060">The guide portion disposed in the reactant gas supply path <b>41</b> will be described below in detail with reference to <figref>FIGS. 5 to 7B</figref>. As described above, the reactant gas supply path <b>41</b> is formed by the first concave portion <b>34</b> of the lower side wall <b>32</b> and the first convex portion <b>36</b> of the upper side wall <b>31</b> and communicates with the reactant gas introducing portion <b>54</b> through the gas introducing tube <b>55</b> in the supply-side communication path <b>52</b>. The reactant gas supply path <b>41</b> includes a first supply path <b>71</b> extending in the direction (horizontal direction) corresponding to the gas introduction direction from the reactant gas introducing portion <b>54</b>, a second supply path <b>72</b> communicating with the first supply path <b>71</b> and extending the direction (vertical direction) perpendicular to the gas introduction direction, and a third supply path <b>73</b> communicating with the second supply path <b>72</b> and extending in the direction (horizontal direction) parallel to the gas introduction direction. The third supply path <b>73</b> communicates with the reaction chamber <b>2</b>. That is, the reactant gas supply path <b>41</b> is formed in a step shape ascending from the supply-side communication path <b>52</b> which is the entrance of the reactant gas to the exit which is the exit of the reactant gas and is connected to the reaction chamber <b>2</b>.</p>
+      <p id="p-00061-en" num="0061">Here, since the second supply path <b>72</b> extends in the vertical direction as described above, the gas introduced from the reactant gas introducing portion comes in contact with a wall surface <b>74</b> of the second supply path <b>72</b> facing the reactant gas introducing portion <b>54</b>. Accordingly, the reactant gas is diffused and the mixing property of the reactant gas is improved. That is, the second supply path <b>72</b> serves as a mixing chamber of the reactant gas. In this case, a groove <b>75</b> extending in the vertical direction is formed in the wall surface <b>74</b> of the second supply path <b>72</b> in this embodiment so as for the reactant gas no to stay in the second supply path <b>72</b>, and the groove <b>75</b> serves as a guide portion. Since the groove <b>75</b> is formed in this way, the gas diffused by contact with the wall surface <b>74</b> of the second supply path <b>72</b> can easily flow into the third supply path <b>73</b>, can be rectified along the groove <b>75</b> to improve the rectilinear flowing property of the reactant gas, thereby suppressing diffusion of the reactant gas when the reactant gas flows in the reaction chamber <b>2</b>.</p>
+      <p id="p-00062-en" num="0062">The groove <b>75</b> will be described below in detail. Plural grooves <b>75</b> are continuously formed as a concave portion in the entire surface of the wall surface <b>74</b> of the second supply path <b>72</b>. As shown in <figref>FIG. 7B</figref>, the grooves <b>75</b> as the concave portion are curved in the width direction of the groves in this embodiment, each groove <b>75</b> as an arc shape when viewed from the top side. Since the groove <b>75</b> is curved in the width direction, the reactant gas is not likely to be diffused (is likely to be concentrated) when the reactant gas comes in contact with the bottom of the grooves <b>75</b> of the wall surface <b>74</b>, and is not likely to be diffused to the outside of the substrate W when the reactant gas flows in the reaction chamber <b>2</b>. When the depth of the grooves <b>75</b> is excessively large, the diffusion can be suppressed but the first source gas and the second source gas in the reactant gas is not likely to be mixed. In an embodiment of the present invention, that the depth of the grooves <b>75</b> is preferably set to a range of 1 mm to 5 mm and more preferably 3 mm.</p>
+      <p id="p-00063-en" num="0063">The grooves <b>75</b> are formed toward the center c in the in-plane direction of the lower sidewall <b>32</b>. That is, the grooves <b>75</b> are arranged along the circumferential direction of the lower side wall <b>32</b>. By arranging the grooves in this way, the rectification property can be enhanced so that the horizontal component in the flow direction of the reactant gas guide by the grooves <b>75</b> and introduced into the reaction chamber <b>2</b> corresponds to the horizontal component in the direction extending from the center of the opening of the reactant gas supply path <b>41</b> facing the reactant chamber <b>2</b> to the center of the reaction chamber <b>2</b>, thereby suppressing diffusion of the reactant gas in the reaction chamber <b>2</b>.</p>
+      <p id="p-00064-en" num="0064">The grooves <b>75</b> are formed at positions at which the center in the width direction of each groove <b>75</b> substantially agrees (corresponds) to the center of each hole <b>56</b><i>a </i>of the rectifying plate <b>56</b> disposed in the reactant gas introducing portion <b>54</b>. That is, in this embodiment, the number of grooves <b>75</b> in the wall surface <b>74</b> is equal to the number of holes <b>56</b><i>a</i>. Accordingly, since the reactant gas rectified by the rectifying plate <b>56</b> flows in the grooves <b>75</b>, the rectification performance is further enhanced to improve the rectilinear flowing property of the reactant gas.</p>
+      <p id="p-00065-en" num="0065">In this embodiment, the grooves <b>75</b> are formed in the entire surface of the wall surface <b>74</b> of the second supply path <b>72</b>, but may be formed at least in an end portion of the wall surface <b>74</b> of the second supply path <b>72</b>. The end portion means a portion corresponding to the extreme end region of plural regions into which the holes of the rectifying plate <b>56</b> are divided. For example, in the example shown in <figref>FIGS. 7A and 7B</figref>, the rectifying plate <b>56</b> are divided into three regions <b>81</b> and the grooves <b>75</b> have only to be formed to correspond to the holes of the extreme end regions <b>82</b> and <b>83</b>. Since the reactant gas is likely to escape to the outside of the substrate W as described above, it is particularly preferable that the grooves <b>75</b> are formed to enhance the rectilinear flowing property of the reactant gas in the end portions of the reactant gas supply path <b>41</b>. In this case, by forming the grooves <b>75</b> serving as a guide in the form of a concave portion, it is possible to easily obtain such an effect. For example, when a rectifying member is separately disposed in the second supply path <b>72</b>, a problem may occur in the mixing property of the reactant gas or the manufacturing cost. However, such as problem is solved by forming the grooves <b>75</b> as a concave portion as in this embodiment.</p>
+      <p id="p-00066-en" num="0066">
+        <figref>FIGS. 8A</figref> has <b>8</b>B are perspective views illustrating an example of the rectifying plate <b>56</b>. As shown in the drawings, the rectifying plate <b>56</b> has only to be ready to follow the pattern of the grooves <b>75</b>. The opening ratio of the rectifying plate <b>56</b> is preferably determined to be an optimal value in consideration of incidental equipment such as a scrubber or the shape, the length, and the like of an external pipe, as well as the viewpoint of growth rate.</p>
+      <p id="p-00067-en" num="0067">In this embodiment, since the distance between the ceiling plate <b>21</b> and the substrate W is reduced to narrow the boundary layer as described above, the reactant gas may easily flow into the lower part of the reaction chamber <b>2</b> and the temperature distribution of the substrate W may not be likely to be uniformized. As a result, the degradation in the film thickness distribution or the film quality at the time of forming a thick film (for example, distribution of resistivity or occurrence of crystal defects) may be caused. In this embodiment, in order to prevent these problems, the susceptor ring <b>7</b> is formed by two members. This point will be described below.</p>
+      <p id="p-00068-en" num="0068">As enlarged in <figref>FIG. 9</figref>, the first ring <b>11</b> of the susceptor ring <b>7</b> is disposed spaced apart from the outer circumference of the susceptor and a stepped portion <b>91</b> having a low top surface is formed in the inner circumference of the first ring. The second ring <b>12</b> is placed on the stepped portion <b>91</b> and the second ring <b>12</b> is formed to face a clearance portion <b>92</b> formed between the first ring <b>11</b> and the susceptor <b>3</b>, that is, to protrude to the clearance portion <b>92</b>. The second ring <b>12</b> is disposed so that the top surface thereof is flush with the top surface of the susceptor <b>3</b>. By making the top surface of the second ring <b>12</b> flush with the top surface of the susceptor <b>3</b> in this way, the reactant gas which is maintained in a state mixed and rectified in the reactance gas supply path <b>41</b> or the like can be smoothly supplied to the substrate W without lowering the flow rate as much as possible. The top surface of the susceptor <b>3</b> mentioned herein means a top surface of the susceptor <b>3</b> in a region in which the substrate concave portion <b>3</b><i>a </i>(see <figref>FIGS. 1</figref>, <b>2</b>, <b>11</b>, and <b>12</b>) is not formed. The second ring <b>12</b> in this embodiment is formed of silicon carbide in consideration of thermal conductivity.</p>
+      <p id="p-00069-en" num="0069">By forming the second ring <b>12</b> and the first ring <b>11</b> out of different members in this way, the susceptor ring <b>7</b> can be constructed with more accuracy. That is, the distance between the susceptor ring <b>7</b> and the susceptor <b>3</b> can be reduced to the limit and it is thus possible to reduce flowing of the reactant gas to the rear side of the substrate W, that is, to the bottom side <b>64</b> of the reaction chamber and to uniformize the temperature distribution of the substrate W. As a result, according to this embodiment, the film thickness distribution of the film quality distribution of the formed film is uniformized.</p>
+      <p id="p-00070-en" num="0070">By providing two members of the first ring <b>11</b> and the second ring <b>12</b>, the conduction of heat between the first ring <b>11</b> and the second ring <b>12</b> can be suppressed more than the case where the first ring <b>11</b> and the second ring <b>12</b> are formed of a single member.</p>
+      <p id="p-00071-en" num="0071">By causing the second ring <b>12</b> to face the clearance portion <b>92</b> in this way, it is possible to reduce leakage of the reactant gas from between the susceptor ring <b>7</b> and the susceptor <b>3</b> toward the lower side at the time of forming a film and thus the flow of the reactant gas is not likely to be disturbed. Since leakage of the reactant gas to the lower side can be reduced, it is possible to reduce particles.</p>
+      <p id="p-00072-en" num="0072">In this case, the second ring <b>12</b> is thinner than the first ring <b>11</b>. Accordingly, it is possible to suppress heat loss from the susceptor <b>3</b> by radiation. Since the second ring <b>12</b> is thinner, it is possible to reduce the amount of heat for maintaining (pre-heating) the second ring <b>12</b> at a predetermined high temperature. In another embodiment, when the first ring <b>11</b> is formed of a material having small thermal conductivity, the first ring <b>11</b> serves as a thermal insulator, thereby further enhancing the above-mentioned effect.</p>
+      <p id="p-00073-en" num="0073">In this embodiment, the second ring <b>12</b> is configured to face the clearance portion <b>92</b>, but the invention is not limited to this configuration. The susceptor ring <b>7</b> can be constructed with high precision as long as the second ring <b>12</b> is placed at least on the stepped portion <b>91</b> of the first ring <b>11</b>. Accordingly, the distance between the susceptor ring <b>7</b> and the susceptor <b>3</b> can be reduced to the limit and it is thus possible to reduce flowing of the reactant gas to the rear side of the substrate W and to uniformize the temperature distribution of the substrate.</p>
+      <p id="p-00074-en" num="0074">In this embodiment, since the distance between the ceiling plate <b>21</b> and the substrate W is reduced to narrow the boundary layer, the ceiling surface of the ceiling plate <b>21</b> can be easily coated with the reactant gas. When the ceiling surface is coated, the ceiling surface is bedimmed and thus a film may not be satisfactorily formed using a cold wall type epitaxial growth apparatus that is heated using heating means <b>23</b> via the ceiling plate <b>21</b>. On the contrary, in this embodiment, by forming the grooves <b>75</b> in the wall surface of the reactant gas supply path <b>41</b> and forming the susceptor ring <b>7</b> out of two members as described above, the reactant gas is not likely to stay in the reaction chamber <b>2</b> and it is thus possible to suppress attachment of a coating material. As a result, it is possible to form a film continuously and satisfactorily.</p>
+      <p id="p-00075-en" num="0075">
+        <figref>FIG. 10</figref> shows a modification example of the susceptor ring <b>7</b>. This modification example is different from the embodiment shown in <figref>FIG. 9</figref>, in that a second ring <b>12</b>A is disposed to cover a clearance portion <b>92</b>A. In this modification example, a first ring <b>11</b>A is placed on a flange portion <b>13</b>A of a side wall <b>32</b>A. The second ring <b>12</b>A is placed on a stepped portion <b>91</b>A of the first ring <b>11</b>A and the inner circumference faces the outer circumference of the susceptor <b>3</b>A.</p>
+      <p id="p-00076-en" num="0076">In this modification example, since the second ring <b>12</b>A is disposed to cover the clearance portion <b>92</b>A, it is possible to further suppress flowing of the reactant gas flowing into the reaction chamber <b>2</b>A to the lower reaction chamber part <b>64</b>A. Here, in order to prevent the second ring <b>12</b>A from blocking heating of the susceptor <b>3</b>A from the heating means <b>23</b> not shown in <figref>FIG. 10</figref>, it is preferable that the overlap area of the second ring <b>12</b>A and the susceptor <b>3</b>A be small.</p>
+      <p id="p-00077-en" num="0077">In this modification example, the thickness of the second ring <b>12</b>A is preferably set to, for example, a range of 0.5 mm to 2 mm and more preferable about 0.8 mm. By setting this thickness, it is possible to suppress heat loss due to radiation from the susceptor <b>3</b>A to the second ring <b>12</b>A as much as possible.</p>
+      <p id="p-00078-en" num="0078">
+        <figref>FIGS. 11 and 12</figref> are plan views illustrating examples of the susceptor <b>3</b> according to an embodiment of the present invention. As shown in the drawings, susceptors <b>3</b>A and <b>3</b>B are provided with lift-pin through-holes <b>110</b>A and <b>110</b>B through which lift pins <b>123</b> (see <figref>FIG. 13</figref>) pass. As shown in <figref>FIG. 12</figref>, plural through-holes <b>111</b>B may be formed. A problem that gas therebetween may be let out at the time of placing the substrate on the susceptor and the substrate W slides in the horizontal direction can be solved by the through-holes <b>111</b>B. When this susceptor <b>3</b>B is used, the uniformization in film thickness distribution or resistivity distribution of the substrate W is superior to the case where the susceptor <b>3</b>A is used. This is more marked when the diameter of the through-holes <b>111</b>B becomes smaller and the number of through-holes <b>111</b>B becomes larger. It is preferable that the opening ratio be more than 4% and it is more preferable that the through-holes <b>111</b>B be formed around the substrate concave portion <b>3</b>Ba of the susceptor as well as in the substrate concave portion.</p>
+      <p id="p-00079-en" num="0079">
+        <figref>FIGS. 13 to 16</figref> show examples of the susceptor support <b>6</b>. As shown in <figref>FIG. 13</figref>, the susceptor support <b>6</b> includes a susceptor shaft <b>121</b>, a substrate lift <b>122</b>, and lift pins <b>123</b>. The susceptor <b>3</b> is supported by three arms of the susceptor shaft <b>121</b>. Three arms of the substrate life <b>122</b> are provided with pedestals <b>124</b> having a concave portion on which the lower end of the corresponding lift pin <b>123</b> is placed, respectively. The axis portion of the substrate lift <b>122</b> is formed in a cylindrical shape, and the axis portion of the susceptor shaft <b>121</b> can be inserted into the axis portion of the substrate lift <b>122</b>.</p>
+      <p id="p-00080-en" num="0080">In this embodiment, the arms in the susceptor support <b>6</b> have a thickness smaller than in the related art. Accordingly, since the influence of the susceptor support <b>6</b> can be reduced at the time of heating the substrate W on the susceptor <b>3</b> by the use of the heating means <b>62</b>, it is possible to uniformize the temperature distribution of the susceptor <b>3</b>. The detailed configuration and the lifting operation of the susceptor support <b>6</b> in the embodiment are the same as in the susceptor apparatus described in Pamphlet of International Publication WO2013/005481 filed by the applicant of the present invention. However, the susceptor apparatus described the Pamphlet of International Publication includes a single susceptor shaft (platform shaft), but the susceptor support <b>6</b> in this embodiment includes three susceptor shafts (arms) <b>121</b>.</p>
+      <p id="p-00081-en" num="0081">
+        <figref>FIG. 16</figref> is a perspective cross-sectional view illustrating an example of the gas discharge tube <b>58</b> in this embodiment. As shown in the drawing, the gas discharge tube <b>58</b> is formed so that the opening is narrowed toward the center from the reaction chamber <b>2</b> to the gas discharge portion <b>57</b>. Accordingly, exhaust is rectified at the center, thereby improving the exhaust efficiency.</p>
+      <p id="p-00082-en" num="0082">
+        <figref>FIG. 21</figref> is an exploded perspective view illustrating the outer configuration of the reaction chamber <b>2</b> in the epitaxial growth apparatus according to the related art. As shown in the drawing, comparing the gas introduction tube <b>55</b> and the gas discharge tube <b>58</b> with the gas introduction tube <b>55</b>′ and the gas discharge tube <b>58</b>′, finished portions at the central portions thereof are removed in this embodiment. Accordingly, the flow of gas affecting the film thickness distribution is smoothed.</p>
+      <p id="p-00083-en" num="0083">The reactant gas flows into the lower reaction chamber part <b>64</b> when the opening ratio of the gas discharge path <b>42</b> and the purge hole <b>44</b> is excessively large, and the purge gas affects the film forming process in the reaction chamber <b>2</b> when the opening ratio is excessively small. Accordingly, the openings thereof are formed so that the opening ratios have the optimal values.</p>
+      <p id="p-00084-en" num="0084">
+        <figref>FIG. 17</figref> is a perspective view illustrating an example of the upper reflector <b>26</b> according to the embodiment of the present invention. As shown in drawing, the upper reflector <b>26</b> includes slope portions <b>26</b><i>a </i>reflecting hear waves from the heating means <b>23</b> to the center of the reaction chamber <b>2</b> and flat portions <b>26</b><i>b </i>reflecting heat waves from the heating means <b>23</b> in the vertically-falling direction. On the other hand, <figref>FIG. 22</figref> is a perspective view illustrating an example of the upper reflector <b>26</b>′ in the epitaxial growth apparatus according to the related art. As shown in the drawing, the upper reflector <b>26</b>′ in the related art includes slope portions <b>26</b><i>a</i>′ and flat portions <b>26</b><i>b</i>′, but is different from the upper reflector <b>26</b> according to the embodiment of the present invention in the arrangement of the slope portions <b>26</b><i>a</i>. Specifically, the upper reflector <b>26</b> according to the embodiment of the present invention has an arrangement in which a slope portion is added to the center of a flat portion <b>26</b><i>b</i>′ of the upper reflector <b>26</b>′ in the related art. In this way, by arranging the slope portions <b>26</b><i>a </i>and the flat portions <b>26</b><i>b </i>so that the area ratio of the slope portions <b>26</b><i>a </i>and the flat portions <b>26</b><i>b </i>is a predetermined ratio and the distribution of the slope portions <b>26</b><i>a </i>and the flat portions <b>26</b><i>b </i>is not biased, the uniformization of the temperature distribution of the substrate W is achieved.</p>
+      <p id="p-00085-en" num="0085">
+        <figref>FIG. 18</figref> is a perspective view illustrating an example of the lower reflector <b>65</b> according to the embodiment of the present invention. <figref>FIG. 23</figref> is a perspective view illustrating an example of the lower reflector <b>65</b>′ in the epitaxial growth apparatus according to the related art. Similarly to the upper reflector <b>26</b>, the lower reflector <b>65</b> includes slope portions <b>65</b><i>a </i>reflecting heat waves from the heating means <b>62</b> to the center of the reaction chamber <b>2</b> and flat portions <b>65</b><i>b </i>reflecting heat waves from the heating means <b>62</b> in the vertically-rising direction, and has an arrangement in which a slope portion is added to the center of a flat portion <b>65</b><i>b</i>′ of the lower reflector <b>65</b>′ according to the related art. In this way, by arranging the slope portions <b>65</b><i>a </i>and the flat portions <b>65</b><i>b </i>so that the area ratio of the slope portions <b>65</b><i>a </i>and the flat portions <b>65</b><i>b </i>is a predetermined ratio and the distribution of the slope portions <b>65</b><i>a </i>and the flat portions <b>65</b><i>b </i>is not biased, the uniformization of the temperature distribution of the substrate W is achieved.</p>
+      <p id="p-00086-en" num="0086">In the epitaxial growth apparatus according to this embodiment, since the support <b>22</b> supports the ceiling plate <b>21</b>, the distance H between the ceiling surface of the central portion of the ceiling surface of the central portion of the ceiling plate <b>21</b> facing the reaction chamber and the substrate W can be set to be less than 10 mm. Accordingly, the epitaxial growth apparatus <b>1</b> according to this embodiment can prevent the boundary layer formed by the reactant gas flowing between the ceiling plate <b>21</b> and the susceptor <b>3</b> from spreading toward the ceiling and thus the boundary layer is narrowed. Then, since the gas flow rate in the boundary layer increases, the gas density increases as a result and it is thus possible to enhance the reaction efficiency on the surface of the substrate W. Accordingly, in the epitaxial growth apparatus <b>1</b>, it is possible to enhance the growth rate.</p>
+      <p id="p-00087-en" num="0087">In the embodiment of the present invention, the distance H between the ceiling plate <b>21</b> and the substrate W is less than 10 mm, and it is preferable that the distance H between the ceiling plate <b>21</b> and the substrate W be less than 10 mm and the distance from the film formed on the substrate W to the ceiling plate <b>21</b> be equal to or more than 1 mm. By setting this range, it is possible to smooth the gas flow of the reactant gas while forming the boundary layer.</p>
+      <p id="p-00088-en" num="0088">That is, in the reaction chamber <b>2</b> of this embodiment, by setting the distance between the substrate W and the ceiling plate <b>21</b> to be smaller than that in the related art (about 20 mm in the related art), it is possible to narrow the boundary layer to enhance the reaction efficiency on the surface of the substrate and thus to raise the growth rate.</p>
+      <heading id="h-00009-en" level="1">EXAMPLES</heading>
+      <p id="p-00089-en" num="0089">The invention will be described below in detail with reference to examples.</p>
+      <heading id="h-00010-en" level="1">Example 1</heading>
+      <p id="p-00090-en" num="0090">Epitaxial growth was carried out under the following growth conditions by the use of an epitaxial growth apparatus <b>1</b>A (in which the distance H between the surface the substrate W and the ceiling plate <b>21</b> is 9.27 mm) employing the susceptor ring shown in <figref>FIG. 10</figref>.</p>
+      <p id="p-00091-en" num="0091">Amount of first source gas (trichlorosilane): 8.5 SLM</p>
+      <p id="p-00092-en" num="0092">Amount of purge gas (hydrogen): 15.0 SLM</p>
+      <p id="p-00093-en" num="0093">Growth time: 600.0 seconds</p>
+      <p id="p-00094-en" num="0094">Growth temperature: 1100.0° C.</p>
+      <p id="p-00095-en" num="0095">Rotation speed: 20.0 RPM</p>
+      <heading id="h-00011-en" level="1">Example 2</heading>
+      <p id="p-00096-en" num="0096">Epitaxial growth was carried out under the same conditions as in Example 1, except that the amount of the first source gas was changed to 13.5 SLM.</p>
+      <heading id="h-00012-en" level="1">Example 3</heading>
+      <p id="p-00097-en" num="0097">Epitaxial growth was carried out under the same conditions as in Example 1, except that the amount of the first source gas was changed to 17.0 SLM.</p>
+      <heading id="h-00013-en" level="1">Comparative Example 1</heading>
+      <p id="p-00098-en" num="0098">Epitaxial growth was carried out under the same conditions as in Example 1 using an epitaxial growth apparatus (in which the distance H between the surface of a substrate W and the ceiling plate <b>21</b> was 20 mm, there was no groove <b>75</b>, and the susceptor ring was formed of a single member) according to the related art, except the rotation speed was changed to 35.0 RPM.</p>
+      <heading id="h-00014-en" level="1">Comparative Example 2</heading>
+      <p id="p-00099-en" num="0099">Epitaxial growth was carried out under the same conditions as in Example 2 using an epitaxial growth apparatus (in which the distance H between the surface of a substrate W and the ceiling plate <b>21</b> was 20 mm, there was no groove <b>75</b>, and the susceptor ring was formed of a single member) according to the related art, except the rotation speed was changed to 35.0 RPM.</p>
+      <heading id="h-00015-en" level="1">Comparative Example 3</heading>
+      <p id="p-00100-en" num="0100">Epitaxial growth was carried out under the same conditions as in Example 3 using an epitaxial growth apparatus (in which the distance H between the surface of a substrate W and the ceiling plate <b>21</b> was 20 mm, there was no groove <b>75</b>, and the susceptor ring was formed of a single member) according to the related art, except the rotation speed was changed to 35.0 RPM.</p>
+      <p id="p-00101-en" num="0101">The film growth rate in the examples and the comparative examples was detected. The relationship between the detected growth rates and the first source gas is shown in <figref>FIG. 19</figref>.</p>
+      <p id="p-00102-en" num="0102">As shown in <figref>FIG. 19</figref>, by employing the epitaxial growth apparatus <b>1</b>A according to the embodiment of the present invention, the growth rate was improved by 50% and the improvement of the growth rate increased when the amount of the first source gas increased. Therefore, the growth rate was enhanced by using the epitaxial growth apparatus according to this embodiment.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A ceiling portion for use in a processing apparatus, the ceiling portion comprising:
+<claim-text>a ring shaped support, further comprising:
+<claim-text>an inner surface having a first slope portion, the first slope portion decreasing in diameter from a top surface of the ring shaped support towards a bottom surface of the ring shaped support; and</claim-text><claim-text>a protrusion protruding from the inner surface, the protrusion having a second slope portion decreasing in diameter in a protruding direction towards a center of the ring shaped support; and</claim-text></claim-text><claim-text>a ceiling plate coupled to the protrusion of the ring shaped support.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The ceiling portion of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the ceiling plate is fixed to the inner surface of the ring shaped support.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The ceiling portion of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein a circumferential edge of the protrusion supports the ceiling plate at a circumferential edge of the ceiling plate.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The ceiling portion of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the ceiling plate is made from a light permeable material.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The ceiling portion of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the first slope portion and the second slope portion meet at the ceiling plate.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The ceiling portion of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the angle formed by the first slope portion and the second slope portion is less than 90 degrees.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The ceiling portion of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the ceiling plate is configured to absorb radiant heat.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en" independent="true">
+      <claim-text>
+        <b>8</b>. A ceiling portion for use in a processing apparatus, the ceiling portion comprising:
+<claim-text>a ring shaped support, further comprising:
+<claim-text>an inner surface having a first slope portion, the first slope portion decreasing in diameter from a top surface of the ring shaped support towards a bottom surface of the ring shaped support; and</claim-text><claim-text>a protrusion protruding from the inner surface, the protrusion having a second slope portion decreasing in diameter in a protruding direction towards a center of the ring shaped support, the first slope portion and the second slope portion meeting at an inner edge, wherein an angle formed by the first slope portion and the second slope portion is less than 90 degrees; and</claim-text><claim-text>a ceiling plate coupled to the protrusion of the ring shaped support.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The ceiling portion of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the ceiling plate is fixed to the inner surface of the ring shaped support.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The ceiling portion of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein a circumferential edge of the protrusion supports the ceiling plate at a circumferential edge of the ceiling plate.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The ceiling portion of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the ceiling plate is made of a light permeable material.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The ceiling portion of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the first slope portion and the second slope portion meet at the ceiling plate.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The ceiling portion of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the first slope portion and the second slope portion create an angle that is less than 90 degrees.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The ceiling portion of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the ceiling plate is configured to absorb radiant heat.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en" independent="true">
+      <claim-text>
+        <b>15</b>. An epitaxial growth apparatus, the apparatus comprising:
+<claim-text>a reaction chamber, the reaction chamber further comprising:
+<claim-text>a ceiling portion having a ring shaped support comprising:
+<claim-text>an inner surface having a first slope portion decreasing in diameter from a top surface towards a bottom surface of the ring shaped support; and</claim-text><claim-text>a protrusion having a second slope portion decreasing in diameter in a protruding direction towards a center of the ring shaped support; and</claim-text></claim-text><claim-text>a ceiling plate coupled to the protrusion of the ring shaped support; and</claim-text></claim-text><claim-text>a susceptor support disposed in the reaction chamber, the susceptor support configured to support a susceptor.</claim-text></claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The epitaxial growth apparatus of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the first slope portion and the second slope portion meet at the ceiling plate.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The epitaxial growth apparatus of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the first slope portion and the second slope portion create an angle that is less than 90 degrees.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The epitaxial growth apparatus of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the ceiling plate is fixed to the inner surface of the ring shaped support.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The epitaxial growth apparatus of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the susceptor is configured to support a substrate such that the ceiling plate is separated from the substrate by a distance H, wherein H is less than 10 nm. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00013.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00014.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00015.TIF" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00017.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00016.TIF" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00018.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00017.TIF" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00019.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00018.TIF" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00020.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00019.TIF" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00021.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00020.TIF" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00022.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00021.TIF" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00023.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00022.TIF" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00024.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00023.TIF" />
+    </figure>
+    <figure num="25">
+      <img he="N/A" wi="N/A" file="US20150252493A1_00025.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150252493A1-20150910-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150252493A1.PDF" type="pdf" size="1191306" pages="32" />
+</lexisnexis-patent-document>

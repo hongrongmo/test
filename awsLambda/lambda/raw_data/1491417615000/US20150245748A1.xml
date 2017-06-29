@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150245748A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021553" date-changed="20151013" time-changed="074827">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140806">
+        <country>US</country>
+        <doc-number>20150245748</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14615533</doc-number>
+        <date>20150206</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151013">
+      <classification-ipcr sequence="1">
+        <text>A47K  11/02        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>47</class>
+        <subclass>K</subclass>
+        <main-group>11</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>E03D   9/08        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>E</section>
+        <class>03</class>
+        <subclass>D</subclass>
+        <main-group>9</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151013">
+      <classification-cpc sequence="1">
+        <text>A47K  11/02        20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>K</subclass>
+        <main-group>11</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>E03D   5/014       20130101 LI20151002BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>E</section>
+        <class>03</class>
+        <subclass>D</subclass>
+        <main-group>5</main-group>
+        <subgroup>014</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151002</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>E03D   9/08        20130101 LA20151002BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>E</section>
+        <class>03</class>
+        <subclass>D</subclass>
+        <main-group>9</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151002</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>Y10T  29/4973      20130101 LA20151001BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>29</main-group>
+        <subgroup>4973</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">TOILET WITH URINE DIVERSION AND METHOD FOR WASTE REUSE</invention-title>
+    <related-documents date-changed="20150903">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61946197</doc-number>
+          <date>20140228</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Banner</last-name>
+            <first-name>Brandie Allesa</first-name>
+            <address>
+              <city>Gainesville</city>
+              <state>GA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+        <applicant sequence="2" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Burton</last-name>
+            <first-name>Jasmine Kaila</first-name>
+            <address>
+              <city>Dunwoody</city>
+              <state>GA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+        <applicant sequence="3" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Byler</last-name>
+            <first-name>Rebecca Wright</first-name>
+            <address>
+              <city>Palo Alto</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+        <applicant sequence="4" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Cobb</last-name>
+            <first-name>Erin Buchanan</first-name>
+            <address>
+              <city>Marietta</city>
+              <state>GA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Banner</last-name>
+            <first-name>Brandie Allesa</first-name>
+            <address>
+              <city>Gainesville</city>
+              <state>GA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Burton</last-name>
+            <first-name>Jasmine Kaila</first-name>
+            <address>
+              <city>Dunwoody</city>
+              <state>GA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Byler</last-name>
+            <first-name>Rebecca Wright</first-name>
+            <address>
+              <city>Palo Alto</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Cobb</last-name>
+            <first-name>Erin Buchanan</first-name>
+            <address>
+              <city>Marietta</city>
+              <state>GA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173464080">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150245748</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150206</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173464077">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150245748</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150206</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present disclosure includes an improved toilet and a system of using the improved toilet. The toilet can be configured to separate urine from solid waste, and further to separate solid waste according to size. The toilet can also comprise a personal cleansing system to clean a user's anus following use of the toilet. The present also discloses a method of maintaining the toilet and a method for removing the separated waste for re-use as a combustible fuel and fertilizer.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This Application claims benefit, under 35 U.S.C. §119(e), to U.S. Provisional Application No. 61/946,197 filed Feb. 28, 2014, entitled “TOILET WITH URINE DIVERSION AND WASTE FILTRATION AND COLLECTION.” The entire contents and substance of that application is hereby incorporated by reference as if set forth herein.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00002-en" num="0002">The present disclosure relates to an improved toilet and a system of using the improved toilet. In some embodiments, this disclosure relates to modular and moveable toilets.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">Each year, millions of people are afflicted with sickness and death because they do not have access to basic sanitation facilities. Displaced populations living in refugee camps or other temporary living conditions experience these problems most acutely. In the absence of modern plumbing and conventional toilets, displaced populations often resort to open pit latrines for urination and defecation. While pit latrines are easy to construct, they present numerous public health and safety limitations.</p>
+      <p id="p-00004-en" num="0004">For example, in areas affected by monsoons or other heavy rains, pit latrines tend to overflow and contaminate areas surrounding the pit. Further, stagnant waste can provide a breeding ground for mosquitoes and other insects, which often carry disease. Pit latrines also are only temporary, and must be filled in and replaced every four years. Because previously dug latrines cannot be reused, space to construct new latrines can be limited. Pit latrines also present a safety risk to children, who can fall into the open pit.</p>
+      <p id="p-00005-en" num="0005">Pit latrines also do not accommodate some local traditional and religious practices. For example, in some refugee camps, a toilet design must be sensitive to cultural aversions to human waste. Some cultures require that individuals practice a form of personal cleansing to be considered pure for prayers and other religious activities. In these cultures, both the user and maintenance workers should have minimal contact with human waste while using and servicing the toilet. Because pit latrines frequently require workers to interact with waste, and do not provide for personal cleansing, they fail to accommodate these local customs and practices. Finally, in refugee camps and other temporary living conditions, there may be regulatory or practical prohibitions on constructing permanent structures, requiring that toilets be either portable or temporary.</p>
+      <p id="p-00006-en" num="0006">For at least these reasons, there exists a need for a toilet that provides privacy, safety, cleanliness, compact size, and an aesthetically pleasing design that can be implemented at low cost in constrained conditions such as, but not limited to, refugee camps in underdeveloped regions. For similar reasons, such a system could also be used in other locations where access to basic sanitation facilities may be limited, such as camping.</p>
+      <heading id="h-00004-en" level="1">SUMMARY</heading>
+      <p id="p-00007-en" num="0007">Some or all of the above needs can be addressed by certain implementations of the disclosure. In some embodiments of the present disclosure, a toilet is provided. The toilet can comprise a base, an intake module, a drawer system, and a urine container. Some embodiments further comprise a user cleansing system to aid in anal cleansing. In some embodiments, the intake module comprises an ergonomically-designed seating apparatus, a first channel leading to the urine container, and a second channel leading to the drawer system. Some embodiments further comprise a vent assembly with a cover which can selectively opened or closed. The cover can, in the closed position, close one or both of the channels leading to a urine container or drawer system.</p>
+      <p id="p-00008-en" num="0008">In some embodiments of the present disclosure, a method is provided. In some embodiments, the method includes the steps of removing liquid waste from the urine container, and removing solid waste from the drawer system. In some embodiments, the method can further include the steps of replacing and/or sterilizing one or more filters in the drawer system. In some embodiments, the method can include processing liquid or solid waste. In one example, the liquid waste can be purified and diluted to produce a high-nitrogen fertilizer. In another example, the solid waste can be dried and/or sterilized, and converted into fuel briquettes.</p>
+      <p id="p-00009-en" num="0009">In some embodiments, a toilet can comprise a base with a top surface and a bottom surface, an intake module coupled to the top surface of the base and adapted to receive a user, a drawer system detachably attached to the bottom surface of the toilet, and a urine container in fluid communication with the intake module, the urine container coupled to the bottom surface of the base.</p>
+      <p id="p-00010-en" num="0010">Some embodiments comprise a seat, a urine diversion system formed into the seat, the urine diversion system having a first top opening and a second top opening, the first top opening and second top opening positioned a predetermined distance apart, a first channel in communication with the first top opening, a second channel separate from the first channel and in communication with the second top opening, a first bottom opening in communication with the first channel and the urine container, and a second bottom opening in communication with the second channel and the drawer system.</p>
+      <p id="p-00011-en" num="0011">Some embodiments comprise a seat that is adapted to receive a user in a squatting position such that the angle between the femur and tibia of the user are positioned at an angle of less than 45 degrees.</p>
+      <p id="p-00012-en" num="0012">Some embodiments comprise a water reservoir the top surface of the base, a plunger disposed within the water reservoir, a tube connecting the water reservoir to the intake module, and a nozzle connected to the tube, on the nozzle located proximate the intake module, wherein the nozzle is positioned at an angle to be aimed approximately at the anus of a user engaging the seat.</p>
+      <p id="p-00013-en" num="0013">In some embodiments, a nozzle is aimed upward at an angle between 30 and 60 degrees to horizontal.</p>
+      <p id="p-00014-en" num="0014">In some embodiments, the position of the nozzle is adjustable by the user.</p>
+      <p id="p-00015-en" num="0015">In some embodiments, the drawer system comprises a first container positioned below the intake module, a first filter located proximate the bottom of the first container, a second container positioned below the first container, a second filter located proximate the bottom of the second container, and a third container positioned below the second container.</p>
+      <p id="p-00016-en" num="0016">In some embodiments, a first container and second container are removable from the drawer system.</p>
+      <p id="p-00017-en" num="0017">In some embodiments, a first filter is a metal filter having openings of approximately 10 mm.</p>
+      <p id="p-00018-en" num="0018">In some embodiments, a second filter is a cheesecloth filter having openings of approximately 1 mm.</p>
+      <p id="p-00019-en" num="0019">In some embodiments, a intake module comprises a cover sized to cover the first and second channels, the cover slidably connected to the urine diversion system, and a first handle located proximate a side of the seat, the first handle connected to the cover.</p>
+      <p id="p-00020-en" num="0020">In some embodiments, a toilet comprises a second handle connected to the base, the second handle located adjacent to the intake module.</p>
+      <p id="p-00021-en" num="0021">In some embodiments, a drawer system comprises a wheel attached to the bottom of the drawer system.</p>
+      <p id="p-00022-en" num="0022">In some embodiments, the drawer system has a door adapted to receive a lock.</p>
+      <p id="p-00023-en" num="0023">In some embodiments, a toilet comprises a structure enclosing the base, the structure having a door and a vent opening.</p>
+      <p id="p-00024-en" num="0024">In some embodiments, a door of the structure is adapted to receive a lock.</p>
+      <p id="p-00025-en" num="0025">A method is provided, comprised of removing urine from a urine container, removing solid waste from a first container, removing pathogenic material from a second container, removing used user cleansing water from a third container, sterilizing a first filter, and removing and replacing a second filter.</p>
+      <p id="p-00026-en" num="0026">A method is provided, comprised of filtering the urine to remove contaminants, and diluting the filtered urine to form a high-nitrogen fertilizer.</p>
+      <p id="p-00027-en" num="0027">A method is provided, comprised of removing a first metal filter from the toilet, and sterilizing the first metal filter by heating the first metal filter.</p>
+      <p id="p-00028-en" num="0028">A method is provided, comprised of removing a second filter from the toilet, removing from the second filter solids collected by the second filter, and burning the second filter and the solids collected by the second filter.</p>
+      <p id="p-00029-en" num="0029">A method is provided, comprised of filtering the user cleansing water to remove contaminants, and using the filtered user cleansing water to dilute the urine.</p>
+      <p id="p-00030-en" num="0030">Other implementations, features, and aspects of the disclosed technology are described in detail herein and are considered a part of the claimed disclosed technology. Other implementations, features, and aspects can be understood with reference to the following detailed description, accompanying drawings, and claims.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE FIGURES</heading>
+      <p id="p-00031-en" num="0031">Reference will now be made to the accompanying figures and flow diagrams, which are not necessarily drawn to scale, and wherein:</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 1</figref> is an illustration of an assembled toilet in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 2</figref> is an exploded view of the assembled toilet in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 3</figref> is an illustration of an intake module in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIG. 4</figref> is a free-body diagram of a person in a squatting position, modeling the internal torque at the patellofemoral joint.</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIG. 5</figref> is a graph showing the relationship between percentage of maximum internal torque and knee flexion.</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIG. 6</figref> is a cut-away drawing of an intake module in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIG. 7</figref> is a cut-away drawing of an intake module in accordance with an embodiment of the present disclosure, particularly showing the channel cover.</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIG. 8</figref> is a top-view of an intake module in accordance with an embodiment of the present disclosure, particularly showing the handle for the channel cover, and a personal cleansing system in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00040-en" num="0040">
+        <figref>FIG. 9</figref> is a structure in accordance with some embodiments of the present disclosure.</p>
+      <p id="p-00041-en" num="0041">
+        <figref>FIG. 10</figref> is a flow diagram depicting a maintenance and waste collection process in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00042-en" num="0042">
+        <figref>FIG. 11</figref> is a flow diagram depicting a waste reuse process in accordance with an embodiment of the present disclosure</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00043-en" num="0043">In accordance with the present disclosure, a system and method are provided. In some embodiments, the system provides an inexpensive and mobile toilet. In some embodiments, this disclosure provides a method for maintaining the toilet and for reusing urine and feces deposited therein. Some implementations of the disclosure will be described more fully hereinafter with reference to the accompanying drawings. This disclosure can, however, be embodied in many different forms and should not be construed as limited to the implementations set forth herein.</p>
+      <p id="p-00044-en" num="0044">In the following description, numerous specific details are set forth. It is to be understood, however, that embodiments of the disclosure can be practiced without these specific details. In other instances, well-known methods, structures, and techniques have not been shown in detail in order not to obscure an understanding of this description. References to “one embodiment,” “an embodiment,” “example embodiment,” “various embodiments,” etc., indicate that the embodiment(s) of the disclosed technology so described can include a particular feature, structure, or characteristic, but not every embodiment necessarily includes the particular feature, structure, or characteristic. Further, repeated use of the phrase “in one embodiment” does not necessarily refer to the same embodiment, although it can.</p>
+      <p id="p-00045-en" num="0045">Throughout the specification and the claims, the following terms take at least the meanings explicitly associated herein, unless the context clearly dictates otherwise. The term “or” is intended to mean an inclusive “or.” Further, the terms “a,” “an,” and “the” are intended to mean one or more unless specified otherwise or clear from the context to be directed to a singular form. As used herein, unless otherwise specified the use of the ordinal adjectives “first,” “second,” “third,” etc., to describe a common object, merely indicate that different instances of like objects are being referred to, and are not intended to imply that the objects so described must be in a given sequence, either temporally, spatially, in ranking, or in any other manner.</p>
+      <p id="p-00046-en" num="0046">Example implementations of the disclosure will now be described with reference to the accompanying figures.</p>
+      <p id="p-00047-en" num="0047">
+        <figref>FIG. 1</figref> illustrates an assembled toilet <b>10</b> in accordance with an embodiment of the present disclosure. <figref>FIG. 2</figref> is an exploded view of a toilet <b>10</b> in accordance with an embodiment of the present disclosure. In some embodiments, the toilet <b>10</b> can comprise a base <b>12</b> having a top surface <b>14</b> and a bottom surface <b>16</b>, adapted to support a user of the toilet, and adapted to be detachably attached to the drawer system <b>100</b>. In some embodiments, the toilet <b>10</b> can comprise an intake module <b>28</b>, having a seat <b>32</b>, and a urine diversion system <b>30</b> positioned above the base <b>12</b>. In some embodiments, the toilet <b>10</b> further comprises a user cleansing system <b>90</b>. The user cleansing system can comprise a water reservoir <b>98</b>, plunger <b>94</b>, tubing <b>93</b> (shown in <figref>FIG. 8</figref>), and nozzle <b>96</b> for use in user cleansing following use of the toilet <b>10</b>, and be located above the base <b>12</b>. Additionally, in some embodiments, the toilet <b>10</b> can further comprise a structure <b>110</b> for privacy and security, as shown in <figref>FIG. 9</figref>.</p>
+      <p id="p-00048-en" num="0048">In some embodiments, the toilet <b>10</b> can be adapted to conform to space constraints for locating toilets inside homes. In some embodiments, the toilet base <b>12</b> can have a height of less than or equal to about two feet. The horizontal cross-sectional area of the base <b>12</b> can have an area of less than or equal to about one square meter, according to one embodiment. Also, in some embodiments, the toilet <b>10</b> can occupy less than about one cubic meter. But it would be readily apparent to those skilled in the art that the base <b>12</b> or toilet <b>10</b> could be otherwise sized or shaped without departing from the scope of this disclosure.</p>
+      <p id="p-00049-en" num="0049">Some embodiments of the toilet <b>10</b> can overcome problems associated with using below-ground space for sanitation. According to some embodiments, the toilet <b>10</b> is capable of being deployed entirely above ground, for example, in a household setting or a camp setting. Above-ground deployment can allow an individual to easily move the toilet <b>10</b> from one location to another. Above-ground deployment can also allow for placement of the toilet <b>10</b> in locations where local regulations prevent the erection of permanent structures. Above-ground deployment can further prevent the need to dig pits, such as those used in pit latrines, which are prone to overflowing due to excessive use or heavy rains. But it will be readily apparent to those skilled in the art that a portion or the entire toilet <b>10</b> could be below-ground without departing from the scope of this disclosure. Specific features of some embodiments of the disclosed toilet <b>10</b> are discussed below.</p>
+      <p id="p-00050-en" num="0050">Intake Module</p>
+      <p id="p-00051-en" num="0051">In one embodiment, the intake module <b>28</b> of the present disclosure can comprise a seat <b>32</b> and a urine diversion system <b>30</b>. In some embodiments, the intake module <b>28</b> can be mounted on the base <b>12</b>. The intake module <b>28</b> can comprise an ergonomic seat <b>32</b> for using the toilet <b>10</b>, as will be discussed herein. Further, the intake module <b>28</b> can provide for the separation of liquid waste from solid waste, can prevent ingress of trash and other debris into the system, and can prevent egress of noxious odors from the toilet <b>10</b>, as will be discussed herein.</p>
+      <p id="p-00052-en" num="0052">
+        <figref>FIG. 3</figref> illustrates a seat <b>32</b> in accordance with the present disclosure. In some embodiments, the seat <b>32</b> can provide an ergonomic seat for use of the toilet <b>10</b> in a sitting position, squatting position, or both a sitting and squatting position. The seat <b>32</b> can be designed to facilitate an ergonomically-advantageous squatting position. <figref>FIG. 4</figref> provides a free-body diagram of a squatting user, and <figref>FIG. 5</figref> illustrates the relationship of knee flexion to maximum internal torque. Enhanced user comfort and reductions in joint and muscle fatigue can be achieved by minimizing force at the patellofemoral joint. Thus, the seat <b>32</b> can be designed to accommodate the contours of the human body in a squatting position that minimizes that force. It has been determined that the angles of minimal patellofemoral force for a user's knee are angles below 45 degrees, or angles greater than 135 degrees, measured as the angle between a user's femur and tibia. Thus, the optimal position for squatting and defecating occurs when the knee is almost completely bent, or almost completely straight.</p>
+      <p id="p-00053-en" num="0053">In some embodiments, the seat <b>32</b> can be designed to maximize how effectively a user can evacuate their large intestine. Sitting or standing hinders feces from fully leaving the large intestines, leaving some residue inside the colon and rectum. In contrast, squatting allows for complete elimination of feces from the large intestines. Moreover, when standing, the puborectalis muscle hinders the rectum to maintain continence, while squatting relaxes the puborectalis muscle allowing for easier elimination of feces. It has been determined that the puborectalis muscle is the most relaxed at anorectal angles between 25 degrees and 45 degrees, which occur in a squatting position. Therefore, in some embodiments, the seat <b>32</b> can be adapted to facilitate a squatting, rather than sitting or standing, position. Further, in some embodiments, the seat can be adapted to permit a user to squat on the seat, and to facilitate a 35 degree angle in the bend of a user's knee, maximizing both comfort and effectiveness. But it would be readily apparent to those skilled in the art that the seat <b>32</b> could be adapted to facilitate other knee angles or otherwise shaped without departing from the scope of this disclosure. By way of example and not limitation, elderly or disabled users may need to defecate near a standing position, with a knee angle of greater than 135 degrees.</p>
+      <p id="p-00054-en" num="0054">
+        <figref>FIG. 6</figref> illustrates a urine diversion system <b>30</b> in accordance with an embodiment of the present disclosure. In some embodiments, the urine diversion system <b>30</b> is configured to separate liquid waste from solid waste. In some embodiments, the urine diversion system <b>30</b> of the intake module <b>28</b> can include a first top opening <b>34</b> and a second top opening <b>36</b> that are received in, and extend through the interior of the seat <b>32</b> to create a first channel <b>42</b> and a second channel <b>44</b>. In some embodiments, the first channel <b>42</b> can funnel urine through a first bottom opening <b>46</b>. In some embodiments, the second channel <b>44</b> can direct other waste through a second bottom opening <b>48</b>. In an embodiment, the first channel <b>42</b> processes urine, and the second channel <b>44</b> processes feces, used personal cleansing water, and other waste. In some embodiments, the first channel <b>42</b> can route liquid waste into a urine container <b>72</b>, and a second channel <b>44</b> can route solid waste, including diarrhea or vomit, into the drawer system <b>100</b>.</p>
+      <p id="p-00055-en" num="0055">In some embodiments, the first and second top openings <b>34</b>, <b>36</b> can be located a predetermined distance apart to mimic the natural location of the anus and urethra of a user while squatting. This distance can correspond to the average distance between the anus and urethra in women, which has been determined to be about 4.8 cm, and generally falls in the range of approximately 3.5 cm to 7.0 cm. In one embodiment, the first opening <b>34</b> has a diameter of about 3 cm. In some embodiments, the second opening <b>36</b> has a diameter of about 20 cm. The larger opening for the second opening <b>36</b> can be selected to ensure compatibility with a wide range of users of different sizes. The wider radius also can advantageously allow for potentially non-linear trajectories of feces as it exits the anus. If an individual were to voluntarily forcefully expel the stool downwards by increasing the pressure in their abdominal cavity, it is possible that the exiting stool will have a horizontal velocity in addition to falling from gravity. Experimental results revealed that the maximum horizontal distance covered between the user and the second top opening <b>36</b> is approximately 3.8 cm. But it would be readily apparent to those skilled in the art that other diameters could be used for the first opening <b>34</b> and/or the second opening <b>36</b> and that other distances between first and second opening <b>34</b>, <b>36</b> could be used without departing from the scope of this disclosure. Additionally, other distances can be selected where the intended users are men, users with a disability, or are of a particular ethnic group that can have a different average spacing, or for other reasons.</p>
+      <p id="p-00056-en" num="0056">
+        <figref>FIG. 7</figref> illustrates a vent assembly in accordance with an embodiment of the present disclosure. In some embodiments, the intake module <b>28</b> further includes a vent assembly which can have a cover <b>52</b> and a handle <b>54</b>. In such embodiments, the vent assembly can prevent odors from escaping containers <b>66</b>, <b>68</b>, <b>70</b>, <b>72</b> of drawer system <b>100</b> (described in detail below) and can prevent unintended articles, such as garbage, animals, or children, from entering the channels <b>42</b>, <b>44</b>. When the toilet <b>10</b> is not in use, the cover <b>52</b> can remain closed to prevent odors from escaping.</p>
+      <p id="p-00057-en" num="0057">In some embodiments, a user of the toilet <b>10</b> can manipulate the handle <b>54</b> to toggle the channel cover <b>52</b> between a deployed position and retracted position. In some embodiments, the vent assembly further can include a mechanism for maintaining the channel cover <b>52</b> in a deployed position until the handle <b>54</b> is manipulated by a user to cause the cover <b>52</b> to enter a retracted state. Additionally, the handle <b>54</b> can be gripped by a user to support a user's weight. In some embodiments, the handle <b>54</b> is located proximate the seat <b>32</b> on the right side of the toilet <b>10</b>. In some embodiments, a second handle <b>55</b> (shown in <figref>FIG. 1</figref>) can be located on the opposite side of the seat from the first handle, and adapted to support a user's weight. But it would be readily apparent to those skilled in the art that the vent assembly, including the handle <b>54</b>, and second handle <b>55</b>, could be otherwise located, otherwise configured, or omitted without departing from the scope of this disclosure.</p>
+      <p id="p-00058-en" num="0058">In some embodiments, the urine diversion system <b>30</b> further comprises a funnel <b>38</b> received proximate the first top opening <b>34</b> or first channel <b>42</b> for helping to direct liquid therein. The funnel <b>38</b> can minimize potential splashing and can restrict the accidental introduction of any solid waste into the first channel <b>42</b>.</p>
+      <p id="p-00059-en" num="0059">Urine Container</p>
+      <p id="p-00060-en" num="0060">The toilet <b>10</b> can comprise a urine container <b>72</b> to collect liquid waste from the intake module <b>28</b>. This liquid waste can be collected and used as a fertilizer, as urine contains a significant amount of nitrogen.</p>
+      <p id="p-00061-en" num="0061">
+        <figref>FIG. 2</figref> illustrates an embodiment where a urine container <b>72</b> is in communication with the first channel <b>42</b> to collect the liquid waste. In some embodiments, gravity can cause urine to pass through the funnel <b>38</b>, the first channel <b>42</b>, and into the urine container <b>72</b>. The urine container <b>72</b> can further include a spigot-tube system for removing urine on-site.</p>
+      <p id="p-00062-en" num="0062">Drawer System</p>
+      <p id="p-00063-en" num="0063">Some embodiments of the present disclosure can comprise a drawer system <b>100</b>. While the toilet <b>10</b> is in use, gravity can cause non-urine waste to pass into the second channel <b>44</b>, through the second bottom opening <b>48</b> and into the drawer enclosure <b>60</b>. In some embodiments, this drawer system <b>100</b> can comprise a plurality of filters for sorting the solid waste by particle size as it passes through one or more filters. The drawer system <b>100</b> can also be used to separate solid feces from diarrhea, vomit, and water used for personal cleansing. In some embodiments, waste particles of different sizes can be sorted into three containers <b>66</b>, <b>68</b>, <b>70</b>. In some embodiments, the drawer system <b>100</b> can provide for fast, effective waste separation and also can enhance dehydration of feces. By separating solid feces, the feces can be removed, dehydrated, and turned into briquettes for energy generation.</p>
+      <p id="p-00064-en" num="0064">
+        <figref>FIG. 2</figref> illustrates an embodiment of the drawer system <b>100</b>. In an embodiment, the filters are arranged in drawers, similar to a dresser. In some embodiments, the containers <b>66</b>, <b>68</b>, and <b>70</b> can be housed in a self-contained drawer enclosure <b>60</b>, and be capable of being removed from the toilet <b>10</b>. The self-contained drawer system <b>100</b> can comprise wheels for improving mobility and to facilitate maintenance of the system. In some embodiments, at least a portion of the self-contained drawer system <b>100</b> can be received in the base <b>12</b>. Further, in some embodiments, the self-contained drawer system <b>100</b> can be locked or secured against displacement or tampering.</p>
+      <p id="p-00065-en" num="0065">In some embodiments, the first container <b>66</b> can be located proximate to, and below the intake module <b>28</b>, and can be adapted to receive waste through the second channel <b>44</b> of the urine diversion system <b>30</b>. In some embodiments, the first filter <b>62</b> can be located proximate the bottom of the first container <b>66</b> and the second filter <b>65</b> can be located proximate the bottom of the second container <b>68</b>. In some embodiments, the first filter <b>62</b> can be located at the bottom of the first container <b>66</b> and the second filter <b>65</b> can be located at the bottom of the second container <b>68</b>. The first container <b>66</b> can comprise a first filter <b>62</b> for catching solid waste, such as feces.</p>
+      <p id="p-00066-en" num="0066">In some embodiments, the first filter <b>62</b> is a coarse sieve filter. The first filter <b>62</b> can be made of plastic, metal or other materials. In one embodiment, the first filter <b>62</b> comprises a metal wire mesh, with openings <b>63</b> about 10 mm in size. In some embodiments, the first filter <b>62</b> can be cleaned and sterilized between uses by heating. In one embodiment, the first filter <b>62</b> is placed at an angle to horizontal, between about 3 degrees and 13 degrees, and in some embodiments, 5 degrees. This angle can prevent accumulation of solid waste directly beneath the second opening by spreading them across the mesh, and can prevent occlusion of the mesh.</p>
+      <p id="p-00067-en" num="0067">A second container <b>68</b> can be located below the first container <b>66</b>. In some embodiments, a second filter <b>64</b> can be located in the second container <b>68</b>, and can be used for catching vomit, diarrhea, and particulate matter from feces not captured by the first filter <b>62</b>. This second filter <b>64</b> can be used to catch small solid waste, solids in diarrhea or vomit, or smaller pieces of fecal matter that fall through the first filter <b>62</b>. In one embodiment, this second filter <b>64</b> is made of cheesecloth, having filter openings <b>65</b> of approximately 1 mm. In embodiments where the second filter <b>64</b> is made of an inexpensive or disposable material, like cheesecloth, it can be burned at regular intervals to eliminate pathogens, such as parasites, bacteria, and microbes. Also, as with the first filter <b>62</b>, the second filter <b>64</b> can be placed at an angle to horizontal, between 3 and 13 degrees, to prevent occlusion of the filter <b>64</b>, although in some embodiments the filter can be approximately horizontal.</p>
+      <p id="p-00068-en" num="0068">In embodiments that comprise a first filter <b>62</b> and second filter <b>64</b>, selection of vertical spacing between the first filter <b>62</b> and second filter <b>64</b> can prevent clogging of the first filter <b>62</b> and second filter <b>64</b> after repeated defecations. Where the filters <b>62</b> and <b>64</b> are touching, feces tend to accumulate and can clog the first filter <b>62</b> and second filter <b>64</b>. In an experiment, it was discovered that locating the first filter <b>62</b> and second filter <b>64</b> between 10 and 50 mm apart results in filter clogging, whereas spacings between 50 and 150 mm prevent clogging, and enable the filtration system to operate with repeated use. As would be obvious to a person having ordinary skill in the art, other spacings between the first filter <b>62</b> and second filter <b>64</b> are contemplated by this disclosure, and are presented by way of example only. Further, as would be obvious to a person having ordinary skill in the art, other filter materials, opening sizes, and filter angles for the first filter <b>62</b> and second filter <b>64</b> are contemplated by this disclosure, and the specific embodiments disclosed presented by way of example only.</p>
+      <p id="p-00069-en" num="0069">In some embodiments, a third container <b>70</b> can be used to collect any liquids, including water used by the personal cleansing system <b>90</b>. This third container <b>70</b> can be located below the second container <b>68</b>, and can catch any materials, such as liquids, not collected by the first or second filters <b>62</b>, <b>64</b>.</p>
+      <p id="p-00070-en" num="0070">In some embodiments, the first, second, and third containers <b>66</b>, <b>68</b>, <b>70</b> can be sized according to the number of users, average toilet use, and maintenance schedule. By way of example and not limitation, an embodiment can comprise containers <b>66</b>, <b>68</b>, <b>70</b>, <b>72</b> of a size and height adapted for use by a household of about five users and weekly maintenance. In such embodiments the first container <b>66</b> has a volume of at least about 30 L (2.12 cu. ft.), the second container <b>68</b> has a height of at least about 50 mm, the third container <b>70</b> has a volume of at least about 40 L (3.01 cu. ft.), and the urine container <b>72</b> has a volume of at least about 20 L (1.83 cu. ft.). However, other container sizes can be used for different numbers of users, different maintenance schedules, or for other reasons without departing from the scope of this disclosure.</p>
+      <p id="p-00071-en" num="0071">User Cleansing System</p>
+      <p id="p-00072-en" num="0072">In some cultures, it is customary for toilet users to engage in anal cleansing following defecation. Such practices can bring users into direct contact with pathogenic solid waste. As an alternative, some embodiments of the present disclosure further comprise a user cleansing system <b>90</b> to facilitate anal cleansing following defecation.</p>
+      <p id="p-00073-en" num="0073">
+        <figref>FIG. 8</figref> depicts a user cleansing system <b>90</b> in accordance with an embodiment of the present disclosure. In such embodiments, water can be pumped through a tubing system <b>93</b> that is directed at the user's anus. A downward force can be applied to a plunger <b>94</b> to create a pressure differential in reservoir <b>98</b> causing outward flow of water through the tubing system <b>93</b> at velocity sufficient to clean feces from the anus. In some embodiments the user cleansing system <b>90</b> can further include a nozzle <b>96</b> to facilitate control of the direction of flow to allow for faster removal of feces and less usage of water.</p>
+      <p id="p-00074-en" num="0074">In some embodiments, the user cleansing system <b>90</b> includes a cylindrical, hollow water reservoir <b>98</b> with a capacity corresponding to the average weekly usage of anal cleansing water. In some embodiments, the capacity of the water reservoir <b>98</b> is about 1.5 L. It will be readily apparent to those skilled in the art that other sized containers can be used without departing from the scope of the present disclosure.</p>
+      <p id="p-00075-en" num="0075">In some embodiments, the minimum pressure required for a person to expel water from the bidet-like nozzle <b>96</b> can be 0.158 psi. In some embodiments, the tubing <b>93</b> can be connected to the back of the seat <b>32</b>, and aimed upward at an angle between 30 and 60 degrees from horizontal to optimize waste removal, with open access for additional manual manipulation of this angle by the user if necessary. By way of example, and not limitation, in some embodiments, the nozzle can be aimed upward at 45 degrees from horizontal. It will be readily apparent to those skilled in the art other configurations or locations of the reservoir <b>98</b>, plunger <b>94</b> and tubing system <b>92</b> could be used or other types of personal cleansing systems chosen without departing from the scope of this disclosure.</p>
+      <p id="p-00076-en" num="0076">Structure</p>
+      <p id="p-00077-en" num="0077">
+        <figref>FIG. 9</figref> illustrates a structure <b>110</b> in accordance with some embodiments of the present disclosure. In some embodiments, the toilet <b>10</b> further includes a structure <b>110</b>, similar to a traditional pit latrine hut. The structure <b>110</b> can include several features, such as being built on a platform, having a door and/or a lock, and can be easily mass-produced.</p>
+      <p id="p-00078-en" num="0078">This structure <b>110</b> provides several privacy and security features to the toilet <b>10</b>. Because the structure <b>110</b> is enclosed, users of the system can use it with a greater degree of privacy. In some embodiments, the structure <b>110</b> comprises a locking mechanism that can increase that sense of privacy by allowing a user to lock the door while the system is in use. Further, the locking system can be used to secure the system against theft, vandalism, or unauthorized use. The structure <b>110</b> can also include a ventilation opening <b>115</b> that allows odors to escape the structure <b>110</b>.</p>
+      <p id="p-00079-en" num="0079">Maintenance of System and Reuse of Collected Waste</p>
+      <p id="p-00080-en" num="0080">Servicing of the toilet <b>10</b> described herein, or other similar toilet technologies can comprise a method for maintaining the toilet <b>10</b> and reusing the collected human waste products. By way of example, and not limitation, the present toilet <b>10</b> can be designed and used according to a weekly maintenance schedule.</p>
+      <p id="p-00081-en" num="0081">At the weekly servicing of the system, the servicing process can comprise maintenance and waste collection steps, and waste reuse steps. <figref>FIG. 10</figref> depicts a maintenance and waste collection process <b>200</b> in accordance with an embodiment of the present invention. In method <b>200</b>, maintenance and waste collection can comprise emptying several containers of human waste, including emptying the urine container <b>72</b> of collected urine at <b>202</b>. The method can further comprise the removal of feces from a first container <b>66</b> at <b>203</b>, removal of pathogenic material from a second container <b>68</b> at <b>204</b>, or removal of used user cleansing water from a third container <b>70</b> at <b>205</b>. But, in embodiments that can omit one or more containers, the corresponding maintenance steps can be omitted. Further, different containers can be designed for different maintenance schedules, and thus only some containers can be emptied during a maintenance process.</p>
+      <p id="p-00082-en" num="0082">Servicing the toilet <b>10</b> can further comprise maintenance steps, wherein the toilet is prepared for re-use. In some embodiments, this comprises sterilizing the first filter <b>62</b> at <b>206</b>. In embodiments where the first filter <b>62</b> comprises a metal mesh, this can involve sterilizing the first filter by heating to remove pathogens. Alternatively, other sterilization methods can be used, such as chemical treatment, or other methods where the first filter is not a metal filter.</p>
+      <p id="p-00083-en" num="0083">Maintenance steps can further comprise removing the second filter <b>64</b> at <b>207</b>. Where the second filter <b>64</b> is made of a flammable material, such as cheesecloth, the method can include removing the filter and burning it. The second filter <b>64</b> can then be replaced. Alternatively, the second filter <b>64</b> can be made of a reusable material, and thus sterilized and reused, rather than replaced.</p>
+      <p id="p-00084-en" num="0084">Once maintenance is complete, the collected urine, feces, and used personal cleansing water can be processed for re-use. <figref>FIG. 11</figref> depicts a reuse process in accordance with an embodiment of the present invention. In some embodiments, the urine, feces, and used personal cleansing water can be transported for a central site for processing, though other embodiments can reprocess the waste products elsewhere.</p>
+      <p id="p-00085-en" num="0085">Reprocessing the feces can comprise processing the feces into combustible fuel, steps <b>302</b>, <b>303</b>, <b>304</b>. This process can comprise a dehydrating step <b>302</b>, a sterilizing step <b>303</b>, and a forming step <b>304</b>. In some embodiments, the dehydrating and sterilizing steps <b>302</b>, <b>303</b> can be performed simultaneously. Sterilization of the solid waste <b>303</b> can be performed by heating it to a temperature at which pathogens cannot survive. Following sterilization <b>303</b>, it can be formed into briquettes which can be burned to produce energy, step <b>304</b>. In some embodiments, the feces are not processed into combustible fuel, but can be used for other purposes. In some embodiments, the feces can be used as fertilizer. In some embodiments, the feces can be simply discarded. As would be understood by a person having ordinary skill in the art, the feces can be processed or used for other purposes.</p>
+      <p id="p-00086-en" num="0086">In some embodiments, the contents of the third container <b>70</b> can be removed and filtered to remove pathogens, and reused, at <b>305</b>. In particular, the filtered water can be mixed with collected urine at <b>306</b>, in a predetermined ratio for use as a nitrogen-rich fertilizer. In some embodiments this ratio is 4:1. But it will be readily apparent to those skilled in the art that filtration systems other than sand filtration could be used and further that the purified water could be used for a different purpose or in different water to urine ratios without departing from the scope of this disclosure.</p>
+      <p id="p-00087-en" num="0087">In some embodiments, a maintenance worker can perform the maintenance and waste collection methods <b>200</b> on a weekly basis. But it will be apparent to those skilled in the art that the present disclosure could be modified to provide for sterilization and/or replacement of the filters <b>62</b>, <b>64</b>, or any other filters without a maintenance worker or with a non-weekly maintenance worker without departing from the scope of this disclosure. Furthermore, it will be also apparent to those skilled in the art that the present disclosure could be modified to include on-site processing instead of centralized processing of feces, or to omit generation of energy from processed feces without departing from the scope of this disclosure.</p>
+      <p id="p-00088-en" num="0088">Locally Constructed Embodiments</p>
+      <p id="p-00089-en" num="0089">In some embodiments, the disclosure can be constructed from materials locally available in the region of use (for example, in Kenya). This allows for some embodiments of the toilet <b>10</b> to be locally created in the region of use. This can minimize the cost of transporting the toilet <b>10</b>, and any necessary parts for maintaining the toilet <b>10</b>.</p>
+      <p id="p-00090-en" num="0090">In some embodiments, the seat <b>32</b> can be ergonomically designed and molded from clay found in soil of the region of use. The molds can comprise a two-sided mold for repeat production, and can be manufactured via vacuforming. In some embodiments, locals from the region of use can be employed for the completion of manufacturing from the vacuformed mold. In some embodiments, soft clay can be compressed by hand within the molded acrylic cavity and then leveled off to create consistency between parts, and the molded cavity can then be screwed into another acrylic plate to maintain balance as the clay goes through a drying process. In some embodiments, manufacturing the toilet <b>10</b> further comprises allowing water to evaporate from the clay material over three days as it enters a stage commonly called “greenware.” In some embodiments, the mold can then be heated or fired in a kiln for another three days to be deemed usable. During the drying and firing process of these embodiments, clay can lose four to fifteen percent of its total volume.</p>
+      <p id="p-00091-en" num="0091">The clay utilized by some embodiments offers impressive material strength, natural wear resistance, and possible economic benefit. In some embodiments, the cost of both the clay material and manufacturing for the toilet seat <b>32</b> can be only $15 USD per unit. But it will be readily apparent to those skilled in the art that manufacturing can take place in another region, with different materials, or using a different process without departing from the scope of this disclosure.</p>
+      <p id="p-00092-en" num="0092">In some embodiments, high density polyethylene (HDPE) plastic constitutes a vast majority of the material used in parts such as the seat <b>32</b>, the vent assembly handles <b>54</b> and <b>55</b>, and the drawer system <b>100</b>. HPDE plastic provides strength, impact resistance, and versatility at low cost. But it will be readily apparent to those skilled in the art that other materials can be selected without departing from the scope of this disclosure.</p>
+      <p id="p-00093-en" num="0093">In some embodiments of the present disclosure, injection and rotational molding can be used during manufacturing. Though rotational molding offers cost advantages for a 17,000 unit output value, the process is not readily available worldwide and thus would require additional importing expenses in some parts of the world.</p>
+      <p id="p-00094-en" num="0094">Accordingly, some embodiments of the present disclosure comprise utilizing locally available manufacturing methods, such as injection molding, for manufacturing of parts. But it will be readily apparent to those skilled in the art that manufacturing can take place in another region or using a different process without departing from the scope of this disclosure.</p>
+      <p id="p-00095-en" num="0095">While certain implementations of the disclosure have been described in connection with what is presently considered to be the most practical and various implementations, it is to be understood that the disclosure is not to be limited to the disclosed implementations, but on the contrary, is intended to cover various modifications and equivalent arrangements included within the scope of the appended claims. Although specific terms are employed herein, they are used in a generic and descriptive sense only and not for purposes of limitation.</p>
+      <p id="p-00096-en" num="0096">This written description uses examples to disclose certain implementations of the disclosure, including the best mode, and also to enable any person of ordinary skill to practice certain implementations of the disclosure, including making and using any devices or systems and performing any incorporated methods. The patentable scope of certain implementations of the disclosure is defined in the claims, and can include other examples that occur to those of ordinary skill. Such other examples are intended to be within the scope of the claims if they have structural elements that do not differ from the literal language of the claims, or if they include equivalent structural elements with insubstantial differences from the literal language of the claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A toilet, comprising:
+<claim-text>a base comprising a top surface and a bottom surface;</claim-text><claim-text>an intake module coupled to the top surface of the base, the intake module adapted to receive a user;</claim-text><claim-text>a drawer system detachably attached to the bottom surface of the toilet; and</claim-text><claim-text>a urine container in fluid communication with the intake module, the urine container coupled to the bottom surface of the base.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The toilet of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, the intake module further comprising:
+<claim-text>a seat;</claim-text><claim-text>a urine diversion system formed into the seat, the urine diversion system having a first top opening and a second top opening, the first top opening and second top opening positioned a predetermined distance apart;</claim-text><claim-text>a first channel in communication with the first top opening;</claim-text><claim-text>a second channel separate from the first channel and in communication with the second top opening;</claim-text><claim-text>a first bottom opening in communication with the first channel and the urine container; and</claim-text><claim-text>a second bottom opening in communication with the second channel and the drawer system.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The toilet of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the seat is adapted to receive a user in a squatting position such that the angle between the femur and tibia of the user are positioned at an angle of less than 45 degrees.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The toilet of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, further comprising:
+<claim-text>a water reservoir the top surface of the base;</claim-text><claim-text>a plunger disposed within the water reservoir;</claim-text><claim-text>a tube connecting the water reservoir to the intake module; and</claim-text><claim-text>a nozzle connected to the tube, on the nozzle located proximate the intake module, wherein the nozzle is positioned at an angle to be aimed approximately at the anus of a user engaging the seat.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The toilet of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the nozzle is aimed upward at an angle between 30 and 60 degrees to horizontal.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The toilet of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the position of the nozzle is adjustable by the user.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The toilet of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, the drawer system further comprising:
+<claim-text>a first container positioned below the intake module;</claim-text><claim-text>a first filter located proximate the bottom of the first container;</claim-text><claim-text>a second container positioned below the first container;</claim-text><claim-text>a second filter located proximate the bottom of the second container; and</claim-text><claim-text>a third container positioned below the second container.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The toilet of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the first container and second container are removable from the drawer system.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The toilet of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the first filter is a metal filter having openings of approximately 10 mm.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The toilet of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the second filter is a cheesecloth filter having openings of approximately 1 mm.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The toilet of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, the intake module further comprising:
+<claim-text>a cover sized to cover the first and second channels, the cover slidably connected to the urine diversion system; and</claim-text><claim-text>a first handle located proximate a side of the seat, the first handle connected to the cover.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The toilet of <claim-ref idref="clm-00010-en">claim 10</claim-ref> further comprising a second handle connected to the base, the second handle located adjacent to the intake module.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The toilet of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, the drawer system having a wheel attached to the bottom of the drawer system.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The toilet of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, the drawer system having a door adapted to receive a lock.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The toilet of <claim-ref idref="clm-00001-en">claim 1</claim-ref> further comprising a structure enclosing the base, the structure having a door and a vent opening.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The toilet of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the door of the structure is adapted to receive a lock.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en" independent="true">
+      <claim-text>
+        <b>17</b>. A maintenance and waste collection method, comprising:
+<claim-text>removing urine from a urine container;</claim-text><claim-text>removing solid waste from a first container;</claim-text><claim-text>removing pathogenic material from a second container;</claim-text><claim-text>removing used user cleansing water from a third container;</claim-text><claim-text>sterilizing a first filter; and</claim-text><claim-text>removing and replacing a second filter.</claim-text></claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method of <claim-ref idref="clm-00017-en">claim 17</claim-ref> further comprising:
+<claim-text>filtering the urine to remove contaminants; and</claim-text><claim-text>diluting the filtered urine to form a high-nitrogen fertilizer.</claim-text></claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method of <claim-ref idref="clm-00017-en">claim 17</claim-ref> further comprising:
+<claim-text>removing a first metal filter from the toilet; and</claim-text><claim-text>sterilizing the first metal filter by heating the first metal filter.</claim-text></claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The method of <claim-ref idref="clm-00017-en">claim 17</claim-ref> further comprising:
+<claim-text>removing a second filter from the toilet;</claim-text><claim-text>removing from the second filter solids collected by the second filter; and</claim-text><claim-text>burning the second filter and the solids collected by the second filter. </claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150245748A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150245748A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150245748A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245748A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150245748A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245748A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150245748A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245748A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150245748A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245748A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150245748A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245748A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150245748A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245748A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150245748A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245748A1-20150903-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150245748A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245748A1-20150903-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150245748A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245748A1-20150903-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150245748A1_00011.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150245748A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150245748A1.PDF" type="pdf" size="798173" pages="17" />
+</lexisnexis-patent-document>

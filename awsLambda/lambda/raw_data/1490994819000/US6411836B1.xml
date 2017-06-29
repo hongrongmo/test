@@ -1,0 +1,2259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2017 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20170321" file="US6411836B1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-changed="20170321" time-changed="132330">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Grant" publ-desc="Patent without a pre-grant publication">
+      <document-id id="39145519">
+        <country>US</country>
+        <doc-number>6411836</doc-number>
+        <kind>B1</kind>
+        <date>20020625</date>
+      </document-id>
+      <document-id data-format="original">
+        <doc-number>6411836</doc-number>
+        <kind>B1</kind>
+      </document-id>
+      <document-id data-format="docdb" id="289986889">
+        <doc-number>6411836</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>US6411836</doc-number>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id id="76087533">
+        <country>US</country>
+        <doc-number>09475522</doc-number>
+        <date>19991230</date>
+      </document-id>
+      <document-id data-format="original">
+        <country>US</country>
+        <doc-number>09475522</doc-number>
+        <date>19991230</date>
+      </document-id>
+      <document-id data-format="docdb" id="51177634">
+        <doc-number>47552299</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>US19990475522</doc-number>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20070523">
+      <priority-claim sequence="1" kind="national">
+        <country>US</country>
+        <doc-number>09475522</doc-number>
+        <date>19991230</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>US</country>
+        <doc-number>47552299</doc-number>
+        <date>19991230</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>US19990475522</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20090404">
+      <unexamined-printed-without-grant>
+        <date>20020625</date>
+      </unexamined-printed-without-grant>
+      <printed-with-grant>
+        <date>20020625</date>
+      </printed-with-grant>
+    </dates-of-public-availability>
+    <classification-ipc date-changed="20150310">
+      <main-classification>
+        <text> 7A 61B   5/05   A</text>
+        <edition>7</edition>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>05</subgroup>
+        <qualifying-character>A</qualifying-character>
+      </main-classification>
+    </classification-ipc>
+    <classifications-ipcr date-changed="20150310">
+      <classification-ipcr sequence="1">
+        <text>A61B   5/055       20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>055</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61B   6/00        20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>6</main-group>
+        <subgroup>00</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61B   8/00        20060101A I20051008RMEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>8</main-group>
+        <subgroup>00</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20051008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>G06F  19/00        20110101A I20140524RMEP        </text>
+        <ipc-version-indicator>
+          <date>20110101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>G</section>
+        <class>06</class>
+        <subclass>F</subclass>
+        <main-group>19</main-group>
+        <subgroup>00</subgroup>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140524</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>R</classification-status>
+        <classification-data-source>M</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150310">
+      <classification-cpc sequence="1">
+        <text>A61B   8/00        20130101 FI20150228BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>8</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150228</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B   5/055       20130101 LI20150228BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>055</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150228</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61B   6/00        20130101 LI20150228BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>6</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150228</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61B   6/566       20130101 LI20150228BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>6</main-group>
+        <subgroup>566</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150228</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61B   8/565       20130101 LA20150226BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>8</main-group>
+        <subgroup>565</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150226</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>G06F  19/321       20130101 LI20150228BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>06</class>
+        <subclass>F</subclass>
+        <main-group>19</main-group>
+        <subgroup>321</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150228</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>G06F  19/3406      20130101 LI20150228BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>06</class>
+        <subclass>F</subclass>
+        <main-group>19</main-group>
+        <subgroup>3406</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150228</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <classification-national date-changed="20150310">
+      <country>US</country>
+      <main-classification>
+        <text>600/407</text>
+        <class>600</class>
+        <subclass>407</subclass>
+      </main-classification>
+    </classification-national>
+    <classifications-ecla date-changed="20150310">
+      <classification-ecla sequence="1" classification-scheme="EC" country="EP">
+        <text>A61B  8/00</text>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>8</main-group>
+        <subgroup>00</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="2" classification-scheme="EC" country="EP">
+        <text>A61B  5/055</text>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>055</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="3" classification-scheme="EC" country="EP">
+        <text>A61B  6/00</text>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>6</main-group>
+        <subgroup>00</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="4" classification-scheme="EC" country="EP">
+        <text>A61B  6/56D</text>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>6</main-group>
+        <subgroup>56</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">D  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="5" classification-scheme="EC" country="EP">
+        <text>A61B  8/56</text>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>8</main-group>
+        <subgroup>56</subgroup>
+      </classification-ecla>
+      <classification-ecla sequence="6" classification-scheme="EC" country="EP">
+        <text>G06F 19/32A</text>
+        <section>G</section>
+        <class>06</class>
+        <subclass>F</subclass>
+        <main-group>19</main-group>
+        <subgroup>32</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">A  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+      <classification-ecla sequence="7" classification-scheme="EC" country="EP">
+        <text>G06F 19/34A</text>
+        <section>G</section>
+        <class>06</class>
+        <subclass>F</subclass>
+        <main-group>19</main-group>
+        <subgroup>34</subgroup>
+        <additional-subgroups>
+          <additional-subgroup sequence="1">A  </additional-subgroup>
+        </additional-subgroups>
+      </classification-ecla>
+    </classifications-ecla>
+    <field-of-search date-changed="20070517">
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>600/407</text>
+          <class>600</class>
+          <subclass>407</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>705/3</text>
+          <class>705</class>
+          <subclass>3</subclass>
+        </main-classification>
+      </classification-national>
+    </field-of-search>
+    <number-of-claims>30</number-of-claims>
+    <exemplary-claim>1</exemplary-claim>
+    <invention-title id="title_eng" date-changed="20100428" lang="eng" format="original">Method and apparatus for user preferences configuring in an image handling system</invention-title>
+    <references-cited date-changed="20170321">
+      <patent-citations name="patcit" date-changed="20100428" />
+      <forward-citations name="fwdcit" date-changed="20170321" />
+      <citation srep-phase="e">
+        <patcit num="1" dnum="5734915">
+          <document-id>
+            <country>US</country>
+            <doc-number>5734915</doc-number>
+            <kind>A</kind>
+            <name>Roewer</name>
+            <date>19980331</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>5734915</doc-number>
+          </document-id>
+          <application-date>
+            <date>19941031</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="2" dnum="6117079">
+          <document-id>
+            <country>US</country>
+            <doc-number>6117079</doc-number>
+            <kind>A</kind>
+            <name>Brackett et al.</name>
+            <date>20000912</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>6117079</doc-number>
+          </document-id>
+          <application-date>
+            <date>19990428</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="3" dnum="6125350">
+          <document-id>
+            <country>US</country>
+            <doc-number>6125350</doc-number>
+            <kind>A</kind>
+            <name>Dirbas</name>
+            <date>20000926</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>6125350</doc-number>
+          </document-id>
+          <application-date>
+            <date>19950920</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="4" dnum="6260021">
+          <document-id>
+            <country>US</country>
+            <doc-number>6260021</doc-number>
+            <kind>B1</kind>
+            <name>Wong et al.</name>
+            <date>20010710</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>6260021</doc-number>
+          </document-id>
+          <application-date>
+            <date>19980612</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <fwdcit num="1">
+          <document-id>
+            <country>US</country>
+            <doc-number>7577282</doc-number>
+            <kind>B2</kind>
+            <date>20090818</date>
+          </document-id>
+          <application-date>
+            <date>20051110</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="2">
+          <document-id>
+            <country>US</country>
+            <doc-number>7616801</doc-number>
+            <kind>B2</kind>
+            <date>20091110</date>
+          </document-id>
+          <application-date>
+            <date>20070713</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="3">
+          <document-id>
+            <country>CN</country>
+            <doc-number>100405355</doc-number>
+            <kind>C</kind>
+            <date>20080723</date>
+          </document-id>
+          <application-date>
+            <date>20040531</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="4">
+          <document-id>
+            <country>US</country>
+            <doc-number>7366739</doc-number>
+            <kind>B2</kind>
+            <date>20080429</date>
+          </document-id>
+          <application-date>
+            <date>20030812</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="5">
+          <document-id>
+            <country>US</country>
+            <doc-number>7277564</doc-number>
+            <kind>B2</kind>
+            <date>20071002</date>
+          </document-id>
+          <application-date>
+            <date>20021126</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="6">
+          <document-id>
+            <country>US</country>
+            <doc-number>7239907</doc-number>
+            <kind>B2</kind>
+            <date>20070703</date>
+          </document-id>
+          <application-date>
+            <date>20030410</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="7">
+          <document-id>
+            <country>US</country>
+            <doc-number>7263661</doc-number>
+            <kind>B2</kind>
+            <date>20070828</date>
+          </document-id>
+          <application-date>
+            <date>20030428</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="8">
+          <document-id>
+            <country>US</country>
+            <doc-number>7233144</doc-number>
+            <kind>B2</kind>
+            <date>20070619</date>
+          </document-id>
+          <application-date>
+            <date>20050311</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="9">
+          <document-id>
+            <country>US</country>
+            <doc-number>7000186</doc-number>
+            <kind>B1</kind>
+            <date>20060214</date>
+          </document-id>
+          <application-date>
+            <date>19990503</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="10">
+          <document-id>
+            <country>US</country>
+            <doc-number>6961754</doc-number>
+            <kind>B2</kind>
+            <date>20051101</date>
+          </document-id>
+          <application-date>
+            <date>20010112</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="11">
+          <document-id>
+            <country>US</country>
+            <doc-number>6553248</doc-number>
+            <kind>B1</kind>
+            <date>20030422</date>
+          </document-id>
+          <application-date>
+            <date>19991109</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="12">
+          <document-id>
+            <country>US</country>
+            <doc-number>7702142</doc-number>
+            <kind>B2</kind>
+            <date>20100420</date>
+          </document-id>
+          <application-date>
+            <date>20051115</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="13">
+          <document-id>
+            <country>US</country>
+            <doc-number>7725154</doc-number>
+            <kind>B2</kind>
+            <date>20100525</date>
+          </document-id>
+          <application-date>
+            <date>20060622</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="14">
+          <document-id>
+            <country>US</country>
+            <doc-number>7747644</doc-number>
+            <kind>B1</kind>
+            <date>20100629</date>
+          </document-id>
+          <application-date>
+            <date>20030930</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="15">
+          <document-id>
+            <country>US</country>
+            <doc-number>7756724</doc-number>
+            <kind>B2</kind>
+            <date>20100713</date>
+          </document-id>
+          <application-date>
+            <date>20021121</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="16">
+          <document-id>
+            <country>US</country>
+            <doc-number>7792245</doc-number>
+            <kind>B2</kind>
+            <date>20100907</date>
+          </document-id>
+          <application-date>
+            <date>20090624</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="17">
+          <document-id>
+            <country>CN</country>
+            <doc-number>100522060</doc-number>
+            <kind>C</kind>
+            <date>20090805</date>
+          </document-id>
+          <application-date>
+            <date>20040616</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="18">
+          <document-id>
+            <country>US</country>
+            <doc-number>7869563</doc-number>
+            <kind>B2</kind>
+            <date>20110111</date>
+          </document-id>
+          <application-date>
+            <date>20051123</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="19">
+          <document-id>
+            <country>US</country>
+            <doc-number>7904824</doc-number>
+            <kind>B2</kind>
+            <date>20110308</date>
+          </document-id>
+          <application-date>
+            <date>20021210</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="20">
+          <document-id>
+            <country>US</country>
+            <doc-number>7916915</doc-number>
+            <kind>B2</kind>
+            <date>20110329</date>
+          </document-id>
+          <application-date>
+            <date>20090811</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="21">
+          <document-id>
+            <country>US</country>
+            <doc-number>7949091</doc-number>
+            <kind>B2</kind>
+            <date>20110524</date>
+          </document-id>
+          <application-date>
+            <date>20100203</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="22">
+          <document-id>
+            <country>US</country>
+            <doc-number>7991106</doc-number>
+            <kind>B2</kind>
+            <date>20110802</date>
+          </document-id>
+          <application-date>
+            <date>20090722</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="23">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2009038526</doc-number>
+            <kind>A1</kind>
+            <date>20090326</date>
+          </document-id>
+          <application-date>
+            <date>20080909</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="24">
+          <document-id>
+            <country>US</country>
+            <doc-number>8131049</doc-number>
+            <kind>B2</kind>
+            <date>20120306</date>
+          </document-id>
+          <application-date>
+            <date>20091023</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="25">
+          <document-id>
+            <country>EP</country>
+            <doc-number>1694210</doc-number>
+            <kind>B1</kind>
+            <date>20120328</date>
+          </document-id>
+          <application-date>
+            <date>20041117</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="26">
+          <document-id>
+            <country>US</country>
+            <doc-number>8155421</doc-number>
+            <kind>B2</kind>
+            <date>20120410</date>
+          </document-id>
+          <application-date>
+            <date>20090804</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="27">
+          <document-id>
+            <country>US</country>
+            <doc-number>8175219</doc-number>
+            <kind>B2</kind>
+            <date>20120508</date>
+          </document-id>
+          <application-date>
+            <date>20101129</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="28">
+          <document-id>
+            <country>US</country>
+            <doc-number>8184875</doc-number>
+            <kind>B2</kind>
+            <date>20120522</date>
+          </document-id>
+          <application-date>
+            <date>20071012</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="29">
+          <document-id>
+            <country>US</country>
+            <doc-number>8275090</doc-number>
+            <kind>B2</kind>
+            <date>20120925</date>
+          </document-id>
+          <application-date>
+            <date>20110802</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="30">
+          <document-id>
+            <country>US</country>
+            <doc-number>8285020</doc-number>
+            <kind>B2</kind>
+            <date>20121009</date>
+          </document-id>
+          <application-date>
+            <date>20110215</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="31">
+          <document-id>
+            <country>US</country>
+            <doc-number>8416915</doc-number>
+            <kind>B2</kind>
+            <date>20130409</date>
+          </document-id>
+          <application-date>
+            <date>20110519</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="32">
+          <document-id>
+            <country>US</country>
+            <doc-number>8565374</doc-number>
+            <kind>B2</kind>
+            <date>20131022</date>
+          </document-id>
+          <application-date>
+            <date>20120502</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="33">
+          <document-id>
+            <country>US</country>
+            <doc-number>8566119</doc-number>
+            <kind>B2</kind>
+            <date>20131022</date>
+          </document-id>
+          <application-date>
+            <date>20070813</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="34">
+          <document-id>
+            <country>US</country>
+            <doc-number>8566727</doc-number>
+            <kind>B2</kind>
+            <date>20131022</date>
+          </document-id>
+          <application-date>
+            <date>20070103</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="35">
+          <document-id>
+            <country>US</country>
+            <doc-number>8571292</doc-number>
+            <kind>B2</kind>
+            <date>20131029</date>
+          </document-id>
+          <application-date>
+            <date>20120126</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="36">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110302516</doc-number>
+            <kind>A1</kind>
+            <date>20111208</date>
+          </document-id>
+          <application-date>
+            <date>20101130</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="37">
+          <document-id>
+            <country>US</country>
+            <doc-number>8671113</doc-number>
+            <kind>B2</kind>
+            <date>20140311</date>
+          </document-id>
+          <application-date>
+            <date>20100504</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="38">
+          <document-id>
+            <country>US</country>
+            <doc-number>8712127</doc-number>
+            <kind>B2</kind>
+            <date>20140429</date>
+          </document-id>
+          <application-date>
+            <date>20120313</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="39">
+          <document-id>
+            <country>US</country>
+            <doc-number>8712798</doc-number>
+            <kind>B2</kind>
+            <date>20140429</date>
+          </document-id>
+          <application-date>
+            <date>20041117</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="40">
+          <document-id>
+            <country>US</country>
+            <doc-number>8784314</doc-number>
+            <kind>B2</kind>
+            <date>20140722</date>
+          </document-id>
+          <application-date>
+            <date>20031008</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="41">
+          <document-id>
+            <country>US</country>
+            <doc-number>8787522</doc-number>
+            <kind>B2</kind>
+            <date>20140722</date>
+          </document-id>
+          <application-date>
+            <date>20111005</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="42">
+          <document-id>
+            <country>US</country>
+            <doc-number>8831171</doc-number>
+            <kind>B2</kind>
+            <date>20140909</date>
+          </document-id>
+          <application-date>
+            <date>20130405</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="43">
+          <document-id>
+            <country>US</country>
+            <doc-number>8873824</doc-number>
+            <kind>B2</kind>
+            <date>20141028</date>
+          </document-id>
+          <application-date>
+            <date>20131028</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="44">
+          <document-id>
+            <country>US</country>
+            <doc-number>8897535</doc-number>
+            <kind>B2</kind>
+            <date>20141125</date>
+          </document-id>
+          <application-date>
+            <date>20131003</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="45">
+          <document-id>
+            <country>DE</country>
+            <doc-number>10324908</doc-number>
+            <kind>B4</kind>
+            <date>20070322</date>
+          </document-id>
+          <application-date>
+            <date>20030530</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="46">
+          <document-id>
+            <country>US</country>
+            <doc-number>8934737</doc-number>
+            <kind>B1</kind>
+            <date>20150113</date>
+          </document-id>
+          <application-date>
+            <date>20121010</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="47">
+          <document-id>
+            <country>WO</country>
+            <doc-number>03046689</doc-number>
+            <kind>A2</kind>
+            <date>20030605</date>
+          </document-id>
+          <application-date>
+            <date>20021121</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="48">
+          <document-id>
+            <country>US</country>
+            <doc-number>8992777</doc-number>
+            <kind>B2</kind>
+            <date>20150331</date>
+          </document-id>
+          <application-date>
+            <date>20111118</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="49">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2013088353</doc-number>
+            <kind>A2</kind>
+            <date>20130620</date>
+          </document-id>
+          <application-date>
+            <date>20121212</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="50">
+          <document-id>
+            <country>US</country>
+            <doc-number>9042612</doc-number>
+            <kind>B2</kind>
+            <date>20150526</date>
+          </document-id>
+          <application-date>
+            <date>20121005</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="51">
+          <document-id>
+            <country>US</country>
+            <doc-number>20020143972</doc-number>
+            <kind>A1</kind>
+            <date>20021003</date>
+          </document-id>
+          <application-date>
+            <date>20010112</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="52">
+          <document-id>
+            <country>US</country>
+            <doc-number>9049036</doc-number>
+            <kind>B2</kind>
+            <date>20150602</date>
+          </document-id>
+          <application-date>
+            <date>20050304</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="53">
+          <document-id>
+            <country>US</country>
+            <doc-number>20030126148</doc-number>
+            <kind>A1</kind>
+            <date>20030703</date>
+          </document-id>
+          <application-date>
+            <date>20021121</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="54">
+          <document-id>
+            <country>US</country>
+            <doc-number>20030208118</doc-number>
+            <kind>A1</kind>
+            <date>20031106</date>
+          </document-id>
+          <application-date>
+            <date>20030410</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="55">
+          <document-id>
+            <country>US</country>
+            <doc-number>9066706</doc-number>
+            <kind>B2</kind>
+            <date>20150630</date>
+          </document-id>
+          <application-date>
+            <date>20131021</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="56">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040098368</doc-number>
+            <kind>A1</kind>
+            <date>20040520</date>
+          </document-id>
+          <application-date>
+            <date>20030812</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="57">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040101175</doc-number>
+            <kind>A1</kind>
+            <date>20040527</date>
+          </document-id>
+          <application-date>
+            <date>20021126</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="58">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040109028</doc-number>
+            <kind>A1</kind>
+            <date>20040610</date>
+          </document-id>
+          <application-date>
+            <date>20021210</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="59">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040216058</doc-number>
+            <kind>A1</kind>
+            <date>20041028</date>
+          </document-id>
+          <application-date>
+            <date>20030428</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="60">
+          <document-id>
+            <country>US</country>
+            <doc-number>9084579</doc-number>
+            <kind>B2</kind>
+            <date>20150721</date>
+          </document-id>
+          <application-date>
+            <date>20140428</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="61">
+          <document-id>
+            <country>US</country>
+            <doc-number>20040264756</doc-number>
+            <kind>A1</kind>
+            <date>20041230</date>
+          </document-id>
+          <application-date>
+            <date>20040528</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="62">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050080326</doc-number>
+            <kind>A1</kind>
+            <date>20050414</date>
+          </document-id>
+          <application-date>
+            <date>20031008</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="63">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2013116660</doc-number>
+            <kind>A1</kind>
+            <date>20130808</date>
+          </document-id>
+          <application-date>
+            <date>20130201</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="64">
+          <document-id>
+            <country>US</country>
+            <doc-number>9095306</doc-number>
+            <kind>B2</kind>
+            <date>20150804</date>
+          </document-id>
+          <application-date>
+            <date>20081224</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="65">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050131856</doc-number>
+            <kind>A1</kind>
+            <date>20050616</date>
+          </document-id>
+          <application-date>
+            <date>20031215</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="66">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050193340</doc-number>
+            <kind>A1</kind>
+            <date>20050901</date>
+          </document-id>
+          <application-date>
+            <date>20040301</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="67">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050206967</doc-number>
+            <kind>A1</kind>
+            <date>20050922</date>
+          </document-id>
+          <application-date>
+            <date>20040319</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="68">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050222992</doc-number>
+            <kind>A1</kind>
+            <date>20051006</date>
+          </document-id>
+          <application-date>
+            <date>20050304</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="69">
+          <document-id>
+            <country>US</country>
+            <doc-number>20050273009</doc-number>
+            <kind>A1</kind>
+            <date>20051208</date>
+          </document-id>
+          <application-date>
+            <date>20040602</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="70">
+          <document-id>
+            <country>EP</country>
+            <doc-number>1792569</doc-number>
+            <kind>B1</kind>
+            <date>20150826</date>
+          </document-id>
+          <application-date>
+            <date>20061110</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="71">
+          <document-id>
+            <country>US</country>
+            <doc-number>9119593</doc-number>
+            <kind>B2</kind>
+            <date>20150901</date>
+          </document-id>
+          <application-date>
+            <date>20120904</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="72">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060098855</doc-number>
+            <kind>A1</kind>
+            <date>20060511</date>
+          </document-id>
+          <application-date>
+            <date>20051110</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="73">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060202693</doc-number>
+            <kind>A1</kind>
+            <date>20060914</date>
+          </document-id>
+          <application-date>
+            <date>20050311</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="74">
+          <document-id>
+            <country>US</country>
+            <doc-number>20060293588</doc-number>
+            <kind>A1</kind>
+            <date>20061228</date>
+          </document-id>
+          <application-date>
+            <date>20060622</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="75">
+          <document-id>
+            <country>US</country>
+            <doc-number>20070109294</doc-number>
+            <kind>A1</kind>
+            <date>20070517</date>
+          </document-id>
+          <application-date>
+            <date>20041117</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="76">
+          <document-id>
+            <country>EP</country>
+            <doc-number>1792569</doc-number>
+            <kind>A3</kind>
+            <date>20070919</date>
+          </document-id>
+          <application-date>
+            <date>20061110</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="77">
+          <document-id>
+            <country>US</country>
+            <doc-number>9165112</doc-number>
+            <kind>B2</kind>
+            <date>20151020</date>
+          </document-id>
+          <application-date>
+            <date>20120203</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="78">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080019581</doc-number>
+            <kind>A1</kind>
+            <date>20080124</date>
+          </document-id>
+          <application-date>
+            <date>20070713</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="79">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080075321</doc-number>
+            <kind>A1</kind>
+            <date>20080327</date>
+          </document-id>
+          <application-date>
+            <date>20070918</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="80">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080130979</doc-number>
+            <kind>A1</kind>
+            <date>20080605</date>
+          </document-id>
+          <application-date>
+            <date>20051115</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="81">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080163070</doc-number>
+            <kind>A1</kind>
+            <date>20080703</date>
+          </document-id>
+          <application-date>
+            <date>20070103</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="82">
+          <document-id>
+            <country>US</country>
+            <doc-number>9180312</doc-number>
+            <kind>B2</kind>
+            <date>20151110</date>
+          </document-id>
+          <application-date>
+            <date>20111122</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="83">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090003519</doc-number>
+            <kind>A1</kind>
+            <date>20090101</date>
+          </document-id>
+          <application-date>
+            <date>20051123</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="84">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090074130</doc-number>
+            <kind>A1</kind>
+            <date>20090319</date>
+          </document-id>
+          <application-date>
+            <date>20071012</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="85">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090132274</doc-number>
+            <kind>A1</kind>
+            <date>20090521</date>
+          </document-id>
+          <application-date>
+            <date>20071115</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="86">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090141859</doc-number>
+            <kind>A1</kind>
+            <date>20090604</date>
+          </document-id>
+          <application-date>
+            <date>20081224</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="87">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090296882</doc-number>
+            <kind>A1</kind>
+            <date>20091203</date>
+          </document-id>
+          <application-date>
+            <date>20090811</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="88">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090323892</doc-number>
+            <kind>A1</kind>
+            <date>20091231</date>
+          </document-id>
+          <application-date>
+            <date>20090624</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="89">
+          <document-id>
+            <country>US</country>
+            <doc-number>20100054400</doc-number>
+            <kind>A1</kind>
+            <date>20100304</date>
+          </document-id>
+          <application-date>
+            <date>20090722</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="90">
+          <document-id>
+            <country>US</country>
+            <doc-number>20100138523</doc-number>
+            <kind>A1</kind>
+            <date>20100603</date>
+          </document-id>
+          <application-date>
+            <date>20081203</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="91">
+          <document-id>
+            <country>US</country>
+            <doc-number>20100135456</doc-number>
+            <kind>A1</kind>
+            <date>20100603</date>
+          </document-id>
+          <application-date>
+            <date>20100203</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="92">
+          <document-id>
+            <country>US</country>
+            <doc-number>9202275</doc-number>
+            <kind>B2</kind>
+            <date>20151201</date>
+          </document-id>
+          <application-date>
+            <date>20140929</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="93">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110069809</doc-number>
+            <kind>A1</kind>
+            <date>20110324</date>
+          </document-id>
+          <application-date>
+            <date>20101129</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="94">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110135185</doc-number>
+            <kind>A1</kind>
+            <date>20110609</date>
+          </document-id>
+          <application-date>
+            <date>20110215</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="95">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080275734</doc-number>
+            <kind>A1</kind>
+            <date>20081106</date>
+          </document-id>
+          <application-date>
+            <date>20070810</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="96">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080275735</doc-number>
+            <kind>A1</kind>
+            <date>20081106</date>
+          </document-id>
+          <application-date>
+            <date>20070813</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="97">
+          <document-id>
+            <country>US</country>
+            <doc-number>20100195882</doc-number>
+            <kind>A1</kind>
+            <date>20100805</date>
+          </document-id>
+          <application-date>
+            <date>20090804</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="98">
+          <document-id>
+            <country>US</country>
+            <doc-number>20100268546</doc-number>
+            <kind>A1</kind>
+            <date>20101021</date>
+          </document-id>
+          <application-date>
+            <date>20100504</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="99">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110216879</doc-number>
+            <kind>A1</kind>
+            <date>20110908</date>
+          </document-id>
+          <application-date>
+            <date>20110519</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="100">
+          <document-id>
+            <country>US</country>
+            <doc-number>9248311</doc-number>
+            <kind>B2</kind>
+            <date>20160202</date>
+          </document-id>
+          <application-date>
+            <date>20090211</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="101">
+          <document-id>
+            <country>WO</country>
+            <doc-number>03046689</doc-number>
+            <kind>A3</kind>
+            <date>20031204</date>
+          </document-id>
+          <application-date>
+            <date>20021121</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="102">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2005051197</doc-number>
+            <kind>A3</kind>
+            <date>20070301</date>
+          </document-id>
+          <application-date>
+            <date>20041117</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="103">
+          <document-id>
+            <country>WO</country>
+            <doc-number>2013088353</doc-number>
+            <kind>A3</kind>
+            <date>20130912</date>
+          </document-id>
+          <application-date>
+            <date>20121212</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="104">
+          <document-id>
+            <country>US</country>
+            <doc-number>9415239</doc-number>
+            <kind>B2</kind>
+            <date>20160816</date>
+          </document-id>
+          <application-date>
+            <date>20111118</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="105">
+          <document-id>
+            <country>EP</country>
+            <doc-number>2642419</doc-number>
+            <kind>A3</kind>
+            <date>20160914</date>
+          </document-id>
+          <application-date>
+            <date>20130322</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="106">
+          <document-id>
+            <country>US</country>
+            <doc-number>9456797</doc-number>
+            <kind>B2</kind>
+            <date>20161004</date>
+          </document-id>
+          <application-date>
+            <date>20141121</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="107">
+          <document-id>
+            <country>US</country>
+            <doc-number>9460508</doc-number>
+            <kind>B2</kind>
+            <date>20161004</date>
+          </document-id>
+          <application-date>
+            <date>20150617</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="108">
+          <document-id>
+            <country>US</country>
+            <doc-number>9498175</doc-number>
+            <kind>B2</kind>
+            <date>20161122</date>
+          </document-id>
+          <application-date>
+            <date>20131018</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="109">
+          <document-id>
+            <country>GB</country>
+            <doc-number>2504386</doc-number>
+            <kind>A</kind>
+            <date>20140129</date>
+          </document-id>
+          <application-date>
+            <date>20130531</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="110">
+          <document-id>
+            <country>US</country>
+            <doc-number>9549709</doc-number>
+            <kind>B2</kind>
+            <date>20170124</date>
+          </document-id>
+          <application-date>
+            <date>20140926</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="111">
+          <document-id>
+            <country>CN</country>
+            <doc-number>103999087</doc-number>
+            <kind>A</kind>
+            <date>20140820</date>
+          </document-id>
+          <application-date>
+            <date>20121212</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="112">
+          <document-id>
+            <country>US</country>
+            <doc-number>9579524</doc-number>
+            <kind>B2</kind>
+            <date>20170228</date>
+          </document-id>
+          <application-date>
+            <date>20090211</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="113">
+          <document-id>
+            <country>US</country>
+            <doc-number>20080275736</doc-number>
+            <kind>A1</kind>
+            <date>20081106</date>
+          </document-id>
+          <application-date>
+            <date>20070813</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20100428">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>General Electric Company</orgname>
+            <role>02</role>
+            <address>
+              <city>Schenectady</city>
+              <state>NY</state>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>Patel, Alpesh P.</name>
+            <address>
+              <city>Schaumburg</city>
+              <state>IL</state>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>Lamer, Roland</name>
+            <address>
+              <city>Evanston</city>
+              <state>IL</state>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Foley &amp; Lardner</name>
+          </addressbook>
+        </agent>
+        <agent sequence="2" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Vogel, Peter J.</name>
+          </addressbook>
+        </agent>
+        <agent sequence="3" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Della Penna, Michael A.</name>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <examiners>
+      <primary-examiner>
+        <last-name>Lateef</last-name>
+        <first-name>Marvin M.</first-name>
+        <department>3737</department>
+      </primary-examiner>
+      <assistant-examiner>
+        <last-name>Qaderi</last-name>
+        <first-name>Runa Shah</first-name>
+      </assistant-examiner>
+    </examiners>
+    <patent-family date-changed="20070530">
+      <main-family family-id="47555807">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>6411836</doc-number>
+            <kind>B1</kind>
+            <date>20020625</date>
+          </document-id>
+          <application-date>
+            <date>19991230</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="47393763">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>6411836</doc-number>
+            <kind>B1</kind>
+            <date>20020625</date>
+          </document-id>
+          <application-date>
+            <date>19991230</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20100428" lang="eng" format="original">
+    <p id="p-a-00001-en">An image handling system configured to provide configurable user preferences is disclosed herein. The image handling system includes an imaging device, an image manager, and an image workstation. The system is configured to permit a user of the image workstation to specify user preferences of a graphical user interface (GUI). The user preferences are stored in the image manager such that subsequent access to the image workstation using a user identifier causes the image workstation to automatically retrieve and configure the user preferences on that image workstation.</p>
+  </abstract>
+  <legal-data date-changed="20170304">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20000406</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6411836B1</docdb-publication-number>
+      <docdb-application-id>51177634</docdb-application-id>
+      <new-owner>GENERAL ELECTRIC COMPANY, NEW YORK</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:PATEL, ALPESH P.;LAMER, ROLAND;REEL/FRAME:010674/0477</free-text-description>
+      <effective-date>
+        <date>20000207</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20030128</date>
+      </publication-date>
+      <event-code-1>CC</event-code-1>
+      <legal-description>CERTIFICATE OF CORRECTION</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6411836B1</docdb-publication-number>
+      <docdb-application-id>51177634</docdb-application-id>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20050718</date>
+      </publication-date>
+      <event-code-1>FPAY</event-code-1>
+      <effect>+</effect>
+      <legal-description>FEE PAYMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6411836B1</docdb-publication-number>
+      <docdb-application-id>51177634</docdb-application-id>
+      <fee-payment-year>4</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="4">
+      <publication-date>
+        <date>20091228</date>
+      </publication-date>
+      <event-code-1>FPAY</event-code-1>
+      <effect>+</effect>
+      <legal-description>FEE PAYMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6411836B1</docdb-publication-number>
+      <docdb-application-id>51177634</docdb-application-id>
+      <fee-payment-year>8</fee-payment-year>
+    </legal-event>
+    <legal-event sequence="5">
+      <publication-date>
+        <date>20131225</date>
+      </publication-date>
+      <event-code-1>FPAY</event-code-1>
+      <effect>+</effect>
+      <legal-description>FEE PAYMENT</legal-description>
+      <status-identifier>C</status-identifier>
+      <docdb-publication-number> US     6411836B1</docdb-publication-number>
+      <docdb-application-id>51177634</docdb-application-id>
+      <fee-payment-year>12</fee-payment-year>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20100428">
+    <summary>
+      <heading level="2">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00001-en">The present invention relates generally to image handling systems. More particularly, the present invention relates to an image handling system capable of providing configurable user preferences.</p>
+      <p id="p-00002-en">Presently in a hospital, medical imaging devices are preferably networked with a central image management system, such as a picture archival and communications system (PACS). Medical imaging devices utilize, among others, electromagnetic radiation, x-rays, sonic waves, and photonic energy to produce images of a subject of interest, such as a patient, to aid in examination and treatment. For example, ultrasound devices are useful for viewing fetuses during prenatal care in a pregnancy. Magnetic resonance (MR) imaging systems can produce images of a wide range of tissues.</p>
+      <p id="p-00003-en">The central image management system includes a central storage unit coupled to a plurality of image workstations or terminals, such as PACS workstations. The central storage unit is configured to archive images produced by the plurality of medical imaging devices, and to retrieve images for display on one or more image workstations. Thus, the hospital can provide a plurality of medical imaging devices located throughout the hospital, and images produced from any of these medical imaging devices can then be retrieved and viewed by physicians located throughout the hospital at any of the plurality of image workstations.</p>
+      <p id="p-00004-en">Presently, when a physician or other user accesses an image workstation, the user is able to retrieve images relating to one or more examinations (i.e., a set of images of a given patient for a particular examination) and the corresponding patient information. At the image workstation, the user is permitted to manipulate the images, such as zooming in on a portion of an image or changing the viewing order of the set of images. The user can also move between a plurality of work files, such as his all priority examinations, all unread examinations, all recent examinations, etc. In order to facilitate such navigation through the image sets, the image workstation includes a graphical user interface (GUI). The user can also specify his preferences in the layout and icons comprising the GUI during his session on the image workstation. However, as soon as the user ends his session (i.e., logs out) at that image workstation, all of his preferences are lost. Thus, even if he logs back onto the same image workstation, or to any other image workstation, all of his preferences would have to be reentered.</p>
+      <p id="p-00005-en">Thus, there is a need for an image management system capable of preserving users' preferences specified in image workstations. There is a further need for an image management system capable of automatically configuring the image workstation with the user's preferences in future sessions.</p>
+      <heading level="2">BRIEF SUMMARY OF THE INVENTION</heading>
+      <p id="p-00006-en">One embodiment of the invention relates to a method of providing configurable user preferences in an image handling system. The method includes specifying user preferences relating to images in an image workstation. The method further includes storing the user preferences in an image manager. The user preferences are associated with a user identifier. The method still further includes configuring the image workstation with the user preferences selectively retrieved from the image manager. The configuring occurring in response to the user identifier information inputted to the image workstation for a subsequent session on the image workstation.</p>
+      <p id="p-00007-en">Another embodiment of the invention relates a medical image handling system. The system includes a medical imaging device configured to acquire an image of a subject of interest and represent the image in an image data set. The system further includes an image manager coupled to the imaging device. The image manager is configured to store user preferences communicated by an image workstation and the image data set communicated by the imaging device. The system still further includes the image workstation coupled to the image manager. The image workstation is configured to selectively retrieve the user preferences and the image data set from the image manager. The image workstation automatically configures a graphical user interface (GUI) to incorporate the user preferences based in part on a user identifier information inputted into the image workstation.</p>
+      <p id="p-00008-en">Still another embodiment of the invention relates to an image handling system. The system includes means for acquiring an image of a subject of interest, and means for representing the image in an image data set. The system further includes means for storing user preferences communicated by an image workstation and the image data set communicated by the means for acquiring and representing. The means for storing is coupled to the means for acquiring and representing. The system still further includes means for selectively retrieving the user preferences and the image data set from the means for storing. The image workstation automatically configures a graphical user interface (GUI) to incorporate the user preferences based in part on a user identifier information inputted into the image workstation. The means for selectively retrieving is coupled to the means for storing.</p>
+    </summary>
+    <description-of-drawings>
+      <heading level="2">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00009-en">The preferred embodiment will become more fully understood from the following detailed description, taken in conjunction with the accompanying drawings, wherein like reference numerals denote like elements, in which:</p>
+      <p id="p-00010-en">
+        <figref>FIG. 1</figref>is a block diagram of an image handling system which employs an embodiment of the present invention;</p>
+      <p id="p-00011-en">
+        <figref>FIG. 2</figref>is an illustration of a graphical user interface on a workstation which comprises a part of the image handling system of<figref>FIG. 1</figref>; and</p>
+      <p id="p-00012-en">
+        <figref>FIG. 3</figref>is another illustration of a graphical user interface on the workstation which comprises a part of the image handling system of FIG.<b>1</b>.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading level="2">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00013-en">Referring to<figref>FIG. 1</figref>, there is shown the major components of an image handling system<b>10</b>. Image handling system<b>10</b>includes imaging devices<b>12</b>, a communications network<b>14</b>, and an image management system<b>16</b>. Each of the imaging devices<b>12</b>is coupled to the communications network<b>14</b>and the communications network<b>14</b>is coupled to the image management system<b>16</b>.</p>
+      <p id="p-00014-en">Imaging devices<b>12</b>include, but are not limited to, magnetic resonance (MR) imaging devices, computerized tomography (CT) devices, ultrasound devices, nuclear imaging devices, x-ray devices, and a variety of other types of imaging devices. It should be understood that imaging devices<b>12</b>are not limited to medical imaging devices and can also include scanners and imaging devices from other fields. Imaging devices<b>12</b>are located throughout a facility, such as a hospital.</p>
+      <p id="p-00015-en">Image management system<b>16</b>includes an image manager<b>18</b>and a plurality of image workstations<b>20</b>. Preferably, image management system<b>16</b>is a picture archival and communication system (PACS), image manager<b>18</b>is a PACS server, and the plurality of image workstations<b>20</b>are PACS workstations or terminals. It should be understood, however, that image management system<b>16</b>can be any image archival, management, and retrieval apparatus.</p>
+      <p id="p-00016-en">Image manager<b>18</b>includes an information storage unit for short-term storage and retrieval, and an archival storage unit (e.g., an optical disc storage and optical disc reader system) for long-term storage and retrieval (not shown). Each of the plurality of workstations<b>20</b>is a computer system or terminal, including a storage unit<b>19</b>, a processor<b>22</b>, a display<b>24</b>, and an input device<b>26</b>. Input device<b>26</b>can include, but is not limited to, a mouse, a joystick, a keyboard, a trackball, a touch screen, a light wand, and a voice control. Image manager<b>18</b>is coupled to each of imaging devices<b>12</b>and the plurality of workstations<b>20</b>, via communications network<b>14</b>(e.g., an ether net, fiber optic, or other applicable communications network communication). The plurality of workstations<b>20</b>can be located throughout the hospital and need not be proximate imaging devices<b>12</b>or image manager<b>18</b>.</p>
+      <p id="p-00017-en">During an examination of a subject of interest, such as a portion of a patient's anatomy, one or more imaging devices<b>12</b>are used to acquire images of the subject of interest. Each acquired image is in a digitized data format, preferably in a DICOM, DEFF, or other suitable format, and is communicated from imaging devices<b>12</b>to image manager<b>18</b>via communications network<b>14</b>. Image manager<b>18</b>archives each image data set representative of one acquired image, also referred to as an image file, with appropriate identifiers and links such that the image file can be selectively retrieved. Once image files have been archived in image manager<b>18</b>, Himage files and other relevant information, such as the patient's medical history, can be selectively retrieved and accessed on any one of the plurality of workstations<b>20</b>or other information retrieval devices coupled to communications network<b>14</b>.</p>
+      <p id="p-00018-en">In one embodiment, each of the plurality of workstations<b>20</b>includes a graphical user interface (GUI) displayed on display<b>24</b>. A user, such as a physician or radiologist, navigates the information retrieved from image manager<b>18</b>to workstation<b>20</b>via the GUI and input device<b>26</b>. The GUI provides a logical and familiar environment in which the user can access, view, manipulate, and ultimately diagnose examinations which comprise his workload. To this end, the GUI is configured to include a worklist selector window<b>30</b>(see<figref>FIG. 2</figref>) and an image viewing window<b>40</b>(see FIG.<b>3</b>).</p>
+      <p id="p-00019-en">As shown in<figref>FIG. 2</figref>, worklist selector window<b>30</b>includes a plurality of icons to represent a variety of work files or categories of images, i.e., a worklist, that may be relevant to the user during his session on any one of the plurality of workstations<b>20</b>. In other words, worklist selector window<b>30</b>is configured to provide indicia of a directory structure. The worklist icons can include, but is not limited to: an all patients icon, an all exams icon, an all recent exams icon, an unread stat exams icon, an all unread exams icon, an unread by exam age icon, an unread by specialty icon, a priority exams icon, and an academic folders icon. The user selects from any of the worklist icons to access the content associated therewith using input device<b>26</b>.</p>
+      <p id="p-00020-en">Worklist selector window<b>30</b>further includes one or more quick access buttons or icons<b>32</b>. Quick access icons<b>32</b>are preferably displayed on the top portion of window<b>30</b>. Alternatively, a separate window may be implemented to display icons<b>32</b>. Quick access icons<b>32</b>are configured by the user, i.e., specifically selected by the user from the worklist icons, using input device<b>26</b>. For work files that the user repeatedly accesses, quick access icons<b>32</b>provide a convenient way to access these work files without having to navigate through the worklist icons. Once quick access icons<b>32</b>have been specified, they are made available to the user, in the worklist selector window<b>30</b>, throughout his or her session on workstation<b>20</b>. The user also has the option of changing the quick access icons<b>32</b>as often as desired.</p>
+      <p id="p-00021-en">Before the user ends his session on workstation<b>20</b>, i.e., logs out of workstation<b>20</b>, the quick access icons<b>32</b>are automatically saved as part of that user's permanent preferences in image manager<b>18</b>. Alternatively, workstation<b>20</b>may explicitly require the user to save such quick access icons<b>32</b>before ending the session. Once the user's preferred quick access icons<b>32</b>have been saved in image manager<b>18</b>, these preferred quick access icons<b>32</b>will always be configured for display on worklist selector window<b>30</b>when the user or anyone else using the user's login identifier starts a subsequent session, i.e., logs in, on any of the plurality of workstations<b>20</b>.</p>
+      <p id="p-00022-en">Referring to<figref>FIG. 3</figref>, there is shown the image viewing window<b>40</b>on which the user accesses, views, and manipulates one or more images downloaded from image manager<b>18</b>. Window<b>40</b>includes a plurality of image tools icons<b>42</b>to permit the user to selectively view and manipulate images. Image tools icons<b>42</b>includes, but is not limited to: a magnify icon, a horizontal flip icon, a vertical flip icon, a pan icon, an image information icon, an invert grayscale icon, and an image mask icon.</p>
+      <p id="p-00023-en">Image viewing window<b>40</b>is further configured to permit the user to specify his preferred tool icons, i.e., user preferred buttons or icons<b>44</b>, from among the plurality of image tools icons<b>42</b>. As shown in<figref>FIG. 3</figref>, an extended tool palette window<b>46</b>can be implemented to display the plurality of image tools icons<b>42</b>on the top portion of window<b>46</b>and the user preferred icons<b>44</b>on the bottom portion of window<b>46</b>. The user can update the user preferred icons<b>44</b>as many times as desired. Moreover, the user preferred icons<b>44</b>can be saved as a part of the user's permanent preferences in image manger<b>18</b>by “clicking” on a save icon<b>48</b>. Alternatively, user preferred icons<b>44</b>may be saved automatically in image manager<b>18</b>at the end of the user's session on workstation<b>20</b>. Then when the user or anyone else using the user's login identifier starts a subsequent session on any of the plurality of workstations<b>20</b>, that user's preferences in the plurality of image tools icons<b>42</b>(i.e., represented by the saved user preferred icons<b>44</b>) will automatically be communicated to that particular workstation<b>20</b>for display on image viewing window<b>40</b>and/or extended tool palette window<b>46</b>.</p>
+      <p id="p-00024-en">Similarly, other user preferences such as a font preference or a font size preference may also be specified as part of the user's permanent preferences. If the user has no user preferences saved in image manager<b>18</b>, the start of his session on any of the plurality of workstations<b>20</b>would be configured with default settings. Thus, each of a plurality of users can have his or her user preferences associated with his or her login identifier and have it saved in image manager<b>18</b>. In this manner, any one of the plurality of workstations<b>20</b>will automatically configure and include a particular user's preferences when that particular user subsequently starts a session on that workstation.</p>
+      <p id="p-00025-en">While the embodiments illustrated in the figures and described above are presently preferred, it should be understood that these embodiments are offered by way of example only. For example, it is contemplated that the invention may be applied to systems in which more than one image manager is utilized. In another example, image handling system<b>10</b>may comprise a network involving more than one facility such that a workstation at a first facility may communicate with an image manager in a second (and remote) facility. Accordingly, the present invention is not limited to a particular embodiment, but extends to various modifications that nevertheless fall within the scope of the appended claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20100428">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>1. A method of providing a customized set of tools represented by icons in an image handling system, comprising:<claim-text>receiving a selection of at least one tool represented by an icon, the at least one tool relating to access and navigation of information available in the image handling system;</claim-text><claim-text>storing the selection of the at least one tool in the customized set of tools in an image manager, wherein the customized set of tools is associated with a user identifier; and</claim-text><claim-text>configuring an image workstation with the customized set of tools, the customized set of tools being selectively retrieved from the image manager in response to the user identifier being provided to the image workstation, wherein the customized set of tools is a subset of default commands for the image workstation, and wherein configuring the image workstation includes displaying at least one icon representative of the at least one tool at the image workstation.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>2. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the image manager includes a picture archival and communications system (PACS) server and the image workstation includes a PACS workstation.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>3. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising selectively retrieving an image data set from the image manager to be viewed by a user in accordance with the user identifier.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>4. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising<claim-text>presenting a set of icons representing all available tools;</claim-text><claim-text>receiving a selection of one of the icons representing a tool;</claim-text><claim-text>including the selection of the one icon is a subset of tools associated with a user identifier; and</claim-text><claim-text>repeating the receiving step a plurality of times as desired to configure the customized set of tools.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>5. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising selectively saving the customized set of tools on the image manager.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>6. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the customized set of tools includes a tool providing a link to at least one of preferred work files selected from a group including an all patients work file, an all exams work file, an all recent exams work file, an unread stat exams work file, an all unread exams work file, an unread by exam age work file, an unread by specialty work file, a priority exams work file, and an academic folders work file.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>7. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the customized set of tools includes at least one of preferred image manipulation tools selected from a group including a magnify tool, a horizontal flip tool, a vertical flip tool, a pan tool, an image information tool, an invert grayscale tool, and an image mask tool.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>8. A medical image handling system, comprising:<claim-text>a medical imaging device configured to generate an image data set representative of a medical image;</claim-text><claim-text>an image manager coupled to the medical imaging device and configured to store a customized set of tools including a selection of at least one tool represented by an icon and the image data set, wherein the customized set of tools is associated with a user identifier; and</claim-text><claim-text>an image workstation coupled to the image manager and including a graphical user interface (GUI), wherein the image workstation is configured to permit a user to select an interface tool from the GUI and store the selected interface tool in a customized set of tools in the image manager, and to retrieve the customized set of tools from the image manager for presentation on the image workstation as at least one icon when the user identifier is provided to the image workstation in a subsequent session on the image workstation.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>9. The system of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the image data set is in at least one of a DICOM and DEFF format.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>10. The system of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, further comprising a communications network coupled between the medical imaging device and the image manager, and coupled between the image manager and the image workstation.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>11. The system of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the customized set of tools includes a tool providing a link to preferred work files selected from a group including an all patients work file, an all exams work file, an all recent exams work file, an unread stat exams work file, an all unread exams work file, an unread by exam age work file, an unread by specialty work file, a priority exams work file, and an academic folders work file.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>12. The system of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the customized set of tools includes preferred image manipulation tools selected from a group including a magnify tool, a horizontal flip tool, a vertical flip tool, a pan tool, an image information tool, an invert grayscale tool, and an image mask tool.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>13. The system of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the image workstation is configured to permit the user to update the customized set of tools a plurality of times.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>14. The system of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the customized set of tools is selected from a group including tools providing links to quick access work files, quick access image navigation tools, and tools for changing preferred font and text size.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>15. The system of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the image manager includes a picture archival and communications system (PACS) server and the image workstation includes a PACS workstation.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>16. An image handling system, comprising:<claim-text>means for acquiring an image of a subject of interest;</claim-text><claim-text>means for representing the image in an image data set;</claim-text><claim-text>means for receiving a customized set of tools including a selection of at least one tool represented by an icon from a graphical user interface (GUI);</claim-text><claim-text>means for storing the customized set of tools communicated by an image workstation and the image data set communicated by the means for acquiring and representing, wherein the means for storing is coupled to the means for acquiring and representing;</claim-text><claim-text>means for selectively retrieving the customized set of tools and the image data set from the means for storing, wherein the image workstation automatically configures the GUI to incorporate the customized set of tools based in part on a user identifier information inputted to the image workstation, and wherein the customized set of tools comprises interface tools selected by a user relating to access and navigation within the image workstation; and</claim-text><claim-text>means for displaying at least one icon representative of the customized set of tools at the image workstation.</claim-text></claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>17. The system of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the image data set is in at least one of a DICOM and DEFF format.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>18. The system of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, further comprising means for networking coupled between the means for acquiring and the means for storing, and coupled between the means for storing and the image workstation.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>19. The system of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the user specifies the customized set of tools on the image workstation and the image workstation communicates the customized set of tools to the means for storing.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>20. The system of <claim-ref idref="clm-00019-en">claim 19</claim-ref>, wherein the customized set of tools includes a tool providing a link to at least one of preferred work files selected from a group including an all patients work file, an all exams work file, an all recent exams work file, an unread stat exams work file, an all unread exams work file, an unread by exam age work file, an unread by specialty work file, a priority exams work file, and an academic folders work file.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>21. The system of <claim-ref idref="clm-00019-en">claim 19</claim-ref>, wherein the customized set of tools includes at least one of preferred viewing tools selected from a group including a magnify tool, a horizontal flip tool, a vertical flip tool, a pan tool, an image information tool, an invert grayscale tool, and an image mask tool.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>22. The system of <claim-ref idref="clm-00019-en">claim 19</claim-ref>, wherein the image workstation is configured to permit a plurality of changes to the customized set of tools.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>23. The system of <claim-ref idref="clm-00019-en">claim 19</claim-ref>, wherein the means for storing selectively receives the customized set of tools in accordance with the user requesting storage of the customized set of tools.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>24. The system of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the means for storing includes a picture archival and communications system (PACS) server and the image workstation includes a PACS workstation.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>25. A graphical user interface (GUI) for an image handling system, the image handling system including a workstation, the GUI comprising:<claim-text>a first interface tool configured by a user of the image handling system to access data on the workstation; and</claim-text><claim-text>a second interface tool configured by the user of the image handling system to navigate data on the workstation, wherein each of the first and second interface tools permits the user to access or navigate the data, respectively, without using a default access or navigation tool included in the GUI, the data being selected from a group including patient information and patient images, at least one of the first interface tool and the second interface tool being displayed as an icon on the workstation, and at least one of the first interface tool and the second interface tool being associated with a user identifier information.</claim-text></claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>26. The GUI of <claim-ref idref="clm-00025-en">claim 25</claim-ref>, wherein the first interface tool permits the user to access the data organized into work files, the work files selected from a group including an all patients work file, an all exams work file, an all recent exams work file, an unread stat exams work file, an all unread exams work file, an unread by exam age work file, an unread by specialty work file, a priority exams work file, and an academic folders work file.</claim-text>
+    </claim>
+    <claim num="27" id="clm-00027-en">
+      <claim-text>27. The GUI of <claim-ref idref="clm-00025-en">claim 25</claim-ref>, wherein the second interface tool permits the user to navigate the data being displayed on the workstation, the second interface tool selected from a group including a magnify tool, a horizontal flip tool, a vertical flip tool, a pan tool, an image information tool, an invert grayscale tool, and an image mask tool.</claim-text>
+    </claim>
+    <claim num="28" id="clm-00028-en">
+      <claim-text>28. The GUI of <claim-ref idref="clm-00025-en">claim 25</claim-ref>, further including a third interface tool configured by the user to customize the GUI on the workstation.</claim-text>
+    </claim>
+    <claim num="29" id="clm-00029-en">
+      <claim-text>29. A method for configuring a graphical user interface (GUI) for a medical image handling system, the method comprising the steps of:<claim-text>receiving an operator selection of an interface command from the GUI;</claim-text><claim-text>storing the interface command;</claim-text><claim-text>retrieving the interface command in accordance with a user identifier associated with the selected interface command; and</claim-text><claim-text>customizing the GUI with the interface command, wherein the customizing step includes displaying an icon representative of the selected interface command on the GUI.</claim-text></claim-text>
+    </claim>
+    <claim num="30" id="clm-00030-en">
+      <claim-text>30. The method of <claim-ref idref="clm-00029-en">claim 29</claim-ref>, wherein the selecting step and the customizing step are performed on different workstations included in the medical image handling system.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US6411836B1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US06411836-20020625-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US6411836B1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US06411836-20020625-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US6411836B1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US06411836-20020625-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US6411836B1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US06411836-20020625-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US6411836B1_00005.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US06411836-20020625-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US6411836B1.PDF" type="pdf" size="149897" pages="8" />
+</lexisnexis-patent-document>

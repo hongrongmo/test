@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247161A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021509" date-changed="20151006" time-changed="063102">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140275">
+        <country>US</country>
+        <doc-number>20150247161</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14581002</doc-number>
+        <date>20141223</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="national">
+        <country>IN</country>
+        <doc-number>3759DEL2013</doc-number>
+        <date>20131224</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C12N  15/82        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>15</main-group>
+        <subgroup>82</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C07K  14/415       20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>14</main-group>
+        <subgroup>415</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C12N  15/8273      20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>15</main-group>
+        <subgroup>8273</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C07K  14/415       20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>14</main-group>
+        <subgroup>415</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C12N  15/8271      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>15</main-group>
+        <subgroup>8271</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">15</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">METHOD OF PRODUCING STRESS TOLERANT PLANTS OVER-EXPRESSING OsAlba1</invention-title>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>National Institute of Plant Genome Research</orgname>
+            <address>
+              <city>New Delhi</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>IN</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Chakraborty</last-name>
+            <first-name>Niranjan</first-name>
+            <address>
+              <city>New Delhi</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Chakraborty</last-name>
+            <first-name>Subhra</first-name>
+            <address>
+              <city>New Delhi</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Verma</last-name>
+            <first-name>Jitendra Kumar</first-name>
+            <address>
+              <city>New Delhi</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Gayali</last-name>
+            <first-name>Saurabh</first-name>
+            <address>
+              <city>New Delhi</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Dass</last-name>
+            <first-name>Suchismita</first-name>
+            <address>
+              <city>New Delhi</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kumar</last-name>
+            <first-name>Amit</first-name>
+            <address>
+              <city>New Delhi</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="7" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Parveen</last-name>
+            <first-name>Shaista</first-name>
+            <address>
+              <city>New Delhi</city>
+              <country>IN</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173463376">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247161</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20141223</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173463375">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247161</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20141223</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">In the present disclosure there is provided transgenic plants that are resistant to a host of abiotic stress factors. In particular, the said transgenic plants over-express the translated product of OsAlba1 gene. Also provided in the present disclosure are cDNA fragments, recombinant DNA constructs, vectors and host cells useful in generating transgenic plants that are resistant to abiotic stress susceptibility.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">CLAIM OF PRIORITY</heading>
+      <p id="p-00001-en" num="0001">This application claims the benefit of priority of India Patent Application No. 3759/DEL/2013, filed on Dec. 24, 2013, the benefit of priority of which is claimed hereby, and which is incorporated by reference herein in its entirety.</p>
+      <heading id="h-00002-en" level="1">FIELD OF INVENTION</heading>
+      <p id="p-00002-en" num="0002">The present disclosure relates to a method of producing transgenic plants over-expressing OsAlba1 gene. The transgenic plants have enhanced stress tolerance. The disclosure also provides cDNA, recombinant DNA constructs, recombinant DNA vectors, and recombinant host cells comprising the OsAlba1 cDNA.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00003-en" num="0003">Availability of water is the most crucial factor that limits the productivity potential of higher plants and is a serious threat to sustainable crop production. In order to improve the agricultural productivity under water-deficit condition or dehydration, it is required to first understand the biochemical and molecular mechanisms by which plants tolerate such stress. Extensive investigations at the molecular level of plant response to environmental stresses have led to the cloning of various stress inducible genes (Ingram et al., Annu. Rev. Plant Physiol. Plant Mol. Biol., 1996, 47, 377-403; Bray, Trends Plant Sci., 1997, 2, 48-54). Nevertheless, the significance of these genes in stress tolerance is incomplete without the knowledge of their function. Most studies on stress adaptation have mainly focused on the changes in gene expression, while far less information is available on their protein counterparts. Rice is the most important food cereal, with nearly half of the world's population relying on its successful harvests. While rice is the first crop plant to have its complete genome sequenced (Goff et al., Science, 2002, 296, 92-100; Yu et al., Science, 2002, 296, 79-92), the functions of most of the predicted genes are unknown. Therefore, characterization of these unknown genes is one of the major challenges of the rice functional genomics.</p>
+      <p id="p-00004-en" num="0004">The nucleus is a highly organized organelle that contains specific functional domains essential for the regulated expression of proteins in eukaryotes. The fact that nearly one-fourth of total cellular proteins are localized in the nucleus implies a variety of function in this compartment (Kumar et al., Genes Dev. 2002, 16, 707-719). Though it is an attractive target for the study of cellular homeostasis and determination of genomic response to stress, the plant nuclear proteomics is still in its infancy, particularly with respect to stress tolerance. Of the few plant nuclear matrix proteins characterized, no obvious homology was found with known nuclear proteins in yeast and mammals (Gindullis et al., Plant Cell, 1999, 11, 1117-1128; Gindullis et al., Plant Cell, 1999, 11, 1755-1768). Interestingly, Alba (acetylation lowers binding affinity) proteins, first identified as DNA-binding proteins in archaea, and then in association with nuclear RNase P/MRP in yeast and mammalian cells, are part of a superfamily that spans through three domains of life (Mani et al., 2011). The members of Alba family proteins have been reported to play important role in transcriptional regulation by maintaining chromatin architecture (Aravind et al., Genome Biol. 4, 2003, R64). The dimeric protein, formerly named Sso10b, is conserved in most sequenced archaeal genomes (Forterre et al., Mol. Microbiol., 1999, 32, 669-670) and binds double-stranded DNA tightly, but without apparent sequence specificity (Grote et al., Biochim. Biophys. Acta, 1986, 873, 405-413; Xue et al., J. Bacteriol., 2000, 182, 3929-3933; Bell et al., Science, 2002, 296, 148-151). As evident from its name, Alba is controlled by acetylation and deacetylation, where acetylation at specific N-terminal lysine residue lowers its binding affinity toward double-stranded DNA (Bell et al., Science, 2002, 296, 148-151; Zhao et al., J. Biol. Chem., 2003, 278, 26071-26077). In <i>Sulfolobus solfataricus</i>, Alba was found to be reversibly acetylated at Lys-16 by a homolog of Pat (protein acetyltransferase) and deacetylated by Sir2 protein, a NAD<sup>+</sup>-dependent deacetylase belonging to sirtuin family (Bell et al., Science, 2002, 296, 148-151; Starai et al., J. Mol. Biol., 2004, 340, 1005-1012; Marsh et al., J. Biol. Chem., 2005, 280, 21122-21128). The best-studied eukaryotic members of the family are the human and yeast proteins Rpp20/Pop7 and Rpp25/Pop6 (Perederina et al., RNA, 2010, 13, 1648-1655 2007; Hands-Taylor et al., Nucleic Acids Res., 2010, 38, 4052-4066). A recent study suggested that they are only transiently associated with RNase MRP in vivo and are not present in the catalytically active complex (Welting et al., RNA, 2006, 12, 1373-1382). By and large, however, their function remains far from understood.</p>
+      <p id="p-00005-en" num="0005">PCT/IB2002/005253 discloses over-expression of MnSOD in crop plants for improved resistance against environmental stress conditions.</p>
+      <p id="p-00006-en" num="0006">PCT/CN2012/074106 discloses over-expression of rice OXHS4 gene for improved resistance against drought tolerance.</p>
+      <p id="p-00007-en" num="0007">PCT/EP2011/069367 discloses inactivation of MADS box gene function for improved resistance against biotic and/or abiotic stress.</p>
+      <heading id="h-00004-en" level="1">SUMMARY OF INVENTION</heading>
+      <p id="p-00008-en" num="0008">An aspect of the present disclosure provides a recombinant DNA construct comprising of a promoter operably linked to a gene of interest, wherein said gene of interest encodes a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1.</p>
+      <p id="p-00009-en" num="0009">An aspect of the present disclosure provides a recombinant DNA vector comprising a recombinant DNA construct comprising of a promoter operably linked to a gene of interest, wherein said gene of interest encodes a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1.</p>
+      <p id="p-00010-en" num="0010">An aspect of the present disclosure provides a recombinant host cell comprising a recombinant DNA construct comprising of a promoter operably linked to a gene of interest, wherein said gene of interest encodes a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1.</p>
+      <p id="p-00011-en" num="0011">An aspect of the present disclosure provides a recombinant host cell comprising a recombinant DNA vector, said recombinant DNA vector comprising a recombinant DNA construct comprising of a promoter operably linked to a gene of interest, wherein said gene of interest encodes a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1.</p>
+      <p id="p-00012-en" num="0012">An aspect of the present disclosure provides a cDNA fragment encoding a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1, wherein cells expressing said polypeptide exhibit enhanced abiotic stress tolerance selected from the group consisting of ABA induced stress, salt stress, thermal stress, dehydration stress, oxidative stress, and combinations thereof.</p>
+      <p id="p-00013-en" num="0013">An aspect of the present disclosure provides a method of producing a transgenic plant with enhanced tolerance to abiotic stress, said method comprising: (a) transforming plant cells with recombinant DNA construct comprising of a promoter operably linked to a gene of interest, wherein said gene of interest encodes a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1; or recombinant host cells comprising a recombinant DNA vector comprising, said recombinant DNA vector comprising of a recombinant DNA construct comprising of a promoter operably linked to a gene of interest, wherein said gene of interest encodes a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1; (b) selecting a transgenic cell, and (c) developing a transgenic plant from said transformed cell, wherein said transgenic plant exhibits enhanced tolerance to abiotic stress.</p>
+      <p id="p-00014-en" num="0014">An aspect of the present disclosure provides transgenic plant or parts thereof, including seeds, wherein said transgenic plant or parts thereof, including seeds, encodes at the nuclear genome level a polynucleotide fragment comprising of a cDNA fragment encoding a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1, wherein expression of said polypeptide confers abiotic stress resistance to said transgenic plant or parts thereof, including seeds.</p>
+      <p id="p-00015-en" num="0015">In an aspect of the present disclosure, there is provided a use of a cDNA fragment in generating transgenic plants that are resistant to abiotic stress, wherein said cDNA fragment encodes a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF ACCOMPANYING DRAWINGS</heading>
+      <p id="p-00016-en" num="0016">The following drawings form part of the present specification and are included to further illustrate embodiments of the present invention. The invention may be better understood by reference to the drawings in combination with the detailed description of the specific embodiments presented herein.</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 1</figref> shows the graphical representation of OsAlba1 transcript levels in various plant parts, in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 2</figref> shows OsAlba1 protein levels in various plant parts, in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 3</figref> shows the sub-cellular localization of OsAlba1, in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 4</figref> shows the results from OsAlba1 yeast complementation studies, in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 5A</figref> shows the graphical representation of effect of dehydration on OsAlba1 transcript levels, in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 5B</figref> shows the graphical representation of effect of dehydration on OsAlba1 protein levels, in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 5C</figref> shows the graphical representation of effect of salt stress on OsAlba1 transcript levels, in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 5D</figref> shows the graphical representation of effect of thermal stress on OsAlba1 transcript levels, in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 5E</figref> shows the graphical representation of effect of ABA stress on OsAlba1 transcript levels, in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 6</figref> shows the structural organization of OsAlba1 gene, in accordance with an embodiment of the present disclosure.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 7</figref> shows the representation of the pGA3426-OsAlba1 construct used for <i>Agrobacterium </i>mediated rice plant transformation, in accordance with an embodiment of the present disclosure.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00028-en" num="0028">Those skilled in the art will be aware that the invention described herein is subject to variations and modifications other than those specifically described. It is to be understood that the invention described herein includes all such variations and modifications. The invention also includes all such steps, features, compositions and compounds referred to or indicated in this specification, individually or collectively, and any and all combinations of any or more of such steps or features.</p>
+      <heading id="h-00007-en" level="1">DEFINITIONS</heading>
+      <p id="p-00029-en" num="0029">For convenience, before further description of the present invention, certain terms employed in the specification, example and appended claims are collected here. These definitions should be read in the light of the remainder of the disclosure and understood as by a person of skill in the art. The terms used herein have the meanings recognized and known to those of skill in the art, however, for convenience and completeness, particular terms and their meanings are set forth below.</p>
+      <p id="p-00030-en" num="0030">The articles “a”, “an” and “the” are used to refer to one or to more than one (i.e., to at least one) of the grammatical object of the article.</p>
+      <p id="p-00031-en" num="0031">The terms “comprise” and “comprising” are used in the inclusive, open sense, meaning that additional elements may be included. It is not intended to be construed as “consists of only.</p>
+      <p id="p-00032-en" num="0032">Throughout this specification, unless the context requires otherwise the word “comprise”, and variations such as “comprises” and “comprising”, will be understood to imply the inclusion of a stated element or step or group of element or steps but not the exclusion of any other element or step or group of element or steps. The term “including” is used to mean “including but not limited to”. “Including” and “including but not limited to” are used interchangeably.</p>
+      <p id="p-00033-en" num="0033">“Primers” are synthesized nucleic acids that anneal to a complementary target DNA strand by hybridization to form a hybrid between the primer and the target DNA strand, and then extended along the target DNA strand by polymerase activity, e.g., a DNA polymerase. Primer pairs described in the present invention refer to their use for amplification of a target nucleic acid sequence, e.g., by polymerase chain reaction or other conventional nucleic-acid amplification methods.</p>
+      <p id="p-00034-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1" tabstyle="monospace">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="329pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>SEQ ID NO: 1 shows the amino acid sequence of OsAlba1 protein.</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>MAVEEITEGVRNLAVEGEPAAAAAAAGGGGEGAQRRAAGSSSNRIQVSNT</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>KKPLFFYVNLAKRYMQQHGDVELSALGMAIATVVTVAEILKNNGFAVEKK</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>IRTSTVEINDESRVRPLQKAKIEIVLEKSEKFDELMAAAAEEREAAEAEEQA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SEQ ID NO: 2 shows the cDNA sequence encoding OsAlba1 protein.</entry>
+                </row>
+                <row>
+                  <entry>ATGGCGGTGGAGGAGATCACCGAGGGGGTGAGGAACCTGGCCGTGGAG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>GGGGAGCCCGCGGCGGCGGCGGCGGCGGCGGGAGGTGGTGGTGAGGGG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>GCGCAGAGGAGGGCGGCCGGGAGCAGCAGCAACCGCATCCAGGTGTCC</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AACACCAAGAAGCCACTCTTCTTCTATGTCAACCTCGCCAAGAGGTACA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>TGCAGCAGCACGGCGATGTCGAGCTCTCCGCGCTCGGGATGGCCATTGC</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AACAGTTGTAACTGTTGCGGAGATTCTTAAGAATAACG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>GGTTTGCTGTTGAAAAGAAGATTAGAACATCTACGGTGGAAATAAACGA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>TGAATCGAGAGTTCGCCCGCTCCAAAAGGCTAAGATTGAGATAGTGTTA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>GAAAAGAGCGAGAAATTTGATGAGCTGATGGCTGCCGCAGCGGAAGAG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AGGGAAGCTGCGGAAGCTGAGGAGCAGGCCTGA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SEQ ID NO: 3 shows the forward primer sequence used to clone OsAlba1 </entry>
+                </row>
+                <row>
+                  <entry>gene.</entry>
+                </row>
+                <row>
+                  <entry>CGCGGATCCATGGCGGTGGAGGAGATCA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SEQ ID NO: 4 shows the reverse primer sequence used to clone OsAlba1 </entry>
+                </row>
+                <row>
+                  <entry>gene.</entry>
+                </row>
+                <row>
+                  <entry>ATAAGAATGCGGCCGCTCAGGCCTGCTCCTCA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>SEQ ID NO: 5 shows the peptide sequence used to generate antibodies </entry>
+                </row>
+                <row>
+                  <entry>against OsAlba1 protein.</entry>
+                </row>
+                <row>
+                  <entry>RTSTVEINDESRVRP</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00035-en" num="0034">In an embodiment of the present disclosure, there is provided a recombinant DNA construct comprising of a promoter operably linked to a gene of interest, wherein said gene of interest encodes a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1.</p>
+      <p id="p-00036-en" num="0035">In an embodiment of the present disclosure, there is provided a recombinant DNA construct as described herein, wherein said gene of interest polynucleotide sequence is as set forth in SEQ ID NO: 2.</p>
+      <p id="p-00037-en" num="0036">In a preferred embodiment of the present disclosure, there is provided a recombinant DNA construct as described herein, wherein said gene of interest is OsAlba1.</p>
+      <p id="p-00038-en" num="0037">In an embodiment of the present disclosure, there is provided a recombinant DNA construct as described herein, wherein said promoter is selected from the group consisting of pUbi, Cam V 35S, Act-1, Adh-1, and opine promoters.</p>
+      <p id="p-00039-en" num="0038">In a preferred embodiment of the present disclosure, there is provided a recombinant DNA construct as described herein, wherein said promoter is pUbi.</p>
+      <p id="p-00040-en" num="0039">In an embodiment of the present disclosure, there is provided a recombinant DNA vector comprising a recombinant DNA construct, said recombinant DNA construct comprising of a promoter operably linked to a gene of interest, wherein said gene of interest encodes a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1.</p>
+      <p id="p-00041-en" num="0040">In an embodiment of the present disclosure, there is provided a recombinant DNA vector as described herein, wherein said gene of interest polynucleotide sequence is as set forth in SEQ ID NO: 2.</p>
+      <p id="p-00042-en" num="0041">In a preferred embodiment of the present disclosure, there is provided a recombinant DNA vector as described herein, wherein said gene of interest is OsAlba1.</p>
+      <p id="p-00043-en" num="0042">In an embodiment of the present disclosure, there is provided a recombinant host cell comprising of a recombinant DNA construct, said recombinant DNA construct comprising of a promoter operably linked to a gene of interest, wherein said gene of interest encodes a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1.</p>
+      <p id="p-00044-en" num="0043">In an embodiment of the present disclosure, there is provided a recombinant host cell as described herein, wherein said gene of interest polynucleotide sequence is as set forth in SEQ ID NO: 2.</p>
+      <p id="p-00045-en" num="0044">In a preferred embodiment of the present disclosure, there is provided a recombinant host cell as described herein, wherein said gene of interest is OsAlba1.</p>
+      <p id="p-00046-en" num="0045">In an embodiment of the present disclosure, there is provided a recombinant host cell as described herein, wherein said recombinant host cell is of bacterial or fungal or of plant origin.</p>
+      <p id="p-00047-en" num="0046">In an embodiment of the present disclosure, there is provided a recombinant host cell as described herein, wherein said recombinant host cell is of bacterial origin.</p>
+      <p id="p-00048-en" num="0047">In an embodiment of the present disclosure, there is provided a recombinant host cell as described herein, wherein said recombinant host cell is of fungal origin.</p>
+      <p id="p-00049-en" num="0048">In an embodiment of the present disclosure, there is provided a recombinant host cell as described herein, wherein said recombinant host cell is of plant origin.</p>
+      <p id="p-00050-en" num="0049">In an embodiment of the present disclosure, there is provided a recombinant host cell comprising of a recombinant DNA vector, said recombinant DNA vector comprising of a recombinant DNA construct, said recombinant DNA construct comprising of a promoter operably linked to a gene of interest, wherein said gene of interest encodes a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1.</p>
+      <p id="p-00051-en" num="0050">In an embodiment of the present disclosure, there is provided a recombinant host cell as described herein, wherein said gene of interest has polynucleotide sequence as set forth in SEQ ID NO: 2.</p>
+      <p id="p-00052-en" num="0051">In a preferred embodiment of the present disclosure, there is provided a recombinant host cell as described herein, wherein said gene of interest is OsAlba1.</p>
+      <p id="p-00053-en" num="0052">In an embodiment of the present disclosure, there is provided a cDNA fragment encoding a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1, wherein cells expressing said polypeptide exhibit enhanced abiotic stress tolerance selected from the group consisting of ABA induced stress, salt stress, thermal stress, dehydration stress, oxidative stress, and combinations thereof.</p>
+      <p id="p-00054-en" num="0053">In an embodiment of the present disclosure, there is provided a cDNA fragment as described herein, wherein said cDNA fragment has polynucleotide sequence as set forth in SEQ ID NO: 2.</p>
+      <p id="p-00055-en" num="0054">In an embodiment of the present disclosure, there is provided a method of producing a transgenic plant with enhanced tolerance to abiotic stress, said method comprising of (a) transforming plant cells with recombinant DNA construct comprising of a promoter operably linked to a gene of interest, wherein said gene of interest encodes a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1, or recombinant host cells comprising of a recombinant DNA vector, said recombinant DNA vector comprising of a recombinant DNA construct, said recombinant DNA construct comprising of a promoter operably linked to a gene of interest, wherein said gene of interest encodes a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1, (b) selecting a transgenic plant cell, and (c) developing a transgenic plant from said transformed cell, wherein said transgenic plant exhibits enhanced tolerance to stress.</p>
+      <p id="p-00056-en" num="0055">In an embodiment of the present disclosure, there is provided a method of producing a transgenic plant with enhanced tolerance to abiotic stress as described herein, wherein said gene of interest polynucleotide sequence is as set forth in SEQ ID NO: 2.</p>
+      <p id="p-00057-en" num="0056">In an embodiment of the present disclosure, there is provided a method of producing a transgenic plant with enhanced tolerance to abiotic stress as described herein, wherein abiotic stress is selected from the group consisting of ABA induced stress, salt stress, thermal stress, dehydration stress, oxidative stress, and combinations thereof.</p>
+      <p id="p-00058-en" num="0057">In an embodiment of the present disclosure, there is provided a method of producing a transgenic plant with enhanced tolerance to abiotic stress as described herein, wherein transformation method is selected from the group consisting of <i>Agrobacterium </i>mediated transformation method, particle gun bombardment method, in-planta transformation method, liposome mediated transformation method, protoplast transformation method, microinjection, and macroinjection.</p>
+      <p id="p-00059-en" num="0058">In a preferred embodiment of the present disclosure, there is provided a method of producing a transgenic plant with enhanced tolerance to abiotic stress as described herein, wherein transformation method is <i>Agrobacterium </i>mediated transformation method.</p>
+      <p id="p-00060-en" num="0059">In an embodiment of the present disclosure, there is provided a method of producing a transgenic plant with enhanced tolerance to abiotic stress as described herein, wherein said transgenic plant is a monocot.</p>
+      <p id="p-00061-en" num="0060">In an embodiment of the present disclosure, there is provided a method of producing a transgenic plant with enhanced tolerance to abiotic stress wherein said transgenic plant is a monocot as described herein, and wherein said monocot is selected from the group consisting of wheat, rice, banana, barley, millet, and rye.</p>
+      <p id="p-00062-en" num="0061">In a preferred embodiment of the present disclosure, there is provided a method of producing a transgenic plant with enhanced tolerance to abiotic stress wherein said transgenic plant is a monocot as described herein, and wherein said monocot is rice.</p>
+      <p id="p-00063-en" num="0062">In an embodiment of the present disclosure, there is provided a method of producing a transgenic plant with enhanced tolerance to abiotic stress as described herein, wherein said transgenic plant is a dicot.</p>
+      <p id="p-00064-en" num="0063">In an embodiment of the present disclosure, there is provided a method of producing a transgenic plant with enhanced tolerance to abiotic stress wherein said transgenic plant is a dicot as described herein, wherein said dicot is selected from the group consisting of beans, peas, potato, eggplant, peppers, squash, melons, coffee, citrus, broccoli, turnips, yams, and apples.</p>
+      <p id="p-00065-en" num="0064">In an embodiment of the present disclosure, there is provided a transgenic plant or parts thereof, including seeds with enhanced tolerance to abiotic stress, which encodes in its nuclear genome a cDNA fragment encoding a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1, and wherein said cDNA fragment is operably linked to a promoter.</p>
+      <p id="p-00066-en" num="0065">In an embodiment of the present disclosure, there is provided a transgenic plant or parts thereof, including seeds as described herein, wherein said nuclear encoded cDNA fragment has polynucleotide sequence as set forth in SEQ ID NO: 2.</p>
+      <p id="p-00067-en" num="0066">In an embodiment of the present disclosure, there is provided a transgenic plant or parts thereof, including seeds as described herein, wherein said transgenic plant or parts thereof, including seeds is a monocot.</p>
+      <p id="p-00068-en" num="0067">In an embodiment of the present disclosure, there is provided a transgenic plant or parts thereof, including seeds wherein said transgenic plant or parts thereof including seeds is a monocot as described herein, wherein said monocot is selected from the group consisting of wheat, rice, banana, barley, millet, and rye.</p>
+      <p id="p-00069-en" num="0068">In a preferred embodiment of the present disclosure, there is provided a transgenic plant or parts thereof, including seeds wherein said transgenic plant or parts thereof including seeds is a monocot as described herein, wherein said monocot is rice.</p>
+      <p id="p-00070-en" num="0069">In an embodiment of the present disclosure, there is provided a transgenic plant or parts thereof, including seeds as described herein, wherein said transgenic plant or parts thereof, including seeds is a dicot.</p>
+      <p id="p-00071-en" num="0070">In an embodiment of the present disclosure, there is provided a transgenic plant or parts thereof, including seeds wherein said transgenic plant or parts thereof including seeds is a dicot as described herein, wherein said dicot is selected from the group consisting of beans, peas, potato, eggplant, peppers, squash, melons, coffee, citrus, broccoli, turnips, yams, and apples,</p>
+      <p id="p-00072-en" num="0071">In an embodiment of the present disclosure, there is provided a transgenic plant or parts thereof, including seeds as described herein, wherein said transgenic plant or parts thereof, including seeds are resistant to ABA induced stress, salt stress, dehydration stress, thermal stress, oxidative stress, or combinations thereof.</p>
+      <p id="p-00073-en" num="0072">In an embodiment of the present disclosure, there is provided a use of a cDNA fragment encoding a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1 to develop transgenic plants with enhanced tolerance to abiotic stress.</p>
+      <p id="p-00074-en" num="0073">In an embodiment of the present disclosure, over-expression of a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1 results in enhanced tolerance to oxidative stress.</p>
+      <p id="p-00075-en" num="0074">In an embodiment of the present disclosure, over-expression of a polypeptide encoded by a polynucleotide sequence as set forth in SEQ ID NO: 2 results in enhanced tolerance to oxidative stress.</p>
+      <p id="p-00076-en" num="0075">In an embodiment of the present disclosure, over-expression of a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1 results in enhanced tolerance to salt stress.</p>
+      <p id="p-00077-en" num="0076">In an embodiment of the present disclosure, over-expression of a polypeptide encoded by a polynucleotide sequence as set forth in SEQ ID NO: 2 results in enhanced tolerance to salt stress.</p>
+      <p id="p-00078-en" num="0077">In an embodiment of the present disclosure, over-expression of a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1 results in enhanced tolerance to thermal stress.</p>
+      <p id="p-00079-en" num="0078">In an embodiment of the present disclosure, over-expression of a polypeptide encoded by a polynucleotide sequence as set forth in SEQ ID NO: 2 results in enhanced tolerance to thermal stress.</p>
+      <p id="p-00080-en" num="0079">In an embodiment of the present disclosure, over-expression of a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1 results in enhanced tolerance to osmotic stress.</p>
+      <p id="p-00081-en" num="0080">In an embodiment of the present disclosure, over-expression of a polypeptide encoded by a polynucleotide sequence as set forth in SEQ ID NO: 2 results in enhanced tolerance to osmotic stress.</p>
+      <p id="p-00082-en" num="0081">In an embodiment of the present disclosure, expression of the polypeptide having amino acid sequence as set forth in SEQ ID NO: 1 is induced under oxidative stress.</p>
+      <p id="p-00083-en" num="0082">In an embodiment of the present disclosure, expression of a polypeptide encoded by a polynucleotide sequence as set forth in SEQ ID NO: 2 is induced under oxidative stress.</p>
+      <p id="p-00084-en" num="0083">In an embodiment of the present disclosure, expression of the polypeptide having amino acid sequence as set forth in SEQ ID NO: 1 is induced under thermal stress.</p>
+      <p id="p-00085-en" num="0084">In an embodiment of the present disclosure, expression of a polypeptide encoded by a polynucleotide sequence as set forth in SEQ ID NO: 2 is induced under thermal stress.</p>
+      <p id="p-00086-en" num="0085">In an embodiment of the present disclosure, expression of the polypeptide having amino acid sequence as set forth in SEQ ID NO: 1 is induced under osmotic stress.</p>
+      <p id="p-00087-en" num="0086">In an embodiment of the present disclosure, expression of a polypeptide encoded by a polynucleotide sequence as set forth in SEQ ID NO: 2 is induced under osmotic stress.</p>
+      <p id="p-00088-en" num="0087">In an embodiment of the present disclosure, expression of the polypeptide having amino acid sequence as set forth in SEQ ID NO: 1 is induced under salt stress.</p>
+      <p id="p-00089-en" num="0088">In an embodiment of the present disclosure, expression of a polypeptide encoded by a polynucleotide sequence as set forth in SEQ ID NO: 2 is induced under salt stress.</p>
+      <p id="p-00090-en" num="0089">In an embodiment of the present disclosure, there is provided a transgenic plant or parts thereof or seeds or progeny that express a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1 that exhibit enhanced tolerance to salt stress.</p>
+      <p id="p-00091-en" num="0090">In an embodiment of the present disclosure, there is provided a transgenic plant or parts thereof or seeds or progeny that express a polypeptide encoded by a polynucleotide sequence as set forth in SEQ ID NO: 2 that exhibit enhanced tolerance to salt stress.</p>
+      <p id="p-00092-en" num="0091">In an embodiment of the present disclosure, there is provided a transgenic plant or parts thereof or seeds or progeny that express a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1 that exhibit enhanced tolerance to osmotic stress.</p>
+      <p id="p-00093-en" num="0092">In an embodiment of the present disclosure, there is provided a transgenic plant or parts thereof or seeds or progeny that express a polypeptide encoded by a polynucleotide sequence as set forth in SEQ ID NO: 2 that exhibit enhanced tolerance to osmotic stress.</p>
+      <p id="p-00094-en" num="0093">In an embodiment of the present disclosure, there is provided a transgenic plant or parts thereof or seeds or progeny that express a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1 that exhibit enhanced tolerance to oxidative stress.</p>
+      <p id="p-00095-en" num="0094">In an embodiment of the present disclosure, there is provided a transgenic plant or parts thereof or seeds or progeny that express a polypeptide encoded by a polynucleotide sequence as set forth in SEQ ID NO: 2 that exhibit enhanced tolerance to oxidative stress.</p>
+      <p id="p-00096-en" num="0095">In an embodiment of the present disclosure, there is provided a transgenic plant or parts thereof or seeds or progeny that express a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1 that exhibit enhanced tolerance to thermal stress.</p>
+      <p id="p-00097-en" num="0096">In an embodiment of the present disclosure, there is provided a transgenic plant or parts thereof or seeds or progeny that express a polypeptide encoded by a polynucleotide sequence as set forth in SEQ ID NO: 2 that exhibit enhanced tolerance to thermal stress.</p>
+      <p id="p-00098-en" num="0097">In an embodiment of the present disclosure, there is provided a transgenic plant or parts thereof or seeds or progeny that express a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1 that exhibit enhanced abiotic stress tolerance.</p>
+      <p id="p-00099-en" num="0098">In an embodiment of the present disclosure, there is provided a transgenic plant or parts thereof or seeds or progeny that express a polypeptide encoded by a polynucleotide sequence as set forth in SEQ ID NO: 2 that exhibit enhanced abiotic stress tolerance.</p>
+      <p id="p-00100-en" num="0099">In an embodiment of the present disclosure, there is provided a transgenic plant or parts thereof or seeds or progeny that express a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1 that exhibit enhanced ABA induced stress tolerance.</p>
+      <p id="p-00101-en" num="0100">In an embodiment of the present disclosure, there is provided a transgenic plant or parts thereof or seeds or progeny that express a polypeptide encoded by a polynucleotide sequence as set forth in SEQ ID NO: 2 that exhibit enhanced ABA induced stress tolerance.</p>
+      <p id="p-00102-en" num="0101">In an embodiment of the present disclosure, expression of OsAlba11 is maximally detected 24 hours post dehydration, when assayed at 24, 48, 72, 96, and 120 hours post dehydration.</p>
+      <p id="p-00103-en" num="0102">In an embodiment of the present disclosure, transcript level of OsAlba1 is maximally detected between 48-96 hours post dehydration when assayed at 24, 48, 72, 96, and 120 hours post dehydration.</p>
+      <p id="p-00104-en" num="0103">In an embodiment of the present disclosure, transcript level of OsAlba1 is maximally detected between 0-6 hours post NaCl stress, when assayed at 0, 3, 6, 12, and 24 hours.</p>
+      <p id="p-00105-en" num="0104">In an embodiment of the present disclosure, transcript level of OsAlba1 is maximally detected between 3-12 hours post cold stress, when assayed at 0, 3, 6, 12, and 24 hours.</p>
+      <p id="p-00106-en" num="0105">In an embodiment of the present disclosure, transcript level of OsAlba1 is maximally detected between 6-12 hours post ABA stress, when assayed at 0, 3, 6, 12, and 24 hours.</p>
+      <p id="p-00107-en" num="0106">In an embodiment of the present disclosure, OsAlba1 transcript levels are maximal in flag leaf tissue.</p>
+      <p id="p-00108-en" num="0107">In an embodiment of the present disclosure, OsAlba1 is localized to the nucleus.</p>
+      <p id="p-00109-en" num="0108">In an embodiment of the present disclosure, OsAlba1 complements Pop6 activity in ΔPop6 yeast strain in response to oxidative stress.</p>
+      <p id="p-00110-en" num="0109">In an embodiment of the present disclosure, there are provided transgenic rice plants that over-express OsAlba1, which exhibit enhanced tolerance to abiotic stress.</p>
+      <p id="p-00111-en" num="0110">In an embodiment of the present disclosure, the monocot expressing a recombinant DNA construct comprising of a promoter operably linked to a gene of interest encoding a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1 is selected from the group consisting of wheat, rice, banana, barley, millet, and rye.</p>
+      <p id="p-00112-en" num="0111">In a preferred embodiment of the present disclosure, the monocot expressing a recombinant DNA construct comprising of a promoter operably linked to a gene of interest encoding a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1 is rice.</p>
+      <p id="p-00113-en" num="0112">In an embodiment of the present disclosure, the transgenic plant or part thereof including seeds and progeny expressing a recombinant DNA construct comprising of a promoter operably linked to a gene of interest encoding a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1 is a dicot.</p>
+      <p id="p-00114-en" num="0113">In an embodiment of the present disclosure, the dicot expressing a recombinant DNA construct comprising of a promoter operably linked to a gene of interest encoding a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1 is selected from the group consisting of beans, peas, potato, eggplant, peppers, squash, melons, coffee, citrus, broccoli, turnips, yams, and apples.</p>
+      <heading id="h-00008-en" level="1">EXAMPLES</heading>
+      <p id="p-00115-en" num="0114">The disclosure will now be illustrated with working examples, which is intended to illustrate the working of disclosure and not intended to take restrictively to imply any limitations on the scope of the present disclosure. Unless defined otherwise, all technical and scientific terms used herein have the same meaning as commonly understood to one of ordinary skill in the art to which this disclosure belongs. Although methods and materials similar or equivalent to those described herein can be used in the practice of the disclosed methods and compositions, the exemplary methods, devices and materials are described herein.</p>
+      <heading id="h-00009-en" level="1">Example 1</heading>
+      <heading id="h-00010-en" level="1">Molecular Cloning of OsAlba1</heading>
+      <p id="p-00116-en" num="0115">The full-length cDNA of OsAlba1 was amplified from <i>O. sativa </i>ssp. <i>indica </i>(cv. Rasi) using the primers as set forth in SEQ ID NO: 3 (forward) and SEQ ID NO: 4 (reverse). The PCR mixture contained 1× reaction buffer (40 mM Tris-HCl, pH 8.0, 10 mM DTT, 60 mM KCl and 2.5% glycerol), 2.5 mM dNTPs, 2.5 U Taq DNA Polymerase, 2 mM MgCl<sub>2</sub>, 20 pmol each of the forward and reverse primers. The reaction was conducted in a thermal cycler at the following settings: denaturation at 95° C. for 2 min, followed by 35 cycles of denaturation at 94° C. for 30 s, annealing at 65° C. for 30 s, and an extension at 72° C. for 1 min. The final extension was performed at 72° C. for 10 min. The PCR product was cloned into the pGEMT vector and confirmed by restriction analysis and sequencing.</p>
+      <heading id="h-00011-en" level="1">Example 2</heading>
+      <heading id="h-00012-en" level="1">Bacterial Over-Expression of GST-OsAlba1 Fusion Protein</heading>
+      <p id="p-00117-en" num="0116">The OsAlba1 cDNA was inserted in-frame in to the expression plasmid pGEX4T-2 (GE Healthcare) using BamHI and NotI restriction sites engineered at 5′- and 3′-ends, respectively. The insert sequence and reading frame were verified by nucleotide sequencing, and the construct was transformed into <i>E. coli </i>BL21 (DE3) cells. Over-expression of recombinant protein was induced by the addition of IPTG at a final concentration of 0.3 mM. The cultures were incubated for 2 to 5 hours at 37° C. Cells were harvested by centrifugation and the recombinant protein was resolved on 12.5% SDS-PAGE and the band harboring OsAlba1 was excised from the gel, and in-gel digested with trypsin. The peptide mix generated was eluted and subjected to LC-MS/MS analysis (QSTAR Elite, AB Sciex). Multiple peptides with a high statistical probability (p&lt;0.05) of matches to the relevant protein were analysed to confirm the identity</p>
+      <heading id="h-00013-en" level="1">Example 3</heading>
+      <heading id="h-00014-en" level="1">Transcript Analysis</heading>
+      <p id="p-00118-en" num="0117">Total RNA was extracted from unstressed and stressed rice seedlings using TRIpure reagent (Invitrogen), and treated with RNase-free DNase I (Promega). An aliquot of 15 μg RNA was electrophoretically separated on 1.5% agarose gels and transferred onto nylon membranes (GE Healthcare) and UV cross-linked. Hybridization was performed with Alba cDNA fragment (0.459 kb) labelled with [<sup>32</sup>P] dCTP using a NEBlot Phototype kit (New England Biolabs Inc.) under high-stringency conditions. The blot was pre-hybridized in 10 ml of hybridization buffer for at least 2 h at 60° C. with gentle rotation followed by addition of the radiolabelled probe. Following overnight hybridization, the blots were washed and exposed to pre-flashed autoradiography film, kept at −80° C. for 2 days, and developed.</p>
+      <p id="p-00119-en" num="0118">
+        <figref>FIG. 1</figref> shows the relative distribution of OsAlba1 gene transcript in various parts of plant. It can be inferred that maximal transcript expression of OsAlba1 can be seen in flag leaf, while there is a minimal detectable expression in other plant parts such as root, stem, leaf, and sheath. No detectable expression could be seen in panicle.</p>
+      <heading id="h-00015-en" level="1">Example 4</heading>
+      <heading id="h-00016-en" level="1">Immnoblot Analysis</heading>
+      <p id="p-00120-en" num="0119">Immunoblot analysis was carried out by resolving nuclear proteins on a uniform 16% SDS-PAGE, and electro-transferred onto nitrocellulose membrane (GE Healthcare) at 150 mA for 3 hours. The membranes were blocked with 5% (w/v) non-fat milk for 2 hours and incubated with anti-OsAlba1 polyclonal antibody, at a dilution of 1/5000 in TBS buffer for 1 hour. The antibody was raised in rabbit against an antigenic peptide having amino acid sequence as set forth in SEQ ID NO: 5. The blot was eventually incubated with alkaline phosphatase conjugated secondary antibody, goat anti-rabbit-IgG (Sigma) at a dilution of 1/10,000 in TBS buffer for 1 hour and the signals were detected using NBT/BCIP (nitro blue tetrazolium/5-bromo-4-chloro-3-indolyl phosphate) method.</p>
+      <p id="p-00121-en" num="0120">
+        <figref>FIG. 2</figref> shows the OsAlba11 protein distribution in various plant tissues. It can be inferred from <figref>FIG. 2</figref> that maximal protein can be seen in flag leaf, and leaf. Background minimal expression can be detected in root, and stem of plant tissue.</p>
+      <heading id="h-00017-en" level="1">Example 5</heading>
+      <heading id="h-00018-en" level="1">Sub-Cellular Localization of OsAlba1</heading>
+      <p id="p-00122-en" num="0121">Inner epidermal peels of young onion bulb were placed on MS-agar plates supplemented with 3% sucrose. Approximately 25 μg of OsAlba1 construct plasmid was coated onto 1.6 μm gold particle (Bio-Rad) with 2.5 M CaCl<sub>2 </sub>and 0.1 M spermidine, and mixed vigorously. Plasmid-coated particles were dehydrated with 75% and 95% ethanol prior to bombardment and introduced transiently into epidermal cells by microprojectile bombardment using a PDS-1000/He-driven particle accelerator (Bio-Rad). The samples were incubated for 22-24 h under dark conditions at 22° C. before analysis with TCS SP2 confocal system (Leica, Germany) for fluorescence detection. GFP signals were detected between 505-550 nm after exciting with 488 nm. Co-localization was performed with sequential scanning for both the channels and then merged together to obtain overlapping signals.</p>
+      <p id="p-00123-en" num="0122">
+        <figref>FIG. 3</figref> shows the sub-cellular localization of OsAlba1-GFP fusion protein. It can be seen that GFP expression shows accumulation in nucleus (<figref>FIG. 3D</figref>), and sparsely in the cytoplasm, compared to control GFP alone (<figref>FIG. 3A</figref>). <figref>FIGS. 3B</figref>, and <b>3</b>E are phase contrast images of same cells as <figref>FIG. 3A</figref>, D. <figref>FIG. 3C</figref>, F are merged images of <figref>FIGS. 3A</figref>, B and D, E respectively.</p>
+      <p id="p-00124-en" num="0123">To determine the organ-specific expression of OsAlba1, transcript abundance in roots, stems, leaves, flag leaves, sheaths and panicles of rice seedlings were compared. The transcripts were abundantly and constantly transcribed in flag leaves. The expression in other major vegetative organs was substantially low (<figref>FIG. 1</figref>). Next, the protein abundance in all these tissues was examined by immunoblot analysis (<figref>FIG. 2</figref>). The results showed the presence of OsAlba1 in leaves and flag leaves, corroborating the mRNA profile. The predominant expression of OsAlba1 in the flag leaves seems to support the growing panicles which might be crucial during grain filling. The rice flag leaves are essential in providing photosynthates (Xu et al., <i>PloS One, </i>2011, 6, e176133) and has been reported to play an important role in grain yield (Wan et al., <i>Scienctia Agricultura Sinica, </i>1981, 6, 21-28; Raj et al., <i>Indian J. Plant Physiol., </i>2000, 5, 293-295) and in enhancing productivity (Padmaja, <i>Indian J. Plant Physiol., </i>1991, 34, 339-348). These results may have important implications, since such organ-specific gene expression is closely related to harvest yield, and perhaps crucial for driving agronomic trait/s.</p>
+      <heading id="h-00019-en" level="1">Example 6</heading>
+      <heading id="h-00020-en" level="1">Complementation Study in Yeast</heading>
+      <p id="p-00125-en" num="0124">
+        <i>S. cerevisiae </i>wild-type (BY4743) and ΔPop6 (YGR030c) strains were used for complementation assay. ΔPop6 was transformed with pYES2 vector and pYES2 vector containing the OsAlba1 ORF. Yeast strains were grown in YPD broth and serial dilutions [OD<sub>600</sub>=0.5, as 10° to 10<sup>−3 </sup>for ΔPop6] were prepared and plated. The plates were incubated at 30° C. for 48 h. The growth of wild-type (WT), ΔPop6:pYES2, ΔPop6, and ΔPop6+OsAlba1 strains were checked under normal conditions, as well as under H<sub>2</sub>O<sub>2</sub>-induced oxidative stress conditions.</p>
+      <p id="p-00126-en" num="0125">Ribonuclease P/MRP subunit Pop6, a component of ribonuclease P, is an Alba domain containing protein involved in RNA processing (Mani et al., <i>PLoS One., </i>2011, 6, e22463). However, the role of Alba super family proteins in stress tolerance remains unexplored. It is well known that oxidative stress is caused by increased production of reactive oxygen species (ROS) that damage various cellular components, including proteins, lipids and DNA. We thought that OsAlba1, being a DNA-binding protein, might be involved in defense against oxidative damage and therefore, its role in oxidative stress tolerance was investigated. We examined whether OsAlba1 could complement yeast ΔPop6 mutant under oxidative stress.</p>
+      <p id="p-00127-en" num="0126">
+        <figref>FIG. 4</figref> shows that the growth of wild-type (WT), ΔPop6:pYES2, ΔPop6 and complemented (ΔPop6+OsAlba1) strains was monitored in presence of different concentrations of H<sub>2</sub>O<sub>2</sub>. The complemented strains grew rapidly and displayed resistance when compared with that of ΔPop6 and ΔPop6:pYES2, and the effect was more prominent at higher concentration of H<sub>2</sub>O<sub>2</sub>. These results indicate the role of Alba proteins in oxidative stress tolerance, besides their classical role as DNA/RNA-binding proteins.</p>
+      <heading id="h-00021-en" level="1">Example 7</heading>
+      <heading id="h-00022-en" level="1">Plant Growth Conditions and Stress Treatments</heading>
+      <p id="p-00128-en" num="0127">Rice (<i>Oryza sativa </i>L. ssp. <i>indica</i>) seedlings were grown in pots containing a mixture of soil and soilrite (2:1, w/w; 10 plants/5.6-l-capacity pot) in an environmentally controlled growth room. The seedlings were maintained at 28±2° C., 70±5% relative humidity under a 16 h photoperiod (270 μmol/m<sup>2</sup>/second light intensity). The pots were provided with 300 ml of water every day to maintain the soil moisture content at ˜30%. Dehydration stress was imposed on the 4-week-old seedlings by withdrawing water, and tissues were harvested up to 120 h.</p>
+      <p id="p-00129-en" num="0128">In a separate set of experiment, the seedlings were supplemented with half-Hoagland's medium until 4 weeks, followed by treatment with 250 mM NaCl in the medium. The tissues were harvested until 24 h of the treatment. The ABA treatment was carried out by spraying the seedlings with 100 μM ABA, and tissues were harvested at specified intervals. The unstressed seedlings were sprayed with water, referred to as 0 h. For cold treatment, seedlings were kept at 4° C. for a period of 24 h.</p>
+      <p id="p-00130-en" num="0129">In order to investigate transcriptional regulation of OsAlba1 under dehydration, we carried out Northern blot analysis (<figref>FIG. 5</figref>). The OsAlba1 transcripts were induced during 48-96 h, but dropped to steady state level at 120 h of dehydration (<figref>FIG. 5A</figref>). The discrepancy between the transcript abundance and the protein profile (<figref>FIG. 5B</figref>) is not unprecedented and suggests posttranscriptional and/or posttranslational regulation of OsAlba1 during stress. Because dehydration-responsive pathway often overlaps with that of ABA, and dehydration represents a common stress challenge to plant cells under high salinity and cold conditions (Thomashow, <i>Annu. Rev. Plant Physiol. Plant Mol. Biol. </i>1999, 50, 571-599, Shinozaki et al., <i>Curr. Opin. Plant Biol. </i>3, 2000, 217-223; Xiong et al., <i>Plant Cell Environ., </i>2002, 25, 131-139), the expression of OsAlba1 transcripts was investigated triggered by each of these conditions. A persistent induction of OsAlba1 was observed under cold, with maximum transcript accumulation at 12 h of stimulation. Even at 24 h of cold treatment, the mRNA level remained elevated when compared with the unstressed condition (<figref>FIG. 5D</figref>). Treatment with 250 mM NaCl resulted in somewhat more transient mRNA elevation that declined within 24 h (<figref>FIG. 5C</figref>). Next, we examined whether OsAlba1 transcription was affected by ABA, and it appeared to be induced until 12 h of treatment (<figref>FIG. 5E</figref>). These results altogether suggest that OsAlba1 may actively participate in osmotic and hyper-osmotic stress, and this participation may, in part, depend on ABA.</p>
+      <heading id="h-00023-en" level="1">Example 8</heading>
+      <heading id="h-00024-en" level="1">Structural Organization of OsAlba1</heading>
+      <p id="p-00131-en" num="0130">To investigate the genomic organization of OsAlba1, the NCBI sequence database was reviewed. It revealed the presence of an incomplete transcript with a coding region of 0.407 kb, identical to Alba protein from <i>Oryza sativa </i>ssp. <i>japonica</i>. The corresponding sequence was used to design primers and full-length cDNA was cloned from <i>O. sativa </i>ssp. <i>indica</i>. The analysis revealed a 52 bp sequence missing at 3′-end, identical to <i>O. sativa </i>ssp. <i>japonica</i>. The complete OsAlba1 genomic sequence is thus 1.514 kb, excluding 3′-UTR region, and interrupted by 4 introns. The coding region of OsAlba1 encodes a protein of 152 amino acids with molecular mass of 16.72 kDa.</p>
+      <p id="p-00132-en" num="0131">The domain architecture and putative post translational modifications were examined using NCBI CDD server for domain prediction and NetPhos 2.0 for predicting the phosphorylation sites. The deduced protein sequence analysis and domain search indicated that OsAlba1 comprises of 64 amino acid residue Alba domain (Pfam Accession: PF01918). OsAlba1 showed a high score phosphorylation, both within the Alba domain (Thr-50, Tyr-57 and Ser-104) and outside it (Ser-40 and Ser-129) (<figref>FIG. 6</figref>). Phosphorylation has previously been observed in Alba proteins of Pop7 and RPP25 family from mouse and human and is documented in UniProt database. Using ASEB server, acetylation and deacetylation sites (acetylation, 136; deacetylation, 107) in OsAlba1 were also predicted. Acetylation and deacetylation events have earlier been reported to have important roles in differential regulation (Chene et al., <i>Nucleic Acids Res., </i>2012, 40, 3066-3077) and a similar mechanism of differential regulation of OsAlba1 by PTM could therefore be suggested.</p>
+      <heading id="h-00025-en" level="1">Example 9</heading>
+      <heading id="h-00026-en" level="1">Rice Transformation</heading>
+      <heading id="h-00027-en" level="2">
+        <i>Agrobacterium </i>Strains and Construct Used for Transformation</heading>
+      <p id="p-00133-en" num="0132">The OsAlba1 gene was cloned in pGA3426 (<figref>FIG. 7</figref>) plant transformation vector at XbaI-KpnI restriction sites between the maize Ubi promoter and nos terminator. This vector has tet (tetracycline) and hph (hygromycin) genes as the selectable markers for bacteria and plants, respectively. The gene construct was finally transformed in <i>Agrobacterium tumefaciens</i>, GV3101.</p>
+      <p id="p-00134-en" num="0133">Primary culture of <i>Agrobacterium </i>was prepared by inoculating a single colony from a freshly streaked plate, in 5 ml of YEP medium (10 g/l bactopeptone, 10 g/l yeast extract, 5 g/l sodium chloride, pH adjusted 7.0) supplemented with 10 mg/l tetracycline and 10 mg/l rifampicin. The culture was incubated at 28° C. for 16-20 h on a rotatory incubator shaker at 200 rpm. Secondary culture was prepared in a 500 ml baffled flask containing 100 ml YEP by adding 1.0% of the primary culture and grown under similar conditions. Once the O.D.<sub>600 </sub>reached ˜1.0, <i>Agrobacterium </i>cells were pelleted by centrifugation at 8000×g for 15 min at 4° C. The cells were resuspended in MS resuspension medium containing 150 μM acetosyringone to adjust the O.D.<sub>600 </sub>of the bacterial suspension to 0.3.</p>
+      <heading id="h-00028-en" level="2">
+        <i>Agrobacterium </i>Mediated Callus Transformation and Regeneration</heading>
+      <p id="p-00135-en" num="0134">The 2-week-old rice calli were collected and Agro-infected by immersing them in the <i>Agrobacterium </i>culture for 20-25 min with intermittent gentle shaking. The Agro-infected calli were dried on sterile Whatman filter paper for 5 min. Calli were then transferred to the co-cultivation medium containing 30 g/L sucrose, 150 μM acetosyringone and incubated at 27±1° C. in the dark for 3 d. Once slight growth of <i>Agrobacterium </i>appeared around most of the calli, the calli were rinsed 8-10 times with 250 mg/L cefotaxime. They were then dried on sterile Whatman filter paper and transferred onto first selection shooting medium (MS medium, BAP 3 mg/l, NAA 1 mg/l, 250 mg/l cefotaxime and 50 mg/l hygromycin and incubated for 12 d at 26±1° C. in dark. After the first selection, brown or black calli were removed, and only creamish healthy calli were transferred to the second selection and maintained at 26±1° C. in dark. After second selection for 10 d, microcalli could be observed which were finally transferred to fresh MS shooting media for third selection and allowed to proliferate for 5 d at 27±1° C. in dark.</p>
+      <p id="p-00136-en" num="0135">Healthy shoots with defined stem were transferred to rooting medium (MS medium supplemented with IBA 1 mg/l, 50 mg/l hygromycin, 500 mg/l cefotaxime, pH 5.6) and incubated at 28° C. under continuous light. The plantlets with well-developed root system were planted in 250 ml plastic pots containing autoclaved mud, collected from rice fields. The plantlets were established in such a way that the clump of plantlets, originated from each callus, was separated carefully and planted in several pots. Out of different transgenic lines obtained, five independent transgenic lines harbouring OsAlba1 were screened for further analyses.</p>
+      <heading id="h-00029-en" level="1">Example 10</heading>
+      <heading id="h-00030-en" level="1">Analysis of OsAlba1 Over-Expressing Transgenic Plants for Stress Tolerance</heading>
+      <p id="p-00137-en" num="0136">The wild type and the transgenic plants are being studied in parallel in the same growth room for comparative morpho-anatomical, molecular, and physiological analyses. The rice seedlings have been grown in pots containing a mixture of soil and soilrite (2:1, w/w; 5.6-liter-capacity pot) in an environmentally controlled growth room. The seedlings are maintained at 28±2° C., 70±5% relative humidity under a 16 h photoperiod (270 μmol m<sup>−2 </sup>s<sup>−1 </sup>light intensity). The pots are provided with 300 ml of water every day that maintained the soil moisture content at 30%. Dehydration is imposed on the 4-week-old seedlings by withdrawing water, and tissues will be harvested up to 120 h. The harvested tissues will be instantly frozen in liquid nitrogen and stored at −80° C. unless otherwise described. In a separate set of experiment, the seedlings have been supplemented with half-Hoagland's medium for 3 weeks, followed by treatment with 250 mM concentration of NaCl in the same medium. The tissues will be harvested 24 h after the treatment. The treatment of ABA will be carried out by spraying the seedlings with 100 μM ABA, and tissues will be harvested at specified intervals. For cold treatment, seedlings have been kept at 4° C. for 24 h. The transcript analysis of OsAlba1 for its differential expression under various stresses will be carried out by Northern blot and quantitative real-time PCR.</p>
+      <p id="p-00138-en" num="0137">Overall, the present disclosure provides transgenic plants, methods and reagents to generate transgenic plants that surprisingly exhibit enhanced tolerance to a variety of abiotic stress factors.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A recombinant DNA construct comprising of a promoter operably linked to a gene of interest, wherein said gene of interest encodes a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The recombinant DNA construct as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the gene of interest polynucleotide sequence is as set forth in SEQ ID NO: 2.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The recombinant DNA construct as claimed in <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>, wherein the promoter is selected from the group consisting of pUbi, CamV 35S, Act-1, Adh-1, and opine promoters.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. A recombinant DNA vector comprising the recombinant DNA construct as claimed in <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref>.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. A recombinant host cell comprising the recombinant DNA construct as claimed in <claim-ref idref="clm-00001-en">claim 1 </claim-ref> or <claim-ref idref="clm-00002-en">2</claim-ref> or the recombinant DNA vector as claimed in <claim-ref idref="clm-00004-en">claim 4</claim-ref>.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The recombinant host cell as claimed in <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein said recombinant host cell is of bacterial or fungal or of plant origin.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en" independent="true">
+      <claim-text>
+        <b>7</b>. A cDNA fragment encoding a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1, wherein recombinant cells expressing said polypeptide exhibit enhanced abiotic stress tolerance selected from the group consisting of ABA induced stress, salt stress, thermal stress, dehydration stress, oxidative stress, and combinations thereof.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The cDNA as claimed in <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the cDNA polynucleotide sequence is as set forth in SEQ ID NO: 2.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. A method of producing a transgenic plant with enhanced tolerance to abiotic stress, said method comprising:
+<claim-text>a. transforming plant cells with a recombinant DNA construct as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref> or recombinant host cells as claimed in <claim-ref idref="clm-00005-en">claim 5</claim-ref>;</claim-text><claim-text>b. selecting a transgenic cell; and</claim-text><claim-text>c. developing a transgenic plant from said transformed cell,</claim-text></claim-text>
+      <claim-text>wherein said transgenic plant exhibits enhanced tolerance to abiotic stress.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method as claimed in <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein said transgenic plant is a monocot or a dicot.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method as claimed in <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the abiotic stressors are selected from the group consisting of ABA induced stress, salt stress, thermal stress, dehydration stress, oxidative stress, and combinations thereof.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en" independent="true">
+      <claim-text>
+        <b>12</b>. A transgenic plant or parts thereof, including seeds, wherein said transgenic plant or parts thereof, including seeds, encodes at the nuclear genome level a polynucleotide fragment comprising of a cDNA fragment encoding a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1, wherein expression of said polypeptide confers abiotic stress resistance to said transgenic plant or parts thereof, including seeds.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The transgenic plant or parts thereof, including seeds as claimed in <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein said cDNA has a polynucleotide sequence a set forth in SEQ ID NO: 2.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The transgenic plant or parts thereof, including seeds as claimed in <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein said transgenic plant or parts thereof, including seeds is a monocot or a dicot.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en" independent="true">
+      <claim-text>
+        <b>15</b>. Use of a cDNA fragment encoding a polypeptide having amino acid sequence as set forth in SEQ ID NO: 1 in generating transgenic plants which are resistant to abiotic stress.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247161A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247161A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247161A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247161A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150247161A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247161A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150247161A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247161A1-20150903-D00004.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150247161A1.PDF" type="pdf" size="797763" pages="16" />
+</lexisnexis-patent-document>

@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257520A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030234" date-changed="20151228" time-changed="083621">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121316586">
+        <country>US</country>
+        <doc-number>20150257520</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14645245</doc-number>
+        <date>20150311</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="regional">
+        <country>EP</country>
+        <doc-number>14158836</doc-number>
+        <date>20140311</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150929">
+      <classification-ipcr sequence="1">
+        <text>A46B   9/04        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>46</class>
+        <subclass>B</subclass>
+        <main-group>9</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A46D   1/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>46</class>
+        <subclass>D</subclass>
+        <main-group>1</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150929">
+      <classification-cpc sequence="1">
+        <text>A46B   9/04        20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>46</class>
+        <subclass>B</subclass>
+        <main-group>9</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A46B   9/028       20130101 LI20140710BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>46</class>
+        <subclass>B</subclass>
+        <main-group>9</main-group>
+        <subgroup>028</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140710</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A46B2200/1066      20130101 LA20140710BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>46</class>
+        <subclass>B</subclass>
+        <main-group>2200</main-group>
+        <subgroup>1066</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140710</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A46D   1/006       20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>46</class>
+        <subclass>D</subclass>
+        <main-group>1</main-group>
+        <subgroup>006</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A46D   1/02        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>46</class>
+        <subclass>D</subclass>
+        <main-group>1</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A46D   1/023       20130101 LA20150602BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>46</class>
+        <subclass>D</subclass>
+        <main-group>1</main-group>
+        <subgroup>023</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150602</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A46D   1/0238      20130101 LI20150919BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>46</class>
+        <subclass>D</subclass>
+        <main-group>1</main-group>
+        <subgroup>0238</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150919</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">15</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">HEAD FOR AN ORAL CARE IMPLEMENT</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>The Procter &amp; Gamble Company</orgname>
+            <address>
+              <city>Cincinnati</city>
+              <state>OH</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>STOERKEL</last-name>
+            <first-name>Ulrich</first-name>
+            <address>
+              <city>BAD NAUHEIM</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>BERTRAND</last-name>
+            <first-name>Simone</first-name>
+            <address>
+              <city>Frankfurt/Main</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>HUEBNER</last-name>
+            <first-name>Martis</first-name>
+            <address>
+              <city>Bad Soden</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>BIRK</last-name>
+            <first-name>Andreas</first-name>
+            <address>
+              <city>Kronberg/Taunus</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>SCHMID</last-name>
+            <first-name>Franziska</first-name>
+            <address>
+              <city>Frankfurt/Main</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>HILSCHER</last-name>
+            <first-name>Alexander</first-name>
+            <address>
+              <city>Oberursel</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="7" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>SCHMELCHER</last-name>
+            <first-name>Heidrun</first-name>
+            <address>
+              <city>Oberursel</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="8" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>GANNINGER</last-name>
+            <first-name>Jochen</first-name>
+            <address>
+              <city>Eschborn</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="9" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>KAWERAU</last-name>
+            <first-name>Jochen</first-name>
+            <address>
+              <city>Kronberg/Taunus</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="10" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>JUNGNICKEL</last-name>
+            <first-name>Uwe</first-name>
+            <address>
+              <city>Königstein/Taunus</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="11" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>HElL</last-name>
+            <first-name>Benedikt</first-name>
+            <address>
+              <city>Friedberg</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="12" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>MANDL</last-name>
+            <first-name>Christian</first-name>
+            <address>
+              <city>Bad Soden</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="13" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>KAISER</last-name>
+            <first-name>Eva</first-name>
+            <address>
+              <city>Kelkheim</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="14" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>BALLMAIER</last-name>
+            <first-name>Kathi</first-name>
+            <address>
+              <city>Wehrheim</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="15" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>HIELSCHER</last-name>
+            <first-name>Christine</first-name>
+            <address>
+              <city>München</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="16" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>STOCKINGER</last-name>
+            <first-name>Britta</first-name>
+            <address>
+              <city>Frankfurt/Main</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173663713">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257520</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150311</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2918191</doc-number>
+            <kind>A1</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20140311</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015138572</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150311</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173663711">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257520</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150311</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2918191</doc-number>
+            <kind>A1</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20140311</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015138572</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150311</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A head for an oral care implement has a mounting surface and at least one tuft mounted thereon. The tuft has a longitudinal axis and a cross-sectional area extending in a plane perpendicular to the longitudinal axis. The tuft comprises a plurality of substantially cylindrical filaments. Each filament has a longitudinal axis and a cross-sectional area extending in a plane that is perpendicular to the longitudinal axis. The cross-sectional area of an individual filament has a substantially non-circular shape. The plurality of filaments is arranged such that the cross-sectional area of the tuft has a scaled-up shape of the individual filament's cross-sectional area.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">The present disclosure is concerned with a head for an oral care implement and in particular with such a head comprising at least one tuft of filaments extending from a mounting surface of the head. Each filament of said tuft has a non-circular cross-sectional area which is perpendicular to a longitudinal extension of the filament.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">Tufts composed of a plurality of filaments for oral care implements, like manual and powered toothbrushes are well known in the art. Generally, the tufts are attached to a mounting surface of a head intended for insertion into a user's oral cavity. A grip handle is usually attached to the head, which handle is held by the user during brushing. The head is either permanently connected or repeatedly attachable to and detachable from the handle.</p>
+      <p id="p-00003-en" num="0003">It is known that filaments often have an outer lateral surface with a substantially circular cylindrical shape. In general, the tips or free ends of the filaments are end-rounded to avoid that the gums get injured by sharp edges during brushing. Although the filament's tips are end-rounded, the person skilled in the art would still consider this type of filaments as substantially cylindrical in shape. The filaments are normally arranged in a manner that the tuft has an outer lateral surface with either a substantially circular cylindrical shape or a substantially rectangular cylindrical shape.</p>
+      <p id="p-00004-en" num="0004">While toothbrushes comprising these types of tufts clean the outer buccal face of teeth adequately, they are generally not as well suited to provide adequate removal of plaque and debris from the gingival margin, interproximal areas, lingual surfaces and other hard to reach areas of the mouth.</p>
+      <p id="p-00005-en" num="0005">Tufts composed of two different types of filaments, so called tuft-in-tufts, are also known in the art. In general, each type of filament is arranged in a group, wherein an inner group is substantially coaxially enclosed by an outer group to form the tuft. For example, a toothbrush head is known having a bristle surface from which tufts comprising plural filaments extend in a filament direction. Each tuft comprises shorter filaments having a cross section which does not taper from their lower end towards their upper end and greater/longer filaments which taper from their lower end towards their upper end. The longer filaments are surrounded by the shorter filaments.</p>
+      <p id="p-00006-en" num="0006">However, it is known in the art that tapered filaments tend to flex away easily, i.e. tapered filaments normally show a relatively low bending stiffness which may result in reduced ability to penetrate into interdental spaces. In addition, tapered filaments may have a relatively short lifetime as they wear away quickly.</p>
+      <p id="p-00007-en" num="0007">It is an object of the present disclosure to provide a head for an oral care implement which overcomes these drawbacks. It is also an object of the present disclosure to provide an oral care implement comprising such head.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00008-en" num="0008">In accordance with one aspect, a head for an oral care implement is provided that comprises a mounting surface and at least one tuft mounted on the mounting surface. The tuft has a longitudinal axis and a cross-sectional area extending in a plane that is perpendicular to the longitudinal axis. The tuft comprises a plurality of substantially cylindrical filaments. Each filament has a longitudinal axis and a cross-sectional area extending in a plane that is perpendicular to the longitudinal axis. The cross-sectional area of each filament has a substantially non-circular shape. The plurality of filaments is arranged in a manner that the cross-sectional area of the tuft has a scaled up shape with respect to the shape of the cross-sectional area of each filament.</p>
+      <p id="p-00009-en" num="0009">In accordance with one aspect, an oral care implement is provided that comprises such head.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00010-en" num="0010">The invention is described in more detail below with reference to various embodiments and figures, wherein:</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 1</figref> shows a schematic top-down view of a first example embodiment of an oral care implement comprising a first example embodiment of a head;</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 2</figref> shows a schematic top-down view of a first example embodiment of a tuft shown in <figref>FIG. 1</figref>;</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 3</figref> shows a schematic top-down view of a first example embodiment of a filament shown in <figref>FIG. 2</figref>;</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 4</figref> shows a schematic side view of the filament of <figref>FIG. 3</figref>;</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 5</figref> shows a schematic top-down view of a second example embodiment of an oral care implement comprising a second example embodiment of a head;</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 6</figref> shows a schematic top-down view of a second example embodiment of a tuft shown in <figref>FIG. 5</figref>;</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 7</figref> shows a schematic top-down view of a second example embodiment of a filament shown in <figref>FIG. 6</figref>;</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 8</figref> shows a schematic top-down view of a third example embodiment of a tuft;</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 9</figref> shows a schematic top-down view of a fourth example embodiment of a tuft;</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 10</figref> shows a schematic top-down view of a fifth example embodiment of a tuft;</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 11</figref> shows a schematic top-down view of a sixth example embodiment of a tuft;</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 12</figref> shows a schematic top-down view of a seventh example embodiment of a tuft;</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 13</figref> shows a schematic top-down view of an eights example embodiment of a tuft;</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 14</figref> shows a schematic top-down view of a ninth example embodiment of a tuft;</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 15</figref> shows a schematic top-down view of a tenth example embodiment of a tuft;</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 16</figref> shows a schematic top-down view of an eleventh example embodiment of a tuft; and</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 17</figref> shows a schematic top-down view of a filament shown in <figref>FIG. 10</figref>.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00028-en" num="0028">A head for an oral care implement in accordance with the present disclosure comprises at least one tuft which comprises a plurality of filaments. The tuft is mounted on a mounting surface of the head.</p>
+      <p id="p-00029-en" num="0029">Each filament of the tuft has a longitudinal axis which may be defined by the main extension of the filament. In the following, the extension of the filament along its longitudinal axis may be referred to as the “longitudinal extension of the filament”. Each filament has a cross-sectional area which extends in a plane that is perpendicular to the longitudinal axis. The shape of said cross-sectional area is substantially non-circular. In the context of this disclosure the term “substantially non-circular shape of a cross-sectional area” may be defined by the following: The cross-sectional area has a centroid from which straight lines extend to any point on the outer circumference of the cross-sectional area. At least two of said straight lines have substantially different lengths. In other words, the radius measured from the centroid to any point on the circumference of the cross-sectional area is substantially not constant.</p>
+      <p id="p-00030-en" num="0030">The filaments are substantially cylindrical filaments, i.e. each filament has a substantially cylindrical outer lateral surface. In other words, the shape and size of the cross-sectional area of each filament along its longitudinal axis may not vary substantially, i.e. the shape and size of the cross-sectional area may be substantially constant over the longitudinal extension of the filament. In the context of this disclosure the term “outer lateral surface of a filament/tuft” means any outer face or surface of the filament/tuft on its sides. This type of filaments may provide increased bending stiffness compared to tapered filaments. A higher bending stiffness may facilitate the filaments to penetrate into interdental gaps/spaces. Further, cylindrical filaments are generally slowly worn away which may provide longer lifetime of the filaments.</p>
+      <p id="p-00031-en" num="0031">At least some or all of the cylindrical filaments may have substantially end-rounded tips/free ends to provide gentle cleaning properties. End-rounded tips may avoid that gums get injured during brushing. Within the context of this disclosure, end-rounded filaments would still fall under the definition of a substantially cylindrical filament.</p>
+      <p id="p-00032-en" num="0032">The at least one tuft comprising a plurality of said filaments has a longitudinal axis and a cross-sectional area which extends in a plane that is perpendicular to said longitudinal axis. The plurality of filaments is arranged in a manner that the cross-sectional area of the tuft has a scaled up shape of the respective shape of each individual filament which makes up the tuft. In other words, the tuft is a scaled up version of its filaments, i.e. the shape of the cross-sectional area of the tuft has substantially the same non-circular shape as each individual filament but in a larger size. The shape of the cross-sectional area of the tuft corresponds to the shape of the cross-sectional area of its filaments. In the context of this disclosure the term “cross-sectional area having a scaled up shape” means a cross-sectional area comprising the same shape but in increased size. Vice versa, the term “cross-sectional area having a scaled down shape” means a cross-sectional area comprising the same shape but in decreased size. In other words, the type of shape is the same but the size of the cross-sectional area is different, i.e. increased or decreased, respectively.</p>
+      <p id="p-00033-en" num="0033">Any gaps, irregularities, reliefs or slots which may be present between two adjacent individual filaments at the outer circumference of the cross-sectional area of the tuft do not contribute to the substantial shape of said cross-sectional area and are, thus, to be neglected.</p>
+      <p id="p-00034-en" num="0034">A head for an oral care implement comprising at least one of the tufts in accordance with the present disclosure may provide increased cleaning properties. The specific shape/geometry of the individual filaments has specific cleaning properties which may differ from the properties of regular filaments with a circular cross-sectional area. These specific cleaning properties may be enhanced by arranging the filaments in a manner so that they form a cross-sectional shape of the overall tuft which is a scaled up version of the cross-sectional shape of each individual filament. In addition, as the specific geometry of each single filament may be generally not visible to the user, the tuft in accordance with the present disclosure may communicate the respective geometry to the user and, thus, the corresponding cleaning properties of the filaments which make up said tuft.</p>
+      <p id="p-00035-en" num="0035">As the filaments and the tuft, respectively, have each a cross-sectional area with a non-circular shape, the filaments as well as the overall tuft may provide anisotropic bending stiffness properties during a brushing process. In case a given contact pressure is applied to the free end of the filaments/tuft the amount of deflection/displacement of the filaments/tuft depends on the diameter/radius of the filaments/tuft. The smaller the diameter/radius, the higher is the deflection/displacement of the free end of the filaments/tuft, and vice versa, the larger the diameter/radius, the smaller is the deflection/displacement of the free end of the filaments/tuft. The tuft may be arranged on the mounting surface of the head in a manner that higher bending stiffness is provided in a direction where higher cleaning forces may be needed. Lower bending stiffness may be provided in a direction where gentle cleaning forces or a massaging effect may be required.</p>
+      <p id="p-00036-en" num="0036">In some embodiments, the shape of the cross-sectional area of each filament may comprise at least one edge which may be arranged at the outer circumference of the cross-sectional area.</p>
+      <p id="p-00037-en" num="0037">In some embodiments, the shape of the cross-sectional area of each filament may comprise at least one groove which may be arranged at the outer circumference of the cross-sectional area.</p>
+      <p id="p-00038-en" num="0038">In some embodiments, the cross-sectional area of each filament may have the shape substantially of a square, rectangle, triangle, oval, cross, hexagon, rhomboid, clover-leaf, or semi-circle. Alternatively, the shape of the cross-sectional area of each filament may be substantially trilobal. Thus, the cross-sectional area of both, the tuft and its filaments may have such type of non-circular shape.</p>
+      <p id="p-00039-en" num="0039">For example, filaments having a cross-sectional area substantially in the shape of a square, rectangle, triangle, cross, hexagon, rhomboid, clover-leaf or semi-circle, or filaments having a cross-sectional area being substantially trilobal may comprise at least two lateral edges at the outer lateral surface extending along the longitudinal extension of the filament. These lateral edges may be rounded or may be relatively sharp to facilitate removal of plaque and debris on the teeth's surface more efficiently. Further, these lateral edges may sweep plaque and debris away during a brushing process. These improved cleaning properties of such filaments may be further enhanced by a tuft having the respective scaled up shape. The at least two lateral edges extending along the longitudinal extension of the tuft may further facilitate removal of plaque and debris on the teeth's surface and may sweep plaque and debris away.</p>
+      <p id="p-00040-en" num="0040">For example, filaments having a cross-sectional area substantially in the shape of a cross or clover-leaf, or filaments having a cross-sectional area being substantially trilobal may comprise grooves/open areas at their outer lateral surface along the filament extension. These grooves or open areas may facilitate that dentifrice retain at/adhere to the filaments for a longer period of time during a tooth brushing process and may avoid that the dentifrice spread away which may result in an improved overall brushing process. Further, the grooves may provide a capillary action which may enable the dentifrice to flow towards the tip/free end of the filament and, thus, may make the dentifrice available to the teeth and gums during brushing. The tuft having a corresponding cross-sectional shape may further facilitate such effects as the dentifrice may be retained/adhered in the respective grooves/open areas at the tuft's outer lateral surface.</p>
+      <p id="p-00041-en" num="0041">Filaments having a cross-sectional area substantially in the shape of a square, rectangle or rhomboid may allow a relatively high packing factor of the filaments within the tuft as gaps between two adjacent filaments can be minimized In the context of this disclosure the term “packing factor” means the sum of all cross sectional areas of the filaments divided by the cross-sectional area of the overall tuft. Each of the filament types mentioned above comprises four straight sides/edges. Consequently, two adjacent filaments may face each other at their straight sides which may allow that the filaments are arranged in close proximity A high packing factor of filaments may provide improved brushing effectiveness, i.e. better removal of plaque and debris from the teeth's surface and gums. Further, tufts having a corresponding cross-sectional area in a scaled up shape may allow a relatively high packing factor of such tufts within a cluster of tufts. Thus, a relatively dense filament/bristle field pattern may be provided on the mounting surface of the head. The number of filaments and the number of tufts within a given area can be maximized to improve cleaning properties. Further, a relatively dense filament pattern, i.e. filaments being arranged in close proximity may provide a capillary action which may enable the dentifrice to flow towards the tip/free end of the filaments and, thus, may make the dentifrice more available to the teeth and gums during brushing.</p>
+      <p id="p-00042-en" num="0042">Filaments having a cross-sectional area substantially in the shape of a rectangle or oval may provide distinct bending stiffness properties into different directions. A tuft comprising a correspondingly shaped cross-sectional area may further enhance such distinct bending stiffness properties.</p>
+      <p id="p-00043-en" num="0043">In some embodiments, the at least one tuft may be arranged on the mounting surface in a manner, that higher bending stiffness is provided in a direction parallel to the longitudinal extension of the oral care implement and lower bending stiffness orthogonal thereto. This may provide gentle cleaning properties and a massaging effect when the head is moved from the teeth to the gums and vice versa, while the higher bending stiffness may provide higher forces to clean along the occlusal, buccal and lingual surfaces of the teeth.</p>
+      <p id="p-00044-en" num="0044">In some embodiments, the filaments may be made of thermoplastic elastomer material (TPE), with or without an abrasive such as kaolin clay, polyamide, e.g. nylon, with or without an abrasive such as kaolin clay, polybutylene terephtalate (PBT) with or without an abrasive such as kaolin clay and/or of polyamide indicator material, e.g. nylon indicator material, colored at the outer surface. The coloring on the polyamide indicator material may be slowly worn away as the filament is used over time to indicate the extent to which the filament is worn.</p>
+      <p id="p-00045-en" num="0045">In some embodiments, at least some of the filaments may comprise at least two segments of different materials. In some embodiments at least one segment may comprise a thermoplastic elastomer material (TPE) and at least one segment may comprise polyamide, e.g. nylon, with or without an abrasive such as kaolin clay, polybutylene terephtalate (PBT) with or without an abrasive such as kaolin clay or a polyamide indicator material, e.g. a nylon indicator material, colored at the outer surface. These at least two segments may be arranged in a side-by-side structure or in a core-sheath structure which may result in reduced stiffness of the overall filament. A core-sheath structure with an inner/core segment comprising a harder material, e.g. polyamide or PBT, and with an outer/sheath segment surrounding the core segment and comprising a softer material, e.g. TPE, may provide the filament with a relatively soft outer lateral surface which may result in gentle cleaning properties.</p>
+      <p id="p-00046-en" num="0046">In some embodiments, at least some of the filaments may comprise a component selected from fluoride, zinc, strontium salts, flavor, silica, pyrophosphate, hydrogen peroxide, potassium nitrate or combinations thereof. For example, fluoride may provide a mineralization effect and, thus, may prevent tooth decay. Zinc may strengthen the immune system of the user. Hydrogen peroxide may bleach/whiten the teeth. Silica may have an abrasive effect to remove dental plaque and debris more effectively. Pyrophosphate may inhibit the formation of new plaque, tartar and dental calculus along the gum line. Filaments comprising pyrophosphate may offer lasting protection against inflammations of the gums and mucous membrane of the mouth.</p>
+      <p id="p-00047-en" num="0047">In some embodiments, the tuft may comprise filaments arranged at the tuft's outer lateral surface which may comprise pyrophosphate to inhibit the formation of plaque, tartar and dental calculus along the gum line whereas filaments arranged in the center of the tuft may comprise fluoride to mineralize the teeth during a brushing process.</p>
+      <p id="p-00048-en" num="0048">In some embodiments, at least one of the components listed above may be coated onto a core, i.e. onto a inner/core segment of a filament. In other words, at least some of the filaments of the tuft may comprise a core-sheath structure wherein the inner/core segment may comprise TPE, polyamide or PBT and the outer/sheath segment may comprise at least one of the components listed above. Such core-sheath structure may make the component(s) directly available to the teeth in a relatively high concentration, i.e. the component(s) may be in direct contact with the teeth during brushing.</p>
+      <p id="p-00049-en" num="0049">Alternatively, at least one of the components listed above may be co-extruded with TPE, polyamide, e.g. nylon, and/or PBT. Such embodiments may make the component(s) gradually available to the teeth when the filament material is slowly worn away during use.</p>
+      <p id="p-00050-en" num="0050">In some embodiments, the head may comprise a plurality of tufts forming a cluster of tufts. The cluster of tufts has a longitudinal axis and a cross-sectional area extending in a plane that is perpendicular to the longitudinal axis. The plurality of tufts may be arranged in a manner that the cross-sectional area of the cluster of tufts has a scaled up shape with respect to the shape of the cross-sectional area of each tuft. Such cluster of tufts may provide a head for an oral care implement with further enhanced specific cleaning properties of the individual tufts forming said cluster. Further, such cluster of tufts may communicate the respective geometry and, thus, the corresponding cleaning properties of the filaments forming the individual tufts.</p>
+      <p id="p-00051-en" num="0051">In some embodiments, the at least one tuft may be attached/secured to the head by means of a hot tufting process. One method of manufacturing the head of an oral care implement may comprise the following steps: Firstly, the at least one tuft may be formed by providing a desired amount of filaments. Secondly, the tuft may be placed into a mold cavity so that ends of the filaments which are supposed to be attached to the head extend into said cavity. Thirdly, the head or an oral care implement body comprising the head and the handle may be formed around the ends of the filaments extending into the mold cavity by an injection molding process, thereby anchoring the at least one tuft in the head. Alternatively, the tuft may be anchored by forming a first part of the head—a so called “sealplate”—around the ends of the filaments extending into the mold cavity by an injection molding process before the remaining part of the oral care implement may be formed. Before starting the injection molding process, the ends of the at least one tuft extending into the mold cavity may be optionally melted or fusion-bonded to join the filaments together in a fused mass or ball so that the fused masses or balls are located within the cavity. The at least one tuft may be held in the mold cavity by a mold bar having blind holes that correspond to the desired position of the tuft on the finished head of the oral care implement. In other words, the filaments of the at least one tuft attached to the head by means of a hot tufting process may be not doubled over a middle portion along their length and may be not mounted in the head by using an anchor/staple. The at least one tuft may be mounted on the head by means of an anchor-free tufting process.</p>
+      <p id="p-00052-en" num="0052">The oral care implement may be a toothbrush comprising a handle and a head according to any of the embodiments described above. The head extends from the handle and may be either repeatedly attachable to and detachable from the handle or the head may be non-detachably connected to the handle. The toothbrush may be an electrical or a manual toothbrush.</p>
+      <p id="p-00053-en" num="0053">The following is a non-limiting discussion of example embodiments of oral care implements and parts thereof in accordance with the present disclosure, where reference to the Figures is made.</p>
+      <p id="p-00054-en" num="0054">
+        <figref>FIG. 1</figref> shows a perspective top-down view of a first embodiment of an oral care implement <b>10</b> which could be a manual or an electrical toothbrush <b>10</b> comprising a handle <b>12</b> and a head <b>14</b> extending from the handle <b>12</b> in a longitudinal direction. The head <b>14</b> has a proximal end <b>41</b> close to the handle <b>12</b> and a distal end <b>40</b> furthest away from the handle <b>12</b>, i.e. opposite the proximal end <b>41</b>. The head <b>14</b> may have substantially the shape of an oval with a length extension <b>52</b> and a width extension <b>51</b> substantially perpendicular to the length extension <b>52</b>. A plurality of tufts <b>16</b> in accordance with the present disclosure may be secured to the head <b>14</b> by means of a hot tufting process. The tufts <b>16</b> may extend from a mounting surface <b>18</b> of the head <b>14</b> in a substantially orthogonal manner.</p>
+      <p id="p-00055-en" num="0055">The tuft <b>16</b> as illustrated in <figref>FIG. 2</figref> comprises a plurality of end-rounded cylindrical filaments <b>22</b>, one of them being shown in <figref>FIGS. 3 and 4</figref>. Each filament <b>22</b> has a longitudinal axis <b>28</b> and a cross-sectional area <b>30</b> extending in a plane that is perpendicular to the longitudinal axis <b>28</b>. The cross-sectional area <b>30</b> may have a shape <b>32</b> substantially of a cross, i.e. the shape <b>32</b> of said cross-sectional area <b>30</b> is non-circular. The cross-shaped cross-sectional area <b>30</b> of the filament <b>22</b> has an outer circumference <b>19</b> comprising four edges <b>17</b> and four grooves <b>15</b> which are arranged in an alternating manner. In other words, each filament <b>22</b> of the tuft <b>16</b> has an outer lateral surface <b>24</b> with a non-circular cylindrical shape. The plurality of filaments <b>22</b> is arranged in a manner that the tuft <b>16</b> has a cross-sectional area <b>26</b> which extends in a plane perpendicular to the tuft's longitudinal axis <b>20</b> having a scaled up shape of the shape of each individual filament <b>22</b>. The shape of the cross-sectional area <b>26</b> of the tuft <b>16</b> corresponds to the shape of the cross-sectional area <b>30</b> of each individual filament <b>22</b>. In other words, the tuft <b>16</b> has an outer lateral surface <b>34</b> in a shape which is substantially the shape of the outer lateral surface <b>24</b> of each individual filament <b>22</b>. Such tuft <b>16</b> may be hereinafter referred to as “cross-shaped tuft <b>16</b>”.</p>
+      <p id="p-00056-en" num="0056">The oral care implement <b>10</b> shown in <figref>FIG. 1</figref> may comprise one row <b>38</b> of two cross-shaped tufts <b>16</b> being arranged in the central portion of the mounting surface <b>18</b> along the length extension <b>52</b> of the head <b>14</b>. However, the row <b>38</b> may also comprise more than two cross-shaped tufts <b>16</b> or the head <b>14</b> may even be provided with more than one row of cross-shaped tufts <b>16</b>. Further tufts <b>42</b> with a triangle-shaped cross-sectional area may be arranged in the open areas/grooves <b>43</b> of the cross-shaped tufts <b>16</b>. The filaments of tufts <b>42</b> may have a circular-or a triangle-shaped cross-sectional area. In addition, a further tuft <b>44</b> with a rhomboid-shaped cross-sectional area may be arranged in the two opposing open areas/grooves <b>43</b> of the two tufts <b>16</b>. The filaments of tuft <b>44</b> may have a circular-or a rhomboid-shaped cross-sectional area.</p>
+      <p id="p-00057-en" num="0057">
+        <figref>FIG. 5</figref> shows a perspective top-down view of a second embodiment of an oral care implement <b>10</b> which is similar to that shown in <figref>FIG. 1</figref>. However, the head <b>36</b> may comprise a plurality of tufts <b>45</b> wherein each tuft <b>45</b> has a cross-sectional area <b>53</b> in the shape substantially of a rhomboid. Such tuft <b>45</b> may be hereinafter referred to as “rhomboid-shaped tuft <b>45</b>”. The rhomboid-shaped tufts <b>45</b>, one of them being illustrated in <figref>FIG. 6</figref>, may be composed of filaments <b>46</b> each having a scaled down rhomboid-shaped cross-sectional area <b>55</b> (cf. <figref>FIG. 7</figref>). The plurality of rhomboid-shaped tufts <b>45</b> may form a cluster <b>56</b> of tufts <b>45</b>. The cluster <b>56</b> may have a correspondingly-shaped cross-sectional area <b>57</b> extending in a plane that is perpendicular to the longitudinal axis <b>13</b> of the cluster <b>56</b>. In other words, the plurality of rhomboid-shaped tufts <b>45</b> is arranged in a manner that the cross-sectional area <b>57</b> of the cluster <b>56</b> has a scaled up rhomboid shape. In the toe region at the distal end <b>40</b> of the head <b>36</b>, one semi-circle-shaped tuft <b>58</b> may be attached to the head <b>36</b>. At the opposite side, i.e. at the proximal end <b>41</b> of the head <b>36</b> one crescent-shaped tuft <b>59</b> may be attached. Further, on every straight side of the rhomboid-shaped cluster <b>56</b> there may be one substantially circle-shaped tuft <b>60</b> secured to the head <b>36</b>.</p>
+      <p id="p-00058-en" num="0058">
+        <figref>FIGS. 8 to 16</figref> show further tuft embodiments <b>71</b>, <b>72</b>, <b>73</b>, <b>74</b>, <b>75</b>, <b>76</b>, <b>77</b>, <b>78</b>, <b>79</b> having a non-circular cross-sectional area <b>80</b>, <b>82</b>, <b>85</b>, <b>86</b>, <b>88</b>, <b>90</b>, <b>92</b>, <b>94</b>, <b>96</b> which extends in a plane that is perpendicular to the longitudinal axis <b>20</b> of the respective tuft <b>71</b>, <b>72</b>, <b>73</b>, <b>74</b>, <b>75</b>, <b>76</b>, <b>77</b>, <b>78</b>, <b>79</b>.</p>
+      <p id="p-00059-en" num="0059">Tuft <b>71</b> as shown in <figref>FIG. 8</figref> may have a cross-sectional area <b>80</b> in the shape substantially of a square. Such tuft <b>71</b> is composed of filaments <b>81</b> having a corresponding cross-sectional area with a scaled down shape, i.e. the shape of each filament <b>81</b> corresponds to the shape of the tuft <b>71</b>.</p>
+      <p id="p-00060-en" num="0060">Tuft <b>72</b> as shown in <figref>FIG. 9</figref> may have a cross-sectional area <b>82</b> in the shape substantially of a rectangle. Such tuft <b>72</b> is composed of filaments <b>83</b> having a corresponding cross-sectional area with a scaled down shape, i.e. the shape of each filament <b>83</b> corresponds to the shape of the tuft <b>72</b>.</p>
+      <p id="p-00061-en" num="0061">Tuft <b>73</b> as shown in <figref>FIG. 10</figref> may have a cross-sectional area <b>85</b> in the shape substantially of a triangle. Such tuft <b>73</b> is composed of filaments <b>84</b> having a corresponding cross-sectional area with a scaled down shape, i.e. the shape of each filament <b>84</b> corresponds to the shape of the tuft <b>73</b>.</p>
+      <p id="p-00062-en" num="0062">As shown in <figref>FIG. 17</figref>, at least some of the triangle-shaped filament <b>84</b> may comprise at least two segments <b>68</b>, <b>69</b> of different materials, for example a core-sheath structure <b>70</b>. The core-or inner-segment <b>68</b> may comprise polyamide or polybutylene terephtalate whereas the sheath-or outer-segment <b>69</b> may comprise a thermoplastic elastomer which may be co-extruded with a component selected from fluoride, zinc, strontium salts, flavor, silica, pyrophosphate, hydrogen peroxide, potassium nitrate or combinations thereof. Although the core-sheath structure <b>70</b> is illustrated by means of a triangle-shaped tuft, other non-circular shaped filaments in accordance with this disclosure may also comprise at least two segments of different materials as outlined above.</p>
+      <p id="p-00063-en" num="0063">Tuft <b>74</b> as shown in <figref>FIG. 11</figref> may have a cross-sectional area <b>86</b> in the shape substantially of an oval. Such tuft <b>74</b> is composed of filaments <b>87</b> having a corresponding cross-sectional area with a scaled down shape, i.e. the shape of each filament <b>87</b> corresponds to the shape of the tuft <b>74</b>.</p>
+      <p id="p-00064-en" num="0064">Tuft <b>75</b> as shown in <figref>FIG. 12</figref> may have a cross-sectional area <b>88</b> in the shape substantially of a hexagon. Such tuft <b>75</b> is composed of filaments <b>89</b> having a corresponding cross-sectional area with a scaled down shape, i.e. the shape of each filament <b>89</b> corresponds to the shape of the tuft <b>75</b>.</p>
+      <p id="p-00065-en" num="0065">Tuft <b>76</b> as shown in <figref>FIG. 13</figref> may have a cross-sectional area <b>90</b> in the shape substantially of a three-finger clover-leaf. Such tuft <b>76</b> is composed of filaments <b>91</b> having a corresponding cross-sectional area with a scaled down shape, i.e. the shape of each filament <b>91</b> corresponds to the shape of the tuft <b>76</b>.</p>
+      <p id="p-00066-en" num="0066">Tuft <b>77</b> as shown in <figref>FIG. 14</figref> may have a cross-sectional area <b>92</b> in the shape substantially of a four-finger clover-leaf. Such tuft <b>77</b> is composed of filaments <b>93</b> having a corresponding cross-sectional area with a scaled down shape, i.e. the shape of each filament <b>93</b> corresponds to the shape of the tuft <b>77</b>.</p>
+      <p id="p-00067-en" num="0067">Tuft <b>78</b> as shown in <figref>FIG. 15</figref> may have a cross-sectional area <b>94</b> in the shape substantially of a semi-circle. Such tuft <b>78</b> is composed of filaments <b>95</b> having a corresponding cross-sectional area with a scaled down shape, i.e. the shape of each filament <b>95</b> corresponds to the shape of the tuft <b>78</b>.</p>
+      <p id="p-00068-en" num="0068">Tuft <b>79</b> as shown in <figref>FIG. 16</figref> may have a cross-sectional area <b>96</b> which is substantially trilobal. Such tuft <b>79</b> is composed of filaments <b>97</b> having a corresponding cross-sectional area with a scaled down shape, i.e. the shape of each filament <b>97</b> corresponds to the shape of the tuft <b>79</b>.</p>
+      <p id="p-00069-en" num="0069">In the context of this disclosure, the term “substantially” refers to an arrangement of elements or features that, while in theory would be expected to exhibit exact correspondence or behavior, may, in practice embody something slightly less than exact. As such, the term denotes the degree by which a quantitative value, measurement or other related representation may vary from a stated reference without resulting in a change in the basic function of the subject matter at issue.</p>
+      <p id="p-00070-en" num="0070">The dimensions and values disclosed herein are not to be understood as being strictly limited to the exact numerical values recited. Instead, unless otherwise specified, each such dimension is intended to mean both the recited value and a functionally equivalent range surrounding that value. For example, a dimension disclosed as “40 mm” is intended to mean “about 40 mm ”</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A head for an oral care implement comprising:
+<claim-text>a mounting surface, and</claim-text><claim-text>at least one tuft mounted on the mounting surface,</claim-text><claim-text>the tuft having a longitudinal axis and a cross-sectional area extending in a plane that is perpendicular to the longitudinal axis,</claim-text><claim-text>the tuft comprising a plurality of substantially cylindrical filaments,</claim-text><claim-text>each filament having a longitudinal axis and a cross-sectional area extending in a plane that is perpendicular to the longitudinal axis, wherein the cross-sectional area of each filament has a substantially non-circular shape, and</claim-text><claim-text>wherein the plurality of filaments is arranged in a manner that the cross-sectional of the tuft has a scaled-up shape with respect to the shape of the cross-sectional area of each filament.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. A head according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the shape of the cross-sectional area of at least some of the filaments comprises at least one groove.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. A head according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the shape of the cross-sectional area of at least some of the filaments comprises at least one edge.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. A head according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the individual cross-sectional areas of at least some of the filaments have shapes selected from the group consisting of a square, rectangle, triangle, oval, cross, hexagon, rhomboid, clover-leaf, semi-circle, and any combination thereof.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. A head according <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the shape of the cross-sectional area of at least some of the filaments is substantially trilobal.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. A head according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein at least some of the filaments comprise at least two segments of different materials.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. A head according to <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein at least one of the at least two segments comprises a thermoplastic elastomer.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. A head according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein at least some of the filaments have a structure comprising a core and a sheath.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. A head according to <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the sheath comprises a thermoplastic elastomer.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. A head according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein at least some of the filaments comprise a component selected from the group consisting of fluoride, zinc, strontium salts, flavor, silica, pyrophosphate, hydrogen peroxide, potassium nitrate, and any combination thereof.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. A head according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the component is coated onto a core of the filament.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. A head according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the component is co-extruded with a thermoplastic elastomer material, polyamide and/or polybutylene terephthalate.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. A head according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the head comprises a plurality of tufts forming a cluster of tufts, wherein the cluster of tufts has a longitudinal axis and a cross-sectional area extending in a plane that is perpendicular to the longitudinal axis, and the plurality of tufts is arranged in a manner that the cross-sectional area of the cluster of tufts has a scaled-up shape with respect to the shape of the cross-sectional area of each tuft.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. A head according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the at least one tuft is attached to the head by hot tufting.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. An oral-care implement comprising a head according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257520A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257520A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257520A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257520A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257520A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257520A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257520A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257520A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257520A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257520A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257520A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257520A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257520A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257520A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257520A1_00008.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257520A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257520A1.PDF" type="pdf" size="419457" pages="12" />
+</lexisnexis-patent-document>

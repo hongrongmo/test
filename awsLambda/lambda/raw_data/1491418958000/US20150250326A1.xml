@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150250326A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="022143" date-changed="20151204" time-changed="085831">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121232559">
+        <country>US</country>
+        <doc-number>20150250326</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14656674</doc-number>
+        <date>20150312</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151204">
+      <classification-ipcr sequence="1">
+        <text>A47C  20/00        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>47</class>
+        <subclass>C</subclass>
+        <main-group>20</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A47G   9/10        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>47</class>
+        <subclass>G</subclass>
+        <main-group>9</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151204">
+      <classification-cpc sequence="1">
+        <text>A47C  20/021       20130101 FI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>C</subclass>
+        <main-group>20</main-group>
+        <subgroup>021</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A47G   9/1081      20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>G</subclass>
+        <main-group>9</main-group>
+        <subgroup>1081</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61F   5/01        20130101 LI20151126BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>5</main-group>
+        <subgroup>01</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151126</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">17</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">ANATOMICALLY-CORRECT SUPPORT SYSTEMS AND METHODS FOR A RECLINING PERSON</invention-title>
+    <related-documents date-changed="20150910">
+      <continuation-in-part>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13350494</doc-number>
+              <date>20120113</date>
+            </document-id>
+            <parent-status>ABANDONED</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14006566</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation-in-part>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61483182</doc-number>
+          <date>20110506</date>
+        </document-id>
+      </provisional-application>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61432680</doc-number>
+          <date>20110114</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Riccabona</last-name>
+            <first-name>Mark Vincent</first-name>
+            <address>
+              <city>San Francisco</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Riccabona</last-name>
+            <first-name>Mark Vincent</first-name>
+            <address>
+              <city>San Francisco</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150910">
+      <main-family family-id="173569672">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150250326</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150312</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173569671">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150250326</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20150312</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention provides a neutral spine support system that includes a lower body bolster, an upper body supporter and an optional coverall. The lower body bolster includes a raised leg supporter, a leg spacer and a pelvic supporter, while the upper body supporter includes a back support, a neck rest, a head cradle, a right head support and a left head support. The raised leg supporter supports the legs in a raised-knee position, and includes cutouts to reduce direct knee pressure. The pelvic supporter supports the user's pelvic region and rotates the sacrum base upwards while avoiding direct sacrum pressure. The back support keeps the user's upper and middle spine in an open and neutral position.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is a continuation of U.S. application Ser. No. 13/350,494, filed on Jan. 13, 2012, of the same title, which claims priority to U.S. Provisional Application No. 61/483,182, filed on May 6, 2011 and U.S. Provisional Application No. 61/432,680, filed Jan. 14, 2011, which applications are incorporated herein in their entirety by this reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">The present invention relates to systems and methods for appropriately supporting a reclining user in anatomically-correct neutral-spine positions that ensures restful sleep.</p>
+      <p id="p-00003-en" num="0003">Many of us are not getting the proper number of hours of restful sleep needed to stay healthy. Sleep is a vital component of a long, healthy lifestyle. Studies have shown that most of us need a minimum of seven hours of sleep, with eight hours being optimal.</p>
+      <p id="p-00004-en" num="0004">Inferior sleep positions result in back and neck pain and also poor quality of sleep. Our bodies comprise a multitude of complex curves; including our spines. However, despite other advances in sciences including healthcare, our beds and our pillows are generally flat. Lying on a conventional soft flat mattress creates an improper spine angle, causing our muscles to stay tight throughout the night by pulling our spine out of its natural curvatures. Not surprisingly, many of us toss and turn at bedtime trying to find a comfortable restful sleep position.</p>
+      <p id="p-00005-en" num="0005">In addition, most of us have poor postures and slouch during our waking hours. This is compounded by too many hours in a seated position. By the end of each day, most of our spines have been misaligned and the result is strained back muscles and ligaments.</p>
+      <p id="p-00006-en" num="0006">Many attempts at providing a comfortable sleep support system have failed. For example, U.S. Pat. No. 5,878,453 attempts to alleviate lower back pain by placing an under knee pillow 10 to hold an individual's knee in flexion (see Abstract and FIGS. 3, 4). It is undesirable to support the underside of the knees when the individual is in the face-up position without supporting the pelvic region because it puts pressure on the sciatic nerves and surrounding musculature. It also undesirable to support the inside of the knees when the user is lying on the side as shown in <figref>FIG. 5</figref> because pressure on the medial collateral ligament and trigger points to surrounding musculature located on the insides of the knees causes discomfort. In addition, locating the pillow under the inside of the upper knee creates a fulcrum on the upper leg and puts pressure on the upper hip joint.</p>
+      <p id="p-00007-en" num="0007">In U.S. Pat. No. 5,201,761, a pillow for reversing the lordotic curve of a patient by acting on the base of the spine is disclosed having a second wedge 15 that is higher at the foot end and lower at the head end of the patient to place the pelvis into a posterior pelvic tilt by placing pressure in the cavity at the base of the back on the vertebrae of the spine (see Abstract and Col. 3, lines 18-35). However, applying direct pressure on the sacrum (tail bone) of the patient is counterproductive because direct pressure on the sacrum can compress the sacral and/or sciatic nerves, causing discomfort and potential nerve damage over time. Further, wedging the middle of the pelvis causes the pelvis to open outwards, rotates the legs outwards (feet pointing away from each other) and increases the level of user discomfort.</p>
+      <p id="p-00008-en" num="0008">An attempt at relaxing the lumbar area of the spine is disclosed in U.S. Pat. No. 4,796,315. As shown in FIG. 5, a lumbar cushion 10 is placed under the lumbar region of the spine there by rotating the tailbone clockwise, i.e., with the tip of the sacrum and pelvis rotating towards the ground. This undesirable rotation has the effect of straightening the legs which causes discomfort. This rotation can also result in the undesirable shortening of the back muscles.</p>
+      <p id="p-00009-en" num="0009">It is therefore apparent that an urgent need exists for a greatly improved neutral-spine support system. This improved rollable support system enables the user to enjoy restful sleep by providing a continuous range of anatomically-correct comfortable reclining positions that alleviates and corrects the user's poor posture.</p>
+      <heading id="h-00003-en" level="1">SUMMARY</heading>
+      <p id="p-00010-en" num="0010">To achieve the foregoing and in accordance with the present invention, body support systems and methods are provided. In particular, the system and methods for appropriately supporting a reclining user in anatomically-correct neutral spine positions that ensures restful sleep.</p>
+      <p id="p-00011-en" num="0011">In one embodiment, a support system includes a rollable lower body bolster, an upper body supporter, and an optional coverall. The lower body bolster includes a raised leg supporter, a leg spacer and a pelvic supporter, while the upper body supporter includes a back support, a neck rest, a head cradle, a right head support and a left head support.</p>
+      <p id="p-00012-en" num="0012">The raised leg supporter supports the legs of the reclining user in a raised-knee position, and includes cutouts to reduce pressure on undersides of the user's knees. The leg spacer extends upwards from the leg supporter while in a neutral position, and comfortably separates the legs by supporting the user's thighs while avoiding direct pressure on sides of the knees. The pelvic supporter is adjacent to the leg supporter, and supports the user's pelvic region by supporting gluteus maximus muscles and rotating the sacrum base upwards while avoiding direct pressure on the sacrum.</p>
+      <p id="p-00013-en" num="0013">The back support keeps the user's upper and middle spine in an open and neutral position. The head cradle and neck rest supports the user in a face-up position. Conversely, the left and right head supports are used by the user in the respective left side and right side lying positions.</p>
+      <p id="p-00014-en" num="0014">Note that the various features of the present invention described above may be practiced alone or in combination. These and other features of the present invention will be described in more detail below in the detailed description of the invention and in conjunction with the following figures.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00015-en" num="0015">In order that the present invention may be more clearly ascertained, some embodiments will now be described, by way of example, with reference to the accompanying drawings, in which:</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIGS. 1A-1C</figref> illustrate a neutral spine support system in accordance with one embodiment of the present invention;</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIGS. 2A-2D</figref> illustrate a lower body bolster for the support system of <figref>FIG. 1A</figref>;</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIGS. 3A-3B</figref> illustrate an exemplary upper body supporter for the support system of <figref>FIG. 1A</figref>;</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 4</figref> is a side view of the bolster of <figref>FIG. 2A</figref> with optional ballast;</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIGS. 5A-5D</figref> illustrate an alternate lower body bolster for another embodiment of a neutral spine support system in accordance with the present invention; and</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIGS. 6A-6B</figref> illustrate another exemplary upper body supporter with an extended back support.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00022-en" num="0022">The present invention will now be described in detail with reference to several embodiments thereof as illustrated in the accompanying drawings. In the following description, numerous specific details are set forth in order to provide a thorough understanding of embodiments of the present invention. It will be apparent, however, to one skilled in the art, that embodiments may be practiced without some or all of these specific details. In other instances, well known process steps and/or structures have not been described in detail in order to not unnecessarily obscure the present invention. The features and advantages of embodiments may be better understood with reference to the drawings and discussions that follow.</p>
+      <p id="p-00023-en" num="0023">Aspects, features and advantages of exemplary embodiments of the present invention will become better understood with regard to the following description in connection with the accompanying drawing(s). It should be apparent to those skilled in the art that the described embodiments of the present invention provided herein are illustrative only and not limiting, having been presented by way of example only. All features disclosed in this description may be replaced by alternative features serving the same or similar purpose, unless expressly stated otherwise. Therefore, numerous other embodiments of the modifications thereof are contemplated as falling within the scope of the present invention as defined herein and equivalents thereto. Hence, use of absolute and/or sequential terms, such as, for example, “will,” “will not,” “shall,” “shall not,” “must,” “must not,” “first,” “initially,” “next,” “subsequently,” “before,” “after,” “lastly,” and “finally,” are not meant to limit the scope of the present invention as the embodiments disclosed herein are merely exemplary.</p>
+      <p id="p-00024-en" num="0024">The present invention relates to systems and methods for appropriately supporting a reclining user in an anatomically-correct neutral-spine position that ensures restful sleep.</p>
+      <p id="p-00025-en" num="0025">To facilitate discussion, <figref>FIGS. 1A-1C</figref> illustrate an exemplary support system <b>100</b> for a reclining user <b>110</b>, which includes an upper body supporter <b>120</b>, a rollable lower body bolster <b>180</b> with a calf extension <b>160</b>, and a coverall <b>190</b>. Note that while the components of system <b>100</b> complement each other well, they can be used independently of each other depending on user preferences.</p>
+      <p id="p-00026-en" num="0026">Referring first to <figref>FIG. 1A</figref>, user <b>110</b> is reclined in a face-up anatomically-correct position, with the head, neck and the upper and middle back supported by supporter <b>120</b>, while the pelvic area including lower back and the legs are supported by bolster <b>180</b>. <figref>FIG. 1B</figref> illustrates user <b>110</b> lying sideways in an anatomically-correct position while remaining comfortably supported by supporter <b>120</b> and bolster <b>180</b>. <figref>FIG. 1C</figref> shows the reclining support system <b>100</b> with the addition of an optional coverall <b>190</b> covering snugly user <b>110</b>.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIGS. 2A</figref>, <b>2</b>B and <b>2</b>C are perspective, front and side views, respectively, illustrating one embodiment of rollable lower body bolster <b>180</b> in greater detail. Bolster <b>180</b> includes a raised leg supporter <b>220</b> which has two knee cutouts <b>222</b>, <b>224</b> for comfortably supporting the right and left leg of user <b>110</b>, respectively in a raised-knee position, while reducing direct pressure on the undersides of the knees.</p>
+      <p id="p-00028-en" num="0028">A leg spacer <b>240</b> is coupled to and rises upwards from the middle of leg supporter <b>220</b> and is configured to comfortably support and separate the thighs of user <b>110</b>. Spacer <b>240</b> has two cutouts <b>242</b>, <b>244</b> for supporting the left side of user's right thigh and for supporting the right side of user's left thigh, respectively. Hence, spacer <b>240</b> is shaped to secure the user's legs to bolster <b>180</b> so the legs do not fall out during use.</p>
+      <p id="p-00029-en" num="0029">In some embodiments, for ease of manufacturing, supporter <b>220</b> and spacer <b>240</b> are molded together as a single structure from a suitable material such as natural (e.g., latex) foam and synthetic (e.g., polyethylene) foams, including close-cell foams, open-cell foams, memory foams and combinations thereof.</p>
+      <p id="p-00030-en" num="0030">Alternatively, as illustrated by dotted-lines in <figref>FIGS. 2B and 2C</figref>, supporter <b>220</b> and spacer <b>240</b> can be molded separately and coupled to each other using for example a mortise and tenon joint, i.e., knee spacer <b>240</b> has a tenon which fits into a corresponding mortise of knee supporter <b>220</b>. Such a combined structure permits supporter <b>220</b> and spacer <b>240</b> to be easily constructed from materials with differing compositions and/or differing densities. Leg spacer <b>240</b> can also be user detachable to become a part of a compact package so as to facilitate transportation and shipping.</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 2D</figref> is a cross-section view showing the right side view of user <b>110</b> illustrating how neutral-spine support for user <b>110</b> is accomplished by bolster <b>180</b>. Bolster <b>180</b> also includes a curved pelvic supporter <b>260</b> adjacent to raised leg supporter <b>220</b> and configured to properly support the pelvic region of user <b>110</b>. Pelvis supporter <b>260</b> is configured to gently rotate the tip of the sacrum (tail bone) upward thereby stretching and relaxing the lower back muscles, while reducing direct pressure on the sacrum.</p>
+      <p id="p-00032-en" num="0032">With pelvic supporter <b>260</b> providing a proper tailbone angle and leg supporter <b>220</b> providing the proper knee angle to user <b>110</b>, the resulting pelvic rotation elongates the back muscles thereby promoting the relaxation necessary for a restful sleep. Hence, by properly flexing the pelvis and shortening the anterior musculature just enough to align the spine in a stable anatomically-correct position, support system <b>100</b> allows the user <b>110</b> to correct and reshape the spine while sleeping.</p>
+      <p id="p-00033-en" num="0033">Referring again to <figref>FIG. 2B</figref>, in accordance to an important aspect of the present invention, a substantial portion of the base of bolster <b>180</b> includes a hull <b>268</b> shaped to enable the reclining user <b>110</b> to effortlessly roll together with bolster <b>180</b> in either a clockwise direction or in an anti-clockwise direction from the neutral face up position, and ending up in a side body laying position. This rollable feature of hull <b>268</b> advantageously enables user <b>110</b> to maintain proper spine alignment while laying on one side of the body, with the ears remaining substantially in-line with the shoulder, the shoulder substantially in-line with the hip, thereby avoiding the undesirable unhealthy slouching fetal position. As a result, there is no unnecessary strain and tension in the hips and lower back of user <b>110</b>.</p>
+      <p id="p-00034-en" num="0034">In some embodiments, the curvature or contour of the hull <b>268</b> can be conveniently configured in the field (e.g., user adjustable) by for example either adding hull insert(s) or removing hull layer(s) (not shown). Hull inserts can be attached by methods known to one skilled in the arts such as adhesives or Velcro™.</p>
+      <p id="p-00035-en" num="0035">Conversely, to accommodate users who prefer to sleep primarily in a face-up position, the curvature of the hull <b>268</b> can be very gentle to permit very limited rolling. Accordingly, hull <b>268</b> of bolster <b>180</b> can be also substantially flat and stable to discourage rolling.</p>
+      <p id="p-00036-en" num="0036">It is also possible to better secure bolster <b>180</b> to user <b>110</b> by adding one or more optional straps (not shown) configured to wrap bolster <b>180</b> around the pelvic region and/or the legs of user <b>110</b>. Specially configured shorts/pants with Velcro™ can also be worn by user <b>110</b> for coupling with Velcro™ on the corresponding surface(s) of bolster <b>180</b>. In addition, as shown in <figref>FIG. 1C</figref>, a fitted coverall <b>190</b> can also be incorporated into system <b>100</b> to better secure user <b>110</b> and/or to provide heat retention.</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIGS. 3A and 3B</figref> are perspective and top views, respectively, of upper body supporter <b>120</b> which includes a back support <b>322</b>, a right head support <b>323</b>, a left head support <b>324</b>, a neck rest <b>327</b> and a head cradle <b>328</b>. In this embodiment, head supports <b>323</b>, <b>324</b> are topped by optional face rests <b>325</b>, <b>326</b>. Right face rest <b>325</b> and left face rest <b>326</b> can be made from the similar or different material as right head support <b>323</b> and <b>324</b> respectively. For example, head supports <b>323</b>, <b>324</b> can be made from inexpensive firmer foam while face rests <b>325</b>, <b>326</b> can be made from more expensive but more conformable memory foam.</p>
+      <p id="p-00038-en" num="0038">When user <b>110</b> is in a face-up position, the back of the user's head is resting on head cradle <b>328</b> while the user's neck is supported by neck rest <b>327</b>. The user's upper spine is supported by back support <b>322</b>.</p>
+      <p id="p-00039-en" num="0039">In accordance to another aspect of the present invention, back support <b>322</b> is shaped to ensure that the vertebrae in upper and middle spine of user <b>110</b> is supported and aligned in the anatomically-correct arched position by providing the optimal support into the apex of the kyphotic curve to guide the user's upper and middle back, and neck back into a neutral spinal position. In other words, back support <b>322</b> puts pressure on middle back to gently allows the shoulder to relax in an open position, thereby facilitating breathing and also promotes muscle relaxation in the upper chest and upper back. As a result, the user's back is opened and the head is tilted slightly upwards into the head cradle <b>328</b>, in a manner similar to opening of the airway in first responder CPR training. Opening the airway advantageously improves breathing and reduces snoring and alleviates some of the symptoms associated with sleep apnea.</p>
+      <p id="p-00040-en" num="0040">Referring again to <figref>FIGS. 3A and 3B</figref>, when user <b>110</b> is laying on the right side of the body, the user's right face is resting comfortably on right face rest <b>325</b>, with the head, neck and upper spine substantially parallel to each other. Conversely, when user <b>110</b> is lying on the left side of the body, the user's left face is resting comfortable on left face rest <b>326</b>. This anatomically-correct rollability feature of upper body supporter <b>120</b> ensures the proper spinal alignment as defined by the relative positioning of the head, neck, shoulder and hip of user <b>110</b> described above.</p>
+      <p id="p-00041-en" num="0041">Many modifications and additions to the support system <b>100</b> are possible. As shown in <figref>FIGS. 1A-1C</figref> and <b>2</b>D, in some embodiments, bolster <b>180</b> also includes an optional calf extension (ottoman) <b>160</b> to provide addition lower leg support thereby increasing user comfort and also stability of bolster <b>180</b> during use. In addition, the sides of leg supporter <b>220</b> and/or pelvis supporter <b>260</b> can be further extended to better secure and support the outside of the thighs and/or hips of user <b>110</b>, thereby ensuring that support system <b>100</b> and user <b>110</b> remain coupled together.</p>
+      <p id="p-00042-en" num="0042">Depending on the rigidity of the materials for constructing bolster <b>180</b>, structural reinforcement for bolster <b>180</b> is also possible. For example, a substantially vertical rigid or semi-rigid insert (not shown) can be incorporated inside spacer <b>240</b>, extending from the top of spacer <b>240</b> to the bottom of booster hull <b>168</b>.</p>
+      <p id="p-00043-en" num="0043">Other modifications to support <b>100</b> are also possible. For example, in some embodiments, the ease of rollability can be made adjustable by incorporating optional ballast <b>488</b>, which enable the center of gravity of the bolster <b>180</b> to be adjusted as shown in <figref>FIG. 4</figref>.</p>
+      <p id="p-00044-en" num="0044">Ballast <b>488</b> enables the center of gravity of bolster <b>180</b> to be adjusted higher or lower relative to the rolling axis of bolster <b>180</b>. For example the center of gravity of bolster <b>180</b> can be adjusted lower than the rolling axis for users who prefer to sleep predominantly on the user's back. Conversely, the center of gravity of bolster <b>180</b> can be adjusted higher than the rolling axis for users who prefer to sleep predominantly on the sides of user's body. Examples of ballast <b>488</b> include a fluid stored in a pouch, and one or more solid weights in a hollow tube, and combinations thereof.</p>
+      <p id="p-00045-en" num="0045">Advantages of ballast <b>488</b> includes the ability to adjust compensate for the user's own center of gravity with respect to rollability. For example, it is possible to adjust ballast <b>488</b> so that the combined center of gravity of the user <b>110</b> and bolster <b>180</b> is substantially close to the axis of rotation, i.e., neutral, so that rolling to and fro between face-up side-body positions becomes effortless.</p>
+      <p id="p-00046-en" num="0046">Modifications to support system <b>100</b> can also include incorporating passive ventilation channels to promote ventilation, cooling and/or heating. It is also possible to include active heating or cooling capabilities such as heat pads or tubing for circulating a warming/cooling fluid. Massage options such as vibrators can also be incorporated into system <b>100</b>.</p>
+      <p id="p-00047-en" num="0047">
+        <figref>FIGS. 5A-5C</figref> are perspective, front and side views. <figref>FIGS. 5A</figref>, <b>5</b>B and <b>5</b>C are perspective, front and side views, respectively, illustrating an exemplary alternate embodiment of a lower body bolster <b>580</b> in greater detail. Bolster <b>580</b> includes a raised leg supporter <b>520</b> which has two knee cutouts <b>522</b>, <b>524</b> for comfortably supporting the right and left leg of user <b>110</b>, respectively in a raised-knee position, while reducing direct pressure on the undersides of the user's knees. In this embodiment, bolster <b>580</b> has a substantially flat bottom <b>550</b> to enhance stability during use.</p>
+      <p id="p-00048-en" num="0048">
+        <figref>FIG. 5D</figref> is a cross-section view showing the right side view of user <b>110</b> illustrating how neutral-spine support for user <b>110</b> is accomplished by bolster <b>580</b>. Bolster <b>580</b> includes a curved pelvic supporter <b>560</b> adjacent to raised leg supporter <b>220</b> and configured to properly support the pelvic region of user <b>110</b>. Pelvis supporter <b>560</b> is configured to gently rotate the tip of the sacrum (tail bone) upward thereby stretching and relaxing the lower back muscles, while reducing direct pressure on the sacrum.</p>
+      <p id="p-00049-en" num="0049">Booster <b>580</b> further includes a lower back supporter <b>590</b> which firmly supports the user's lower back and reinforces the anatomically-correct posture for restful sleep.</p>
+      <p id="p-00050-en" num="0050">Pelvic supporter <b>560</b> and lower back supporter <b>590</b> in combination provide a proper tailbone angle, while leg supporter <b>520</b> providing the proper knee angle to user <b>110</b>. The resulting pelvic rotation elongates the back muscles thereby promoting the relaxation necessary for a restful sleep. Hence, by properly flexing the pelvis and shortening the anterior musculature just enough to align the spine in a stable anatomically-correct position, the user <b>110</b> is able to correct and reshape her/his spine while sleeping.</p>
+      <p id="p-00051-en" num="0051">To accommodate side laying positions, in this embodiment, when user <b>110</b> is laying on her/his side, bolster <b>580</b> includes substantially flat tops <b>582</b>, <b>584</b> and <b>586</b> configured to firmly and gently support an inner thigh of the upper leg of the user <b>110</b>.</p>
+      <p id="p-00052-en" num="0052">Modifications to booster <b>580</b> are possible. For example, the edges of tops <b>582</b>, <b>584</b>, <b>586</b> may be radiused to enhance comfort while supporting the legs of user <b>110</b>. In addition, the leg supporter <b>520</b> may be made from layers of form with different firmness, e.g., a firmer stiffer lower layer towards bottom <b>550</b>, combined with a softer more pliable upper layer toward tops <b>582</b>, <b>584</b>, <b>586</b>.</p>
+      <p id="p-00053-en" num="0053">Referring now to the top view of <figref>FIG. 6A</figref>, and also to <figref>FIG. 6B</figref> which is the corresponding cross-sectional view <b>6</b>B-<b>6</b>B, an alternate embodiment of upper body supporter <b>620</b> suitable for use with either bolster <b>180</b> or bolster <b>580</b> is shown. Upper body supporter <b>620</b> includes an extended back support <b>622</b> that can be extended all the way to lower back supporter <b>590</b>. As shown in the cross-sectional view of <figref>FIG. 6B</figref>, back support <b>622</b> can include a convex profile configured to provide superior back support for user <b>110</b> in the raised-knee position.</p>
+      <p id="p-00054-en" num="0054">Modifications to upper body supporter <b>620</b> are also possible. For example, a coupler such as a Velcro strap (not shown) may be used to secure end <b>629</b> of extended back support <b>622</b> to the lower back supporter <b>590</b> of bolster <b>580</b>.</p>
+      <p id="p-00055-en" num="0055">In sum, the present invention provides novel systems and methods for maintaining anatomically-correct neutral-spine postures while users are comfortably resting in a range of reclined positions, thereby ensuring restful sleep necessary for good health.</p>
+      <p id="p-00056-en" num="0056">While this invention has been described in terms of several embodiments, there are alterations, modifications, permutations, and substitute equivalents, which fall within the scope of this invention. Although sub-section titles have been provided to aid in the description of the invention, these titles are merely illustrative and are not intended to limit the scope of the present invention.</p>
+      <p id="p-00057-en" num="0057">It should also be noted that there are many alternative ways of implementing the methods and apparatuses of the present invention. It is therefore intended that the following appended claims be interpreted as including all such alterations, modifications, permutations, and substitute equivalents as fall within the true spirit and scope of the present invention.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A lower body bolster useful in association with an upper body supporter and a reclining user, the bolster comprising:
+<claim-text>a raised leg supporter configured to support a pair of legs of the reclining user in a substantially raised-knee position, and wherein the leg supporter includes cutouts configured to reduce pressure on undersides of knees of the user;</claim-text><claim-text>a detachable leg spacer rising substantially upwards from the raised leg supporter while in a neutral position, and wherein the leg spacer is configured to comfortably separate the legs by supporting thighs of the user while reducing pressure on sides of the knees; and</claim-text><claim-text>a pelvic supporter adjacent to the raised leg supporter, and wherein the pelvic supporter is configured to support a pelvic region of the reclining user by substantially supporting gluteus maximus muscles of the user and rotating a sacrum base of the user upwards while reducing pressure on the sacrum.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The bolster of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the bolster includes a hull shaped to enable the reclining user to roll together with the bolster in both a clockwise direction and in an anti-clockwise direction from the neutral position.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The bolster of <claim-ref idref="clm-00002-en">claim 2</claim-ref> wherein contour of the hull is configurable.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The bolster of <claim-ref idref="clm-00002-en">claim 2</claim-ref> wherein the clockwise and anti-clockwise directions range from approximately 90 clockwise and 90 anti-clockwise, respectively, from the neutral direction.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The bolster of <claim-ref idref="clm-00001-en">claim 1</claim-ref> further comprising a calf extension adjacent to the raised leg supporter, and wherein the calf extension is configured to support a pair of calves of the reclining user.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The bolster of <claim-ref idref="clm-00002-en">claim 2</claim-ref> further comprising ballast configured to change a center of gravity of the rollable bolster relative to an axis of rotation of the bolster.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The bolster of <claim-ref idref="clm-00006-en">claim 6</claim-ref> wherein the center of gravity of the bolster is adjustable.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The bolster of <claim-ref idref="clm-00001-en">claim 1</claim-ref> further comprising a structural reinforcement configured to stiffen the leg spacer.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The bolster of <claim-ref idref="clm-00001-en">claim 1</claim-ref> further comprising at least one ventilating channel.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The bolster of <claim-ref idref="clm-00001-en">claim 1</claim-ref> further comprising at least one of a cooling channel and a heating channel.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en" independent="true">
+      <claim-text>
+        <b>11</b>. A method for providing a neutral-spine position for a reclining user, the method comprising:
+<claim-text>supporting a pair of legs of the reclining user in a substantially raised-knee position while reducing pressure on undersides of knees of the user;</claim-text><claim-text>optionally separating the legs by supporting a pair of thighs of the user while reducing pressure on sides of the knees;</claim-text><claim-text>supporting a pelvic region of the reclining user by substantially supporting gluteus maximus muscles of the user and rotating a sacrum base of the user upwards while reducing pressure on the sacrum; and</claim-text><claim-text>wherein the reclining user is able to roll in both a clockwise direction and in an anti-clockwise direction from a neutral position while remaining supported.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en" independent="true">
+      <claim-text>
+        <b>12</b>. A neutral-spine support system useful in association with a reclining user, the support system comprising:
+<claim-text>a lower body bolster which includes:
+<claim-text>a raised leg supporter configured to support a pair of legs of the reclining user in a substantially raised-knee position while reducing pressure on undersides of knees of the user;</claim-text><claim-text>a detachable leg spacer rising substantially upwards from the raised leg supporter while in a neutral position, and wherein the leg spacer is configured to comfortably separate the pair of legs by supporting thighs of the user while reducing pressure on sides of the knees; and</claim-text><claim-text>a pelvic supporter adjacent to the raised leg supporter, and wherein the pelvic supporter is configured to support a pelvic region of the reclining user by substantially supporting gluteus maximus muscles of the user and rotating a sacrum base of the user upwards while reducing pressure on the sacrum; and</claim-text></claim-text><claim-text>an upper body supporter which includes:
+<claim-text>a back support configured to support an upper and middle back of the user in the neutral position;</claim-text><claim-text>a neck rest configured to support a neck of the user in a face-up position;</claim-text><claim-text>a head cradle configured to support a head of the user when in the face-up position;</claim-text><claim-text>a right head support configured to support a right face of the head when the user is lying on a right side; and</claim-text><claim-text>a left head support configured to support a left face of the head when the user is lying on a left side.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The support system of <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein the bolster includes a hull shaped to enable the reclining user to roll together with the support system in both a clockwise direction and in an anti-clockwise direction from the neutral position.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The support system of <claim-ref idref="clm-00012-en">claim 12</claim-ref> further comprising a calf extension adjacent to the raised leg supporter, and wherein the calf extension is configured to support a pair of calves of the user.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The support system of <claim-ref idref="clm-00012-en">claim 12</claim-ref> further comprising a coverall configured to secure the user to the support system.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The support system of <claim-ref idref="clm-00013-en">claim 13</claim-ref> wherein contour of the hull is configurable.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en" independent="true">
+      <claim-text>
+        <b>17</b>. (canceled) </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150250326A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150250326A1-20150910-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150250326A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250326A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150250326A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250326A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150250326A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250326A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150250326A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250326A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150250326A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250326A1-20150910-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150250326A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250326A1-20150910-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150250326A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250326A1-20150910-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150250326A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250326A1-20150910-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150250326A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250326A1-20150910-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150250326A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250326A1-20150910-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150250326A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250326A1-20150910-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150250326A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150250326A1-20150910-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150250326A1_00014.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150250326A1-20150910-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150250326A1.PDF" type="pdf" size="536411" pages="18" />
+</lexisnexis-patent-document>

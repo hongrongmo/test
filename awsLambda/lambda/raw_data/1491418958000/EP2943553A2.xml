@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2943553A2.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151118" time-inserted="102909" date-changed="20160112" time-changed="114828">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published without search report">
+      <document-id id="122137050">
+        <country>EP</country>
+        <doc-number>2943553</doc-number>
+        <kind>A2</kind>
+        <date>20151118</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>14711876</doc-number>
+        <date>20140228</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151118">
+      <priority-claim sequence="1" kind="national">
+        <country>US</country>
+        <doc-number>61802831</doc-number>
+        <date>20130318</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>US</country>
+        <doc-number>201361802831</doc-number>
+        <kind>P</kind>
+        <date>20130318</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>US</country>
+        <doc-number>2014019185</doc-number>
+        <kind>W</kind>
+        <date>20140228</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>201361802831 P</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>2014019185</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>US201361802831P</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>WO2014US19185</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151119">
+      <gazette-reference>
+        <date>20151118</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151118</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151119">
+      <request-for-examination>
+        <date>20150811</date>
+      </request-for-examination>
+      <first-examination-report-despatched>
+        <date>20150305</date>
+      </first-examination-report-despatched>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20160112">
+      <classification-ipcr sequence="1">
+        <text>C10G   1/04        20060101AFI20150812BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>10</class>
+        <subclass>G</subclass>
+        <main-group>1</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150812</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C10G   1/08        20060101ALI20150812BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>10</class>
+        <subclass>G</subclass>
+        <main-group>1</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150812</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160112">
+      <classification-cpc sequence="1">
+        <text>C08G  65/30        20130101 FI20151231BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>65</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151231</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B01D  15/08        20130101 LI20151231BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>01</class>
+        <subclass>D</subclass>
+        <main-group>15</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151231</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C10G   1/04        20130101 LI20150106BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>G</subclass>
+        <main-group>1</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150106</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C10G   1/086       20130101 LI20160106BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>G</subclass>
+        <main-group>1</main-group>
+        <subgroup>086</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160106</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <invention-title id="title_ger" date-changed="20151118" lang="ger" format="original">VERFAHREN ZUR EXTRAKTION VON ÖL AUS EINEM PULVER</invention-title>
+    <invention-title id="title_eng" date-changed="20151118" lang="eng" format="original">METHOD FOR EXTRACTING OIL FROM A POWDER</invention-title>
+    <invention-title id="title_fre" date-changed="20151118" lang="fre" format="original">PROCÉDÉ D'EXTRACTION D'HUILE À PARTIR D'UNE POUDRE</invention-title>
+    <parties date-changed="20151118">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Dow Global Technologies LLC</orgname>
+            <registered-number>101225780</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>2040 Dow Center</address-1>
+              <city>Midland, MI 48674</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>LANDON, Robert S.</name>
+            <address>
+              <address-1>Apt 1452 114 Rainbow Drive</address-1>
+              <city>Livingston, TX 77399</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>VANEK, Charles M.</name>
+            <address>
+              <address-1>345 David Lane</address-1>
+              <city>Oxford, PA 19363</city>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Houghton, Mark Phillip</name>
+            <registered-number>101073677</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Patent Outsourcing Limited 1 King Street</address-1>
+              <city>Bakewell, Derbyshire DE45 1DZ</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151118">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>US14019185</doc-number>
+        <date>20140228</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014149515</doc-number>
+        <date>20140925</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20160104">
+      <main-family family-id="168439023">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014149515</doc-number>
+            <kind>A2</kind>
+            <date>20140925</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2943553</doc-number>
+            <kind>A2</kind>
+            <date>20151118</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2904839</doc-number>
+            <kind>A1</kind>
+            <date>20140925</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>105209578</doc-number>
+            <kind>A</kind>
+            <date>20151230</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150132179</doc-number>
+            <kind>A</kind>
+            <date>20151125</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014149515</doc-number>
+            <kind>A3</kind>
+            <date>20150305</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="168439022">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014149515</doc-number>
+            <kind>A2</kind>
+            <date>20140925</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2943553</doc-number>
+            <kind>A2</kind>
+            <date>20151118</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2904839</doc-number>
+            <kind>A1</kind>
+            <date>20140925</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>105209578</doc-number>
+            <kind>A</kind>
+            <date>20151230</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150132179</doc-number>
+            <kind>A</kind>
+            <date>20151125</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014149515</doc-number>
+            <kind>A3</kind>
+            <date>20150305</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151119" lang="eng" format="equivalent" country="WO" doc-number="2014149515" kind="A2">
+    <p>A process includes: (a) providing a powder containing hydrophilic particulates and hydrocarbon liquid; (b) providing polyolefin beads; and (c) forming a combination by combining the polyolefin beads with the powder.</p>
+  </abstract>
+  <legal-data date-changed="20151225">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20151118</date>
+      </publication-date>
+      <event-code-1>17P</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXAMINATION FILED</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2943553A2</docdb-publication-number>
+      <docdb-application-id>416522456</docdb-application-id>
+      <effective-date>
+        <date>20150811</date>
+      </effective-date>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20151118</date>
+      </publication-date>
+      <event-code-1>AK</event-code-1>
+      <effect>+</effect>
+      <legal-description>DESIGNATED CONTRACTING STATES:</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2943553A2</docdb-publication-number>
+      <docdb-application-id>416522456</docdb-application-id>
+      <corresponding-kind>A2</corresponding-kind>
+      <legal-designated-states>
+        <country>AL</country>
+        <country>AT</country>
+        <country>BE</country>
+        <country>BG</country>
+        <country>CH</country>
+        <country>CY</country>
+        <country>CZ</country>
+        <country>DE</country>
+        <country>DK</country>
+        <country>EE</country>
+        <country>ES</country>
+        <country>FI</country>
+        <country>FR</country>
+        <country>GB</country>
+        <country>GR</country>
+        <country>HR</country>
+        <country>HU</country>
+        <country>IE</country>
+        <country>IS</country>
+        <country>IT</country>
+        <country>LI</country>
+        <country>LT</country>
+        <country>LU</country>
+        <country>LV</country>
+        <country>MC</country>
+        <country>MK</country>
+        <country>MT</country>
+        <country>NL</country>
+        <country>NO</country>
+        <country>PL</country>
+        <country>PT</country>
+        <country>RO</country>
+        <country>RS</country>
+        <country>SE</country>
+        <country>SI</country>
+        <country>SK</country>
+        <country>SM</country>
+        <country>TR</country>
+      </legal-designated-states>
+    </legal-event>
+    <legal-event sequence="3">
+      <publication-date>
+        <date>20151118</date>
+      </publication-date>
+      <event-code-1>AX</event-code-1>
+      <effect>+</effect>
+      <legal-description>REQUEST FOR EXTENSION OF THE EUROPEAN PATENT TO</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> EP     2943553A2</docdb-publication-number>
+      <docdb-application-id>416522456</docdb-application-id>
+      <countries-concerned>
+        <country>BA</country>
+        <country>ME</country>
+      </countries-concerned>
+    </legal-event>
+  </legal-data>
+</lexisnexis-patent-document>

@@ -1,0 +1,1590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247045A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021448" date-changed="20151027" time-changed="110528">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140122">
+        <country>US</country>
+        <doc-number>20150247045</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14632202</doc-number>
+        <date>20150226</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2014038426</doc-number>
+        <date>20140228</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C09D  11/322       20140101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20140101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>11</main-group>
+        <subgroup>322</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>B41J   2/01        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>B</section>
+        <class>41</class>
+        <subclass>J</subclass>
+        <main-group>2</main-group>
+        <subgroup>01</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C09D  11/106       20140101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20140101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>11</main-group>
+        <subgroup>106</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C09D  11/107       20140101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20140101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>11</main-group>
+        <subgroup>107</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C09D  11/322       20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>11</main-group>
+        <subgroup>322</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B41J   2/01        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>41</class>
+        <subclass>J</subclass>
+        <main-group>2</main-group>
+        <subgroup>01</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C09D  11/106       20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>11</main-group>
+        <subgroup>106</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C09D  11/107       20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>11</main-group>
+        <subgroup>107</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C09D  11/30        20130101 LI20150507BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>11</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150507</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">INK COMPOSITION AND RECORDING APPARATUS</invention-title>
+    <references-cited date-changed="20151027">
+      <patent-citations name="patcit" date-changed="20151027" />
+      <citation>
+        <patcit num="1" dnum="US2011318551A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110318551</doc-number>
+            <kind>A1</kind>
+            <name>NAKAGAWA TOMOHIRO [JP]</name>
+            <date>20111229</date>
+          </document-id>
+          <application-date>
+            <date>20110520</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US6737449B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6737449</doc-number>
+            <kind>B1</kind>
+            <name>YATAKE MASAHIRO [JP]</name>
+            <date>20040518</date>
+          </document-id>
+          <application-date>
+            <date>19980217</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US2011001775A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110001775</doc-number>
+            <kind>A1</kind>
+            <name>NISHIWAKI YUKO [JP], et al</name>
+            <date>20110106</date>
+          </document-id>
+          <application-date>
+            <date>20100615</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US2013072614A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20130072614</doc-number>
+            <kind>A1</kind>
+            <name>LINDSTROM BRIAN L [US], et al</name>
+            <date>20130321</date>
+          </document-id>
+          <application-date>
+            <date>20110916</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Seiko Epson Corporation</orgname>
+            <address>
+              <city>Tokyo</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>JP</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>YATAKE</last-name>
+            <first-name>Masahiro</first-name>
+            <address>
+              <city>Shiojiri</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>KAGATA</last-name>
+            <first-name>Takayoshi</first-name>
+            <address>
+              <city>Shiojiri</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>MUKAI</last-name>
+            <first-name>Hiroshi</first-name>
+            <address>
+              <city>Shiojiri</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>MIZUTANI</last-name>
+            <first-name>Akira</first-name>
+            <address>
+              <city>Shiojiri</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150907">
+      <main-family family-id="173457657">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015160931</doc-number>
+            <kind>A</kind>
+            <date>20150907</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2913371</doc-number>
+            <kind>A1</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20150227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104877462</doc-number>
+            <kind>A</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20150226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247045</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150226</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173457656">
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015160931</doc-number>
+            <kind>A</kind>
+            <date>20150907</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2913371</doc-number>
+            <kind>A1</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20150227</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104877462</doc-number>
+            <kind>A</kind>
+            <date>20150902</date>
+          </document-id>
+          <application-date>
+            <date>20150226</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247045</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150226</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Disclosed herein is an ink composition, including: a color material; water; and a polymer particle, in which the polymer particle has a core-shell structure including a core polymer and a shell polymer, in which the polymer particle has an average particle diameter of 10 nm to 80 nm, in which the core polymer has a glass transition temperature of lower than 60° C. and the shell polymer has a glass transition temperature of higher than or equal to 60° C., and in which the core polymer includes an aromatic monomer having at least a vinyl group as a constitutional unit.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150226</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247045A1</docdb-publication-number>
+      <docdb-application-id>444209991</docdb-application-id>
+      <new-owner>SEIKO EPSON CORPORATION, JAPAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:YATAKE, MASAHIRO;KAGATA, TAKAYOSHI;MUKAI, HIROSHI;AND OTHERS;SIGNING DATES FROM 20141219 TO 20141222;REEL/FRAME:035039/0664</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">BACKGROUND</heading>
+      <p id="p-00001-en" num="0001">1. Technical Field</p>
+      <p id="p-00002-en" num="0002">The present invention relates to an ink composition and a recording apparatus.</p>
+      <p id="p-00003-en" num="0003">2. Related Art</p>
+      <p id="p-00004-en" num="0004">A resin emulsion in the related art is a core-shell type resin emulsion. A study on a core-shell type resin emulsion having a structure in which core part is made of a thermoplastic resin and shell part is made of a resin having a three-dimensional crosslinked structure has been conducted in order that the storage stability of a recorded image is excellent, if necessary, the recorded image can be easily erased from a recording medium, and the recording medium can be suitably repeatedly used (JP-A-2002-12802). In addition, a study on a core-shell type resin emulsion having a structure in which a core made of an acryl-based resin is covered with a polycarbonate-based urethane resin shell has been conducted in order to obtain an ink having excellent ejection stability and storage stability and excellent image toughness such as marker resistance, abrasion resistance, or the like (JP-A-2012-25947). Further, a study on a resin emulsion having a core-shell structure in which an outer layer is made of a urethane resin and an inner layer is made of an acrylic resin has been conducted in order to obtain an ink capable of being printed even on an ink non-absorptive material such as plastic, metal, or the like and having excellent adhesivity, film forming properties, and chemical resistance (JP-A-2012-92224). Furthermore, a study on a tri-block polymer, although different from a core-shell type resin emulsion, has been conducted in order to provide an aqueous ink for an ink jet having excellent storage stability and ejection stability and high abrasion resistance of an image (JP-A-2012-72354).</p>
+      <p id="p-00005-en" num="0005">However, in the ink disclosed in JP-A-2002-12802, fixability cannot be obtained because the shell part has a crosslinked structure, and in the ink disclosed in JP-A-2012-25947, it is difficult to improve fixability and obtain clogging recovery properties because the shell part is made of a polycarbonate-based urethane resin. Even in the ink disclosed in JP-A-2012-92224, it is difficult to improve fixability and obtain clogging recovery properties because the shell part is made of urethane. Moreover, since the ink disclosed in JP-A-2012-72354 has a tri-block structure, ejection stability is obtained selectively, but it is difficult to obtain clogging recovery properties.</p>
+      <heading id="h-00002-en" level="1">SUMMARY</heading>
+      <p id="p-00006-en" num="0006">An advantageous of some aspects of the invention is to provide an ink composition having excellent fixability and frictional resistance and having excellent clogging recovery properties to improve ejection stability, and a recording apparatus.</p>
+      <p id="p-00007-en" num="0007">The present inventors have conducted intensive studies. As a result, the invention has been completed by defining the particle diameter of a monomer or core-shell.</p>
+      <p id="p-00008-en" num="0008">According to an aspect of the invention, there is provided an ink composition, including: a color material; water; and a polymer particle, in which the polymer particle has a core-shell structure including a core polymer and a shell polymer, the polymer particle has an average particle diameter of 10 nm to 80 nm, the core polymer has a glass transition temperature of lower than 60° C., the shell polymer has a glass transition temperature of higher than or equal to 60° C., and the core polymer includes an aromatic monomer having at least a vinyl group as a constitutional unit.</p>
+      <p id="p-00009-en" num="0009">According to the ink composition of the aspect of the invention, it is difficult to form a large lump even when this ink composition is aggregated, and thus it is possible to suppress the clogging of nozzles.</p>
+      <p id="p-00010-en" num="0010">In addition, by setting the glass transition temperature of the core polymer to be lower than 60° C., the core polymer can be easily discharged after the shell polymer is softened, and thus there is a tendency of the ink composition to have more excellent adhesivity.</p>
+      <p id="p-00011-en" num="0011">Further, by setting the glass transition temperature of the shell polymer to be higher than or equal to 60° C., when the ink composition is ejected under a high-temperature environment, it is possible to eject the polymer particles from a recording head without disrupting a core-shell type structure, and it is possible to further suppress the deposition of the polymer particles in nozzles, so that the clogging of nozzles can be prevented, and the stability of the ink composition in intermittent printing tends to become more excellent. When a film is formed on the recording medium, the ink composition on the recording medium is heated to a temperature higher than the glass transition temperature of the shell polymer, and thus the core polymer is discharged from the softened shell polymer, thereby forming a film on the recording medium by the core polymer and the shell polymer. At this time, the softened core polymer spreads and adheres onto the recording medium, thereby forming a film having excellent fixability.</p>
+      <p id="p-00012-en" num="0012">Moreover, since the core polymer includes an aromatic monomer having at least a vinyl group as a constitutional unit, the core polymer can form a hydrophobic film, thereby improving the frictional resistance, more specifically, water friction resistance of the recorded image.</p>
+      <p id="p-00013-en" num="0013">Preferably, the ink composition of the aspect of the invention is recorded on the heated recording medium. Particularly, even when recording is performed in a heated state, ejection stability can be improved, and simultaneously the fixability and printing durability of the recorded image can be improved.</p>
+      <p id="p-00014-en" num="0014">Preferably, the shell polymer includes an aromatic monomer as a constitutional unit. The shell polymer has an acid value, and the core polymer does not have an acid value. When the shell polymer includes an aromatic monomer as a constitutional unit, a detailed action mechanism is unknown, but ejection bending is prevented. In particular, in the case of small dots, ink droplets easily bend. Therefore, according to the aspect of the invention, ejection bending is suppressed.</p>
+      <p id="p-00015-en" num="0015">Preferably, the polymer particle is synthesized without substantially using an emulsifier. Here, the “emulsifier” means a surfactant used in synthesis. The ink composition containing the polymer particles synthesized using such an emulsifier is problematic in that foaming easily occurs, the gloss of an image hardly appears, and foreign matter is easily generated. According to the aspect of the invention, the ink composition for overcoming the above problem is obtained.</p>
+      <p id="p-00016-en" num="0016">Preferably, the ink composition includes a cyclic nitrogen compound or an aprotic polar solvent, and the recording medium is made of polyvinyl chloride. When the ink composition includes a cyclic nitrogen compound or an aprotic polar solvent, it is possible to shift the glass transition temperature of the apparent polymer particles to a low-temperature region, and it is possible to soften the core polymer and the shell polymer at a temperature lower than the original temperature, thereby improving the fixability of the ink composition onto the recording medium. Thus, in particular, when the recording medium is made of polyvinyl chloride, it is possible to improve the fixability of the ink composition onto the recording medium.</p>
+      <p id="p-00017-en" num="0017">For example, the core polymer includes a nitrogen-containing monomer, and the recording medium is made of polypropylene, polyethylene terephthalate, nylon, or polyethylene. When the core polymer includes a nitrogen-containing monomer, it is possible to increase the polarity of the core polymer. In particular, when the recording medium is made of polypropylene, polyethylene terephthalate, nylon, or polyethylene, it is possible to improve the fixability of the film of the core polymer.</p>
+      <p id="p-00018-en" num="0018">For example, the shell polymer includes (meth)acrylic acid as a constitutional unit. Therefore, a hydrophilic shell polymer can be formed by polymerization.</p>
+      <p id="p-00019-en" num="0019">Preferably, the shell polymer has an acid value of 20 mgKOH/g to 120 mgKOH/g. When the acid value of the shell polymer is within the above range, sufficient hydrophilicity necessary for the shell polymer can be secured.</p>
+      <p id="p-00020-en" num="0020">According to another aspect of the invention, there is provided a recording apparatus, including: the above-described ink composition; and an ejection head for ejecting this ink composition.</p>
+      <p id="p-00021-en" num="0021">For example, the ejection head includes nozzles for ejecting the ink composition, and dots of the ink composition can be ejected in a multi-size from one of the nozzles.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00003-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00022-en" num="0022">The invention will be described with reference to the accompanying drawing, wherein like numbers reference like elements.</p>
+      <p id="p-00023-en" num="0023">FIGURE is a schematic view showing a schematic configuration of an ink jet recording apparatus according to the present embodiment.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DESCRIPTION OF EXEMPLARY EMBODIMENTS</heading>
+      <p id="p-00024-en" num="0024">Hereinafter, preferred embodiments of the invention will be described in detail. However, the invention is not limited to the following embodiments. Various modifications can be made within the scope not departing from the gist thereof.</p>
+      <heading id="h-00005-en" level="2">Ink Composition</heading>
+      <p id="p-00025-en" num="0025">The ink composition according to the present embodiment includes: a color material; water; and a polymer particle, in which the polymer particle has a core-shell structure including a core polymer and a shell polymer, the polymer particle has an average particle diameter of 10 nm to 80 nm, the core polymer has a glass transition temperature of lower than 60° C., the shell polymer has a glass transition temperature of higher than or equal to 60° C., and the core polymer includes an aromatic monomer having at least a vinyl group as a constitutional unit.</p>
+      <heading id="h-00006-en" level="2">Color Material</heading>
+      <p id="p-00026-en" num="0026">The color material is selected from pigments and dyes.</p>
+      <heading id="h-00007-en" level="2">Pigment</heading>
+      <p id="p-00027-en" num="0027">In the present embodiment, when a pigment is used as the color material, it is possible to improve the light resistance of ink. As the pigment, any one of inorganic pigments and organic pigments may be used.</p>
+      <p id="p-00028-en" num="0028">The inorganic pigment is not particularly limited, but examples thereof include carbon black, iron oxide, titanium oxide, and silica oxide. These inorganic pigments may be used alone or in a combination of two or more thereof.</p>
+      <p id="p-00029-en" num="0029">The organic pigment is not particularly limited, but examples thereof include quinacridone pigments, quinacridonequinone pigments, dioxazine pigments, phthalocyanine pigments, anthrapyrimidine pigments, anthanthrone pigments, indanthrone pigments, flavanthrone pigments, perylene pigments, diketopyrrolopyrrole pigments, perinone pigments, quinophthalone pigments, anthraquinone pigments, thioindigo pigments, benzimidazolone pigments, isoindolinone pigments, azomethine pigments, and azo pigments. Specific examples of the organic pigment are exemplified as follows.</p>
+      <p id="p-00030-en" num="0030">The pigment used in black ink is not particularly limited, but an example thereof includes carbon black. Carbon black is not particularly limited, but examples thereof include furnace black, lamp black, acetylene black, and channel black (C.I. Pigment Black 7). Further, the commercially available product of carbon black is not particularly limited, but examples thereof include No. 2300, No. 900, MCF88, No. 20B, No. 33, No. 40, No. 45, No. 52, MA7, MA8, MA100, and No. 2200B (all are trade names, manufactured by Mitsubishi Chemical Corporation); Color Black FW1, Color Black FW2, Color Black FW2V, Color Black FW18, Color Black FW200, Color Black 5150, Color Black 5160, Color Black 5170, Pritex 35, Pritex U, Pritex V, Pritex 140U, Special Black 6, Special Black 5, Special Black 4A, Special Black 4, Special Black 250, or the like (all are trade names, manufactured by Degussa AG); Conductex SC, Raven 5750, Raven 5250, Raven 5000, Raven 3500, Raven 1255, Raven 700, or the like (all are trade names, manufactured by Columbian Carbon Japan Ltd.); and Regal 400R, Regal 330R, Regal 660R, Mogul L, Monarch 700, Monarch 800, Monarch 880, Monarch 900, Monarch 1000, Monarch 1100, Monarch 1300, Monarch 1400, Elftex 12 or the like (all are trade names, manufactured by CABOT Corporation).</p>
+      <p id="p-00031-en" num="0031">Examples of the pigment used in cyan ink include C. I. Pigment Blues 1, 2, 3, 15, 15:1, 15:2, 15:3, 15:4, 15:6, 15:34, 16, 18, 22, 60, 65, and 66; and C. I. Bat Blues 4 and 60. Among these, at least one of C. I. Pigment Blues 15:3 and 15:4 is preferable.</p>
+      <p id="p-00032-en" num="0032">Examples of the pigment used in magenta ink include C. I. Pigment Reds 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 21, 22, 23, 30, 31, 32, 37, 38, 40, 41, 42, 48:2, 48:4, 57, 57:1, 88, 112, 114, 122, 123, 144, 146, 149, 150, 166, 168, 170, 171, 175, 176, 177, 178, 179, 184, 185, 187, 202, 209, 219, 224, 245, 254, and 264; and C. I. Pigment Violets 19, 23, 32, 33, 36, 38, 43, and 50. Among these, one or more selected from the group consisting of C. I. Pigment Red 122, C. I. Pigment Red 202, and C. I. Pigment Violet 19 is preferable.</p>
+      <p id="p-00033-en" num="0033">Examples of the pigment used in yellow ink include C. I. Pigment Yellows 1, 2, 3, 4, 5, 6, 7, 10, 11, 12, 13, 14, 16, 17, 24, 34, 35, 37, 53, 55, 65, 73, 74, 75, 81, 83, 93, 94, 95, 97, 98, 99, 108, 109, 110, 113, 114, 117, 120, 124, 128, 129, 133, 138, 139, 147, 151, 153, 154, 155, 167, 172, 180, 185, and 213. Among these, one or more selected from the group consisting of C. I. Pigment Yellows 74, 155, and 213 is preferable.</p>
+      <p id="p-00034-en" num="0034">Examples of the pigment used in white ink include, but are not particularly limited to, C. I. Pigment Whites 6, 18, and 21, titanium oxide, zinc oxide, zinc sulfide, antimony oxide, zirconium oxide, white hollow resin particles, and polymer particles.</p>
+      <p id="p-00035-en" num="0035">In addition, as the pigments used in color inks such as green ink, orange ink and the like, except for the above colors, commonly known pigments are used.</p>
+      <heading id="h-00008-en" level="2">Dye</heading>
+      <p id="p-00036-en" num="0036">In the present embodiment, a dye is used as the color material. The dye is not particularly limited, but examples thereof include acidic dyes, direct dyes, reactive dyes, and basic dyes.</p>
+      <p id="p-00037-en" num="0037">The content of the color material is preferably 0.4 mass % to 12 mass %, and more preferably 2 mass % to 5 mass %, based on the total mass (100 mass %) of ink.</p>
+      <heading id="h-00009-en" level="2">Water</heading>
+      <p id="p-00038-en" num="0038">The ink composition according to the present embodiment includes water. Examples of water include pure water, such as ion exchange water, ultrafiltered water, reverse osmosis water, and distilled water; and ultrapure water which is obtained by completely removing ionic impurities as much as possible. In addition, when water sterilized by ultraviolet irradiation or addition of hydrogen peroxide is used, it is possible to prevent the occurrence of mold and bacteria in the case where a pigment dispersion liquid and an ink using the same are stored for a long period of time.</p>
+      <p id="p-00039-en" num="0039">The content of water is not particularly limited, and may be appropriately determined as necessary.</p>
+      <heading id="h-00010-en" level="2">Polymer Particle</heading>
+      <p id="p-00040-en" num="0040">The polymer particle has a core-shell structure including a core polymer and a shell polymer and has an average particle diameter of 10 nm to 80 nm. Here, the core polymer has a glass transition temperature of lower than 50° C., and the shell polymer has a glass transition temperature of higher than or equal to 50° C. Further, the core polymer includes an aromatic monomer having at least a vinyl group as a constitutional unit.</p>
+      <p id="p-00041-en" num="0041">The core-shell structure refers to a structure in which a core polymer is formed in the void of a shell polymer. Therefore, the core-shell structure includes not only a structure in which the surface of the core polymer is covered with the shell polymer, but also a structure in which a part of the void of a three-dimensional network structure caused by the shell polymer is filled with the core polymer. Accordingly, the core-shell structure in the present specification includes a structure of a polymer particle in which the boundary between the core part and the shell part are not exactly clear.</p>
+      <p id="p-00042-en" num="0042">The glass transition temperature of the core polymer is lower than 60° C., and preferably higher than or equal to 0° C. and lower than 60° C. When the glass transition temperature of the core polymer is lower than 60° C., the core polymer can be easily discharged after the shell polymer is softened, and thus the ink composition has more excellent adhesivity. In addition, when the glass transition temperature of the core polymer is higher than or equal to 0° C., the storage stability of the ink composition is excellent.</p>
+      <p id="p-00043-en" num="0043">The glass transition temperature of the shell polymer is higher than or equal to 60° C., and preferably higher than or equal to 60° C. and lower than or equal to 150° C. When the glass transition temperature of the shell polymer is higher than or equal to 60° C., in the case where the ink composition is ejected under a high-temperature environment, it is possible to eject the polymer particles from a recording head without disrupting a core-shell type structure, and it is possible to further suppress the deposition of the polymer particles in nozzles, so that the clogging of nozzles can be prevented, and the stability of the ink composition in intermittent printing tends to become more excellent. In the case where a film is formed on the recording medium, the ink composition on the recording medium is heated to a temperature higher than the glass transition temperature of the shell polymer, and thus the core polymer flows out from the shell polymer, thereby forming a film on the recording medium by the core polymer and the shell polymer. At this time, the softened core polymer spreads and adheres onto the recording medium, thereby forming a film having excellent fixability. Further, when the glass transition temperature of the shell polymer is lower than or equal to 150° C., the shell polymer on the recording medium is easily softened, and thus the adhesivity of the ink composition tends to become excellent. Meanwhile, when the glass transition temperature of the shell polymer is higher than 150° C., the thermal deformation property of the emulsion type resin becomes poor, thus making a negative influence such as thickening or the like on the system.</p>
+      <p id="p-00044-en" num="0044">When the average particle diameter of the polymer particles is 10 nm to 80 nm, which is relatively small, the ink composition is characterized in that the gloss of the recorded image easily appears, and excellent film forming properties are exhibited. In addition, when the average particle diameter of the polymer particles is relatively small, a large lump is hardly formed even when the polymer particles are aggregated, and thus it is possible to suppress the clogging of nozzles. Further, when the average particle diameter of the polymer particles is small, the viscosity of the ink composition can be increased relatively high, and thus it is possible to prevent the viscosity of the ink composition from being lowered to such a degree that ink ejection properties becomes unstable, even when the temperature of the ink composition rises in the recording head. Moreover, in the present specification, the average particle diameter is based on volume unless otherwise specified. For example, the average particle diameter may be measured by a particle size distribution analyzer using a laser diffraction scattering method as a measurement principle. An example of the particle size distribution analyzer includes a particle size distribution meter (for example, Microtrac UPA, manufactured by Nikkiso Co., Ltd.) using a dynamic light scattering method as a measurement principle.</p>
+      <p id="p-00045-en" num="0045">Glass transition temperature (hereinafter, referred to as “Tg”) is calculated by using an analysis method such as viscoelasticity measurement, thermal analysis or the like, or by using a calculation formula based on Tg of homopolymer of commonly known polymerizable monomers. When the resin included in the core polymer and the following shell polymer is a copolymer, the glass transition temperature (Tg) of the copolymer can be calculated by the following FOX Equation based on Tg<sub>n </sub>(unit: K) of hompolymer and mass fraction (W<sub>n</sub>) of monomer.</p>
+      <p id="p-00046-en" num="0000">
+        <maths id="maths-00001-en" num="00001">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mfrac>
+                      <mn>1</mn>
+                      <mi>Tg</mi>
+                    </mfrac>
+                    <mo>=</mo>
+                    <mrow>
+                      <mfrac>
+                        <msub>
+                          <mi>W</mi>
+                          <mn>1</mn>
+                        </msub>
+                        <msub>
+                          <mi>Tg</mi>
+                          <mn>1</mn>
+                        </msub>
+                      </mfrac>
+                      <mo>+</mo>
+                      <mfrac>
+                        <msub>
+                          <mi>W</mi>
+                          <mn>2</mn>
+                        </msub>
+                        <msub>
+                          <mi>Tg</mi>
+                          <mn>2</mn>
+                        </msub>
+                      </mfrac>
+                      <mo>+</mo>
+                      <mi>…</mi>
+                      <mo>+</mo>
+                      <mfrac>
+                        <msub>
+                          <mi>W</mi>
+                          <mi>n</mi>
+                        </msub>
+                        <msub>
+                          <mi>Tg</mi>
+                          <mi>n</mi>
+                        </msub>
+                      </mfrac>
+                    </mrow>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mi>Equation</mi>
+                    <mo></mo>
+                    <mstyle>
+                      <mspace width="0.8em" height="0.8ex" />
+                    </mstyle>
+                    <mo></mo>
+                    <mn>1</mn>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="img-00001-en" wi="N/A" he="N/A" file="US20150247045A1_00002.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150247045A1-20150903-M00001.TIF" />
+        </maths>
+      </p>
+      <p id="p-00047-en" num="0000">Here, W<sub>n</sub>: mass fraction of each monomer, Tg<sub>n</sub>: Tg of homopolymer of each monomer (unit: K), and Tg: Tg of copolymer (unit: K).</p>
+      <p id="p-00048-en" num="0046">In other words, when a polymer is a homopolymer, the glass transition temperature of the core polymer or the shell polymer can be controlled by selecting the homopolymer. In addition, when a polymer is a copolymer, the glass transition temperature thereof can be controlled by considering Tg of the above homopolymer and the above FOX Equation.</p>
+      <heading id="h-00011-en" level="2">Core Polymer</heading>
+      <p id="p-00049-en" num="0047">The core polymer is designed to be a highly hydrophobic polymer. Therefore, it is preferred that the core polymer do not have an acid value. In addition, the core polymer includes an aromatic monomer having at least a vinyl group as a constitutional unit. Therefore, the core polymer becomes hydrophobic, and thus a hydrophobic film can be formed. As a result, it is possible to improve water friction resistance that is one of the frictional resistances of a recorded image.</p>
+      <p id="p-00050-en" num="0048">The aromatic monomer having a vinyl group is not particularly limited, but examples thereof include styrene, α-methyl styrene, p-methyl styrene, vinyl toluene, chlorostyrene, and divinyl benzene.</p>
+      <p id="p-00051-en" num="0049">In addition, it is preferred that the core polymer include a nitrogen-containing monomer as a constitutional unit. When the core polymer includes a nitrogen-containing monomer, it is possible to increase the polarity of the core polymer, and particularly, the fixability of the film of the core polymer can be improved when the recording medium is made of polypropylene, polyethylene terephthalate, nylon, or polyethylene.</p>
+      <p id="p-00052-en" num="0050">The nitrogen-containing monomer is not particularly limited, but examples thereof include (meth)acrylamide, (meth)acrylonitrile, N-alkoxymethyl (meth)acrylamide, alkyl (meth)acrylamides, dialkyl (meth)acrylamide, dialkylaminopropyl (meth)acrylamide, and hydroxyalkyl (meth)acrylamide.</p>
+      <heading id="h-00012-en" level="2">Shell Polymer</heading>
+      <p id="p-00053-en" num="0051">The shell polymer is not particularly limited in its raw material if its glass transition temperature is lower than 60° C., but preferably it includes an aromatic monomer as a constitutional unit. When the shell polymer includes an aromatic monomer as a constitutional unit, a detailed action mechanism is unknown, but the ejection bending is prevented. In particular, in the case of small dots, ink droplets easily bend, and thus ejection bending is suppressed according to an aspect of the invention. Therefore, the ink composition according to an aspect of the invention is particularly suitable for a head that can eject ink dots in a multi-size from one nozzle.</p>
+      <p id="p-00054-en" num="0052">The aromatic monomer is not particularly limited, but examples thereof include styrene, α-methyl styrene, p-methyl styrene, vinyl toluene, chlorostyrene, and divinyl benzene, each of which is an aromatic monomer having a vinyl group. In addition, the aromatic monomer may be an aromatic monomer having no vinyl group.</p>
+      <p id="p-00055-en" num="0053">Preferably, the shell polymer includes (meth)acrylic acid as a constitutional unit. Therefore, hydrophilicity becomes high to improve the dispersion stability of polymer particles, and simultaneously the viscosity of the ink composition becomes relatively low to improve the ejection stability of the ink composition. In addition, the polymer particles according to the present embodiment are synthesized without substantially using an emulsifier as described later. When the shell polymer includes (meth)acrylic acid as a constitutional unit, it is possible to form a hydrophilic shell polymer having a void, and it is possible to form a hydrophobic core polymer in this void.</p>
+      <p id="p-00056-en" num="0054">The shell polymer has an acid value because it is hydrophilic. Preferably, the shell polymer has an acid value of 20 mgKOH/g to 120 mgKOH/g. When the acid value of the shell polymer is within the above range, sufficient hydrophilicity necessary for the shell polymer can be secured.</p>
+      <p id="p-00057-en" num="0055">The weight average molecular weight of the shell polymer is not particularly limited, but is, for example, more than or equal to 10,000 and less than or equal to 100,000.</p>
+      <p id="p-00058-en" num="0056">The core polymer and the shell polymer may use one homopolymer or a combination of two or more homopolymers as the constitutional unit.</p>
+      <p id="p-00059-en" num="0057">In the ratio of the mass of the core polymer to the mass of the shell polymer in the polymer particle, preferably the mass of the core polymer≦the mass of the shell polymer, and more preferably the mass of the core polymer&lt;the mass of the shell polymer. Still more preferably, the mass of the core polymer is 40% to 80% when the mass of the shell polymer is 100%. For this reason, the balance between the mass of the core polymer and the mass of the shell polymer becomes good, so that the fixability of the ink composition is good, the ejection stability of the ink composition is excellent, and vertical misalignment tends to hardly occur. The vertical misalignment refers to a phenomenon that, in the continuous ejection of ink, ink is partially solidified around a nozzle by long-term ejection, and thus clear vertical lines cannot be printed due to curved ejection direction.</p>
+      <heading id="h-00013-en" level="2">Method of Forming Polymer Particles</heading>
+      <p id="p-00060-en" num="0058">There is no limitation to the formation method of the above-mentioned polymer particles, but preferably, the polymer particles are formed by soap-free polymerization without substantially using an emulsifier. The soap-free polymerization refers to a polymerization process for forming a core-shell polymer without substantially using an emulsifier. Here, the “emulsifier” means a surfactant used in synthesis. Further, an example of the soap-free polymerization includes a process of polymerizing polymer particles under the condition of the content of an emulsifier in a solution being less than or equal to 1 mass %. In the related art, the ink composition containing the polymer particles synthesized using such an emulsifier is problematic in that foaming easily occurs, the gloss of an image is difficult to appear, and foreign matter is easily generated. According to an aspect of the invention, an ink composition that suppresses the occurrence of such problems can be obtained. In the soap-free polymerization, for example, a shell polymer containing (meth)acrylic acid as a constitutional unit is formed, and a core polymer is formed in the shell polymer. Moreover, when polymer particles are formed using soap-free polymerization, the average particle diameter of the polymer particles becomes very small, and the ejection stability and glossiness of an ink composition are improved.</p>
+      <p id="p-00061-en" num="0059">The surfactant used in synthesis is not particularly limited, but an anionic surfactant and a nonionic surfactant are preferable. Examples of the anionic surfactant include sodium dodecylbenzene sulfonate, sodium laurate, and ammonium salts of polyoxyethylene alkyl ether sulfate. Examples of the nonionic surfactant include polyoxyethylene alkyl ethers, polyoxyethylene alkyl esters, polyoxyethylene sorbitan fatty acid esters, polyoxyethylene alkyl phenyl ethers, polyoxyethylene alkyl amines, and polyoxyethylene alkyl amides. The core-shell polymer used in the present embodiment is prepared without using these surfactants.</p>
+      <p id="p-00062-en" num="0060">The polymerization initiator used in the soap-free polymerization is not particularly limited, but is preferably a hydrophilic polymerization initiator. Examples thereof include potassium persulfate, ammonium persulfate, hydrogen peroxide, and the like.</p>
+      <p id="p-00063-en" num="0061">An example of the soap-free polymerization method will be described, but a synthesis method is not limited to the following method. For example, ion exchange water and a polymerization initiator are put into a polymerization reactor provided with a jacket, and the pressure in the polymerization reactor is reduced to remove oxygen, and then the pressure therein is set to atmospheric pressure with nitrogen to make a nitrogen atmosphere. First, under the nitrogen atmosphere, the temperature in the polymerization reactor is set to predetermined temperature, and then a pre-emulsion solution containing monomers (to become a constituent of a shell polymer) is dropped by a predetermined amount to perform a polymerization reaction to thus synthesize a shell polymer. Next, a core polymer is obtained by polymerizing the monomers using the void of the obtained shell polymer as a polymerization field, thereby synthesizing the polymer particles according to the present embodiment. Specifically, a monomer mixture containing the above-mentioned hydrophobic monomers is dropped into an aqueous dispersion medium containing a shell polymer to obtain a core polymer by polymerization, and the obtained core polymer is formed into polymer particles. As such, when a shell polymer is used as the polymerization field of a core polymer, there is no need to use an emulsifier in the monomer mixture.</p>
+      <p id="p-00064-en" num="0062">According to such a soap-free polymerization, the content of an emulsifier in the ink composition can be easily set to 0.01 mass % or less, and the average particle diameter of the polymer particles can also be adjusted very small.</p>
+      <heading id="h-00014-en" level="2">Cyclic Nitrogen Compound and Aprotic Polar Solvent</heading>
+      <p id="p-00065-en" num="0063">The ink composition of the present embodiment preferably further includes at least one of a cyclic nitrogen compound and an aprotic polar solvent. When the ink composition includes a cyclic nitrogen compound or an aprotic polar solvent, it is possible to shift the apparent glass transition temperature of the polymer particles to a low-temperature region, and it is possible to soften the core polymer and the shell polymer at a temperature lower than the original temperature, thereby improving the fixability of the ink composition onto the recording medium. Thus, in particular, when the recording medium is made of polyvinyl chloride, it is possible to improve the fixability of the ink composition onto the recording medium.</p>
+      <p id="p-00066-en" num="0064">The aprotic polar solvent is not particularly limited, but examples thereof include a cyclic ketone compound, a chain ketone compound, and a chain nitrogen compound. Typical examples of the cyclic nitrogen compound and the aprotic polar solvent include a pyrrolidone-based solvent, an imidazolidinone-based solvent, a sulfoxide-based solvent, a lactone-based solvent, and an amide ether-based solvent. Among these, 2-pyrrolidone, N-alkyl-2-pyrrolidone, 1-alkyl-2-pyrrolidone, 7-butyrolactone, 1,3-dimethyl-2-imidazolidinone, dimethyl sulfoxide, imidazole, 1-methylimidazole, 2-methylimidazole, and 1,2-dimethyl imidazole are preferable.</p>
+      <p id="p-00067-en" num="0065">The content of the cyclic nitrogen compound and the aprotic polar solvent is not particularly limited, but is preferably 5.0 mass % to 35 mass %, and more preferably 8 mass % to 30 mass %, based on the total amount of the ink composition.</p>
+      <heading id="h-00015-en" level="2">Other Solvents</heading>
+      <p id="p-00068-en" num="0066">The ink of the present embodiment may further include other solvents except for the above-mentioned solvents. The other solvents except for the above-mentioned solvents are not particularly limited, but specific examples thereof include alcohols and glycols, such as ethylene glycol, diethylene glycol, triethylene glycol, propylene glycol, dipropylene glycol, 1,3-propanediol, 1,2-butanediol, 1,2-pentanediol, 1,2-hexanediol, 1,4-butanediol, 1,5-pentanediol, 1,6-hexanediol, diethylene glycol mono-n-propyl ether, ethylene glycol mono-iso-propyl ether, diethylene glycol mono-iso-propyl ether, ethylene glycol mono-n-butyl ether, ethylene glycol mono-t-butyl ether, diethylene glycol mono-n-butyl ether, triethylene glycol monobutyl ether, diethylene glycol mono-t-butyl ether, propylene glycol monomethyl ether, propylene glycol monoethyl ether, propylene glycol mono-t-butyl ether, propylene glycol mono-n-propyl ether, propylene glycol mono-iso-propyl ether, propylene glycol mono-n-butyl ether, dipropylene glycol mono-n-butyl ether, dipropylene glycol mono-n-propyl ether, dipropylene glycol mono-iso-propyl ether, methanol, ethanol, n-propyl alcohol, iso-propyl alcohol, n-butanol, 2-butanol, tert-butanol, iso-butanol, n-pentanol, 2-pentanol, 3-pentanol, and tert-pentanol. These other solvents may be used alone or in a combination of two or more thereof.</p>
+      <p id="p-00069-en" num="0067">The boiling point of each of the other solvents is preferably 140° C. to 280° C., more preferably 160° C. to 260° C., and still more preferably 180° C. to 240° C. When the boiling point of each of the other solvents is within the above range, intermittent characteristics tend to be improved.</p>
+      <p id="p-00070-en" num="0068">The content of each of the other solvents is preferably 5.0 mass % to 25 mass %, and more preferably 10 mass % to 20 mass %, based on the total amount of the ink composition.</p>
+      <heading id="h-00016-en" level="2">Surfactant</heading>
+      <p id="p-00071-en" num="0069">It is preferred that the ink composition used in the present embodiment contain a surfactant. The surfactant is not particularly limited, but examples thereof include an acetylene glycol-based surfactant, a fluorine-based surfactant, and a silicone-based surfactant. When the ink composition contains these surfactants, the dryness of the ink composition adhered to the recording medium becomes better, and high-speed printing can be conducted.</p>
+      <p id="p-00072-en" num="0070">Among these, a silicone-based surfactant is more preferable because the solubility thereof in the ink composition increases to reduce the generation of foreign matter.</p>
+      <p id="p-00073-en" num="0071">The acetylene glycol-based surfactant is not particularly limited, but, for example, is preferably one or more selected from alkylene oxide adducts of 2,4,7,9-tetramethyl-5-decyne-4,7-diol and 2,4,7,9-tetramethyl-5-decyne-4,7-diol; and alkylene oxide adducts of 2,4-dimethyl-5-decyne-4-ol and 2,4-dimethyl-5-decyne-4-ol. Commercially available products of the acetylene glycol-based surfactant are not particularly limited, but examples thereof include E series such as Olfine 104 series and Olfine E1010 (all are trade names, manufactured by Air Products Japan, Inc.), and Surfynol 465 and Surfynol 61 (all are trade names, manufactured by Nissin Chemical Industry Co., Ltd.). These acetylene glycol-based surfactants may be used alone or in a combination of two or more thereof.</p>
+      <p id="p-00074-en" num="0072">The fluorine-based surfactant is not particularly limited, but examples thereof include perfluoroalkyl sulfonates, perfluoroalkyl carboxylates, perfluoroalkyl phosphate esters, perfluoroalkyl ethylene oxide adducts, perfluoroalkyl betaine, perfluoroalkyl amine oxide compounds. Commercially available products of the fluorine-based surfactant are not particularly limited, but examples thereof include S-144 and S-145 (manufactured by Asahi Glass Co., Ltd.); FC-170C, FC-430, and Florad-FC4430 (manufactured by Sumitomo 3M Co., Ltd.); FSO, FSO-100, FSN, FSN-100, and FS-300 (manufactured by Dupont Inc.); and FT-250 and FT-251 (manufactured by Neos Co., Ltd.). These fluorine-based surfactants may be used alone or in a combination of two or more thereof.</p>
+      <p id="p-00075-en" num="0073">Examples of the silicone-based surfactant include polysiloxane compounds, polyether-modified organosiloxane, and the like. Commercially available products of the silicone-based surfactant are not particularly limited, but specific examples thereof include BYK-306, BYK-307, BYK-333, BYK-341, BYK-345, BYK-346, BYK-347, BYK-348, and BYK-349 (all are trade names, manufactured by BYK Japan KK); and KF-351A, KF-352A, KF-353, KF-354L, KF-355A, KF-615A, KF-945, KF-640, KF-642, KF-643, KF-6020, X-22-4515, KF-6011, KF-6012, KF-6015, and KF-6017 (all are trade names, manufactured by Shin-Etsu chemical Co., Ltd.).</p>
+      <p id="p-00076-en" num="0074">The content of the surfactant is preferably 0.1 mass % to 5 mass %, and more preferably 0.1 mass % to 3.0 mass %, based on the total amount of the ink composition. When the content of the surfactant is within the above range, the wettability of the ink composition adhered to the recording medium tends to be further improved.</p>
+      <p id="p-00077-en" num="0000">Alkyl Polyol Having a Normal Boiling Point of Higher than or Equal to 280° C.</p>
+      <p id="p-00078-en" num="0075">It is preferred that the ink composition of the present embodiment not substantially contain an alkyl polyol having a normal boiling point of higher than or equal to 280° C. When this ink composition does not substantially contain an alkyl polyol having a normal boiling point of higher than or equal to 280° C., the quick-drying of the ink composition on the recording medium is further improved. Meanwhile, the storage stability of ink in an ejection head can be sufficiently secured by using the polymer particles having a core-shell structure according to the present embodiment. The alkyl polyol having a normal boiling point of higher than or equal to 280° C. is not particularly limited, but an example thereof includes glycerin. The sentence “this ink composition does not substantially contain an alkyl polyol having a normal boiling point of higher than or equal to 280° C.” means that the content of the alkyl polyol having a normal boiling point of higher than or equal to 280° C. is preferably 0 mass % to 0.50 mass %, and more preferably 0 mass %, based on the total amount of the ink composition.</p>
+      <heading id="h-00017-en" level="2">Other Components</heading>
+      <p id="p-00079-en" num="0076">The ink of the present embodiment may be appropriately added with various additives, such as a dissolution aid, a viscosity modifier, an antioxidant, a preservative, a fungicide, a defoamer, a corrosion inhibitor, and the like, in addition to the above components.</p>
+      <p id="p-00080-en" num="0077">It is preferred that the ink composition of the present embodiment be recorded on a heated recording medium. When the above-mentioned heated recording medium is used, it is possible to form an image having excellent frictional resistance. In addition, in the case where the recording medium is heated, a head is warmed by radiant heat thereof. According to the ink composition of the present embodiment, even when the head is warmed, the clogging of nozzles can be suppressed, and the ejection stability of the ink composition can be improved. The heating temperature is preferably higher than or equal to 35° C., more preferably higher than or equal to 40° C. and lower than or equal to 110° C., and still more preferably higher than or equal to 45° C. and lower than or equal to 120° C.</p>
+      <p id="p-00081-en" num="0078">In order to heat the recording medium, for example, a platen heater or infrared radiation is used. In addition, it is preferred that the ink composition of the present embodiment be an ink composition used in an ink jet recording method from the viewpoint of more effectively and reliably exhibiting the actions and effects of the invention.</p>
+      <heading id="h-00018-en" level="2">Production Method of Ink</heading>
+      <p id="p-00082-en" num="0079">The ink of the present embodiment can be obtained by mixing the above-mentioned components (materials) in any order and filtering the mixture if necessary to remove impurities. Here, it is preferred in terms of convenience of handling that pigment be previously prepared in a state of being uniformly dispersed in a solvent, and be then mixed with other components.</p>
+      <p id="p-00083-en" num="0080">As the method of mixing the components, methods of sequentially putting the components into a container equipped with a stirring device such as a mechanical stirrer or a magnetic stirrer and then stirring and mixing these components are preferably used. As a filtration method, for example, centrifugal filtration, filtration using a filter, or the like may be conducted, if necessary.</p>
+      <heading id="h-00019-en" level="2">Recording Medium</heading>
+      <p id="p-00084-en" num="0081">As the recording medium, an absorptive or non-absorptive recording medium is exemplified. Particularly, in the ink jet recording method, recording media having various absorption performances, from a non-absorptive recording medium, into which an aqueous ink composition does not easily permeate, to an absorptive recording medium, into which a ink composition easily permeates, can be widely applied. However, it is preferred that the recording medium be a heated medium at the time of ink ejection.</p>
+      <p id="p-00085-en" num="0082">The absorptive recording medium is not particularly limited, but is particularly preferably a high-absorption recording medium such as a fabric. Examples of the fabric include, but are not limited to, natural fibers or synthetic fibers such as silk, cotton, wool, nylon, polyester, rayon, and the like.</p>
+      <p id="p-00086-en" num="0083">The non-absorptive recording medium is not particularly limited, but examples thereof include a film or plate made of plastics such as polyvinyl chloride, polyethylene, polypropylene, and polyethylene terephthalate (PET); a plate made of metals such as iron, silver, copper, and aluminum; a metal plate or a plastic-made film fabricated by the deposition of these various metals; a plate made of an alloy of stainless steel or brass; and the like. In addition, it is preferred that the non-absorptive recording medium have neither an ink absorbing layer composed of silica particles or alumina particles nor an ink absorbing layer composed of a hydrophilic polymer such as polyvinyl alcohol (PVA), polyvinyl pyrrolidone (PVP), or the like.</p>
+      <heading id="h-00020-en" level="2">Recording Apparatus</heading>
+      <p id="p-00087-en" num="0084">The recording apparatus according to the present embodiment includes an ejection head for ejecting the ink composition onto a recording medium; a heating unit for heating the recording medium; and a drying unit for drying the ink composition for ink jet adhered to the recording medium. This recording apparatus may further have the above-mentioned ink composition for ink jet.</p>
+      <p id="p-00088-en" num="0085">FIGURE is a schematic cross-sectional view of a recording apparatus according to the present embodiment. As shown in FIGURE, the recording apparatus <b>1</b> includes an ejection head <b>2</b>, an IR heater <b>3</b>, a platen heater <b>4</b>, a curing heater <b>5</b>, a cooling fan <b>6</b>, a preheater <b>7</b>, and a ventilation fan <b>8</b>.</p>
+      <p id="p-00089-en" num="0086">The ejection head <b>2</b> ejects the ink composition onto the recording medium. As the ejection head <b>2</b>, an ejection head known in the related art may be used. As an example of the known ejection head, there is an ejection head for ejecting liquid droplets using the vibration of a piezoelectric element, that is, an ejection head for forming ink droplets by mechanical deformation of an electrostrictive element.</p>
+      <p id="p-00090-en" num="0087">The recording medium heating unit serves to heat the recording medium at the time of ejecting the ink composition from the ejection head <b>2</b>. The recording medium heating unit is not particularly limited, but examples thereof include a unit for directly heating the ejection head <b>2</b> by hot air or the IR heater <b>3</b> and a unit for heating the ejection head <b>2</b> through the recording medium heated by the platen heater <b>4</b>.</p>
+      <p id="p-00091-en" num="0088">In addition, when the IR heater <b>3</b> is used, the recording medium can be heated from the side of the ejection head <b>2</b>. Therefore, the ejection head <b>2</b> is also heated simultaneously, but the temperature of the recording medium can be increased without being affected by the thickness of the recording medium, compared to when the recording medium is heated from the back side thereof by the platen heater <b>4</b> or the like. Further, when the platen heater <b>4</b> is used, the recording medium can be heated from the side opposite to the side of the ejection head <b>2</b>. Thus, the ejection head <b>2</b> becomes relatively difficult to heat.</p>
+      <p id="p-00092-en" num="0089">Preferably, at the time of ejecting the ink composition onto the recording medium, the recording apparatus <b>1</b> further includes a recording medium heating unit for heating a recording medium such that the surface temperature of the recording medium is higher than or equal to 35° C. More preferably, the surface temperature thereof is higher than or equal to 35° C. and lower than or equal to 60° C. The recording medium heating unit is not particularly limited, but examples thereof include the IR heater <b>3</b> and a platen heater <b>4</b>. When the recording apparatus <b>1</b> includes the recording medium heating unit, the ink composition adhered to the recording medium can be rapidly dried, and bleeding can be further suppressed.</p>
+      <p id="p-00093-en" num="0090">The drying unit serves to heat and dry the recording medium coated with the ink composition for ink jet. The drying unit is not particularly limited, but examples thereof include the curing heater <b>5</b>, a hot air mechanism (not shown), and a thermostatic bath (not shown). When the drying unit heats the recording medium on which an image is recorded, moisture or the like contained in the ink composition is more rapidly volatilized and scattered, and thus a film is formed by the polymer particles contained in the ink composition. In this way, dried ink matter is strongly fixed (adhered) on the recording medium, and thus a high-quality image having excellent frictional resistance can be obtained in a short time. The temperature of the drying unit is preferably higher than that of the recording medium heating unit, more preferably higher than or equal to 70° C., and still more preferably higher than or equal to 70° C. and lower than or equal to 110° C.</p>
+      <p id="p-00094-en" num="0091">In addition, the above described “heating the recording medium” refers to raising the temperature of the recording medium to desired temperature, and is not limited to directly heating the recording medium.</p>
+      <p id="p-00095-en" num="0092">The recording apparatus <b>1</b> may have the cooling fan <b>6</b>. When the ink composition on the recording medium is cooled by the cooling fan <b>6</b> after the drying, a film having excellent adhesivity can be formed on the recording medium.</p>
+      <p id="p-00096-en" num="0093">In addition, the recording apparatus <b>1</b> may include the preheater <b>7</b> for previously heating (preheating) the recording medium before the ejection of the ink composition onto the recording medium. Further, the recording apparatus <b>1</b> may include the ventilation fan <b>8</b> for more efficiently drying the ink composition adhered to the recording medium.</p>
+      <heading id="h-00021-en" level="1">EXAMPLES</heading>
+      <p id="p-00097-en" num="0094">Hereinafter, Examples of the above-mentioned ink composition according to the invention will be described in detail, but the invention is not limited thereto.</p>
+      <heading id="h-00022-en" level="1">Example 1</heading>
+      <heading id="h-00023-en" level="1">Preparation of Aqueous Core-Shell Polymer Particle Dispersion</heading>
+      <p id="p-00098-en" num="0095">100 parts of ion exchange water was put into a reactor equipped with a dropping device, a thermometer, a water-cooling reflux condenser, and a stirrer, and 0.2 parts of ammonium persulfate as a polymerization initiator was added under a nitrogen atmosphere of 70° C. with stirring, and then a monomer solution containing 20 parts of styrene, 17 parts of methyl acrylate, 30 parts of methyl methacrylate and 5 parts of acrylic acid was dropped into the reactor to prepare a shell polymer by a polymerization reaction. Thereafter, a mixed solution of 0.2 pats of potassium persulfate, 50 parts of styrene and 22 parts of n-butyl acrylate was dropped and polymerized with stirring at 70° C., and then the resultant product was neutralized with sodium hydroxide to adjust pH to 8 to 8.5, and filtered by a filter of 0.3 μm to obtain an aqueous core-shell polymer particle dispersion.</p>
+      <p id="p-00099-en" num="0096">The differential scanning calorimetry (DSC) of the obtained core-shell polymer particles was carried out based on JIS K7121 to obtain the glass transition temperature Tg (° C.) of each of a polymer constituting the core polymer and a polymer constituting the shell polymer. The model “DSC6220”, manufactured by Seiko Electronics Industrial Co., Ltd., was used as a differential scanning calorimeter.</p>
+      <p id="p-00100-en" num="0097">In addition, the obtained core-shell polymer particles were measured by Microtrac UPA (manufactured by Nikkiso Co., Ltd.) to obtain the particle diameters φ (nm) of the core-shell polymer particles.</p>
+      <heading id="h-00024-en" level="2">Preparation of Ink Composition</heading>
+      <heading id="h-00025-en" level="2">(1) Preparation of Pigment Dispersion</heading>
+      <p id="p-00101-en" num="0098">First, after a reactor equipped with a stirrer, a thermometer, a reflux tube, and a dropping funnel was charged with nitrogen, 20 parts of benzyl methacrylate, 5 parts of 2-ethylhexyl methacrylate, 15 parts of butyl methacrylate, 10 parts of lauryl methacrylate, 2 parts of methacrylic acid, and 0.3 parts of t-dodecyl mercaptan were put into the reactor and heated to 70° C. Subsequently, the separately prepared 150 parts of benzyl methacrylate, 15 parts of acrylic acid, 50 parts of butyl methacrylate, 1 part of t-dodecyl mercaptan, 20 parts of methyl ethyl ketone, and 1 part of azobisisobutyronitrile were put into the dropping funnel, and the polymerization reaction of the dispersed polymer was conducted over 4 hours while dropping them into the reactor. Next, methyl ethyl ketone was added to the reactor to prepare a dispersed polymer solution having a concentration of 40%.</p>
+      <p id="p-00102-en" num="0099">The styrene-converted molecular weight of the dispersed polymer, which was measured using the Gel permeation chromatography (GPC) of L7100 system (manufactured by Hitachi Ltd.) under the condition that a part of the dispersed polymer was used and THF was used as a solvent, is 50000. In addition, the value of distribution (Mw/Mn) of molecular weight is 3.1.</p>
+      <p id="p-00103-en" num="0100">Further, 40 parts of the dispersed polymer solution was mixed with 30 parts of Chromo Fine Blue C. I. Pigment Blue15:3 (trade name, manufactured by Dainichiseika Color &amp; Chemicals Co., Ltd.), as a cyan pigment, 100 parts of a 0.1 mol/L aqueous sodium hydroxide solution, and 30 parts of methyl ethyl ketone, and then the 8-pass dispersion treatment of the mixture was carried out by ULTIMIZER 25005 (manufactured by Sugino Machine Ltd.). Thereafter, 300 parts of ion exchange water was added thereto, the total amount of methyl ethyl ketone and a part of water were distilled by a rotary evaporator, and the resulting product was neutralized with 0.1 mol/L sodium hydroxide to adjust pH to 9. The resulting product was dispersed until the volume average particle diameter of the cyan pigment became 100 nm while the volume average particle diameter of the cyan pigment was measured with a particle size distribution meter, and then filtered by a membrane filter of 3 μm to obtain a pigment dispersion liquid having a solid content of 20% (dispersed polymer and pigment).</p>
+      <heading id="h-00026-en" level="2">(2) Preparation of Ink Composition</heading>
+      <p id="p-00104-en" num="0101">The obtained pigment dispersion liquid was added to the reactor such that the content of pigment was 2 parts by mass, the obtained core-shell polymer particle dispersion were added thereto such that the solid content thereof was 1 part by mass, and 6 parts by mass of 1,2-hexanediol, 19 parts by mass of 2-pyrrolidone, 10 parts by mass of propylene glycol, 1 part by mass of surfactant (trade name: “BYK-348”, manufactured by BYK Japan K.K), and pure water were added such that the total thereof became 100 parts by mass. Then, this mixture was stirred for 2 hours by a magnetic stirrer, and then filtered by a PTFE-made membrane filter with a pore size of 5 μm to obtain an ink composition. Examples 2 to 9 and Comparative Examples 1 to 4</p>
+      <p id="p-00105-en" num="0102">Core-shell polymer particles were prepared and evaluated in the same manner as Example 1, except that the monomer composition ratios of core polymer and shell polymer were changed as given in Table 1 below at the time of preparing core-shell polymer particles.</p>
+      <heading id="h-00027-en" level="2">Evaluation Result</heading>
+      <p id="p-00106-en" num="0103">The monomer composition ratios of the core polymer and shell polymer prepared in each of Examples and each of Comparative Examples and the physical properties of the polymer particles (particle diameter φ, content (%) of core polymer and shell polymer, Tg of core polymer and shell polymer, acid value of shell polymer, difference in Tg between core polymer and shell polymer, and mass ratio of core polymer and shell polymer) are shown in Table 1.</p>
+      <heading id="h-00028-en" level="2">Evaluation Method</heading>
+      <heading id="h-00029-en" level="2">1. Frictional Resistance Test</heading>
+      <p id="p-00107-en" num="0104">A part of the printer PX-G930 (manufactured by Seiko Epson Corporation) was modified to be a printer which can adjust the heating of a recording medium at the time of ink jet recording. The ink cartridge of this printer was filled with the obtained ink composition. Then, the ink was ejected onto an A4-size vinyl chloride coated paper at a resolution of vertical 720 dpi×horizontal 720 dpi and dried to fabricate a cyan fully painted printing sample. In addition, at the time of ink jet recording, the recording medium was heated to 100° C. to be dried. Thereafter, this printing sample was left at room temperature for 16 hours.</p>
+      <p id="p-00108-en" num="0105">Subsequently, a 50 round-trip test (JIS P 8136) for the obtained printing sample was conducted under a load of 500 g using a color fastness rubbing tester AB-301 (manufactured by TESTER Sangyo Co., Ltd.). Both of dry friction test and wet friction test were conducted using the calico No. 3 cloth. In the test of the printing sample of a width of 2 cm and a stroke of 12 cm, this test was evaluated in 11 steps of 0 to 10. In addition, evaluation criteria are as follows. Evaluation results are shown in Table 1.</p>
+      <heading id="h-00030-en" level="2">Evaluation Criteria</heading>
+      <p id="p-00109-en" num="0106">10: There is no scratching or stripping. <br /> 9: There is scratching or stripping of more than or equal to 1% of stroke area. <br /> 8: There is scratching or stripping of more than or equal to 1% and less than 3% of stroke area. <br /> 7: There is scratching or stripping of more than or equal to 3% and less than 5% of stroke area. <br /> 6: There is scratching or stripping of more than or equal to 5% and less than 10% of stroke area. <br /> 5: There is scratching or stripping of more than or equal to 10% and less than 20% of stroke area. <br /> 4: There is scratching or stripping of more than or equal to 20% and less than 40% of stroke area. <br /> 3: There is scratching or stripping of more than or equal to 40% and less than 60% of stroke area. <br /> 2: There is scratching or stripping of more than or equal to 60% and less than 80% of stroke area. <br /> 1: There is scratching or stripping of more than or equal to 80% and less than 100% of stroke area. <br /> 0: The entire stroke area is stripped. </p>
+      <heading id="h-00031-en" level="2">2. Ejection Stability Test 1</heading>
+      <p id="p-00110-en" num="0107">In the same manner as in the above preparation of the printing sample, continuous printing was conducted under an environment of a relative humidity of 20% at a temperature of 40° C. to test ejection stability. The “ejection stability” is referred to as the property that always stable ink droplets are ejected form a nozzle without clogging the nozzle. Evaluation criteria are as follows. Evaluation results are shown in Table 1.</p>
+      <heading id="h-00032-en" level="2">Evaluation Criteria</heading>
+      <p id="p-00111-en" num="0108">A: Non-ejection or ejection disturbance is not observed at all during the continuous ejection test for 8 hours. <br /> B: Non-ejection or ejection disturbance is not observed for more than or equal to 2 hours and less than 8 hours during the continuous ejection test for 8 hours. <br /> C: Non-ejection or ejection disturbance is not observed for more than or equal to 1 hour and less than 2 hours during the continuous ejection test for 8 hours. <br /> D: Non-ejection or ejection disturbance is observed for less than 1 hour during the continuous ejection test for 8 hours. </p>
+      <heading id="h-00033-en" level="2">3. Ejection Stability Test 2</heading>
+      <p id="p-00112-en" num="0109">The evaluation of ejection stability in the intermittent printing was conducted under an environment of a relative humidity of 20% at a temperature of 40° C. using the printer used in Example 1. First, it was confirmed that ink is normally ejected from all nozzles. And, down-time for 2 minutes was provided under an environment of a relative humidity of 20% at a temperature of 40° C., and then, in the ejection by first droplet, the positional deviation of dots from the target value was measured by an optical microscope. Evaluation criteria are as follows. Evaluation results are shown in Table 1.</p>
+      <heading id="h-00034-en" level="2">Evaluation Criteria</heading>
+      <p id="p-00113-en" num="0110">A: Positional deviation of dots is less than or equal to 10 μm. <br /> B: Positional deviation of dots is more than 10 μm and less than or equal to 20 μm. <br /> C: Positional deviation of dots is more than 20 μm and less than or equal to 30 μm. <br /> D: Positional deviation of dots is more than 30 μm. </p>
+      <p id="p-00114-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="11" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="left" />
+              <colspec colname="3" colwidth="21pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="21pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="21pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <colspec colname="9" colwidth="21pt" align="center" />
+              <colspec colname="10" colwidth="21pt" align="center" />
+              <colspec colname="11" colwidth="21pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="11" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="11" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Ex. 1</entry>
+                  <entry>Ex. 2</entry>
+                  <entry>Ex. 3</entry>
+                  <entry>Ex. 4</entry>
+                  <entry>Ex. 5</entry>
+                  <entry>Ex. 6</entry>
+                  <entry>Ex. 7</entry>
+                  <entry>Ex. 8</entry>
+                  <entry>Ex. 9</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="11" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Core</entry>
+                  <entry>Styrene (80° C.)</entry>
+                  <entry>50</entry>
+                  <entry>20</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                  <entry>20</entry>
+                  <entry>40</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Benzyl methacrylate (54° C.)</entry>
+                  <entry>0</entry>
+                  <entry>30</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>10</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Benzyl acrylate (6° C.)</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>10</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>n-butyl methacrylate (20° C.)</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>10</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>n-butyl acrylate (−55° C.)</entry>
+                  <entry>22</entry>
+                  <entry>22</entry>
+                  <entry>30</entry>
+                  <entry>33</entry>
+                  <entry>10</entry>
+                  <entry>11</entry>
+                  <entry>28</entry>
+                  <entry>28</entry>
+                  <entry>30</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Acrylic acid (106° C.)</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Acrylonitrile (125° C.)</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>1</entry>
+                  <entry>2</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Dimethyl acrylamide (119° C.)</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>2</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry>Shell</entry>
+                  <entry>Styrene (80° C.)</entry>
+                  <entry>20</entry>
+                  <entry>30</entry>
+                  <entry>40</entry>
+                  <entry>20</entry>
+                  <entry>30</entry>
+                  <entry>20</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Benzyl methacrylate (54° C.)</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>10</entry>
+                  <entry>0</entry>
+                  <entry>10</entry>
+                  <entry>0</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Methyl acrylate (10° C.)</entry>
+                  <entry>17</entry>
+                  <entry>12</entry>
+                  <entry>15</entry>
+                  <entry>0</entry>
+                  <entry>12</entry>
+                  <entry>17</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                  <entry>10</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ethyl acrylate (−24° C.)</entry>
+                  <entry>0</entry>
+                  <entry>5</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Methyl methacrylate (105° C.)</entry>
+                  <entry>30</entry>
+                  <entry>20</entry>
+                  <entry>50</entry>
+                  <entry>14</entry>
+                  <entry>0</entry>
+                  <entry>25</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Eethyl methacrylate (65° C.)</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>10</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Acrylic acid (106° C.)</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>0</entry>
+                  <entry>8</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>10</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Methacrylic acid (227° C.)</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>6</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hydroxyethyl methacrylate (55° C.)</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>5</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Hydroxyethyl actylamide (98° C.)</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>5</entry>
+                  <entry>0</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry>Physical</entry>
+                  <entry>Particle diameter (nm)</entry>
+                  <entry>35</entry>
+                  <entry>41</entry>
+                  <entry>36</entry>
+                  <entry>47</entry>
+                  <entry>38</entry>
+                  <entry>60</entry>
+                  <entry>66</entry>
+                  <entry>80</entry>
+                  <entry>35</entry>
+                </row>
+                <row>
+                  <entry>properties</entry>
+                  <entry>Core content (mass %)</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                  <entry>40</entry>
+                  <entry>70</entry>
+                  <entry>30</entry>
+                  <entry>50</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Shell content (mass %)</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                  <entry>60</entry>
+                  <entry>30</entry>
+                  <entry>70</entry>
+                  <entry>50</entry>
+                  <entry>60</entry>
+                  <entry>60</entry>
+                  <entry>60</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Core Tg (° C.)</entry>
+                  <entry>39</entry>
+                  <entry>28</entry>
+                  <entry>29</entry>
+                  <entry>24</entry>
+                  <entry>35</entry>
+                  <entry>48</entry>
+                  <entry>34</entry>
+                  <entry>34</entry>
+                  <entry>29</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Shell Tg (° C.)</entry>
+                  <entry>76</entry>
+                  <entry>70</entry>
+                  <entry>81</entry>
+                  <entry>111</entry>
+                  <entry>65</entry>
+                  <entry>72</entry>
+                  <entry>84</entry>
+                  <entry>85</entry>
+                  <entry>84</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Shell acid value mgKOH/g</entry>
+                  <entry>54</entry>
+                  <entry>54</entry>
+                  <entry>49</entry>
+                  <entry>97</entry>
+                  <entry>89</entry>
+                  <entry>54</entry>
+                  <entry>49</entry>
+                  <entry>98</entry>
+                  <entry>49</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Core Tg − Shell Tg</entry>
+                  <entry>37</entry>
+                  <entry>42</entry>
+                  <entry>52</entry>
+                  <entry>87</entry>
+                  <entry>30</entry>
+                  <entry>18</entry>
+                  <entry>50</entry>
+                  <entry>51</entry>
+                  <entry>35</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Core mass %/shell mass %</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                  <entry>0.67</entry>
+                  <entry>2.35</entry>
+                  <entry>0.43</entry>
+                  <entry>1</entry>
+                  <entry>0.67</entry>
+                  <entry>0.67</entry>
+                  <entry>0.67</entry>
+                </row>
+                <row>
+                  <entry>Evaluation</entry>
+                  <entry>Frictional resistance test result</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>8</entry>
+                  <entry>9</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ejection stability test 1</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                  <entry>B</entry>
+                  <entry>A</entry>
+                  <entry>B</entry>
+                  <entry>B</entry>
+                  <entry>B</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ejection stability test 2</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                  <entry>A</entry>
+                  <entry>B</entry>
+                  <entry>B</entry>
+                  <entry>A</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="11" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="9" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="28pt" align="left" />
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="112pt" align="left" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="28pt" align="center" />
+              <colspec colname="8" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Comp.</entry>
+                  <entry>Comp.</entry>
+                  <entry>Comp.</entry>
+                  <entry>Comp.</entry>
+                  <entry>Comp.</entry>
+                  <entry>Comp.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Ex. 1</entry>
+                  <entry>Ex. 2</entry>
+                  <entry>Ex. 3</entry>
+                  <entry>Ex. 4</entry>
+                  <entry>Ex. 5</entry>
+                  <entry>Ex. 6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="8" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Core</entry>
+                  <entry>Styrene (80° C.)</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                  <entry>45</entry>
+                  <entry>50</entry>
+                  <entry>22</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Benzyl methacrylate (54° C.)</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Benzyl acrylate (6° C.)</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>n-butyl methacrylate (20° C.)</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>22</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>n-butyl acrylate (−55° C.)</entry>
+                  <entry>22</entry>
+                  <entry>22</entry>
+                  <entry>22</entry>
+                  <entry>22</entry>
+                  <entry>0</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Acrylic acid (106° C.)</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>5</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Acrylonitrile (125° C.)</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Dimethyl acrylamide (119° C.)</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Shell</entry>
+                  <entry>Styrene (80° C.)</entry>
+                  <entry>20</entry>
+                  <entry>20</entry>
+                  <entry>20</entry>
+                  <entry>20</entry>
+                  <entry>20</entry>
+                  <entry>20</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Benzyl methacrylate (54° C.)</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Methyl acrylate (10° C.)</entry>
+                  <entry>17</entry>
+                  <entry>17</entry>
+                  <entry>17</entry>
+                  <entry>17</entry>
+                  <entry>17</entry>
+                  <entry>30</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Ethyl acrylate (−24° C.)</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>15</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Methyl methacrylate (105° C.)</entry>
+                  <entry>30</entry>
+                  <entry>30</entry>
+                  <entry>30</entry>
+                  <entry>30</entry>
+                  <entry>30</entry>
+                  <entry>15</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Eethyl methacrylate (65° C.)</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Acrylic acid (106° C.)</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Methacrylic acid (227° C.)</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Hydroxyethyl methacrylate (55° C.)</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Hydroxyethyl actylamide (98° C.)</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Physical</entry>
+                  <entry>Particle diameter (nm)</entry>
+                  <entry>150</entry>
+                  <entry>85</entry>
+                  <entry>9</entry>
+                  <entry>35</entry>
+                  <entry>37</entry>
+                  <entry>45</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>properties</entry>
+                  <entry>Core content (mass %)</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Shell content (mass %)</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Core Tg (° C.)</entry>
+                  <entry>39</entry>
+                  <entry>39</entry>
+                  <entry>39</entry>
+                  <entry>41</entry>
+                  <entry>62</entry>
+                  <entry>−14</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Shell Tg (° C.)</entry>
+                  <entry>76</entry>
+                  <entry>76</entry>
+                  <entry>76</entry>
+                  <entry>76</entry>
+                  <entry>76</entry>
+                  <entry>49</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Shell acid value mgKOH/g</entry>
+                  <entry>54</entry>
+                  <entry>54</entry>
+                  <entry>54</entry>
+                  <entry>54</entry>
+                  <entry>54</entry>
+                  <entry>54</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Core Tg − Shell Tg</entry>
+                  <entry>37</entry>
+                  <entry>37</entry>
+                  <entry>42</entry>
+                  <entry>35</entry>
+                  <entry>14</entry>
+                  <entry>90</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Core mass %/shell mass %</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                  <entry>1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Evaluation</entry>
+                  <entry>Frictional resistance test result</entry>
+                  <entry>3</entry>
+                  <entry>4</entry>
+                  <entry>5</entry>
+                  <entry>2</entry>
+                  <entry>8</entry>
+                  <entry>2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Ejection stability test 1</entry>
+                  <entry>C</entry>
+                  <entry>C</entry>
+                  <entry>D</entry>
+                  <entry>D</entry>
+                  <entry>B</entry>
+                  <entry>C</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Ejection stability test 2</entry>
+                  <entry>C</entry>
+                  <entry>C</entry>
+                  <entry>D</entry>
+                  <entry>C</entry>
+                  <entry>C</entry>
+                  <entry>D</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="8" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00115-en" num="0111">From test results of the ink compositions for ink jet recording of Examples 1 to 9, it was found that the ejection stability thereof from the nozzle of a recording head become good, and the frictional resistance of the image recorded on a recording medium becomes good. In addition, the fact that the frictional resistance in the ink compositions of Examples was improved shows that the fixability thereof was also improved.</p>
+      <p id="p-00116-en" num="0112">In the ink composition for ink jet recording of Comparative Example 1, unlike Example 1, polymer particles having a large particle diameter of 150 nm are obtained, and thus sufficient frictional resistance and ejection stability cannot be obtained, because commonly known emulsion polymerization, in which an emulsifier (sodium dodecylbenzene sulfonate) is added to the raw materials of Example 1 in an amount of 1 part to perform polymerization, is used.</p>
+      <p id="p-00117-en" num="0113">In the ink composition for ink jet recording of Comparative Example 2, polymer particles has a large particle diameter of 85 nm, and thus sufficient frictional resistance and ejection stability cannot be obtained, because the amount of a polymerization initiator is reduced to ⅕ to increase polymerization time by three times although using soap-free polymerization.</p>
+      <p id="p-00118-en" num="0114">In the ink composition for ink jet recording of Comparative Example 3, polymer particles has a small particle diameter of 9 nm, and thus sufficient frictional resistance and ejection stability cannot be obtained, because the amount of a polymerization initiator is increased by ten times to reduce polymerization time to ⅕.</p>
+      <p id="p-00119-en" num="0115">In the ink composition for ink jet recording of Comparative Example 4, sufficient frictional resistance cannot be obtained, and ejection stability is poor, because a core polymer has an acid value.</p>
+      <p id="p-00120-en" num="0116">In the ink composition for ink jet recording of Comparative Example 5, frictional resistance is good, but sufficient ejection stability cannot be obtained, because Tg of any one of core polymer and shell polymer is higher than or equal to 60° C.</p>
+      <p id="p-00121-en" num="0117">In the ink composition for ink jet recording of Comparative Example 6, sufficient frictional resistance cannot be obtained, and ejection stability is also poor, because Tg of any one of core polymer and shell polymer is lower than 60° C.</p>
+      <p id="p-00122-en" num="0118">The entire disclosure of Japanese Patent Application No. 2014-038426, filed Feb. 28, 2014 is expressly incorporated by reference herein.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. An ink composition, comprising:
+<claim-text>a color material;</claim-text><claim-text>water; and</claim-text><claim-text>a polymer particle,</claim-text><claim-text>wherein the polymer particle has a core-shell structure including a core polymer and a shell polymer,</claim-text><claim-text>wherein the polymer particle has an average particle diameter of 10 nm to 80 nm,</claim-text><claim-text>wherein the core polymer has a glass transition temperature of lower than 60° C., and the shell polymer has a glass transition temperature of higher than or equal to 60° C., and</claim-text><claim-text>wherein the core polymer includes an aromatic monomer having at least a vinyl group as a constitutional unit.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The ink composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, which is recorded on a heated recording medium.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The ink composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>,
+<claim-text>wherein the shell polymer includes an aromatic monomer as a constitutional unit, and</claim-text><claim-text>wherein the shell polymer has an acid value, and the core polymer does not have an acid value.</claim-text></claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The ink composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>,
+<claim-text>wherein the polymer particle is synthesized without substantially using an emulsifier.</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The ink composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a cyclic nitrogen compound or an aprotic polar solvent,
+<claim-text>wherein the recording medium is made of polyvinyl chloride.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The ink composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>,
+<claim-text>wherein the core polymer includes a nitrogen-containing monomer, and the recording medium is made of polypropylene, polyethylene terephthalate, nylon, or polyethylene.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The ink composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>,
+<claim-text>wherein the shell polymer includes (meth)acrylic acid as a constitutional unit.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The ink composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>,
+<claim-text>wherein the shell polymer has an acid value of 20 mgKOH/g to 120 mgKOH/g.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. A recording apparatus, comprising:
+<claim-text>composition according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>; and</claim-text><claim-text>an ejection head for ejecting the ink composition.</claim-text></claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. A recording apparatus, comprising:
+<claim-text>composition according to <claim-ref idref="clm-00002-en">claim 2</claim-ref>; and</claim-text><claim-text>an ejection head for ejecting the ink composition.</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. A recording apparatus, comprising:
+<claim-text>composition according to <claim-ref idref="clm-00003-en">claim 3</claim-ref>; and</claim-text><claim-text>an ejection head for ejecting the ink composition.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. A recording apparatus, comprising:
+<claim-text>composition according to <claim-ref idref="clm-00004-en">claim 4</claim-ref>; and</claim-text><claim-text>an ejection head for ejecting the ink composition.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. A recording apparatus, comprising:
+<claim-text>composition according to <claim-ref idref="clm-00005-en">claim 5</claim-ref>; and</claim-text><claim-text>an ejection head for ejecting the ink composition.</claim-text></claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. A recording apparatus, comprising:
+<claim-text>composition according to <claim-ref idref="clm-00006-en">claim 6</claim-ref>; and</claim-text><claim-text>an ejection head for ejecting the ink composition.</claim-text></claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. A recording apparatus, comprising:
+<claim-text>composition according to <claim-ref idref="clm-00007-en">claim 7</claim-ref>; and</claim-text><claim-text>an ejection head for ejecting the ink composition.</claim-text></claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. A recording apparatus, comprising:
+<claim-text>composition according to <claim-ref idref="clm-00008-en">claim 8</claim-ref>; and</claim-text><claim-text>an ejection head for ejecting the ink composition.</claim-text></claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The recording apparatus according to <claim-ref idref="clm-00009-en">claim 9</claim-ref>,
+<claim-text>wherein the ejection head includes nozzles for ejecting the ink composition, and dots of the ink composition are ejected in a multi-size from one of the nozzles.</claim-text></claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The recording apparatus according to <claim-ref idref="clm-00010-en">claim 10</claim-ref>,
+<claim-text>wherein the ejection head includes nozzles for ejecting the ink composition, and dots of the ink composition are ejected in a multi-size from one of the nozzles.</claim-text></claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The recording apparatus according to <claim-ref idref="clm-00011-en">claim 11</claim-ref>,
+<claim-text>wherein the ejection head includes nozzles for ejecting the ink composition, and dots of the ink composition are ejected in a multi-size from one of the nozzles.</claim-text></claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The recording apparatus according to <claim-ref idref="clm-00012-en">claim 12</claim-ref>,
+<claim-text>wherein the ejection head includes nozzles for ejecting the ink composition, and dots of the ink composition are ejected in a multi-size from one of the nozzles. </claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247045A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247045A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247045A1_00002.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150247045A1-20150903-M00001.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150247045A1.PDF" type="pdf" size="732200" pages="13" />
+</lexisnexis-patent-document>

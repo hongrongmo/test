@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257355A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030138" date-changed="20160118" time-changed="123617">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121314939">
+        <country>US</country>
+        <doc-number>20150257355</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14215677</doc-number>
+        <date>20140317</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20160112">
+      <classification-ipcr sequence="1">
+        <text>A01J   5/003       20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>5</main-group>
+        <subgroup>003</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A01J   5/017       20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>5</main-group>
+        <subgroup>017</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A01K   1/12        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>K</subclass>
+        <main-group>1</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A01K  13/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>K</subclass>
+        <main-group>13</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>A61B   5/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>A61B   5/024       20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>024</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="7">
+        <text>A61B   5/117       20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>117</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="8">
+        <text>A61D  17/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>D</subclass>
+        <main-group>17</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="9">
+        <text>A61F   7/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>F</subclass>
+        <main-group>7</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160112">
+      <classification-cpc sequence="1">
+        <text>A01J   5/003       20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>5</main-group>
+        <subgroup>003</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A01J   5/0175      20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>5</main-group>
+        <subgroup>0175</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A01J   7/02        20130101 LI20151008BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>J</subclass>
+        <main-group>7</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151008</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A01K   1/126       20130101 LI20151030BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>K</subclass>
+        <main-group>1</main-group>
+        <subgroup>126</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151030</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A01K  13/001       20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>K</subclass>
+        <main-group>13</main-group>
+        <subgroup>001</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61B   5/0077      20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>0077</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61B   5/01        20130101 LA20151013BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>01</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151013</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61B   5/02411     20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>02411</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61B   5/6893      20130101 LA20151013BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>6893</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151013</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A61B   8/02        20130101 LA20151013BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>8</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151013</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>A61B   8/0866      20130101 LA20151021BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>8</main-group>
+        <subgroup>0866</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151021</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="12">
+        <text>A61B2503/02        20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2503</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="13">
+        <text>A61B2503/40        20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>2503</main-group>
+        <subgroup>40</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="14">
+        <text>A61D  17/006       20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>D</subclass>
+        <main-group>17</main-group>
+        <subgroup>006</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="15">
+        <text>Y10S 901/01        20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>S</subclass>
+        <main-group>901</main-group>
+        <subgroup>01</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="16">
+        <text>Y10S 901/47        20130101 LA20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>S</subclass>
+        <main-group>901</main-group>
+        <subgroup>47</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">26</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">SYSTEM AND METHOD FOR TREATING LIVESTOCK</invention-title>
+    <references-cited date-changed="20151223">
+      <patent-citations name="patcit" date-changed="20151223" />
+      <citation>
+        <patcit num="1" dnum="US2009308327A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090308327</doc-number>
+            <kind>A1</kind>
+            <name>VAN DEN BERG KAREL [NL]</name>
+            <date>20091217</date>
+          </document-id>
+          <application-date>
+            <date>20060928</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US2012210938A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20120210938</doc-number>
+            <kind>A1</kind>
+            <name>HOFMAN HENK [NL], et al</name>
+            <date>20120823</date>
+          </document-id>
+          <application-date>
+            <date>20120417</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US2003154925A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20030154925</doc-number>
+            <kind>A1</kind>
+            <name>VAN DEN BERG KAREL [NL], et al</name>
+            <date>20030821</date>
+          </document-id>
+          <application-date>
+            <date>20030219</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Afimilk Agricultural Cooperative Ltd.</orgname>
+            <role>03</role>
+            <address>
+              <city>Kibutz Afikim</city>
+              <country>IL</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>PINSKY</last-name>
+            <first-name>Niv</first-name>
+            <address>
+              <city>Kibbutz Afikim</city>
+              <country>IL</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Garti</last-name>
+            <first-name>Efraim</first-name>
+            <address>
+              <city>Zichron Yaakov</city>
+              <country>IL</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Cohen</last-name>
+            <first-name>Itamar</first-name>
+            <address>
+              <city>Givat Yoav</city>
+              <country>IL</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150924">
+      <main-family family-id="173668028">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015140780</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20150219</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257355</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140317</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173668027">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2015140780</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20150219</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257355</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20140317</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A system and method for treating livestock may include a ramp for containing dairy livestock and one or more mobile units configured to travel on the ramp, below the dairy livestock, and perform at least one action related to a treatment of the livestock. A mobile unit may be adapted to travel to a predefined location within a stall, and attach a milking equipment unit to a cow in the stall. A plurality of mobile units and a central management unit may be configured to dynamically cause at least some of the plurality of mobile units to each perform a portion of a treatment or task.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20140910</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257355A1</docdb-publication-number>
+      <docdb-application-id>444510402</docdb-application-id>
+      <new-owner>AFIMILK AGRICULTURAL COOPERATIVE LTD., ISRAEL</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:PINSKY, NIV;GARTI, EFRAIM;COHEN, ITAMAR;SIGNING DATES FROM 20140319 TO 20140323;REEL/FRAME:033704/0993</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">The present invention is in the field treating livestock. In particular, the present invention is directed to milking, disinfecting and other treatment of dairy livestock.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">Automated systems for treating dairy livestock are known. For example, robotic milking machines are known. Typically, a milking robot comprises an arm that attaches a milking unit to a cow (or other dairy livestock). Other operations of a milking robot arm may include removing a milking unit from a cow, placing the milking unit in a housing etc.</p>
+      <p id="p-00003-en" num="0003">However, known systems and methods suffer from a number of drawbacks. For example, the arm of a milking robot travels relatively long distances and covers large spaces. For example, in order to attach a milking unit to a cow, the arm needs to enter (and exit) the stall containing the cow.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF EMBODIMENTS OF THE INVENTION</heading>
+      <p id="p-00004-en" num="0004">Embodiments of the invention may include a system and method for treating livestock. In particular, embodiments of the invention may include a system and method directed to milking, disinfecting and other treatment of dairy livestock. An embodiment of a system may include a ramp for containing dairy livestock and one or more mobile units configured to travel on the ramp, below the dairy livestock, and perform at least one action related to a treatment of the dairy livestock.</p>
+      <p id="p-00005-en" num="0005">An action performed by a mobile unit may be, or may include, milking, disinfecting, cleaning the ramp, washing the livestock, acquiring an image, identifying the livestock, testing for pregnancy, capturing a heartbeat of a fetus and heating an organ of the livestock.</p>
+      <p id="p-00006-en" num="0006">An embodiment of a system may include ramp adapted to translate both the livestock and the mobile unit. An embodiment of a system may include ramp configured to house a milking equipment unit and a mobile unit may be adapted to detach the milking equipment unit from a housing and attach the milking equipment unit to dairy livestock.</p>
+      <p id="p-00007-en" num="0007">A mobile unit may be adapted to determine its location and, based on its location, determine a location of a milking equipment unit. A plurality of mobile units and a central management unit may be configured to dynamically cause at least some of the plurality of mobile units to each perform a portion of a treatment or task. A first mobile unit may be adapted to attach a first portion of a milking unit to the dairy livestock and a second mobile unit may be adapted to attach a second portion of the milking equipment to the dairy livestock.</p>
+      <p id="p-00008-en" num="0008">An embodiment of a system may include ramp that includes a guide designed to keep the mobile unit within a predefined path under the livestock. An embodiment of a system may include a ramp that includes stalls and a mobile unit may be adapted to automatically travel from a first stall to a second stall. A ramp may include a mark and a mobile unit may be adapted to use the mark in order to determine its location with respect to a stall. A mobile unit may be configured to travel between legs of the livestock.</p>
+      <p id="p-00009-en" num="0009">An embodiment of a system may include a maintenance pit for servicing mobile units. A mobile unit may travel from a guide to a service or maintenance pit. A first mobile unit may be adapted or caused complete an action which at least one other mobile unit failed to complete. A mobile unit may include sensors and/or treatment units.</p>
+      <p id="p-00010-en" num="0010">An embodiment of a system may include a central management unit adapted to instruct or cause a mobile unit to perform an action. An embodiment of a system may include a set of mobile units configured to inter-communicate in order to collaborate in performing an action related to treatment of the livestock.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00011-en" num="0011">The subject matter regarded as the invention is particularly pointed out and distinctly claimed in the concluding portion of the specification. The invention, however, both as to organization and method of operation, together with objects, features and advantages thereof, may best be understood by reference to the following detailed description when read with the accompanied drawings. Embodiments of the invention are illustrated by way of example and not limitation in the figures of the accompanying drawings, in which like reference numerals indicate corresponding, analogous or similar elements, and in which:</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 1</figref> shows an exemplary system according to embodiments of the invention;</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 2</figref> schematically shows a mobile unit according to embodiments of the invention;</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 3</figref> schematically shows components included in a mobile unit according to embodiments of the invention; and</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 4</figref> shows a system according to embodiments of the invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <p id="p-00016-en" num="0016">It will be appreciated that for simplicity and clarity of illustration, elements shown in the figures have not necessarily been drawn accurately or to scale. For example, the dimensions of some of the elements may be exaggerated relative to other elements for clarity, or several physical components may be included in one functional block or element. Further, where considered appropriate, reference numerals may be repeated among the figures to indicate corresponding or analogous elements.</p>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF EMBODIMENTS OF THE INVENTION</heading>
+      <p id="p-00017-en" num="0017">Although embodiments of the invention are not limited in this regard, discussions utilizing terms such as, for example, “processing,” “computing,” “calculating,” “determining,” “establishing”, “analyzing”, “checking”, or the like, may refer to operation(s) and/or process(es) of a computer, a computing platform, a computing system, or other electronic computing device, that manipulates and/or transforms data represented as physical (e.g., electronic) quantities within the computer's registers and/or memories into other data similarly represented as physical quantities within the computer's registers and/or memories or other information non-transitory processor-readable storage medium that may store instructions, which when executed by the processor, cause the processor to perform operations and/or processes.</p>
+      <p id="p-00018-en" num="0018">Although embodiments of the invention are not limited in this regard, the terms “plurality” and “a plurality” as used herein may include, for example, “multiple” or “two or more”. The terms “plurality” or “a plurality” may be used throughout the specification to describe two or more components, devices, elements, units, parameters, or the like. Although embodiments of the invention are not limited in this regard, the term “set” when used herein may include one or more items.</p>
+      <p id="p-00019-en" num="0019">Although dairy livestock (and in particular, cows) are mainly discussed herein, it will be understood that embodiments of the invention may be applicable to any type of livestock (e.g., goats, sheep, horses etc.). Although milking of dairy livestock is mainly discussed herein it will be understood that embodiments of the invention may be applicable to other operations, or treatments of livestock. For example, treatments such as disinfecting or washing the livestock, heating an organ of the livestock and/or milking may all be enabled or performed by a system or method according to embodiments of the invention. Embodiments of the invention may be applicable to operations such as; acquiring an image, testing for pregnancy or capturing a heartbeat of a fetus and/or identifying the livestock.</p>
+      <p id="p-00020-en" num="0020">Reference is made to <figref>FIG. 1</figref> that shows an exemplary system <b>105</b> according to embodiments of the invention. As shown by <figref>FIG. 1</figref>, system <b>105</b> may include a walkway or ramp <b>130</b>, an enclosure, fence or stall <b>120</b> for containing livestock (e.g., containing cow <b>110</b> as shown), a milking unit <b>150</b> and a mobile unit <b>140</b>. In embodiment, mobile unit <b>140</b> may be a mobile robot designed to travel on ramp <b>130</b> and under the livestock (e.g., under cow <b>110</b> as shown in <figref>FIG. 1</figref>). For example, mobile unit <b>140</b> may be designed and manufactured such that it freely travels under, and between the legs of, the livestock.</p>
+      <p id="p-00021-en" num="0021">Various models of mobile unit <b>140</b> may be contemplated, for example, a model used for goats may be smaller than one used for cows. In one embodiment, mobile unit <b>140</b> is adapted for treating cows. Assuming a space of up to 60 centimeters in height is available under an average cow, mobile unit <b>140</b>, including an attached arm, may be designed such that it can freely travel through a space that is 50 centimeters in height. Mobile unit <b>140</b> may be designed such that it can travel between the fore and hind legs of a cow. Accordingly, mobile unit <b>140</b> may small enough in size and may travel under cows standing on a ramp as described.</p>
+      <p id="p-00022-en" num="0022">Including a small mobile unit <b>140</b> as described, embodiments of the invention enable advantages which that cannot be achieved by system and methods known in the art. As discussed above, robotic milking machines known in the art use an arm that is based (or extends from) outside the stall containing the livestock. In operation, such arm needs to extend into the stall and under the livestock, e.g., in order to attach a milking unit. An arm extending from outside the stall may harm the livestock when traveling since its path may collide with the livestock, e.g., the legs of a cow in the stall. Moreover, the distance traveled by an arm based (or extending from) outside the stall is relatively long.</p>
+      <p id="p-00023-en" num="0023">Designed to fit, and operate, under the livestock, and travel between the legs of the livestock, mobile unit <b>140</b> as described herein eliminates some of the above mentioned drawbacks. For example, as further described herein, mobile unit <b>140</b> may travel to a location under the livestock from the side of the livestock, thus, entering a location between the fore and hind legs along a path does not collide with the legs of the livestock.</p>
+      <p id="p-00024-en" num="0024">Embodiments of the invention enable treating livestock by a system that minimizes the movement or distance travelled by an arm. For example, movement of arm <b>210</b> may be minimal, e.g., extending from under the cow to a housing of a milking unit that may be in close proximity.</p>
+      <p id="p-00025-en" num="0025">Reference is made to <figref>FIG. 2</figref>, schematically showing a mobile unit <b>140</b> according to embodiments of the invention. As shown, mobile unit <b>140</b> may include wheels <b>210</b> enabling it to travel, e.g., on ramp <b>130</b> as described. It will be understood that other means for enabling a mobility of mobile unit <b>140</b> may be used. For example, instead of wheels <b>210</b>, mobile unit <b>140</b> may be equipped with continuous tracks (e.g., as used in bulldozers).</p>
+      <p id="p-00026-en" num="0026">As shown, mobile unit <b>140</b> may include an arm <b>215</b> having joints <b>220</b>. As shown, arm <b>215</b> may include a gripping unit <b>250</b>, a set of sensor units <b>230</b> and a set of treatment units <b>240</b>. Arm <b>215</b> may be designed such that it may extend and rotate such that gripping unit <b>250</b>, sensor units <b>230</b> and treatment units <b>240</b> may be placed at a chosen location and/or orientation. For example, although not shown, mobile unit <b>140</b> (or arm <b>215</b>) may include electric motors adapted to move, rotate and/or extend arm <b>215</b> such that gripping unit <b>250</b>, sensor units <b>230</b> and treatment units <b>240</b> are brought to a selected location and/or orientation.</p>
+      <p id="p-00027-en" num="0027">Gripping unit <b>250</b> may be any unit adapted to selectively hold and release an object. For example, gripping unit <b>250</b> may be adapted to hold a milking unit (e.g., securely hold an assembly of teat cups used for milking), and, gripping unit <b>250</b> may be adapted to release the milking unit (e.g., after the milking unit is attached to a cow).</p>
+      <p id="p-00028-en" num="0028">Sensor units <b>230</b> may include any sensing device, system or module. For example, sensing units <b>230</b> may include a camera for acquiring an image of an organ of a cow (e.g., in order to identify the cow). In an embodiment of a system, sensing units <b>230</b> may include sensors for testing for pregnancy. Testing for pregnancy using an ultrasonic sensor is known in the art. For example, in an embodiment of a system, sensor units <b>230</b> include an ultrasonic sensor used in order to test livestock for pregnancy wherein the actual testing may be performed as known in the art. In the same or other embodiment of a system, sensing units <b>230</b> may include sensors for capturing a heartbeat of a fetus. Any other sensors may be included in sensors units <b>230</b>.</p>
+      <p id="p-00029-en" num="0029">Treatment units <b>240</b> may include any applicable device, system or module. For example, treatment units <b>240</b> may include a washing unit adapted to wash an organ (e.g., washing the udder of a cow before or after milking). For example, mobile unit <b>140</b> may include an assembly including a tank or container that contains liquid (e.g., water, solvent or other liquid solution). The assembly may include pipes to run the liquid from the tank to jets on nozzles included in treatment units <b>240</b>. The assembly may include a pump to force liquids from a liquid container through the pipes and jets.</p>
+      <p id="p-00030-en" num="0030">An assembly included in mobile unit as described herein may be used for cleaning or washing any object. For example, arm <b>215</b> may be positioned such that jets in treatment units <b>240</b> are directed downwards, at a floor. For example, mobile unit <b>140</b> may wash the floor of ramps <b>130</b> and <b>405</b> described herein.</p>
+      <p id="p-00031-en" num="0031">Sensor units <b>230</b> may include a thermometer for determining a temperature of the livestock or a temperature of an organ of a livestock. For example, udder infections may be identified or detected for example by measuring the temperature of the udder. Any data collected by sensor units <b>230</b> may be stored on mobile unit <b>140</b>, may be processed by a controller included in mobile unit <b>140</b> as described herein and/or may be sent to a remote computer using communication components included in mobile unit as described herein (e.g., with reference to <figref>FIG. 3</figref>).</p>
+      <p id="p-00032-en" num="0032">For the sake of simplicity and clarity, various elements that may be included in mobile unit <b>140</b> are not shown in <figref>FIG. 2</figref>. For example, wires providing electric power to arm <b>215</b>, sensor units <b>230</b> and treatment units <b>240</b> may be included but are not shown. Other elements, e.g., wires carrying digital data or signals to/from sensor units <b>230</b> and treatment units <b>240</b> are not shown. Other elements included and not shown may be pipes or conduits used for running liquids (e.g., liquids used for washing or disinfecting). For example, mobile unit <b>140</b> may include an assembly including a container that contains disinfectant liquid (e.g., Iodine) and a pump for causing the liquid to be transferred from the tank and sprayed on an udder of a cow through nozzles or jets in a disinfecting unit included in treatment units <b>240</b>.</p>
+      <p id="p-00033-en" num="0033">Reference is made to <figref>FIG. 3</figref>, schematically showing components that may be included in mobile unit <b>140</b> according to embodiments of the invention. As shown, mobile unit <b>140</b> may include a controller <b>310</b>, a memory <b>315</b>, a radio frequency (RF) receive/transmit (Rx/Tx) unit <b>335</b> (also referred to as “RF unit <b>335</b>” herein), a data storage unit <b>340</b>, input/output (I/O) devices <b>345</b>, a power source <b>320</b>, a set of motors <b>325</b> and a set of sensors <b>330</b>. For the sake of simplicity and clarity, some components that may be included in mobile unit <b>140</b> are omitted from <figref>FIG. 3</figref>. For example, arm <b>215</b> and wheels <b>210</b> are not shown in <figref>FIG. 3</figref>. Power source may be any suitable power source for providing power to any components of mobile unit <b>140</b>. For example, power source <b>320</b> may be a battery that provides electric energy to motors <b>325</b>, controller <b>310</b>, RF unit <b>335</b> and/or other components included in mobile unit <b>140</b>. Accordingly, mobile unit <b>140</b> may include an internal power source.</p>
+      <p id="p-00034-en" num="0034">Motors <b>325</b> may be electric motors that move arm <b>215</b>, rotate wheels <b>210</b> or drive other components included in mobile unit <b>140</b>. Sensors <b>330</b> may be any suitable sensors. For example, sensors <b>330</b> may be adapted to sense light, infra red (IR) light, magnetic flux and the like. For example and as described herein, a sensor included in sensors <b>330</b> may sense a mark or markers on path or ramp <b>130</b> thus enabling mobile unit <b>140</b> to position itself at predefined locations on ramp <b>130</b>.</p>
+      <p id="p-00035-en" num="0035">RF unit <b>335</b> may be a component enabling mobile unit <b>140</b> to communicate with any component in a system as described herein. For example, RF unit <b>335</b> may be a WiFi (also spelled Wi-Fi or Wifi) component or device enabling mobile unit <b>140</b> to communicate with a management system or with other mobile units, e.g., in a system that includes a remote management system and/or a plurality of mobile units <b>140</b> as described herein.</p>
+      <p id="p-00036-en" num="0036">Controller <b>310</b> may be, for example, a central processing unit processor (CPU), a chip or any suitable computing or computational device. In some embodiments, more than one controller <b>310</b> may be used. For example, a plurality of controllers similar to controller <b>310</b> may be included in mobile unit <b>140</b>.</p>
+      <p id="p-00037-en" num="0037">Memory <b>315</b> may be or may include, for example, a Random Access Memory (RAM), a read only memory (ROM), a Dynamic RAM (DRAM), a Synchronous DRAM (SD-RAM), a double data rate (DDR) memory chip, a Flash memory, a volatile memory, a non-volatile memory, a cache memory or other suitable memory units or storage units. In an embodiment, memory <b>315</b> is a non-transitory processor-readable storage medium that stores instructions and the instructions are executed by controller <b>310</b>. Memory <b>315</b> may be or may include a plurality of, possibly different memory units.</p>
+      <p id="p-00038-en" num="0038">Executable code <b>316</b> may be any executable code, e.g., an application, a program, a process, software, a task or a script. Executable code <b>316</b> may be executed by controller <b>310</b> possibly under control of an operating system. For example, executable code <b>316</b> may be one or more applications that control or manage components in mobile unit <b>140</b>. For example, when executed by controller <b>310</b>, executable code <b>316</b> may cause controller <b>310</b> to control or manage arm <b>215</b>, treatment units <b>240</b>, sensors <b>230</b>, RF unit <b>335</b>, motors <b>325</b> and other components included in mobile unit <b>140</b>. Where applicable, executable code <b>316</b>, when executed by controller <b>310</b> may cause controller <b>310</b> to carry out operations described herein in real-time. For example, controller <b>310</b> may be configured to update, process and/or act upon information at the same rate the information, or a relevant event, are received. Executable code <b>316</b> may include a plurality of executable code segments. For example, a first code segment may manage and/or interact with RF unit <b>335</b> and a second code segment included in executable code <b>316</b> may control motors <b>325</b>. Executable code <b>316</b> may include an operating system (OS) that may a commercial operating system designed and/or configured to perform tasks involving coordination, scheduling, arbitration, supervising, controlling or otherwise managing operation of controller <b>310</b>, for example, scheduling execution of programs.</p>
+      <p id="p-00039-en" num="0039">Data storage unit <b>340</b> may be any suitable system or device capable of storing digital information. For example, data storage unit <b>340</b> may include a hard disk, a universal serial bus (USB) device, a CD-Recordable (CD-R) drive and media, a nonvolatile memory chip or any other memory. Content may be stored in data storage unit <b>340</b> and may be loaded from data storage unit <b>340</b> into memory <b>315</b> where it may be processed by controller <b>310</b>. Content may be stored in data storage unit <b>340</b> and may be sent, e.g., using RF unit <b>335</b>, from data storage unit <b>340</b> to a remote computer or system. For example, data acquired by sensor units <b>230</b> may be stored in data storage unit <b>340</b> and may later be extracted from data storage unit <b>340</b> and sent or uploaded to a remote computer.</p>
+      <p id="p-00040-en" num="0040">Input/Output (I/O) devices <b>345</b> may be or may include a mouse, a keyboard, a touch screen or pad or any suitable input device. It will be recognized that any suitable number of input devices may be operatively connected to mobile unit <b>140</b> or controller <b>310</b>. I/O devices <b>345</b> may include one or more displays, speakers and/or any other suitable output devices. It will be recognized that any suitable number of output devices may be operatively connected to mobile unit <b>140</b> or controller <b>310</b>. Any applicable input/output (I/O) devices may be connected to mobile unit <b>140</b> or controller <b>310</b>. For example, a wired or wireless network interface card (NIC), a modem, printer or facsimile machine, a universal serial bus (USB) device or external hard drive may be included in I/O devices <b>345</b>.</p>
+      <p id="p-00041-en" num="0041">Embodiments of the invention may include a mini robot (e.g., in the form of mobile unit <b>140</b>) adapted to travel on a ramp and below dairy livestock, For example, an embodiment of a system may include a mini robot adapted to travel on a ramp on which livestock is standing. An embodiment of a system may include a mini robot adapted to travel to a spot under a cow and park in at the predefined spot, e.g., as further described herein. In an embodiment, the mini robot or mobile unit may carry equipment usable for treating livestock. For example, the mini robot may carry, or extract from a housing, a milking unit and attach the milking unit to a cow. The milking robot may park under the livestock and, when parked, perform a treatment. For example, a treatment may be milking, disinfecting, obtaining measurements and the like. As described, a mini robot or mobile unit may travel on a ramp on which the livestock is standing. For example, a ramp on which cows are standing may include a guide or rail and a mini robot or mobile unit may travel along the guide or rail.</p>
+      <p id="p-00042-en" num="0042">A method of treating dairy livestock may include navigating a mobile unit to a location under the livestock; and carrying out, by the mobile unit, at least one action related to a treatment of the dairy livestock. It will be understood that portions of the operations such as milking, disinfecting, washing and obtaining measurements may include usage of equipment as known in the art. For example, the actual washing of udders of cows as described herein may be done as known in the art. Similarly, using jets to spray a disinfectant liquid may be as known in the art. Accordingly, for the sake of clarity and simplicity, details related to some of the operations performed by a mini robot or mobile unit as described herein are assumed to be understood or known to a person having ordinary skill in the art and are not described in detail.</p>
+      <p id="p-00043-en" num="0043">Reference is made to <figref>FIG. 4</figref> that shows a system <b>400</b> according to embodiments of the invention. As described herein, system <b>400</b> may be included in or operated as a milking parlour or milking platform. As shown, system <b>400</b> may include a ramp <b>405</b>. For example, ramp <b>405</b> may be a platform on which cows stand being milked or treated. As shown by arrow <b>406</b>, ramp or platform <b>405</b> may rotate, with the livestock on it. As shown, ramp <b>405</b> may include a guide or rail <b>410</b> for guiding mobile units. As shown by mobile units <b>441</b>, <b>442</b>, <b>443</b>, <b>444</b>, <b>445</b>, <b>446</b>, <b>447</b> and <b>415</b>, mobile units that may be similar to mobile unit <b>140</b> described herein may be placed on ramp <b>405</b> and may travel on ramp <b>405</b>, e.g., forward or backwards along guide <b>410</b> or out to a maintenance pit. As shown system <b>400</b> may include a pit <b>435</b>. For example, as shown by mobile unit <b>441</b>, a mobile unit may exit guide <b>410</b> into a maintenance pit where it may be serviced. As shown by arrow <b>461</b>, cows may enter or mount ramp <b>405</b> through a dedicated opening and as shown by arrow <b>461</b>, cows may exit ramp <b>405</b> through a dedicated opening or gate.</p>
+      <p id="p-00044-en" num="0044">System <b>400</b> may include a component for housing a milking unit after milking is completed. For example, as shown by assembly <b>420</b>, an assembly for housing milking equipment may be included in ramp <b>405</b>. For example, when placed in assembly <b>420</b>, a milking unit may be washed, disinfected and the like. A system may include a component for placing milking units in a dedicated place or holder that is relatively close to the location of a cow when milked. For example, as shown by arrangement <b>430</b>, special holders may be included in ramp <b>405</b> and a milking unit may be placed in the holder or holders. For example, quartets of holders <b>430</b> may separately hold teat cups. As shown by arm <b>425</b>, a system may include an arm adapted to extract or fetch a milking unit from assembly <b>420</b> and place the milking unit in holders <b>430</b>. In one embodiment, holders <b>430</b> are located at a minimal distance from the cow.</p>
+      <p id="p-00045-en" num="0045">As shown, system <b>400</b> may include a management unit <b>470</b> that may include an RF unit enabling management unit <b>470</b> to communicate with other components of system <b>400</b>. For example, management unit <b>470</b> may communicate with mobile units <b>441</b>, <b>442</b>, <b>443</b>, <b>444</b>, <b>445</b>, <b>446</b>, <b>447</b> and <b>415</b>. As shown, management unit <b>470</b> may include a controller or processor <b>474</b> and a memory <b>472</b> that may include software, instructions or executable code <b>473</b>. When executed by controller <b>474</b>, executable code <b>473</b> may cause controller <b>474</b> to perform operations performed by management unit <b>470</b> as described herein. In one embodiment, management unit <b>470</b> includes a server computer equipped with RF capabilities. Accordingly, a management software application may be executed on management unit <b>470</b> and the management application may communicate with mobile units <b>441</b>, <b>442</b>, <b>443</b>, <b>444</b>, <b>445</b>, <b>446</b>, <b>447</b> and <b>415</b>. Although not shown, management unit <b>470</b> may be connected to other components or computers, e.g., management unit <b>470</b> may be connected to the internet or to a remote sever. Accordingly, any data obtained by mobile units <b>441</b>, <b>442</b>, <b>443</b>, <b>444</b>, <b>445</b>, <b>446</b>, <b>447</b> and <b>415</b> may be communicated to management unit <b>470</b> and from management unit <b>470</b> to any computer or network. Controller or processor <b>474</b> and/or controller or processor <b>310</b> may be configured to carry out embodiments of the invention by for example executing instructions or software.</p>
+      <p id="p-00046-en" num="0046">As described, a system for treating dairy livestock may include a ramp for containing dairy livestock and one or more mobile units configured to travel on the ramp and below the dairy livestock and perform at least one action related to treatment of the dairy livestock. For example, mobile units <b>446</b>, <b>447</b> and <b>415</b> may be small enough to travel under, and between the legs of, cows standing on ramp <b>405</b> and may perform various treatments and operations as described herein.</p>
+      <p id="p-00047-en" num="0047">Ramp <b>405</b> may be adapted to translate or move both the dairy livestock and the mobile unit. Accordingly, when positioned under a cow, a mobile unit (e.g., mobile unit <b>442</b>) may be stationary with respect to a cow above it while both the cow and the mobile unit are being translated (e.g., rotated) by ramp <b>405</b>. For example, ramp <b>405</b> may be a round ramp adapted to translate the livestock and mobile units in a circle around a center. Ramp <b>405</b> may include stalls (e.g., as shown in <figref>FIG. 1</figref>) and may rotate slowly such that cows can enter or mount ramp <b>405</b> as shown by arrow <b>460</b> and exit ramp <b>405</b> as shown by arrow <b>461</b>.</p>
+      <p id="p-00048-en" num="0048">Guide or rail <b>410</b> may be designed to keep the mobile units (e.g., mobile units <b>446</b>, <b>447</b> and <b>415</b>) within a predefined path under the livestock. For example, guide <b>410</b> may includes side walls that may prevent mobile units from traveling at any direction other than along guide <b>410</b>. In one embodiment, guide <b>410</b> may include rails on which wheels <b>210</b> (that may include a groove that fits the rails) travel such that the rails hold the wheels (and thus the mobile units) in a way similar to the way rails hold or guide a train.</p>
+      <p id="p-00049-en" num="0049">In an embodiment, guide <b>410</b> may provide mobile units with electrical energy. For example, contacts may be placed on the sides of guide <b>410</b> and may provide current to mobile units via electrical contacts included in mobile units. For example, metal brushes or other components in mobile unit <b>442</b> may be connected to motors <b>325</b> and be in touch with conductive metal strips or terminals placed on (or along) guide <b>410</b>. Electric power may be fed into the conductive metal strips or terminals, may flow through the brushes and may power motors <b>325</b>. Accordingly, guide <b>410</b> may provide mobile units with electrical energy.</p>
+      <p id="p-00050-en" num="0050">Mobile unit <b>140</b> may be adapted to perform various treatments and operations. For example, mobile unit <b>415</b> may disinfect cows (e.g., udders or teats) by spraying a disinfectant liquid. For example, mobile unit <b>415</b> may include a container or tank that stores Iodine and treatment units <b>240</b> may include a nozzle or jet for spraying the Iodine on cows, e.g., after milking is completed and a milking unit was removed. Treatment units <b>240</b> may include a component adapted to warm or heat the udder or other part of a cow, accordingly, a mobile unit as described herein may heat an organ of the livestock, e.g., by attaching a heating component to the livestock.</p>
+      <p id="p-00051-en" num="0051">In one embodiment, a mobile unit (e.g., mobile unit <b>140</b>) may include a tank or container that stores water or other liquid usable for cleaning or washing the livestock and/or cleaning or washing ramp <b>405</b>. For example, nozzles included in treatments units <b>240</b> may eject water or other liquids on cows standing on ramp <b>405</b>. Nozzles or jets included in treatments units <b>240</b> may be used to wash ramp <b>405</b>. Acting as a robot, a mobile unit described herein may move arm <b>215</b> such that nozzles or jets are directed to wash a livestock or wash ramp <b>405</b>.</p>
+      <p id="p-00052-en" num="0052">Treatments units <b>240</b> and/or sensing units <b>230</b> may include a camera usable for acquiring an image. For example, arm <b>215</b> may place or aim a camera included in sensing units <b>230</b> such that an image of a cow's belly or udder is captured. An image acquired as described may be used for attaching a milking unit (e.g., by determining exact or relevant location of teats). An image may be used to identify a cow. For example, by analyzing an image of an udder or an image of a mark on a cow's belly, the cow may be identified. For example, hot-iron branding on a belly of a cow may be identified by processing an image of the cow's belly and using known image or pattern recognition methods. For example, an image of the cow's belly may be processed by controller <b>310</b> or controller <b>474</b>, a mark may be identified in the processed image and a database that includes a list of the cows and their respective marks may be used in order to identify the cow. Other marks (e.g., made using freeze using liquid nitrogen or dry ice) may be similarly identified. Accordingly, sensing units <b>230</b> may include a sensing devices for identifying the livestock.</p>
+      <p id="p-00053-en" num="0053">Other devices or sensors included in treatments units <b>240</b> and/or sensing units <b>230</b> may be devices or sensors for testing for pregnancy as known in the art. For example, an ultrasound sensing device included in sensing units <b>230</b> may be used to capture a heartbeat of a fetus.</p>
+      <p id="p-00054-en" num="0054">Any data acquired by sensing units <b>230</b> may be stored. For example, images acquired by a camera or signals acquired by a pregnancy sensor may be stored on data storage unit <b>340</b>. Any data stored on data storage unit <b>340</b> may be downloaded or uploaded to a remote computer or data in data storage unit <b>340</b> may be communicated over a network. Data in data storage unit <b>340</b> may be transferred or copied using a direct wire, e.g., using a USB port included in mobile unit <b>140</b>. Accordingly, it will be understood that data acquired, processed or generated by mobile units such as <b>441</b>, <b>442</b>, <b>443</b>, <b>444</b>, <b>445</b> and/or <b>140</b> may be available to other components of system <b>400</b>.</p>
+      <p id="p-00055-en" num="0055">In one embodiment, mobile unit <b>140</b> (or similar mobile units shown in <figref>FIG. 4</figref>) may travel to a predefined location under a cow and perform operations described herein when located at the predefined spot or location. For example, an optimal location for treating a cow may be right under the cow, at a short distance from the udder. At the predefined location, mobile unit <b>140</b> may rotate or otherwise move or maneuver such it is at a selected orientation. For example, mobile unit <b>140</b> may rotate itself such that arm <b>215</b> is at minimal distance from holders <b>430</b>.</p>
+      <p id="p-00056-en" num="0056">To determine its location, mobile unit <b>140</b> may use any applicable system or technique. For example, controller <b>310</b> (or controller <b>474</b>) may use image processing techniques in order to determine a location of mobile unit <b>140</b>, based on video or images received from a camera in sensor units <b>230</b>.</p>
+      <p id="p-00057-en" num="0057">An electro-mechanic switch may be used in order to enable mobile unit <b>140</b> to determine it has reached a predefined spot in a stall. For example, a mechanical sensor included in mobile unit <b>140</b> may be configured to detect a mark on guide <b>410</b>. For example, guide <b>410</b> may include a bulge (or cavity or hole) that marks a center of a stall and a rod connected to a micro-switch included in mobile unit <b>140</b> may slide along guide <b>410</b> and activate the micro-switch when reaching the bulge or cavity. An activation of the micro-switch may enable mobile unit <b>140</b> to determine it is located in a center of a stall. An optical sensor included in mobile unit <b>140</b> may detect an optically detectable signal emitted from a source placed in a center of a stall. In yet other embodiments, a mark may be or include a magnet placed in a stall and a sensor adapted to sense a change in magnetic flux may be included in mobile unit <b>140</b> such that mobile unit <b>140</b> may stop or park in a stall based on a sensed magnetic field or flux.</p>
+      <p id="p-00058-en" num="0058">In an embodiment, ramp <b>130</b> includes stalls for containing the livestock. For example, when entering platform <b>405</b> as shown by arrow <b>460</b>, cows enter separate stalls.</p>
+      <p id="p-00059-en" num="0059">In an embodiment, the floor of ramp <b>405</b> includes markings or marks which are detectable by the mobile units. For example, a mark may be placed at the center of each stall in ramp <b>130</b>. For example, the mark may be an RF beacon, a specific color, e.g. paint, and the like. A sensor included in sensors <b>330</b> may detect a mark (e.g., by identifying the color of the mark or picking up an RF beacon). Based on identifying the location of the mark, mobile unit may travel to a location defined based on the location of the mark. For example, mobile unit may position itself such that it is right above the mark. For example, a sensor included in sensors <b>330</b> may send controller <b>310</b> the location of a mark (or a relative location with respect to a mobile unit) and controller <b>310</b> may cause motors <b>325</b> to move (e.g., by driving wheels <b>210</b>) a mobile unit to a location that is closest to the mark. It will be understood that various other methods or components for enabling a mobile unit to determine its location in a stall may be used.</p>
+      <p id="p-00060-en" num="0060">In an embodiment, a marking or mark may be placed within guide <b>410</b>. Accordingly, in order to place a mobile unit right above the mark, controller <b>310</b> may only need to cause the mobile unit to move in one of two directions (e.g., either forwards or backwards). For example, marks placed on the floor of ramp <b>405</b> in guide <b>410</b> and at the centers of stalls may be used by mobile units such as <b>444</b>, <b>445</b> and/or <b>140</b> in order to determine their location with respect to a stall containing the livestock. For example, using a mark as described, a mobile unit may position itself under a cow in a stall.</p>
+      <p id="p-00061-en" num="0061">As described, a system may include a unit for placing a milking unit in a housing. For example, a system may include an arm <b>425</b> adapted to fetch a milking unit from assembly <b>420</b> (where the milking units may have been washed or otherwise treated) and place the milking units in holders <b>430</b>. It will be understood that holders <b>430</b> may be any suitable housing adapted to house the milking units.</p>
+      <p id="p-00062-en" num="0062">Holders <b>430</b> may be located at a minimal distance from the cow and the location of holder <b>430</b>, e.g., with respect to a center of a stall, may be known. Accordingly, when located right above a mark, e.g., in a center of a stall, a mobile unit may determine the relative location of holders <b>430</b>. Accordingly, a mobile unit may be adapted to determine its location (e.g., in a stall) and, based on its location, determine the location of holders <b>430</b>. Otherwise described, knowing its location in a stall, a mobile unit may readily determine the location of a milking equipment unit housed by holder <b>430</b>.</p>
+      <p id="p-00063-en" num="0063">In an embodiment, a mobile unit is adapted to detach a milking equipment unit from a housing or holder and attach the milking equipment unit to the dairy livestock. For example, using arm <b>215</b> and gripping unit <b>250</b>, mobile unit <b>140</b> may detach a milking unit (e.g., a teat cup) from holders <b>430</b> and attach the milking unit to a cow. For example, the location of holders <b>430</b> (with respect to a center of a stall) may be known in advance, accordingly, controller <b>310</b> may cause arm <b>215</b> to move to holders <b>430</b> and grip a milking unit. As described, the location and/or shape of an udder may be known to mobile unit <b>140</b> (e.g., based on processing an image of the lower part of cow as described). Accordingly, controller <b>310</b> may cause arm <b>215</b> to move to a location right under an udder and lift teat cups such that they snap onto to the teats (e.g., by force of vacuum in the teat cups as known in the art). It will be noted that when a mobile unit is located right under a cow, the distance an arm of the milking unit needs to travel in order to fetch a milking unit and attached the milking unit to the cow is kept to a minimum. A milking unit may be, for example, a set of four teat cups or it may be one teat cup.</p>
+      <p id="p-00064-en" num="0064">Using marks in stalls as described, a mobile unit may automatically travel from a first stall to a second stall. For example, detecting marks on a floor of ramp <b>130</b> as described, mobile units <b>441</b>, <b>442</b>, <b>443</b>, <b>444</b>, <b>445</b>, <b>446</b>, <b>447</b> and <b>415</b> may travel from a first stall to a second stall. For example, to travel from a first to a second stall, mobile unit <b>442</b> may travel, along guide <b>410</b> until a mark is detected and determined to be right under mobile unit <b>442</b>. Leaving a first stall, a mobile unit may travel, along guide <b>410</b>, till it detects a mark. Detecting a mark on the floor of ramp <b>130</b> may indicate to a mobile unit that it is located in the proper position in a stall. In order to travel from a first stall to a third stall, a mobile unit may continue its motion after detecting a first mark till a second mark is detected.</p>
+      <p id="p-00065-en" num="0065">As shown by pit <b>435</b>, a system may include a service or maintenance pit where mobile units may be parked and serviced. Other operations may be done when a mobile unit is in pit <b>435</b>, for example, data stored in data storage unit <b>340</b> may be transferred or copied from a mobile unit when in pit <b>435</b>. In an embodiment, management unit <b>470</b> may cause a mobile unit to exit guide <b>410</b> and enter pit <b>435</b>. For example, guide <b>410</b> may include an arrangement similar to a railroad switch or turnout as used in trains. A turnout may be operated by electric motors that may be controlled by management unit <b>470</b> (e.g., using RF or wired communication).</p>
+      <p id="p-00066-en" num="0066">Accordingly, by controlling a component of guide <b>410</b>, management unit <b>470</b> may cause a mobile unit to travel to pit <b>435</b>, e.g., as shown by mobile unit <b>441</b>. In an embodiment, management unit <b>470</b> may monitor movements and locations of mobile units <b>441</b>, <b>442</b>, <b>443</b>, <b>444</b>, <b>445</b>, <b>446</b>, <b>447</b> and <b>415</b>. For example, mobile units may report their location to management unit <b>470</b> or other means may be used (e.g., global positioning system components installed in mobile units). Accordingly, management unit <b>470</b> may determine when and how to operate a turnout such that a selected mobile unit travels into the pit.</p>
+      <p id="p-00067-en" num="0067">Mobile units <b>441</b>, <b>442</b>, <b>443</b>, <b>444</b>, <b>445</b>, <b>446</b>, <b>447</b> and <b>415</b> may collaborate and/or cooperate to complete a task, treatment or operation. As known in the art, a milking unit may include four teat cups that need to be attached to the four teats of a cow. In an embodiment, a first mobile unit (e.g., mobile unit <b>443</b>) may be adapted to attach a first portion of a milking unit to the dairy livestock and a second mobile unit (e.g., mobile unit <b>444</b>) may be adapted to attach a second portion of the milking unit to the dairy livestock. For example, mobile unit <b>443</b> may attach a first teat cup, mobile unit <b>444</b> may attach a second teat cup and mobile units <b>445</b> and <b>446</b> may respectively attach the third and fourth teat cups. Mobile unit <b>442</b> may perform preparation related operations, e.g., washing, heating and the like. As described, by processing an image of an udder, the teats in the udder may be identified and their location may be calculated for example using known computer image processing or recognition methods. For example, if the location of mobile unit <b>442</b>, when acquiring an image of an udder, is known, and a location of a camera on arm <b>215</b> is known (e.g., since the location or position of arm <b>215</b> are known) then the location of objects in an image may be calculated. In some embodiments, a video stream may be produced by a camera carried by arm <b>215</b> and controller <b>310</b> may use a video stream to move arm <b>215</b> such that it brings a milking unit to the teats. Any known methods used by robots or other automated systems may be used by mobile units in order to carry and place equipment such as a milking unit at a desired location or position. For example, any methods used by milking robots known in the art may be used by mobile units <b>415</b>, <b>442</b> and <b>443</b>. As noted, unlike milking robots placed outside a stall, in an embodiment, a milking robot may be or may be included in a small mobile units adapted to move to a location under the livestock and perform operations from under the livestock thus minimizing movement of an arm or other parts of the milking robot.</p>
+      <p id="p-00068-en" num="0068">When a mobile unit completes its task in a current stall it may travel to the next stall, e.g., in a direction opposite to the direction of rotation of ramp <b>405</b>. Prior to moving to the next stall, a mobile unit may determine whether or not another mobile unit is located in the next stall. For example, as described, management unit <b>470</b> may monitor mobile units' locations and may therefore know whether or not mobile unit is located in a specific stall. Accordingly, a mobile unit may communicate with management unit <b>470</b> and be advised whether or not it may move from its current stall to the next stall. In another embodiment, a mobile unit may communicate with adjacent mobile units in order to determine their location and thus determine whether or not it may move into a stall. Accordingly, a mobile unit may automatically travel from a first stall to a second stall based on a command or information received from a management unit <b>470</b> and/or autonomously, based on information received from other mobile units.</p>
+      <p id="p-00069-en" num="0069">In an embodiment, a plurality of mobile units may be configured to intercommunicate in order to collaborate in performing an action related to treatment of the dairy livestock. Collaboration or cooperation may be realized in various ways. For example, one mobile unit, e.g., mobile unit <b>442</b> that may be the first mobile unit to treat a cow in the current milking session, may be include a camera for obtaining an image of the livestock. The image may be processed, e.g., by management unit <b>470</b> or by one of the mobile units, and a location of an organ of the livestock may be determined and recorded. For example, using an image and provided with the location of the mobile unit that acquired the image, the location of an udder (and/or teats), with respect to a marking in a stall may be determined and recorded. For example, coordinates of an udder or teats, relative to a mark in a stall may be sent to other mobile units. Accordingly, using an image obtained by mobile unit <b>442</b>, mobile units <b>443</b>, <b>444</b>, <b>445</b>, <b>446</b> and <b>447</b> may be informed, in advance, of the location of the udder or teat of the cow.</p>
+      <p id="p-00070-en" num="0070">One (or more) mobile units in a plurality of mobile units may act as a backup unit. For example, in a typical scenario, mobile units <b>443</b>, <b>444</b>, <b>445</b> and <b>446</b> may each attach one of four teat cups to a cow. For example, after mobile unit <b>443</b> attaches a first teat cup it moves to the next stall and mobile unit <b>444</b> moves to the stall that mobile unit <b>443</b> left. Mobile unit <b>444</b> may then attach the second of four teat cups to the cow. Thus, mobile units may collaborate in attaching a complete milking assembly.</p>
+      <p id="p-00071-en" num="0071">However, if one of mobile units <b>443</b>, <b>444</b>, <b>445</b> and <b>446</b> fails to attach a teat cup, it may report failure to management unit <b>470</b> (or to other mobile units) and mobile unit <b>447</b>, when acting as a backup unit, may attach a teat cup which another mobile unit failed to attach. Adapted to communicate either with each other or with a central management unit <b>470</b>, mobile units may send and receive any information related to an operation performed by a set of mobile units. Accordingly, one mobile unit may correct errors or failures caused by another mobile unit. For example, a first mobile unit may automatically complete an action which at least one other mobile unit failed to complete as described.</p>
+      <p id="p-00072-en" num="0072">In an embodiment, each mobile unit in a set of mobile units may be configured to communicate with other mobile units included in the set. A set of mobile units may be configured to dynamically and automatically determine a portion of a treatment to be performed by each of the mobile units in a set. For example, mobile unit <b>444</b> may only move to the next stall if mobile unit <b>443</b> has left that stall. If mobile unit <b>444</b> completes attaching a teat cup as configured and cannot move to the next stall, mobile unit <b>444</b> may attach another teat cup, e.g., one typically attached by mobile unit <b>445</b>. In an embodiment, distribution of sub-tasks may be configured (e.g., each mobile unit is configured to attach one specific teat cup). Mobile units may override a configured distribution of sub-tasks, e.g., a first mobile unit may perform a sub-task that was assigned to a second mobile unit in a configured distribution of sub-tasks.</p>
+      <p id="p-00073-en" num="0073">Mobile units may send any information to management unit. For example, mobile units may report completion of a sub-task, failure to complete a task or sub-task and the like. Management unit <b>470</b> may be configured to dynamically cause at least some of the mobile units to each perform a portion of a treatment. For example, provided with information from mobile units related to a progress of a treatment (e.g., milking), management unit <b>470</b> may dynamically allocate tasks to mobile units. For example, if mobile unit <b>445</b> reports a malfunction or a failure to attach a teat cup, management unit <b>470</b> may command mobile unit <b>444</b> to “fill in” for mobile unit <b>443</b>, e.g., attach a teat cup that, per a previous configuration, was to be attached by mobile unit <b>443</b>.</p>
+      <p id="p-00074-en" num="0074">As described herein, a system and method according to embodiments of the invention may include a mobile unit adapted to travel on a ramp, e.g., a ramp in a milking parlour (or parlor). For example, in an embodiment, a mobile unit (e.g., mobile unit <b>140</b>) can travel between the legs of a cow in a stall and park itself below the cow. The mobile unit may then perform any operation as described herein, e.g., attach a milking unit, wash or disinfect the udder of the cow etc.</p>
+      <p id="p-00075-en" num="0075">In an embodiment, the ramp may be a round, rotating ramp or platform. In an embodiment, the ramp includes a holder for a milking equipment unit. A holder may be located as close as possible to a cow in a stall such that the distance from the holder to an udder of a cow in the stall is minimal. Accordingly, when a mobile unit is parked under the cow, an arm of the mobile unit may only need to extend to relatively short distances in order to fetch a milking unit from a holder and attach the milking unit to the cow.</p>
+      <p id="p-00076-en" num="0076">In an embodiment, mobile units may collaborate or cooperate to perform a task. For example, an exemplary task may be attaching four teat cups of a milking unit to a cow. To complete the exemplary task, a first mobile unit (e.g., mobile unit <b>442</b>) may attach a first teat cup, a second mobile unit (e.g., mobile unit <b>443</b>) may attach a second teat cup and so on.</p>
+      <p id="p-00077-en" num="0077">A plurality of mobile units may dynamically cause at least some of the mobile units to each perform a portion of a treatment. For example, if mobile unit <b>442</b> failed to attach the first teat cup it may (e.g., using its Rx/Tx unit <b>335</b>) inform mobile unit <b>443</b> of the failure and mobile unit <b>443</b> may attach the first teat cup and a second teat cup. Accordingly, a mobile unit may be adapted to automatically complete an action which at least one other mobile unit failed to complete.</p>
+      <p id="p-00078-en" num="0078">As discussed, mobile unit <b>447</b> may be informed by any other mobile unit in system <b>400</b> of a failure to complete a task and may perform the task. For example, mobile unit <b>447</b> may attach a teat cup which mobile unit <b>446</b> failed to attach. In an embodiment, central management unit <b>470</b> may dynamically or automatically allocate tasks. For example, each of mobile units <b>415</b>, <b>442</b>, <b>443</b>, <b>444</b>, <b>445</b>, <b>446</b> and <b>447</b> may report to management unit <b>470</b> upon successful completion of a task and/or upon failure to complete a task. Accordingly, management unit <b>470</b> may be aware of progress of a task and may allocate or re-allocate sub-tasks to mobile units. For example, a task that includes four sub-tasks may be attaching four teat cups to a cow where attaching any one of the four teat cups is a sub-task. In such exemplary task, management unit <b>470</b> may dynamically cause any of mobile units <b>443</b>, <b>444</b>,<b>445</b>, <b>446</b> and <b>447</b> to attach one or more teat cups.</p>
+      <p id="p-00079-en" num="0079">A movement of a mobile unit from one stall to another may be synchronized or based on a movement of another mobile unit. For example, when mobile unit has finished washing the cow in its current stall it may move to the next stall and inform mobile unit <b>443</b> that it may move to the stall which mobile unit <b>442</b> just left. In another embodiment, mobile unit <b>442</b> reports to management unit <b>470</b> that it has finished its tasks in the current stall and may request permission from management unit <b>470</b> to move to the next stall. Management unit <b>470</b> may keep track of the location of all mobile units in system <b>400</b> (e.g., based on reports from the mobile units as described). Accordingly, management unit <b>470</b> may determine whether or not a mobile unit may move to the next stall (e.g., by determining no other mobile unit is present in the next stall).</p>
+      <p id="p-00080-en" num="0080">Mobile units and management unit <b>470</b> may share information. For example, an image taken by mobile unit <b>442</b> (that may be the first unit to treat a cow in a milking session) may be shared by all mobile units in system <b>400</b>. Data (e.g., coordinates of teats in an udder) determined based on an image taken by one of the mobile units may be shared by all units. For example, management unit <b>470</b> may receive an image from mobile unit <b>442</b>, determine, based on the image, the location of the cow teats with respect to the stall or with respect to a known location within a stall, and provide the coordinates to mobile units <b>442</b>, <b>443</b>, <b>444</b>,<b>445</b>, <b>446</b> and <b>447</b>.</p>
+      <p id="p-00081-en" num="0081">Unless explicitly stated, the method embodiments described herein are not constrained to a particular order or sequence. Additionally, some of the described method embodiments or elements thereof can occur or be performed simultaneously, at the same point in time, or concurrently.</p>
+      <p id="p-00082-en" num="0082">While certain features of the invention have been illustrated and described herein, many modifications, substitutions, changes, and equivalents may occur to those skilled in the art. It is, therefore, to be understood that the appended claims are intended to cover all such modifications and changes as fall within the true spirit of the invention.</p>
+      <p id="p-00083-en" num="0083">Various embodiments have been presented. Each of these embodiments may of course include features from other embodiments presented, and embodiments not specifically described may include various features described herein.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>. A system for treating dairy livestock comprising:
+<claim-text>a mobile unit comprising</claim-text><claim-text>equipment for treating livestock and a processor, the mobile unit configured to:
+<claim-text>travel on a ramp and below the dairy livestock;</claim-text><claim-text>and</claim-text><claim-text>use the equipment to perform at least one action related to a treatment of the dairy livestock;</claim-text><claim-text>wherein the ramp contains the dairy livestock.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The system of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the action is selected from the list consisting of: milking, disinfecting, cleaning the ramp, washing the livestock, acquiring an image, identifying the livestock, testing for pregnancy, capturing a heartbeat of a fetus and heating an organ of the livestock.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The system of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the ramp is adapted to translate both the dairy livestock and the mobile unit.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The system of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the ramp is configured to house a milking equipment unit and wherein the mobile unit is adapted to detach the milking equipment unit from a housing and attach the milking equipment unit to the dairy livestock.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The system of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the mobile unit is adapted to determine its location and, based on its location, determine a location of the milking equipment unit.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The system of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, comprising a plurality of mobile units and a central management unit configured to dynamically cause at least some of the mobile units to each perform a portion of a treatment.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The system of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, comprising a plurality of mobile units wherein a first mobile unit is adapted to attach a first portion of a milking equipment to the dairy livestock and a second mobile unit is adapted to attach a second portion of the milking equipment to the dairy livestock.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The system of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the ramp includes a guide designed to keep the mobile unit within a predefined path under the livestock.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The system of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the ramp includes stalls and wherein the mobile unit automatically travels from a first stall to a second stall.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The system of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein a floor of the ramp includes a mark and the mobile unit is adapted to use the mark in order to determine its location with respect to a stall containing the livestock.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The system of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein mobile unit is configured to travel between legs of the dairy livestock.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The system of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the ramp is included in a milking platform.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The system of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, comprising a unit for placing the milking equipment in the housing.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The system of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the guide includes a maintenance pit for servicing the mobile unit.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The system of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein one of the plurality of mobile units is adapted to automatically complete an action which at least one other mobile unit failed to complete.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The system of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein at least one of the plurality of mobile units includes a camera for obtaining an image of the livestock and wherein the system comprises a computing device for processing the image to determine a location of an organ of the livestock with respect to a marking on the ramp.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The system of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein a central management unit is adapted to cause the mobile unit to enter the pit.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The system of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, comprising a set of mobile units, each of the mobile units configured to communicate with other mobile units included in the set and wherein the set of mobile units is configured to determine a portion of a treatment to be performed by each of the mobile units.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The system of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, comprising storing, on an information storage device, information acquired by a sensor included in the mobile unit.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The system of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, comprising a plurality of mobile units configured to intercommunicate in order to collaborate in performing an action related to treatment of the dairy livestock.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The system of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the mobile unit includes an internal power source.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The system of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the mobile unit automatically travels from a first stall to a second stall based on one of: a command received from a management unit and autonomously, based on an internal control unit.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>22</b>. The system of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the ramp is a round ramp adapted to translate the livestock and mobile unit in a circle around a center.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>23</b>. The system of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the guide provides electrical energy to the mobile unit.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>24</b>. A mini robot adapted to travel on a ramp and below dairy livestock, the mini robot comprising:
+<claim-text>a motor and a processor;</claim-text><claim-text>the processor adapted to cause the robot to:
+<claim-text>park under the dairy livestock; and</claim-text><claim-text>carry out at least one action related to a treatment of the dairy livestock;</claim-text><claim-text>wherein the ramp contains the dairy livestock.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>
+        <b>25</b>. A method of treating dairy livestock, the method comprising:
+<claim-text>navigating a mobile unit to a location under the livestock; and</claim-text><claim-text>carrying out, by the mobile unit, at least one action related to a treatment of the dairy livestock.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257355A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257355A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257355A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257355A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257355A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257355A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257355A1_00004.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257355A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257355A1.PDF" type="pdf" size="525454" pages="11" />
+</lexisnexis-patent-document>

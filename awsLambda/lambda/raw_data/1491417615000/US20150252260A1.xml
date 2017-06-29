@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150252260A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021816" date-changed="20151006" time-changed="063135">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121229268">
+        <country>US</country>
+        <doc-number>20150252260</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14438637</doc-number>
+        <date>20131107</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150910">
+      <priority-claim sequence="1" kind="national">
+        <country>FR</country>
+        <doc-number>121915615</doc-number>
+        <date>20121107</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151006">
+      <classification-ipcr sequence="1">
+        <text>C09K  11/77        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>11</main-group>
+        <subgroup>77</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C04B  35/48        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>35</main-group>
+        <subgroup>48</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C09K  11/02        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>11</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151006">
+      <classification-cpc sequence="1">
+        <text>C09K  11/7792      20130101 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>11</main-group>
+        <subgroup>7792</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C04B  35/48        20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>35</main-group>
+        <subgroup>48</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C09K  11/025       20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>11</main-group>
+        <subgroup>025</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>Y10T 428/24917     20130101 LA20151001BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>428</main-group>
+        <subgroup>24917</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>Y10T 428/24926     20130101 LA20151001BCEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>428</main-group>
+        <subgroup>24926</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">21</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">Watch Components</invention-title>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>ROLEX S.A.</orgname>
+            <address>
+              <city>Genève 36</city>
+              <country>CH</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>CH</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Berner</last-name>
+            <first-name>Detlef</first-name>
+            <address>
+              <city>La Conversion</city>
+              <country>CH</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Girod</last-name>
+            <first-name>Romain</first-name>
+            <address>
+              <city>Annemasse</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Pujol</last-name>
+            <first-name>Ollivier</first-name>
+            <address>
+              <city>Lausanne</city>
+              <country>CH</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Rigot</last-name>
+            <first-name>Isabelle</first-name>
+            <address>
+              <city>La Belme de Sillingy</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>EP13073248</doc-number>
+        <date>20131107</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014072388</doc-number>
+        <date>20140515</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150910">
+      <main-family family-id="173566117">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252260</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20131107</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173566116">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252260</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20131107</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Watch component made of a persistent phosphorescent ceramic composite material which is a sintered dense body comprising two or more phases, a first phase consisting of at least one metal oxide and a second phase consisting of a metal oxide containing at least one activating element in a reduced oxidation state, the watch component having a surface which comprises an area which shows phosphorescent emission and an area which does not show phosphorescent emission or which shows phosphorescent emission with an intensity which is lower than that of the emission of the other area.</p>
+  </abstract>
+  <legal-data date-changed="20150925">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150603</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015252260A1</docdb-publication-number>
+      <docdb-application-id>444310579</docdb-application-id>
+      <new-owner>ROLEX SA, SWITZERLAND</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:BERNER, DETLEF;GIROD, ROMAIN;PUJOL, OLLIVIER;AND OTHERS;SIGNING DATES FROM 20150519 TO 20150520;REEL/FRAME:035777/0643</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to watch components made from a ceramic composite material which displays high mechanical strength and is capable to display a persistent phosphorescence.</p>
+      <heading id="h-00002-en" level="1">STATE OF THE ART</heading>
+      <p id="p-00002-en" num="0002">Zirconium dioxide (or zirconia, ZrO<sub>2</sub>) is one of the most studied ceramic materials. ZrO<sub>2 </sub>adopts a monoclinic crystal structure at room temperature and changes to tetragonal and cubic structures at higher temperatures. The volume expansion caused by the cubic to tetragonal to monoclinic transformation induces large stresses, and these stresses cause ZrO<sub>2 </sub>to crack upon cooling from high temperatures. When the zirconia is blended with other oxides, the tetragonal and/or cubic phases are stabilized. Effective dopants include magnesium oxide (MgO), yttrium oxide (Y<sub>2</sub>O<sub>3</sub>, yttria), calcium oxide (CaO), and cerium oxide (Ce<sub>2</sub>O<sub>3</sub>).</p>
+      <p id="p-00003-en" num="0003">Zirconia is often more useful in its phase ‘stabilized’ state. Upon heating, zirconia undergoes disruptive phase changes. By adding for example small percentages of yttria, these phase changes are minimized, and the resulting material has superior thermal, mechanical, and electrical properties. In some cases, the tetragonal phase can be metastable. If sufficient quantities of the metastable tetragonal phase are present, then an applied stress, magnified by the stress concentration at a crack tip, can cause the tetragonal phase to convert to monoclinic, with the associated volume expansion. This phase transformation can then put the crack into compression, retarding its growth, and enhancing the mechanical properties. This mechanism is known as transformation toughening, and significantly extends the reliability and lifetime of products made with stabilized zirconia.</p>
+      <p id="p-00004-en" num="0004">It has been described by Drennan and Hanninck (J. A. Ceram. Soc. 1986; 69(7): 541-546) that the addition of SrO effectively neutralizes the detrimental effects of the SiO<sub>2 </sub>contaminant in zirconia partially-stabilized with magnesia. It seems that this effect is obtained through the formation of a glass phase that comprises Si and Sr, which is ejected from the bulk of the ceramic during sintering. Cutler and Virkar (J. A. Ceram. Soc. 1991; 74(1): 179-186) have shown that the addition of SrO and Al<sub>2</sub>O<sub>3 </sub>to Ce-doped zirconia leads to mechanical strengthening of the zirconia, through the formation of strontium aluminate platelets (SrAl<sub>12</sub>O<sub>19</sub>). This makes possible the production of tough Ce-zirconia with good hardness and strength. SrAl<sub>12</sub>O<sub>19 </sub>is also known to show persistent phosphorescent properties when appropriate rare-earth dopants are included in the material. However, the strontium aluminate phase described by Cutler and Virkar is not phosphorescent, presumably because the Ce is not incorporated into the strontium aluminate phase and the oxidation state is the non-active Ce<sup>4+</sup> state.</p>
+      <p id="p-00005-en" num="0005">A composite <img id="img-00001-en" he="2.46mm" wi="1.44mm" alt="custom-character" img-content="character" file="US20150252260A1_00005.PNG" img-format="png" original="US20150252260A1-20150910-P00001.TIF" /> ceramic <img id="img-00002-en" he="2.46mm" wi="1.44mm" alt="custom-character" img-content="character" file="US20150252260A1_00006.PNG" img-format="png" original="US20150252260A1-20150910-P00002.TIF" /> material for optical conversion applications is described in EP 1 588 991 A1, one of the phases being a fluorescent phase. The examples in the document are focused on a composite of Al<sub>2</sub>O<sub>3 </sub>and Ce-doped Y<sub>3</sub>Al<sub>5</sub>O<sub>12</sub>. The material is obtained by mixing the basis materials and subsequent <img id="img-00003-en" he="2.46mm" wi="1.44mm" alt="custom-character" img-content="character" file="US20150252260A1_00005.PNG" img-format="png" original="US20150252260A1-20150910-P00001.TIF" /> fusion <img id="img-00004-en" he="2.46mm" wi="1.44mm" alt="custom-character" img-content="character" file="US20150252260A1_00006.PNG" img-format="png" original="US20150252260A1-20150910-P00002.TIF" /> at 1900-2000° C. under vacuum, without any further heat treatment. The materials are described to convert blue light between 430 and 480 nm (such as the light emitted by a blue LED) into “white” light. To this end, the material transmits part of the emitted blue light, while another part is converted into yellow light by the Y<sub>3</sub>Al<sub>5</sub>O<sub>12</sub>:Ce phase (broad emission spectrum centred around 530 nm). The resulting colour which appears as a white light can be adjusted by varying the thickness of the material.</p>
+      <p id="p-00006-en" num="0006">Document WO 2006/097876 A1 describes a polycrystalline ceramic material that comprises a fluorescent material. Ideally, the ceramic is alumina and the phosphor is a Ce-doped YAG (such as Y<sub>3</sub>Al<sub>5</sub>O<sub>12</sub>:Ce<sup>3+</sup>). The ceramic material is intended to convert part of the blue light emitted by a LED into yellow light, in order to obtain white light. The material is obtained by mixing alumina and phosphor powders in a slurry, with subsequent pressing and HIP-sintering. The material comprises typically 80 to 99.99 vol. % alumina and 0.01 to 20 vol. % phosphor.</p>
+      <p id="p-00007-en" num="0007">A further ceramic composite for optical conversion is described in WO 2008/096301 A1, where both luminescent and non-luminescent phases comprise Si and N. The application discloses in particular the realization of BaSi<sub>7</sub>N and (Ba,Sr)<sub>2</sub>Si<sub>5-x</sub>Al<sub>x</sub>N<sub>8-x</sub>O<sub>x</sub>:Eu (obtained by sintering in reducing atmosphere and subsequent washing in acidic solution), the mixing of both components and HIP heat treatment at 1550° C. and 80 MPa, optionally followed by a heat treatment under N<sub>2 </sub>at 1300° C.</p>
+      <p id="p-00008-en" num="0008">In WO 2011/094404 A1 a ceramic for optical conversion is described with a fluorescent phase of YAG:Ce with pores of well-controlled size and shape. The formation of the pores is conducted through heat treatment whereby pore-forming additives are removed or burned out. The process consists in a first step of debinding by heating in air at typically 1150° C., followed by a second step of sintering in a wet hydrogen atmosphere at 1700-1825° C. Through this process a material with a high degree of transparency or translucency is obtained.</p>
+      <heading id="h-00003-en" level="1">OBJECT OF THE INVENTION</heading>
+      <p id="p-00009-en" num="0009">There is no disclosure of watch components made from a ceramic material, in particular a zirconia-based material, which comprises a persistent phosphorescent phase, in particular a persistent phosphorescent phase that still emits significant light intensity hours after having been excited. In different technical fields there is an interest in obtaining a material which displays a high mechanical stability and at the same time a persistent luminescence. For instance a persistent phosphorescent effect is required in applications for watches or for indicators, or as a luminous paint or pigment for e.g. safety applications. In such applications it may be appropriate to arrange the luminescent effect according to a specific pattern, for technical reasons or motivated by design considerations.</p>
+      <p id="p-00010-en" num="0010">It is an object of the present invention to obviate the disadvantages of the prior art. In particular it is an object of the present invention to provide watch components made from a ceramic composite material which displays mechanical strength and is capable to display persistent phosphorescence in a certain pattern.</p>
+      <heading id="h-00004-en" level="1">DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00011-en" num="0011">First, the persistent phosphorescent ceramic composite material of the watch component is described.</p>
+      <p id="p-00012-en" num="0012">A “persistent phosphorescent material” in the context of the present invention means a solid luminescent material which shows light emission after the exciting radiation has ceased, with an afterglow on the order of a few minutes to several hours. This includes, but is not necessarily limited to, solid luminescent material which shows long phosphorescence or long persistence corresponding to an afterglow persistent time over 500 minutes. The persistent time refers to the time that it takes for the afterglow to decrease to a luminance of 0.3 mCd/m<sup>2</sup>, which is the lower limit of light perception of the human eye (see, e.g., the “Phosphor Handbook”, S. Shionoya and W. M. Yen, editors, CRC Press 1999, chapter 12).</p>
+      <p id="p-00013-en" num="0013">The persistent phosphorescent ceramic composite material is a dense body. The dense property of the persistent phosphorescent ceramic composite material provides the wanted enhanced phosphorescence performance and the favorable mechanical properties. What is understood to be a “dense” body will be described hereafter. In order to achieve the dense character of the persistent phosphorescent ceramic composite material, the preparation comprises a densifying step leading to a densified body. The manner of the densifying step is described hereafter in the context of the method of the present invention.</p>
+      <p id="p-00014-en" num="0014">It is important that the densified body has been sintered during its preparation, since without the appropriate manner of sintering the wanted effect of the present invention, in particular the effect of the persistent phosphorescence, is not achieved. The appropriate manner of sintering or heat treatment will be described hereafter in the context of the method of the present invention.</p>
+      <p id="p-00015-en" num="0015">The sintered solidified body comprises two or more phases, in particular two or more crystalline phases. The first phase, which is usually the phase which is present in the highest amount by weight, is the phase which is the basis for the mechanical properties, while the second phase is responsible for the phosphorescent properties of the ceramic composite material and shows the type of composition which is usually called a phosphor. The persistent phosphorescent ceramic composite material is a composite material. A “composite material” in the context of the present invention is a bulk composite which means that the two or more phases are not separated in different parts of the dense body. For example, the second phase does not form a thin layer or a coating on the first phase.</p>
+      <p id="p-00016-en" num="0016">The first phase consists of at least one metal oxide. Any metal oxide may be chosen which displays a high level of mechanical stability. Accordingly the metal oxide may be selected from aluminium oxide, zirconium oxide, magnesium oxide, silicon oxide, titanium oxide, barium oxide, beryllium oxide, calcium oxide and chromium oxide.</p>
+      <p id="p-00017-en" num="0017">Of the possible useful materials for the first phase zirconia is preferred. Zirconia is highly stable and displays excellent mechanical properties. The material is reliable by itself, but according to a preferred embodiment it is used in a stabilized form. This stabilization can be achieved through the presence of a further material in a specific amount. This further present stabilizing material may be selected from materials derived from cerium, magnesium and yttrium.</p>
+      <p id="p-00018-en" num="0018">Ce-doped zirconia can be used, although an orange-coloured zirconia would be obtained after treatment in reducing atmosphere.</p>
+      <p id="p-00019-en" num="0019">Mg-doped zirconia may be used as well, but a compromise would have to be made between the day colour of the composite, luminescence performances and mechanical properties.</p>
+      <p id="p-00020-en" num="0020">It has turned out that, in the context of the present invention, the presence of yttria as a dopant in the zirconia leads to a high degree of mechanical stability and the yttria-doped zirconia is the preferred material for the first phase. Zirconia stabilized with yttria is for instance produced by the company Tosoh Corporation and a typical product which is particularly useful in the preparation of the ceramic composite material of the present invention is 3 mol % yttria stabilized tetragonal zirconia. From the point of view of the inventors, yttria-doped zirconia offers the best potential in terms of day colour, excellent persistence of the phosphor phase and very good mechanical properties.</p>
+      <p id="p-00021-en" num="0021">Instead of zirconia, or of yttriated zirconia according to the preferred embodiment, alumina may be used as well as a further preferred species, but this may be less successful, since non-luminescent phases can be formed during sintering. Furthermore, the heat treatments which have to be conducted in the preparation of the phosphorescent ceramic composite material according to the present invention have to be performed at a higher temperature than for zirconia.</p>
+      <p id="p-00022-en" num="0022">Zirconia may also be used in a doped form and/or with the addition of pigments to modify its day colour, provided that the zirconia has been stabilized.</p>
+      <p id="p-00023-en" num="0023">The second phase of the ceramic composite material consists of a metal oxide which contains at least one activating element in a reduced oxidation state.</p>
+      <p id="p-00024-en" num="0024">As the metal oxide material Ca, Ba, Sr and/or Mg-aluminates may be used, or Ca, Ba, Sr and/or Mg silicates, or Ca, and/or Sr aluminosilicates. The preferred metal oxide material in the context of the present invention is strontium aluminate. As such strontium aluminate SrAl<sub>2</sub>O<sub>4</sub>, SrAl<sub>4</sub>O<sub>7</sub>,SrAl<sub>12</sub>O<sub>19 </sub>or Sr<sub>4</sub>Al<sub>14</sub>O<sub>25 </sub>may for example be used, whereby the most preferred type is Sr<sub>4</sub>Al<sub>14</sub>O<sub>25</sub>. One of the advantages of Sr<sub>4</sub>Al<sub>14</sub>O<sub>25 </sub>is the circumstance that it is insoluble in water, which may be an advantage in the method for the preparation of the ceramic composite material, since it allows to mill the powder in water and to atomize the resulting slurry. It is a further advantage that is stable at the usual sintering temperature of yttriated zirconia as the preferred embodiment of the metal oxide of the first phase.</p>
+      <p id="p-00025-en" num="0025">The metal oxide of the second phase of the ceramic composite material is doped with at least one activating element. As such an activating element any of the rare earth elements La, Ce, Pr, Nd, Pm, Sm, Eu, Gd, Tb, Dy, Ho, Er, Tm, Yb and Lu may be chosen. The addition of any of these elements to the metal oxide of the second phase of the ceramic composite material, in particular to strontium aluminate as the preferred embodiment of the metal oxide of the second phase of the ceramic composite material, may lead to the wanted phosphorescent effect of the ceramic composite material. The preferred types of the activating elements are Eu and Dy and it has been found that the most preferred embodiment of the second phase is Sr<sub>4</sub>Al<sub>14</sub>O<sub>25 </sub>doped with Eu and Dy (Eu<sup>2+</sup>/Dy<sup>3+</sup> doped Sr<sub>4</sub>Al<sub>14</sub>O<sub>25</sub>).</p>
+      <p id="p-00026-en" num="0026">Other types of second phase material may be selected. However, the use of such other materials may lead to ceramic composite material with lower performance, since non-luminescent phases can be formed during sintering.</p>
+      <p id="p-00027-en" num="0027">The amount of the at least one activating element in the metal oxide of the second phase can be chosen based on the effect which shall be achieved. A typical content of Eu in strontium aluminate as the metal oxide of the second phase is between 0.05 and 4%, preferably between 0.15 and 1% by weight (relative to the total weight of the second phase material). This low concentration of Eu leads to a white phosphor powder which does not display the usual yellowish tint which is usually obtained in commercially available phosphors, but retains a high luminescence and phosphorescence intensity, as exemplified in patent application EP 2 626 401 A1. This low concentration of Eu is also of interest for the final phosphorescent ceramic composite material according to the present invention intensity in the final phosphorescent ceramic composite material.</p>
+      <p id="p-00028-en" num="0028">The amount of the at least one metal oxide of the first phase shall be 5 to 95%, relative to the total weight of the materials of the first and the second phase. In that case the amount of the metal oxide containing the at least one activating element of the second phase shall be 5 to 95%, also relative to the total weight of the materials of the first and the second phase. The preferred amount of the at least one metal oxide of the first phase shall be 40 to 95% by weight, the further preferred amount shall be 50 to 95% by weight and the most preferred amount shall be 50 to 80% by weight, in all these cases relative to the total weight of the materials of the first and the second phase, and the corresponding amounts of the metal oxide containing the at least one activating element of the second phase shall be 5 to 60% by weight, 5 to 50% by weight and 20 to 50% by weight, respectively, relative to the total weight of the materials of the first and the second phase.</p>
+      <p id="p-00029-en" num="0029">The ceramic composite material which is finally obtained is a dense material. As will be described hereafter, the ceramic composite material is prepared in a manner that a binder material, which is usually present in the first step of preparing the green body as the precursor of the ceramic composite material, is removed, for example by a heating step, and pores are generated in this step of removing the binder material. These generated pores are subsequently eliminated in subsequent heating steps, as will be described in connection with the method for the preparation of the persistent phosphorescent ceramic composite material according to the present invention.</p>
+      <p id="p-00030-en" num="0030">A “dense body” in the context of the present invention means a body which is essentially without remaining pores, in other words a body in which the porous character has been minimized. The dense body displays a density which is at least 90% of the theoretical maximum density. The theoretical maximum density is the density without any remaining pores. It can be estimated by taking into account each phase which is present and the relative concentration and the density of each phase.</p>
+      <p id="p-00031-en" num="0031">The theoretical maximum density can be calculated based on the knowledge of the density values of the different components in the composite material. For example, in case of a composite material comprising 80% by weight of zirconia containing 3% of yttria as the preferred type of material for the first phase of the sintered solidified body and 20% by weight of Sr<sub>4</sub>Al<sub>14</sub>O<sub>25 </sub>as the preferred embodiment of the second phase of the sintered solidified body, the theoretical maximum density can be calculated as follows. Based on the density for the yttriated zirconia of 6.1 g/cm<sup>3 </sup>and the density for Sr<sub>4</sub>Al<sub>14</sub>O<sub>25 </sub>of 3.65 g/cm<sup>3</sup>, a theoretical density for this composition of 5.38 g/cm<sup>3 </sup>is calculated. With 30% by weight of Sr<sub>4</sub>Al<sub>14</sub>O<sub>25 </sub>and 70% by weight of yttriated zirconia the calculated density value is 5.08 g/cm<sup>3</sup>, and with 50% by weight of Sr<sub>4</sub>Al<sub>14</sub>O<sub>25 </sub>and 50% by weight of yttriated zirconia the calculated density value is 4.57 g/cm<sup>3</sup>. Such calculated values are an appropriate basis for the calculation of the density although it must be recognized that there is an aspect of uncertainty due to the circumstance that the measurement of the phase concentration is not precise and the different phases are not necessarily phase-pure.</p>
+      <p id="p-00032-en" num="0032">It is a preferred embodiment for the dense body that its density is at least 97% of the theoretical maximum density and a more preferred embodiment that the density is at least 98% of the theoretical maximum density.</p>
+      <p id="p-00033-en" num="0033">Since, as mentioned above, there will be a step of removal of the binder material, for example through heating, the binder material itself will not be identified in the final sintered ceramic composite material.</p>
+      <p id="p-00034-en" num="0034">The watch component of the present invention has a surface which comprises an area which is phosphorescent besides an area which is not phosphorescent.</p>
+      <p id="p-00035-en" num="0035">The manner of achieving the area with the phosphorescent properties is described hereafter.</p>
+      <p id="p-00036-en" num="0036">Providing a part of the surface with non-phosphorescent character can be achieved by providing a shielding layer on the surface of the watch component. This shielding layer, or opaque layer, or absorbing layer, or non-transparent layer, shall be non-transparent to light, so that any transmission through the shielding layer of external radiation having a range of wavelength that makes it capable to excite the phosphor is prevented, or at least greatly reduced, and/or any transmission of light emitted from material below the shielding layer in this area would be absorbed or at least greatly reduced as well.</p>
+      <p id="p-00037-en" num="0037">According to a preferred embodiment of the present invention, an effective shielding layer shall be made from an appropriate metallic material. Such metallic material may be selected, for example, from the group consisting of Au, Ag, Ni, Pt, Pd or alloys of these. The choice of the metallic material may depend on the particular combination with the ceramic composite material and the resulting optical effect.</p>
+      <p id="p-00038-en" num="0038">According to another embodiment of the present invention, an effective shielding layer shall be made from oxides, nitrides, and/or carbides such as for example CrN, TiN, or ZrN. The choice of the oxide, nitride, and/or carbide materials may depend on the particular combination with the ceramic composite material and the resulting optical effect.</p>
+      <p id="p-00039-en" num="0039">According to another preferred embodiment of the present invention, the shielding layer can be realized by forming successive or stacked layers of different materials on the surface of the ceramic composite material, for example by depositing as a first layer a tie layer to enhance adhesion on the composite and as a second layer a different material, such as a metallic material, on top of the tie layer.</p>
+      <p id="p-00040-en" num="0040">For applying the shielding layer, any conventional manner known in the state of the art may be chosen. For example, deposition of the metallic material with chemical vapor deposition (CVD), physical vapor deposition (PVD) or a galvanic method is possible. For example, deposition of the oxide, nitride, and/or carbide material with atomic layer deposition (ALD) or physical vapor deposition (PVD) is possible.</p>
+      <p id="p-00041-en" num="0041">The thickness of the shielding layer depends on the material which is used in its preparation. A thickness of at least 10 nm is preferable to achieve the effect of the partial or full inhibition and/or partial or full absorption of the phosphorescence. For example, tests have shown that a layer of gold of 10 nm thickness decreases the emitted intensity by 90%, whereas a layer of gold of 40 nm thickness decreases the emitted intensity by 99%. A thickness of more than 0.8 mm shall not be required and shall be avoided for leading to unnecessary use of metal material and giving the watch component a bulky effect. A more preferred range of the thickness of the shielding layer shall be 20 to 10,000 nm, even more preferably between 40 and 4,000 nm.</p>
+      <p id="p-00042-en" num="0042">The shielding layer shall not cover the complete surface of the watch component. There is no particular limitation to the relative area of the total surface of the watch component which is covered with the shielding layer. The area covered with the shielding layer shall be preferably between 1 and 99% of the total surface of the watch component. In this definition the total surface shall be the relevant surface of the watch component in the sense of the surface which shall be accessible to the eye of the observer. Within this range, any particular value of the covered relative area may be chosen.</p>
+      <p id="p-00043-en" num="0043">The specific pattern of the phosphorescent area may be chosen according to any particular requirement. Possible ways to obtain specific patterns will be described hereafter in connection with the context of the method of the invention.</p>
+      <p id="p-00044-en" num="0044">Besides the application of a shielding layer there are other ways to achieve the wanted feature in the watch component of a surface with a phosphorescent area and a non-phosphorescent area, or of a surface with a phosphorescent area and a less phosphorescent area.</p>
+      <p id="p-00045-en" num="0045">Such a further manner of providing a part of the surface with a non-phosphorescent character involves a treatment step to change the properties of the phosphorescent ceramic composite material without requiring an additional shielding layer or coating. Different methods for this are available. It is possible to change the process for the preparation of the phosphorescent ceramic composite material so that the final product contains areas with different production methods.</p>
+      <p id="p-00046-en" num="0046">It is also possible to conduct the preparation of the watch component in a particular manner and to conduct a treatment of this material during fabrication and/or after completion of the preparation of the ceramic composite material to change its properties according to a particular pattern which neutralizes the phosphorescent effect which is displayed in a certain area, as will be described below.</p>
+      <p id="p-00047-en" num="0047">Next the method for preparing the watch component according to the present invention is described.</p>
+      <p id="p-00048-en" num="0048">The description of the preparation of the ceramic composite material is provided first.</p>
+      <p id="p-00049-en" num="0049">In a first step the materials for the ceramic composite material are mixed as powders. The manner for mixing the materials is not particularly limited and any conventional mixing procedure may be used.</p>
+      <p id="p-00050-en" num="0050">The process comprises the mixing of the metal oxide and the phosphor powder, optionally with stabilizers and binders, and the subsequent shaping of a powder compact (hereafter designated as the green body).</p>
+      <p id="p-00051-en" num="0051">The metal oxide which is used is the metal oxide of the first phase of the ceramic composite material described above. The phosphor which is used is the metal oxide containing the at least one activating element of the second phase of the ceramic composite material as described above.</p>
+      <p id="p-00052-en" num="0052">The binders which are optionally used in the preparation of the green body are not particularly limited and any material which is suitable in aiding the formation of the green body may be used. Regularly the binder material is an organic material and as such an organic material a polymer material such as, for example, polyethylene glycol (PEG), polyvinyl acetate (PVA), polytetrafluoroethylene, ethylene-vinyl acetate, polyethylethacrylate, or poly(methacrylate)-co-ethylene glycol dimethacrylate (PMMA) may be chosen.</p>
+      <p id="p-00053-en" num="0053">The presence of such an organic binder makes the formation of the green body easier. Methods for preparing the green body include injection molding, tape casting, dry pressing, slip casting, gel casting, direct coagulation casting and extrusion.</p>
+      <p id="p-00054-en" num="0054">Hereafter the green body is treated with heat in a number of different steps. It is a first optional step to treat the green body with heat in order to remove the binder material insofar as it has been present during the preparation of the green body. This is called the debinding step. In this debinding step, pores are generated through the removal of the binder material in the heat-treated green body.</p>
+      <p id="p-00055-en" num="0055">When conducted by heating, the debinding step is usually conducted at a temperature of at least 450° C., preferably in an oxidizing atmosphere, the selected temperature and the selected atmosphere depending on the character of the binder material.</p>
+      <p id="p-00056-en" num="0056">Alternatively and depending upon the nature of the binder material, the debinding step can be carried out by other means, such as for example catalytic debinding, or solvent-based debinding.</p>
+      <p id="p-00057-en" num="0057">The debinding step is followed by a first sintering step. The first sintering step is conducted at a temperature in the range of typically 800 to 1600° C. It is the intention of the first sintering step to densify the material. This is achieved by an effect of the heating on the pores which are present, whereby an elimination of the pores is initiated. A preferred range for the temperature in the first sintering step may be the range between 850 and 1200° C., and a typical temperature chosen for first sintering is 900° C. It has been observed that presintering at high temperatures such as temperatures in the range of 1450 to 1500° C. can lead to a slightly decreased performance as a phosphorescent composite material.</p>
+      <p id="p-00058-en" num="0058">The first sintering is preferably conducted in an oxidizing atmosphere. Such an oxidizing atmosphere is regularly an ambient atmosphere, meaning in the presence of air at normal ambient pressure. Instead of air, an enriched oxygen atmosphere may be used as well, but this has no technical advantage. The debinding and first sintering can be also conducted under neutral or reducing conditions, although tests have shown that this approach is less favourable.</p>
+      <p id="p-00059-en" num="0059">It is possible to combine the two steps of debinding and the first sintering in one single step. The conditions of this single treatment step must comply with the requirements for debinding as well as for the sintering of the first step. This means that the treatment temperature must be chosen to be in a range which allows the removal of the organic binder material under formation of pores of suitable size, or that two temperatures are chosen for the debinding step and the first sintering step without cooling the material to room temperature in between the steps.</p>
+      <p id="p-00060-en" num="0060">If the wanted effect is not achieved in the one single step, then the debinding and the sintering under oxidizing conditions are conducted in two separate steps, but a treatment in one single step is in general more favourable.</p>
+      <p id="p-00061-en" num="0061">The first sintering step is followed by a second sintering step which is conducted under reducing conditions. The reducing conditions in the sense of the present invention are such conditions in which a reduction of the activating element or elements in the phosphor as the second phase of the ceramic composite material is achieved, but at the same time a reduction of the metal oxide in the first phase of the ceramic composite material is avoided.</p>
+      <p id="p-00062-en" num="0062">A usual temperature condition for performing the second sintering step is the choice of a temperature in the range of 800 to 1600° C., with a preferred temperature of 1350 to 1550° C. and with a more preferred temperature of 1450 to 1500° C. The duration of the treatment at this temperature depends on the composition of the composite and the temperature which has been chosen. A regular treatment condition is a duration of the treatment of 3 hours at a temperature of 1450° C. This means that the effective temperature of 1450° C. is maintained at a constant level for this duration of 3 hours. The total heat treatment involves a ramp-up period involving a heating of for instance 150° C./h and a cooling period of for instance 4 hours.</p>
+      <p id="p-00063-en" num="0063">The atmosphere for the second sintering step is a reducing atmosphere. Any type of atmosphere which succeeds in reducing the activating elements in the activated metal oxide phase can be chosen. A typical reducing atmosphere is an atmosphere of hydrogen in argon (Ar/H<sub>2</sub>) or an atmosphere of hydrogen in nitrogen (N<sub>2</sub>/H<sub>2</sub>).</p>
+      <p id="p-00064-en" num="0064">As an alternative to the treatment in the second sintering step under reducing conditions, a sintering under neutral conditions may be possible. In that case it is possible to realize a High Isostatic Pressing (HIP) treatment in neutral atmosphere (after having sintered the material and closed the porosity), or to use spark plasma sintering (SPS) under neutral atmosphere. In both cases, the overall effect is to reduce the material as such treatments are usually performed in graphite moulds. The colour of the zirconia may be affected under these heat treatments, since it may be reduced during this treatment as well, at least in a thin surface layer. It should however be possible to remove such grey or black colour by mechanical polishing or through heat treatment in oxidising atmosphere at T&lt;900° C.</p>
+      <p id="p-00065-en" num="0065">It has turned out that the sintering step under reducing conditions is the essential step in the preparation of the composite material with the wanted effects of displaying favorable mechanical properties in addition to a wanted degree of phosphorescent properties. Before the second sintering step under reducing conditions, the material does not display the properties of a phosphor and no luminescence is observed. At least one heat treatment in reducing or neutral atmosphere at a temperature of at least 800° C. is required to obtain a functional material.</p>
+      <p id="p-00066-en" num="0066">The sintering step under reducing conditions leads to a reduction of the activating elements in the phosphor. It is an essential feature of the invention that this step in the preparation only reduces the activating elements in the second, phosphorescent phase of the ceramic composite material. If for instance the metal oxide in the first phase is zirconia, the reduction of the zirconia would lead to a changed color of this component. Zirconia has a white color, but the reduced form is grey-black which would normally be a highly unwanted color change. It is the surprising effect of the method of the invention that the sintering step under reducing conditions preferentially reduces the activating elements in the phosphorescent phase and not the further components which are present, and in particular not the material of the first phase.</p>
+      <p id="p-00067-en" num="0067">That zirconia is not reduced is very surprising, since the literature indicates that a heat treatment of zirconia under reducing atmosphere at high temperatures results in a blackening of the ceramic. One possibility could be that the presence in the ceramic of an activating element which is more easily reduced than the ZrO<sub>2</sub>, such as the rare earth element(s) (Eu<sup>3+</sup> for example) contained in the second phase, prevents the colour change of zirconia.</p>
+      <p id="p-00068-en" num="0068">The sintering step under reducing conditions preferably optimizes the density of the composite material, whereby the density reaches a maximal value and the pores which have been generated during the debinding step are essentially eliminated and no remaining pores are detected in the final product. The maximum density level is obviously achieved under the circumstance of the complete elimination of the pores.</p>
+      <p id="p-00069-en" num="0069">It is also possible to conduct the different heat treatments, namely the debinding step, the sintering under oxidizing conditions and the sintering under reducing conditions, in one single heating step. It has been described above that the sintering step under reducing conditions is the essential step in the preparation of the composite ceramic of the present invention. In a combined single heating step, this single heating step shall in the first place provide the sintering under reducing conditions. Although the possibility to conduct the heat treatments in one single step is technically and economically an attractive possibility, this possibility shall only work when the different functions of the heating steps can be achieved in the single heating step. In some cases, the function of the debinding step cannot be achieved under reducing conditions, in particular for certain binder materials.</p>
+      <p id="p-00070-en" num="0070">In the previous description of the watch components of the present invention, it has been described that these have a surface which comprises an area which is phosphorescent, besides or adjacent to an area which is not phosphorescent or less phosphorescent. In other words, it has been described that the watch components have a surface which comprises an area which shows phosphorescent emission, besides or adjacent to an area which does not show phosphorescent emission or which shows phosphorescent emission with an intensity that is lower than that of the emission of the other area. In yet other words, it has been described that the watch components have a surface which comprises an area which shows an emitted phosphorescent intensity, besides or adjacent to an area which does not show an emitted phosphorescent intensity or which shows an emitted phosphorescent intensity that is is lower than that of the other area. There are different methods for achieving this aspect of the present invention.</p>
+      <p id="p-00071-en" num="0071">For example, the material can be further treated to obtain a desired esthetical or functional effect, for example by depositing layers on parts of the surface and/or in features by PVD and/or galvanic methods, as for instance described in EP 1 548 524 A1 and EP 1 548 525 A1, or by impregnation of the green body with metallic salt solutions.</p>
+      <p id="p-00072-en" num="0072">According to a preferred embodiment of the watch components, the surface shall comprise an area which is not phosphorescent by being covered with a shielding or opaque or absorbing layer, such as preferably a layer made from one or several metallic materials, and/or from one or several oxide, nitride, and/or carbide materials. In this preferred embodiment the shielding layer shall be provided on the surface of the watch component in a specific manner of any shape or pattern according to the design of the producer.</p>
+      <p id="p-00073-en" num="0073">There is no particular limitation to the relative area of the total surface of the watch component which is not phosphorescent or which is less phosphorescent. This area which is not phosphorescent or which is less phosphorescent shall be preferably between 1 and 99% of the total surface of the watch component. In this definition the total surface shall be the relevant surface of the watch component in the sense of the surface which shall be accessible to the eye of the observer. Within this range, any particular value of the covered relative area may be chosen.</p>
+      <p id="p-00074-en" num="0074">In the context of the present invention, the patterns are microscopic or macroscopic, in the sense that they have a typical dimension or characteristic size of 10 μm or more, preferably of 100 μm or more, for example to form digits and/or letters and/or geometric patterns on the surface of the watch component.</p>
+      <p id="p-00075-en" num="0075">One of the methods which is well known in the state of the art for treating locally and selectively the surface of a solid body is based on using the photofabrication or photolithography technique.</p>
+      <p id="p-00076-en" num="0076">Photofabrication is a generic term for techniques in which a photoresist comprised of a photosensitive or radiation-sensitive resin composition is coated on the surfaces of process articles such as silicon wafers or other substrates and the coating films formed are patterned by photolithography.</p>
+      <p id="p-00077-en" num="0077">Photolithography is a process used in microfabrication to transfer a geometric pattern from a photomask to a light-sensitive chemical “photoresist”, or simply “resist”, which is deposited on the substrate. The resist is exposed to light through the photomask, which transforms the exposed parts. In the case of a so-called positive resist, the portion of the photoresist that is exposed to light becomes soluble to a solvent or surface treatment (the photoresist developer or development treatment), while the portion of the photoresist that is unexposed remains insoluble to the photoresist developer or treatment. In the case of a negative resist, the portion of the photoresist that is exposed to light becomes insoluble to the photoresist developer or treatment, and the unexposed portion of the photoresist is dissolved by the photoresist developer. One obtains thereby a photoresist pattern on the surface, with parts of the surface protected by the photoresist and other parts that are not covered. These patterns are acting as masks in the following step of layer deposition, or electroforming chiefly using electroplating, any of which are applied alone or in combination, to deposit the material or materials forming the shielding layer.</p>
+      <p id="p-00078-en" num="0078">In the photofabrication technique which may be applied in the context of the present invention, it is possible to use a positive or a negative photoresist.</p>
+      <p id="p-00079-en" num="0079">A negative photoresist is usually an organic material which, when exposed to radiation, undergoes chemical reactions of the type referred to as crosslinking, which reactions result in insolubilizing the exposed photoresist. The crosslinking reactions are of the type that can be initiated either by light or by electrons. Because it is possible to generate electron beams of substantial energy but of small diameter, their use in the generation of small patterns is sometimes preferred to the use of light. Electron beams also have a much better resolution capability than is possible when using an optical mask and light exposure, and they have a much greater depth of focus. The exposure of a conventional positive photoresist involves solubilization of the exposed areas, and the chemical reactions involved are of the scission or degradation type, which also require absorption of light or electrons. Because this type of photoresist requires higher flux densities for proper exposure than negative photoresists require, electron beams are not widely employed to this end.</p>
+      <p id="p-00080-en" num="0080">In both methods of applying the positive resist or the negative resist the final effect which is achieved is that a surface of the substrate, in the context of the present invention the ceramic composite material, is partly covered with the deposited resist.</p>
+      <p id="p-00081-en" num="0081">In one method which is preferred in the present invention, a shielding layer is deposited on the exposed part of the surface, for example by ALD, PVD, CVD, or by galvanic techniques. The shielding layer is preferably made from a metallic material and/or from a oxide, nitride, and/or carbide material and/or from a combination of those. The shielding layer can be realized by depositing one layer or thin film of a given material, or by depositing several layers or thin films of different materials in succession, using the same deposition technique or using different deposition techniques. Examples for providing such layers are provided in the documents EP1548524 and EP1548525. The material which is used for preparing the layer can be selected from the group consisting of Au, Ag, CrN, Ni, Pt, TiN, ZrN, Pd or mixtures of these materials. The material layer is deposited on the surface and resist pattern.</p>
+      <p id="p-00082-en" num="0082">After this deposition, the remaining photoresist is removed through the treatment with a stripping solution. Removing the remaining photoresist leaves a pattern of metal or other material on the surface. With an appropriate material and thin film thickness, light from the environment is absorbed by the layer and/or the emission from the underlying composite phosphorescent material is absorbed by the layer, resulting in light emission from part of the surface of the component only.</p>
+      <p id="p-00083-en" num="0083">Further techniques are available as the method according to the invention which do not involve a photofabrication technique.</p>
+      <p id="p-00084-en" num="0084">According to a further embodiment for the preparation of an area which is not phosphorescent, a part of the surface of the watch component is colored, for example by local impregnation with a solution of metallic salts before sintering and subsequent heat treatment, thereby forming colouring pigments in the treated zones. With an appropriate pigment type, pigment density, and thickness of treated material, light from the environment is absorbed and/or the emission from the composite phosphorescent material is absorbed, resulting in light emission from part of the surface of the component only.</p>
+      <p id="p-00085-en" num="0085">According to yet a further embodiment, a part of the surface is treated in such a way that the luminescent phase is deactivated. This could be realized by local impregnation with a solution of metallic salts before sintering and subsequent heat treatment, or by electrochemical methods, or by ionic implantation. With an appropriate treatment, no light is emitted from the treated zones of the composite material, resulting in light emission from part of the surface of the component only.</p>
+      <p id="p-00086-en" num="0086">It is also possible in another embodiment that part of the surface of the watch component is treated in such a way that the luminescent phase is deactivated and/or that the emitted luminescence is absorbed. This can be realized by local modification of the material by laser treatment, for example by a laser with femtosecond impulsions. One possibility using such a femtosecond laser is to follow and adapt the teaching of WO2013135703A1, in order to ablate the material and/or to form a light-absorbing layer in the treated zones, resulting in light emission from part of the surface of the component only.</p>
+      <p id="p-00087-en" num="0087">In yet another embodiment, two different materials can be combined to realize the watch component. For example, the watch component can be realized by using a standard ceramic material, and the phosphorescent ceramic composite material can be overmolded on the ceramic material to form patterns. The standard ceramic material can be, for example, an yttria-stabilized zirconia, without or with the addition of pigments.</p>
+      <p id="p-00088-en" num="0088">The above methods can be combined at will and/or can be combined with known means for shaping and/or modifying the surface of ceramics components, and in particular of ceramic watch components, provided that they are compatible with each other. As an example, the surface of the composite ceramic component can be shaped in order to form features on its visible surface, such as hollows having a given depth and side walls that are perpendicular to the visible surface. A first layer can be deposited on the bottom of the hollows, such as described in EP1548524, and/or a second layer can be deposited on part of the surface outside of the hollows, whereby the second layer can be of a different material than that of the first layer or identical to it (and, in that case, deposited at the same time as the first layer or not). With appropriate materials and/or treatments, the emission from the composite phosphorescent material is modified, resulting in light emission from part of the surface of the component only. As a further example, the entire surface of the component can be colored through impregnation with a metallic salt solution of the green body followed by sintering, thereby preventing light emission. Patterns can then be realized by removing locally the colored surface region, for example by machining with standard techniques, or by ablation with a laser beam, in particular with femtosecond laser impulsions. As a further example, a shielding layer can be deposited on the entire surface of the component, thereby preventing light emission. Patterns can then be realized by removing locally the shielding layer, for example by ablation with a laser beam, in particular with femtosecond laser impulsions.</p>
+      <p id="p-00089-en" num="0089">Of course, instead of being completely opaque, the deposited layer can be deposited in such a way that the emitted light intensity is lower as compared to the non-covered zones. Alternatively, instead of being completely non-emitting, the treated zones could be treated in such a way that the emitted light intensity is lower as compared to the non-treated zones. In both cases, this results in light emission with different intensities from different parts of the surface of the component. In other words, the watch component has a surface which comprises an area which shows phosphorescent emission and an area which shows phosphorescent emission with an intensity that is different (higher or lower) than that of the emission of the other area. In one embodiment, the different areas show significantly different emitted intensities, with the smallest difference in emitted intensity between the different areas being at least 20%, preferably at least 50%, more preferably at least 90%. In another embodiment, the different areas show different emitted intensities that can be slight, with the smallest difference in emitted intensity between the different areas being between 0.1% and 1%, allowing thus to realize grey levels, in order to form an 8-bit greyscale image for example. In any case, the differences in emitted intensity should be deliberate and/or controlled, in the sense that they result from an additional feature, layer or treatment of the phosphorescent ceramic composite material, as opposed to random and/or uncontrolled variations in material composition or concentration of the second, phosphorescent phase in the material.</p>
+      <p id="p-00090-en" num="0090">Through the method of the present invention, a ceramic composite component with excellent mechanical properties and excellent persistent luminescence is obtained, with only part of the surface which emits light so that there are active/luminescent areas and non-luminescent areas, or with different parts of the surface that emit different intensities. The obtained material opens many possibilities in terms of performances and design, as it is tough, hard, and mechanically resistant. It can be used to realize, e.g., exterior parts (watch case, bezel) as well as interior elements (dial, luminescent indexes, hands) of a watch. The presence of a phosphorescent area besides a non-phosphorescent area is a useful manner to provide watches with specific luminous properties.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">FIGURES</heading>
+      <p id="p-00091-en" num="0091">
+        <figref>FIG. 1</figref>. Intensity of emission Lv as a function of time t of phosphorescent materials used in the present invention comprising different phases of strontium aluminate with rare earth activating elements.</p>
+      <p id="p-00092-en" num="0092">
+        <figref>FIG. 2</figref>. Microstructures of two samples of inventive ceramic composite material realized with phosphorescent materials of standard and extrafine granulometry, respectively.</p>
+      <p id="p-00093-en" num="0093">
+        <figref>FIG. 3</figref>. Influence of initial phosphor grain size on luminescent properties of phosphorescent materials used in the present invention.</p>
+      <p id="p-00094-en" num="0094">
+        <figref>FIG. 4</figref>. Microstructures of two samples of phosphorescent composite material used in the present invention realized with phosphorescent materials without and with a washing step.</p>
+      <p id="p-00095-en" num="0095">
+        <figref>FIG. 5</figref>. Influence of washing step and treatment temperature on luminescent properties of phosphorescent materials used in the present invention.</p>
+      <p id="p-00096-en" num="0096">
+        <figref>FIG. 6</figref>. Influence of phosphor concentration on luminescent properties of phosphorescent materials used in the present invention.</p>
+      <p id="p-00097-en" num="0097">
+        <figref>FIG. 7</figref>. Influence of phosphor concentration on luminescent properties of phosphorescent materials used in the present invention.</p>
+      <p id="p-00098-en" num="0098">
+        <figref>FIG. 8</figref>. Comparison of luminescent properties of phosphorescent materials used in the present invention with a pure phosphor sample.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">EXAMPLES</heading>
+      <p id="p-00099-en" num="0099">Next the present invention is described in more detail by referring to the following examples.</p>
+      <p id="p-00100-en" num="0100">Meanwhile the properties of the ceramic composite material were determined by the following methods.</p>
+      <p id="p-00101-en" num="0101">The density is measured following Archimedes' method with absolute ethanol. Each sample is measured three times and the mean value is calculated.</p>
+      <p id="p-00102-en" num="0102">L*a*b* colorimetry measurements are performed after machining and polishing the sample, on the free side (ie the side that was not in contact with the sample holder during heat treatment), with an aperture of 7 mm on three different locations. The equipment is a Minolta CM3610d.</p>
+      <p id="p-00103-en" num="0103">The measurements of the toughness were performed by indentation with a KB250 Prüftechnik GmbH equipment. The HV5 indentations were realized under a charge of 5 kg applied during 15 s. The toughness was measured by indentation and evaluated through the formula proposed by K. Niihara (cf Niihara K., A fracture mechanics analysis of indentation induced Palmqvist crack in ceramics, J. Mater. Sci. Lett., 1983, 2, 221-223):</p>
+      <p id="p-00104-en" num="0000">[in-line-formulae]<i>K</i><sub>lc</sub>=0.018<i>Hv a</i><sup>0.5</sup>(<i>E/Hv</i>)<sup>0.4</sup>·(<i>a/c−</i>1)<sup>−0.5 </sup>[/in-line-formulae]</p>
+      <p id="p-00105-en" num="0000">where E is the elastic (or Young's) modulus (measured value: 220 GPa), Hv is the Vickers hardness in GPa, c is the length of the crack formed following indentation measured from the center of the indentation, and a is the half-length of the diagonal of the indentation.</p>
+      <p id="p-00106-en" num="0104">HV1 microhardness was measured with a LEICA VMHT MOT equipment with a charge of 1 Kg during 15 s. 10 measurements were performed per sample.</p>
+      <p id="p-00107-en" num="0105">The Young's modulus and Poisson ratio were measured by acoustic microscopy (non-destructive control by ultrasounds). The relative measurement uncertainty is 2% for both parameters.</p>
+      <p id="p-00108-en" num="0106">The intensity and decay of the emitted luminescence is measured in a black chamber on up to six samples with a Pritchard PR-880 photometer. The excitation of the phosphor prior to the measurement is done in the chamber with a standard fluorescent tube. The measurement is performed in three stages: (a) the sample is kept in the black chamber during 8 hours prior to charging; (b) the excitation is realized during 20 minutes under a D65 fluorocompact lamp at an excitation intensity of 400 lux; (c) the emitted luminescence is measured during at least 900 minutes with an objective aperture of 3°, one of the samples being a reference sample. The sensitivity of the photometer is 0.9 mCd/m<sup>2</sup>, to be compared with 0.3 mCd/m<sup>2</sup>, which is the lower limit of light perception of the human eye.</p>
+      <p id="p-00109-en" num="0107">The X-ray diffraction measurements are performed in Bragg-Brentano geometry with a Cu anode excited with 45 kV electrons. The different phases are identified on the basis of reference patterns from the literature, and the phase concentrations (given in wt % in the tables below) are estimated with a typical accuracy of 1 wt %.</p>
+      <heading id="h-00007-en" level="1">Example 1</heading>
+      <p id="p-00110-en" num="0108">A sample 1 containing 20 wt % of phosphor has been prepared as follows: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>Mixing 80.0 g of zirconia powder containing 3 mol % of yttria (TZ-3YS obtained from TOSOH Corporation) and 20.0 g of Sr<sub>4</sub>Al<sub>14</sub>O<sub>25</sub>:Eu,Dy powder with 3.0 g of organic binder composed of 1.2 g (40%) PVA and 1.8 g (60%) PEG 20 000 in solution at 50% in water, with 200 ml distilled water and 1 kg of zirconia balls;</li><li>Attrition/milling at 400 U/min during 30 min in a zirconia bowl;</li><li>Filtering of the suspension, rinsing of the balls and bowl with 450 ml IPA, spray-drying of the filtered suspension and rinsing liquid.</li></ul></li></ul></p>
+      <p id="p-00111-en" num="0112">7 g of powder were then pressed in a Ø 40 mm mould. During a first heat treatment, debinding and sintering were performed in one step in a furnace under ambient atmosphere, at 1475° C., with a soak-time of 2 h with 21 h ramp-up time and 11 h cooling time (total treatment time of 34 h).</p>
+      <p id="p-00112-en" num="0113">The obtained pellets were machined and polished. The typical density as measured by the Archimedes method was 5.371 g·cm<sup>−3</sup>. Typical colorimetry was L*(D65)=97.01, a*(D65)=−1.81; b*(D65)=2.21. Phase analysis by X-ray diffraction indicated that the phase ratios of the zirconia (tetragonal to cubic) were not modified with respect to a phosphor-free sample, and that the phosphor remained in the Sr<sub>4</sub>Al<sub>14</sub>O<sub>25 </sub>phase. At this stage, the phosphor was not functional and no persistent luminescence was detected.</p>
+      <p id="p-00113-en" num="0114">The second heat treatment was performed in reducing atmosphere, at 1450° C. during 4 h with a ramp-up rate of 150° C.h<sup>−1</sup>, under Ar/H<sub>2 </sub>atmosphere. After this treatment, the samples showed persistent luminescence. The density after treatment was 5.37 g·cm<sup>−3 </sup>and the hardness of the pellet was about 1250 Hv with a toughness of about 5.1 MPa·m<sup>−0.5</sup>. The colorimetry was L*(D65)=92.86, a*(D65)=−1.31, b*(D65)=2.53, very close to the colour before sintering</p>
+      <heading id="h-00008-en" level="1">Example 2</heading>
+      <heading id="h-00009-en" level="1">Effect of the Strontium Aluminate Phase</heading>
+      <p id="p-00114-en" num="0115">The potential of two different strontium aluminates with rare-earth (RE) dopants to obtain a persistent phosphorescent ceramic material that is suitable, e.g., for watch applications was investigated.</p>
+      <p id="p-00115-en" num="0116">Two phases showed suitable performances for such applications: the Eu<sup>2+</sup>/Dy<sup>3+</sup> doped SrAl<sub>2</sub>O<sub>4 </sub>phase which emits around 520 nm (green) and the less used Eu<sup>2+</sup>/Dy<sup>3+</sup> doped Sr<sub>4</sub>Al<sub>14</sub>O<sub>25 </sub>phase which emits around 495 nm (blue). Although the green-emitting phase is most widely used, the blue-emitting material shows very interesting properties in terms of persistence and perceived intensity.</p>
+      <p id="p-00116-en" num="0117">Two samples with 20% by weight of active SrAlO material were prepared in the manner as described in example 1, with a pre-sintering performed at 900° C. under air and a sintering in reducing atmosphere at 1450° C. for 3 h (sample 2.1 incorporating the green-emission SrAl<sub>2</sub>O<sub>4 </sub>material and sample 2.2 incorporating the blue-emission Sr<sub>4</sub>Al<sub>14</sub>O<sub>25 </sub>material). The results are given in the following table 1 and in <figref>FIG. 1</figref>.</p>
+      <p id="p-00117-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="28pt" align="center" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <colspec colname="6" colwidth="70pt" align="center" />
+              <colspec colname="7" colwidth="56pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="7" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Sr<sub>x</sub>Al<sub>y</sub>O<sub>z </sub>phases</entry>
+                  <entry>ZrO<sub>2 </sub>phases</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Colour</entry>
+                  <entry>Density</entry>
+                  <entry>(Sr<sub>4</sub>Al<sub>14</sub>O<sub>25</sub>/SrAl<sub>2</sub>O<sub>4</sub>/</entry>
+                  <entry>(tetragonal/cubic/</entry>
+                </row>
+                <row>
+                  <entry>sample</entry>
+                  <entry>Pre-sintering</entry>
+                  <entry>sintering</entry>
+                  <entry>(LAB)</entry>
+                  <entry>(g · cm−3)</entry>
+                  <entry>SrAl<sub>12</sub>O<sub>19</sub>)</entry>
+                  <entry>monoclinic)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>2.1</entry>
+                  <entry>900° C. in air</entry>
+                  <entry>1450° C. in</entry>
+                  <entry>93.9/−5.9/9.2</entry>
+                  <entry>5.33</entry>
+                  <entry>0/18/0</entry>
+                  <entry>60/21/1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Ar/H<sub>2</sub>, 3 h</entry>
+                </row>
+                <row>
+                  <entry>2.2</entry>
+                  <entry>900° C. in air</entry>
+                  <entry>1450° C. in</entry>
+                  <entry>95.7/−3.5/6.3</entry>
+                  <entry>5.33</entry>
+                  <entry>18/0/0</entry>
+                  <entry>60/21/1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Ar/H<sub>2</sub>, 3 h</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00118-en" num="0118">The data prove that the sample with Sr<sub>4</sub>Al<sub>14</sub>O<sub>25 </sub>showed an emitted intensity that is 10 times higher than for the green emitting material. Although SrAl<sub>2</sub>O<sub>4 </sub>can be functionally incorporated in a zirconia matrix, it is clearly preferable to use Sr<sub>4</sub>Al<sub>14</sub>O<sub>25</sub>.</p>
+      <p id="p-00119-en" num="0119">However, the low performances of the SrAl<sub>2</sub>O<sub>4 </sub>containing samples could be due to some process steps. For example, as SrAl<sub>2</sub>O<sub>4 </sub>is water-soluble, it could be preferable not to use water-based methods for atomisation.</p>
+      <heading id="h-00010-en" level="1">Example 3</heading>
+      <heading id="h-00011-en" level="1">Influence of Sr<sub>4</sub>Al<sub>14</sub>O<sub>25 </sub>Grain Size and Sintering Conditions</heading>
+      <p id="p-00120-en" num="0120">The influence of the grain size of the initial phosphor material on the obtained performances was studied for two different sintering conditions.</p>
+      <p id="p-00121-en" num="0121">The images in <figref>FIG. 2</figref> show the microstructures of the samples with standard granulometry (D<sub>V10</sub>=1.2 μm; D<sub>V50</sub>=2.5 μm; D<sub>V90</sub>=6.4 μm, as in the samples 3.1 and 3.2, at left) and so-called “extra-fine” granulometry (D<sub>V10</sub>=0.1 μm; D<sub>V50</sub>=1.4 μm, D<sub>V90</sub>=4.7 μm, as in the samples 3.3 and 3.4, at right).</p>
+      <p id="p-00122-en" num="0122">The behaviour of the four samples is displayed in table 2 and <figref>FIG. 3</figref>.</p>
+      <p id="p-00123-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="28pt" align="center" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <colspec colname="6" colwidth="70pt" align="center" />
+              <colspec colname="7" colwidth="56pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="7" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Sr<sub>x</sub>Al<sub>y</sub>O<sub>z </sub>phases</entry>
+                  <entry>ZrO<sub>2 </sub>phases</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Colour</entry>
+                  <entry>Density</entry>
+                  <entry>(Sr<sub>4</sub>Al<sub>14</sub>O<sub>25</sub>/SrAl<sub>2</sub>O<sub>4</sub>/</entry>
+                  <entry>(tetragonal/cubic/</entry>
+                </row>
+                <row>
+                  <entry>sample</entry>
+                  <entry>Pre-sintering</entry>
+                  <entry>sintering</entry>
+                  <entry>(LAB)</entry>
+                  <entry>(g · cm<sup>−3</sup>)</entry>
+                  <entry>SrAl<sub>12</sub>O<sub>19</sub>)</entry>
+                  <entry>monoclinic)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>3.1</entry>
+                  <entry>1475° C. in air</entry>
+                  <entry>1450° C. in</entry>
+                  <entry>94.8/−2.5/4.1</entry>
+                  <entry>5.33</entry>
+                  <entry>20/0/0</entry>
+                  <entry>56/23/1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>N<sub>2</sub>/H<sub>2</sub>, 4 h</entry>
+                </row>
+                <row>
+                  <entry>3.2</entry>
+                  <entry> 900° C. in air</entry>
+                  <entry>1450° C. in</entry>
+                  <entry>95.7/−3.5/6.3</entry>
+                  <entry>5.33</entry>
+                  <entry>20/0/0</entry>
+                  <entry>56/23/1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>N<sub>2</sub>/H<sub>2</sub>, 3 h</entry>
+                </row>
+                <row>
+                  <entry>3.3</entry>
+                  <entry>1475° C. in air</entry>
+                  <entry>1450° C. in</entry>
+                  <entry>94.6/−2.2/3.2</entry>
+                  <entry>5.35</entry>
+                  <entry>18/0/0</entry>
+                  <entry>60/21/1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>N<sub>2</sub>/H<sub>2</sub>, 4 h</entry>
+                </row>
+                <row>
+                  <entry>3.4</entry>
+                  <entry> 900° C. in air</entry>
+                  <entry>1450° C. in</entry>
+                  <entry>95/−3/5</entry>
+                  <entry>5.35</entry>
+                  <entry>18/0/0</entry>
+                  <entry>60/21/1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>N<sub>2</sub>/H<sub>2</sub>, 3 h</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00124-en" num="0123">Although all four samples showed persistent luminescence, it is preferable in this case to use a strontium aluminate powder with standard grain size, as the samples with small powder grain size showed systematically a lower emitted intensity. Furthermore, it appears that pre-sintering at 900° C. is more favourable than at 1475° C. for the persistence. Samples with pre-sintering at 1500° C. were comparable to samples pre-sintered at 1475° C., and samples with sintering in reducing atmosphere at 1500° C. were comparable to samples sintered at 1450° C. (not shown here).</p>
+      <heading id="h-00012-en" level="1">Example 4</heading>
+      <heading id="h-00013-en" level="1">Influence of Sr<sub>4</sub>Al<sub>14</sub>O<sub>25 </sub>Pre-Treatment</heading>
+      <p id="p-00125-en" num="0124">The influence of a pre-treatment of the phosphor powder before incorporation into the zirconia slurry was studied for different sintering conditions. This pre-treatment consists in washing the powder in an aqueous acidic solution, such as, for example, a diluted solution of acetic acid (at a concentration of for instance 10% by mass) at a temperature of 70° C. for a few hours. It is known that the washing step leads to the removal of an amorphous phase from the powder preparation.</p>
+      <p id="p-00126-en" num="0125">The images in <figref>FIG. 4</figref> show the microstructures of the samples without washing (samples 3.1 and 3.2 of example 3, at left) and with an additional washing step (samples 4.1 and 4.2, at right).</p>
+      <p id="p-00127-en" num="0126">The presentation in <figref>FIG. 5</figref> summarizes the behaviour of the two types of samples, obtained each under two different conditions. In this figure, the two samples which have not been washed are the samples 3.1 and 3.2 described in the example 3.</p>
+      <p id="p-00128-en" num="0127">The properties of two washed samples 4.1 and 4.2 are provided in the following table 3.</p>
+      <p id="p-00129-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="28pt" align="center" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <colspec colname="6" colwidth="70pt" align="center" />
+              <colspec colname="7" colwidth="56pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="7" rowsep="1">TABLE 3</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Sr<sub>x</sub>Al<sub>y</sub>O<sub>z </sub>phases</entry>
+                  <entry>ZrO<sub>2 </sub>phases</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Colour</entry>
+                  <entry>Density</entry>
+                  <entry>(Sr<sub>4</sub>Al<sub>14</sub>O<sub>25</sub>/SrAl<sub>2</sub>O<sub>4</sub>/</entry>
+                  <entry>(tetragonal/cubic/</entry>
+                </row>
+                <row>
+                  <entry>sample</entry>
+                  <entry>Pre-sintering</entry>
+                  <entry>sintering</entry>
+                  <entry>(LAB)</entry>
+                  <entry>(g · cm<sup>−3</sup>)</entry>
+                  <entry>SrAl<sub>12</sub>O<sub>19</sub>)</entry>
+                  <entry>monoclinic)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>4.1</entry>
+                  <entry>1475° C. in air</entry>
+                  <entry>1450° C. in</entry>
+                  <entry>  88/−1.3/1.2</entry>
+                  <entry>5.38</entry>
+                  <entry>19/0/0</entry>
+                  <entry>60/20/1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>N<sub>2</sub>/H<sub>2</sub>, 4 h</entry>
+                </row>
+                <row>
+                  <entry>4.2</entry>
+                  <entry> 900° C. in air</entry>
+                  <entry>1450° C. in</entry>
+                  <entry>94.3/−3.1/4.6</entry>
+                  <entry>5.38</entry>
+                  <entry>19/0/0</entry>
+                  <entry>60/20/1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>N<sub>2</sub>/H<sub>2</sub>, 3 h</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00130-en" num="0128">Again, all samples show persistent luminescence, but a pre-treatment of the phosphor material leads to lower emitted intensities. This effect is not fully understood and could have several origins (difference in grain size, for example).</p>
+      <p id="p-00131-en" num="0129">The results also confirm that pre-sintering at 900° C. is more favourable than an initial treatment at 1475° C. for the persistence. Samples with initial treatment sintered at 1500° C. were comparable to samples heated at 1475° C., and samples with sintering in reducing atmosphere at 1500° C. were comparable to samples sintered at 1450° C.</p>
+      <heading id="h-00014-en" level="1">Example 5</heading>
+      <heading id="h-00015-en" level="1">Effect of the Sr<sub>4</sub>Al<sub>14</sub>O<sub>25 </sub>Concentration</heading>
+      <p id="p-00132-en" num="0130">The influence of the concentration of Sr<sub>4</sub>Al<sub>14</sub>O<sub>25 </sub>in the composite material was studied, with samples comprising 20% by weight, 30% by weight and 50% by weight of phosphor material.</p>
+      <p id="p-00133-en" num="0131">The results of these experiments are displayed in the <figref>FIGS. 6 and 7</figref>. In the <figref>FIG. 6</figref>, the data for the sample with 20% by weight of phosphor material correspond to the data for the sample 3.1 in example 3. In the <figref>FIG. 7</figref> the data for the sample with 20% of phosphor material correspond to the data for the sample 3.2 in example 3.</p>
+      <p id="p-00134-en" num="0132">The properties of samples 5.1 and 5.2 with 30% by weight of phosphor material and samples 5.3 and 5.4 with 50% by weight of phosphor material are provided in the following table 4.</p>
+      <p id="p-00135-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="28pt" align="center" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <colspec colname="6" colwidth="70pt" align="center" />
+              <colspec colname="7" colwidth="56pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="7" rowsep="1">TABLE 4</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Sr<sub>x</sub>Al<sub>y</sub>O<sub>z </sub>phases</entry>
+                  <entry>ZrO<sub>2 </sub>phases</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Colour</entry>
+                  <entry>Density</entry>
+                  <entry>(Sr<sub>4</sub>Al<sub>14</sub>O<sub>25</sub>/SrAl<sub>2</sub>O<sub>4</sub>/</entry>
+                  <entry>(tetragonal/cubic/</entry>
+                </row>
+                <row>
+                  <entry>sample</entry>
+                  <entry>Pre-sintering</entry>
+                  <entry>sintering</entry>
+                  <entry>(LAB)</entry>
+                  <entry>(g · cm<sup>−3</sup>)</entry>
+                  <entry>SrAl<sub>12</sub>O<sub>19</sub>)</entry>
+                  <entry>monoclinic)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>5.1</entry>
+                  <entry>1475° C. in air</entry>
+                  <entry>1450° C. in</entry>
+                  <entry>96.3/−3.1/5.4</entry>
+                  <entry>5.02</entry>
+                  <entry>30/0/0</entry>
+                  <entry>49/20/1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>N<sub>2</sub>/H<sub>2</sub>, 4 h</entry>
+                </row>
+                <row>
+                  <entry>5.2</entry>
+                  <entry> 900° C. in air</entry>
+                  <entry>1450° C. in</entry>
+                  <entry>96.2/−3.9/7.4</entry>
+                  <entry>5.02</entry>
+                  <entry>Not</entry>
+                  <entry>Not</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>N<sub>2</sub>/H<sub>2</sub>, 3 h</entry>
+                  <entry />
+                  <entry />
+                  <entry>measured</entry>
+                  <entry>measured</entry>
+                </row>
+                <row>
+                  <entry>5.3</entry>
+                  <entry>1475° C. in air</entry>
+                  <entry>1450° C. in</entry>
+                  <entry>93.7/−3.1/6.3</entry>
+                  <entry>4.49</entry>
+                  <entry>49/0/0</entry>
+                  <entry>28/16/7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>N<sub>2</sub>/H<sub>2</sub>, 4 h</entry>
+                </row>
+                <row>
+                  <entry>5.4</entry>
+                  <entry> 900° C. in air</entry>
+                  <entry>1450° C. in</entry>
+                  <entry>95.5/−5.0/8.8</entry>
+                  <entry>4.48</entry>
+                  <entry>50/0/0</entry>
+                  <entry>33/15/2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>N<sub>2</sub>/H<sub>2</sub>, 3 h</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="7" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00136-en" num="0133">All samples showed persistent luminescence. A higher phosphor concentration led to a marked increase of the emitted light intensity. Again, pre-sintering at 900° C. is more favourable than an initial treatment at 1475° C. for the persistence. Samples with initial treatment sintered at 1500° C. were comparable to samples heated at 1475° C., and samples with sintering in reducing atmosphere at 1500° C. were comparable to samples sintered at 1450° C. Sintering times of 3 h, 6 h and 9 h also yielded comparable results in terms of emitted luminescence.</p>
+      <p id="p-00137-en" num="0134">The elastic (Young's) modulus decreases with increasing phosphor content, from 216 GPa for pure zirconia to 182 GPa for the sample with 50 weight % phosphor. The Poisson ratio also tended to decrease with increasing phosphor content. The toughness was measured at 5.9 MPa·m<sup>−0.5 </sup>and 3.9 MPa·m<sup>−0.5 </sup>for 20% and 50% in weight of Sr<sub>4</sub>Al<sub>14</sub>O<sub>25</sub>, respectively.</p>
+      <p id="p-00138-en" num="0135">Finally, the <figref>FIG. 8</figref> displays the emitted luminescence of the 20% and 50% phosphor-zirconia composites treated at 900° C. in air and then at 1450° C. in reducing atmosphere, in comparison with the emitted luminescence of a pure phosphor sample of the same type as used in example 1 and the further samples of the present application (Sr<sub>4</sub>Al<sub>14</sub>O<sub>25 </sub>film of 160 μm thickness). Remarkably, the intensity is comparable at the outset, and is even higher after 200 minutes and more for the zirconia-phosphor sample than for the pure phosphor. This is an unexpected result and shows the tremendous potential of the approach of the inventors: a tough technical ceramic is obtained, with high tenacity and high elastic modulus, with luminescent properties that are equivalent to those of the pure phosphor powder.</p>
+      <p id="p-00139-en" num="0136">It may be further noted that the measured luminescence is comparable on samples of 0.6 mm and 2 mm thicknesses.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>-<b>13</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>14</b>. A watch component made of a persistent phosphorescent ceramic composite material which is a sintered dense body comprising at least two phases, wherein the at least two phases comprise:
+<claim-text>a first phase consisting of at least one metal oxide and</claim-text><claim-text>a second phase consisting of a metal oxide containing at least one activating element in a reduced oxidation state, wherein</claim-text></claim-text>
+      <claim-text>the watch component has a surface which comprises
+<claim-text>(i) a first area which shows phosphorescent emission and</claim-text><claim-text>(ii) a second area
+<claim-text>(a) which does not show phosphorescent emission or</claim-text><claim-text>(b) which shows phosphorescent emission with an intensity which is lower than that of the emission of the first area.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>15</b>. The watch component according to <claim-ref idref="clm-00002-en">claim 14</claim-ref>, wherein the metal oxide in the first phase of the persistent phosphorescent ceramic composite material is selected from the group consisting of aluminum oxide, zirconium oxide, magnesium oxide, silicon oxide, titanium oxide, barium oxide, beryllium oxide, calcium oxide and chromium oxide.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>16</b>. The watch component according to <claim-ref idref="clm-00002-en">claim 14</claim-ref>, wherein the metal oxide in the first phase of the persistent phosphorescent ceramic composite material is zirconia stabilized with a dopant selected from the group consisting of Ce, Mg and Y.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>17</b>. The watch component according to <claim-ref idref="clm-00002-en">claim 14</claim-ref>, wherein the metal oxide in the first phase of the persistent phosphorescent ceramic composite material is zirconia stabilized with yttria.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>18</b>. The watch component according to <claim-ref idref="clm-00002-en">claim 14</claim-ref>, wherein the metal oxide in the second phase of the persistent phosphorescent ceramic composite material is selected from Ca, Ba, Sr and/or Mg-aluminates, Ca, Ba, Sr and/or Mg silicates, and Ca, and/or Sr aluminosilicates.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>19</b>. The watch component according to <claim-ref idref="clm-00003-en">claim 15</claim-ref>, wherein the metal oxide in the second phase of the persistent phosphorescent ceramic composite material is selected from Ca, Ba, Sr and/or Mg-aluminates, Ca, Ba, Sr and/or Mg silicates, and Ca, and/or Sr aluminosilicates.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>20</b>. The watch component according to <claim-ref idref="clm-00004-en">claim 16</claim-ref>, wherein the metal oxide in the second phase of the persistent phosphorescent ceramic composite material is selected from Ca, Ba, Sr and/or Mg-aluminates, Ca, Ba, Sr and/or Mg silicates, and Ca, and/or Sr aluminosilicates.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>21</b>. The watch component according to <claim-ref idref="clm-00006-en">claim 18</claim-ref>, wherein the metal oxide in the second phase of the persistent phosphorescent ceramic composite material is a strontium aluminate.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>22</b>. The watch component according to <claim-ref idref="clm-00009-en">claim 21</claim-ref>, wherein the metal oxide in the second phase of the persistent phosphorescent ceramic composite material is a strontium aluminate doped with at least one activating element selected from the group consisting of La, Ce, Pr, Nd, Pm, Sm, Eu, Gd, Tb, Dy, Ho, Er, Tm, Yb and Lu.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>23</b>. The watch component according to <claim-ref idref="clm-00010-en">claim 22</claim-ref>, wherein the metal oxide in the second phase of the persistent phosphorescent ceramic composite material is a strontium aluminate doped with Eu and Dy.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>24</b>. The watch component according to <claim-ref idref="clm-00011-en">claim 23</claim-ref>, wherein the second phase of the persistent phosphorescent ceramic composite material is a Eu<sup>2+</sup>/Dy<sup>3+</sup> doped Sr<sub>4</sub>Al<sub>14</sub>O<sub>25 </sub>phase.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>25</b>. The watch component according to <claim-ref idref="clm-00002-en">claim 14</claim-ref>, wherein the amount of the first phase in the persistent phosphorescent ceramic composite material is 50 to 95% by weight and the amount of the second phase in the persistent phosphorescent ceramic composite material is 5 to 50% by weight, relative to the total weight of the two phases.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>26</b>. The watch component according to <claim-ref idref="clm-00003-en">claim 15</claim-ref>, wherein the amount of the first phase in the persistent phosphorescent ceramic composite material is 50 to 95% by weight and the amount of the second phase in the persistent phosphorescent ceramic composite material is 5 to 50% by weight, relative to the total weight of the two phases.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>27</b>. The watch component according to <claim-ref idref="clm-00002-en">claim 14</claim-ref>, wherein the amount of the first phase in the persistent phosphorescent ceramic composite material is 50 to 80% by weight and the amount of the second phase in the persistent phosphorescent ceramic composite material is 20 to 50% by weight, relative to the total weight of the two phases.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>28</b>. The watch component according to <claim-ref idref="clm-00003-en">claim 15</claim-ref>, wherein the amount of the first phase in the persistent phosphorescent ceramic composite material is 50 to 80% by weight and the amount of the second phase in the persistent phosphorescent ceramic composite material is 20 to 50% by weight, relative to the total weight of the two phases.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>29</b>. The watch component according to <claim-ref idref="clm-00002-en">claim 14</claim-ref>, wherein the area which is not phosphorescent is covered with a shielding layer.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>30</b>. The watch component according to <claim-ref idref="clm-00003-en">claim 15</claim-ref>, wherein the area which is not phosphorescent is covered with a shielding layer.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>31</b>. The watch component according to <claim-ref idref="clm-00004-en">claim 16</claim-ref>, wherein the area which is not phosphorescent is covered with a shielding layer.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>32</b>. The watch component according to claim <b>11</b>, wherein the shielding layer is made of a metallic material or of an oxide or nitride or carbide material or of a combination of those.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>33</b>. The watch component according to claim <b>12</b>, wherein the metallic material is selected from the group consisting of Au, Ag, Ni, Pt, Pd or alloys of these materials.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150252260A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252260A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150252260A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252260A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150252260A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252260A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150252260A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252260A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150252260A1_00005.PNG" alt="image" img-content="undefined" img-format="png" original="US20150252260A1-20150910-P00001.TIF" inline="yes" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150252260A1_00006.PNG" alt="image" img-content="undefined" img-format="png" original="US20150252260A1-20150910-P00002.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150252260A1.PDF" type="pdf" size="995395" pages="16" />
+</lexisnexis-patent-document>

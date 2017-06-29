@@ -1,0 +1,1193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2940133A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091038" date-changed="20151217" time-changed="202854">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121939139">
+        <country>EP</country>
+        <doc-number>2940133</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>13868570</doc-number>
+        <date>20131128</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>jpn</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>JP</country>
+        <doc-number>2012280850</doc-number>
+        <date>20121225</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2012280850</doc-number>
+        <kind>A</kind>
+        <date>20121225</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>JP</country>
+        <doc-number>2013082094</doc-number>
+        <kind>W</kind>
+        <date>20131128</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>2012280850</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>2013082094</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>JP20120280850</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>WO2013JP82094</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151105">
+      <request-for-examination>
+        <date>20150725</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151217">
+      <classification-ipcr sequence="1">
+        <text>C12N  15/09        20060101AFI20140714BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>15</main-group>
+        <subgroup>09</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140714</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61K  39/00        20060101ALI20140714BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140714</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A61K  39/12        20060101ALI20140714BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140714</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A61K  39/29        20060101ALI20140714BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>29</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140714</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>A61K  48/00        20060101ALI20140714BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>48</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140714</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="6">
+        <text>A61P  31/20        20060101ALI20140714BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>P</subclass>
+        <main-group>31</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140714</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="7">
+        <text>A61P  35/00        20060101ALI20140714BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>P</subclass>
+        <main-group>35</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140714</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="8">
+        <text>C07K  14/02        20060101ALI20140714BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>14</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140714</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="9">
+        <text>C07K  14/025       20060101ALI20140714BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>14</main-group>
+        <subgroup>025</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140714</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="10">
+        <text>C07K  19/00        20060101ALI20140714BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>19</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140714</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="11">
+        <text>C12N   1/15        20060101ALI20140714BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>1</main-group>
+        <subgroup>15</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140714</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="12">
+        <text>C12N   1/19        20060101ALI20140714BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>1</main-group>
+        <subgroup>19</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140714</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="13">
+        <text>C12N   1/21        20060101ALI20140714BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>1</main-group>
+        <subgroup>21</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140714</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="14">
+        <text>C12N   5/10        20060101ALI20140714BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>5</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140714</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151217">
+      <classification-cpc sequence="1">
+        <text>C07K  14/005       20130101 FI20151205BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>14</main-group>
+        <subgroup>005</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151205</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61K  39/00        20130101 LI20151207BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151207</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61K  39/12        20130101 LI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61K  39/29        20130101 LA20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>39</main-group>
+        <subgroup>29</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61K  48/00        20130101 LI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>48</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61K2039/70        20130101 LA20141126BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>K</subclass>
+        <main-group>2039</main-group>
+        <subgroup>70</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20141126</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C07K  14/02        20130101 LI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>14</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C07K  14/025       20130101 LI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>14</main-group>
+        <subgroup>025</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C07K2319/00        20130101 LA20150619BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>K</subclass>
+        <main-group>2319</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150619</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>C12N2710/20034     20130101 LA20151207BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2710</main-group>
+        <subgroup>20034</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151207</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>C12N2730/10134     20130101 LA20151207BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2730</main-group>
+        <subgroup>10134</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151207</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">18</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">IMPFSTOFF FÜR HPV-INFEKTION UND/ODER HEPATITIS B MIT CHIMÄREM HPV/HBS-PROTEIN ALS WIRKSTOFF</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">VACCINE FOR HPV INFECTION AND/OR HEPATITIS B CONTAINING HPV/HBS CHIMERIC PROTEIN AS ACTIVE INGREDIENT</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">VACCIN CONTRE L'INFECTION PAR LE HPV ET/OU L'HÉPATITE B CONTENANT UNE PROTÉINE HPV/HBS CHIMÉRIQUE À TITRE DE PRINCIPE ACTIF</invention-title>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>The Chemo-Sero-Therapeutic Research Institute</orgname>
+            <registered-number>101308697</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>1-6-1 Okubo Kita-ku</address-1>
+              <city>Kumamoto-shi Kumamoto 860-8568</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="2" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Japan as represented by Director General of Agency of National Institute of Infectious Deseases</orgname>
+            <registered-number>101277019</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>23-1, Toyama 1-chome</address-1>
+              <city>Shijuku-ku Tokyo 162-8640</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>YONEMURA, Hiroshi</name>
+            <address>
+              <address-1>c/o THE CHEMO-SERO-THERAPEUTIC RESEARCH INSTITUTE KIKUCHI RESEARCH CENTER 1314-1 Kyokushi-kawabe</address-1>
+              <city>Kikuchi-shi Kumamoto 869-1298</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>SAKAGUCHI, Masashi</name>
+            <address>
+              <address-1>c/o THE CHEMO-SERO-THERAPEUTIC RESEARCH INSTITUTE KIKUCHI RESEARCH CENTER 1314-1 Kyokushi-kawabe</address-1>
+              <city>Kikuchi-shi Kumamoto 869-1298</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>IMAMURA, Takashi</name>
+            <address>
+              <address-1>c/o THE CHEMO-SERO-THERAPEUTIC RESEARCH INSTITUTE KIKUCHI RESEARCH CENTER 1314-1 Kyokushi-kawabe</address-1>
+              <city>Kikuchi-shi Kumamoto 869-1298</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>MORI, Seiichiro</name>
+            <address>
+              <address-1>c/o National Institute of Infectious Diseases 23-1 Toyama 1-chome Shinjuku-ku</address-1>
+              <city>Tokyo 162-8640</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5">
+          <addressbook lang="eng">
+            <name>KANDA, Tadahito</name>
+            <address>
+              <address-1>c/o National Institute of Infectious Diseases 23-1 Toyama 1-chome Shinjuku-ku</address-1>
+              <city>Tokyo 162-8640</city>
+              <country>JP</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Vossius &amp; Partner Patentanwälte Rechtsanwälte mbB</name>
+            <registered-number>100751388</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Siebertstrasse 3</address-1>
+              <city>81675 München</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>JP13082094</doc-number>
+        <date>20131128</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014103608</doc-number>
+        <date>20140703</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151203">
+      <main-family family-id="166469447">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940133</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150344529</doc-number>
+            <kind>A1</kind>
+            <date>20151203</date>
+          </document-id>
+          <application-date>
+            <date>20131128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150099601</doc-number>
+            <kind>A</kind>
+            <date>20150831</date>
+          </document-id>
+          <application-date>
+            <date>20131128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014103608</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131128</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="166469446">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940133</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20131128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150344529</doc-number>
+            <kind>A1</kind>
+            <date>20151203</date>
+          </document-id>
+          <application-date>
+            <date>20131128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150099601</doc-number>
+            <kind>A</kind>
+            <date>20150831</date>
+          </document-id>
+          <application-date>
+            <date>20131128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014103608</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20131128</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A chimeric protein of HPV-L2 peptide and HBs protein wherein the HPV-L2 peptide is (1) a peptide consisting of the core sequence region of 20 amino acid residues, (2) a peptide inside the core sequence region comprising 6 amino acid residues Gly-Gly-Leu-Gly-Ile-Gly or (3) a peptide consisting of 70 or less amino acid residues obtained by adding an amino acid sequence derived from HPV L2 protein at the N-terminal and/or the C-terminal of the core sequence region; and a vaccine for HPV infection and/or hepatitis B comprising the chimeric protein as an active ingredient. A vaccine comprising the chimeric protein of the present invention is the one that has an increased expression level in a host, an enhanced immune ability (early antibody induction) and a broader spectrum effective for a number of HPV types.<img id="imga-00001-en" wi="78" he="52" img-content="drawing" file="imgaf001.tif" img-format="tif" /></p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <heading id="h-00001-en">TECHNICAL FIELD</heading>
+    <p id="p-00001-en" num="0001">The present invention relates to a vaccine comprising as an active ingredient a chimeric protein of a peptide derived from human papilloma virus (Human papillomavirus: HPV) and a human hepatitis B virus surface protein (HBs protein).</p>
+    <heading id="h-00002-en">BACKGROUND ART</heading>
+    <p id="p-00002-en" num="0002">Human papilloma virus (Human papillomavirus: HPV) is a small circular double-stranded DNA virus belonging to the papilloma virus family. HPV has an icosahedral structure with a diameter of 50-55 nm wherein the virus genome is covered in an envelope protein (Capsid protein) but does not have a coat covering the capsid. A genome size, though varies depending on types, is approximately 8,000 bases where early proteins (E1, E2, E4, E5, E6 and E7) and late proteins (L1 and L2) are encoded. Capsid of HPV particles is formed with L1 and L2 in which L2 is supplementary in capsid formation.</p>
+    <p id="p-00003-en" num="0003">A host range of HPV is strict and HPV does not infect non-human animals. HPV, being latent in the skin and mucous membranes after contact infection, infects through persistent infection and causes cervical cancer (squamous cell carcinoma, adenocarcinoma) and their prodromal lesions [cervical intraepithelial neoplasia (CIN) 2 and 3], condylomata acuminata, and the like. In Japan, 19,000 people per year have developed cervical cancer, among which 5,600 people have died (cf. Non-Patent reference 5). According to the estimation by WHO, 13% of malignant tumors of women in all over the world (530,000 people) is associated with HPV infection and 300 million people is a carrier of HPV (cf. Non-Patent reference 4).</p>
+    <p id="p-00004-en" num="0004">With respect to the study in viral growth, HPV genome replicates during division of HPV-infected cells and is distributed to daughter cells. When the latent infection cells begin differentiation of epidermis formation, viral growth occurs at the end of the differentiation. However, HPV is rarely separated as a viral particle and only the genomic DNA has been cloned. Based on the homology of nucleotide sequences of the capsid protein (L1) gene, HPV has ever been classified into 100 or more genotypes. HPV may infect at different sites and cause different diseases depending on its genotype. HPV is broadly divided into those detected in skin lesions (epithelial type) and those detected in mucosal lesions (mucosal type). Mucosal type HPV is further classified into a high-risk type detected in a variety of cancers and a low-risk type causative of benign condylomata acuminata. A high-risk type HPV includes types 16, 18, 26, 31, 33, 35, 39, 45, 51, 52, 53, 56, 58, 59, 66, 68, 73 and 82, detected in cervical cancer, perianal cancer and penile cancer whereas a low-risk type HPV includes types 6 and 11 (cf. Non-patent reference 1, Non-patent reference 2 and Non-patent reference 3).</p>
+    <p id="p-00005-en" num="0005">With regard to a vaccine for prevention of HPV infection, "product name Gardasil (registered trademark)" developed by the US Merck &amp; Co., Inc., a vaccine of a mixture of virus-like particle (VLP) of HPV types 6, 11, 16 and 18, has been approved by the Food and Drug Administration (FDA) in June 2006 and "product name Cervarix" developed by the UK GlaxoSmithKline, a vaccine of a mixture of VLP of HPV types 16 and 18, has been approved by the Therapeutic Goods Administration (TGA) of Australia in May 2007. In Japan, Cervarix has been approved in October 2009 and Gardasil in July 2011.</p>
+    <p id="p-00006-en" num="0006">These vaccines, to be called a first generation vaccine, are prepared by expressing a gene encoding L1 protein in yeast or insect cells to produce the VLP, to which adjuvant is added (cf. Non-patent reference 6). Both vaccines have been approved for cancers caused by a particular genotype and for protective effects against only a few types, i.e. types 6, 11, 16 and 18 for Gardasil and types 16 and 18 for Cervarix (Non-patent reference 12). Thus, in order to block HPV infection and suppress more effectively the development of cancer subsequently triggered, the development of a vaccine effective for any types of HPV infection is desired (cf. Non-patent reference 5 and Non-patent reference 6).</p>
+    <p id="p-00007-en" num="0007">As such an attempt, there is a report by Kanda et al. They showed that a neutralizing epitope common among the high-risk HPVs is found in the amino acid sequence of L2 of HPV type 16 at positions 64-81 and 108-120 and that VLP of aggregate of chimeric proteins obtained by inserting a peptide derived from L2 of HPV type 16 into L1 of HPV type 16 blocked infection of HPV types 16, 18, 31, 33, 35, 52 and 6 (cf. Patent reference 1 and Patent reference 2). In addition, they also reported the same results for VLP of chimeric proteins obtained by inserting L2 peptides at positions 18-38, 56-75 and 96-115 into L1 (cf. Non-patent reference 13). On the other hand, they also reported that the length of the inserted peptide may affect the presentation of the antigenic epitope portion (Patent reference 1).</p>
+    <p id="p-00008-en" num="0008">Other than L1 of HPV, research on particle formation and utility as a vaccine of chimeric proteins obtained by adding or inserting a foreign peptide into a protein having a variety of particle-forming ability has been reported. For example, it has been confirmed that mice were immunized with a chimeric protein wherein the surface proteins (HBs protein) of hepatitis B virus (HBV) is added at its N-terminal or the C-terminal a peptide consisting of a part of L2 of HPV type 16 (50-220 amino acid region and 100-220 amino acid region from the N-terminal) to result in an increase in antibodies against L2 and HBs in ELISA (cf. Patent reference 7). There are other reports on VLP formation of a chimeric protein obtained by inserting a foreign gene into the hydrophilic region of HBs protein or the exposed portion of the outer loop of HBsAg-S (cf. Patent reference 3 and Patent reference 4) and of a chimeric protein wherein a foreign peptide is bound to the N-terminal of HBs protein (cf. Patent reference 5 and Patent reference 6).</p>
+    <p id="p-00009-en" num="0009">HBs proteins have been proved to be highly effective as a vaccine and highly safe as they are used as an active ingredient of a recombinant precipitated hepatitis B vaccine derived from yeast (cf. Non-patent reference 7). However, VLP comprising a chimeric protein of a foreign peptide and the HBs protein, due to difference in the type and length of the foreign peptide to be inserted, which may affect the stability of VLP, the efficiency of expression from the cell and the structural change in what is expressed (cf. Patent reference 4), is not necessarily ensured for its usefulness as a vaccine. <ul id="ul-00001-en" list-style="none" compact="compact"><li><u>Patent reference 1:</u><patcit id="pcit-00001" dnum="WO2005097987A"><text>WO2005/097987</text></patcit></li><li><u>Patent reference 2:</u><patcit id="pcit-00002" dnum="JP2007045746A"><text>JP Patent Publication No. 2007-45746</text></patcit></li><li><u>Patent reference 3:</u><patcit id="pcit-00003" dnum="JP8198897A"><text>JP-A-8-198897</text></patcit></li><li><u>Patent reference 4:</u><patcit id="pcit-00004" dnum="JP2004504067A"><text>JP Patent Publication No. 2004-504067</text></patcit></li><li><u>Patent reference 5:</u><patcit id="pcit-00005" dnum="JP2011115042A"><text>JP Patent Publication No. 2011-115042</text></patcit></li><li><u>Patent reference 6:</u><patcit id="pcit-00006" dnum="JP2007209343A"><text>JP Patent Publication No. 2007-209343</text></patcit></li><li><u>Patent reference 7:</u><patcit id="pcit-00007" dnum="WO2010001409A"><text>WO2010/001409</text></patcit></li><li><u>Non-patent reference 1:</u><nplcit id="ncit-00001" npl-type="s"><text>Virus Vol. 56, No. 2, pp219-230, 2006</text></nplcit></li><li><u>Non-patent reference 2:</u><nplcit id="ncit-00002" npl-type="s"><text>Igaku-No-Ayumi Vol.224, No9: 669-680, 2008</text></nplcit></li><li><u>Non-patent reference 3:</u><nplcit id="ncit-00003" npl-type="s"><text>Munoz, N. et al.: New Engl J Med, 348, 518-527, 2003</text></nplcit></li><li><u>Non-patent reference 4:</u><nplcit id="ncit-00004" npl-type="s"><text>Monitoring of Cancer Incidence in Japan MCIJ2007, March 2012</text></nplcit></li><li><u>Non-patent reference 5:</u><nplcit id="ncit-00005" npl-type="s"><text>virus Vol. 58, No. 2, pp155-164, 2008</text></nplcit></li><li><u>Non-patent reference 6</u>: <nplcit id="ncit-00006" npl-type="s"><text>Sanka-To-Fujinka 73(2): 217-225, 2006</text></nplcit></li><li><u>Non-patent reference 7:</u><nplcit id="ncit-00007" npl-type="b"><text>National Institute of Infectious Diseases, fact sheet on the hepatitis B vaccine (July 7, 2010 ed</text></nplcit>.)</li><li><u>Non-patent reference 8:</u><nplcit id="ncit-00008" npl-type="s"><text>Kawana. K, et al.: Common neutralization epitope in minor capsid protein L2 of human papillomavirus types 16 and 6, J. Virology., 73, 6188-6190, 1999</text></nplcit> (106-121 of L2)</li><li><u>Non-patent reference 9:</u><nplcit id="ncit-00009" npl-type="s"><text>Ivonne Rubio et al.: Potent anti-HPV immune responses induced by tandem repeats of the HPV16 L2 (20-38) peptide displayed on bacterial thioredoxin Vaccine, 27, 1949-1956, 2009</text></nplcit></li><li><u>Non-patent reference 10:</u><nplcit id="ncit-00010" npl-type="s"><text>Fujiyama, A. et al.: Nuc Acid Res., 11 (13), 4601-4610, 1983</text></nplcit></li><li><u>Non-patent reference 11</u>: <nplcit id="ncit-00011" npl-type="s"><text>Christophe, M. et al.: Emer. Inf. Dis., 14 (11), 1777-1780, 2008</text></nplcit></li><li><u>Non-patent reference 12:</u><nplcit id="ncit-00012" npl-type="s"><text>Nippon Jibiinkoka Gakkai Kaiho Vol. 115 No. 2, 73-84, 2012</text></nplcit></li><li><u>Non-patent reference 13:</u><nplcit id="ncit-00013" npl-type="s"><text>Kondo, K et al.: Journal of Medical Virology 80: 841-846 (2008</text></nplcit>)</li></ul></p>
+    <heading id="h-00003-en">DISCLOSURE OF THE INVENTION</heading>
+    <heading id="h-00004-en">(Technical Problem to be Solved by the Invention)</heading>
+    <p id="p-00010-en" num="0010">An object of the present invention is to provide a vaccine for preventing human papilloma virus infection and/or hepatitis B comprising as an active ingredient a chimeric protein obtained by adding a peptide consisting of a 20-amino acid sequence of a specific region of a protein called L2 (hereinafter, also referred to as "L2 protein"), one of the capsid components of HPV, to the N-terminal or the C-terminal of the HBs protein or by inserting the peptide inside the HBs protein.</p>
+    <heading id="h-00005-en">(Means for Solving the Problems)</heading>
+    <p id="p-00011-en" num="0011">The present inventors have found, as a result of extensive studies to achieve the above object, that a chimeric protein obtained by adding a peptide consisting of the amino acids at positions 56-75 of the L2 protein of HPV type 16 (SEQ ID NO: 4; Gly-Gly-Leu-Gly-Ile-Gly-Thr-Gly-Ser-Gly-Thr-Gly-Gly-Arg-Thr-Gly-Tyr-Ile-Pro-Leu) to the N-terminal or the C-terminal of the HBs protein and a chimeric protein obtained by inserting the peptide inside HBs proteins form virus-like particles (VLP) and induce (neutralizing) antibodies against the HBs protein and the peptide. Especially, the present inventors have found that antibodies produced by the chimeric protein wherein the peptide is added to the C-terminal induce antibodies against said peptide early, bind strongly to both the HBs protein and the peptide, and bind to L2 peptide derived from a variety of HPV types, and that antibodies produced by the chimeric protein wherein the peptide is inserted inside HBs protein induce antibodies that recognize the amino acid sequences at two sites in the peptide (N-terminal and C-terminal epitopes) to thereby complete the present invention.</p>
+    <p id="p-00012-en" num="0012">According to the present invention, there are provided a chimeric protein of a peptide comprising an amino acid sequence of 7 to 20 amino acid residues of a specific region of the HPV L2 protein and the HBs protein, a DNA fragment comprising a nucleotide sequence encoding the amino acid sequence of the chimeric protein, an expression vector (including a viral vector) where the DNA fragment is integrated, a host having the expression vector, a vaccine for the prevention of HPV infection and/or hepatitis B using the chimeric proteins and the DNA fragment, and a process for preparing the vaccine.</p>
+    <p id="p-00013-en" num="0013">The chimeric protein and the expression vector comprising the DNA encoding the chimeric protein of the present invention may be effectively used for prevention and treatment of hepatitis B and/or HPV infection. Accordingly, the present invention includes the following: <ol><li>[1] A chimeric protein of a peptide derived from human papillomavirus (HPV) L2 protein (HPV-L2 peptide) and hepatitis B virus surface protein (HBs protein) wherein the HPV-L2 peptide is (1) a peptide consisting of the core sequence region of 20 amino acid residues, (2) a peptide inside the core sequence region comprising 6 amino acid residues Gly-Gly-Leu-Gly-Ile-Gly or (3) a peptide consisting of 70 or less amino acid residues obtained by adding an amino acid sequence derived from HPV L2 protein at the N-terminal and/or the C-terminal of the core sequence region.</li><li>[2] The chimeric protein according to [1] wherein the HPV-L2 peptide consists of a core sequence region.</li><li>[3] The chimeric protein according to [1] or [2] wherein the core sequence region is a sequence of Gly-Gly-Leu-Gly-Ile-Gly-Xlaa-Gly-X2aa-Gly-X3aa-Gly-Gly-Arg-X4aa-Gly-Tyr-X5aa-Pro-X6aa wherein X1aa, X2aa, X3aa, X4aa, X5aa and X6aa are an arbitrary amino acid (SEQ ID NO: 3).</li><li>[4] The chimeric protein according to [3] wherein the core sequence region is a sequence having the amino acid residues selected from (1) to (6) as follows: <ol><li>(1) X1aa is Thr or Ser,</li><li>(2) X2aa is Ser, Thr or Ala,</li><li>(3) X3aa is Thr or Ser,</li><li>(4) X4aa is Ser, Thr or Ala</li><li>(5) X5aa is Ile or Val, and</li><li>(6) X6aa is Leu or Ile</li></ol></li><li>[5] The chimeric protein according to [1] or [2] wherein the core sequence region is the amino acid sequence consisting of Gly-Gly-Leu-Gly-Ile-Gly-Thr-Gly-Ser-Gly-Thr-Gly-Gly-Arg-Thr-Gly-Tyr-Ile-Pro-Leu (SEQ ID NO: 4).</li><li>[6] The chimeric protein according to any one of [1] to [5] wherein the chimeric protein contains 1 to 11 HPV-L2 peptides.</li><li>[7] The chimeric protein according to any one of [1] to [6] wherein the peptide is added or inserted into at least one of the N-terminal amino acid of the HBs protein, positions 127-128 of SEQ ID NO: 2, or the C-terminal amino acid of the HBs protein.</li><li>[8] The chimeric protein according to [7] wherein the peptide is inserted at positions 127-128 of SEQ ID NO: 2 of the HBs protein.</li><li>[9] The chimeric protein according to [7] wherein the peptide is added at the C-terminal amino acid of HBs protein.</li><li>[10] The chimeric protein according to [7] wherein the peptide is inserted at positions 127-128 of SEQ ID NO: 2 of the HBs protein and added at the C-terminal amino acid.</li><li>[11] A chimeric protein of a peptide derived from human papillomavirus (HPV) L2 protein (HPV-L2 peptide) and hepatitis B virus surface protein (HBs protein) wherein the HPV-L2 peptide consists of 20 amino acid residues and has 50-100%, 70-100% or 80-100% sequence homology to the amino acid sequence of Gly-Gly-Leu-Gly-Ile-Gly-Thr-Gly-Ser-Gly-Thr-Gly-Gly-Arg-Thr-Gly-Tyr-Ile-Pro-Leu (SEQ ID NO: 4).</li><li>[12] A DNA fragment encoding the chimeric protein as set forth in any one of [1] to [11].</li><li>[13] An expression vectors capable of expressing a chimeric protein encoded by the DNA fragment.</li><li>[14] A host producing a chimeric protein that is transformed with the expression vector.</li><li>[15] A vaccine for HPV infection and/or hepatitis B comprising as an active ingredient the chimeric protein as set forth in any one of [1] to [11].</li><li>[16] A vaccine for HPV infection and/or hepatitis B comprising as an active ingredient the chimeric protein as set forth in [8] and the chimeric protein as set forth in [9].</li><li>[17] A DNA vaccine for HPV infection and/or hepatitis B comprising as an active ingredient the expression vector as set forth in [13].</li><li>[18] A process for preparing a vaccine for human papilloma virus (HPV) infection and/or hepatitis B comprising as an active ingredient a chimeric protein of a peptide derived from HPV L2 protein (HPV-L2 peptide) and hepatitis B virus surface protein (HBs protein), said process comprising the steps (1) to (5) as follows: <ol><li>(1) a step of preparing a DNA fragment encoding a chimeric protein of the HBs protein with a HPV-L2 peptide consisting of the core sequence region of 20 amino acid residues, a HPV-L2 peptide inside the core sequence region comprising 6 amino acid residues Gly-Gly-Leu-Gly-Ile-Gly or a HPV-L2 peptide consisting of 70 or less amino acid residues obtained by adding an amino acid sequence derived from HPV L2 protein at the N-terminal and/or the C-terminal of the core sequence region,</li><li>(2) a step of preparing an expression vector comprising the DNA fragment of (1) and transforming a host with the expression vector,</li><li>(3) a step of culturing the transformed host obtained in (2) in the presence of Geneticin and MTX to select the transformed host producing the chimeric protein,</li><li>(4) a step of expanding by culture the transformed host producing the chimeric protein obtained in (3) and purifying the chimeric protein from the culture, and</li><li>(5) a step of adding an adjuvant, a stabilizing agent, a buffer, an isotonic agent and a preservative to the purified chimeric protein obtained in (4) to prepare a vaccine.</li></ol></li></ol></p>
+    <heading id="h-00006-en">EFFECTS OF THE INVENTION</heading>
+    <p id="p-00014-en" num="0014">As one aspect of the present invention, a chimeric protein of the peptide Gly-Gly-Leu-Gly-Ile-Gly-Thr-Gly-Ser-Gly-Thr-Gly-Gly-Arg-Thr-Gly-Tyr-Ile-Pro-Leu with the HBs protein has an ability to produce antibodies against both the peptide and the HBs protein and thus can be a suitable material of a medicament for prophylaxis of HPV infection and/or hepatitis B. In particular, the chimeric protein is useful for increasing the productivity of a vaccine and for improving the quality of a vaccine in that, when the peptide is added to the C-terminal of the HBs protein, not only an increase in the expression level in the host but also an enhanced immune ability of the peptide (early antibody induction) were observed and also, when the peptide is inserted inside the HBs protein, it is possible to induce antibodies against at least the amino acid sequences at two sites in the peptide.</p>
+    <p id="p-00015-en" num="0015">Moreover, the N-terminal 6-amino acid sequence of the peptide is well conserved among strains of HPV and is effective for many HPV types. In fact, as shown in the Examples, antibodies induced by the chimeric protein of the present invention react with many types of HPV. Therefore, according to the present invention, unlike the conventional type-specific vaccines, it is possible to provide a vaccine with a broader spectrum.</p>
+    <heading id="h-00007-en">BRIEF DESCRIPTION OF DRAWINGS</heading>
+    <p id="p-00016-en" num="0016">
+      <ul id="ul-00002-en" list-style="none" compact="compact">
+        <li>
+          <figref>Fig. 1</figref> is a graph showing the results of measurement of a concentration of the chimeric proteins in the culture supernatants of transformed cells by sandwich ELISA using anti-HBs monoclonal antibody.</li>
+        <li>
+          <figref>Fig. 2</figref> is a graph showing the reactivity with HPV-L2 peptide derived from the same genotype as the mouse sera (pooled sera) immunized with the chimeric proteins.</li>
+        <li>
+          <figref>Fig. 3</figref> is a graph showing the reactivity with HPV-L2 peptide derived from the same genotype as the mouse sera (individual sera) immunized with the chimeric proteins.</li>
+        <li>
+          <figref>Fig. 4</figref> is a graph showing the reactivity with HPV-L2 peptide derived from the genotype different from the mouse sera (pooled sera) immunized with the chimeric proteins.</li>
+        <li>
+          <figref>Fig. 5</figref> is a graph showing the results of measurement of the HBs antibody titer in mouse sera (pooled sera) immunized with the chimeric proteins.</li>
+        <li>
+          <figref>Fig. 6</figref> is a graph showing the results of epitope analysis of mouse sera (pooled sera) immunized with the chimeric proteins.</li>
+        <li>
+          <figref>Fig. 7</figref> is a graph showing the reactivity with HPV-virus-like particles (VLP) derived from the genotype different from the mouse sera (pooled sera) immunized with the chimeric proteins.</li>
+        <li>
+          <figref>Fig. 8-1</figref> is a graph showing the results of evaluation of the neutralizing ability of the mouse sera (pooled sera) immunized with the chimeric proteins against HPV16-pseudovirus (PsV) of different genotypes.</li>
+        <li>
+          <figref>Fig. 8-2</figref> is a graph showing the results of evaluation of the neutralizing ability of the mouse sera (pooled sera) immunized with the chimeric proteins against HPV18-pseudovirus (PsV) of different genotypes.</li>
+        <li>
+          <figref>Fig. 8-3</figref> is a graph showing the results of evaluation of the neutralizing ability of the mouse sera (pooled sera) immunized with the chimeric proteins against HPV35-pseudovirus (PsV) of different genotypes.</li>
+      </ul>
+    </p>
+    <heading id="h-00008-en">BEST MODE FOR CARRYING OUT THE INVENTION</heading>
+    <p id="p-00017-en" num="0017">The feature of the present invention is that a chimeric protein of a peptide derived from L2 protein of HPV, well conserved among HPV groups, with hepatitis B virus surface protein (HBs protein) is used as an active ingredient of a vaccine for preventing HPV infection and/or hepatitis B.</p>
+    <p id="p-00018-en" num="0018">As described above, HPV, difficult to recover as viral particles, is determined for its genotypes based on the homology of the nucleotide sequence of the capsid (L1) gene, and more than 100 genotypes have been separated so far. For example, types 16, 18, 26, 31, 33, 35, 39, 45, 51, 52, 53, 56, 58, 59, 66, 68, 73 and 82 of HPV are classified as high-risk HPV group whereas types 6 and 11 of HPV are classified as low-risk HPV group. In the L2 protein of HPV is present a region consisting of an amino acid sequence extremely well conserved among high-risk HPV group (hereinafter also referred to as "core sequence region") and the similar core sequence region is also present in low-risk HPV group. A peptides derived from HPV L2 protein consisting of the core sequence region (hereinafter also referred to as "HPV-L2 peptide") is used in the present invention. Such a core sequence region includes 20 amino acids at positions 56-75 for HPV types 16, 31 and 35; 20 amino acids at positions 55-74 for HPV types 39, 45, 51, 52, 56, 58, 66 and 6; 20 amino acids at positions 57-76 for HPV type 73; and 20 amino acids at positions 54-73 for HPV type 11. These 20-amino acid sequences can be shown by the formula: Gly-Gly-Leu-Gly-Ile-Gly-Xlaa-Gly-X2aa-Gly-X3aa-Gly-Gly-Arg-X4aa-Gly-Tyr-X5aa-Pro-X6aa (SEQ ID NO: 3) wherein X1aa, X2aa, X3aa, X4aa, X5aa and X6aa may be an arbitrary amino acid. The arbitrary amino acids in the formula are a site where mutation is observed among the types of HPV strains and are selected as follows: <ol><li>(1) X1aa is Thr or Ser;</li><li>(2) X2aa is Ser, Thr or Ala;</li><li>(3) X3aa is Thr or Ser;</li><li>(4) X4aa is Ser, Thr or Ala;</li><li>(5) X5aa is Ile or Val; and</li><li>(6) X6aa is Leu or Ile.</li></ol></p>
+    <p id="p-00019-en" num="0019">The antibody obtained by immunizing an animal with HPV-L2 peptide consisting of the amino acid sequence: Gly-Gly-Leu-Gly-Ile-Gly-Thr-Gly-Ser-Gly-Thr-Gly-Gly-Arg-Thr-Gly-Tyr-Ile-Pro-Leu (SEQ ID NO: 4) may react with peptides of the core sequence region having a mutation in part. Therefore, it would readily be seen that a common epitope is present in the 6-amino acid sequence (Gly-Gly-Leu-Gly-Ile-Gly) at the N-terminal where no mutation is observed among the types of HPV strains (cf. Example 6). Thus, the HPV-L2 peptide as used in the present invention, in addition to the peptide consisting of the core sequence region of 20 amino acids, also includes a peptide consisting of the 6 amino acids as well as a variety of peptides within the core sequence region wherein amino acids derived from HPV L2 protein are added at the N-terminal and/or the C-terminal of the peptide consisting of the 6 amino acids.</p>
+    <p id="p-00020-en" num="0020">Furthermore, peptides wherein amino acids derived from HPV L2 protein are added at the N-terminal and/or the C-terminal of the core sequence region may also be used in the present invention. HPV-L2 peptides encompass those peptides. Preferably, a total number of amino acids of the HPV-L2 peptide is 70 or less.</p>
+    <p id="p-00021-en" num="0021">Any of HPV-L2 peptides consisting of the core sequence region having the common epitope can be used in the present invention. However, peptides consisting of 20 amino acids having a homology of 50-100%, 70-100% or 80-100% to the amino acid sequence of SEQ ID NO: 4 are preferably used. More preferably, the HPV-L2 peptide shown by the above formula (SEQ ID NO: 3) with amino acid substitutions are used. Most preferable is a HPV-L2 peptide comprising the amino acid sequence of Gly-Gly-Leu-Gly-Ile-Gly-Thr-Gly-Ser-Gly-Thr-Gly-Gly-Arg-Thr-Gly-Tyr-Ile-Pro-Leu (SEQ ID NO: 4).</p>
+    <p id="p-00022-en" num="0022">Furthermore, HPV-12 peptide, as far as it satisfies the conditions described below (retention of the antigenic activity and particle morphology), may encompass the 6 amino acid peptide, 7 to 19 amino acid peptides wherein amino acids derived from HPV L2 protein are added at the N-terminal and/or C-terminal of the 6 amino acids, and peptides wherein amino acids derived from HPV L2 are added at the N-terminal or the C-terminal of the core sequence region consisting of 20 amino acids.</p>
+    <p id="p-00023-en" num="0023">Apart from the above amino acid substitutions, HPV-L2 peptide variants wherein cysteine (Cys) is added to or inserted in HPV-L2 peptide are also one of embodiments of the present invention. In general, it is difficult to obtain a strong immune effect when animals are immunized with a peptide alone and thus a carrier (e.g. KLH) is bound to the peptide or an adjuvant (e.g. Freund's complete adjuvant) is added. Alternatively, addition or insertion of cysteine (Cys) at the N-terminal, the C-terminal, and/or inside of the peptide is carried out in order to improve the immunization ability of the peptide per se (cf. <patcit id="pcit-00008" dnum="WO2010044464A1"><text>WO 2010/044464 A1</text></patcit> and <patcit id="pcit-00009" dnum="WO2011024748A1"><text>WO 2011/024748 A1</text></patcit>). For example, it is reported that among the amino acid sequence of M2 of influenza virus type A, M2 peptide consisting of 23 amino acids of positions 2-24 wherein a cysteine residue is inserted has a higher immunogenicity (twice to 20-fold) than that of M2 peptide with no modification (cf. <patcit id="pcit-00010" dnum="WO2011024748A1"><text>WO 2011/024748 A1</text></patcit>). If the same effect can be expected by substitution or addition of Cys, one to several amino acids of HPV-L2 peptide of the present invention may be substituted with Cys or Cys may be added provided that the common epitope among HPV groups is conserved. Specifically, since HPV-L2 peptides have exactly the same sequence for the N-terminal 6 amino acids among HPV group, it is preferable to add or insert Cys at any sites other than said amino acid sequence. Hereinafter, if distinction is not necessary between modified and unmodified peptides, these are also simply referred to as HPV-L2 peptide comprehensively.</p>
+    <p id="p-00024-en" num="0024">The sites of addition or insertion of HPV-L2 peptide into the HBs protein may be any sites as far as the immunogenicity against HPV-L2 peptide and HBs protein is retained. Preferably, the chimeric protein of HPV-L2 peptide and HBs protein forms particles and HPV-L2 peptide is located on the surface of the particles. Such a candidate includes the N-terminal, the C-terminal, and a specific site (positions 127-128 of SEQ ID NO: 2) inside the HBs protein. Preferably, HPV-L2 peptide is added at the C-terminal of the HBs protein and/or inserted at the specific site (positions 127-128 of SEQ ID NO: 2) inside the HBs protein.</p>
+    <p id="p-00025-en" num="0025">By adding the peptide at the C-terminal of HBs protein, it is possible to induce antibodies against the peptide early and to retain a higher antibody titer against HBs (Examples 1 and 7). Also, by insertion at a specific site (positions 127-128 of SEQ ID NO: 2) inside the HBs protein, though the antibody induction against HBs decreases, antibodies recognizing amino acid sequences at two sites in the peptide (two epitopes) are induced. This means that antibodies with a broader spectrum for a variety of HPV strains are induced (Example 8). Therefore, in order to induce antibodies against HPV more effectively, HPV-L2 peptide is added at the C-terminal of the HBs protein and is inserted at a specific site (positions 127-128 of SEQ ID NO: 2) inside the HBs protein. The similar effects may be obtained by using a mixture of a chimeric protein obtained by adding HPV-L2 peptide at the C-terminal of HBs protein and a chimeric protein obtained by inserting the peptide at a specific site (positions 127-128 of SEQ ID NO: 2) inside the HBs protein as an immunogen. In this case, induction of a higher antibody titer against the HBs protein is expected. A ratio of the two chimeric proteins for optimal effect may suitably be adjusted by conventional methods.</p>
+    <p id="p-00026-en" num="0026">When adding a foreign peptide at the N-terminal of the HBs protein, it is preferred that the peptide consists of 20 to 70 amino acids. A larger size than this would affect particle formation and a smaller size than this would possibly reduce the antigenic activity. Therefore, HPV-L2 peptide can be used in combination in the present invention as far as the antigenic activity and particle morphology are maintained. In case of HPV-L2 peptide comprising the core sequence region (20 amino acids), two or three peptides connected to each other can be used.</p>
+    <p id="p-00027-en" num="0027">As mentioned above, a peptide consisting of 21 to 70 amino acids in a total length can be used in the present invention that is obtained by adding amino acids from the HPV L2 protein at the N-terminal or the C-terminal of HPV-L2 peptide consisting of the core sequence region. In case of a peptide consisting of 21 to 35 amino acids, two such HPV-L2 peptides can be coupled to each other.</p>
+    <p id="p-00028-en" num="0028">Furthermore, in the case of a peptide consisting of the common epitope sequence (Gly-Gly-Leu-Gly-Ile-Gly) within the core sequence region and peptides consisting of 6-19 amino acids with the common epitope sequence, 2 to 11 of HPV-L2 peptides can be coupled to each other so that the total number of amino acids is 20 to 70 depending on the size of the respective peptides.</p>
+    <p id="p-00029-en" num="0029">Also, as far as the size of peptides added or inserted is in the range of up to 70 amino acids, other peptides in addition to HPV-L2 peptide may be added or inserted. For example, the aforementioned M2 peptide may be added or inserted to prepare a trivalent vaccine effective for HPV infection, hepatitis B and influenza.</p>
+    <p id="p-00030-en" num="0030">A chimeric protein of HPV-L2 peptide and HBs protein of the present invention may be obtained by the following method. First, a gene encoding the HBs protein (HBs gene) is prepared as a basis of a chimeric protein. The nucleotide sequence of the HBs gene has hitherto been disclosed in a number of patent documents, non-patent documents and databases (cf. e.g. Non-Patent reference 10 and Non-Patent reference 11). Therefore, based on the nucleotide sequence of the HBs gene, the gene can easily be obtained by using the common genetic recombination techniques as taught by <nplcit id="ncit-00014" npl-type="b"><text>Sambrook et al. (Molecular Cloning, A Laboratory Manual Second Edition. Cold Spring Harbor Laboratory Press, NY, 1989</text></nplcit>). For the HBs antigen, any of large, middle and small ones may be used.</p>
+    <p id="p-00031-en" num="0031">Next, a DNA fragment encoding a chimeric protein of HPV-L2 peptide and HBs protein (hereinafter also referred to as "chimeric protein DNA fragment") is prepared by PCR and DNA synthesis. For example, when preparing the chimeric protein DNA fragment wherein HPV-L2 peptide is added at the N-terminal or the C-terminal of the HBs protein by PCR, a primer consisting of a part of the nucleotide sequence encoding HPV-L2 peptide and the HBs gene and the other primer of the HBs gene are used (the direction of the primers is determined based on which primer is at the N-terminal). The similar procedures may be performed when preparing the chimeric protein DNA fragments wherein HPV-L2 peptide is added inside the HBs protein.</p>
+    <p id="p-00032-en" num="0032">PCR primers designed based on the nucleotide sequence encoding HPV-L2 peptide and the nucleotide sequence of the HBs gene are readily available by requesting DNA synthesis trustees (e.g. QIAGEN, Inc.) wherein KOZAK sequence (<nplcit id="ncit-00015" npl-type="s"><text>Kozak M, J.Mol.Biol., 196, 947 (1987</text></nplcit>)) is added at the 5'-terminal and the nucleotide sequence of appropriate restriction enzyme recognition sites are added at the 5'-terminal and the 3'-terminal depending on the purpose. The DNA fragments amplified by PCR are cloned into cloning vectors such as, for example, pUC119 (TAKARA BIO Inc.), pBlueScript (Agilent Technologies) or pCRII-TOPO (Invitrogen) and sequenced with a DNA sequencer (ABI Prism 377 Applied Biosystems). Confirmation of the chimeric protein DNA fragment of interest is performed by comparing the result of the obtained nucleotide sequence with the sequences of the designed PCR primers and the nucleotide sequence of the existing HBs gene.</p>
+    <p id="p-00033-en" num="0033">The thus obtained chimeric protein DNA fragment of the present invention is incorporated into an appropriate expression vector. The expression vector is introduced into a host for expression of the chimeric protein DNA fragments. For the expression vector, a plasmid, a viral vector and the like can be used. A promoter contained in the expression vector may be selected from promoters such as Lac, tac, pho5, adh, SV40 early, SV40 late, and β-actin, in view of a combination with microorganisms or animal cells to be used as a host. For a host, bacteria, yeast, animal cells, plant cells and insect cells are commonly used and may be selected to suit the intended use. When transforming host cells, known methods may be used. For example, calcium phosphate, DEAE dextran, a method using lipofectin liposome, protoplast polyethylene glycol fusion, electroporation, and the like may be used and appropriately selected so as to suit the host cell used.</p>
+    <p id="p-00034-en" num="0034">In accordance with the present invention, the chimeric protein gene of interest, i.e. the chimeric protein DNA fragments wherein HPV-L2 peptide (20 amino acids at positions 56-75 of SEQ ID NO: 1) is added or inserted at either the N-terminal, the C-terminal or inside (between positions 127-128 of SEQ ID NO: 2) of the HBs protein, was obtained by cleaving the recombinant baculovirus vector (cf. Preparation Example) distributed from National Institute of Infectious Diseases (Dr. Kanda and Dr. Mori) with restriction enzymes. Next, the respective chimeric protein DNA fragments were incorporated into the expression plasmid for animal cell pCAGG-S1(Sal).dhfr.neo (cf. <patcit id="pcit-00011" dnum="WO2003004641A"><text>WO2003/004641</text></patcit>) and Chinese hamster ovary (CHO) cells were subject to transformation with the resulting expression plasmid by the modified method of calcium phosphate.</p>
+    <p id="p-00035-en" num="0035">Transformed cells expressing the chimeric protein of the present invention are screened in the following two step process. First, the cells subjected to transformation are cultured in a medium containing 10 to 1,000 nmol of L-methotrexate (MTX) and 100 to 1,000 µg/mL of geneticin (Geneticin G418 sulfate) for a given period of time to select and grow the cells that survive so as to select the transformed cells. Then, the cells expressing the chimeric protein are selected among the transformed cells. Specifically, the chimeric proteins of the present invention is confirmed by performing ELISA and WB using the antibody that specifically binds to HPV-L2 peptide or HBs protein on the culture supernatant and cell debris.</p>
+    <p id="p-00036-en" num="0036">For culture of the transformed cells, the conditions as used for culture of normal cells may be used. Thus, T7m medium, Ex-cell SP2/0 medium, YMM-01B medium, YMM-01C medium, OptiCHO medium, Ex-cell 302 medium, or a mixed medium thereof may be used. The medium may be supplemented with fetal calf serum, calcium, magnesium, amino acids, vitamins, and the like. The culture temperature is 32°C to 38°C and the culture period is 2-20 days. In the stage of manufacture of a medicament, it is preferable to maintain the cells expressing the chimeric protein in a serum-free medium.</p>
+    <p id="p-00037-en" num="0037">Purification of the chimeric proteins of the present invention may be achieved by appropriately combining the methods commonly used in protein chemistry such as, for example, centrifugation, salting out, ultrafiltration, isoelectric precipitation, electrophoresis, ion exchange chromatography, gel filtration chromatography, affinity chromatography, hydrophobic chromatography, and hydroxyapatite chromatography. The amount of the resulting chimeric protein may be measured using BCA Protein Assay Reagent Kit (Pierce Biotechnology, Inc), a protein assay kit (Bio-Rad Japan, Inc.), and the like.</p>
+    <p id="p-00038-en" num="0038">The chimeric protein of the present invention may be those obtained by expressing or chemically synthesizing HPV-L2 peptide and HBs protein separately and then chemically conjugating the peptide and the protein. For separate expression, it is possible to conduct amplification by the known gene amplification method using as a template the chemically synthesized DNA sequence or the DNA sequence inserted into a plasmid and to construct the respective expression plasmids by the method described above. The expression plasmid may be introduced into a host as described above to obtain a peptide or a protein of interest.</p>
+    <p id="p-00039-en" num="0039">For chemical conjugation, a method using a crosslinker is exemplified. In that case, an amino group, a thiol group (SH group) and an aldehyde group of a sugar chain present in a protein and a peptide may be used for the conjugation but there is no limitation in the functional groups to be used. Besides, chemical conjugation utilizing the binding with the interaction of biomolecules such as biotin and avidin is also exemplified.</p>
+    <p id="p-00040-en" num="0040">Evaluation of the chimeric protein of the present invention as a vaccine is carried out by immunizing small animals such as chicken, mouse, rat, guinea pig, dog, or monkey with the antigen and then, in <u>in vitro</u> system, after blood collection from the immunized animals, separating the serum and measuring an antibody titer against the chimeric protein of the present invention and a neutralizing antibody titer against HPV and the hepatitis B virus in the serum whereas, in <u>in vivo</u> systems, by administering a pseudo-HPV in the immunized animals and observing survival and the condition. In general, ELISA, PHA and plaque assay are commonly used for the measurement of antibodies in <u>in vitro</u> system. More specifically, a neutralizing antibody against hepatitis B virus may be measured by measuring HBs antibody whereas a neutralizing antibody against HPV may be measured by measuring the binding ability with a virus like particle (VLP) or infectious pseudovirus (<nplcit id="ncit-00016" npl-type="s"><text>Buck CB etc., Efficient intracellular assembly of papillomaviral vectors J Virol 78:. 751-757, 2004</text></nplcit>).</p>
+    <p id="p-00041-en" num="0041">For immunization procedures (e.g. the site of administration such as subcutaneous, intradermal, intramuscular, intraperitoneal, nasal, oral, and sublingual, and immunization period, etc.), general immunization technique commonly used when examining the immunogenicity of the vaccine may be used. To the antigen used for immunization may be added any adjuvant usable for human for enhancing the immunity, for example, aluminum hydroxide gel, aluminum phosphate gel, CpG oligonucleotides, MDP, QS21, MPL+TDM emulsion, and the like. In addition, various additives acceptable as pharmaceutical applications may also be added for retaining stability and the form of an antigen. Such additives include a stabilizer (arginine, polysorbate 80, macrogol 4000, etc.), an excipient (mannitol, sorbitol, sucrose, and lactose), a buffer (sodium hydrogen phosphate, sodium dihydrogen phosphate, sodium chloride, etc.), a tonicity agent (sodium chloride, etc.), a preservative (thimerosal, phenoxyethanol, etc.), an inactivating agent (formalin, β-propiolactone, etc.), and the like.</p>
+    <p id="p-00042-en" num="0042">The thus obtained chimeric protein of the present invention, having an ability to produce an antibody effective for prevention of HPV infection and growth of hepatitis B, may be used as a material for prophylaxis of HPV infection and hepatitis B or as a material for constructing a detection system of HPV and Hepatitis B virus (e.g. a detection system with antibody measurement such as ELISA, western blotting, and dot blot).</p>
+    <p id="p-00043-en" num="0043">Furthermore, an expression vector wherein the DNA fragment encoding the chimeric protein can express the chimeric protein when administered <u>in vivo</u> may also be used as a DNA vaccine. Such an expression vector includes a plasmid derived from <u>E. coli.</u> For expression of a gene in mammalian cells, the plasmid may include a strong promoter in eukaryotic organisms upstream the gene such as, for example, IE (immediate-early) promoter of cytomegalovirus, β-actin promoter and CAG promoter. Furthermore, by introducing the DNA fragment into viruses and bacteria, a live vaccine may be obtained. Such an expression vector includes viruses (vaccinia virus vector, herpes virus vector, adenovirus vector, Sendai virus vector, measles virus vector, etc.), bacteria (Salmonella vector, etc.), protozoa (malaria vectors, etc.), and the like. For example, when a vaccinia virus vector (LC16m8 strain) in which the DNA fragment encoding the chimeric protein of the present invention is incorporated is used, not only the function as an attenuated live vaccine but also the effect as a smallpox vaccine can be expected. An attenuated live vaccine allows for simplification of a purification process of vaccine material, leading to reduction in cost for the manufacture. A recombinant vaccinia virus in which HBs protein is incorporated expresses particles consisting of only HBs protein (<nplcit id="ncit-00017" npl-type="s"><text>Vaccine 1987 Mar; 5(1) : 65-70</text></nplcit>). Thus, recombinant vaccinia virus (LC16m8 strain) in which the chimeric protein DNA fragment of the present invention is incorporated is expected to form the particles in the same way and to be an attenuated live vaccine with strong immunogenicity of HPV-L2 peptide being retained.</p>
+    <p id="p-00044-en" num="0044">A vaccine comprising the chimeric protein of the present invention as an active ingredient may be used alone as a bivalent vaccine for preventing HPV infection and hepatitis B or alternatively may be used as a multivalent combined vaccine by combining with at least one vaccine selected from the group consisting of vaccines against infectious diseases of other viruses (e.g. influenza virus, hepatitis A virus, Japanese encephalitis virus, etc.), bacteria (e.g. <u>Haemophilus influenzae, Clostridium tetani, Corynebacterium diphtheria</u>, etc.) and protozoa (e.g. malaria, etc.).</p>
+    <p id="p-00045-en" num="0045">The present invention is explained in more detail by means of the following examples but should not be construed to be limited thereto.</p>
+    <heading id="h-00009-en">
+      <u>Preparation Example</u>
+    </heading>
+    <heading id="h-00010-en">
+      <u>Construction of HPV L2 56/75-HBs chimeric gene: construction of baculovirus expression plasmid</u>
+    </heading>
+    <p id="p-00046-en" num="0046">Genes encoding three chimeric proteins in which 20 amino acids at positions 56 to 75 in capsid L2 of HPV type 16 is introduced at the N-terminal, inside between amino acids at positions 127 and 128, or the C-terminal of the HBs and control HBs gene were constructed and introduced into the baculovirus expression plasmid.</p>
+    <heading id="h-00011-en">(1) Construction of chimeric gene with N-terminal introduction and construction of baculovirus expression plasmid pFB1-HBsS56/75-N</heading>
+    <p id="p-00047-en" num="0047">Using HBs yeast expression plasmid pYG100L (<nplcit id="ncit-00018" npl-type="s"><text>T. Imamura, et al., J. Virol., 61, 3543-3549p, 1987</text></nplcit>) as a template, PCR amplification was performed with the following Primer NF and Primer R.<br /> Primer NF; <img id="img-00001-en" wi="148" he="26" img-content="dna" file="EP2940133A1_00009.PNG" img-format="png" original="imgb0001.tif" /> Primer R; 5'-ctgcagTTAAATGTATACCCAAAGAC (SEQ ID NO: 19)</p>
+    <p id="p-00048-en" num="0048">Agarose gel electrophoresis confirmed the band of about 750 bp of the desired size. The band was digested with restriction enzymes SalI-PstI and the digested products were introduced into the restriction enzyme SalI-PstI-digested fragment of baculovirus expression plasmid pFastBacl (Invitrogen) to construct the expression plasmid pFB1-HBsS56/75-N comprising a DNA fragment encoding a chimeric protein (hereinafter also referred to as "56/75-N-terminal introduced chimera") wherein HPV-L2 peptide (20 amino acids at positions 56-75 of SEQ ID NO: 1) was added at the N-terminal of the HBs protein.</p>
+    <heading id="h-00012-en">(2) Construction of chimeric gene with introduction between the amino acids at positions 127-128 of HBs and construction of baculovirus expression plasmid pFB1-HBs56/75-127</heading>
+    <p id="p-00049-en" num="0049">Using the foregoing pYG100L as a template, PCR amplification was performed with the following Primer F and Primer 127R and with Primer 127F and the aforementioned Primer R to obtain the respective fragments. The respective sequences of Primer F, Primer 127R and Primer 127F are shown below.<br /> Primer F;<br /> 5'-gtcgacATGGAGAACACAACATCAGG (SEQ ID NO: 20)<br /> Primer 127R; <img id="img-00002-en" wi="128" he="10" img-content="dna" file="EP2940133A1_00010.PNG" img-format="png" original="imgb0002.tif" /><img id="img-00003-en" wi="145" he="13" img-content="dna" file="EP2940133A1_00011.PNG" img-format="png" original="imgb0003.tif" /> Primer 127F; <img id="img-00004-en" wi="144" he="22" img-content="dna" file="EP2940133A1_00012.PNG" img-format="png" original="imgb0004.tif" /></p>
+    <p id="p-00050-en" num="0050">Equal amounts of the respective amplified fragments were mixed together and PCR amplification was further performed with Primer F and Primer R to obtain a gene fragment of about 750 bp wherein the respective fragments were connected to each other. The obtained gene was digested with restriction enzymes Sall-PstI and the digested products were introduced into the restriction enzyme SalI-PstI-digested fragment of the baculovirus expression plasmid pFastBac1 to construct pFB1-HBsS56/75-127 comprising a DNA fragment encoding a chimeric protein (hereinafter also referred to as "56/75-127-position introduced chimera") wherein HPV-L2 peptide (20 amino acids at positions 56-75 of SEQ ID NO: 1) was inserted inside the HBs protein (between positions 127-128 of SEQ ID NO: 2).</p>
+    <heading id="h-00013-en">(3) Construction of chimeric gene with C-terminal introduction and construction of baculovirus expression plasmid pFB1-HBsS56/75-N</heading>
+    <p id="p-00051-en" num="0051">Using the foregoing pYG100L as a template, PCR amplification was performed with the aforementioned Primer F and the following Primer CR.<br /> Primer CR; <img id="img-00005-en" wi="144" he="22" img-content="dna" file="EP2940133A1_00013.PNG" img-format="png" original="imgb0005.tif" /></p>
+    <p id="p-00052-en" num="0052">Agarose gel electrophoresis confirmed the band of about 750 bp of the desired size. The band was digested with restriction enzymes SalI-PstI and the digested products were introduced into the restriction enzyme Sall-PstI-digested fragment of baculovirus expression plasmid pFastBacl to construct the expression plasmid pFB1-HBsS56/75-N comprising a DNA fragment encoding a chimeric protein (hereinafter also referred to as "56/75-C-terminal introduced chimera") wherein HPV-L2 peptide (20 amino acids at positions 56-75 of SEQ ID NO: 1) was added at the C-terminal of the HBs protein.</p>
+    <heading id="h-00014-en">(4) Construction of HBs gene and construction of baculovirus expression plasmid pFB1-HBsS</heading>
+    <p id="p-00053-en" num="0053">For the purpose of introducing the restriction enzyme recognition sites at both terminals of the gene with respect to control HBs gene, PCR amplification was performed with Primer F and Primer R using the aforementioned pYG100L as a template.</p>
+    <p id="p-00054-en" num="0054">Agarose gel electrophoresis confirmed the band of about 690bp of the desired size. The band was digested with restriction enzymes SalI-PstI and the digested products were introduced into the restriction enzyme SalI-PstI-digested fragment of baculovirus expression plasmid pFastBacl to construct the expression plasmid pFB1-HBsS comprising a DNA fragment encoding the HBs protein.</p>
+    <heading id="h-00015-en">
+      <u>Example 1</u>
+    </heading>
+    <heading id="h-00016-en">
+      <u>Construction of animal cell expression plasmid</u>
+    </heading>
+    <p id="p-00055-en" num="0055">The expression plasmids (1) to (4) described in Preparation Example were digested with restriction enzymes SalI and XhoI and DNA fragments encoding a chimeric protein of HPV-L2 peptide and HBs protein and a DNA fragment encoding HBs protein were extracted by agarose electrophoresis. The DNA fragments obtained from (1) to (4) are referred to as 56/75-N-terminal introduced chimeric DNA fragment, 56/75-127-position introduced chimeric DNA fragment, 56/75-C-terminal introduced chimeric DNA fragment and HBs DNA fragment, respectively.</p>
+    <p id="p-00056-en" num="0056">Next, each of the above DNA fragments was ligated to animal cell expression plasmid pCAGG-S1(Sal).dhfr.neo (<patcit id="pcit-00012" dnum="WO2003004641A"><text>WO2003/004641</text></patcit>), previously digested with restriction enzyme SalI and dephosphorylated at the terminals by treatment with calf intestine-derived alkaline phosphatase, to cyclize with Ligation High (Toyobo) to construct 56/75-N-terminal introduced chimeric animal cell expression plasmid (pCAGG.HBs56/75-N.dhfr.neo), 56/75-127-position introduced chimeric animal cell expression plasmid (pCAGG.HBs56/75-127.dhfr.neo), 56/75-C-terminal introduced chimeric animal cell expression plasmid (pCAGG.HBs56/75-C.dhfr.neo) and HBs animal cell expression plasmid (pCAGG.HBs56/75-N.dhfr.neo).</p>
+    <heading id="h-00017-en">
+      <u>Example 2</u>
+    </heading>
+    <heading id="h-00018-en">
+      <u>Expression of chimeric gene using Chinese hamster ovary (CHO) cells</u>
+    </heading>
+    <p id="p-00057-en" num="0057">The four animal cell expression plasmids obtained in Example 1 were digested with restriction enzyme PvuI to linearize. CHO Kl (<nplcit id="ncit-00019" npl-type="s"><text>FT Kao et al, Proc Natl Acad Sci USA 60: 1275-1281p, 1968</text></nplcit>) was transformed with the linearized plasmids by the modified calcium phosphate method (<nplcit id="ncit-00020" npl-type="s"><text>C. Chen et al, Mol. Cell. Biol., 7, 2745-2752p, 1987</text></nplcit>). After transformation, transformants were selected with dialyzed fetal bovine sera containing 100, 200 or 500 nmol/L of methotrexate (MTX) and 500 µg/mL of geneticin and YMM-01C medium (a self-prepared medium that is prepared by supplementing nucleic acid free MEM alpha medium with amino acids and vitamins and does not contain calcium and magnesium; hereinbelow referred to as "selective medium") supplemented with calcium and magnesium.</p>
+    <p id="p-00058-en" num="0058">The resulting transformants were released using 0.25% trypsin and expanded using the selection medium described above. After expansion, the transformants were washed with PBS(-) and the medium was exchanged with a serum-free medium (T7m: Ex-cell SP2/0; YMM-01B mixed medium (special order medium manufactured by SAFC Inc.)). After culture at 37°C for 11 days, the concentration of the expressed protein in the culture supernatant was measured by sandwich ELISA using an anti-HBs monoclonal antibody. As a result, 56/75-C-terminal introduced chimera was the highest in the expression level, followed by 56/75-127-position introduced chimera and 56/75-N-terminal introduced chimera. The expression level of 56/75-C-terminal introduced chimera was more than twice higher than that of HBs protein with no introduction as a control (<figref>Fig. 1</figref>).</p>
+    <heading id="h-00019-en">
+      <u>Example 3</u>
+    </heading>
+    <heading id="h-00020-en">
+      <u>Purification of chimeric protein from cell culture supernatant</u>
+    </heading>
+    <p id="p-00059-en" num="0059">The CHO K1 cells expressing the three chimeric proteins and HBs protein obtained in Example 2 were expanded using the selective medium. After expansion, the cells were washed with PBS(-), the medium was exchanged with a serum-free medium (T7m; Ex-cell SP2/0; YMM-01B mixed media) and the cells were cultured at 37°C for more than 10 days. After clarifying the culture by centrifugation, culture supernatant was concentrated with cartridge type UF (Vivacell 100: Sartorius) with an exclusion limit of 1,000 kDa in the presence of Benzonase (Merck). After concentration, the buffer was exchanged with PBS(-), and after addition of cesium chloride at the density of 1.2 g/L, ultracentrifugation was carried out at 4°C, 23,000 x g. The bands containing the chimeric proteins or HBs protein were extracted, and after desalting with UF cartridge with an exclusion limit of 300kDa (Vivaspin; Sartorius) and exchange of the buffer with PBS(-), ultracentrifugation was performed with a discontinuous density gradient of sucrose where PBS(-) containing the chimeric proteins or HBs protein was added to a centrifuge tube overlaid with PBS(-) containing 60%, 50%, 40% or 20% sucrose. After separation by centrifugation under the conditions of 4°C, 120,000 x g, the bands containing the chimeric proteins or HBs protein were extracted, the sugar was removed with UF cartridge with an exclusion limit of 300 kDa, and the buffer was exchanged with PBS(-). Both the resulting chimeric proteins and HBs protein had formed virus-like particles (VPL).</p>
+    <heading id="h-00021-en">
+      <u>Example 4</u>
+    </heading>
+    <heading id="h-00022-en">
+      <u>Immunization of mice with chimeric protein</u>
+    </heading>
+    <p id="p-00060-en" num="0060">To the chimeric proteins and HBs protein obtained in Example 3 was added aluminum adjuvant to prepare each 50 µg/ml of immunogen and each 0.1 ml was intramuscularly injected at the thigh of female Balb/c mice (10 animals in each group). After inoculation, antisera were obtained by blood collection at 4 Week (primary immune sera) and also, after inoculation with the same immunogen at 4 Week after the first inoculation, by blood collection at 8 Week (secondary immune sera). As a control, there were used a non-administration group and a group in which an immunogen of a conjugate of the synthetic peptide, obtained by adding Cys to the N-terminal of HPV-L2-derived sequences (SEQ ID NO: 4), and KLH with aluminum as an adjuvant was administered.</p>
+    <heading id="h-00023-en">
+      <u>Example 5</u>
+    </heading>
+    <heading id="h-00024-en">
+      <u>Reactivity of HPV-L2 peptide derived from the same genotype with antisera</u>
+    </heading>
+    <p id="p-00061-en" num="0061">Using individual primary immune sera obtained in Example 4 or a pooled antiserum (a mixture of an equal amount of individual antisera), an ability to produce antibodies against HPV-L2 peptide derived from the same genotype was evaluated by ELISA. More specifically, each well of a 96-well ELISA plate was added with a synthetic peptide (SEQ ID NO: 4)(1.0 µg/well) consisting of 20 amino sequence at positions 56 to 75 of the L2 protein (SEQ ID NO: 1) of HPV type 16 diluted with PBS and was allowed to stand overnight at 4°C. The plate was blocked with a blocking solution (PBS containing 1% BSA and 0.05% Tween20) at room temperature for 2 hours to prepare an antigen immobilized plate. Each serum diluted to 1:100 with the blocking solution was reacted with the immobilized peptide at room temperature for 2 hours. After washing with PBST (PBS containing 0.05% Tween20), horseradish peroxidase (HRP)-labeled anti-mouse IgG antibody (Santa Cruz: sc-2031) diluted to 1:2,000 with the blocking solution was added for reaction at room temperature for 1 hour. After washing with PBST, a substrate solution (TMB+ (DAKO)) was added, and after reaction at room temperature for 10 minutes, absorbance at 450 nm was measured. As a result, antibodies were induced early in the group of immunization with 56/75-C-terminal introduced chimera and the pooled sera showed about 5-fold higher antibody titer than the group of immunization with KLH conjugate (<figref>Fig. 2</figref>). The average value of the antibody titers obtained in the individual antisera was used for t-test. As a result, significant difference was observed between the two groups (p&lt;0.05; <figref>Fig. 3</figref>). In addition, antibodies that bind to the synthetic peptide were also observed in the anti-sera of the group of immunization with 56/75-127-position introduced chimera and the group of immunization with 56/75-N-terminal introduced chimera.</p>
+    <heading id="h-00025-en">
+      <u>Example 6</u>
+    </heading>
+    <heading id="h-00026-en">
+      <u>Reactivity of HPV-L2 peptide derived from the different genotype with antisera</u>
+    </heading>
+    <p id="p-00062-en" num="0062">Using individual primary immune sera obtained in Example 4 or a pooled antiserum (a mixture of an equal amount of individual antisera), an ability to bind to HPV-L2 peptide in the common area derived from different genotypes was evaluated using the procedures described in Example 5 (HPV type 18, HPV type 59 and HPV type 68 have the same sequence as HPV type 16). The synthetic peptides of the following amino acid sequences were used. Note that in the following amino acid sequences, asterisk (*) indicates the same amino acid as that of the HPV16 type.<u>High-risk type</u> HPV16-L2-56/75 56-GGLGIGTGSGTGGRTGYIPL (SEQ ID NO: 4)<br /> HPV31-L2-56/75 56-******S**********V**<br /> (2 amino acid substitutions) (SEQ ID NO: 5)<br /> HPV33-L2-55/74 55-**********S******V*I<br /> (3 amino acid substitutions) (SEQ ID NO: 6)<br /> HPV35-L2-56/75 56-******S*******S**V**<br /> (3 amino acid substitutions) (SEQ ID NO: 7)<br /> HPV39-L2-55/74 55-********T***********<br /> (1 amino acid substitution) (SEQ ID NO: 8)<br /> HPV45-L2-55/74 55-**********S******V**<br /> (2 amino acid substitutions) (SEQ ID NO: 9)<br /> HPV51-L2-55/74 55-**********S*********<br /> (1 amino acid substitution) (SEQ ID NO: 10)<br /> HPV52-L2-55/74 55-********A*S***A**V**<br /> (4 amino acid substitutions) (SEQ ID NO: 11)<br /> HPV56-L2-55/74 55-********T*S***A**V**<br /> (4 amino acid substitutions) (SEQ ID NO: 12)<br /> HPV58-L2-55/74 55-*****************V**<br /> (1 amino acid substitution) (SEQ ID NO: 13)<br /> HPV66-L2-55/74 55-**********S***A**V**<br /> (3 amino acid substitutions) (SEQ ID NO: 14) HPV73-L2-57/76 57-******S***S******V**<br /> (3 amino acid substitutions) (SEQ ID NO: 15)<br /> Twelve peptides in total<u>Low-risk type</u> HPV6-L2-55/74 55-*****************V**<br /> (1 amino acid substitution) (SEQ ID NO: 16)<br /> HPV11-L2-54/73 54-********A*S***A*****<br /> (3 amino acid substitutions) (SEQ ID NO: 17)<br /> Two peptides in total</p>
+    <p id="p-00063-en" num="0063">It was confirmed that antisera of the groups of immunization with the chimeric proteins reacted with all of the synthetic peptides described above. In particular, the group of immunization with 56/75-C-terminal introduced chimera showed a higher antibody titer as compared to the other groups (<figref>Fig. 4</figref>).</p>
+    <heading id="h-00027-en">
+      <u>Example 7</u>
+    </heading>
+    <heading id="h-00028-en">
+      <u>Measurement of HBs antibody titer in anti-sera</u>
+    </heading>
+    <p id="p-00064-en" num="0064">For the pooled antiserum which is a mixture of equal amounts of the individual primary immune sera obtained in Example 4, an antibody titer against HBs protein was measured. The pooled antisera were subjected to 10-fold serial dilution with PBS(-) (10-, 100- and 1,000-folds) and an antibody titer was measured with the automatic enzyme immunoassay equipment AIA-360 using hepatitis B virus surface antibody kit E test "TOSOH" II (HBsAb; Tosoh Corporation).</p>
+    <p id="p-00065-en" num="0065">In any of the groups of immunization with the chimeric proteins, antibodies reactive to HBs protein were detected. A high antibody titer was obtained for the group of immunization with 56/75-N-terminal introduced chimera and the group of immunization with 56/75-C-terminal introduced chimera as in the group of immunization with HBs protein alone. However, an antibody titer increase was suppressed to about 1/10 for the group of immunization with 56/75-127-position introduced chimera (<figref>Fig. 5</figref>).</p>
+    <heading id="h-00029-en">
+      <u>Example 8</u>
+    </heading>
+    <heading id="h-00030-en">
+      <u>Epitope analysis of antisera</u>
+    </heading>
+    <p id="p-00066-en" num="0066">An ability to bind to HPV-L2 peptide was evaluated for a pooled antiserum, a mixture of an equal amount of individual secondary immune sera obtained in Example 4, by ELISA using the synthetic peptides of the following amino acid sequences. Specifically, mutated peptides of HPV16 L2 with deletion or alanine substitution in amino acids at positions 53 to 75 of HPV16 L2 were coupled to BSA via cysteine added at the N-terminal for use as an antigen. Each well of 96-well ELISA plate was added with BSA-bound peptides (500 ng/well) diluted in PBS and was allowed to stand overnight at 4°C. The plate was blocked with a blocking solution (PBS containing 5% skim milk and 0.1% Tween20) at room temperature for 2 hours to prepare an antigen immobilized plate. Each serum was subjected to serial dilution from 1:100 to 1:2,500 with the blocking solution and reacted with the immobilized peptide at room temperature for 2 hours. After washing with PBST (PBS containing 0.1% Tween20), horseradish peroxidase (HRP)-labeled anti-mouse IgG antibody (Santa Cruz: sc-2031) diluted to 1:2,000 with the blocking solution was added for reaction at room temperature for 1 hour. After washing with PBST, a substrate solution (0.1M trisodium citrate containing 2 mg/ml of o-phenylenediamine and 0.0065% hydrogen peroxide, pH4.8) was added, and after reaction at room temperature for 10 minutes, absorbance at 450 nm was measured.<br /> HPV16-L2-14/27 14-SATQLYKTCKQAGT (SEQ ID NO: 24)<br /> HPV16-L2-53/73 53-VFFGGLGIGTGSGTGGRTGYI (SEQ ID NO: 25)<br /> HPV16-L2-53/70 53-VFFGGLGIGTGSGTGGRTAAA (SEQ ID NO: 26)<br /> HPV16-L2-53/67 53-VFFGGLGIGTGSGTGAAAAAA (SEQ ID NO: 27)<br /> HPV16-L2-53/64 53-VFFGGLGIGTGSAAAAAAAAA (SEQ ID NO: 28)<br /> HPV16-L2-55/75 55-FGGLGIGTGSGTGGRTGYIPL (SEQ ID NO: 29)<br /> HPV16-L2-58/75 58-AAALGIGTGSGTGGRTGYIPL (SEQ ID NO: 30)<br /> HPV16-L2-60/75 60-AAAAAAGTGSGTGGRTGYIPL (SEQ ID NO: 31)<br /> HPV16-L2-64/75 64-AAAAAAAAASGTGGRTGYIPL (SEQ ID NO: 32)</p>
+    <p id="p-00067-en" num="0067">As a result, all of the immunization groups had a high antibody titer. It was shown that antibodies recognizing two amino acid sequences in the N-terminal and C-terminal of the core sequence region (20 amino acids) (N-terminal and C-terminal epitopes) were induced for the group of immunization with 56/75-127-position introduced chimera whereas antibodies recognizing the C-terminal amino acid sequence (C-terminal epitope) were induced for the group of immunization with 56/75-N-terminal introduced chimera and the group of immunization with 56/75-C-terminal introduced chimera (<figref>Fig. 6</figref>).</p>
+    <heading id="h-00031-en">
+      <u>Example 9</u>
+    </heading>
+    <heading id="h-00032-en">
+      <u>Reactivity of HPV-virus-like particle (VLP) from different genotypes with antisera</u>
+    </heading>
+    <p id="p-00068-en" num="0068">An ability to bind to HPV-L2 peptide was evaluated for a pooled antiserum, a mixture of an equal amount of individual secondary immune sera (the group of immunization with 56/75-127-position introduced chimera), obtained in Example 4 by the procedures described below.</p>
+    <heading id="h-00033-en">(1) Preparation of VLP</heading>
+    <p id="p-00069-en" num="0069">293FT Cells (Invitrogen) were transfected with L1 and L2 expression plasmid of HPV type 16, 18, 31, 33, 35, 51, 52 or 58. After 2 days, the cells were dissolved in Lysis Buffer (PBS containing 0.35% Brij58, 0.9 mM CaCl<sub>2</sub>, 10 mM MgCl<sub>2</sub> and 1 µl Benzonase) and incubated overnight at 37°C. 5M NaCl was added to a final concentration of 0.8M and, after being left to stand on ice for 10 minutes, the solution was centrifuged at 10,000g, 4°C for 10 minutes, and the supernatant was recovered. The supernatant was layered on top of 27%, 33% and 39% of iodixanol (adjusted with 0.8M NaCl in PBS) and subjected to ultracentrifugation at 50,000 rpm, 16°C for 3.5 hours. After ultracentrifugation, fractions containing the VLP were collected.</p>
+    <heading id="h-00034-en">(2) ELISA</heading>
+    <p id="p-00070-en" num="0070">Each well of 96-well ELISA plate was added with VLP (100 ng/well) diluted in PBS and was allowed to stand overnight at 4°C. The plate was blocked with a blocking solution (PBS containing 5% skim milk and 0.1% Tween20) at room temperature for 2 hours to prepare an antigen immobilized plate. Each serum was subjected to serial dilution from 1:20 to 1:20,000 with the blocking solution and reacted with the immobilized VLP at room temperature for 2 hours. Then, in the same manner as in ELISA for the peptide antigen, antibodies bound to VLP were detected. As a result, the antibodies bound with all of the HPV-VLP to prove to have a broad spectrum against HPV (<figref>Fig. 7</figref>).</p>
+    <heading id="h-00035-en">
+      <u>Example 10</u>
+    </heading>
+    <heading id="h-00036-en">
+      <u>Reactivity of HPV-pseudovirus (PsV) from different genotypes with antisera</u>
+    </heading>
+    <p id="p-00071-en" num="0071">The neutralizing ability to HPV-PsV was evaluated for a pooled antiserum, a mixture of an equal amount of individual secondary immune sera (the group of immunization with 56/75-127-position introduced chimera), obtained in Example 4 by the procedures described below.</p>
+    <heading id="h-00037-en">(1) Preparation of PsV</heading>
+    <p id="p-00072-en" num="0072">L1 and L2 expression plasmid of HPV type 16, 18 or 35 and secreted alkaline phosphatase (SEAP) expression plasmid were mixed and 293FT Cells were transfected with the mixture. After 2 days, PsV was purified in the same manner as VLP.</p>
+    <heading id="h-00038-en">(2) Neutralization test</heading>
+    <p id="p-00073-en" num="0073">Equal amounts of PsV diluted in medium for cell culture (phenol red-free DMEM containing 10% FBS) and of each serum serially diluted with the same medium from 1:12.5 to 1:400 were mixed and allowed to react at 4°C for 1 hour, followed by infection to 293FT cells previously prepared in 96-well plate (1 × 10<sup>4</sup> cells/well). After 3 days, the SEAP activity in the culture supernatant was measured using Great EscAPe SEAP Assay Kit (Clontech) and a plate reader (ARVO MX, PerkinElmer). As a result, the neutralizing activity was definitely observed for any of the pseudovirus (<figref>Fig. 8-1</figref> to <figref>Fig. 8-3</figref>).</p>
+    <heading id="h-00039-en">INDUSTRIAL APPLICABILITY</heading>
+    <p id="p-00074-en" num="0074">The chimeric proteins of the present invention may be utilized in the material of prophylactics for human papillomavirus (HPV) infection and hepatitis B. <img id="img-00006-en" wi="151" he="233" img-content="dna" file="EP2940133A1_00014.PNG" img-format="png" original="imgb0006.tif" /><img id="img-00007-en" wi="132" he="233" img-content="dna" file="EP2940133A1_00015.PNG" img-format="png" original="imgb0007.tif" /><img id="img-00008-en" wi="134" he="233" img-content="dna" file="EP2940133A1_00016.PNG" img-format="png" original="imgb0008.tif" /><img id="img-00009-en" wi="136" he="233" img-content="dna" file="EP2940133A1_00017.PNG" img-format="png" original="imgb0009.tif" /><img id="img-00010-en" wi="132" he="233" img-content="dna" file="EP2940133A1_00018.PNG" img-format="png" original="imgb0010.tif" /><img id="img-00011-en" wi="132" he="233" img-content="dna" file="EP2940133A1_00019.PNG" img-format="png" original="imgb0011.tif" /><img id="img-00012-en" wi="131" he="233" img-content="dna" file="EP2940133A1_00020.PNG" img-format="png" original="imgb0012.tif" /><img id="img-00013-en" wi="149" he="233" img-content="dna" file="EP2940133A1_00021.PNG" img-format="png" original="imgb0013.tif" /><img id="img-00014-en" wi="149" he="233" img-content="dna" file="EP2940133A1_00022.PNG" img-format="png" original="imgb0014.tif" /><img id="img-00015-en" wi="153" he="233" img-content="dna" file="EP2940133A1_00023.PNG" img-format="png" original="imgb0015.tif" /><img id="img-00016-en" wi="148" he="233" img-content="dna" file="EP2940133A1_00024.PNG" img-format="png" original="imgb0016.tif" /><img id="img-00017-en" wi="153" he="43" img-content="dna" file="EP2940133A1_00025.PNG" img-format="png" original="imgb0017.tif" /></p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>A chimeric protein of a peptide derived from human papillomavirus (HPV) L2 protein (HPV-L2 peptide) and hepatitis B virus surface protein (HBs protein) wherein the HPV-L2 peptide is (1) a peptide consisting of the core sequence region of 20 amino acid residues, (2) a peptide inside the core sequence region comprising 6 amino acid residues Gly-Gly-Leu-Gly-Ile-Gly or (3) a peptide consisting of 70 or less amino acid residues obtained by adding an amino acid sequence derived from HPV L2 protein at the N-terminal and/or the C-terminal of the core sequence region.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The chimeric protein according to claim 1 wherein the HPV-L2 peptide consists of a core sequence region.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The chimeric protein according to claim 1 or 2 wherein the core sequence region is a sequence of Gly-Gly-Leu-Gly-Ile-Gly-Xlaa-Gly-X2aa-Gly-X3aa-Gly-Gly-Arg-X4aa-Gly-Tyr-X5aa-Pro-X6aa wherein X1aa, X2aa, X3aa, X4aa, X5aa and X6aa are an arbitrary amino acid (SEQ ID NO: 3).</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The chimeric protein according to claim 3 wherein the core sequence region is a sequence having the amino acid residues selected from (1) to (6) as follows:
+<claim-text>(1) X1aa is Thr or Ser,</claim-text><claim-text>(2) X2aa is Ser, Thr or Ala,</claim-text><claim-text>(3) X3aa is Thr or Ser,</claim-text><claim-text>(4) X4aa is Ser, Thr or Ala</claim-text><claim-text>(5) X5aa is Ile or Val, and</claim-text><claim-text>(6) X6aa is Leu or Ile</claim-text></claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The chimeric protein according to claim 1 or 2 wherein the core sequence region is the amino acid sequence consisting of Gly-Gly-Leu-Gly-Ile-Gly-Thr-Gly-Ser-Gly-Thr-Gly-Gly-Arg-Thr-Gly-Tyr-Ile-Pro-Leu (SEQ ID NO: 4).</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>The chimeric protein according to any one of claims 1 to 5 wherein the chimeric protein contains 1 to 11 HPV-L2 peptides.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>The chimeric protein according to any one of claims 1 to 6 wherein the peptide is added or inserted into at least one of the N-terminal amino acid of the HBs protein, positions 127-128 of SEQ ID NO: 2, or the C-terminal amino acid of the HBs protein.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>The chimeric protein according to claim 7 wherein the peptide is inserted at positions 127-128 of SEQ ID NO: 2 of the HBs protein.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>The chimeric protein according to claim 7 wherein the peptide is added at the C-terminal amino acid of HBs protein.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>The chimeric protein according to claim 7 wherein the peptide is inserted at positions 127-128 of SEQ ID NO: 2 of the HBs protein and added at the C-terminal amino acid.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en" independent="true">
+      <claim-text>A chimeric protein of a peptide derived from human papillomavirus (HPV) L2 protein (HPV-L2 peptide) and hepatitis B virus surface protein (HBs protein) wherein the HPV-L2 peptide consists of 20 amino acid residues and has 50-100%, 70-100% or 80-100% sequence homology to the amino acid sequence of Gly-Gly-Leu-Gly-Ile-Gly-Thr-Gly-Ser-Gly-Thr-Gly-Gly-Arg-Thr-Gly-Tyr-Ile-Pro-Leu (SEQ ID NO: 4).</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>A DNA fragment encoding the chimeric protein as set forth in any one of claims 1 to 11.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en" independent="true">
+      <claim-text>An expression vectors capable of expressing a chimeric protein encoded by the DNA fragment.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en" independent="true">
+      <claim-text>A host producing a chimeric protein that is transformed with the expression vector.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>A vaccine for HPV infection and/or hepatitis B comprising as an active ingredient the chimeric protein as set forth in any one of claims 1 to 11.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>A vaccine for HPV infection and/or hepatitis B comprising as an active ingredient the chimeric protein as set forth in claim 8 and the chimeric protein as set forth in claim 9.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>A DNA vaccine for HPV infection and/or hepatitis B comprising as an active ingredient the expression vector as set forth in claim 13.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en" independent="true">
+      <claim-text>A process for preparing a vaccine for human papilloma virus (HPV) infection and/or hepatitis B comprising as an active ingredient a chimeric protein of a peptide derived from HPV L2 protein (HPV-L2 peptide) and hepatitis B virus surface protein (HBs protein), said process comprising the steps (1) to (5) as follows:
+<claim-text>(1) a step of preparing a DNA fragment encoding a chimeric protein of the HBs protein with a HPV-L2 peptide consisting of the core sequence region of 20 amino acid residues, a HPV-L2 peptide inside the core sequence region comprising 6 amino acid residues Gly-Gly-Leu-Gly-Ile-Gly or a HPV-L2 peptide consisting of 70 or less amino acid residues obtained by adding an amino acid sequence derived from HPV L2 protein at the N-terminal and/or the C-terminal of the core sequence region,</claim-text><claim-text>(2) a step of preparing an expression vector comprising the DNA fragment of (1) and transforming a host with the expression vector,</claim-text><claim-text>(3) a step of culturing the transformed host obtained in (2) in the presence of Geneticin and MTX to select the transformed host producing the chimeric protein,</claim-text><claim-text>(4) a step of expanding by culture the transformed host producing the chimeric protein obtained in (3) and purifying the chimeric protein from the culture, and</claim-text><claim-text>(5) a step of adding an adjuvant, a stabilizing agent, a buffer, an isotonic agent and a preservative to the purified chimeric protein obtained in (4) to prepare a vaccine.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0002.tif" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0003.tif" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0004.tif" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0005.tif" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0006.tif" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0007.tif" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00009.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0001.tif" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00010.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0002.tif" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00011.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0003.tif" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00012.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0004.tif" inline="yes" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00013.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0005.tif" inline="yes" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00014.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0006.tif" inline="yes" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00015.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0007.tif" inline="yes" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00016.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0008.tif" inline="yes" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00017.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0009.tif" inline="yes" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00018.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0010.tif" inline="yes" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00019.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0011.tif" inline="yes" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00020.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0012.tif" inline="yes" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00021.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0013.tif" inline="yes" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00022.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0014.tif" inline="yes" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00023.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0015.tif" inline="yes" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00024.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0016.tif" inline="yes" />
+    </figure>
+    <figure num="25">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00025.PNG" alt="image" img-content="undefined" img-format="png" original="imgb0017.tif" inline="yes" />
+    </figure>
+    <figure num="26">
+      <img he="N/A" wi="N/A" file="EP2940133A1_00026.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="imgaf001.tif" />
+    </figure>
+  </drawings>
+  <image file="EP2940133A1.PDF" type="pdf" size="898414" pages="40" />
+</lexisnexis-patent-document>

@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247094A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021455" date-changed="20150918" time-changed="025329">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140163">
+        <country>US</country>
+        <doc-number>20150247094</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14713511</doc-number>
+        <date>20150515</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="national">
+        <country>CA</country>
+        <doc-number>2662346</doc-number>
+        <date>20090409</date>
+      </priority-claim>
+      <priority-claim sequence="2" kind="national">
+        <country>CA</country>
+        <doc-number>2693879</doc-number>
+        <date>20100222</date>
+      </priority-claim>
+      <priority-claim sequence="3" kind="national">
+        <country>CA</country>
+        <doc-number>2743836</doc-number>
+        <date>20110621</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C10G   1/04        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>10</class>
+        <subclass>G</subclass>
+        <main-group>1</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C10G   1/045       20130101 FI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>G</subclass>
+        <main-group>1</main-group>
+        <subgroup>045</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B03D   1/02        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>03</class>
+        <subclass>D</subclass>
+        <main-group>1</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>B03D2203/006       20130101 LA20130922BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>03</class>
+        <subclass>D</subclass>
+        <main-group>2203</main-group>
+        <subgroup>006</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130922</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C10G2300/4081      20130101 LA20130827BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>G</subclass>
+        <main-group>2300</main-group>
+        <subgroup>4081</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130827</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C10G2300/44        20130101 LA20130827BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>G</subclass>
+        <main-group>2300</main-group>
+        <subgroup>44</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130827</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C10G2300/802       20130101 LA20130827BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>10</class>
+        <subclass>G</subclass>
+        <main-group>2300</main-group>
+        <subgroup>802</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130827</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">25</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">METHODS FOR SEPARATING A FEED MATERIAL DERIVED FROM A PROCESS FOR RECOVERING BITUMEN FROM OIL SANDS</invention-title>
+    <related-documents date-changed="20150903">
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13166437</doc-number>
+              <date>20110622</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007135</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+      <continuation-in-part>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12426538</doc-number>
+              <date>20090420</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>8382976</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13166437</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation-in-part>
+      <continuation-in-part>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12721991</doc-number>
+              <date>20100311</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>8852429</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12426538</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation-in-part>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Titanium Corporation Inc.</orgname>
+            <role>03</role>
+            <address>
+              <city>Edmonton</city>
+              <country>CA</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>MORAN</last-name>
+            <first-name>KEVIN</first-name>
+            <address>
+              <city>Edmonton</city>
+              <country>CA</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>DOIRON</last-name>
+            <first-name>Jacques</first-name>
+            <address>
+              <city>Devon</city>
+              <country>CA</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="146968297">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247094</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150515</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20120000831</doc-number>
+            <kind>A1</kind>
+            <date>20120105</date>
+          </document-id>
+          <application-date>
+            <date>20110622</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="155018864">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247094</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150515</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2662346</doc-number>
+            <kind>A1</kind>
+            <date>20101009</date>
+          </document-id>
+          <application-date>
+            <date>20090409</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2693879</doc-number>
+            <kind>A1</kind>
+            <date>20110822</date>
+          </document-id>
+          <application-date>
+            <date>20100222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2693879</doc-number>
+            <kind>C</kind>
+            <date>20120918</date>
+          </document-id>
+          <application-date>
+            <date>20100222</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2743836</doc-number>
+            <kind>A1</kind>
+            <date>20121221</date>
+          </document-id>
+          <application-date>
+            <date>20110621</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20120000831</doc-number>
+            <kind>A1</kind>
+            <date>20120105</date>
+          </document-id>
+          <application-date>
+            <date>20110622</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2662346</doc-number>
+            <kind>C</kind>
+            <date>20130402</date>
+          </document-id>
+          <application-date>
+            <date>20090409</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2743836</doc-number>
+            <kind>C</kind>
+            <date>20150519</date>
+          </document-id>
+          <application-date>
+            <date>20110621</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20100258478</doc-number>
+            <kind>A1</kind>
+            <date>20101014</date>
+          </document-id>
+          <application-date>
+            <date>20090420</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20110233115</doc-number>
+            <kind>A1</kind>
+            <date>20110929</date>
+          </document-id>
+          <application-date>
+            <date>20100311</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>8382976</doc-number>
+            <kind>B2</kind>
+            <date>20130226</date>
+          </document-id>
+          <application-date>
+            <date>20090420</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>8852429</doc-number>
+            <kind>B2</kind>
+            <date>20141007</date>
+          </document-id>
+          <application-date>
+            <date>20100311</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Separation methods for producing an extract and a raffinate from a solvent extraction feed material, wherein the feed material is derived from a process for recovering bitumen from oil sands. The methods may include producing an intra-stage recycle component from an overflow zone of a solvent extraction stage and recycling the intra-stage recycle component to the solvent extraction stage, and/or the methods may include providing an underflow component withdrawal rate for a solvent extraction stage other than a final solvent extraction stage which is greater than an underflow component withdrawal rate for the final solvent extraction stage.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150515</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247094A1</docdb-publication-number>
+      <docdb-application-id>444210089</docdb-application-id>
+      <new-owner>TITANIUM CORPORATION INC., CANADA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:MORAN, KEVIN;DOIRON, JACQUES;REEL/FRAME:035705/0778</free-text-description>
+      <effective-date>
+        <date>20120307</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">Separation methods for separating a feed material comprising solid mineral material, water and bitumen, wherein the feed material is derived from a process for recovering bitumen from oil sands.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">Oil sands is essentially comprised of a matrix of bitumen, solid mineral material and water.</p>
+      <p id="p-00003-en" num="0003">The bitumen component of oil sands includes hydrocarbons which are typically quite viscous at normal in situ temperatures and which act as a binder for the other components of the oil sands. For example, bitumen has been defined by the United Nations Institute for Training and Research as a hydrocarbon with a viscosity greater than 10<sup>4 </sup>mPa s (at deposit temperature) and a density greater than 1000 kg/m<sup>3 </sup>at 15.6 degrees Celsius.</p>
+      <p id="p-00004-en" num="0004">The solid mineral material component of oil sands typically consists of sand, rock, silt and clay. Solid mineral material may be present in oil sands as coarse mineral material or fine mineral material. The accepted division between coarse mineral material and fine mineral material is typically a particle size of about 44 microns. Solid mineral material having a particle size greater than about 44 microns is typically considered to be coarse mineral material, while solid mineral material having a particle size less than about 44 microns is typically considered to be fine mineral material. Sand and rock are generally present in oil sands as coarse mineral material, while silt and clay are generally present in oil sands as fine mineral material.</p>
+      <p id="p-00005-en" num="0005">A typical deposit of oil sands may contain (by weight) about 10 percent bitumen, up to about 6 percent water, with the remainder being comprised of solid mineral material, which may include a relatively small amount of impurities such as humic matter and heavy minerals.</p>
+      <p id="p-00006-en" num="0006">Water based technologies are typically used to extract bitumen from oil sands ore originating from the Athabasca area in northeastern Alberta, Canada. A variety of water based technologies exist, including the Clark “hot water” process and a variety of other processes which may use hot water, warm water or cold water in association with a variety of different separation apparatus.</p>
+      <p id="p-00007-en" num="0007">In a typical water based oil sands extraction process, the oil sands ore is first mixed with water to form an aqueous slurry. The slurry is then processed to release bitumen from within the oil sands matrix and prepare the bitumen for separation from the slurry, thereby providing a conditioned slurry. The conditioned slurry is then processed in one or more separation apparatus which promote the formation of a primary bitumen froth while rejecting coarse mineral material and much of the fine mineral material and water. The separation apparatus may also produce a middlings stream from which a secondary bitumen froth may be scavenged. This secondary bitumen froth may be added to the primary bitumen froth or may be kept separate from the primary bitumen froth.</p>
+      <p id="p-00008-en" num="0008">A typical bitumen froth (comprising a primary bitumen froth and/or a secondary bitumen froth) may contain (by weight) about 60 percent bitumen, about 30 percent water and about 10 percent solid mineral material, wherein a large proportion of the solid mineral material is fine mineral material. The bitumen which is present in a typical bitumen froth is typically comprised of both non-asphaltenic material and asphaltenes.</p>
+      <p id="p-00009-en" num="0009">This bitumen froth is typically subjected to a froth treatment process in order to reduce its solid mineral material and water concentration by separating the bitumen froth into a bitumen product and froth treatment tailings.</p>
+      <p id="p-00010-en" num="0010">In a typical froth treatment process, the bitumen froth is diluted with a froth treatment diluent to provide a density gradient between the hydrocarbon phase and the water phase and to lower the viscosity of the hydrocarbon phase. The diluted bitumen froth is then subjected to separation by solvent extraction in one or more solvent extraction apparatus in order to produce the bitumen product and the froth treatment tailings. Exemplary solvent extraction apparatus include gravity settling vessels, inclined plate separators and centrifuges.</p>
+      <p id="p-00011-en" num="0011">Some commercial froth treatment processes use naphthenic type diluents (defined as froth treatment diluents which consist essentially of or contain a significant amount of one or more aromatic compounds). Examples of naphthenic type diluents include toluene (a light aromatic compound) and naphtha, which may be comprised of both aromatic and non-aromatic compounds.</p>
+      <p id="p-00012-en" num="0012">Other commercial froth treatment processes use paraffinic type diluents (defined as froth treatment diluents which consist essentially of or contain significant amounts of one or more relatively short-chained aliphatic compounds). Examples of paraffinic type diluents are C4 to C8 aliphatic compounds and natural gas condensate, which typically contains short-chained aliphatic compounds and may also contain small amounts of aromatic compounds.</p>
+      <p id="p-00013-en" num="0013">Froth treatment processes which use naphthenic type diluents (i.e., naphthenic froth treatment processes) typically result in a relatively high bitumen recovery (perhaps about 98 percent), but also typically result in a bitumen product which has a relatively high solid mineral material and water concentration.</p>
+      <p id="p-00014-en" num="0014">Froth treatment processes which use paraffinic type diluents (i.e., paraffinic froth treatment processes) typically result in a relatively lower bitumen recovery (in comparison with naphthenic froth treatment processes), and in a bitumen product which has a relatively lower solid mineral material and water concentration (in comparison with naphthenic froth treatment processes). Both the relatively lower bitumen recovery and the relatively lower solid mineral material and water concentration may be attributable to the phenomenon of asphaltene precipitation, which occurs in paraffinic froth treatment processes when the concentration of the paraffinic type diluent exceeds a critical level. This asphaltene precipitation results in bitumen being lost to the froth treatment tailings, but also provides a cleaning effect in which the precipitating asphaltenes trap solid mineral material and water as they precipitate, thereby separating the solid mineral material and the water from the bitumen froth.</p>
+      <p id="p-00015-en" num="0015">Froth treatment tailings therefore typically contain solid mineral material, water, froth treatment diluent, and small amounts of residual bitumen (perhaps about 2-12 percent of the bitumen which was contained in the original bitumen froth, depending upon whether the froth treatment process uses a naphthenic type diluent or a paraffinic type diluent).</p>
+      <p id="p-00016-en" num="0016">Much of the residual froth treatment diluent remaining in froth treatment tailings is typically recovered from the froth treatment tailings in a tailings solvent recovery unit (TSRU). The froth treatment tailings (including the tailings bitumen) are then typically disposed of in a tailings pond.</p>
+      <p id="p-00017-en" num="0017">A significant amount of bitumen from the original oil sands ore is therefore typically lost to the froth treatment tailings as residual bitumen. There are both environmental incentives and economic incentives for recovering all or a portion of this residual bitumen.</p>
+      <p id="p-00018-en" num="0018">In addition, the solid mineral material which is included in the froth treatment tailings comprises an amount of heavy minerals. Heavy minerals are typically considered to be solid mineral material which has a specific gravity greater than that of quartz (i.e., a specific gravity greater than about 2.65). The heavy minerals in the solid mineral material which is contained in typical froth treatment tailings may include titanium bearing minerals such as rutile (TiO<sub>2</sub>), anatase (TiO<sub>2</sub>), ilmenite (FeTiO<sub>3</sub>) and leucoxene (typically an alteration product of ilmenite) and zirconium bearing minerals such as zircon (ZrSiO<sub>4</sub>). Titanium and zirconium bearing minerals are typically used as feedstocks for manufacturing engineered materials due to their inherent properties.</p>
+      <p id="p-00019-en" num="0019">Although oil sands ore may contain a relatively low concentration of heavy minerals, it is known that these heavy minerals tend to concentrate in the bitumen froth which is extracted from the oil sands ore, and therefore become concentrated in the froth treatment tailings which result from froth treatment processes, primarily as coarse mineral material. As a result, froth treatment tailings may typically contain a sufficient concentration of heavy minerals to provide an economic incentive to recover these heavy minerals from the froth treatment tailings.</p>
+      <p id="p-00020-en" num="0020">Froth treatment tailings may be further processed to recover bitumen and/or heavy minerals therefrom. Froth treatment tailings may be further processed as “whole tailings”, or froth treatment tailings may be separated and fractions of the separated froth treatment tailings may be further processed. Examples in the art of methods for further processing froth treatment tailings to recover bitumen and/or heavy minerals therefrom may be found in Canadian Patent No. 2,426,113 (Reeves et al), Canadian Patent Application No. 2,548,006 (Erasmus et al), and Canadian Patent Application No. 2,662,346 (Moran et al).</p>
+      <p id="p-00021-en" num="0021">There remains a need in the art for methods for separating feed materials comprising solid mineral material, water and bitumen, wherein the feed materials are derived from a process for recovering bitumen from oil sands, and wherein representative feed materials may include (but are not limited to) a bitumen froth, whole froth treatment tailings, and/or fractions of whole froth treatment tailings.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00022-en" num="0022">References in this document to orientations, to operating parameters, to ranges, to lower limits of ranges, and to upper limits of ranges are not intended to provide strict boundaries for the scope of the invention, but should be construed to mean “approximately” or “about” or “substantially”, within the scope of the teachings of this document, unless expressly stated otherwise.</p>
+      <p id="p-00023-en" num="0023">In this document, “gravity settling” means an operation in which components of a mixture are separated using gravity, and is therefore distinguished from other separation operations such as molecular sieve processes, absorption processes, adsorption processes, magnetic processes, electrical processes, enhanced gravity settling processes, etc.</p>
+      <p id="p-00024-en" num="0024">In this document, “gravity settler” includes a gravity settling vessel, an inclined plate separator, a rotary disc contactor, a thickener, and any other suitable apparatus which facilitates gravity settling, with or without the use of process aids such as flocculants and demulsifiers. In this document, gravity settler also includes a mixing apparatus which may be used in association with the gravity settling operation.</p>
+      <p id="p-00025-en" num="0025">In this document, “gravity settling vessel” means a tank or other vessel into which a mixture may be introduced in order to facilitate separation of the mixture using gravity, but is distinguishable from an inclined plate separator. A gravity settling vessel may have any shape, size and/or configuration which is suitable for achieving gravity separation. A gravity settling vessel may or may not include internal structures such as weirs, sumps, launders, baffles, distributors, etc. and may or may not include internal mechanical devices such as rakes, conveyors, augers, etc.</p>
+      <p id="p-00026-en" num="0026">In this document, “inclined plate separator” means an apparatus which is comprised of a plurality of stacked inclined plates onto which a mixture to be separated may be introduced so that the mixture passes along the plates in order to achieve separation of components of the mixture, and is distinguishable from a gravity settling vessel.</p>
+      <p id="p-00027-en" num="0027">In this document, “enhanced gravity separation” means an operation in which components of a mixture are separated using centrifugal acceleration or centripetal acceleration resulting from rotational movement of the mixture, and is therefore distinguished from gravity separation processes.</p>
+      <p id="p-00028-en" num="0028">In this document, “enhanced gravity separator” or “enhanced gravity separation apparatus” includes a centrifuge, a hydrocyclone and any other suitable apparatus which facilitates enhanced gravity separation.</p>
+      <p id="p-00029-en" num="0029">In this document, “solvent extraction” means an operation in which components of a mixture are separated by adding to the mixture a suitable liquid solvent which dissolves and/or dilutes one or more components of the mixture, thereby facilitating separation of components of the mixture.</p>
+      <p id="p-00030-en" num="0030">In this document, “solvent extraction apparatus” includes gravity settlers (including without limitation, gravity settling vessels, inclined plate separators, and rotary disc contactors) and enhanced gravity separators (including without limitation, centrifuges and hydrocyclones).</p>
+      <p id="p-00031-en" num="0031">In this document, “froth treatment diluent” means any substance containing one or more hydrocarbon compounds and/or substituted hydrocarbon compounds which is suitable for use in diluting and/or dissolving bitumen froth in a froth treatment process.</p>
+      <p id="p-00032-en" num="0032">In this document, “hydrocarbon diluent” means any substance containing one or more hydrocarbon compounds and/or substituted hydrocarbon compounds which is suitable for use for diluting and/or dissolving bitumen in the practice of the invention.</p>
+      <p id="p-00033-en" num="0033">In this document, “diluent” may include a froth treatment diluent and/or a hydrocarbon diluent.</p>
+      <p id="p-00034-en" num="0034">In this document, “naphthenic type diluent” means a froth treatment diluent or a hydrocarbon diluent which includes a sufficient amount of one or more aromatic compounds so that the diluent essentially exhibits the properties of a naphthenic type diluent as recognized in the art, as distinguished from a paraffinic type diluent. In this document, a naphthenic type diluent may therefore be comprised of a mixture of aromatic and non-aromatic compounds, including but not limited to such substances as naphtha and toluene.</p>
+      <p id="p-00035-en" num="0035">In this document, “naphthenic froth treatment process” means a froth treatment process which uses a sufficient amount of one or more naphthenic type diluents so that the froth treatment process is recognized in the art as a naphthenic froth treatment process as distinguished from a paraffinic froth treatment process.</p>
+      <p id="p-00036-en" num="0036">In this document, “paraffinic type diluent” means a froth treatment diluent or a hydrocarbon diluent which includes a sufficient amount of one or more relatively short-chain aliphatic compounds (such as, for example, C5 to C8 aliphatic compounds) so that the diluent essentially exhibits the properties of a paraffinic type diluent as recognized in the art, as distinguished from a naphthenic type diluent. In this document, a paraffinic type diluent may therefore be comprised of a mixture of aliphatic and non-aliphatic compounds, including but not limited to such substances as natural gas condensate.</p>
+      <p id="p-00037-en" num="0037">In this document, “paraffinic froth treatment process” means a froth treatment process which uses a sufficient amount of one or more paraffinic type diluents so that the froth treatment process is recognized in the art as a paraffinic froth treatment process as distinguished from a naphthenic froth treatment process.</p>
+      <p id="p-00038-en" num="0038">In this document, “froth flotation” means an operation in which components of a mixture are separated by passing a gas through the mixture so that the gas causes one or more components of the mixture to float to the top of the mixture and form a froth. In this document, froth flotation may be performed using flotation cells or tanks, flotation columns or any other suitable froth flotation apparatus, which may or may not include agitators or mixers, and froth flotation may include the use of flotation aids, including without limitation, surfactants and frothing agents.</p>
+      <p id="p-00039-en" num="0039">In this document, “heavy minerals” includes solid mineral material which has a specific gravity greater than that of quartz (i.e., a specific gravity greater than about 2.65), including but not limited to titanium bearing minerals such as rutile (TiO<sub>2</sub>), anatase (TiO<sub>2</sub>), ilmenite (FeTiO<sub>3</sub>) and leucoxene (typically an alteration product of ilmenite) and zirconium bearing minerals such as zircon (ZrSiO<sub>4</sub>).</p>
+      <p id="p-00040-en" num="0040">The present invention is directed at methods for separating a feed material comprising solid mineral material, water and bitumen, wherein the feed material is derived from a process for recovering bitumen from oil sands. The feed material may consist of, may consist essentially of, or may be comprised of a bitumen froth, whole froth treatment tailings, a fraction of whole froth treatment tailings, and/or any other suitable material derived from oil sands.</p>
+      <p id="p-00041-en" num="0041">The methods of the invention are solvent extraction separation methods which are performed in one or more solvent extraction stages. As a result, the feed material may be further comprised of a hydrocarbon diluent, and/or the methods may be comprised of introducing a hydrocarbon diluent into one or more of the solvent extraction stages.</p>
+      <p id="p-00042-en" num="0042">In all aspects of the invention, the methods of the invention may be comprised of any number of solvent extraction stages. In some embodiments of all aspects, the methods may be comprised of more than three solvent extraction stages. In some embodiments of all aspects, the methods may be comprised of a first solvent extraction stage and a final solvent extraction stage. In some embodiments of all aspects, the methods may be comprised of one or more intermediate solvent extraction stages.</p>
+      <p id="p-00043-en" num="0043">In some embodiments of all aspects of the invention, the methods of the invention may be performed in a countercurrent manner. In some embodiments of all aspects, an extract may be produced as an overflow product in a first solvent extraction stage and a raffinate may be produced as an underflow product in a final solvent extraction stage.</p>
+      <p id="p-00044-en" num="0044">In all aspects of the invention, the solvent extraction feed material may be any suitable material derived from oil sands. In some embodiments of all aspects, the solvent extraction feed material may consist of, may consist essentially of, or may be comprised of a bitumen froth. In some embodiments of all aspects, the solvent extraction feed material may consist of, may consist essentially of, or may be comprised of whole froth treatment tailings. In some embodiments of all aspects, the solvent extraction feed material may consist of, may consist essentially of, or may be comprised of a coarse mineral material fraction of whole froth treatment tailings. In some embodiments of all aspects, the solvent extraction feed material may consist of, may consist essentially of, or may be comprised of a fine mineral material fraction of whole froth treatment tailings.</p>
+      <p id="p-00045-en" num="0045">In all aspects of the invention, the solvent extraction stages may be performed using any suitable solvent extraction apparatus. The solvent extraction apparatus may be similar in each solvent extraction stage or the solvent extraction apparatus may be different in some or all of the solvent extraction stages. In some embodiments of all aspects, the solvent extraction apparatus may be comprised of a mixing apparatus for mixing and/or conditioning the solvent extraction feed material.</p>
+      <p id="p-00046-en" num="0046">In some embodiments of all aspects of the invention, the methods may be further comprised of introducing an amount of a hydrocarbon diluent into one or more of the solvent extraction stages. In some embodiments of all aspects, the hydrocarbon diluent may be introduced into a final solvent extraction stage.</p>
+      <p id="p-00047-en" num="0047">In some embodiments of all aspects of the invention, the hydrocarbon diluent may consist of, may consist essentially of, or may be comprised of a paraffinic type diluent. In some embodiments of all aspects, the hydrocarbon diluent may consist of, may consist essentially of, or may be comprised of a naphthenic type diluent.</p>
+      <p id="p-00048-en" num="0048">In a first exemplary aspect, the invention is a separation method, the method comprising: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>(a) introducing a first solvent extraction feed material into a first solvent extraction stage, wherein the first solvent extraction feed material is comprised of solid mineral material, water and bitumen, and wherein the first solvent extraction feed material is derived from a process for recovering bitumen from oil sands;</li><li>(b) allowing the first solvent extraction feed material to separate in the first solvent extraction stage into an underflow zone and an overflow zone;</li><li>(c) withdrawing a first stage underflow product from the underflow zone of the first solvent extraction stage;</li><li>(d) withdrawing a first stage overflow product from the overflow zone of the first solvent extraction stage;</li><li>(e) withdrawing a first intra-stage recycle component from the overflow zone of the first solvent extraction stage; and</li><li>(f) combining the first intra-stage recycle component with the first solvent extraction feed material.</li></ul></li></ul></p>
+      <p id="p-00049-en" num="0055">In some embodiments, the first solvent extraction feed material may be comprised of an upstream underflow product of an upstream solvent extraction stage.</p>
+      <p id="p-00050-en" num="0056">In some embodiments, the first exemplary aspect may further comprise: <ul id="ul-00003-en" list-style="none"><li><ul id="ul-00004-en" list-style="none"><li>(a) introducing the first stage underflow product into a second solvent extraction stage as a second solvent extraction feed material;</li><li>(b) allowing the second solvent extraction feed material to separate in the second solvent extraction stage into an underflow zone and an overflow zone;</li><li>(c) withdrawing a second stage underflow product from the underflow zone of the second solvent extraction stage; and</li><li>(d) withdrawing a second stage overflow product from the overflow zone of the second solvent extraction stage.</li></ul></li></ul></p>
+      <p id="p-00051-en" num="0061">In some embodiments, the first exemplary aspect may further comprise: <ul id="ul-00005-en" list-style="none"><li><ul id="ul-00006-en" list-style="none"><li>(a) withdrawing a second intra-stage recycle component from the overflow zone of the second solvent extraction stage; and</li><li>(b) combining the second intra-stage recycle component with the second solvent extraction feed material.</li></ul></li></ul></p>
+      <p id="p-00052-en" num="0064">In some embodiments, the first exemplary aspect may be further comprised of introducing the second stage overflow product into the first solvent extraction stage.</p>
+      <p id="p-00053-en" num="0065">In some embodiments, the first exemplary aspect may further comprise: <ul id="ul-00007-en" list-style="none"><li><ul id="ul-00008-en" list-style="none"><li>(a) introducing the second stage underflow product into a third solvent extraction stage as a third solvent extraction feed material;</li><li>(b) allowing the third solvent extraction feed material to separate in the third solvent extraction stage into an underflow zone and an overflow zone;</li><li>(c) withdrawing a third stage underflow product from the underflow zone of the third solvent extraction stage; and</li><li>(d) withdrawing a third stage overflow product from the overflow zone of the third solvent extraction stage.</li></ul></li></ul></p>
+      <p id="p-00054-en" num="0070">In some embodiments, the first exemplary aspect may further comprise: <ul id="ul-00009-en" list-style="none"><li><ul id="ul-00010-en" list-style="none"><li>(a) withdrawing a third intra-stage recycle component from the overflow zone of the third solvent extraction stage; and</li><li>(b) combining the third intra-stage recycle component with the third solvent extraction feed material.</li></ul></li></ul></p>
+      <p id="p-00055-en" num="0073">In some embodiments, the first exemplary aspect may be further comprised of introducing the third stage overflow product into the second solvent extraction stage.</p>
+      <p id="p-00056-en" num="0074">In a second exemplary aspect, the invention is a separation method for producing an extract and a raffinate from a solvent extraction feed material comprising solid mineral material, water and bitumen, wherein the solvent extraction feed material is derived from a process for recovering bitumen from oil sands, wherein the separation method is comprised of a plurality of solvent extraction stages, wherein each of the solvent extraction stages produces from a stage solvent extraction feed material an overflow product from an overflow zone and an underflow product from an underflow zone, and wherein in at least one of the solvent extraction stages a stage intra-stage recycle component is produced from the overflow zone and is recycled to the solvent extraction stage.</p>
+      <p id="p-00057-en" num="0075">In some embodiments of the first exemplary aspect and the second exemplary aspect, an intra-stage recycle component may be produced in each of the solvent extraction stages and may be recycled back to the solvent extraction stage.</p>
+      <p id="p-00058-en" num="0076">A ratio by weight of the intra-stage recycle component to the solvent extraction feed material provides an intra-stage recycle ratio. The intra-stage recycle ratio may be similar in each solvent extraction stage or may be different in some or all of the solvent extraction stages. In some embodiments, the intra-stage recycle ratio may be between about 0.1 and 1.5. In some embodiments, the intra-stage recycle ratio may be between about 0.5 and 1.</p>
+      <p id="p-00059-en" num="0077">In a third exemplary aspect, the invention is a separation method, the method comprising: <ul id="ul-00011-en" list-style="none"><li><ul id="ul-00012-en" list-style="none"><li>(a) introducing a first solvent extraction feed material into a first solvent extraction stage, wherein the first solvent extraction feed material is comprised of solid mineral material, water and bitumen, and wherein the first solvent extraction feed material is derived from a process for recovering bitumen from oil sands;</li><li>(b) allowing the first solvent extraction feed material to separate in the first solvent extraction stage into an underflow zone and an overflow zone;</li><li>(c) withdrawing a first stage underflow product from the underflow zone of the first solvent extraction stage at a first stage underflow product withdrawal rate;</li><li>(d) withdrawing a first stage overflow product from the overflow zone of the first solvent extraction stage at a first stage overflow product withdrawal rate;</li><li>(e) introducing the first stage underflow product into a second solvent extraction stage as a second solvent extraction feed material;</li><li>(f) allowing the second solvent extraction feed material to separate in the second solvent extraction stage into an underflow zone and an overflow zone;</li><li>(g) withdrawing a second stage underflow product from the underflow zone of the second solvent extraction stage at a second stage underflow product withdrawal rate, wherein the first stage underflow product withdrawal rate is greater than the second stage underflow product withdrawal rate;</li><li>(h) withdrawing a second stage overflow product from the overflow zone of the second solvent extraction stage at a second stage overflow product withdrawal rate; and</li><li>(i) introducing the second stage overflow product into the first solvent extraction stage.</li></ul></li></ul></p>
+      <p id="p-00060-en" num="0087">In a fourth exemplary aspect, the invention is a separation method, the method comprising: <ul id="ul-00013-en" list-style="none"><li><ul id="ul-00014-en" list-style="none"><li>(a) introducing a first solvent extraction feed material into a first solvent extraction stage, wherein the first solvent extraction feed material is comprised of solid mineral material, water and bitumen, and wherein the first solvent extraction feed material is derived from a process for recovering bitumen from oil sands;</li><li>(b) allowing the first solvent extraction feed material to separate in the first solvent extraction stage into an underflow zone and an overflow zone;</li><li>(c) withdrawing a first stage underflow product from the underflow zone of the first solvent extraction stage at a first stage underflow product withdrawal rate;</li><li>(d) withdrawing a first stage overflow product from the overflow zone of the first solvent extraction stage at a first stage overflow product withdrawal rate;</li><li>(e) introducing the first stage underflow product into a second solvent extraction stage as a second solvent extraction feed material;</li><li>(f) allowing the second solvent extraction feed material to separate in the second solvent extraction stage into an underflow zone and an overflow zone;</li><li>(g) withdrawing a second stage underflow product from the underflow zone of the second solvent extraction stage at a second stage underflow product withdrawal rate;</li><li>(h) withdrawing a second stage overflow product from the overflow zone of the second solvent extraction stage at a second stage overflow product withdrawal rate;</li><li>(i) introducing the second stage overflow product into the first solvent extraction stage;</li><li>(j) introducing the second stage underflow product into a third solvent extraction stage as a third solvent extraction feed material;</li><li>(k) allowing the third solvent extraction feed material to separate in the third solvent extraction stage into an underflow zone and an overflow zone;</li><li>(l) withdrawing a third stage underflow product from the underflow zone of the third solvent extraction stage at a third stage underflow product withdrawal rate;</li><li>(m) withdrawing a third stage overflow product from the overflow zone of the third solvent extraction stage at a third stage overflow product withdrawal rate; and</li><li>(n) introducing the third stage overflow product into the second solvent extraction stage; <br /> wherein at least one of the first stage underflow product withdrawal rate and the second stage underflow product withdrawal rate is greater than the third stage underflow product withdrawal rate. </li></ul></li></ul></p>
+      <p id="p-00061-en" num="0102">In a fifth exemplary aspect, the invention is a separation method for producing an extract and a raffinate from a solvent extraction feed material comprising solid mineral material, water and bitumen, wherein the solvent extraction feed material is derived from a process for recovering bitumen from oil sands, wherein the separation method is comprised of a plurality of solvent extraction stages, wherein each of the solvent extraction stages produces an overflow product and an underflow product, wherein the extract is produced as the overflow product in a first solvent extraction stage, wherein the raffinate is produced as the underflow product in a final solvent extraction stage, and wherein an underflow product withdrawal rate of the underflow product produced in at least one of the solvent extraction stages other than the final solvent extraction stage is greater than the underflow product withdrawal rate of the raffinate.</p>
+      <p id="p-00062-en" num="0103">In the third exemplary aspect, the fourth exemplary aspect and the fifth exemplary aspect, an underflow product withdrawal rate of the underflow product produced in at least one of the solvent extraction stages other than a final solvent extraction stage is greater than the underflow product withdrawal rate of the underflow product withdrawal rate produced in the final solvent extraction stage. In the third exemplary aspect, the fourth exemplary aspect and the fifth exemplary aspect, a differential is therefore provided between the underflow product withdrawal rate in at least of the solvent extraction stages and the underflow product withdrawal rate in the final solvent extraction stage.</p>
+      <p id="p-00063-en" num="0104">In some embodiments of the third exemplary aspect, the fourth exemplary aspect and the fifth exemplary aspect, the differential between the underflow product withdrawal rate in at least one of the solvent extraction stages and the underflow product withdrawal rate in the final solvent extraction stage may be no greater than about the first stage overflow product withdrawal rate. In some embodiments of the third exemplary aspect, the fourth exemplary aspect and the fifth exemplary aspect, the differential between the underflow product withdrawal rate in at least one of the solvent extraction stages and the underflow product withdrawal rate in the final solvent extraction stage may be no greater than about an introduction rate of a hydrocarbon diluent into the solvent extraction stages.</p>
+      <p id="p-00064-en" num="0105">In some embodiments of the third exemplary aspect, the differential between the first stage underflow product withdrawal rate and the second stage underflow product withdrawal rate may be no greater than about the first stage overflow product withdrawal rate. In some embodiments of the third exemplary aspect, the differential between the first stage underflow product withdrawal rate and the second stage underflow product withdrawal rate may be no greater than about an introduction rate of a hydrocarbon diluent into the solvent extraction stages.</p>
+      <p id="p-00065-en" num="0106">In some embodiments of the fourth exemplary aspect, the first stage underflow product withdrawal rate may be greater than the third stage underflow product withdrawal rate. In some embodiments of the fourth exemplary aspect, the second stage underflow product withdrawal rate may be greater than the third stage underflow product withdrawal rate.</p>
+      <p id="p-00066-en" num="0107">In some embodiments of the fourth exemplary aspect, the differential between the first stage underflow product withdrawal rate and the third stage underflow product withdrawal rate may be no greater than about the first stage overflow product withdrawal rate. In some embodiments of the fourth exemplary aspect, the differential between the first stage underflow product withdrawal rate and the third stage underflow product withdrawal rate may be no greater than about an introduction rate of a hydrocarbon diluent into the solvent extraction stages.</p>
+      <p id="p-00067-en" num="0108">In some embodiments of the fourth exemplary aspect, the differential between the second stage underflow product withdrawal rate and the third stage underflow product withdrawal rate may be no greater than about the first stage overflow product withdrawal rate. In some embodiments of the fourth exemplary aspect, the differential between the second stage underflow product withdrawal rate and the third stage underflow product withdrawal rate may be no greater than an introduction rate of a hydrocarbon diluent into the solvent extraction stages.</p>
+      <p id="p-00068-en" num="0109">In some embodiments of the fifth exemplary aspect, the first stage underflow product withdrawal rate may be greater than the final stage underflow product withdrawal rate. In some embodiments of the fifth exemplary aspect, an intermediate stage underflow product withdrawal rate may be greater than the final stage underflow product withdrawal rate.</p>
+      <p id="p-00069-en" num="0110">In some embodiments of the fifth exemplary aspect, the differential between the first stage underflow product withdrawal rate and the final stage underflow product withdrawal rate may be no greater than about the first stage overflow product withdrawal rate. In some embodiments of the third exemplary aspect, the differential between the first stage underflow product withdrawal rate and the final stage underflow product withdrawal rate may be no greater than an introduction rate of a hydrocarbon diluent into the solvent extraction stages.</p>
+      <p id="p-00070-en" num="0111">In some embodiments of the fifth exemplary aspect, the differential between the intermediate stage underflow product withdrawal rate and the final stage underflow product withdrawal rate may be no greater than about the first stage overflow product withdrawal rate. In some embodiments of the third exemplary aspect, the differential between the intermediate stage underflow product withdrawal rate and the final stage underflow product withdrawal rate may be no greater than an introduction rate of a hydrocarbon diluent into the solvent extraction stages.</p>
+      <p id="p-00071-en" num="0112">In some embodiments of the third exemplary aspect, the fourth exemplary aspect and the fifth exemplary aspect, the differential between the underflow component withdrawal rates may be any amount which permits effective management of the solvent extraction stages. In some embodiments of the third exemplary aspect, the fourth exemplary aspect and the fifth exemplary aspect, the differential between the underflow component withdrawal rates may be greater or even much greater than the first stage overflow product withdrawal rate. In some embodiments of the third exemplary aspect, the fourth exemplary aspect and the fifth exemplary aspect, the differential between the underflow component withdrawal rates may be greater than or even much greater than the introduction rate of the hydrocarbon diluent into the solvent extraction stages. In some embodiments, however, differentials above a threshold may result in difficulties in balancing the interfaces between the overflow zones and the underflow zones in the solvent extraction apparatus and may negatively effect the quality of the extract which is produced by the solvent extraction.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF DRAWINGS</heading>
+      <p id="p-00072-en" num="0113">Embodiments of the invention will now be described with reference to the accompanying drawings, in which:</p>
+      <p id="p-00073-en" num="0114">
+        <figref>FIG. 1</figref> is a schematic process flow diagram depicting exemplary embodiments of the methods of the invention.</p>
+      <p id="p-00074-en" num="0115">
+        <figref>FIG. 2</figref> is a material balance for a pilot plant test of a portion of the process flow diagram depicted in <figref>FIG. 1</figref>, in which the feed material is derived from a fine mineral material fraction of froth treatment tailings.</p>
+      <p id="p-00075-en" num="0116">
+        <figref>FIG. 3</figref> is a material balance for a pilot plant test of a portion of the process flow diagram depicted in <figref>FIG. 1</figref>, in which the feed material is derived from a coarse mineral material fraction of froth treatment tailings.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00076-en" num="0117">The present invention is directed at methods for separating a feed material comprising solid mineral material, water and bitumen, wherein the feed material is derived from a process for recovering bitumen from oil sands. The feed material may consist of, may consist essentially of, or may be comprised of a bitumen froth, whole froth treatment tailings, a fraction of whole froth treatment tailings, and/or any other suitable material derived from oil sands.</p>
+      <p id="p-00077-en" num="0118">The methods of the invention are solvent extraction methods which are performed in one or more solvent extraction stages.</p>
+      <p id="p-00078-en" num="0119">Exemplary embodiments of the invention are hereafter described with reference to <figref>FIG. 1</figref>, in which a coarse mineral material fraction and a fine mineral material fraction of froth treatment tailings are both processed using the methods of the invention.</p>
+      <p id="p-00079-en" num="0120">In the exemplary embodiments depicted in <figref>FIG. 1</figref>, the froth treatment tailings result from a process for recovering bitumen from oil sands. In the exemplary embodiments, the process for recovering bitumen from oil sands is comprised of producing a bitumen froth from the oil sands and is further comprised of separating the froth treatment tailings from the bitumen froth in a froth treatment process.</p>
+      <p id="p-00080-en" num="0121">A typical bitumen froth may be comprised of about 60 percent bitumen, about 30 percent water and about 10 percent solid mineral material by weight. Bitumen froth may therefore be characterized generally as containing, in decreasing order of amount by weight: (1) bitumen; (2) water; and (3) solid mineral material.</p>
+      <p id="p-00081-en" num="0122">Typical froth treatment tailings may be comprised of between about 3 percent and about 12 percent bitumen and froth treatment diluent (if the froth treatment tailings contain a froth treatment diluent), between about 15 percent and about 20 percent solid mineral material, with the balance being comprised primarily of water. Froth treatment tailings may therefore be characterized generally as containing, in decreasing order of amount by weight: (1) water; (2) solid mineral material; and (3) bitumen.</p>
+      <p id="p-00082-en" num="0123">In the exemplary embodiments depicted in <figref>FIG. 1</figref>, the froth treatment tailings may or may not contain a froth treatment diluent. For example, the froth treatment tailings may result from a froth treatment process in which no froth treatment diluent is used, or the froth treatment tailings may have been subjected to a tailings solvent recovery unit (TSRU) process or a similar process in which substantially all of the froth treatment diluent has been recovered from the froth treatment tailings.</p>
+      <p id="p-00083-en" num="0124">Referring to <figref>FIG. 1</figref>, a schematic process flow diagram depicting exemplary embodiments of the methods of the invention is provided. In the exemplary embodiments, froth treatment tailings (<b>20</b>) resulting from a froth treatment process (not shown) and comprising solid mineral material, water and an amount of bitumen are first provided. The froth treatment tailings (<b>20</b>) also comprise an amount of a froth treatment diluent which is used in the froth treatment process.</p>
+      <p id="p-00084-en" num="0125">As depicted in <figref>FIG. 1</figref>, the froth treatment tailings (<b>20</b>) are separated into a coarse mineral material fraction (<b>22</b>) and a fine mineral material fraction (<b>24</b>). As depicted in <figref>FIG. 1</figref>, the froth treatment tailings (<b>20</b>) are separated using a hydrocyclone (<b>26</b>).</p>
+      <p id="p-00085-en" num="0126">In some embodiments, the separation of the froth treatment tailings (<b>20</b>) may be performed so that the fine mineral material fraction (<b>24</b>) contains between about 0.65 times and about 0.85 times the amount of the bitumen which is contained in the froth treatment tailings (<b>20</b>).</p>
+      <p id="p-00086-en" num="0127">As depicted in <figref>FIG. 1</figref>, the coarse mineral material fraction (<b>22</b>) and the fine mineral material fraction (<b>24</b>) are separately subjected to further processing in accordance with the exemplary embodiments of the methods of the invention.</p>
+      <p id="p-00087-en" num="0128">The fine mineral material fraction (<b>24</b>) is comprised of solid mineral material, water and an amount of bitumen. The fine mineral material fraction (<b>24</b>) may also be comprised of an amount of froth treatment diluent from the froth treatment tailings (<b>20</b>).</p>
+      <p id="p-00088-en" num="0129">As depicted in <figref>FIG. 1</figref>, the fine mineral material fraction (<b>24</b>) is first subjected to conditioning (<b>40</b>) in order to produce a first solvent extraction feed material (<b>42</b>) comprised of solid mineral material, water, and an amount of bitumen. The first solvent extraction feed material (<b>42</b>) is also comprised of an amount of froth treatment diluent from the fine mineral material fraction (<b>24</b>).</p>
+      <p id="p-00089-en" num="0130">A purpose of conditioning the fine mineral material fraction (<b>24</b>) is to prepare the fine mineral material fraction (<b>24</b>) for solvent extraction. As depicted in <figref>FIG. 1</figref>, conditioning (<b>40</b>) the fine mineral material fraction (<b>24</b>) is comprised of agitating the fine mineral material fraction (<b>24</b>) in order to facilitate separation of the bitumen from the solid mineral material.</p>
+      <p id="p-00090-en" num="0131">As depicted in <figref>FIG. 1</figref>, conditioning (<b>40</b>) the fine mineral material fraction (<b>24</b>) is further comprised of concentrating the fine mineral material fraction (<b>24</b>) so that a concentration of the bitumen by weight in the first solvent extraction feed material (<b>42</b>) is greater than a concentration of the bitumen by weight in the fine mineral material fraction (<b>24</b>).</p>
+      <p id="p-00091-en" num="0132">In some embodiments, concentrating the fine mineral material fraction (<b>24</b>) may be performed so that the concentration of the bitumen by weight in the first solvent extraction feed material (<b>42</b>) is between about 1.25 times and about 3 times the concentration of the bitumen by weight in the fine mineral material fraction (<b>24</b>). In some particular embodiments, concentrating the fine mineral material fraction (<b>24</b>) may be performed so that the concentration of the bitumen by weight in the first solvent extraction feed material (<b>42</b>) is between about <b>2</b> times and about <b>3</b> times the concentration of the bitumen by weight in the fine mineral material fraction (<b>24</b>).</p>
+      <p id="p-00092-en" num="0133">As depicted in <figref>FIG. 1</figref>, conditioning (<b>40</b>) the fine mineral material fraction (<b>24</b>), including both agitating the fine mineral material fraction (<b>24</b>) and concentrating the fine mineral material fraction (<b>24</b>) is performed by subjecting the fine mineral material fraction (<b>24</b>) to froth flotation in a froth flotation apparatus (<b>44</b>). As depicted in <figref>FIG. 1</figref>, the froth flotation apparatus (<b>44</b>) is comprised of an agitator or mixer for agitating the fine mineral material fraction (<b>24</b>) in the froth flotation apparatus (<b>44</b>). Alternatively, the fine mineral material fraction (<b>24</b>) may be passed through a separate agitator or mixer before being subjected to froth flotation in the froth flotation apparatus (<b>44</b>).</p>
+      <p id="p-00093-en" num="0134">Agitating the fine mineral material fraction (<b>24</b>) may be comprised of subjecting the fine mineral material fraction (<b>24</b>) to an agitation intensity, which may be expressed in watts per kilogram of fine mineral material fraction (<b>24</b>) which is agitated. In some embodiments, the agitation intensity may be at least about 25 watts per kilogram. In some embodiments, the agitation intensity may be between about 25 watts per kilogram and about 2000 watts per kilogram. In some embodiments, the agitation intensity may be between about 200 watts per kilogram and about 1500 watts per kilogram. In some embodiments, the agitation intensity may be between about 500 watts per kilogram and about 1200 watts per kilogram.</p>
+      <p id="p-00094-en" num="0135">Agitating the fine mineral material fraction (<b>24</b>) may have an agitation duration, which may be expressed as the length of time for which the fine mineral material fraction (<b>24</b>) is agitated. In some embodiments, the agitation duration may be at least about 5 minutes. In some embodiments, the agitation duration may be at between about 5 minutes and about 40 minutes. In some embodiments, the agitation duration may be between about 5 minutes and about 30 minutes. In some embodiments, the agitation duration may be between about 10 minutes and about 20 minutes.</p>
+      <p id="p-00095-en" num="0136">The froth flotation may have a froth flotation intensity, which may be expressed in kilograms of added air per kilogram of fine mineral material fraction (<b>24</b>) which is subjected to froth flotation. In some embodiments, the froth flotation intensity may be at least about 0.00005 kilograms of added air per kilogram of fine mineral material fraction (<b>24</b>). In some embodiments, the froth flotation intensity may be between about 0.00005 kilograms and about 0.05 kilograms of added air per kilogram of fine mineral material fraction (<b>24</b>). In some embodiments, the froth flotation intensity may be between about 0.01 kilograms and about 0.03 kilograms of added air per kilogram of fine mineral material fraction (<b>24</b>). In some embodiments, the froth flotation intensity may be between about 0.01 and about 0.02 kilograms of added air per kilogram of fine mineral material fraction (<b>24</b>).</p>
+      <p id="p-00096-en" num="0137">The froth flotation may have a froth flotation duration, which may be expressed as the length of time for which the fine mineral material fraction (<b>24</b>) is subjected to froth flotation. In some embodiments, the froth flotation duration may be at least about 5 minutes. In some embodiments, the froth flotation duration may be between about 5 minutes and about 40 minutes.</p>
+      <p id="p-00097-en" num="0138">In some embodiments, the froth flotation duration may be between about 5 minutes and about 30 minutes. In some embodiments, the froth flotation duration may be between about 10 minutes and about 20 minutes.</p>
+      <p id="p-00098-en" num="0139">Conditioning the fine mineral material fraction (<b>24</b>) may be performed at any suitable temperature. In some embodiments, conditioning the fine mineral material fraction (<b>24</b>) may be performed so that the fine mineral material fraction (<b>24</b>) has a temperature of between about 40 degrees Celsius and about 95 degrees Celsius.</p>
+      <p id="p-00099-en" num="0140">Conditioning the fine mineral material fraction (<b>24</b>) in the froth flotation apparatus (<b>44</b>) produces the first solvent extraction feed material (<b>42</b>) as an overflow product and produces froth flotation tailings (<b>46</b>) as an underflow product. The froth flotation tailings (<b>46</b>) may be disposed of in any suitable manner.</p>
+      <p id="p-00100-en" num="0141">In some embodiments, conditioning the fine mineral material fraction (<b>24</b>) may be performed so that the first solvent extraction feed material (<b>42</b>) contains between about 0.6 times and about 0.95 times the amount of the bitumen which is contained in the fine mineral material fraction (<b>24</b>). In some particular embodiments in which conditioning the fine mineral material fraction (<b>24</b>) is comprised of subjecting the fine mineral material fraction (<b>24</b>) to froth flotation, the first solvent extraction feed material (<b>42</b>) may contain as much as about 0.95 times the amount of the bitumen which his contained in the fine mineral material fraction (<b>24</b>).</p>
+      <p id="p-00101-en" num="0142">The first solvent extraction feed material (<b>42</b>) is subjected to solvent extraction (<b>68</b>) in order to produce an extract (<b>70</b>) and a raffinate (<b>72</b>).</p>
+      <p id="p-00102-en" num="0143">The solvent extraction (<b>68</b>) may be performed at any suitable temperature. In some embodiments, the solvent extraction (<b>68</b>) may be performed so that the solvent extraction feed material has a temperature of between about 40 degrees Celsius and about 95 degrees Celsius.</p>
+      <p id="p-00103-en" num="0144">The solvent extraction (<b>68</b>) may be performed using a diluent as a solvent. The diluent may be comprised of a hydrocarbon diluent which is introduced into the solvent extraction and/or the diluent may be comprised of residual froth treatment diluent which is contained in the froth treatment tailings (<b>20</b>) as a result of the froth treatment process.</p>
+      <p id="p-00104-en" num="0145">As depicted in <figref>FIG. 1</figref>, an amount of a hydrocarbon diluent is introduced to the solvent extraction (<b>68</b>). The hydrocarbon diluent may consist of, may consist essentially of, or may be comprised of any suitable naphthenic type diluent or any suitable paraffinic type diluent. The amount of the hydrocarbon diluent (<b>108</b>) which is introduced into the solvent extraction (<b>68</b>) may be expressed as an introduction rate of the hydrocarbon diluent (<b>108</b>).</p>
+      <p id="p-00105-en" num="0146">In embodiments in which the hydrocarbon diluent is comprised of a paraffinic type diluent, the amount of the paraffinic type diluent is preferably selected so that the precipitation of asphaltenes is minimized and so that the recovery of bitumen is maximized.</p>
+      <p id="p-00106-en" num="0147">In some particular embodiments in which the hydrocarbon diluent is comprised of a naphthenic type diluent, the hydrocarbon diluent may be comprised of or consist of naphtha or toluene. In some particular embodiments in which the hydrocarbon diluent is comprised of or consists of naphtha, the naphtha may have an aromaticity of between about 10 and 20 percent.</p>
+      <p id="p-00107-en" num="0148">The performance of toluene as the hydrocarbon diluent in the solvent extraction (<b>68</b>) and the performance of naphtha as the hydrocarbon diluent in the solvent extraction (<b>68</b>) may be dependent upon the diluent to feed material ratio by weight, upon the diluent to bitumen ratio by weight, upon the temperature at which the solvent extraction (<b>68</b>) is performed, and upon the length of time for which the solvent extraction (<b>68</b>) is performed.</p>
+      <p id="p-00108-en" num="0149">At equivalent values of diluent to feed material ratio by weight and equivalent temperatures, the extent of recovery of bitumen in the solvent extraction (<b>68</b>) may generally be greater if the hydrocarbon diluent consists of toluene than if the hydrocarbon diluent consists of naphtha.</p>
+      <p id="p-00109-en" num="0150">In embodiments in which the hydrocarbon diluent consists essentially of toluene, the extent of recovery of bitumen in the solvent extraction (<b>68</b>) may be relatively insensitive to the diluent to feed material ratio by weight.</p>
+      <p id="p-00110-en" num="0151">In embodiments in which the hydrocarbon diluent consists essentially of naphtha, the extent of recovery of bitumen in the solvent extraction (<b>68</b>) may be maximized if the diluent to feed material ratio by weight is relatively low (i.e., less than or equal to about 0.5).</p>
+      <p id="p-00111-en" num="0152">In embodiments in which the hydrocarbon diluent consists essentially of naphtha, the water concentration in the extract (<b>70</b>) produced by the solvent extraction (<b>68</b>) may decrease as the temperature at which the solvent extraction (<b>68</b>) is performed increases if the diluent to feed material ratio by weight is relatively low (i.e., less than or equal to about 0.5).</p>
+      <p id="p-00112-en" num="0153">In embodiments in which an amount of a froth treatment diluent is introduced into the solvent extraction (<b>68</b>), the hydrocarbon diluent is preferably selected having regard to the composition of the froth treatment diluent.</p>
+      <p id="p-00113-en" num="0154">As a first consideration, in some applications it may be convenient for the composition of the froth treatment diluent and the composition of the hydrocarbon diluent to be similar.</p>
+      <p id="p-00114-en" num="0155">However, as a second consideration, the use of a paraffinic type diluent as the hydrocarbon diluent where the solvent extraction feed material is comprised of an amount of a paraffinic type diluent as the froth treatment diluent may not be effective to recover precipitated asphaltenes, unless the concentration of the hydrocarbon diluent during the solvent extraction (<b>68</b>) can be maintained below the critical level which results in significant asphaltene precipitation. Stated otherwise, the use of a paraffinic type diluent as the hydrocarbon diluent may be reasonably effective for recovering non-asphaltenic bitumen material, but may be less effective for recovering asphaltenes.</p>
+      <p id="p-00115-en" num="0156">As a result, where the solvent extraction feed material is comprised of an amount of a naphtha type diluent as the froth treatment diluent, the hydrocarbon diluent may also be comprised of a naphtha type diluent, since asphaltene precipitation is not a major concern. Where the solvent extraction feed material is comprised of an amount of a naphtha type diluent as the froth treatment diluent, the hydrocarbon diluent may be comprised of a paraffinic type diluent if recovery of asphaltenes is not essential or if the concentration of the paraffinic type diluent can be maintained below the critical level which results in significant asphaltene precipitation. Where the solvent extraction feed material is comprised of an amount of a paraffinic type diluent as the froth treatment diluent, the hydrocarbon diluent may be comprised of a naphtha type diluent, since the naphtha type diluent may facilitate the recovery of asphaltenes. Where the solvent extraction feed material is comprised of an amount of a paraffinic type diluent, the hydrocarbon diluent may be comprised of a paraffinic type diluent if recovery of asphaltenes is not essential or if the concentration of the paraffinic type diluent can be maintained below the critical level which results in significant asphaltene precipitation.</p>
+      <p id="p-00116-en" num="0157">As depicted in <figref>FIG. 1</figref>, the solvent extraction (<b>68</b>) is performed using two stages of solvent extraction and solvent extraction apparatus which are arranged in a countercurrent configuration.</p>
+      <p id="p-00117-en" num="0158">As depicted in <figref>FIG. 1</figref>, the first stage solvent extraction apparatus (<b>80</b>) is comprised of a first mixer (<b>82</b>) and a first gravity settler (<b>84</b>) and the second stage solvent extraction apparatus (<b>86</b>) is comprised of a second mixer (<b>88</b>) and a second gravity settler (<b>90</b>). As depicted in <figref>FIG. 1</figref>, each of the gravity settlers (<b>84</b>, <b>90</b>) is comprised of a gravity settling vessel.</p>
+      <p id="p-00118-en" num="0159">The first solvent extraction feed material (<b>42</b>) is delivered to the first mixer (<b>82</b>) for mixing and is then delivered to the first gravity settler (<b>84</b>). The first solvent extraction feed material (<b>42</b>) separates in the first gravity settler (<b>84</b>) into an overflow zone (<b>92</b>) and an underflow zone (<b>94</b>), with an interface therebetween. A first stage overflow product (<b>100</b>) is withdrawn from the overflow zone (<b>92</b>) and a first stage underflow product (<b>102</b>) is withdrawn from the underflow zone (<b>94</b>).</p>
+      <p id="p-00119-en" num="0160">As depicted in <figref>FIG. 1</figref>, a first intra-stage recycle component (<b>112</b>) is withdrawn from the overflow zone (<b>92</b>) of the first gravity settler (<b>84</b>) and is combined with the first solvent extraction feed material (<b>42</b>) in order to recycle the first intra-stage recycle component (<b>112</b>) to the first solvent extraction stage. In the embodiments depicted in <figref>FIG. 1</figref>, a first intra-stage recycle ratio by weight of the first intra-stage recycle component (<b>112</b>) to the first solvent extraction feed material (<b>42</b>) may be between about 0.1 and about 1.5, or may be between about 0.5 and about 1.</p>
+      <p id="p-00120-en" num="0161">The first stage underflow product (<b>102</b>) is delivered to the second mixer (<b>88</b>) for mixing and is then delivered to the second gravity settler (<b>90</b>) as a second solvent extraction feed material (<b>103</b>). The second solvent extraction feed material (<b>103</b>) separates in the second gravity settler (<b>90</b>) into an overflow zone (<b>96</b>) and an underflow zone (<b>98</b>), with an interface therebetween. A second stage overflow product (<b>104</b>) is withdrawn from the overflow zone (<b>96</b>) and a second stage underflow product (<b>106</b>) is withdrawn from the underflow zone (<b>98</b>).</p>
+      <p id="p-00121-en" num="0162">As depicted in <figref>FIG. 1</figref>, a second intra-stage recycle component (<b>114</b>) is withdrawn from the overflow zone (<b>96</b>) of the second gravity settler (<b>90</b>) and is combined with the second solvent extraction feed material (<b>103</b>) in order to recycle the second intra-stage recycle component (<b>114</b>) to the second solvent extraction stage. In the embodiments depicted in <figref>FIG. 1</figref>, a second intra-stage recycle ratio by weight of the second intra-stage recycle component (<b>114</b>) to the second solvent extraction feed material (<b>103</b>) may be between about 0.1 and about 1.5, or may be between about 0.5 and about 1.</p>
+      <p id="p-00122-en" num="0163">An amount of a hydrocarbon diluent (<b>108</b>) is also delivered to the second mixer (<b>88</b>) for mixing with the first stage underflow product (<b>102</b>). The hydrocarbon diluent (<b>108</b>) is typically selected having regard to the composition of the froth treatment diluent.</p>
+      <p id="p-00123-en" num="0164">The amount of the hydrocarbon diluent (<b>108</b>) which is delivered to the second mixer (<b>88</b>) may be selected to provide a desired diluent to feed material ratio by weight in the second stage solvent extraction apparatus (<b>86</b>). Alternatively, the amount of hydrocarbon diluent (<b>108</b>) which is delivered to the second mixer (<b>88</b>) may be selected to provide a desired diluent to bitumen ratio by weight in the second stage solvent extraction apparatus (<b>86</b>).</p>
+      <p id="p-00124-en" num="0165">In some particular embodiments, the desired diluent to feed material ratio by weight and/or the desired diluent to bitumen ratio by weight in the second stage solvent extraction apparatus (<b>86</b>) may be greater than the desired diluent to feed material ratio by weight and/or the desired diluent to bitumen ratio by weight in the first stage solvent extraction apparatus (<b>80</b>).</p>
+      <p id="p-00125-en" num="0166">The diluent to feed material ratio may be determined having regard to both the composition and the amount of the froth treatment diluent which is included in the solvent extraction feed material.</p>
+      <p id="p-00126-en" num="0167">In some embodiments in which the hydrocarbon diluent (<b>108</b>) and the froth treatment diluent consist essentially of a naphthenic type diluent, the first stage of solvent extraction may be performed at a diluent to bitumen ratio of generally between about 1 and about 10 by weight, and the second stage of solvent extraction may be performed at a diluent to bitumen ratio of generally between about 5 and about 100 by weight.</p>
+      <p id="p-00127-en" num="0168">In some embodiments in which the hydrocarbon diluent (<b>108</b>) and the froth treatment diluent consist essentially of a naphthenic type diluent, the first stage of solvent extraction may be performed at a diluent to feed material ratio of generally between about 0.09 and about 1 by weight, and the second stage of solvent extraction may be performed at a diluent to feed material ratio of generally between about 0.1 and about 1 by weight.</p>
+      <p id="p-00128-en" num="0169">In some embodiments in which the hydrocarbon diluent (<b>108</b>) and the froth treatment diluent consist essentially of naphtha as a naphthenic type diluent, the first stage of solvent extraction may be performed at a diluent to feed material ratio of between about 0.09 and about 0.75 by weight, between about 0.09 and about 0.5 by weight, or between about 0.09 and about 0.25 by weight.</p>
+      <p id="p-00129-en" num="0170">In some embodiments in which the hydrocarbon diluent (<b>108</b>) and the froth treatment diluent consist essentially of naphtha as a naphthenic type diluent, the second stage of solvent extraction may be performed at a diluent to feed material ratio of between about 0.1 and about 1 by weight, between about 0.1 and about 0.5 by weight, or between about 0.1 and about 0.3 by weight.</p>
+      <p id="p-00130-en" num="0171">In some embodiments in which the hydrocarbon diluent (<b>108</b>) and the froth treatment diluent consist essentially of toluene as a naphthenic type diluent, the first stage of solvent extraction may be performed at a diluent to feed material ratio of between about 0.1 and about 0.9 by weight, between about 0.1 and about 0.5 by weight, or between about 0.2 and about 0.4 by weight.</p>
+      <p id="p-00131-en" num="0172">In some embodiments in which the hydrocarbon diluent (<b>108</b>) and the froth treatment diluent consist essentially of toluene as a naphthenic type diluent, the second stage of solvent extraction may be performed at a diluent to feed material ratio of between about 0.1 and about 1 by weight, between about 0.2 and about 0.5 by weight, or between about 0.2 and about 0.5 by weight.</p>
+      <p id="p-00132-en" num="0173">Although naphtha and toluene are both naphthenic type diluents, the performance of naphtha in the solvent extraction (<b>68</b>) may be more sensitive to the diluent to feed material ratio than is the performance of toluene in the solvent extraction (<b>68</b>). In particular, and as described above, in some embodiments in which the hydrocarbon diluent (<b>108</b>) and the froth treatment diluent consist essentially of naphtha as a naphthenic type diluent, the extent of recovery of bitumen from the solvent extraction feed material may be maximized and the solid mineral material concentration in the extract (<b>70</b>) may be minimized by providing a diluent to feed material ratio which is relatively low (i.e. less than or equal to about 0.5).</p>
+      <p id="p-00133-en" num="0174">In some embodiments in which the hydrocarbon diluent (<b>108</b>) and the froth treatment diluent consist essentially of a paraffinic type diluent, the solvent extraction (<b>68</b>) may be performed under conditions in which the diluent to feed material ratio by weight may be less than a diluent to feed material ratio which will result in significant asphaltene precipitation.</p>
+      <p id="p-00134-en" num="0175">The second stage overflow product (<b>104</b>) is recycled to the first mixer (<b>82</b>). The second stage underflow product (<b>106</b>) is the raffinate (<b>72</b>) and may be disposed of in any suitable manner. The first stage overflow product (<b>100</b>) is the extract (<b>70</b>).</p>
+      <p id="p-00135-en" num="0176">The first stage overflow product (<b>100</b>) is withdrawn from the overflow zone (<b>92</b>) at a first stage overflow product withdrawal rate. The first stage underflow product (<b>102</b>) is withdrawn from the underflow zone (<b>94</b>) at a first stage underflow product withdrawal rate. The second stage overflow product (<b>104</b>) is withdrawn from the overflow zone (<b>96</b>) at a second stage overflow product withdrawal rate. The second stage underflow product (<b>106</b>) is withdrawn from the underflow zone (<b>98</b>) at a second stage underflow product withdrawal rate.</p>
+      <p id="p-00136-en" num="0177">The first stage underflow product withdrawal rate is greater than the second stage underflow product withdrawal rate. As a result, a differential exists between the first stage underflow product withdrawal rate and the second stage underflow product withdrawal rate. In some embodiments as depicted in <figref>FIG. 1</figref>, the differential between the first stage underflow product withdrawal rate and the second stage underflow product withdrawal rate may be limited so that the differential is no greater than the first stage overflow product withdrawal rate. In some embodiments as depicted in <figref>FIG. 1</figref>, the differential between the first stage underflow product withdrawal rate and the second stage underflow product withdrawal rate may be limited so that the differential is no greater than the introduction rate of the hydrocarbon diluent (<b>108</b>) into the solvent extraction (<b>68</b>).</p>
+      <p id="p-00137-en" num="0178">The raffinate (<b>72</b>) may be subjected to a solvent recovery process before disposal in order to recover substantially all or a portion of the froth treatment diluent and the hydrocarbon diluent (<b>108</b>) therefrom.</p>
+      <p id="p-00138-en" num="0179">The extract (<b>70</b>) is comprised of solid mineral material, water, and an amount of bitumen. The extract (<b>70</b>) is also comprised of an amount of the froth treatment diluent from the first solvent extraction feed material (<b>42</b>) and an amount of the hydrocarbon diluent (<b>108</b>) which is present in the extract (<b>70</b>) as a result of the recycling of the second stage extraction overflow product (<b>104</b>) to the first mixer (<b>82</b>).</p>
+      <p id="p-00139-en" num="0180">In some embodiments, the extract (<b>70</b>) may contain between about 0.7 times and about 0.95 times the amount of the bitumen which is contained in the first solvent extraction feed material (<b>42</b>). In some embodiments the extract (<b>70</b>) may contain between about 0.6 times and about 0.8 times the amount of the bitumen which is contained in the fine mineral material fraction (<b>24</b>).</p>
+      <p id="p-00140-en" num="0181">The extract (<b>70</b>) has a solid mineral material concentration by weight and a water concentration by weight. If the solid mineral material concentration and the water concentration in the extract (<b>70</b>) are below acceptable limits, the extract (<b>70</b>) may be suitable for further processing and/or transport as a diluted bitumen (i.e., dilbit) product. The further processing of the extract (<b>70</b>) may be comprised of subjecting the extract (<b>70</b>) to a diluent recovery process (not shown) for recovering substantially all or a portion of the froth treatment diluent and the hydrocarbon diluent (<b>108</b>) therefrom.</p>
+      <p id="p-00141-en" num="0182">If, however, the solid mineral material concentration and/or the water concentration by weight in the extract (<b>70</b>) are above acceptable limits, the extract (<b>70</b>) may optionally be subjected to clarifying (not shown) in order to produce a clarified extract (<b>120</b>) which has a reduced solid mineral material concentration by weight and/or water concentration by weight in comparison with the extract (<b>70</b>).</p>
+      <p id="p-00142-en" num="0183">The froth flotation tailings (<b>46</b>) and the raffinate (<b>72</b>) may similarly be subjected to a diluent recovery process (not shown) in order to recover substantially all or a portion of the froth treatment diluent and the hydrocarbon diluent (<b>108</b>) therefrom.</p>
+      <p id="p-00143-en" num="0184">The coarse solid material fraction (<b>22</b>) is comprised of solid mineral material, water, and an amount of bitumen. A large proportion of the heavy minerals which are originally contained in the froth treatment tailings (<b>20</b>) will typically be present as coarse solid mineral material in the coarse solid material fraction (<b>22</b>).</p>
+      <p id="p-00144-en" num="0185">The coarse solid material fraction (<b>22</b>) may also be comprised of an amount of froth treatment diluent from the froth treatment tailings (<b>20</b>).</p>
+      <p id="p-00145-en" num="0186">Where the coarse solid material fraction (<b>22</b>) is comprised of a froth treatment diluent, the froth treatment diluent may be comprised of a naphthenic type diluent and/or a paraffinic type diluent, depending upon the type of froth treatment process from which the froth treatment tailings (<b>20</b>) were obtained.</p>
+      <p id="p-00146-en" num="0187">Although the froth treatment tailings (<b>20</b>) may be obtained from a paraffinic froth treatment process so that the coarse solid material fraction (<b>22</b>) may be comprised of a paraffinic type diluent as a froth treatment diluent, the processing of the coarse solid material fraction (<b>22</b>) may be more effective if the froth treatment tailings (<b>20</b>) have been produced by a naphthenic froth treatment process than if the froth treatment tailings (<b>20</b>) have been produced by a paraffinic froth treatment process.</p>
+      <p id="p-00147-en" num="0188">A reason for this is that froth treatment tailings (<b>20</b>) from a paraffinic froth treatment process may typically contain relatively larger amounts of bitumen than froth treatment tailings (<b>20</b>) from a naphthenic froth treatment process. In addition, the bitumen contained in froth treatment tailings (<b>20</b>) from a paraffinic froth treatment process typically includes a relatively large proportion of asphaltenes.</p>
+      <p id="p-00148-en" num="0189">The amount and nature of the bitumen which is typically contained in froth treatment tailings (<b>20</b>) from a paraffinic froth treatment process presents processing challenges which may require more aggressive and/or rigorous process conditions for processing the coarse mineral material fraction (<b>22</b>) than if the froth treatment tailings (<b>22</b>) have been produced from a naphthenic froth treatment process.</p>
+      <p id="p-00149-en" num="0190">As depicted in <figref>FIG. 1</figref>, the coarse mineral material fraction (<b>22</b>) is first subjected to froth flotation (<b>140</b>) in order to produce a first solvent extraction feed material (<b>142</b>) and froth flotation tailings (<b>144</b>) therefrom.</p>
+      <p id="p-00150-en" num="0191">As depicted in <figref>FIG. 1</figref>, the froth flotation (<b>140</b>) is comprised of a first froth flotation stage (<b>146</b>) and a second froth flotation stage (<b>148</b>). As depicted in <figref>FIG. 1</figref>, the first froth flotation stage (<b>146</b>) is performed in a first flotation vessel (<b>150</b>) and the second froth flotation stage (<b>148</b>) is performed in a second flotation vessel (<b>152</b>).</p>
+      <p id="p-00151-en" num="0192">As depicted in <figref>FIG. 1</figref>, both the first froth flotation stage (<b>146</b>) and the second froth flotation stage (<b>148</b>) are performed in the presence of a suitable amount of an injected gas such as air (not shown) and in the presence of a suitable amount of a suitable frothing agent (not shown). Non-limiting examples of potentially suitable frothing agents include glycol based frothers and/or alcohol based frothers.</p>
+      <p id="p-00152-en" num="0193">The concentration of the frothing agent in the coarse solid material fraction (<b>22</b>) may be any concentration which his suitable for encouraging the formation of a froth layer. In some embodiments, the concentration of the frothing agent may be less than or equal to about 200 grams of frothing agent per tonne of solid mineral material which is included in the coarse solid material fraction (<b>22</b>). In some embodiments, the concentration of the frothing agent may be less than or equal to about 100 grams per tonne of solid mineral material which is included in the coarse solid material fraction (<b>22</b>). In some embodiments, the concentration of the frothing agent may be between about 15 grams and about 50 grams per tonne of solid mineral material which is included in the coarse solid material fraction (<b>22</b>).</p>
+      <p id="p-00153-en" num="0194">As a specific non-limiting example, in the embodiments depicted in <figref>FIG. 1</figref>, a suitable frothing agent may be Cytec™F-507 frother, a product of Cytec Industries Inc., and may be added to the feed material to provide a frothing agent concentration of between about 15 grams and about 50 grams per tonne of feed material in each of the froth flotation stages (<b>146</b>,<b>148</b>).</p>
+      <p id="p-00154-en" num="0195">The froth flotation stages (<b>146</b>,<b>148</b>) may be arranged in a scavenging configuration or in a cleaning configuration. The scavenging configuration of the froth flotation (<b>140</b>) is depicted by solid lines in <figref>FIG. 1</figref>. The cleaning configuration of the froth flotation (<b>140</b>) is depicted by dashed lines in <figref>FIG. 1</figref>.</p>
+      <p id="p-00155-en" num="0196">In the scavenging configuration of the froth flotation (<b>140</b>), the first froth flotation stage (<b>146</b>) is a rougher froth flotation stage and the second froth flotation stage (<b>148</b>) is a scavenger froth flotation stage so that subjecting the coarse mineral material fraction (<b>22</b>) to froth flotation (<b>140</b>) is comprised of subjecting the coarse mineral material fraction (<b>22</b>) to the rougher froth flotation stage in order to produce a rougher stage float product (<b>154</b>) and a rougher stage sink product (<b>156</b>), and is further comprised of subjecting the rougher stage sink product (<b>156</b>) to the scavenger froth flotation stage in order to produce a scavenger stage float product (<b>158</b>) and a scavenger stage sink product (<b>160</b>).</p>
+      <p id="p-00156-en" num="0197">In the scavenging configuration of the froth flotation (<b>140</b>) as depicted in <figref>FIG. 1</figref>, the rougher stage float product (<b>154</b>) and the scavenger stage float product (<b>158</b>) are combined so that the first solvent extraction feed material (<b>142</b>) is comprised of or consists essentially of the rougher stage float product (<b>154</b>) and the scavenger stage float product (<b>158</b>), and the froth flotation tailings (<b>144</b>) are comprised of or consist essentially of the scavenger stage sink product (<b>160</b>).</p>
+      <p id="p-00157-en" num="0198">In the scavenging configuration of the froth flotation (<b>140</b>), subjecting the rougher stage sink product (<b>156</b>) to the scavenger froth flotation stage may be comprised of adding an amount of a collector (not shown) to the rougher stage sink product (<b>156</b>) in order to enhance the recovery of heavy minerals in the scavenger stage float product (<b>158</b>). In the embodiments depicted in <figref>FIG. 1</figref>, the collector may be comprised of a hydrocarbon liquid such as kerosene, naphtha or a mixture thereof. It is believed that the collector adheres to heavy minerals which have amounts of bitumen attached thereto, thereby increasing the hydrophobicity and floatability of the heavy minerals.</p>
+      <p id="p-00158-en" num="0199">The concentration of the collector in the rougher stage sink product (<b>156</b>) may be any concentration which is suitable for collecting the heavy minerals which are contained in the rougher stage sink product (<b>156</b>) without interfering significantly with the production of the froth layer in the scavenger froth flotation stage. In some embodiments, the concentration of the collector in the rougher stage sink product (<b>156</b>) may be less than or equal to about 10 liters per tonne of solid mineral material which is included in the rougher stage sink product (<b>156</b>). In some embodiments, the concentration of the collector in the rougher stage sink product (<b>156</b>) may be less than or equal to about 1 liter per tonne of solid mineral material which is included in the rougher stage sink product (<b>156</b>).</p>
+      <p id="p-00159-en" num="0200">In the scavenging configuration of the froth flotation (<b>140</b>) as depicted in <figref>FIG. 1</figref>, the rougher froth flotation stage and the scavenger froth flotation stage are performed so that the residence time of the coarse mineral material fraction in the rougher froth flotation stage is longer than the residence time of the rougher stage sink product in the scavenger froth flotation stage. For example, in some applications of the method of the invention, the residence time of the coarse mineral material fraction in the rougher froth flotation stage may be about 10 minutes and the residence time of the rougher stage sink product in the scavenger froth flotation stage may be about 5 minutes.</p>
+      <p id="p-00160-en" num="0201">In the cleaning configuration of the froth flotation (<b>140</b>), the first froth flotation stage (<b>146</b>) is a rougher froth flotation stage and the second froth flotation stage (<b>148</b>) is a cleaner froth flotation stage so that subjecting the coarse mineral material fraction (<b>22</b>) to froth flotation (<b>140</b>) is comprised of subjecting the coarse mineral material fraction (<b>22</b>) to the rougher froth flotation stage in order to produce a rougher stage float product (<b>154</b><i>a</i>) and a rougher stage sink product (<b>156</b><i>a</i>), and is further comprised of subjecting the rougher stage float product (<b>154</b><i>a</i>) to the cleaner froth flotation stage in order to produce a cleaner stage float product (<b>158</b><i>a</i>) and a cleaner stage sink product (<b>160</b><i>a</i>).</p>
+      <p id="p-00161-en" num="0202">In the cleaning configuration of the froth flotation (<b>140</b>) as depicted in <figref>FIG. 1</figref>, the first solvent extraction feed material (<b>142</b>) is comprised of or consists essentially of the cleaner stage float product (<b>158</b><i>a</i>). Furthermore, in the cleaning configuration of the froth flotation (<b>140</b>) as depicted in <figref>FIG. 1</figref>, the rougher stage sink product (<b>156</b><i>a</i>) and the cleaner stage sink product (<b>160</b><i>a</i>) are combined so that the froth flotation tailings (<b>144</b>) are comprised of or consist essentially of the rougher stage sink product (<b>156</b><i>a</i>) and the cleaner stage sink product (<b>160</b><i>a</i>).</p>
+      <p id="p-00162-en" num="0203">In the embodiments of both the scavenging configuration and the cleaning configuration of the froth flotation (<b>140</b>) as described above, the coarse mineral material fraction (<b>22</b>) may have a solid mineral material concentration of between about 20 percent and about 80 percent by weight of the coarse mineral material fraction (<b>22</b>) when the coarse mineral material fraction (<b>22</b>) is introduced to the froth flotation (<b>140</b>) or more particularly, when the coarse mineral material fraction (<b>22</b>) is introduced to the first froth flotation stage (<b>146</b>).</p>
+      <p id="p-00163-en" num="0204">A purpose of the froth flotation (<b>140</b>) is to concentrate the heavy minerals by rejecting the froth flotation tailings (<b>144</b>) in order to produce the first solvent extraction feed material (<b>142</b>). The first solvent extraction feed material (<b>142</b>) has a substantially smaller volume than the coarse mineral material fraction (<b>22</b>) and can therefore be processed more efficiently than the coarse mineral material fraction (<b>22</b>).</p>
+      <p id="p-00164-en" num="0205">Following the froth flotation (<b>140</b>), the first solvent extraction feed material (<b>142</b>) is subjected to solvent extraction (<b>170</b>) in order to produce therefrom a raffinate (<b>172</b>) comprising a heavy mineral concentrate with reduced bitumen content and an extract (<b>174</b>) containing bitumen.</p>
+      <p id="p-00165-en" num="0206">The first solvent extraction feed material (<b>142</b>) has a solid mineral material concentration. The first solvent extraction feed material (<b>142</b>) may have any solid mineral material concentration which is suitable for conducting the solvent extraction (<b>170</b>). In some embodiments, the first solvent extraction feed material (<b>142</b>) may have a solid mineral material concentration which is lower than a solid mineral material concentration which will interfere with the recovery of the extract (<b>174</b>). In some embodiments, the first solvent extraction feed material (<b>142</b>) may have a solid mineral material concentration of at least about 20 percent by weight of the first solvent extraction feed material (<b>142</b>) when it is introduced to the solvent extraction (<b>170</b>). In some embodiments, the first solvent extraction feed material (<b>142</b>) may have a solid mineral material concentration of less than or equal to about 80 percent by weight of the first solvent extraction feed material (<b>142</b>) when it is introduced to the solvent extraction (<b>170</b>). In some embodiments, the first solvent extraction feed material (<b>142</b>) may have a solid mineral material concentration of less than or equal to about 70 percent by weight of the first solvent extraction feed material (<b>142</b>) when it is introduced to the solvent extraction (<b>170</b>). In some embodiments, the first solvent extraction feed material (<b>142</b>) may have a solid mineral material concentration of between about 20 percent and 70 percent by weight of the first solvent extraction feed material (<b>142</b>) when it is introduced to the solvent extraction (<b>170</b>).</p>
+      <p id="p-00166-en" num="0207">The bitumen content of the solvent extraction feed material will typically decrease as the number of stages of solvent extraction (<b>170</b>) increases, so that the solvent extraction feed material is progressively cleaned of bitumen by the stages of solvent extraction. In some embodiments, the number of stages of solvent extraction (<b>170</b>) may be selected so that the bitumen concentration of the raffinate (<b>172</b>) is no greater than a desired limit which will facilitate subsequent processing of the raffinate (<b>172</b>) to recover the heavy minerals therefrom.</p>
+      <p id="p-00167-en" num="0208">In some embodiments, the desired limit of the bitumen concentration in the raffinate (<b>172</b>) may be about 0.5 percent bitumen by weight of the raffinate (<b>172</b>).</p>
+      <p id="p-00168-en" num="0209">As depicted in <figref>FIG. 1</figref>, the solvent extraction (<b>170</b>) is comprised of a first solvent extraction stage (<b>176</b>), a second solvent extraction stage (<b>178</b>) and a third solvent extraction stage (<b>180</b>).</p>
+      <p id="p-00169-en" num="0210">As depicted in <figref>FIG. 1</figref>, the solvent extraction stages (<b>176</b>,<b>178</b>,<b>180</b>) are arranged in a countercurrent configuration. As a result, the extract (<b>174</b>) is produced from the first solvent extraction stage (<b>176</b>) and the raffinate (<b>172</b>) is produced from the third solvent extraction stage (<b>180</b>).</p>
+      <p id="p-00170-en" num="0211">The first solvent extraction stage (<b>176</b>) is comprised of attritioning the first solvent extraction feed material (<b>142</b>) in order to produce an attritioned first solvent extraction feed material (<b>192</b>). The first solvent extraction stage (<b>176</b>) is further comprised of separating the attritioned first solvent extraction feed material (<b>192</b>) in order to produce a first stage underflow product (<b>194</b>) and a first stage overflow product (<b>196</b>).</p>
+      <p id="p-00171-en" num="0212">As depicted in <figref>FIG. 1</figref>, the first solvent extraction feed material (<b>142</b>) may have a solid mineral material concentration of between about 20 percent and about 70 percent by weight of the first solvent extraction feed material (<b>142</b>). The first solvent extraction feed material (<b>142</b>) may be comprised of an amount of make-up water (<b>197</b>) to provide a desired solid mineral material concentration for the first solvent extraction feed material (<b>142</b>). The make-up water (<b>197</b>) may be comprised of or may consist essentially of fresh water and/or water which is recycled from the methods of the invention or from other processes.</p>
+      <p id="p-00172-en" num="0213">As depicted in <figref>FIG. 1</figref>, the attritioning of the first solvent extraction feed material (<b>142</b>) is performed by mixing the first solvent extraction feed material (<b>142</b>) in a first mixer (<b>198</b>). A purpose of the attritioning is to liberate bitumen from the first solvent extraction feed material (<b>142</b>) so that the bitumen can more effectively be separated from the heavy minerals in the separating of the attritioned first solvent extraction feed material (<b>192</b>). Another purpose of the attritioning is to mix the constituents of the first solvent extraction feed material (<b>142</b>).</p>
+      <p id="p-00173-en" num="0214">As depicted in <figref>FIG. 1</figref>, the separating of the attritioned first solvent extraction feed material (<b>192</b>) is performed by passing the attritioned first solvent extraction feed material (<b>192</b>) through a first gravity settler (<b>200</b>). As depicted in <figref>FIG. 1</figref>, the first gravity settler (<b>200</b>) is comprised of a first gravity settling vessel.</p>
+      <p id="p-00174-en" num="0215">The attritioned first solvent extraction feed material (<b>192</b>) separates in the first gravity settler (<b>200</b>) into an overflow zone (<b>202</b>) and an underflow zone (<b>204</b>), with an interface therebetween. The first stage overflow product (<b>196</b>) is withdrawn from the overflow zone (<b>202</b>) and the first stage underflow product (<b>194</b>) is withdrawn from the underflow zone (<b>204</b>).</p>
+      <p id="p-00175-en" num="0216">As depicted in <figref>FIG. 1</figref>, a first intra-stage recycle component (<b>206</b>) is withdrawn from the overflow zone (<b>202</b>) of the first gravity settler (<b>200</b>) and is combined with the first solvent extraction feed material (<b>142</b>) in order to recycle the first intra-stage recycle component (<b>206</b>) to the first solvent extraction stage. In the embodiments depicted in <figref>FIG. 1</figref>, a first intra-stage recycle ratio by weight of the first intra-stage recycle component (<b>206</b>) to the attritioned first solvent extraction feed material (<b>192</b>) may be between about 0.1 and 1.5, or may be between about 0.5 and about 1.</p>
+      <p id="p-00176-en" num="0217">As depicted in <figref>FIG. 1</figref>, the extract (<b>174</b>) is comprised of or consists essentially of the first stage overflow product (<b>196</b>). As depicted in <figref>FIG. 1</figref>, the first stage underflow product (<b>194</b>) is subjected to the second solvent extraction stage (<b>178</b>) as a second solvent extraction feed material (<b>210</b>).</p>
+      <p id="p-00177-en" num="0218">The second solvent extraction feed material (<b>210</b>) has a solid mineral material concentration. The second solvent extraction feed material (<b>210</b>) may have any solid mineral material concentration which is suitable for conducting the solvent extraction (<b>170</b>). In some embodiments, the second solvent extraction feed material (<b>210</b>) may have a solid mineral material concentration which is lower than a solid mineral material concentration which will interfere with the recovery of the extract (<b>174</b>). In some embodiments, the second solvent extraction feed material (<b>210</b>) may have a solid mineral material concentration of at least about 20 percent by weight of the second solvent extraction feed material (<b>210</b>) when it is introduced to the solvent extraction (<b>170</b>). In some embodiments, the second solvent extraction feed material (<b>210</b>) may have a solid mineral material concentration of less than or equal to about 80 percent by weight of the second solvent extraction feed material (<b>210</b>) when it is introduced to the solvent extraction (<b>170</b>). In some embodiments, the second solvent extraction feed material (<b>210</b>) may have a solid mineral material concentration of less than or equal to about 70 percent by weight of the second solvent extraction feed material (<b>210</b>) when it is introduced to the solvent extraction (<b>170</b>). In some embodiments, the second solvent extraction feed material (<b>210</b>) may have a solid mineral material concentration of between about 20 percent and 70 percent by weight of the second solvent extraction feed material (<b>210</b>) when it is introduced to the solvent extraction (<b>170</b>).</p>
+      <p id="p-00178-en" num="0219">The second solvent extraction stage (<b>178</b>) is comprised of attritioning the second solvent extraction feed material (<b>210</b>) in order to produce an attritioned second solvent extraction feed material (<b>212</b>). The second solvent extraction stage (<b>178</b>) is further comprised of separating the attritioned second solvent extraction feed material (<b>212</b>) in order to produce a second stage underflow product (<b>214</b>) and a second stage overflow product (<b>216</b>).</p>
+      <p id="p-00179-en" num="0220">As depicted in <figref>FIG. 1</figref>, the second solvent extraction feed material (<b>210</b>) may have a solid mineral material concentration of between about 20 percent and about 70 percent by weight of the second solvent extraction feed material (<b>210</b>).</p>
+      <p id="p-00180-en" num="0221">As depicted in <figref>FIG. 1</figref>, the attritioning of the second solvent extraction feed material (<b>210</b>) is performed by mixing the second solvent extraction feed material (<b>210</b>) in a second mixer (<b>218</b>). A purpose of the attritioning is to liberate bitumen from the second solvent extraction feed material (<b>210</b>) so that the bitumen can more effectively be separated from the heavy minerals in the separating of the attritioned second solvent extraction feed material (<b>212</b>). Another purpose of the attritioning is to mix the constituents of the second solvent extraction feed material (<b>210</b>).</p>
+      <p id="p-00181-en" num="0222">As depicted in <figref>FIG. 1</figref>, the separating of the attritioned second solvent extraction feed material (<b>212</b>) is performed by passing the attritioned second solvent extraction feed material (<b>212</b>) through a second gravity settler (<b>220</b>). As depicted in <figref>FIG. 1</figref>, the second gravity settler (<b>220</b>) is comprised of a second gravity settling vessel.</p>
+      <p id="p-00182-en" num="0223">The attritioned second solvent extraction feed material (<b>212</b>) separates in the second gravity settler (<b>220</b>) into an overflow zone (<b>222</b>) and an underflow zone (<b>224</b>), with an interface therebetween. The second stage overflow product (<b>216</b>) is withdrawn from the overflow zone (<b>222</b>) and the second stage underflow product (<b>214</b>) is withdrawn from the underflow zone (<b>224</b>).</p>
+      <p id="p-00183-en" num="0224">As depicted in <figref>FIG. 1</figref>, a second intra-stage recycle component (<b>226</b>) is withdrawn from the overflow zone (<b>222</b>) of the second gravity settler (<b>220</b>) and is combined with the second solvent extraction feed material (<b>210</b>) in order to recycle the second intra-stage recycle component (<b>226</b>) to the second solvent extraction stage. In the embodiments depicted in <figref>FIG. 1</figref>, a second intra-stage recycle ratio by weight of the second intra-stage recycle component (<b>226</b>) to the attritioned second solvent extraction feed material (<b>212</b>) may be between about 0.1 and 1.5, or may be between about 0.5 and about 1.</p>
+      <p id="p-00184-en" num="0225">As depicted in <figref>FIG. 1</figref>, the second stage overflow product (<b>216</b>) is mixed with the first solvent extraction feed material (<b>142</b>) in the first mixer (<b>198</b>) so that the second stage overflow product (<b>216</b>) is introduced into the first solvent extraction stage (<b>176</b>). As depicted in <figref>FIG. 1</figref>, the second solvent extraction underflow component (<b>214</b>) is subjected to the third solvent extraction stage (<b>180</b>) as a third solvent extraction feed material (<b>230</b>).</p>
+      <p id="p-00185-en" num="0226">The third solvent extraction feed material (<b>230</b>) has a solid mineral material concentration. The third solvent extraction feed material (<b>230</b>) may have any solid mineral material concentration which is suitable for conducting the solvent extraction (<b>170</b>). In some embodiments, the third solvent extraction feed material (<b>230</b>) may have a solid mineral material concentration which is lower than a solid mineral material concentration which will interfere with the recovery of the extract (<b>174</b>). In some embodiments, the third solvent extraction feed material (<b>230</b>) may have a solid mineral material concentration of at least about 20 percent by weight of the third solvent extraction feed material (<b>230</b>) when it is introduced to the solvent extraction (<b>170</b>). In some embodiments, the third solvent extraction feed material (<b>230</b>) may have a solid mineral material concentration of less than or equal to about 80 percent by weight of the third solvent extraction feed material (<b>230</b>) when it is introduced to the solvent extraction (<b>170</b>). In some embodiments, the third solvent extraction feed material (<b>230</b>) may have a solid mineral material concentration of less than or equal to about 70 percent by weight of the third solvent extraction feed material (<b>230</b>) when it is introduced to the solvent extraction (<b>170</b>). In some embodiments, the third solvent extraction feed material (<b>230</b>) may have a solid mineral material concentration of between about 20 percent and 70 percent by weight of the third solvent extraction feed material (<b>230</b>) when it is introduced to the solvent extraction (<b>170</b>).</p>
+      <p id="p-00186-en" num="0227">The third solvent extraction stage (<b>180</b>) is comprised of attritioning the third solvent extraction feed material (<b>230</b>) in order to produce an attritioned third solvent extraction feed material (<b>232</b>). The third solvent extraction stage (<b>180</b>) is further comprised of separating the attritioned third solvent extraction feed material (<b>232</b>) in order to produce a third stage underflow product (<b>234</b>) and a third stage overflow product (<b>236</b>).</p>
+      <p id="p-00187-en" num="0228">As depicted in <figref>FIG. 1</figref>, the third solvent extraction feed material (<b>230</b>) may have a solid mineral material concentration of between about 20 percent and about 70 percent by weight of the third solvent extraction feed material (<b>230</b>).</p>
+      <p id="p-00188-en" num="0229">As depicted in <figref>FIG. 1</figref>, the attritioning of the third solvent extraction feed material (<b>230</b>) is performed by mixing the third solvent extraction feed material (<b>230</b>) in a third mixer (<b>238</b>). A purpose of the attritioning is to liberate bitumen from the third solvent extraction feed material (<b>230</b>) so that the bitumen can more effectively be separated from the heavy minerals in the separating of the attritioned third solvent extraction feed material (<b>232</b>). Another purpose of the attritioning is to mix the constituents of the third solvent extraction feed material (<b>230</b>).</p>
+      <p id="p-00189-en" num="0230">As depicted in <figref>FIG. 1</figref>, the separating of the attritioned third solvent extraction feed material (<b>232</b>) is performed by passing the attritioned third solvent extraction feed material (<b>232</b>) through a third gravity settler (<b>240</b>). As depicted in <figref>FIG. 1</figref>, the third gravity settler (<b>240</b>) is comprised of a third gravity settling vessel.</p>
+      <p id="p-00190-en" num="0231">The attritioned third solvent extraction feed material (<b>232</b>) separates in the third gravity settler (<b>240</b>) into an overflow zone (<b>248</b>) and an underflow zone (<b>250</b>), with an interface therebetween. The third stage overflow product (<b>236</b>) is withdrawn from the overflow zone (<b>248</b>) and the third stage underflow product (<b>234</b>) is withdrawn from the underflow zone (<b>250</b>).</p>
+      <p id="p-00191-en" num="0232">As depicted in <figref>FIG. 1</figref>, a third intra-stage recycle component (<b>252</b>) is withdrawn from the overflow zone (<b>248</b>) of the third gravity settler (<b>240</b>) and is combined with the third solvent extraction feed material (<b>230</b>) in order to recycle the third intra-stage recycle component (<b>252</b>) to the third solvent extraction stage. In the embodiments depicted in <figref>FIG. 1</figref>, a third intra-stage recycle ratio by weight of the third intra-stage recycle component (<b>252</b>) to the attritioned third solvent extraction feed material (<b>232</b>) may be between about 0.1 and 1.5, or may be between about 0.5 and about 1.</p>
+      <p id="p-00192-en" num="0233">As depicted in <figref>FIG. 1</figref>, the third stage overflow product (<b>236</b>) is mixed with the first stage underflow product (<b>194</b>) in the second mixer (<b>218</b>) so that the third stage overflow product (<b>236</b>) is introduced into the second solvent extraction stage (<b>178</b>). As depicted in <figref>FIG. 1</figref>, the raffinate (<b>172</b>) is comprised of or consists essentially of the third stage underflow product (<b>234</b>).</p>
+      <p id="p-00193-en" num="0234">The solvent extraction (<b>170</b>) may be performed using a diluent as a solvent. The diluent may be comprised of a hydrocarbon diluent which is introduced into the solvent extraction (<b>170</b>) and/or the diluent may be comprised of residual froth treatment diluent which is contained in the froth treatment tailings (<b>20</b>) as a result of the froth treatment process.</p>
+      <p id="p-00194-en" num="0235">The diluent may be comprised of or may consist essentially of one or more suitable naphthenic type diluents or may be comprised of a mixture of one or more suitable naphthenic type diluents and/or paraffinic type diluents. The amount of the diluent may be any amount which is effective to facilitate the separation of the solvent extraction feed material in order to produce the raffinate (<b>172</b>) and the extract (<b>174</b>).</p>
+      <p id="p-00195-en" num="0236">In some embodiments in which the diluent may be comprised of a paraffinic type diluent, the paraffinic type diluent may be present in the diluent as a residual amount of a froth treatment diluent which was contained in the froth treatment tailings (<b>20</b>) as a result of a paraffinic froth treatment process. In some embodiments in which the diluent may consist essentially of one or more naphthenic type diluents, some of the naphthenic type diluent may be present in the diluent as a residual amount of a froth treatment diluent which was contained in the froth treatment tailings (<b>20</b>) as a result of a naphthenic froth treatment process.</p>
+      <p id="p-00196-en" num="0237">In some embodiments in which the diluent may be comprised of a paraffinic type diluent, the amount of the paraffinic type diluent may be selected in order to control the amount of asphaltenes which are precipitated during the solvent extraction (<b>170</b>), since precipitated asphaltenes will tend to be included in the raffinate (<b>172</b>) and not in the extract (<b>174</b>). An excessive amount of precipitated asphaltenes contained in the raffinate (<b>172</b>) may interfere with subsequent processing to recover the heavy minerals from the raffinate (<b>172</b>).</p>
+      <p id="p-00197-en" num="0238">In some embodiments in which the diluent may be comprised of a naphthenic type diluent, a suitable diluent may be comprised of or may consist essentially of naphtha or toluene. In some embodiments, the diluent may be comprised of or may consist essentially of naphtha.</p>
+      <p id="p-00198-en" num="0239">The amount of the diluent may be any amount which is suitable for conducting the solvent extraction (<b>170</b>). In some embodiments in which the diluent may be comprised of a naphthenic type diluent, the amount of the diluent may be selected in order to maximize the separation of the solvent extraction feed material into the raffinate (<b>172</b>) and the extract (<b>174</b>).</p>
+      <p id="p-00199-en" num="0240">As depicted in <figref>FIG. 1</figref>, an amount of a hydrocarbon diluent (<b>244</b>) is combined with the second stage underflow product (<b>214</b>) so that the hydrocarbon diluent (<b>244</b>) is introduced into the third solvent extraction stage (<b>180</b>). As depicted in <figref>FIG. 1</figref>, the hydrocarbon diluent (<b>244</b>) consists essentially of naphtha. The amount of the hydrocarbon diluent (<b>244</b>) which is introduced into the solvent extraction (<b>170</b>) may be expressed as an introduction rate of the hydrocarbon diluent (<b>244</b>).</p>
+      <p id="p-00200-en" num="0241">As depicted in <figref>FIG. 1</figref>, the amount of the hydrocarbon diluent (<b>244</b>) is selected so that each of the first solvent extraction stage (<b>176</b>), the second solvent extraction stage (<b>178</b>), and the third solvent extraction stage (<b>180</b>) is performed in the presence of at least about 15 percent by weight of a diluent.</p>
+      <p id="p-00201-en" num="0242">The first stage overflow product (<b>196</b>) is withdrawn from the overflow zone (<b>202</b>) at a first stage overflow product withdrawal rate. The first stage underflow product (<b>194</b>) is withdrawn from the underflow zone (<b>204</b>) at a first stage underflow product withdrawal rate. The second stage overflow product (<b>216</b>) is withdrawn from the overflow zone (<b>222</b>) at a second stage overflow product withdrawal rate. The second stage underflow product (<b>214</b>) is withdrawn from the underflow zone (<b>224</b>) at a second stage underflow product withdrawal rate. The third stage overflow product (<b>236</b>) is withdrawn from the overflow zone (<b>248</b>) at a third stage overflow product withdrawal rate. The third stage underflow product (<b>234</b>) is withdrawn from the underflow zone (<b>250</b>) at a third stage underflow product withdrawal rate.</p>
+      <p id="p-00202-en" num="0243">At least one of the first stage underflow product withdrawal rate and the second stage underflow product withdrawal rate is greater than the third stage underflow product withdrawal rate. As a result, a differential exists between the first stage underflow product withdrawal rate and/or the second stage underflow product withdrawal rate in comparison with the third stage underflow product withdrawal rate. In some embodiments as depicted in <figref>FIG. 1</figref>, the differential between the first stage underflow product withdrawal rate and/or the second stage underflow product withdrawal rate in comparison with the third stage underflow product withdrawal rate may be limited so that the differential is no greater than the first stage overflow product withdrawal rate. In some embodiments as depicted in <figref>FIG. 1</figref>, the differential between the first stage underflow product withdrawal rate and/or the second stage underflow product withdrawal rate in comparison with the third stage underflow product withdrawal rate may be limited so that the differential is no greater than the introduction rate of the hydrocarbon diluent (<b>244</b>) into the solvent extraction (<b>170</b>).</p>
+      <p id="p-00203-en" num="0244">In some embodiments, the processing of the coarse mineral material fraction (<b>22</b>) may be capable of producing a raffinate (<b>172</b>) which has a bitumen concentration which is no greater than about 0.5 percent by weight of the raffinate (<b>172</b>). In some embodiments, the processing of the coarse mineral material fraction (<b>22</b>) may be capable of producing a raffinate (<b>172</b>) which has a bitumen concentration which is no greater than about 0.5 percent of the dry weight of the raffinate (<b>172</b>), where the dry weight of the raffinate (<b>172</b>) is the weight of the raffinate (<b>172</b>) excluding water.</p>
+      <p id="p-00204-en" num="0245">In some embodiments, the processing of the coarse mineral material fraction (<b>22</b>) may be capable of producing an extract (<b>174</b>) which has a water concentration which is no greater than about 0.5 percent by weight of the extract (<b>174</b>). In some embodiments, the processing of the coarse mineral material fraction (<b>22</b>) may be capable of producing an extract (<b>174</b>) which has a solid mineral material concentration which is no greater than about 0.5 percent by weight of the extract (<b>174</b>). In some embodiments, the processing of the coarse mineral material fraction (<b>22</b>) may be capable of producing an extract (<b>174</b>) which has a combined solid mineral material and water concentration which is no greater than about 1.0 percent by weight of the extract (<b>174</b>), or in some embodiments no greater than about 0.5 percent by weight of the extract (<b>174</b>).</p>
+      <p id="p-00205-en" num="0246">In some embodiments, the processing of the coarse mineral material fraction (<b>22</b>) may be capable of recovering in the first solvent extraction feed material (<b>142</b>) at least about <b>90</b> percent of the heavy minerals which are contained in the coarse mineral material fraction (<b>22</b>) by weight of the coarse mineral material fraction (<b>22</b>). In some embodiments, the processing of the coarse mineral material fraction (<b>22</b>) may be capable of recovering in the first solvent extraction feed material (<b>142</b>) at least about 95 percent of the heavy minerals which are contained in the coarse mineral material fraction (<b>22</b>) by weight of the coarse mineral material fraction (<b>22</b>). In some embodiments, the processing of the coarse mineral material fraction (<b>22</b>) may be capable of recovering in the first solvent extraction feed material (<b>142</b>) at least about 80 percent of the bitumen which is contained in the coarse mineral material fraction (<b>22</b>) by weight of the coarse mineral material fraction (<b>22</b>).</p>
+      <p id="p-00206-en" num="0247">In some embodiments, the processing of the coarse mineral material fraction (<b>22</b>) may be capable of recovering in the extract (<b>174</b>) at least about 80 percent of the bitumen which is contained in the coarse mineral material fraction (<b>22</b>) by weight of the coarse mineral material fraction (<b>22</b>). In some embodiments, the processing of the coarse mineral material fraction (<b>22</b>) may be capable of recovering in the extract (<b>174</b>) at least about 85 percent of the bitumen which is contained in the coarse mineral material fraction (<b>22</b>) by weight of the coarse mineral material fraction (<b>22</b>). In some embodiments, the processing of the coarse mineral material fraction (<b>22</b>) may be capable of recovering at least about 90 percent of the bitumen which is contained in the coarse mineral material fraction (<b>22</b>) by weight of the coarse mineral material fraction (<b>22</b>).</p>
+      <p id="p-00207-en" num="0248">Following the solvent extraction (<b>170</b>), the extract (<b>174</b>) may be further processed and/or may be stored or transported for further processing. It may also be desirable to subject the extract (<b>174</b>) to a diluent recovery process (not shown) in order to recover at least a portion of the diluent from the extract (<b>174</b>) in order to facilitate recycling of the diluent before processing, storing and/or transporting the extract (<b>174</b>).</p>
+      <p id="p-00208-en" num="0249">In some embodiments, all or a portion of the extract (<b>174</b>) may be provided to the solvent extraction (<b>68</b>) relating to the fine mineral material fraction (<b>24</b>) to provide or to supplement the hydrocarbon diluent (<b>108</b>) which is added in the solvent extraction (<b>68</b>). Providing all or a portion of the extract (<b>174</b>) to the solvent extraction (<b>68</b>) may reduce the amount of fresh hydrocarbon diluent (<b>108</b>) which must be added in the solvent extraction (<b>68</b>).</p>
+      <p id="p-00209-en" num="0250">Following the solvent extraction (<b>170</b>), the raffinate (<b>172</b>) may be further processed to recover the heavy minerals which are contained therein. It may also be desirable to subject the raffinate (<b>172</b>) to a diluent recovery process (not shown) in order to reduce the diluent concentration of the raffinate (<b>172</b>) before attempting to recover the heavy minerals therefrom.</p>
+      <p id="p-00210-en" num="0251">Referring to <figref>FIG. 2</figref>, a material balance for a pilot plant scale experiment is provided for a method for processing a fine mineral material fraction (<b>24</b>) of froth treatment tailings (<b>20</b>) in accordance with the methods of the invention. Referring to <figref>FIG. 3</figref>, a material balance for a pilot plant scale experiment is provided for a method for processing a coarse mineral material fraction (<b>22</b>) of froth treatment tailings (<b>20</b>) in accordance with methods of the invention.</p>
+      <p id="p-00211-en" num="0252">Referring to <figref>FIG. 2</figref>, the first stage underflow product withdrawal rate is 3.10 kilograms per minute, the second stage underflow product withdrawal rate is 2.90 kilograms per minute, the first overflow product withdrawal rate is 0.34 kilograms per minute, and the introduction rate of the hydrocarbon diluent (<b>108</b>) is 0.32 kilograms per minute. It is noted that the differential between the first stage underflow product withdrawal rate and the second stage underflow product withdrawal rate is 0.20 kilograms per minute. The differential is therefore less than both the first overflow product withdrawal rate and the introduction rate of the hydrocarbon diluent (<b>108</b>).</p>
+      <p id="p-00212-en" num="0253">Referring to <figref>FIG. 3</figref>, the first stage underflow product withdrawal rate is 0.44 kilograms per minute, the second stage underflow product withdrawal rate is 0.35 kilograms per minute, the third stage underflow product withdrawal rate is 0.35 kilograms per minute, the first overflow product withdrawal rate is 0.045 kilograms per minute, and the introduction rate of the hydrocarbon diluent (<b>244</b>) is 0.06 kilograms per minute. It is noted that the differential between the first stage underflow product withdrawal rate and the third stage underflow product withdrawal rate is 0.09 kilograms per minute. The differential is therefore greater than both the first overflow product withdrawal rate and the introduction rate of the hydrocarbon diluent (<b>244</b>).</p>
+      <p id="p-00213-en" num="0254">As described herein, the present invention is directed at solvent extraction separation methods. In some embodiments, the present invention is more particularly directed at withdrawing an intra-stage recycle component from one or more solvent extraction stages. In some embodiments, the present invention is more particularly directed at providing that an underflow product withdrawal rate in at least one of the solvent extraction stages other than the final solvent extraction stage is greater than the underflow product withdrawal rate in the final solvent extraction stage so that there is a differential between the underflow product withdrawal rates.</p>
+      <p id="p-00214-en" num="0255">Both of these aspects of the invention are directed toward improving multiphase separation processes which can be complicated by interphase developments such as emulsions, rag layers, sludges, etc. and at improving the separation of the bitumen phase in the solvent extraction stages.</p>
+      <p id="p-00215-en" num="0256">Both of these aspects of the invention may potentially provide improved process efficiencies in that relatively less hydrocarbon diluent may potentially be necessary in the processes and/or the size of the processes may potentially be reduced, by ultimately reducing the amount of hydrocarbon diluent which is required to achieve a desired standard of performance.</p>
+      <p id="p-00216-en" num="0257">In the intra-stage recycle aspect of the invention, providing an intra-stage recycle component creates an opportunity to remove interphase developments such as rag material from the solvent extraction apparatus and transferring such material to a mixer where it may be treated with mechanical energy and potentially be shifted to a new equilibrium that may be less prone to developing such interphase developments. Providing an intra-stage recycle component may also provide a further benefit of reducing the solid mineral material concentration in the solvent extraction apparatus, thereby reducing the viscosity of the bitumen phase in the solvent extraction apparatus and potentially improving the separation in the solvent extraction apparatus and potentially improving the quality of the extract produced by the solvent extraction.</p>
+      <p id="p-00217-en" num="0258">In the underflow component withdrawal rate differential aspect of the invention, the relatively higher underflow component withdrawal rate in an upstream solvent extraction stage causes a reduction in the residence time, primarily of the underflow component in the solvent extraction apparatus, which may potentially “draw” some interphase developments such as rag material to the underflow component, thereby potentially reducing an accumulation of rag material in the solvent extraction apparatus.</p>
+      <p id="p-00218-en" num="0259">In the practice of the invention, the phenomenon of rag material accumulation may in some embodiments be controlled by monitoring the fluid density in the solvent extraction apparatus and increasing the underflow component withdrawal rate from the solvent extraction apparatus if the fluid density of the material in the solvent extraction apparatus increases above a desired value. In some embodiments, the fluid density may be monitored by monitoring the fluid density of the intra-stage recycle component.</p>
+      <p id="p-00219-en" num="0260">In the underflow component withdrawal rate differential aspect of the invention, transferring “additional” underflow material to the downstream solvent extraction stage also provides an opportunity for more mechanical energy to be imparted to the potentially problematic underflow material and in a countercurrent process, allows such underflow material to be subjected to an increased hydrocarbon diluent concentration in the downstream solvent extraction stage.</p>
+      <p id="p-00220-en" num="0261">This increased hydrocarbon diluent concentration may assist in reducing the amount of rag material (by shifting to a new phase equilibrium), may provide improved settling in the downstream solvent extraction apparatus because of the increased dilution of the material in the downstream solvent extraction apparatus. This may in turn result in an improved quality of the overflow component which is produced in the downstream solvent extraction apparatus. If this improved quality overflow component is recycled back to the previous solvent extraction stage, the improved quality of the overflow component may assist in minimizing interphase development such as rag material in the previous solvent extraction stage.</p>
+      <p id="p-00221-en" num="0262">In the underflow component withdrawal rate differential aspect of the invention, maintaining the underflow component withdrawal rate in the final solvent extraction stage at a lower rate relative to the underflow component withdrawal rate in one or more of the upstream solvent extraction stages provides for a relatively greater overflow component withdrawal rate in the final solvent extraction stage. In a countercurrent process, where the overflow component from the final solvent extraction stage is recycled back to the previous solvent extraction stage, the relatively greater overflow component withdrawal rate in the final solvent extraction stage provides an increased opportunity to dilute the material in the previous solvent extraction stage and provides potentially improved separation in the previous solvent extraction stage, which may result in an improved quality of the overflow component in the previous solvent extraction stage by increasing the bitumen phase residence time in the previous solvent extraction stage.</p>
+      <p id="p-00222-en" num="0263">In this document, the word “comprising” is used in its non-limiting sense to mean that items following the word are included, but items not specifically mentioned are not excluded. A reference to an element by the indefinite article “a” does not exclude the possibility that more than one of the elements is present, unless the context clearly requires that there be one and only one of the elements.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>The embodiments of the invention in which an exclusive property or privilege is claimed are defined as follows:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A separation method, the method comprising:
+<claim-text>(a) introducing a first solvent extraction feed material into a first solvent extraction stage, wherein the first solvent extraction feed material is comprised of solid mineral material, water and bitumen, and wherein the first solvent extraction feed material is derived from a process for recovering bitumen from oil sands;</claim-text><claim-text>(b) allowing the first solvent extraction feed material to separate in the first solvent extraction stage into an underflow zone and an overflow zone;</claim-text><claim-text>(c) withdrawing a first stage underflow product from the underflow zone of the first solvent extraction stage at a first stage underflow product withdrawal rate;</claim-text><claim-text>(d) withdrawing a first stage overflow product from the overflow zone of the first solvent extraction stage at a first stage overflow product withdrawal rate;</claim-text><claim-text>(e) introducing the first stage underflow product into a second solvent extraction stage as a second solvent extraction feed material;</claim-text><claim-text>(f) allowing the second solvent extraction feed material to separate in the second solvent extraction stage into an underflow zone and an overflow zone;</claim-text><claim-text>(g) withdrawing a second stage underflow product from the underflow zone of the second solvent extraction stage at a second stage underflow product withdrawal rate, wherein the first stage underflow product withdrawal rate is greater than the second stage underflow product withdrawal rate;</claim-text><claim-text>(h) withdrawing a second stage overflow product from the overflow zone of the second solvent extraction stage at a second stage overflow product withdrawal rate; and</claim-text><claim-text>(i) introducing the second stage overflow product into the first solvent extraction stage.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising introducing an amount of a hydrocarbon diluent into at least one of the solvent extraction stages.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method as claimed in <claim-ref idref="clm-00002-en">claim 2</claim-ref> wherein the hydrocarbon diluent is comprised of a naphthenic type diluent.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising introducing an amount of a hydrocarbon diluent into the second solvent extraction stage.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method as claimed in <claim-ref idref="clm-00004-en">claim 4</claim-ref> wherein the hydrocarbon diluent is comprised of a naphthenic type diluent.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method as claimed in <claim-ref idref="clm-00002-en">claim 2</claim-ref> wherein the first stage overflow product is produced as an extract of the separation method and wherein the second stage underflow product is produced as a raffinate of the separation method.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein a differential between the first stage underflow product withdrawal rate and the second stage underflow product withdrawal rate is no greater than the first stage overflow product withdrawal rate.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein a differential between the first stage underflow product withdrawal rate and the second stage underflow product withdrawal rate is no greater than an introduction rate of a hydrocarbon diluent into the solvent extraction stages.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en" independent="true">
+      <claim-text>
+        <b>9</b>. A separation method, the method comprising:
+<claim-text>(a) introducing a first solvent extraction feed material into a first solvent extraction stage, wherein the first solvent extraction feed material is comprised of solid mineral material, water and bitumen, and wherein the first solvent extraction feed material is derived from a process for recovering bitumen from oil sands;</claim-text><claim-text>(b) allowing the first solvent extraction feed material to separate in the first solvent extraction stage into an underflow zone and an overflow zone;</claim-text><claim-text>(c) withdrawing a first stage underflow product from the underflow zone of the first solvent extraction stage at a first stage underflow product withdrawal rate;</claim-text><claim-text>(d) withdrawing a first stage overflow product from the overflow zone of the first solvent extraction stage at a first stage overflow product withdrawal rate;</claim-text><claim-text>(e) introducing the first stage underflow product into a second solvent extraction stage as a second solvent extraction feed material;</claim-text><claim-text>(f) allowing the second solvent extraction feed material to separate in the second solvent extraction stage into an underflow zone and an overflow zone;</claim-text><claim-text>(g) withdrawing a second stage underflow product from the underflow zone of the second solvent extraction stage at a second stage underflow product withdrawal rate;</claim-text><claim-text>(h) withdrawing a second stage overflow product from the overflow zone of the second solvent extraction stage at a second stage overflow product withdrawal rate;</claim-text><claim-text>(i) introducing the second stage overflow product into the first solvent extraction stage;</claim-text><claim-text>(j) introducing the second stage underflow product into a third solvent extraction stage as a third solvent extraction feed material;</claim-text><claim-text>(k) allowing the third solvent extraction feed material to separate in the third solvent extraction stage into an underflow zone and an overflow zone;</claim-text><claim-text>(l) withdrawing a third stage underflow product from the underflow zone of the third solvent extraction stage at a third stage underflow product withdrawal rate;</claim-text><claim-text>(m) withdrawing a third stage overflow product from the overflow zone of the third solvent extraction stage at a third stage overflow product withdrawal rate; and</claim-text><claim-text>(n) introducing the third stage overflow product into the second solvent extraction stage;</claim-text></claim-text>
+      <claim-text>wherein at least one of the first stage underflow product withdrawal rate and the second stage underflow product withdrawal rate is greater than the third stage underflow product withdrawal rate.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method as claimed in <claim-ref idref="clm-00009-en">claim 9</claim-ref>, further comprising introducing an amount of a hydrocarbon diluent into at least one of the solvent extraction stages.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method as claimed in <claim-ref idref="clm-00010-en">claim 10</claim-ref> wherein the hydrocarbon diluent is comprised of a naphthenic type diluent.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method as claimed in <claim-ref idref="clm-00009-en">claim 9</claim-ref>, further comprising introducing an amount of a hydrocarbon diluent into the third solvent extraction stage.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method as claimed in <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein the hydrocarbon diluent is comprised of a naphthenic type diluent.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method as claimed in <claim-ref idref="clm-00010-en">claim 10</claim-ref> wherein the first stage overflow product is produced as an extract of the separation method, wherein the third stage underflow product is produced as a raffinate of the separation method.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method as claimed in <claim-ref idref="clm-00014-en">claim 14</claim-ref> wherein the first stage underflow product withdrawal rate is greater than the third stage underflow product withdrawal rate.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method as claimed in <claim-ref idref="clm-00015-en">claim 15</claim-ref> wherein a differential between the first stage underflow product withdrawal rate and the third stage underflow product withdrawal rate is no greater than the first stage overflow product withdrawal rate.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method as claimed in <claim-ref idref="clm-00015-en">claim 15</claim-ref> wherein a differential between the first stage underflow product withdrawal rate and the third stage underflow product withdrawal rate is no greater than an introduction rate of a hydrocarbon diluent into the solvent extraction stages.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en" independent="true">
+      <claim-text>
+        <b>18</b>. A separation method for producing an extract and a raffinate from a solvent extraction feed material comprising solid mineral material, water and bitumen, wherein the solvent extraction feed material is derived from a process for recovering bitumen from oil sands, wherein the separation method is comprised of a plurality of solvent extraction stages, wherein each of the solvent extraction stages produces an overflow product and an underflow product, wherein the extract is produced as the overflow product in a first solvent extraction stage, wherein the raffinate is produced as the underflow product in a final solvent extraction stage, and wherein an underflow product withdrawal rate of the underflow product produced in at least one of the solvent extraction stages other than the final solvent extraction stage is greater than the underflow product withdrawal rate of the raffinate.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method as claimed in <claim-ref idref="clm-00018-en">claim 18</claim-ref>, further comprising introducing a hydrocarbon diluent into at least one of the solvent extraction stages.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The method as claimed in <claim-ref idref="clm-00019-en">claim 19</claim-ref> wherein the hydrocarbon diluent is comprised of a naphthenic type diluent.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The method as claimed in <claim-ref idref="clm-00018-en">claim 18</claim-ref>, further comprising introducing a hydrocarbon diluent into the final solvent extraction stage.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The method as claimed in <claim-ref idref="clm-00021-en">claim 21</claim-ref> wherein the hydrocarbon diluent is comprised of a naphthenic type diluent.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. The method as claimed in <claim-ref idref="clm-00019-en">claim 19</claim-ref> wherein a first stage underflow product withdrawal rate for the underflow product produced in the first solvent extraction stage is greater than a final stage underflow product withdrawal rate for the raffinate produced in the final solvent extraction stage.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. The method as claimed in <claim-ref idref="clm-00023-en">claim 23</claim-ref> wherein a differential between the first stage underflow product withdrawal rate and the final stage underflow product withdrawal rate is no greater than a first stage overflow product withdrawal rate for the extract produced in the first solvent extraction stage.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>25</b>. The method as claimed in <claim-ref idref="clm-00023-en">claim 23</claim-ref> wherein a differential between the first stage underflow product withdrawal rate and the final stage underflow product withdrawal rate is no greater than an introduction rate of a hydrocarbon diluent into the solvent extraction stages.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247094A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150247094A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247094A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247094A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150247094A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247094A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150247094A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247094A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150247094A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247094A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150247094A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247094A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150247094A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247094A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150247094A1_00008.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150247094A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150247094A1.PDF" type="pdf" size="1604823" pages="24" />
+</lexisnexis-patent-document>

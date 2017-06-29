@@ -1,7 +1,9 @@
 package org.ei.dataloading.cafe;
 
+import java.sql.Clob;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -47,7 +49,10 @@ public class InstitutionCombiner{
 	static String metadataTableName = "hh_af_metadata";
 	static String action = "new";
 	static int recsPerEsbulk;
-	private static String esDomain = "search-evcafe-prod-h7xqbezrvqkb5ult6o4sn6nsae.us-east-1.es.amazonaws.com";
+	private static String esDomain = "search-evcafe5-ucqg6c7jnb4qbvppj2nee4muwi.us-east-1.es.amazonaws.com";
+	private static String tableToBeTruncated = "IPR_ES_INDEXED";
+	private static String esIndexedIdsSqlldrFileName = "iprESIndexedIdsFileLoader.sh";
+	static String esIndexType = "direct";
 
 	// get CurrentData and Time for ESIndexTime
 	DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
@@ -71,7 +76,7 @@ public class InstitutionCombiner{
 
 	public static void main(String args[])
 	{
-		if(args.length >10)
+		if(args.length >13)
 		{
 			if(args[0] !=null)
 			{
@@ -88,6 +93,8 @@ public class InstitutionCombiner{
 			if(args[3] !=null)
 			{
 				username = args[3];
+				
+				System.out.println("Schema: " + username);
 			}
 			if(args[4] !=null)
 			{
@@ -137,6 +144,28 @@ public class InstitutionCombiner{
 				
 				System.out.println("ES Domain name: " + esDomain);
 			}
+			if(args[11] !=null)
+			{
+				tableToBeTruncated = args[11];
+			}
+			if(args[12] !=null)
+			{
+				esIndexedIdsSqlldrFileName = args[12];
+				System.out.println("APR ES Indexed IDS sqlldrFileName: " + esIndexedIdsSqlldrFileName);
+			}
+			if(args[13] !=null)
+			{
+				esIndexType = args[13];
+				if(esIndexType.equalsIgnoreCase("file") || esIndexType.equalsIgnoreCase("direct"))
+
+					System.out.println("ES Index Type: " + esIndexType);
+				else
+				{
+					System.out.println("Invalid ES Index Type, re-try with EStype either direct or file");
+					System.exit(1);
+				}
+			}
+
 
 		}
 		else
@@ -155,11 +184,11 @@ public class InstitutionCombiner{
 				System.out.println("Invalid document type!!, please re-run with document type ipr");
 				System.exit(1);
 			}
-			writer = new CombinedAuAfJSON(doc_type,loadNumber);
+			writer = new CombinedAuAfJSON(doc_type,loadNumber,esIndexType);
 			writer.init(1);
 
 			//s3upload = new AuAfESIndex(doc_type);
-			esIndex = new AusAffESIndex(recsPerEsbulk, esDomain);
+			esIndex = new AusAffESIndex(recsPerEsbulk, esDomain, action);
 
 			InstitutionCombiner c = new InstitutionCombiner();
 			c.con = c.getConnection(url,driver,username,password);
@@ -180,6 +209,9 @@ public class InstitutionCombiner{
 			}
 
 
+			//added 05/10/2017 to update status = "indexed" for the docs that successfully indexed to ES
+			UpdateProfileTableESStatus profileESUpdate = new UpdateProfileTableESStatus(doc_type,username, password,loadNumber,tableToBeTruncated,url,esIndexedIdsSqlldrFileName);
+			profileESUpdate.writeIndexexRecs(esIndex.getESIndexedDocsList());
 		}
 		catch(Exception e)
 		{
@@ -198,9 +230,11 @@ public class InstitutionCombiner{
 		{
 			stmt = con.createStatement();
 			System.out.println("Running the query...");
-			String query = "select * from " +  tableName + " where affid in (select INSTITUTE_ID from " + metadataTableName + " where dbase='cpx')";
+			String query = "select * from " +  tableName + " where affid in (select INSTITUTE_ID from " + metadataTableName + 
+					" where STATUS='matched' and dbase='cpx') and PARENTID is null";
 			System.out.println("query");
 
+			stmt.setFetchSize(200);
 			rs = stmt.executeQuery(query);
 
 			System.out.println("Got records... from table: " + tableName);
@@ -251,7 +285,7 @@ public class InstitutionCombiner{
 				}
 			}
 
-			if(con !=null)
+			/*if(con !=null)
 			{
 				try
 				{
@@ -261,7 +295,7 @@ public class InstitutionCombiner{
 				{
 					e.printStackTrace();
 				}
-			}
+			}*/
 		}
 	}
 
@@ -280,10 +314,12 @@ public class InstitutionCombiner{
 			System.out.println("Running the query...");
 			if(!(action.isEmpty()) && action.equalsIgnoreCase("new"))
 			{
-				query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + " where dbase='cpx')";
+				query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + 
+						" where STATUS='matched' and dbase='cpx') and PARENTID is null";
 
 				System.out.println(query);
 
+				stmt.setFetchSize(200);
 				rs = stmt.executeQuery(query);
 
 				System.out.println("Got records... from table: " + tableName);
@@ -310,7 +346,9 @@ public class InstitutionCombiner{
 			else if(!(action.isEmpty()) && action.equalsIgnoreCase("update"))
 			{
 				updateNumber=loadNumber;
-				query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + " where dbase='cpx')";
+				
+				query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + 
+						" where STATUS='matched' and dbase='cpx') and PARENTID is null";
 
 				
 				//for testing
@@ -321,8 +359,11 @@ public class InstitutionCombiner{
 			/*	query =  "select * from " +  tableName + "  where AFFID in (select INSTITUTE_ID from ap_correction1.Cafe_af_lookup where pui "
 						+ " in (select pui from ap_correction1.AUTHOR_MID))";*/
 				
+				
+				
 				System.out.println(query);
 
+				stmt.setFetchSize(200);
 				rs = stmt.executeQuery(query);
 
 				System.out.println("Got records... from table: " + tableName);
@@ -357,6 +398,7 @@ public class InstitutionCombiner{
 
 				System.out.println(query);
 
+				stmt.setFetchSize(200);
 				rs = stmt.executeQuery(query);
 
 				System.out.println("Got records... from table: " + tableName);
@@ -395,7 +437,7 @@ public class InstitutionCombiner{
 				}
 			}
 
-			if(con !=null)
+			/*if(con !=null)
 			{
 				try
 				{
@@ -405,7 +447,7 @@ public class InstitutionCombiner{
 				{
 					e.printStackTrace();
 				}
-			}
+			}*/
 		}
 
 	}
@@ -432,6 +474,9 @@ public class InstitutionCombiner{
 					//M_ID
 					rec.put(AuAfCombinedRec.DOCID, rs.getString("M_ID"));
 
+					// UPDATEEPOCH (place holder for future filling with SQS epoch)
+					rec.put(AuAfCombinedRec.UPDATEEPOCH, "");
+					
 					//LOADNUMBER
 					if(rs.getString("LOADNUMBER") !=null)
 					{
@@ -489,11 +534,29 @@ public class InstitutionCombiner{
 						rec.put(AuAfCombinedRec.AFID, rs.getString("AFFID"));
 						//System.out.println("AFFID from AuAfCombinedRec: " + rec.getString(AuAfCombinedRec.AFFILIATION_ID));
 					}
+					
+					//PARENTID (always set to "0") bc only Parent Institutions indexed to ES, set to non-Zero for child/departments
+					if(rs.getString("PARENTID") !=null)
+					{
+						rec.put(AuAfCombinedRec.PARAFID, rs.getString("PARENTID"));
+						rec.put(AuAfCombinedRec.AFTYPE, "dept");
+					}
+					else
+					{
+						rec.put(AuAfCombinedRec.PARAFID, "0");
+						rec.put(AuAfCombinedRec.AFTYPE, "parent");
+					}
 
 					//PREFEREDNAME
 					if(rs.getString("PREFERED_NAME") !=null)
 					{
 						rec.put(AuAfCombinedRec.AFFILIATION_PREFERRED_NAME, DataLoadDictionary.mapEntity(rs.getString("PREFERED_NAME")));
+					}
+					
+					//PREFPARNAME
+					if(rs.getString("PARENT_PREFERED_NAME") !=null)
+					{
+						rec.put(AuAfCombinedRec.PARENT_PREFERED_NAME, rs.getString("PARENT_PREFERED_NAME"));
 					}
 
 					//SORTNAME
@@ -505,7 +568,7 @@ public class InstitutionCombiner{
 					//NAMEVARIANT
 					if(rs.getString("NAME_VARIANT") !=null)
 					{
-						rec.put(AuAfCombinedRec.AFFILIATION_VARIANT_NAME, DataLoadDictionary.mapEntity(rs.getString("NAME_VARIANT")));
+						rec.put(AuAfCombinedRec.AFFILIATION_VARIANT_NAME, DataLoadDictionary.mapEntity(getStringFromClob(rs.getClob("NAME_VARIANT"))));
 					}
 
 					//ADDRESSPART
@@ -654,6 +717,25 @@ public class InstitutionCombiner{
 
 		return time_stamp.toString();
 	}
+	
+	
+	private String getStringFromClob(Clob clob)
+	{
+		String str = null;
+		try
+		{
+			if(clob !=null)
+			{
+				str = clob.getSubString(1, (int) clob.length());
+			}
+		}
+		catch(SQLException ex)
+		{
+			ex.printStackTrace();
+		}
+		return str;
+	}
+	
 	private Connection getConnection(String connectionURL,
 			String driver,
 			String username,

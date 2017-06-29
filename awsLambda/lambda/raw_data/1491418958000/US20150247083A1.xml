@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247083A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021455" date-changed="20160127" time-changed="023630">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140151">
+        <country>US</country>
+        <doc-number>20150247083</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14635741</doc-number>
+        <date>20150302</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20160127">
+      <classification-ipcr sequence="1">
+        <text>C09K   8/80        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>80</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>E21B  43/267       20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>E</section>
+        <class>21</class>
+        <subclass>B</subclass>
+        <main-group>43</main-group>
+        <subgroup>267</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160127">
+      <classification-cpc sequence="1">
+        <text>C09K   8/805       20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>8</main-group>
+        <subgroup>805</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>E21B  41/0064      20130101 LI20151022BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>E</section>
+        <class>21</class>
+        <subclass>B</subclass>
+        <main-group>41</main-group>
+        <subgroup>0064</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151022</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>E21B  43/267       20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>E</section>
+        <class>21</class>
+        <subclass>B</subclass>
+        <main-group>43</main-group>
+        <subgroup>267</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>Y02C  10/14        20130101 LA20160120BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>C</subclass>
+        <main-group>10</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160120</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">21</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">PROPPANTS FOR HYDROCARBON RECOVERY</invention-title>
+    <related-documents date-changed="20150903">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61946464</doc-number>
+          <date>20140228</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>University of Pittsburgh - Of the Commonwealth System of Higher Education</orgname>
+            <address>
+              <city>Pittsburgh</city>
+              <state>PA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kropf</last-name>
+            <first-name>Matthew M.</first-name>
+            <address>
+              <city>Bradford</city>
+              <state>PA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173463224">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247083</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150302</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173463223">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247083</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150302</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A method of hydraulic fracturing in a subterranean formation includes injecting a fluid including a proppant into the subterranean formation, wherein the proppant includes a material adapted to sequester at least one target species, and exposing or contacting at least one of the proppant or the material to/with the at least one target species either prior to injecting the proppant or subsequent to injecting the proppant.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150309</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247083A1</docdb-publication-number>
+      <docdb-application-id>444210067</docdb-application-id>
+      <new-owner>PITTSBURGH, UNIVERSITY OF - OF THE COMMONWEALTH SY</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:KROPF, MATTHEW M.;REEL/FRAME:035111/0345</free-text-description>
+      <effective-date>
+        <date>20150303</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application claims benefit of U.S. Provisional Patent Application Ser. No. 61/946,464, filed Feb. 28, 2014, the disclosure of which is incorporated herein by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">The following information is provided to assist the reader in understanding technologies disclosed below and the environment in which such technologies may typically be used. The terms used herein are not intended to be limited to any particular narrow interpretation unless clearly stated otherwise in this document. References set forth herein may facilitate understanding of the technologies or the background thereof The disclosure of all references cited herein are incorporated by reference.</p>
+      <p id="p-00003-en" num="0003">In general, a proppant is a solid material designed to maintain an induced hydraulic fracture open, either during or after a fracturing process. Proppants are added to fracking fluids which are injected into subterranean formations. Fracking fluids vary in composition depending on the type of fracturing. Proppants may, for example, include treated sand, man-made ceramic materials and/or polymers. Current trends in fracking proppant selection have shifted from the use of silica sand to the use of high strength ceramic particles for deep well completions operations. This trend is based primarily of the strength and size conformation of the proppant material.</p>
+      <heading id="h-00003-en" level="1">SUMMARY</heading>
+      <p id="p-00004-en" num="0004">In one aspect, a method of hydraulic fracturing in a subterranean formation (to open a fracture therein) includes injecting a fluid including a proppant into the subterranean formation, wherein the proppant includes a material adapted to sequester at least one target species, and exposing or contacting at least one of the proppant or the material to/with the at least one target species either prior to injecting the proppant or subsequent to injecting the proppant. The at least one target species may, for example, be carbon dioxide, other gaseous species such as an acid gases, or one or more components or materials present in flow-back water. As used herein, the term “sequester” refers to capturing or fixing a species via interaction therewith (for example, via reaction, adsorption, capture, encapsulation etc.).</p>
+      <p id="p-00005-en" num="0005">In a number of embodiment, the target species may for example be absorbed upon exposure of at least one of the proppant or the material to a fluid (including, a liquid or a gas). In a number of embodiments, at least one of the proppant or the material is exposed to, for example, emissions from a combustion system for a hydrocarbon to expose the proppant or the material to the at least one target species. In a number of embodiments, the fluid including the proppant is injected and the at least one target species is pumped into the fracture after injection of the fluid including the proppant to sequester the at least one target species within the fracture. The proppant or the material may, for example, be exposed to the at least one target species prior to injecting the fluid including the proppant and the fluid including the proppant is thereafter injected to sequester the at least one target species within the fracture.</p>
+      <p id="p-00006-en" num="0006">The material may, for example, be at least 55% by weight of the proppant, at least 75% by weight of the proppant, at least 85% by weight of the proppant, or at least 95% by weight of the proppant. In a number of embodiments, the material may be approximately 100% by weight of the proppant. The material may, for example, be selected from the group consisting of sodium bicarbonates, calcium bicarbonates, olivine, dunite, pyroxene, magnesium silicate, ankerite, dawsonite, serpentine, calcium oxides, magnesium oxides, magnesite, siderite, and dolomite.</p>
+      <p id="p-00007-en" num="0007">In a number of embodiments, the at least one of the proppant includes a bulk proppant core and a layer outside the core which includes the material adapted to sequester the at least one target species. The at least one proppant may further include a completions layer outside the layer including the material adapted to sequester the at least one target species. The completions layer may, for example, (at least temporarily) provide the functionalized proppant wither properties desirable for the completions routine and/or may protect the layer including the material adapted to sequester the at least on target species during completions processes.</p>
+      <p id="p-00008-en" num="0008">In another aspect, a method of sequestering at least one target species includes: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>(i) exposing a proppant for use in subterranean hydrocarbon recovery via hydraulic fracturing which includes a material adapted to sequester the at least one target species at least one of (a) prior to injecting a fluid including the proppant into a subterranean fracture or (b) subsequent to injecting the fluid including the proppant into the subterranean fracture; or</li><li>(ii) exposing the material of the proppant to the at least one target species prior to completing formation of the proppant.</li></ul></li></ul></p>
+      <p id="p-00009-en" num="0011">In a further aspect, a proppant is formed by incorporating a material in the proppant adapted to absorb/sequester at least one target species and exposing at least one of the material or the proppant including the material to the target species.</p>
+      <p id="p-00010-en" num="0012">In still a further aspect, a proppant for use in hydraulic fracturing in a subterranean formation to prop a fracture therein includes a material adapted to sequester at least one target species.</p>
+      <p id="p-00011-en" num="0013">The present devices, systems, methods and compositions, along with the attributes and attendant advantages thereof, will best be appreciated and understood in view of the following description taken in conjunction with any accompanying drawings.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00012-en" num="0014">
+        <figref>FIG. 1</figref> illustrates a bar graph showing greenhouse gas emissions over the life cycle of natural gas production and combustion.</p>
+      <p id="p-00013-en" num="0015">
+        <figref>FIG. 2</figref> illustrates schematically a hydraulically fractured well for the production of, for example, natural gas and the pumping of combustion emissions from an electric power plant into the well for the sequestration of, for example, carbon dioxide in a functionalized proppant.</p>
+      <p id="p-00014-en" num="0016">
+        <figref>FIG. 3A</figref> illustrates the use of a functionalized proppant to prop a hydraulically fractured fissure and the sequestration of carbon dioxide in the functionalized proppant.</p>
+      <p id="p-00015-en" num="0017">
+        <figref>FIG. 3B</figref> illustrates chemical reactions via which carbon dioxide may be sequestered using the mineral olivine or the mineral serpentine.</p>
+      <p id="p-00016-en" num="0018">
+        <figref>FIG. 4</figref> illustrates an embodiment of an engineered or composite proppant including a layer of functionalized material.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DESCRIPTION</heading>
+      <p id="p-00017-en" num="0019">It will be readily understood that the components of the embodiments, as generally described herein and/or illustrated in the figures herein, may be arranged and designed in a wide variety of different configurations in addition to the described representative embodiments. Thus, the following description of representative embodiments or examples, is not intended to limit the scope of the embodiments, as claimed, but is merely representative of embodiments hereof.</p>
+      <p id="p-00018-en" num="0020">Reference throughout this specification to “one embodiment” or “an embodiment” (or the like) means that a particular feature, structure, or characteristic described in connection with the embodiment is included in at least one embodiment. Thus, the appearance of the phrases “in one embodiment” or “in an embodiment” or the like in various places throughout this specification are not necessarily all referring to the same embodiment.</p>
+      <p id="p-00019-en" num="0021">Furthermore, described features, structures, or characteristics may be combined in any suitable manner in one or more embodiments. In the following description, numerous specific details are provided to give a thorough understanding of embodiments. One skilled in the relevant art will recognize, however, that the various embodiments can be practiced without one or more of the specific details, or with other methods, components, materials, et cetera. In other instances, well known structures, materials, or operations are not shown or described in detail to avoid obfuscation.</p>
+      <p id="p-00020-en" num="0022">As used herein and in the appended claims, the singular forms “a,” “an”, and “the” include plural references unless the context clearly dictates otherwise. Thus, for example, reference to “a material” includes a plurality of such materials and equivalents thereof known to those skilled in the art, and so forth, and reference to “the material” is a reference to one or more such materials and equivalents thereof known to those skilled in the art, and so forth. Recitation of ranges of values herein are merely intended to serve as a shorthand method of referring individually to each separate value falling within the range. Unless otherwise indicated herein, each separate value, as well as intermediate ranges of values, are incorporated into the specification as if individually recited herein. All methods described herein can be performed in any suitable order unless otherwise indicated herein or otherwise clearly contraindicated by the text.</p>
+      <p id="p-00021-en" num="0023">In a number of embodiments hereof, proppant particles/materials are provided for use, for example, in hydraulic fracturing (“fracking”) processes used for hydrocarbon recovery (for example, petroleum and natural gas recovery in shale formations). In that regard, a number of “functionalized” proppants hereof exhibit appropriate physiochemical properties for use in fracking procedures (for example, exhibit suitable strength and size for deep well completions) with one or more additional properties which can be utilized prior to fracking and/or in post-completions processes/routines. For example, one or more materials of the proppants hereof may absorb certain chemical/target species such as carbon dioxide (CO<sub>2</sub>), hydrogen sulfide (H<sub>2</sub>S), carbon monoxide (CO) and/or other chemical species so that chemical such species can be sequestered in subterranean formations under use of the proppant in fracking processes. In a number of embodiments hereof, the representative example of absorbing and sequestering carbon dioxide is set forth.</p>
+      <p id="p-00022-en" num="0024">In several such representative embodiments, a carbon dioxide absorbing or sequestering material is used in proppants hereof so that the proppant can be used to effect carbon dioxide absorption/sequestration. Examples of carbon dioxide-absorbing materials suitable for use herein include, but are not limited to, sodium bicarbonates, calcium bicarbonates, olivine, dunite, pyroxene, magnesium silicate, ankerite, dawsonite, serpentine, calcium oxides, magnesium oxides, magnesite, siderite, dolomite, and/or other similar carbon-adsorbing materials and minerals. The carbon dioxide absorbing or sequestering material hereof may, for example, make up (by weight) at least 55%, at least 65%, at least 75%, at least 85%, at least 95% or 100% of the proppant. The proppants hereof may, for example, be manufactured directly from the materials/minerals through, for example, grinding to achieve appropriate size and shape distributions, or the proppants may be manufactured from the materials/minerals and derivatives thereof into, for example, a composite system (for example, a ceramic) with composite properties. Processing of the materials/minerals in forming proppants should not, however, substantially limit the ability of the materials to absorb/sequester CO<sub>2 </sub>(and/or other target species to be absorbed/sequestered) in the formed proppant in embodiments in which the formed proppant is to absorb/sequester CO<sub>2</sub>. A number of desirable properties of proppants are set forth in the international standard ISO 13503-2 (API RP 19C) (the disclosure of which is incorporated herein by reference). A number of such properties are set forth in Table 1 below to provide guidance in selecting carbon-absorbing/sequestering materials for use in proppants hereof. Table 1 also sets forth data for a minimally processed dunite sample.</p>
+      <p id="p-00023-en" num="0025">Smaller proppants may spread farther into fractures and provide superior conductivity. However, crush resistance is important to prevent crushing of the proppants into very small particles or “fines” which may lead to decreased conductivity. In general, spherical proppants handle higher stresses and resist crushing better than non-spherical proppants. Proppants should be transportable into fractures and fissures, be compatible with fracturing and wellbore fluids, allow acceptable cleanup of fracturing fluids and resist flowback. Other desirable properties of proppants include thermal stability, chemical stability, environmental safety and ready availability. In addition to predetermining desirable properties for fracturing proppants, the performance of proppants may also be studied under realistic conditions to, for example, measure conductivity and other characteristics under conditions that may be unique to a particular reservoir. Proppant characteristics and engineering of proppants is, for example, discussed in Lyle, D., “Proppants Open Production Pathways,” E&amp;P, Hart Energy Publishing, Houston, Tex. (2011), the disclosure of which is incorporated herein by reference.</p>
+      <p id="p-00024-en" num="0026">In a number of embodiments, a producing well in which the proppants hereof are used in a fracking fluid may feed methane and/or other hydrocarbon(s) to one or more combustion systems. Subsequently, emissions (or a portion/fraction thereof) from the combustions system may be pumped into or “cycled back” to the well/fracture to effect permanent sequestration of at least one target species in the emissions via interaction with the proppants hereof. The adsorption of the at least one target species of the combustion emissions by the proppants hereof may, for example, result in proppant hardening and/or swelling, which can further enhance recovery from the producing formation. Alternatively, the materials/minerals of the proppants hereof or the manufactured proppants can be exposed to combustion emissions (or a portion/fraction thereof) prior to inclusion of the proppants in a fracking fluid so that such at least one target species from the emissions is sequestered upon use of the proppants. One or more chemically interactive or reactive species may, for example, be applied to or immobilized on proppants hereof to enhance hydrocarbon recovery, enhance emission sequestration, or to otherwise interact with recovery/production fluids.</p>
+      <p id="p-00025-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="119pt" align="left" />
+              <colspec colname="2" colwidth="56pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="3" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>ISO 13503-2</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Property</entry>
+                  <entry>Standard</entry>
+                  <entry>Dunite</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Turbidity (NTU)</entry>
+                  <entry>≦250</entry>
+                  <entry>243</entry>
+                </row>
+                <row>
+                  <entry>Krumbein Shape Factors</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Roundness</entry>
+                  <entry>≧0.6</entry>
+                  <entry>0.5</entry>
+                </row>
+                <row>
+                  <entry>Sphericity</entry>
+                  <entry>≧0.6</entry>
+                  <entry>0.5</entry>
+                </row>
+                <row>
+                  <entry>Clusters (%)</entry>
+                  <entry>≦1.0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry>Bulk Density (g/cc)</entry>
+                  <entry />
+                  <entry>1.33</entry>
+                </row>
+                <row>
+                  <entry>Bulk Density (lb/ft<sup>3</sup>)</entry>
+                  <entry />
+                  <entry>83.22</entry>
+                </row>
+                <row>
+                  <entry>Specific Gravity</entry>
+                  <entry />
+                  <entry>2.62</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="98pt" align="center" />
+              <colspec colname="2" colwidth="21pt" align="center" />
+              <colspec colname="3" colwidth="56pt" align="char" char="." />
+              <colspec colname="4" colwidth="42pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Particle Size Distribution, mm</entry>
+                  <entry>Sieve</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>1.180</entry>
+                  <entry>16</entry>
+                  <entry>≦0.1</entry>
+                  <entry>0.1</entry>
+                </row>
+                <row>
+                  <entry>0.850</entry>
+                  <entry>20</entry>
+                  <entry />
+                  <entry>35.5</entry>
+                </row>
+                <row>
+                  <entry>0.710</entry>
+                  <entry>25</entry>
+                  <entry />
+                  <entry>30.6</entry>
+                </row>
+                <row>
+                  <entry>0.600</entry>
+                  <entry>30</entry>
+                  <entry />
+                  <entry>22.3</entry>
+                </row>
+                <row>
+                  <entry>0.500</entry>
+                  <entry>35</entry>
+                  <entry />
+                  <entry>9.8</entry>
+                </row>
+                <row>
+                  <entry>0.425</entry>
+                  <entry>40</entry>
+                  <entry />
+                  <entry>1.0</entry>
+                </row>
+                <row>
+                  <entry>0.300</entry>
+                  <entry>50</entry>
+                  <entry />
+                  <entry>0.1</entry>
+                </row>
+                <row>
+                  <entry>&lt;0.300  </entry>
+                  <entry>Pan</entry>
+                  <entry>≦1.0</entry>
+                  <entry>0.6</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="119pt" align="center" />
+              <colspec colname="2" colwidth="56pt" align="char" char="." />
+              <colspec colname="3" colwidth="42pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Total</entry>
+                  <entry />
+                  <entry>100.0</entry>
+                </row>
+                <row>
+                  <entry>% In Size</entry>
+                  <entry>≧90</entry>
+                  <entry>63.7</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Mean Particle Diameter, mm</entry>
+                  <entry />
+                  <entry>0.773</entry>
+                </row>
+                <row>
+                  <entry>Median Particle Diameter (MPD), mm</entry>
+                  <entry />
+                  <entry>0.751</entry>
+                </row>
+                <row>
+                  <entry>Solubility in 12/3 HCL/HF for </entry>
+                  <entry>≦2.0</entry>
+                  <entry>33.8</entry>
+                </row>
+                <row>
+                  <entry>0.5 HR @ 150° F. </entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>(% Weight Loss)</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Settling Rate (ft/min)</entry>
+                  <entry />
+                  <entry>93.9</entry>
+                </row>
+                <row>
+                  <entry>Crush Properties</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>ISO Crush Analysis (% Fines)</entry>
+                  <entry>≦10</entry>
+                  <entry>15.8</entry>
+                </row>
+                <row>
+                  <entry>4 lb/ft2@ 2,000 psi</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00026-en" num="0027">A number of benefits are provided by using the proppants hereof in modern fracking procedures (for example, in hydraulically fractured shale formations). The functionality of the proppant may, for example, be made to enhance production from the formation during or after completions routines. Moreover, the functionalized proppants hereof may also, and in some cases concurrently, react with or otherwise fix/sequester unwanted byproducts associated with the production or use of recovered hydrocarbons (such as combustion emissions and contaminated flow-back water) to permanently fix such byproducts within the producing formation. Such benefits may increase well production, enhance profitability and/or reduce waste impact of hydraulically fractured reservoirs (for example, shale oil and/or gas reservoirs).</p>
+      <p id="p-00027-en" num="0028">Materials in flow-back water which may be fixed/sequestered by functionalized proppants hereof include, but are not limited to, clays, chemical additives, dissolved metal ions, total suspended particles (TSP), total dissolved solids (TDS), and radioactive materials. TDS may, for example, include sodium, magnesium, potassium, and other salts as well as minerals including but not limited to barium, calcium, and iron. TSP may, for example, include clay, minerals, and other colloidal particles. Dissolved metal ions may, for example, include copper, iron, lead, cobalt, and chromium. Chemical additives may, for example, include gelling agents, scale inhibitors, breakers, crosslinkers, biocides, corrosion inhibitors, acids, friction reducers, surfactants, and salts. Radioactive materials (in the case of produced water) may, for example, include radium isotopes.</p>
+      <p id="p-00028-en" num="0029">Functional materials for inclusion into proppants for interaction with material in flow-back water may, for example, include proteins, enzymes, bentonite, activated carbon, chitin, acids, bases, synthetic polymer and natural polymers. The properties required of such functional materials may vary with the intended purpose. Functional proppants for interaction with flow-back water may, for example, form a filter-like super-structure of packed functionalized proppants, where the property is achieved by either proppant placement and/or proppant materials encouraging or facilitating binding under packing conditions.</p>
+      <p id="p-00029-en" num="0030">The use of the functionalized fracking proppant technology hereof represents a paradigm shift in the progression of engineered fracking proppants. Currently available advanced engineered proppants are optimized for only primary production productivity, while the functionalized proppants hereof offer, for example, preproduction, secondary production and/or post completions functionality. In that regard, the functionalized fracking proppants hereof not only improve or maximize well productivity through controlled shape and hardness, but are also chemically designed for preproduction, secondary production and/or post completions functionality.</p>
+      <p id="p-00030-en" num="0031">
+        <figref>FIG. 1</figref> illustrates a study of greenhouse gas emissions over the life-cycle of the production and combustion of natural gas from a fracking operation. As seen from <figref>FIG. 1</figref>, the majority of greenhouse gas emissions arise from CO<sub>2 </sub>emitted during the combustions cycle. Although natural gas is one of the cleanest fuels for the efficient production of electricity, the life cycle greenhouse gas emissions associated therewith are higher than a number of alternative energy options such as solar power, wind power and nuclear power.</p>
+      <p id="p-00031-en" num="0032">
+        <figref>FIGS. 2 and 3A</figref> schematically illustrate the fracking process and the use of functionalized fracking proppants hereof to sequester, for example, CO<sub>2 </sub>from an electric power plant within hydraulic fractured strata. In hydraulic fracturing or fracking, a high-pressure fluid is injected into a wellbore to create cracks, fractures or fissures in the deep-rock formations through which natural gas, petroleum, and brine will flow more freely. After the hydraulic pressure is removed from the well, small grains of hydraulic fracturing proppants hold the fissures open (see, for example, <figref>FIG. 3A</figref>). As illustrated in <figref>FIG. 2</figref>, natural gas turbine exhaust from an electric power plant can be cycled back into a completed hydraulic fracking reservoir. As illustrated in <figref>FIG. 3A</figref>, the proppant carbonized, altering physical properties thereof, which may potentially benefit secondary production from the well. <figref>FIG. 3B</figref> illustrates chemical reactions of the representative examples of olivine and serpentine that demonstrate how the functionalized proppants hereof are carbonized. By sequestering CO<sub>2 </sub>from the electric power plant via carbonization of the functionalized proppants hereof, the electricity produced from the electric power plant has lower effective carbon emissions.</p>
+      <p id="p-00032-en" num="0033">As seen from Table 1, various materials such as dunite used in functionalize fracking proppants hereof may not possess physical characteristics that are optimized for use as fracking proppants. In a number of embodiments, such minerals or materials may be incorporated into an engineered fracking proppant using engineering principles developed in the fracking proppant arts to improve or optimize properties desirable for fracking proppants such as sphericity and hardness/crushing resistance. <figref>FIG. 4</figref> illustrates a representative example of an engineered proppant <b>10</b> hereof incorporating a functional or functionalized material layer <b>20</b> (for example, functional to sequester a species such as CO<sub>2</sub>, provide flow-back water treatment and/or enhance secondary recovery), a bulk proppant material core <b>30</b> and an outer completions layer <b>40</b>. Completions layer or surface <b>40</b> provides functionality for well completion and may provide chemical isolation of functional material layer <b>20</b>. Bulk proppant material core <b>30</b> may, for example, provide bulk material properties desirable for completions processes, including, for example, mechanical properties/strength and conformation/shape. Bulk proppant material core <b>30</b> may, for example, be a silica sand or a sintered or ceramic material as known in the fracturing proppant arts. Completions layer <b>40</b> may, for example, be a polymeric or resin layer as known in the fracturing proppant arts.</p>
+      <p id="p-00033-en" num="0034">Completions layer <b>40</b> may, for example, include or be formed of a permeable, removable, or degrading material that, at least temporarily provides the functionalized proppant wither properties desirable for the completions routine. For example, completions layer <b>40</b> of functionalized proppant <b>10</b> hereof may contain or form a coating that is not dissolvable in an acidic environment (for example, within HCl) which prevents the functionalized surface, or remaining subsurface (for example dunite, etc.) from dissolving in acidic completions fluids. Completions layer <b>40</b> may, for example, later be removed via, for example, flushing a chemical additive subsequent to the completions routine, degrade naturally, or be designed to be permeable to the sequestered species (for example, CO<sub>2</sub>). Once again, completions layer <b>40</b> may include resins and polymers. An engineered proppant such as proppant <b>10</b> may, for example, be manufactured using applied engineering principles via sintering, application of coatings, drying, and physical compaction.</p>
+      <p id="p-00034-en" num="0035">The foregoing description and accompanying drawings set forth a number of representative embodiments at the present time. Various modifications, additions and alternative designs will, of course, become apparent to those skilled in the art in light of the foregoing teachings without departing from the scope hereof, which is indicated by the following claims rather than by the foregoing description. All changes and variations that fall within the meaning and range of equivalency of the claims are to be embraced within their scope.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>. A method of hydraulic fracturing in a subterranean formation, comprising:
+<claim-text>injecting a fluid comprising a proppant into the subterranean formation, the proppant comprising a material adapted to sequester at least one target species;</claim-text><claim-text>exposing at least one of the proppant or the material to the at least one target species at least one of prior to injecting the proppant or subsequent to injecting the proppant.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the at least one target species is carbon dioxide.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00002-en">claim 2</claim-ref> wherein at least one of the proppant or the material is exposed to emissions from a combustion system including the at least one target species.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the fluid comprising the proppant is injected and the at least one target species is pumped into the fracture after injection of the fluid comprising the proppant to sequester the at least one target species within the fracture.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein at least one of the proppant or the material is exposed to the at least one target species prior to injecting the fluid comprising the proppant, and the fluid comprising the proppant is thereafter injected to sequester the at least one target species within the fracture.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the material is selected from the group consisting of sodium bicarbonates, calcium bicarbonates, olivine, dunite, pyroxene, magnesium silicate, ankerite, dawsonite, serpentine, calcium oxides, magnesium oxides, magnesite, siderite, and dolomite.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00002-en">claim 2</claim-ref> wherein the material is selected from the group consisting of sodium bicarbonates, calcium bicarbonates, olivine, dunite, pyroxene, magnesium silicate, ankerite, dawsonite, serpentine, calcium oxides, magnesium oxides, magnesite, siderite, and dolomite.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the material comprises at least 55% by weight of the proppant.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the at least one of the proppant comprises a bulk proppant core and a layer outside the bulk proppant core comprising the material adapted to sequester the at least one target species.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00009-en">claim 9</claim-ref> wherein the at least one proppant further comprises a completions layer outside the layer comprising the material adapted to sequester the at least one target species, the completions layer providing protection to the layer comprising the material adapted to sequester the at least on target species during completions processes.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein the at least one target species is a material present in flow-back water.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. A method of sequestering at least one target species, comprising:
+<claim-text>(i) exposing a proppant for use in subterranean hydrocarbon recovery via hydraulic fracturing which comprises a material adapted to sequester the at least one target species at least one of (a) prior to injecting a fluid comprising the proppant into a subterranean fracture or (b) subsequent to injecting the fluid comprising the proppant into the subterranean fracture; or</claim-text><claim-text>(ii) exposing the material of the proppant to the at least one target species prior to completing formation of the proppant.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein the at least one target species is carbon dioxide.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00012-en">claim 12</claim-ref> wherein the at least one target species is a material present in flow-back water.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>14</b>. A proppant for use in hydraulic fracturing in a subterranean formation to prop a fracture therein, comprising a material adapted to sequester at least one target species.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>15</b>. The proppant of <claim-ref idref="clm-00015-en">claim 14</claim-ref> wherein the at least one target species is carbon dioxide.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>16</b>. The proppant of <claim-ref idref="clm-00015-en">claim 14</claim-ref> wherein the material is selected from the group consisting of sodium bicarbonates, calcium bicarbonates, olivine, dunite, pyroxene, magnesium silicate, ankerite, dawsonite, serpentine, calcium oxides, magnesium oxides, magnesite, siderite, and dolomite.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>17</b>. The proppant of <claim-ref idref="clm-00016-en">claim 15</claim-ref> wherein the material is selected from the group consisting of sodium bicarbonates, calcium bicarbonates, olivine, dunite, pyroxene, magnesium silicate, ankerite, dawsonite, serpentine, calcium oxides, magnesium oxides, magnesite, siderite, and dolomite.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>18</b>. The proppant of <claim-ref idref="clm-00016-en">claim 15</claim-ref> wherein the material comprises at least 55% by weight of the proppant.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>19</b>. The proppant of <claim-ref idref="clm-00015-en">claim 14</claim-ref> further comprises a bulk proppant core and a layer outside the bulk proppant core comprising the material adapted to sequester the at least one target species.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>20</b>. The proppant of <claim-ref idref="clm-00020-en">claim 19</claim-ref> further comprising a completions layer outside the layer comprising the material adapted to sequester the at least one target species, the completions layer providing protection to the layer comprising the material adapted to sequester the at least one target species during completions processes.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247083A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150247083A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247083A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247083A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150247083A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247083A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150247083A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247083A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150247083A1_00005.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150247083A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150247083A1.PDF" type="pdf" size="509600" pages="9" />
+</lexisnexis-patent-document>

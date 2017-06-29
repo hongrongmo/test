@@ -1,0 +1,960 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257583A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030203" date-changed="20150928" time-changed="061051">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121315511">
+        <country>US</country>
+        <doc-number>20150257583</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14723032</doc-number>
+        <date>20150527</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>DE</country>
+        <doc-number>102010021849</doc-number>
+        <date>20100528</date>
+      </priority-claim>
+      <priority-claim sequence="2" kind="national">
+        <country>DE</country>
+        <doc-number>102010044945</doc-number>
+        <date>20100910</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>A47J  31/40        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>31</main-group>
+        <subgroup>40</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A47J  31/44        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>31</main-group>
+        <subgroup>44</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>A47J  31/407       20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>31</main-group>
+        <subgroup>407</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A47J  31/3628      20130101 LI20130425BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>31</main-group>
+        <subgroup>3628</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130425</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A47J  31/3633      20130101 LI20150115BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>31</main-group>
+        <subgroup>3633</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150115</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A47J  31/4403      20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>47</class>
+        <subclass>J</subclass>
+        <main-group>31</main-group>
+        <subgroup>4403</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">12</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">BREWING APPARATUS FOR EXTRACTING A PORTION CAPSULE</invention-title>
+    <related-documents date-changed="20150917">
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13687045</doc-number>
+              <date>20121128</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007230</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>WO</country>
+              <doc-number>/EP2011/000271</doc-number>
+              <date>20110124</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+            <parent-pct-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>PCT/EP2011/000271</doc-number>
+                <date>20110124</date>
+              </document-id>
+            </parent-pct-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13687045</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>EUGSTER/FRISMAG AG</orgname>
+            <address>
+              <city>Amriswil</city>
+              <country>CH</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>CH</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>FISCHER</last-name>
+            <first-name>Daniel</first-name>
+            <address>
+              <city>Romanshorn</city>
+              <country>CH</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>SEGER</last-name>
+            <first-name>Christof</first-name>
+            <address>
+              <city>Kesswill</city>
+              <country>CH</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>HUEPPI</last-name>
+            <first-name>Marcel W.</first-name>
+            <address>
+              <city>Rorschacherberg</city>
+              <country>CH</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>EP11000271</doc-number>
+        <date>20110124</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2011147491</doc-number>
+        <date>20111201</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150917">
+      <main-family family-id="146189552">
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2800915</doc-number>
+            <kind>A1</kind>
+            <date>20111201</date>
+          </document-id>
+          <application-date>
+            <date>20110124</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020130098891</doc-number>
+            <kind>A</kind>
+            <date>20130905</date>
+          </document-id>
+          <application-date>
+            <date>20110124</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2011257614</doc-number>
+            <kind>A1</kind>
+            <date>20130110</date>
+          </document-id>
+          <application-date>
+            <date>20110124</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103200849</doc-number>
+            <kind>A</kind>
+            <date>20130710</date>
+          </document-id>
+          <application-date>
+            <date>20110124</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>RU</country>
+            <doc-number>2557491</doc-number>
+            <kind>C2</kind>
+            <date>20150720</date>
+          </document-id>
+          <application-date>
+            <date>20110124</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2011147491</doc-number>
+            <kind>A1</kind>
+            <date>20111201</date>
+          </document-id>
+          <application-date>
+            <date>20110124</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2575564</doc-number>
+            <kind>A1</kind>
+            <date>20130410</date>
+          </document-id>
+          <application-date>
+            <date>20110124</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2910155</doc-number>
+            <kind>A1</kind>
+            <date>20150826</date>
+          </document-id>
+          <application-date>
+            <date>20110124</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2013529956</doc-number>
+            <kind>A</kind>
+            <date>20130725</date>
+          </document-id>
+          <application-date>
+            <date>20110124</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>RU</country>
+            <doc-number>2012157627</doc-number>
+            <kind>A</kind>
+            <date>20140710</date>
+          </document-id>
+          <application-date>
+            <date>20110124</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20130084376</doc-number>
+            <kind>A1</kind>
+            <date>20130404</date>
+          </document-id>
+          <application-date>
+            <date>20121128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257583</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150527</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2011147491</doc-number>
+            <kind>A8</kind>
+            <date>20130411</date>
+          </document-id>
+          <application-date>
+            <date>20110124</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="155372014">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2011147591</doc-number>
+            <kind>A1</kind>
+            <date>20111201</date>
+          </document-id>
+          <application-date>
+            <date>20110530</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2800915</doc-number>
+            <kind>A1</kind>
+            <date>20111201</date>
+          </document-id>
+          <application-date>
+            <date>20110124</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103002782</doc-number>
+            <kind>A</kind>
+            <date>20130327</date>
+          </document-id>
+          <application-date>
+            <date>20110530</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020130098891</doc-number>
+            <kind>A</kind>
+            <date>20130905</date>
+          </document-id>
+          <application-date>
+            <date>20110124</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>RU</country>
+            <doc-number>2557491</doc-number>
+            <kind>C2</kind>
+            <date>20150720</date>
+          </document-id>
+          <application-date>
+            <date>20110124</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2011147491</doc-number>
+            <kind>A1</kind>
+            <date>20111201</date>
+          </document-id>
+          <application-date>
+            <date>20110124</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2011257556</doc-number>
+            <kind>A1</kind>
+            <date>20130117</date>
+          </document-id>
+          <application-date>
+            <date>20110530</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2011257614</doc-number>
+            <kind>A1</kind>
+            <date>20130110</date>
+          </document-id>
+          <application-date>
+            <date>20110124</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103200849</doc-number>
+            <kind>A</kind>
+            <date>20130710</date>
+          </document-id>
+          <application-date>
+            <date>20110124</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2910155</doc-number>
+            <kind>A1</kind>
+            <date>20150826</date>
+          </document-id>
+          <application-date>
+            <date>20110124</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>RU</country>
+            <doc-number>2012157627</doc-number>
+            <kind>A</kind>
+            <date>20140710</date>
+          </document-id>
+          <application-date>
+            <date>20110124</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>RU</country>
+            <doc-number>2546472</doc-number>
+            <kind>C2</kind>
+            <date>20150410</date>
+          </document-id>
+          <application-date>
+            <date>20110530</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20130084376</doc-number>
+            <kind>A1</kind>
+            <date>20130404</date>
+          </document-id>
+          <application-date>
+            <date>20121128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257583</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150527</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2800918</doc-number>
+            <kind>A1</kind>
+            <date>20111201</date>
+          </document-id>
+          <application-date>
+            <date>20110530</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>DE</country>
+            <doc-number>102010044945</doc-number>
+            <kind>A1</kind>
+            <date>20111201</date>
+          </document-id>
+          <application-date>
+            <date>20100910</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2575564</doc-number>
+            <kind>A1</kind>
+            <date>20130410</date>
+          </document-id>
+          <application-date>
+            <date>20110124</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2575568</doc-number>
+            <kind>A1</kind>
+            <date>20130410</date>
+          </document-id>
+          <application-date>
+            <date>20110530</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2013526948</doc-number>
+            <kind>A</kind>
+            <date>20130627</date>
+          </document-id>
+          <application-date>
+            <date>20110530</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2013529956</doc-number>
+            <kind>A</kind>
+            <date>20130725</date>
+          </document-id>
+          <application-date>
+            <date>20110124</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020130079451</doc-number>
+            <kind>A</kind>
+            <date>20130710</date>
+          </document-id>
+          <application-date>
+            <date>20110530</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MX</country>
+            <doc-number>2012013762</doc-number>
+            <kind>A</kind>
+            <date>20130212</date>
+          </document-id>
+          <application-date>
+            <date>20110530</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>RU</country>
+            <doc-number>2012157630</doc-number>
+            <kind>A</kind>
+            <date>20140710</date>
+          </document-id>
+          <application-date>
+            <date>20110530</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>SG</country>
+            <doc-number>185691</doc-number>
+            <kind>A1</kind>
+            <date>20121228</date>
+          </document-id>
+          <application-date>
+            <date>20110530</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20130084363</doc-number>
+            <kind>A1</kind>
+            <date>20130404</date>
+          </document-id>
+          <application-date>
+            <date>20121128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2011147491</doc-number>
+            <kind>A8</kind>
+            <date>20130411</date>
+          </document-id>
+          <application-date>
+            <date>20110124</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A brewing apparatus for extracting a portion capsule includes a first brewing chamber element and a second brewing chamber element, wherein the first and/or the second brewing chamber element are/is movable in an axial direction between a loading position, in which the first and the second brewing chamber elements are spaced apart from each other, and an extraction position, in which the first and the second brewing chamber elements form a substantially closed brewing chamber and wherein the first brewing chamber element has at least one first perforation means for perforating the portion capsule, said perforation means being arranged along the Earth's gravitational field below a horizontal plane extending substantially at a right angle to the gravitational field and centrally through the brewing chamber.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is a Division of Nonprovisional application Ser. No. 13/687,045, filed on Nov. 28, 2012, entitled “BREWING APPARATUS FOR EXTRACTING A PORTION CAPSULE”, which is a Continuation of International Application No. PCT/EP2011/000271, filed on Jan. 24, 2011, entitled BREWING APPARATUS FOR EXTRACTING A PORTION CAPSULE, which applications are both hereby incorporated by reference in their entirety.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">The present invention relates to a brewing apparatus for extracting a portion capsule, comprising a first brewing chamber element and a second brewing chamber element, wherein the first and/or the second brewing chamber element are/is movable in an axial direction between a loading position, in which the first and the second brewing chamber elements are spaced apart from each other, and an extraction position, in which the first and the second brewing chamber elements form a substantially closed brewing chamber.</p>
+      <p id="p-00003-en" num="0003">Brewing apparatuses of this type are known in general. For example, EP 2 077 087 A1 discloses a brewing apparatus for a portion capsule, which brewing apparatus comprises a second brewing chamber element in the form of a receiving element with a cavity for receiving the portion capsule and a first brewing chamber element in the form of a closure element for closing the cavity. The closure element here comprises an injection arrangement for introducing extraction liquid into the portion capsule while the receiving element comprises an extraction arrangement in order to remove the extraction liquid interacting with a beverage substance arranged in the portion capsule from the portion capsule and to supply said extraction liquid to a drinking vessel in order to prepare a beverage. In order to fill the brewing apparatus with the portion capsule, the closure element is transferred into a loading position, in which said closure element is spaced apart from the receiving element. The portion capsule is subsequently inserted into an intermediate space between the receiving element and the closure element and then the closure element is displaced in an axial direction in the direction of the receiving element, as a result of which the portion capsule is inserted into the cavity in the receiving element. In the extraction position, the receiving element and the closure element form a substantially closed brewing chamber for extracting the portion capsule. The beverage substance comprises in particular roast or instant coffee to be extracted. Furthermore, it is known to provide brewing apparatuses of this type with perforation means which perforate the portion capsule in order to introduce the extraction liquid or to conduct away the beverage extract during or after the closing of the brewing chamber.</p>
+      <p id="p-00004-en" num="0004">A disadvantage of such brewing apparatuses is, firstly, that, when the portion capsule is uniformly perforated, in the region of the injection arrangement the flow of extraction liquid passes through the portion capsule along the shortest route, i.e. substantially parallel to the axial direction and at a comparatively high speed, and therefore only a small interaction between the beverage substance and the extraction liquid is obtained. If the capsule is not completely filled with the beverage substance, there is also the risk of the beverage substance sliding downward in the capsule due to gravitational force and the extraction liquid flowing over and beyond the beverage substance in the direction of the outlet opening without significant interaction. Furthermore, there is a potential risk of injury for the user of the brewing apparatus if said user come into contact through the loading opening with the very sharp perforation means.</p>
+      <p id="p-00005-en" num="0005">The invention is therefore based on the object of providing a brewing apparatus for extracting a portion capsule, which brewing apparatus does not have the disadvantages of the prior art and obtains a significantly improved interaction between the beverage substance and the extraction liquid as compared to the prior art, thus improving the taste quality of the extracted beverage. Furthermore, a comparatively safe and error-free insertion of the portion capsule is intended to be made possible.</p>
+      <heading id="h-00003-en" level="1">SUMMARY</heading>
+      <p id="p-00006-en" num="0006">This object is achieved according to the invention by a brewing apparatus for extracting a portion capsule, comprising a first brewing chamber element and a second brewing chamber element, wherein the first and/or the second brewing chamber element are/is movable in an axial direction between a loading position, in which the first and the second brewing chamber elements are spaced apart from each other, and an extraction position, in which the first and the second brewing chamber elements form a substantially closed brewing chamber and wherein the first brewing chamber element has at least one first perforation means for perforating the portion capsule, said perforation means being arranged along the Earth's gravitational field below a horizontal plane extending substantially at a right angle to the gravitational field and substantially centrally through the brewing chamber.</p>
+      <p id="p-00007-en" num="0007">When the portion capsule is perforated by the at least one first perforation means arranged below the horizontal plane, in particular a perforation hole, which is arranged below the horizontal plane, is advantageously produced in the portion capsule. The extraction liquid which flows, for example, through said at least one perforation hole into the portion capsule therefore does not pass through the portion capsule over the shortest route, i.e. in particular strictly parallel to the axial direction, but rather the flow direction of the extraction liquid in the interior of the portion capsule will change and fan out instead. In this case, the extraction liquid flows at angles inclined in relation to the axial direction through the portion capsule, as a result of which the interaction distance and the interaction time between the beverage substance arranged in the interior of the portion capsule and the extraction liquid passing through the portion capsule during the extraction operation are therefore increased, thus improving the taste quality of the beverage to be extracted. Furthermore, efficient interaction between the beverage substance and the extraction liquid is ensured even if the portion capsule is not completely filled with beverage substance, since the extraction liquid is introduced into the portion capsule below the horizontal plane and therefore directly in the region of the beverage substance which has slid downward due to gravitational force. Furthermore, it is advantageously possible in this manner to obtain the taste quality known from the prior art using a reduced quantity of the beverage substance contained in the portion capsule. A further advantage of the brewing chamber according to the invention is that, when the portion capsule is introduced between the first and second brewing chamber elements, sticking of the portion capsule against the at least one first perforation means can be prevented in a simple manner, since the at least one first perforation means is spaced as far as possible from the insertion opening for the portion capsule in the case of the brewing apparatus according to the invention. Furthermore, by means of said distance between the at least one first perforation means and the insertion opening, which distance is increased in comparison to the prior art, the risk of injury for a user of the brewing apparatus is considerably reduced.</p>
+      <p id="p-00008-en" num="0008">According to a further subject matter or a preferred development of the present invention, it is provided that the first brewing chamber element has a base surface facing the second brewing chamber element, wherein the first brewing chamber element has a plurality of first perforation means, wherein the first perforation means are arranged within an angular range of at maximum 230 degrees about the central point. In the case of a portion capsule which is only partially filled with beverage substance, the portion capsule is advantageously perforated only where the beverage substance is also arranged (which, for example, has slid downward due to the effect of the gravitational force). In this case, the angular range of at maximum 230 degrees ensures that efficient extraction is obtained even if the slipped beverage substance protrudes, for example, upward over the horizontal plane (in this case, more than half of the portion capsule is filled with beverage substance). The first brewing chamber element preferably comprises at least four first perforation means in order to obtain as high a throughput of extraction liquid as possible. The first perforation means are preferably arranged in an asymmetrically distributed manner in relation to a plane extending in the axial direction. The plane here comprises in particular the horizontal plane extending at a right angle to the gravitational field and centrally through the brewing chamber. The first perforation means are in particular arranged with a substantially constant radius about a central point of the base surface. That wall of the portion capsule which faces the first brewing chamber element is therefore advantageously in particular not perforated centrally but rather in the edge region thereof. Since the portion capsule is particularly stable in the edge region, for example because of the flange of the portion capsule and/or because of the connection to the side walls of the portion capsule, the material of the portion capsule, in particular the portion capsule cover, only insignificantly yields at this point during the perforation operation, thus ensuring a more reliable and simpler perforation operation.</p>
+      <p id="p-00009-en" num="0009">According to a preferred embodiment of the present invention, the first brewing chamber element comprises precisely one single first perforation means. A comparatively simple and reliable insertion of the portion capsule is therefore advantageously ensured in the loading position, since the risk of the portion capsule remaining stuck to perforation means in the region of the insertion opening is effectively avoided. Furthermore, the risk of injury for a user of the brewing apparatus is considerably reduced in comparison to the prior art, since there is only one single first perforation means and, furthermore, this one first perforation means is arranged spaced apart from the insertion opening. If a user places a finger into the insertion opening, said finger will advantageously generally reach the first perforation means only with difficulty, if at all. The first perforation means is preferably arranged substantially in a lower edge region of the first brewing chamber element in the gravitational field in order to produce a maximum distance between the insertion opening and the first perforation means. Furthermore, during the extraction operation, the one first perforation means produces a comparatively large swirling of the extraction liquid in the portion capsule, and as long an interaction distance as possible, thus having a positive influence on the taste quality of the beverage to be extracted. Furthermore, the portion capsule is perforated by the first perforation means in the lower region of said capsule, in which the beverage substance is always also located due to the effect of the gravitational force (even if the portion capsule is only partially filled with beverage substance).</p>
+      <p id="p-00010-en" num="0010">According to a preferred development, it is provided that, in the loading position, the portion capsule is fed in a loading direction between the first and the second brewing chamber elements, wherein the loading direction is oriented substantially at a right angle to the horizontal direction. The portion capsule is therefore advantageously inserted into the brewing apparatus under the concomitant action of the gravitational force. A user in particular merely has to drop the portion capsule, thus substantially simplifying the loading operation.</p>
+      <p id="p-00011-en" num="0011">It is conceivable for the first brewing chamber element in the loading position preferably to be inclined in relation to the second brewing chamber element in order to enable the brewing apparatus to be loaded in as simple a manner as possible with a portion capsule. In this case, the movement from the loading position into the extraction position comprises, for example, an axial displacement of the first brewing chamber element in the axial direction and also a pivoting of the first brewing chamber element parallel to the second brewing chamber element. Particularly preferably, it is provided that, after the brewing chamber has been filled with a portion capsule and in order to initiate the brewing operation, the first brewing chamber element is moved from the loading position at least in the axial direction in the direction of the second brewing chamber element in order to reach the extraction position. In this case, the first brewing chamber element is preferably pivoted through an angle of between 1 and 40 degrees, particularly preferably between 1 and 20 degrees, and very particularly preferably between 1 and 10 degrees.</p>
+      <p id="p-00012-en" num="0012">According to a further subject matter or a preferred development of the present invention, it is provided that the brewing apparatus is designed in such a manner that, upon movement of the first and/or second brewing chamber element from the loading position into the extraction position, the portion capsule is perforated substantially sequentially by a plurality of first perforation means of the first brewing chamber element. A reduction in the required force necessary for perforating the portion capsule by means of the first perforation means can therefore be obtained in an advantageous manner, since not all of the first perforation means penetrate the portion capsule simultaneously.</p>
+      <p id="p-00013-en" num="0013">According to a further subject matter or a preferred development of the present invention, it is provided that the brewing device is designed in such a manner that, upon movement of the first and/or the second brewing chamber element from the loading position into the extraction position, the portion capsule is first of all perforated by the at least one first perforation means of the first brewing chamber element and only then is perforated by at least one second perforation means of the second brewing chamber element. The portion capsule is therefore advantageously first of all perforated on the side of the first brewing chamber element and only then on the side of the second brewing chamber element. The effort required overall for perforating the portion capsule is therefore reducible. It is also conceivable for the first brewing chamber element to have a multiplicity of first perforation means.</p>
+      <p id="p-00014-en" num="0014">According to a further subject matter or a preferred development of the present invention, it is provided that in the loading position, the portion capsule is fed in a loading direction between the first and the second brewing chamber elements, wherein the first brewing chamber element has at least one first perforation means for perforating the portion capsule, and wherein the cutting plane of the at least one first perforation means is oriented substantially at a right angle to the loading direction. The risk of injury for a user of the brewing apparatus is therefore advantageously considerably reduced. A user who, for example, reaches with his/her finger in the loading direction into the region between the first and second brewing chamber elements moves his/her finger perpendicularly to the cutting plane, thus reducing the risk of a cutting injury. In particular, the risk of direct contact of the finger with the cutting edge of the at least one first perforation means designed in particular as a cutting blade is reduced, since, during a movement in the loading direction, the finger primarily contacts only the blunt side of the cutting blade. Within the context of the present invention, the wording “substantially perpendicular” means in particular that the cutting plane extends perpendicularly to the loading direction at least in a transverse direction perpendicular to the axial direction. The angle between the cutting plane and the loading direction preferably comprises an angle of between 50 and 130 degrees, particularly preferably between 70 and 110 degrees, and very particularly preferably between 80 and 100 degrees. Alternatively, the first brewing chamber element has a plurality of first perforation means.</p>
+      <p id="p-00015-en" num="0015">According to a preferred development, it is provided that the brewing apparatus has a feeding opening which is provided for feeding the portion capsule in a loading direction between the first and the second brewing chamber elements, wherein, preferably, at least the one first perforation means has a cutting plane, which is oriented substantially perpendicular to the loading direction, at the smallest distance from the feeding opening. A risk of injury for the user is based in particular on the first perforation means which is the closest to the feeding opening for loading the brewing apparatus with a portion capsule in comparison to the remaining first perforation means, if more than one first perforation means is provided at all, and therefore already simply by an appropriate orientation of said at least one first perforation means, the risk of injury is substantially reduced.</p>
+      <p id="p-00016-en" num="0016">According to a preferred development, it is provided that the at least one first perforation means is designed as a perforation point which protrudes from the first brewing chamber element substantially in the direction of the second brewing chamber element. The at least one perforation point preferably has a substantially linear cross section in the axial direction of preferably rectilinear or curved design. In particular, the at least one perforation point has a substantially triangular profile perpendicular to the axial direction. This permits a comparatively simple perforation with little effort, since the piercing resistance is comparatively low. Alternatively, the first brewing chamber element has a plurality of first perforation means which are each designed in the form of a perforation point.</p>
+      <p id="p-00017-en" num="0017">According to a preferred development, it is provided that the first brewing chamber element, on an end side facing the second brewing chamber element, has a perforation element which comprises a central surface region which is connected integrally along the circumference thereof to the at least one perforation means. The perforation element is produced in particular by the at least one first perforation means being bent in relation to the surface region by buckling. This permits a particularly stable design and fastening of the at least one first perforation means and at the same time cost-effective production. Alternatively, the perforation element has a plurality of first perforation means which are each designed in the form of a bent-over perforation point.</p>
+      <p id="p-00018-en" num="0018">According to a preferred development, it is provided that the first brewing chamber element and in particular the perforation element has, in the surface region, at least one water outlet opening for feeding liquid into the portion capsule perforated by means of the at least one first perforation means, wherein, preferably, the water outlet opening is arranged substantially adjacent to the at least one first perforation means. The extraction liquid is therefore advantageously introduced into the brewing chamber directly into the region of the perforation openings, and therefore the extraction liquid can flow into the portion capsule virtually without loss of pressure. As an alternative, the perforation element has a plurality of water outlet openings which are each arranged adjacent to the first perforation means if the brewing apparatus is intended to have a plurality of first perforation means.</p>
+      <p id="p-00019-en" num="0019">According to a preferred development, it is provided that the second brewing chamber element has at least one second perforation means which is arranged asymmetrically in relation to the plane and in particular in relation to the horizontal plane, wherein the second perforation means is preferably arranged below the horizontal plane. Therefore, in particular an opening for conducting the extraction liquid out of the portion capsule is advantageously produced. In an advantageous manner, said opening lies below the horizontal plane, thus assisting the abovementioned oblique flow through the portion capsule, i.e. the direction of flow of the extraction liquid is inclined in relation to the axial direction within the portion capsule and therefore the taste quality of the extracted beverage is enhanced. The second perforation means comprises, for example, a cutting blade, a hollow needle or a point provided with channels.</p>
+      <p id="p-00020-en" num="0020">According to a preferred development, it is provided that the second perforation means comprises a piercing point which protrudes from the second brewing chamber element substantially in the direction of the first brewing chamber element and is preferably provided with lateral grooves at least over a subregion. The conducting away of the extraction liquid out of the portion capsule is advantageously promoted by the lateral grooves, since the extraction liquid can flow out of the portion capsule between the second perforation means and the capsule material, in particular the material of the portion capsule base, within the grooves.</p>
+      <p id="p-00021-en" num="0021">According to a preferred development, it is provided that the second perforation means is coupled releasably to the second brewing chamber element in particular via a latching and/or screw fastening. Installation and removal of the second perforation means, for example for cleaning and service purposes, is therefore advantageously facilitated.</p>
+      <p id="p-00022-en" num="0022">According to a preferred development, it is provided that the second brewing chamber element comprises a hollow bell-shaped element for receiving the portion capsule, wherein a base region of the bell-shaped element comprises at least one depression for conducting away extraction liquid from the portion capsule perforated by means of the second perforation means, where in the second perforation means is preferably arranged in the region of the depression, and wherein the depression preferably leads into a drainage channel for removing the extraction liquid from the brewing chamber. The depression preferably comprises a support and/or pillar structure, as a result of which the portion capsule is reliably spaced apart from the second brewing chamber element in the region of the depression. This prevents a reduction in the cross section of the depression by the capsule base, and therefore conducting away of the extraction liquid can be ensured at all times.</p>
+      <p id="p-00023-en" num="0023">According to a further subject matter or a preferred development of the present invention, it is provided that the first brewing chamber element has at least one first perforation means for perforating the portion capsule, and in that the brewing apparatus has at least one spacing element which is designed in such a manner that, when the portion capsule is fed between the first and the second brewing chamber elements in the loading position, mechanical contact between the portion capsule and the at least one first perforation means is prevented by the spacing element. In the case of brewing apparatuses according to the prior art, when a portion capsule is fed between the first and second brewing chamber elements during the loading position, there is the risk of the portion capsule remaining stuck to the at least one first perforation means and of fault-free feeding of the portion capsule being prevented. In the case of the brewing apparatus according to the invention, the portion capsule is advantageously effectively prevented from remaining stuck in this manner on the first perforation means by the spacing element by, during the feeding of the portion capsule, the spacing element ensuring that the portion capsule is spaced apart from the first brewing chamber element and from the at least one first perforation means. Fault-free feeding of portion capsules is therefore advantageously ensured. Alternatively, the first brewing chamber element has a plurality of first perforation means and/or a plurality of spacing elements.</p>
+      <p id="p-00024-en" num="0024">According to a preferred development, it is provided that the first brewing chamber element comprises two first perforation means in the form of two perforation points, wherein the spacing element is at least partially arranged between the two perforation points, and wherein, in the loading position, the spacing element is spaced apart from the first brewing chamber element at least in the region between the two perforation points, and wherein the two perforation points are preferably arranged in the gravitational field below the horizontal plane. The risk of the portion capsule remaining stuck to the first perforation points is therefore advantageously further reduced, since the spacing element is spaced apart from the first brewing chamber element, in particular in the region of the first perforation points, and therefore the portion capsule is protected from direct mechanical contact with the first perforation points. In addition, this realizes effective finger protection, by means of which a user reaching into the brewing chamber is protected from contact with the sharp first perforation means.</p>
+      <p id="p-00025-en" num="0025">According to a preferred development, it is provided that the spacing element is fastened to the first brewing chamber element and is at least partially pretensioned elastically in the direction of the second brewing chamber element, and/or in that the spacing element is designed in such a manner that, in the extraction position, said spacing element bears substantially completely against the first brewing chamber element. The spacing element is advantageously spaced apart from the first brewing chamber element in the loading position while said spacing element bears against the first brewing chamber element in the extraction position such that the extraction operation is not impaired by the spacing element. This is obtained by the spacing element being pretensioned elastically in the direction of the second brewing chamber element and in particular being of flexible design. During closure of the brewing chamber, the portion capsule is pressed in the direction of the first brewing chamber element such that the spacing element automatically also enters into contact with the first brewing chamber element.</p>
+      <p id="p-00026-en" num="0026">According to a preferred development, it is provided that the spacing element comprises a metal strip, wherein the metal strip has a first end which is fastened to the first brewing chamber element and a free, second end, wherein, in the loading position, the second end preferably protrudes from the first brewing chamber element obliquely in the direction of the second brewing chamber element, or, in the loading position, preferably bears against a surface of the first brewing chamber element, which surface faces the second brewing chamber element. In the loading position, the free, second end advantageously protrudes obliquely in the direction of the second brewing chamber element such that the spacing element acts like a leaf spring which keeps the portion capsule at a distance from the at least one first perforation means in the loading position. Alternatively, it is conceivable for the metal strip additionally to have a curvature in the direction of the second brewing chamber element, thus increasing the spring action. The second end may protrude obliquely again in the direction of the second brewing chamber element or alternatively may also bear against the first brewing chamber element in the loading position.</p>
+      <p id="p-00027-en" num="0027">According to a preferred development, it is provided that the metal strip has a passage hole, and/or in that the metal strip is oriented substantially parallel to the loading direction. The extraction liquid preferably flows through the passage hole in the direction of the portion capsule, wherein the passage hole is preferably aligned with an extraction liquid access opening in the first brewing chamber element. As an alternative to the metal strip, it is conceivable for the spacing element to be designed in the same manner but to be manufactured from a plastics material.</p>
+      <p id="p-00028-en" num="0028">A further subject matter of the present invention is a method for operating a brewing apparatus, wherein, in a first method step, a portion capsule is inserted between the first and the second brewing chamber elements, and wherein, in a subsequent second method step, the first and/or the second brewing chamber element is moved substantially in the axial direction from the loading position into the extraction position and wherein, during the second method step, the portion capsule is firstly perforated below the horizontal plane by at least one first perforation means of the first brewing chamber element and subsequently the portion capsule is perforated by at least one second perforation means of the second brewing chamber element. The portion capsule is therefore advantageously perforated in a lower region in the gravitational field. Due to the effect of the gravitational force, the beverage substance likewise slides into the lower region. It is therefore ensured that a perforation opening is produced in the region of the beverage substance such that efficient interaction between the extraction liquid and the beverage substance is obtained during the extraction operation. The first brewing chamber element here alternatively either has precisely one single first perforation means or a plurality of first perforation means.</p>
+      <p id="p-00029-en" num="0029">According to a further subject matter or a preferred development of the present invention, it is provided that during the second method step, the portion capsule is perforated sequentially by a plurality of first perforation means of the first brewing chamber element. The required effort for perforating the portion capsule and for closing the brewing chamber is thereby reduced if a plurality of first perforation means is used.</p>
+      <p id="p-00030-en" num="0030">According to a further subject matter or a preferred development of the present invention, it is provided that, in the second method step, the portion capsule is perforated by precisely one first perforation means. Therefore, in the loading position, a comparatively simple and safe insertion of the portion capsule is advantageously ensured. Furthermore, the risk of injury for a user of the brewing apparatus is considerably reduced in comparison to the prior art. The first perforation means is preferably arranged substantially in a lower edge region of the first brewing chamber element in the gravitational field in order to produce a maximum distance between the insertion opening and the first perforation means.</p>
+      <p id="p-00031-en" num="0031">According to a further subject matter or a preferred development of the present invention, it is provided that, in a third method step, extraction liquid is introduced into the portion capsule only below the horizontal plane and/or within the angular range of at maximum 230 degrees. This advantageously ensures that, during the extraction operation, extraction liquid is introduced into the portion capsule only wherever the beverage substance is also located (which, for example, has slid downward due to the effect of the gravitational force). Accordingly, it would be conceivable for the portion capsule also to be perforated above the horizontal plane or outside the angular range of 230 degrees, but for the extraction liquid to be introduced only below the horizontal plane and/or only within the angular range of at maximum 230 degrees.</p>
+      <p id="p-00032-en" num="0032">According to a preferred development, it is provided that a capsule cover of the portion capsule is perforated by the at least one first perforation means, and that a capsule base of the portion capsule is perforated by the second perforation means.</p>
+      <p id="p-00033-en" num="0033">According to a further subject matter or a preferred development of the present invention, it is provided that in the first method step, the portion capsule, while being fed between the first and second brewing chamber elements, is at least partially guided by a spacing element, which is fastened to the first brewing chamber element, in such a manner that mechanical contact between the portion capsule and the at least one first perforation means is prevented by the spacing element. In an advantageous manner, the portion capsule is kept at a distance from the first brewing chamber element and therefore in particular also from the at least one first perforation means by the spacing element upon insertion between the first and second brewing chamber element. The insertion operation is therefore less error-prone, since the portion capsule is effectively prevented from remaining stuck against the at least one first perforation means. Alternatively, the first brewing chamber element has a plurality of first perforation means and/or a plurality of spacing elements.</p>
+      <p id="p-00034-en" num="0034">According to a preferred development, it is provided that, during the first method step, the spacing element at least partially protrudes from the first brewing chamber element in the direction of the second brewing chamber element, wherein, in the second method step, the spacing element is brought into contact with the first brewing chamber element. During the transfer of the first brewing chamber element from the loading position into the extraction position, the spacing element is advantageously automatically pressed in the direction of the first brewing chamber element such that the extraction operation is not impaired by the spacing element. In particular, the spacing element therefore does not protrude into the brewing chamber in the extraction position. In this case, the spacing element is in particular bent by an at least partially curved shaping into a rectilinear shape.</p>
+      <p id="p-00035-en" num="0035">A further subject matter of the present invention is a method for producing a brewing apparatus, wherein, in a first production step, a perforation element is punched out with a central surface region and a plurality of first perforation means, wherein, in a second production step, the first perforation elements are bent in relation to the surface region by buckling in such a manner that the first perforation means protrude at a right angle from the surface region, and wherein, in a third production step, the perforation element is connected to the first brewing chamber element. This permits a particularly stable design of the first perforation means and secure fastening of the first perforation means to the first brewing chamber element. Furthermore, the production is particularly cost-effective. The perforation element is preferably screwed to the first brewing chamber element. The perforation element comprises in particular a sheet-metal material. Preferably, in the first production step, the perforation element is provided in the surface region with a plurality of water outlet openings, wherein each of the water outlet openings is particularly preferably arranged adjacent to a first perforation element. In a fourth production step, at least one second perforation means is connected to the second brewing chamber element, wherein use is made in particular of a latching and/or screw connection.</p>
+      <p id="p-00036-en" num="0036">Use of a brewing apparatus according to the invention for preparing hot beverages, in particular coffee, milk, tea and/or chocolate beverages.</p>
+      <p id="p-00037-en" num="0037">The invention is explained in more detail below with reference to exemplary embodiments which are illustrated in drawings. The drawings merely illustrate exemplary embodiments of the invention that do not restrict the essential concepts of the invention.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00038-en" num="0038">
+        <figref>FIGS. 1</figref>
+        <i>a </i>to <b>1</b><i>k </i>show schematic sectional drawing views of a brewing apparatus according to a first embodiment of the present invention.</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIGS. 2</figref>
+        <i>a </i>to <b>2</b><i>c </i>show schematic views of a first brewing chamber element of a brewing apparatus according to a second embodiment of the present invention.</p>
+      <p id="p-00040-en" num="0040">
+        <figref>FIG. 3</figref> shows a schematic sectional drawing view of a first brewing chamber element of a brewing apparatus according to a third embodiment.</p>
+      <p id="p-00041-en" num="0041">
+        <figref>FIGS. 4</figref>
+        <i>a </i>to <b>4</b><i>d </i>show schematic views of a first brewing chamber element of a brewing apparatus according to a fourth embodiment of the present invention.</p>
+      <p id="p-00042-en" num="0042">
+        <figref>FIGS. 5</figref>
+        <i>a </i>to <b>5</b><i>c </i>show schematic views of a first brewing chamber element of a brewing apparatus according to a fifth embodiment of the present invention.</p>
+      <p id="p-00043-en" num="0043">
+        <figref>FIG. 6</figref> shows a schematic view of a first brewing chamber element of a brewing apparatus according to a sixth embodiment of the present invention.</p>
+      <p id="p-00044-en" num="0044">
+        <figref>FIG. 7</figref> shows a schematic view of a first brewing chamber element of a brewing apparatus according to a seventh embodiment of the present invention.</p>
+      <p id="p-00045-en" num="0045">
+        <figref>FIG. 8</figref> shows a schematic view of a first brewing chamber element of a brewing apparatus according to an eighth embodiment of the present invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <p id="p-00046-en" num="0046">In the various figures, identical parts are always provided with the same reference numbers and are therefore generally also referred to or mentioned only once in each case.</p>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00047-en" num="0047">
+        <figref>FIGS. 1</figref>
+        <i>a </i>to <b>1</b><i>k </i>illustrate schematic sectional drawing views of a brewing apparatus <b>1</b> for extracting a portion capsule <b>2</b> according to a first embodiment of the present invention. The brewing apparatus <b>1</b> here comprises a second brewing chamber element <b>4</b> which is designed as a receiving element or partially hollow bell-shaped element <b>14</b>, and a first brewing chamber element <b>3</b> which is designed as a closure element <b>21</b> or piston. The first brewing chamber element <b>3</b> is movable relative to the second brewing chamber element <b>4</b> in an axial direction <b>6</b> between a loading position <b>17</b> illustrated in <figref>FIGS. 1</figref><i>a </i>and <b>1</b><i>k </i>and an extraction position <b>11</b> illustrated in <figref>FIG. 1</figref><i>f. </i></p>
+      <p id="p-00048-en" num="0048">The portion capsule <b>2</b> comprises a truncated cone <b>30</b> which is manufactured from plastic and is of cup-shape design. The truncated cone <b>30</b> is closed in an airtight manner by means of a capsule cover <b>28</b> manufactured from a plastics film and/or aluminum foil. A beverage substance, in particular a roast coffee powder which can be extracted by means of an extraction liquid is located within the portion capsule <b>2</b>. The portion capsule <b>2</b> optionally has a filtering element (not depicted) which is arranged (possibly spaced apart from the capsule base <b>29</b>) between the capsule base <b>29</b> and the beverage substance. The capsule cover <b>28</b> is adhesively bonded or welded to the truncated cone <b>30</b> in the region of a capsule flange <b>27</b>.</p>
+      <p id="p-00049-en" num="0049">The first brewing chamber element <b>3</b> has a perforation element <b>22</b> on a side facing the second brewing chamber element <b>4</b>, said perforation element comprising a substantially round base surface <b>9</b>, on the peripheral region of which four first perforation means <b>5</b> are formed in the circumferential direction. In this case, the first perforation means <b>5</b> are arranged with a virtually constant radius about a central point <b>201</b> (see <figref>FIG. 8</figref>) on the base surface <b>9</b> of the first brewing chamber element <b>3</b>, which base surface faces the second brewing chamber element <b>4</b>. The first perforation means <b>5</b> each comprise a perforation point <b>5</b>′ which protrudes from the base surface <b>9</b> in the direction of the second brewing chamber element <b>4</b>. Furthermore, four water outlet openings <b>24</b> (which cannot be seen for perspective reasons in <figref>FIGS. 1</figref><i>a </i>to <b>1</b><i>k</i>) are formed in the base surface <b>9</b>, wherein precisely one water outlet opening <b>24</b> is always arranged in the vicinity of a perforation point <b>5</b>′. The first perforation means <b>5</b> are all arranged in the Earth's gravitational field <b>39</b> below a plane <b>7</b> designed as a horizontal plane <b>7</b>′. The horizontal plane <b>7</b>′ extends substantially centrally through the brewing chamber <b>1</b>′ and substantially at a right angle to the gravitational field <b>39</b>.</p>
+      <p id="p-00050-en" num="0050">In an alternative embodiment which is not illustrated in detail, the brewing apparatus <b>1</b> has only precisely one single first perforation means <b>5</b> which is arranged in the gravitational field <b>39</b> below the horizontal plane <b>7</b>′. The one first perforation means <b>5</b> here is preferably arranged substantially in a lower edge region of the first brewing chamber element <b>3</b> in the gravitational field <b>39</b> in order to produce a maximum distance between the feeding opening <b>20</b> and the first perforation means <b>5</b>.</p>
+      <p id="p-00051-en" num="0051">The first brewing chamber element <b>3</b> has a water feeding channel <b>31</b> which opens into an indentation <b>32</b> formed between the first brewing chamber element <b>3</b> and the perforation element <b>2</b> such that extraction liquid fed in by the water feeding channel <b>31</b> can be distributed via the indentation <b>32</b> to the four water outlet openings <b>24</b>. The perforation element <b>22</b> is fastened to the first brewing chamber element <b>3</b> by means of a screw <b>33</b>. The second brewing chamber element <b>4</b> has a second perforation means <b>8</b> which comprises a piercing point <b>8</b>′ which points in the direction of the first brewing chamber element <b>3</b>, is arranged within the cavity and is releasably connected to the second brewing chamber element <b>4</b> via a latching fastening. The piercing point <b>8</b>′ is provided with lateral grooves which extend parallel to the axial direction <b>6</b>. In the region of the piercing point <b>8</b>′, the second brewing chamber element <b>4</b> has a depression <b>16</b> in the base region <b>15</b> of the cavity, into which depression a drainage channel <b>13</b> leads.</p>
+      <p id="p-00052-en" num="0052">
+        <figref>FIG. 1</figref>
+        <i>a </i>illustrates the first brewing chamber element <b>3</b> in the loading position <b>17</b>, i.e. the first brewing chamber element <b>3</b> is spaced apart from the second brewing chamber element <b>4</b> in the axial direction <b>6</b>. In said starting position, the portion capsule <b>2</b> is then inserted in a loading direction <b>18</b> by a user (not depicted). For this purpose, a housing of the brewing apparatus <b>1</b>, which housing is designed as part of the second brewing chamber element <b>4</b>, has a feeding opening <b>20</b> through which the portion capsule <b>2</b> is inserted.</p>
+      <p id="p-00053-en" num="0053">It is illustrated in <figref>FIG. 1</figref><i>b </i>that the portion capsule <b>2</b> drops laterally under the effect of the gravitational force into the region between the first and the second brewing chamber elements <b>3</b>, <b>4</b> and is held at the first brewing chamber element <b>3</b> by means of holding means <b>25</b> (not described specifically) engaging the capsule flange <b>27</b> of the portion capsule <b>2</b>.</p>
+      <p id="p-00054-en" num="0054">In the next step, illustrated with reference to <figref>FIG. 1</figref><i>c</i>, the first brewing chamber element <b>3</b> is driven by a toggle lever joint <b>26</b> to move in the direction of the second brewing chamber element <b>4</b>.</p>
+      <p id="p-00055-en" num="0055">It is illustrated with reference to <figref>FIG. 1</figref><i>d </i>that, shortly before the capsule base <b>29</b> touches the piercing point <b>8</b>′, the first brewing chamber element <b>3</b> is set upright in such a manner that the base surface <b>9</b> is oriented virtually exactly perpendicular to the axial direction <b>6</b>. The perforation points <b>5</b>′ subsequently touch the capsule cover <b>28</b>.</p>
+      <p id="p-00056-en" num="0056">In the next step, illustrated in <figref>FIG. 1</figref><i>e</i>, the capsule cover <b>28</b> is perforated by the first perforation means <b>5</b>, which are designed as perforation points <b>5</b>′, by the continuous movement of the first brewing chamber element <b>3</b> in the direction of the second brewing chamber element <b>4</b>. The capsule cover <b>28</b> is only perforated by the first perforation means <b>5</b> below the horizontal plane <b>7</b>′. At this time, the capsule base <b>29</b> is not yet perforated.</p>
+      <p id="p-00057-en" num="0057">In the abovementioned alternative embodiment, the capsule cover <b>28</b> is perforated only by the precisely one first perforation means <b>5</b> in a lower region in the gravitational field <b>39</b>.</p>
+      <p id="p-00058-en" num="0058">In <figref>FIG. 1</figref><i>f</i>, the first brewing chamber element <b>3</b> is displaced as far as the second brewing chamber element <b>4</b> in the axial direction <b>6</b> into the extraction position <b>11</b> such that the portion capsule <b>2</b> is virtually completely inserted into the hollow bell-shaped element <b>14</b> and the capsule base <b>29</b> is then perforated by the second perforation means <b>8</b>, which is designed as a piercing spike <b>8</b>′. The first and the second brewing chamber elements <b>3</b>, <b>4</b> therefore form a hermetically closed brewing chamber <b>1</b>′, in which the portion capsule <b>2</b> is arranged. In this case, the capsule flange <b>27</b> is fixedly clamped between the first and the second brewing chamber elements <b>3</b>, <b>4</b>, in particular by means of an elastic sealing ring <b>34</b>.</p>
+      <p id="p-00059-en" num="0059">In this position, the extraction operation is initiated, i.e. extraction liquid in the form of pressurized and heated water is fed to the brewing chamber <b>1</b>′. The extraction liquid is conveyed through the water feeding channel <b>31</b> and the indentation <b>32</b> to the water outlet openings <b>24</b> and passes from there through the perforation openings, which are produced by means of the first perforation means <b>5</b>, in the capsule cover <b>28</b> into the portion capsule <b>2</b>. The extraction liquid flows through the beverage substance, thus forming a beverage extract which leaves the portion capsule <b>2</b> again through the perforation hole produced in the capsule base <b>29</b> by means of the piercing spike <b>8</b>′ and passes through the depression <b>16</b> into the drainage channel <b>13</b>. By means of the drainage channel <b>13</b>, the beverage extract is preferably fed directly to a drinking vessel (not depicted), such as a coffee cup. In each case, the extraction liquid passes through the portion capsule <b>2</b> in the region of the beverage substance arranged in the portion capsule <b>2</b>, even if said beverage substance slides downward in the portion capsule <b>2</b> due to the effect of the gravitational force.</p>
+      <p id="p-00060-en" num="0060">After the extraction operation, the first brewing chamber element <b>3</b> is moved back again from the extraction position <b>11</b> into the loading position <b>17</b> parallel to the axial direction <b>6</b>. This is illustrated with reference to <figref>FIGS. 1</figref><i>g </i>to <b>1</b><i>j</i>. In the process, the used portion capsule <b>2</b> is called back again by the first brewing chamber element <b>3</b> until the capsule flange <b>27</b> enters into contact with an ejector <b>35</b> (not described specifically), as a result of which the portion capsule <b>2</b> is disengaged from the holding means <b>25</b> and automatically drops under the effect of the gravitational force out of the region between the first and the second brewing chamber elements <b>3</b>, <b>4</b>, for example into a collecting container (not shown).</p>
+      <p id="p-00061-en" num="0061">Subsequently, the first brewing chamber element <b>3</b> is again located, as shown in <figref>FIG. 1</figref><i>k</i>, in the loading position <b>17</b>, and therefore renewed filling of the brewing apparatus <b>1</b> with an unused portion capsule <b>2</b> is possible as per <figref>FIG. 1</figref><i>a. </i></p>
+      <p id="p-00062-en" num="0062">
+        <figref>FIGS. 2</figref>
+        <i>a </i>to <b>2</b><i>c </i>illustrate schematic views of a first brewing chamber element <b>3</b> of a brewing apparatus <b>1</b> according to a second embodiment of the present invention, wherein the brewing apparatus <b>1</b> according to the second embodiment is substantially equivalent to the brewing apparatus <b>1</b>, which is illustrated in <figref>FIGS. 1</figref><i>a </i>to <b>1</b><i>k</i>, according to the first embodiment. The first perforation means <b>5</b> are designed as perforation points <b>5</b>′ which, in the projection in the axial direction <b>6</b>, have virtually a linear cross section <b>36</b> which is bent along the circumference of the base surface <b>9</b>. In a plane parallel to the axial direction <b>6</b>, the perforation points <b>5</b>′ each have a triangular profile which in each case runs parallel to the cutting plane <b>19</b>, since the cutting edges of the perforation points <b>5</b>′ are each formed by the legs <b>38</b> of the triangles. The perforation points <b>5</b>′ are each arranged in a plane perpendicular to the axial direction <b>6</b> with a virtually constant radius (the end surface <b>9</b> is slightly oval instead of round) about a central point <b>201</b> on the base surface <b>9</b>. Within the scope of a punching process, the perforation element <b>22</b> with a base surface <b>9</b> and perforation points <b>5</b>′ is punched from sheet metal and the perforation points <b>5</b>′ are subsequently bent in relation to the base surface <b>9</b> by buckling in such a manner that the perforation points <b>5</b>′ protrude perpendicularly from the peripheral region of the base surface <b>9</b>. The perforation points <b>5</b>′ are distributed along the peripheral region in such a manner as to be distributed asymmetrically in relation to a plane <b>7</b> extending in the axial direction <b>6</b>, i.e. the first perforation means <b>5</b> are arranged exclusively below the plane <b>7</b>. In this case, the plane <b>7</b> comprises in particular a horizontal plane <b>7</b>′ which is formed substantially virtually perpendicular to the gravitational field <b>39</b> and/or to the loading direction <b>18</b>. <figref>FIG. 2</figref><i>c </i>illustrates the flow of the extraction liquid in the direction of the brewing chamber <b>1</b>′ with reference to arrows <b>42</b>.</p>
+      <p id="p-00063-en" num="0063">
+        <figref>FIG. 3</figref> illustrates a schematic sectional drawing view of a first brewing chamber element <b>3</b> of a brewing apparatus <b>1</b> according to a third embodiment, wherein the brewing apparatus <b>1</b> according to the third embodiment is substantially equivalent to the brewing apparatus <b>1</b>, which is illustrated in <figref>FIGS. 2</figref><i>a </i>to <b>2</b><i>c</i>, according to the second embodiment, wherein, in contrast to the second embodiment, the first perforation means <b>5</b>, <b>5</b>′ has, at the smallest distance from the feeding opening <b>20</b>, a cutting plane <b>19</b> which is oriented substantially perpendicular to the loading direction <b>18</b> and/or to the gravitational field <b>39</b>. A finger <b>40</b> of a user reaching from above through the feeding opening <b>20</b> into the brewing apparatus <b>1</b> therefore merely comes into contact with the blunt side surface <b>41</b> of said first perforation means <b>5</b>, thus considerably reducing the risk of injury. It is alternatively conceivable for said first perforation means <b>5</b>, <b>5</b>′ also to be arranged at the smallest distance from the feeding opening <b>20</b> below the horizontal plane <b>7</b>′.</p>
+      <p id="p-00064-en" num="0064">
+        <figref>FIGS. 4</figref>
+        <i>a </i>to <b>4</b><i>d </i>illustrate schematic views of a first brewing chamber element <b>3</b> of a brewing apparatus <b>1</b> according to a fourth embodiment of the present invention, wherein the brewing apparatus <b>1</b> according to the fourth embodiment is substantially equivalent to the brewing apparatus <b>1</b>, which is illustrated in <figref>FIGS. 2</figref><i>a </i>to <b>2</b><i>c</i>, according to the second embodiment, wherein, in contrast to the second embodiment, the brewing apparatus <b>1</b> merely has two first perforation means <b>5</b> which are both arranged below the horizontal plane <b>7</b>′ in the gravitational field <b>39</b>. A spacing element <b>50</b> is arranged between the perforation points <b>5</b>′. The spacing element <b>50</b> comprises a metal strip <b>51</b> which extends substantially parallel to the loading direction <b>18</b> and is fastened by a first end <b>52</b> to the first brewing chamber element <b>3</b>. For this purpose, as can be seen in <figref>FIG. 4</figref><i>c</i>, the first end <b>52</b> is angled in the direction of the first brewing chamber element <b>3</b> and clamped fixedly in a recess <b>55</b> of the first brewing chamber element <b>3</b>. The second end <b>53</b> of the metal strip <b>51</b> is a free end not fastened to the first brewing chamber element <b>3</b>. The metal strip <b>51</b> has a curvature between the first and the second ends <b>52</b>, <b>53</b> in the direction of the second brewing chamber element <b>4</b>. Said curvature serves to space a portion capsule <b>2</b>, which is inserted between the first and second brewing chamber elements <b>3</b>, <b>4</b> in the loading position <b>17</b>, from the first brewing chamber element <b>3</b> such that the portion capsule <b>2</b> does not remain stuck to the two perforation points <b>5</b>′ during the insertion operation. During closing of the brewing chamber, the metal strip <b>51</b> is pressed by the portion capsule <b>2</b> against the first brewing chamber element <b>3</b> such that said metal strip comes into contact with the first brewing chamber element <b>3</b> (not illustrated in the figures) in the extraction position <b>11</b> and does not impair the extraction operation. In this case, the free, second end <b>53</b> moves along the gravitational field <b>39</b>. Furthermore, the spacing element <b>50</b> has a passage hole <b>54</b> which is substantially aligned with the water feeding channel <b>31</b> of the first brewing chamber element <b>3</b> and permits feeding of the extraction liquid to the portion capsule <b>2</b>.</p>
+      <p id="p-00065-en" num="0065">
+        <figref>FIGS. 5</figref>
+        <i>a </i>to <b>5</b><i>c </i>illustrate schematic views of a first brewing chamber element <b>3</b> of a brewing apparatus <b>1</b> according to a fifth embodiment of the present invention, wherein the brewing apparatus <b>1</b> according to the fifth embodiment is substantially equivalent to the brewing apparatus <b>1</b>, which is illustrated in <figref>FIGS. 4</figref><i>a </i>to <b>4</b><i>d</i>, according to the fourth embodiment, wherein, in contrast to the fourth embodiment, the brewing apparatus <b>1</b> has a spacing element <b>50</b> which does not have a curvature but rather, in which, instead, the free, second end <b>53</b> protrudes obliquely from the first brewing chamber element <b>3</b> in the direction of the second brewing chamber element <b>4</b> in the loading position <b>17</b>. During the transfer of the first brewing chamber element <b>3</b> from the loading position <b>17</b> into the extraction position <b>11</b>, the second end <b>53</b> is pivoted in the direction of the first brewing chamber element <b>3</b> such that the spacing element <b>50</b> enters substantially along the entire length thereof into contact with the first brewing chamber element <b>3</b> (not illustrated in the figures).</p>
+      <p id="p-00066-en" num="0066">
+        <figref>FIG. 6</figref> illustrates a schematic view of a first brewing chamber element <b>3</b> of a brewing apparatus <b>1</b> according to a sixth embodiment of the present invention, wherein the brewing apparatus <b>1</b> according to the sixth embodiment is substantially equivalent to the brewing apparatus <b>1</b>, which is illustrated in <figref>FIGS. 1</figref><i>a </i>to <b>1</b><i>k</i>, according to the first embodiment and is usable in the brewing apparatus <b>1</b> illustrated in <figref>FIGS. 1</figref><i>a </i>to <b>1</b><i>k</i>, wherein, in contrast to the first embodiment, the first brewing chamber element <b>3</b> according to the sixth embodiment has five first perforation means <b>5</b> which are arranged below the horizontal plane <b>7</b>′.</p>
+      <p id="p-00067-en" num="0067">
+        <figref>FIG. 7</figref> illustrates a schematic view of a first brewing chamber element <b>3</b> of a brewing apparatus <b>1</b> according to a seventh embodiment of the present invention, wherein the brewing apparatus <b>1</b> according to the seventh embodiment is substantially equivalent to the brewing apparatus <b>1</b>, which is illustrated in <figref>FIGS. 1</figref><i>a </i>to <b>1</b><i>k</i>, according to the first embodiment and is usable in the brewing apparatus <b>1</b> illustrated in <figref>FIGS. 1</figref><i>a </i>to <b>1</b><i>k</i>, wherein, in contrast to the first embodiment, the first brewing chamber element <b>3</b> has only one single first perforation means <b>5</b>. In this case, said single first perforation means <b>5</b> is substantially arranged in a lower edge region of the first brewing chamber element <b>3</b> along the gravitational field <b>39</b> in order to produce a maximum distance between the feeding opening <b>20</b> and the first perforation means <b>3</b> and thereby to reduce the risk of injury for a user of the brewing apparatus <b>1</b>.</p>
+      <p id="p-00068-en" num="0068">
+        <figref>FIG. 8</figref> illustrates a schematic view of a first brewing chamber element <b>3</b> of a brewing apparatus <b>1</b> according to an eighth embodiment of the present invention, wherein the brewing apparatus <b>1</b> according to the eighth embodiment is substantially equivalent to the brewing apparatus <b>1</b>, which is illustrated in <figref>FIGS. 1</figref><i>a </i>to <b>1</b><i>k</i>, according to the first embodiment and is usable in the brewing apparatus <b>1</b> illustrated in <figref>FIGS. 1</figref><i>a </i>to <b>1</b><i>k</i>, wherein, in contrast to the first embodiment, the first brewing chamber element <b>3</b> has a plurality of first perforation means <b>5</b> in the form of perforation points <b>5</b>′ (a total of seven first perforation means <b>5</b>) which are arranged about a central point <b>201</b> on the end surface <b>9</b> of the first brewing chamber element <b>3</b>, which end surface faces the second brewing chamber element <b>4</b>. In this case, the first perforation means <b>5</b> are not only arranged below the horizontal plane <b>7</b> but instead are arranged with a substantially constant radius in an angular range 202 of approx. 230 degrees about the central point <b>201</b>.</p>
+      <p id="p-00069-en" num="0069">Possible embodiments of the brewing apparatus according to the invention are described below.</p>
+      <p id="p-00070-en" num="0070">Embodiment 1 relates to a brewing apparatus <b>1</b> for extracting a portion capsule <b>2</b>, comprising a first brewing chamber element <b>3</b> and a second brewing chamber element <b>4</b>, wherein the first and/or the second brewing chamber element <b>3</b>, <b>4</b> are/is movable in an axial direction between a loading position <b>17</b>, in which the first and the second brewing chamber elements <b>3</b>, <b>4</b> are spaced apart from each other, and an extraction position <b>11</b>, in which the first and the second brewing chamber elements <b>3</b>, <b>4</b> form a substantially closed brewing chamber <b>1</b>′, characterized in that the first brewing chamber element <b>3</b> has at least one first perforation means <b>5</b> for perforating the portion capsule <b>2</b>, which perforation means is arranged along the Earth's gravitational field <b>39</b> below a horizontal plane <b>7</b>′ extending substantially at a right angle to the gravitational field <b>39</b> and substantially centrally through the brewing chamber <b>1</b>′.</p>
+      <p id="p-00071-en" num="0071">Embodiment 2 relates to a brewing apparatus <b>1</b> according to embodiment 1, characterized in that the first brewing chamber element <b>3</b> has a base surface <b>9</b> facing the second brewing chamber element <b>4</b>, wherein the first brewing chamber element <b>3</b> has a plurality of first perforation means <b>5</b> which are arranged below the horizontal plane <b>7</b>′ with a substantially constant radius about a central point <b>201</b> of the base surface <b>9</b>.</p>
+      <p id="p-00072-en" num="0072">Embodiment 3 relates to a brewing apparatus <b>1</b> according to the preamble of embodiment 1 or according to embodiment 2, characterized in that the first brewing chamber element <b>3</b> has a plurality of first perforation means <b>5</b> for perforating the portion capsule <b>2</b>, wherein the first perforation means <b>5</b> are preferably arranged within an angular range 202 of at maximum 230 degrees about the central point <b>201</b>.</p>
+      <p id="p-00073-en" num="0073">Embodiment 4 relates to a brewing apparatus <b>1</b> as claimed in one of the preceding embodiments, characterized in that the first brewing chamber element <b>3</b> comprises at least four first perforation means <b>5</b>.</p>
+      <p id="p-00074-en" num="0074">Embodiment 5 relates to a brewing apparatus as claimed in embodiment 1, characterized in that the first brewing chamber element <b>3</b> has precisely one single first perforation means <b>5</b> for perforating the portion capsule <b>2</b>.</p>
+      <p id="p-00075-en" num="0075">Embodiment 6 relates to a brewing apparatus <b>1</b> as claimed in one of the preceding embodiments, characterized in that, in the loading position <b>17</b>, the portion capsule <b>2</b> is fed in a loading direction <b>18</b> between the first and the second brewing chamber elements <b>3</b>, <b>4</b>, wherein the loading direction <b>18</b> is oriented at a right angle to the horizontal plane <b>7</b>′.</p>
+      <p id="p-00076-en" num="0076">Embodiment 7 relates to a brewing apparatus as claimed in one of the preceding embodiments or as claimed in the preamble of embodiment 1, characterized in that the brewing apparatus <b>1</b> is designed in such a manner that, upon movement of the first and/or the second brewing chamber element <b>3</b>, <b>4</b> from the loading position <b>17</b> into the extraction position <b>11</b>, the portion capsule <b>2</b> is perforated substantially sequentially by a plurality of first perforation means <b>5</b> of the first brewing chamber element <b>3</b>.</p>
+      <p id="p-00077-en" num="0077">Embodiment 8 relates to a brewing apparatus <b>1</b> as claimed in one of the preceding embodiments or as claimed in the preamble of embodiment 1, characterized in that the brewing device <b>1</b> is designed in such a manner that, upon movement of the first and/or the second brewing chamber element <b>3</b>, <b>4</b> from the loading position <b>17</b> into the extraction position <b>11</b>, the portion capsule <b>2</b> is first of all perforated by the at least one first perforation means <b>5</b> of the first brewing chamber element <b>3</b> and only then is perforated by at least one second perforation means <b>8</b> of the second brewing chamber element <b>4</b>.</p>
+      <p id="p-00078-en" num="0078">Embodiment 9 relates to a brewing apparatus <b>1</b> as claimed in one of the preceding embodiments or as claimed in the preamble of embodiment 1, characterized in that, in the loading position <b>17</b>, the portion capsule <b>2</b> is fed in a loading direction <b>18</b> between the first and the second brewing chamber elements <b>3</b>, <b>4</b>, wherein the first brewing chamber element <b>3</b> has at least one first perforation means <b>5</b> for perforating the portion capsule <b>2</b>, and wherein the cutting plane <b>19</b> of the at least one first perforation means <b>5</b> is oriented substantially at a right angle to the loading direction <b>18</b>.</p>
+      <p id="p-00079-en" num="0079">Embodiment 10 relates to a brewing apparatus <b>1</b> as claimed in one of the preceding embodiments, characterized in that the at least one first perforation means <b>5</b> is designed as a perforation point <b>5</b>′ which protrudes from the first brewing chamber element <b>3</b> substantially in the direction of the second brewing chamber element <b>4</b>.</p>
+      <p id="p-00080-en" num="0080">Embodiment 11 relates to a brewing apparatus <b>1</b> as claimed in embodiment 10, characterized in that the at least one perforation point <b>5</b>′ has a substantially linear cross section <b>36</b>, which is preferably of rectilinear or bent design, in the axial direction <b>6</b>, and/or in that the at least one perforation point <b>5</b>′ has a substantially triangular profile at a right angle to the axial direction <b>6</b>.</p>
+      <p id="p-00081-en" num="0081">Embodiment 12 relates to a brewing apparatus as claimed in one of the preceding embodiments, characterized in that the first brewing chamber element <b>3</b>, on an end side facing the second brewing chamber element <b>4</b>, has a perforation element <b>22</b> which comprises a central surface region <b>23</b> which is connected integrally along the circumference thereof to the at least one first perforation means <b>5</b>.</p>
+      <p id="p-00082-en" num="0082">Embodiment 13 relates to a brewing apparatus as claimed in claim <b>12</b>, characterized in that the perforation element <b>22</b> is produced by bending the at least one first perforation means <b>5</b> in relation to the surface region <b>23</b> by buckling.</p>
+      <p id="p-00083-en" num="0083">Embodiment 14 relates to a brewing apparatus as claimed in one of the preceding embodiments, characterized in that the first brewing chamber element <b>3</b> and in particular the perforation element <b>22</b> has a plurality of water outlet openings <b>24</b> in the surface region <b>23</b> for feeding extraction liquid into the portion capsule <b>2</b> perforated by means of the at least one first perforation means <b>5</b>, wherein, preferably, one water outlet opening <b>24</b> is in each case arranged substantially adjacent to the at least one first perforation means <b>5</b>.</p>
+      <p id="p-00084-en" num="0084">Embodiment 15 relates to a brewing apparatus <b>1</b> as claimed in one of the preceding embodiments, characterized in that the second brewing chamber element <b>4</b> has at least one second perforation means <b>8</b> which is arranged asymmetrically in relation to the plane <b>7</b> and in particular in relation to the horizontal plane <b>7</b>′, wherein the second perforation means <b>8</b> is preferably arranged below the horizontal plane <b>7</b>′.</p>
+      <p id="p-00085-en" num="0085">Embodiment 16 relates to a brewing apparatus <b>1</b> as claimed in embodiment 15, characterized in that the second perforation means <b>8</b> comprises a piercing point <b>8</b>′ which protrudes from the second brewing chamber element <b>4</b> substantially in the direction of the first brewing chamber element <b>3</b> and is preferably provided with lateral grooves at least over a subregion.</p>
+      <p id="p-00086-en" num="0086">Embodiment 17 relates to a brewing apparatus <b>1</b> as claimed in embodiment 16, characterized in that the second perforation means <b>8</b> is coupled releasably and in particular via a latching and/or screw fastening to the second brewing chamber element <b>4</b>.</p>
+      <p id="p-00087-en" num="0087">Embodiment 18 relates to a brewing apparatus <b>1</b> as claimed in one of the preceding embodiments, characterized in that the second brewing chamber element <b>4</b> comprises a hollow bell-shaped element <b>14</b> for receiving the portion capsule <b>2</b>, wherein a base region <b>15</b> of the bell-shaped element <b>14</b> comprises at least one depression <b>16</b> for conducting away extraction liquid from the portion capsule <b>2</b> perforated by means of the second perforation means <b>8</b>, wherein the second perforation means <b>8</b> is preferably arranged in the region of the depression <b>16</b>, and wherein the depression <b>16</b> preferably leads into a drainage channel <b>13</b> for removing the extraction liquid from the brewing chamber <b>1</b>′.</p>
+      <p id="p-00088-en" num="0088">Embodiment 19 relates to a brewing apparatus <b>1</b> as claimed in one of the preceding embodiments or as claimed in the preamble of embodiment 1, characterized in that the first brewing chamber element <b>3</b> has at least one first perforation means <b>5</b> for perforating the portion capsule <b>2</b>, and in that the brewing apparatus <b>1</b> has a spacing element <b>50</b> which is designed in such a manner that, when the portion capsule <b>2</b> is fed between the first and the second brewing chamber elements <b>3</b>, <b>4</b> in the loading position <b>17</b>, mechanical contact between the portion capsule <b>2</b> and the at least one first perforation means <b>5</b> is prevented by the spacing element <b>50</b>.</p>
+      <p id="p-00089-en" num="0089">Embodiment 20 relates to a brewing apparatus <b>1</b> as claimed in embodiment 19, characterized in that the first brewing chamber element <b>3</b> comprises two first perforation means <b>5</b> in the form of perforation points <b>5</b>′, wherein the spacing element <b>50</b> is at least partially arranged between the two perforation points <b>5</b>′, and wherein, in the loading position <b>17</b>, the spacing element <b>50</b> is spaced apart from the first brewing chamber element <b>3</b> at least in the region between the two perforation points <b>5</b>′, and wherein the two perforation points <b>5</b>′ are preferably arranged in the gravitational field <b>39</b> below the horizontal plane <b>7</b>′.</p>
+      <p id="p-00090-en" num="0090">Embodiment 21 relates to a brewing apparatus <b>1</b> as claimed in either of embodiments 19 and 20, characterized in that the spacing element <b>50</b> is fastened to the first brewing chamber element <b>3</b> and is at least partially pretensioned elastically in the direction of the second brewing chamber element <b>4</b>, and/or in that the spacing element <b>50</b> is designed in such a manner that, in the extraction position <b>11</b>, said spacing element bears substantially completely against the first brewing chamber element <b>3</b>.</p>
+      <p id="p-00091-en" num="0091">Embodiment 22 relates to a brewing apparatus <b>1</b> as claimed in one of embodiments 19 to 21, characterized in that the spacing element <b>50</b> comprises a metal strip <b>51</b>, wherein the metal strip <b>51</b> has a first end <b>52</b> which is fastened to the first brewing chamber element <b>3</b> and a second, free end <b>53</b>, wherein, in the loading position <b>17</b>, the second end <b>53</b> preferably protrudes from the first brewing chamber element <b>3</b> obliquely in the direction of the second brewing chamber element <b>4</b>, or, in the loading position <b>17</b>, preferably bears against a surface of the first brewing chamber element <b>3</b>, which surface faces the second brewing chamber element <b>4</b>.</p>
+      <p id="p-00092-en" num="0092">Embodiment 23 relates to a brewing apparatus <b>1</b> as claimed in embodiment 22, characterized in that the metal strip <b>51</b> has a curvature in the direction of the second brewing chamber element <b>4</b>, and/or in that the metal strip <b>51</b> has a passage hole <b>54</b>, and/or in that the metal strip <b>51</b> is oriented substantially parallel to the loading direction <b>18</b>.</p>
+      <p id="p-00093-en" num="0093">Embodiment 24 relates to a method for operating a brewing apparatus <b>1</b>, in particular as claimed in one of the preceding embodiments, wherein, in a first method step, a portion capsule <b>2</b> is inserted between the first and the second brewing chamber elements <b>3</b>, <b>4</b>, and wherein, in a subsequent second method step, the first and/or the second brewing chamber element <b>3</b>, <b>4</b> is moved substantially in the axial direction <b>6</b> from the loading position <b>17</b> into the extraction position <b>11</b>, characterized in that, during the second method step, the portion capsule <b>2</b> is first of all perforated below the horizontal plane <b>7</b>′ by at least one first perforation means <b>5</b> of the first brewing chamber element <b>3</b> and subsequently the portion capsule <b>2</b> is perforated by at least one second perforation means <b>8</b> of the second brewing chamber element <b>4</b>.</p>
+      <p id="p-00094-en" num="0094">Embodiment 25 relates to a method as claimed in embodiment 24 or as claimed in the preamble of embodiment 23, characterized in that, during the second method step, the portion capsule <b>2</b> is perforated sequentially by a plurality of first perforation means <b>5</b> of the first brewing chamber element <b>3</b>.</p>
+      <p id="p-00095-en" num="0095">Embodiment 26 relates to a method as claimed in either of embodiments 24 and 25 or as claimed in the preamble of embodiment 24, characterized in that, in the second method step, the portion capsule <b>2</b> is perforated by precisely one first perforation means <b>5</b>.</p>
+      <p id="p-00096-en" num="0096">Embodiment 27 relates to a method as claimed in one of embodiments 24 to 26, characterized in that a capsule cover <b>28</b> of the portion capsule <b>2</b> is perforated by the at least one first perforation means <b>5</b>, and in that a capsule base <b>29</b> of the portion capsule <b>2</b> is perforated by the second perforation means <b>8</b>.</p>
+      <p id="p-00097-en" num="0097">Embodiment 28 relates to a method as claimed in one of embodiments 24 to 27 or as claimed in the preamble of embodiment 24, characterized in that, in the first method step, the portion capsule <b>2</b>, while being fed between the first and second brewing chamber elements <b>3</b>, <b>4</b>, is at least partially guided by a spacing element <b>50</b>, which is fastened to the first brewing chamber element <b>3</b>, in such a manner that mechanical contact between the portion capsule <b>2</b> and the at least one first perforation means <b>5</b> is prevented by the spacing element <b>50</b>.</p>
+      <p id="p-00098-en" num="0098">Embodiment 29 relates to a method as claimed in embodiment 28, characterized in that, during the first method step, the spacing element <b>50</b> at least partially protrudes from the first brewing chamber element <b>3</b> in the direction of the second brewing chamber element <b>4</b>, wherein, in the second method step, the spacing element <b>1</b> is brought into contact with the first brewing chamber element <b>3</b>.</p>
+      <p id="p-00099-en" num="0099">Embodiment 30 relates to a method as claimed in one of embodiments 24 to 29 or as claimed in the preamble of embodiment 24, characterized in that, in the second method step, the portion capsule <b>2</b> is perforated within an angular range 202 of at maximum 230 degrees about the central point <b>201</b>.</p>
+      <p id="p-00100-en" num="0100">Embodiment 31 relates to a method as claimed in one of embodiments 24 to 30 or as claimed in the preamble of embodiment 24, characterized in that, in a third method step, extraction liquid is introduced into the portion capsule <b>2</b> below the horizontal plane <b>7</b>′ and/or within an angular range 202 of at maximum 230 degrees about the central point <b>201</b>.</p>
+      <p id="p-00101-en" num="0101">Embodiment 32 relates to use of a brewing apparatus <b>1</b> as claimed in one of embodiments 1 to 23 for preparing hot beverages, in particular coffee, milk, tea and/or chocolate beverages.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A brewing apparatus for extracting a portion capsule, comprising a first brewing chamber element and a second brewing chamber element, wherein the first and/or the second brewing chamber element are/is movable in an axial direction between a loading position, in which the first and the second brewing chamber elements are spaced apart from each other, and an extraction position, in which the first and the second brewing chamber elements form a substantially closed brewing chamber, characterized in that, in the loading position, the portion capsule is fed in a loading direction between the first and the second brewing chamber elements, wherein the loading direction is oriented at a right angle to the horizontal plane, wherein the first brewing chamber element has at least one first perforation means for perforating the portion capsule, and in that the brewing apparatus has a spacing element which is designed in such a manner that, when the portion capsule is fed between the first and the second brewing chamber elements in the loading position, mechanical contact between the portion capsule and the at least one first perforation means is prevented by the spacing element.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The brewing apparatus as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, characterized in that, in the loading position, the portion capsule is fed in a loading direction between the first and the second brewing chamber elements, wherein the loading direction is oriented at a right angle to the horizontal plane.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The brewing apparatus as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the spacing element comprises a metal strip, wherein the metal strip has a first end which is fastened to the first brewing chamber element and a second, free end.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The brewing apparatus as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein, in the loading position, the second end protrudes from the first brewing chamber element obliquely in the direction of the second brewing chamber element, or, in the loading position, bears against a surface of the first brewing chamber element, which surface faces the second brewing chamber element.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The brewing apparatus as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the metal strip has a curvature in the direction of the second brewing chamber element.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The brewing apparatus as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the metal strip has a passage hole.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The brewing apparatus as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the metal strip is oriented substantially parallel to the loading direction.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The brewing apparatus as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, characterized in that the first brewing chamber element comprises two first perforation means in the form of perforation points, wherein the spacing element is at least partially arranged between the two perforation points, and wherein, in the loading position, the spacing element is spaced apart from the first brewing chamber element at least in the region between the two perforation points, and wherein the two perforation points are arranged in the gravitational field below the horizontal plane.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The brewing apparatus as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, characterized in that the spacing element is fastened to the first brewing chamber element and is at least partially pretensioned elastically in the direction of the second brewing chamber element.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The brewing apparatus as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the spacing element is designed in such a manner that, in the extraction position, said spacing element bears substantially completely against the first brewing chamber element.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en" independent="true">
+      <claim-text>
+        <b>11</b>. A method for operating a brewing apparatus comprising, in a first method step, a portion capsule is inserted between the first and the second brewing chamber elements, and wherein, in a subsequent second method step, the first and/or the second brewing chamber element is moved substantially in the axial direction from the loading position into the extraction position, characterized in that, in the first method step, the portion capsule, while being fed between the first and second brewing chamber elements, is at least partially guided by a spacing element, which is fastened to the first brewing chamber element, in such a manner that mechanical contact between the portion capsule and the at least one first perforation means is prevented by the spacing element.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method as claimed in <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein, during the first method step, the spacing element at least partially protrudes from the first brewing chamber element in the direction of the second brewing chamber element, wherein, in the second method step, the spacing element is brought into contact with the first brewing chamber element. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257583A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257583A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257583A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257583A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257583A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257583A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257583A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257583A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257583A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257583A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257583A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257583A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257583A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257583A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257583A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257583A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150257583A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257583A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150257583A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257583A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150257583A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257583A1-20150917-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150257583A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257583A1-20150917-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150257583A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257583A1-20150917-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150257583A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257583A1-20150917-D00013.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150257583A1_00015.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257583A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257583A1.PDF" type="pdf" size="1363810" pages="25" />
+</lexisnexis-patent-document>

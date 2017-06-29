@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257461A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030153" date-changed="20151103" time-changed="063338">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121315233">
+        <country>US</country>
+        <doc-number>20150257461</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14723158</doc-number>
+        <date>20150527</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>AU</country>
+        <doc-number>2007904069</doc-number>
+        <date>20070727</date>
+      </priority-claim>
+      <priority-claim sequence="2" kind="national">
+        <country>AU</country>
+        <doc-number>2014902006</doc-number>
+        <date>20140527</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151103">
+      <classification-ipcr sequence="1">
+        <text>A41D  13/05        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>41</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>05</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A41B   9/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>41</class>
+        <subclass>B</subclass>
+        <main-group>9</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A41D  13/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>41</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A41D  13/015       20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>41</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>015</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151103">
+      <classification-cpc sequence="1">
+        <text>A41D  13/0543      20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>41</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>0543</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A41D  13/0015      20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>41</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>0015</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A41D  13/015       20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>41</class>
+        <subclass>D</subclass>
+        <main-group>13</main-group>
+        <subgroup>015</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A41D2300/20        20130101 LA20151021BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>41</class>
+        <subclass>D</subclass>
+        <main-group>2300</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151021</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A41D2600/10        20130101 LA20151021BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>41</class>
+        <subclass>D</subclass>
+        <main-group>2600</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151021</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A63B  71/1225      20130101 LI20150406BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>B</subclass>
+        <main-group>71</main-group>
+        <subgroup>1225</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150406</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A63B2071/1233      20130101 LA20150406BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>B</subclass>
+        <main-group>2071</main-group>
+        <subgroup>1233</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150406</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A63B2071/1241      20130101 LA20150406BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>B</subclass>
+        <main-group>2071</main-group>
+        <subgroup>1241</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150406</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A63B2071/125       20130101 LA20150406BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>B</subclass>
+        <main-group>2071</main-group>
+        <subgroup>125</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150406</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A63B2209/10        20130101 LA20151014BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>63</class>
+        <subclass>B</subclass>
+        <main-group>2209</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151014</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">36</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">Watersport Hiking Support System</invention-title>
+    <related-documents date-changed="20150917">
+      <continuation-in-part>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12180069</doc-number>
+              <date>20080725</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007231</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation-in-part>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Conolly</last-name>
+            <first-name>Brian John</first-name>
+            <address>
+              <city>Northwood</city>
+              <country>AU</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>AU</country>
+          </residence>
+        </applicant>
+        <applicant sequence="2" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Milczarczyk</last-name>
+            <first-name>Bartosz</first-name>
+            <address>
+              <city>Lane Cove</city>
+              <country>AU</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>AU</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Conolly</last-name>
+            <first-name>Brian John</first-name>
+            <address>
+              <city>Northwood</city>
+              <country>AU</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Milczarczyk</last-name>
+            <first-name>Bartosz</first-name>
+            <address>
+              <city>Lane Cove</city>
+              <country>AU</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20151204">
+      <main-family family-id="173668476">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257461</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150527</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="116322824">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257461</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150527</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20090031478</doc-number>
+            <kind>A1</kind>
+            <date>20090205</date>
+          </document-id>
+          <application-date>
+            <date>20080725</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>201509092</doc-number>
+            <kind>D0</kind>
+            <date>20150708</date>
+          </document-id>
+          <application-date>
+            <date>20150527</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>2526701</doc-number>
+            <kind>A</kind>
+            <date>20151202</date>
+          </document-id>
+          <application-date>
+            <date>20150527</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9101815</doc-number>
+            <kind>B2</kind>
+            <date>20150811</date>
+          </document-id>
+          <application-date>
+            <date>20080725</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A device that provides support for sailors while hiking from a sailing vessel is disclosed. The device is a pair of sleeves tailored with pockets under each thigh that allow for supporting pads to be inserted in various combinations. The pads are ergonomically designed and can be designed with internal fibreglass battens, or moulded plastic, and optionally in shapes that help apply torque to the boat dynamics. The sleeves are designed with one way stretch to optimise grip to the leg, and constructed in a choice of composite materials to aid durability and comfort.</p>
+  </abstract>
+  <legal-data date-changed="20151009">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150921</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257461A1</docdb-publication-number>
+      <docdb-application-id>444510614</docdb-application-id>
+      <new-owner>ZHIK PTY LTD, AUSTRALIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:CONOLLY, BRIAN JOHN;MILCZARCZYK, BARTOSZ;SIGNING DATES FROM 20150828 TO 20150902;REEL/FRAME:036611/0347</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">The invention generally relates to the field of sportswear products. More specifically, the invention relates to combining a novel hiking support system with sports clothing, such as a wetsuit, to help reduce muscle fatigue in situations such as hiking from the gunnels of a sailing vessel.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">Any discussion of the prior art throughout the specification should in no way be considered as an admission that such prior art is widely known or forms part of common general knowledge in the field.</p>
+      <p id="p-00003-en" num="0003">Hiking support systems have been applied to wetsuits for dinghy sailing for some time, typically for hiking from a sailing dinghy like that shown in <figref>FIG. 1</figref>. These systems typically comprise a set of fibreglass battens that are sewn directly into the wetsuit behind the thigh portion, or alternatively pads that are inserted into pockets or otherwise directly connected to the thigh portions of the wetsuit.</p>
+      <p id="p-00004-en" num="0004">Such systems have a variety of functional problems because the hiking support pads or battens are connected directly to a wetsuit. Also, in such systems, the wetsuit is commonly constructed of a material that will stretch when wet or with repetitive use, which in turn causes the hiking support to fail to hold the battens or pads firmly in place around the leg. To compensate for these structural problems, these wetsuits are commonly designed to be very tight fitting on initial purchase. As durability is also a problem when the hiking support system is connected directly with the wetsuit, the wetsuit is commonly made with thick abrasive resistant material, which in turn makes them heavier and less comfortable to wear.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00005-en" num="0005">It is an object of the present invention to provide an improved hiking support system.</p>
+      <p id="p-00006-en" num="0006">In accordance with a first aspect of the present invention there is provided a hiking support systems comprising: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>a first sleeve portion having a pocket for receiving at least one resilient pad of predetermined stiffness;</li><li>wherein the sleeve portion, having the pad inserted, is adapted to be worn by a user for providing support to the user while hiking.</li></ul></li></ul></p>
+      <p id="p-00007-en" num="0009">Preferably, the sleeve portion comprises a substantially planar panel, wherein opposite ends of the panel are releasably fastenable together to define the sleeve. The sleeve, having the pad inserted, is preferably adapted to be worn by a user beneath a wetsuit. More preferably, the system is manufactured with the pad fixedly inserted in the pocket of the sleeve portion.</p>
+      <p id="p-00008-en" num="0010">The sleeve portion is preferably adapted to include a stretch gradient for restricting movement of the sleeve portion during use. Preferably, the stretch gradient is included by a printed pattern on a surface of the sleeve portion. Alternatively, the sleeve portion includes a nylon layer, wherein the nylon layer can be manufactured to incorporate the stretch gradient in its weave. More preferably, the sleeve portion is further adapted to substantially only stretch in one-direction.</p>
+      <p id="p-00009-en" num="0011">Preferably, the said printed pattern provides a stretch gradient by restricting the amount of stretch of the sleeve in areas where the print is bonded to the sleeve material. More preferably said printed pattern forms an internal band or series of internal bands of gripping material for griping the leg of the user and reducing the possibility of the system moving down the leg during use.</p>
+      <p id="p-00010-en" num="0012">In accordance with a second aspect of the present invention there is provided a method of providing improved hiking capabilities, the method including the step of: <ul id="ul-00003-en" list-style="none"><li><ul id="ul-00004-en" list-style="none"><li>providing a hiking system as previously described and</li><li>providing pads of various stiffness which can be inserted into the pockets in different combinations depending on sailing conditions.</li></ul></li></ul></p>
+      <p id="p-00011-en" num="0015">In accordance with a third aspect of the present invention there is provided a hiking support systems comprising: <ul id="ul-00005-en" list-style="none"><li><ul id="ul-00006-en" list-style="none"><li>a first substantially planar panel adapted to releasably fasten opposite ends of the panel together to define a first sleeve portion; the panel including a pocket for receiving at least one resilient pad of predetermined stiffness;</li><li>wherein the sleeve portion, having the pad inserted, is adapted to be worn by a user for providing support to the user while hiking.</li></ul></li></ul></p>
+      <p id="p-00012-en" num="0018">Preferably, the panel is adapted for wrapping around the thigh of the user and fastening in a fitted operative sleeved configuration. More preferably, the panel is adapted to include a stretch gradient for restricting movement of the sleeve portion during use. Preferably, the said printed pattern provides a stretch gradient by restricting the amount of stretch of the sleeve in areas where the print is bonded to the sleeve material. More preferably said printed pattern forms an internal band or series of internal bands of gripping material for griping the leg of the user and reducing the possibility of the system moving down the leg during use. Preferably, the system is manufactured with the pad fixedly inserted in the pocket. In one embodiment the fastening is preferably achieved using a Velcro closure.</p>
+      <p id="p-00013-en" num="0019">In accordance with a further aspect of the present invention there is provided a method of providing improved hiking capabilities, the method including the step of: providing a hiking system with pads of various stiffness which can be inserted in different combinations depending on sailing conditions into a pair of durable pockets sewn into thigh sleeves.</p>
+      <p id="p-00014-en" num="0020">In accordance with a further aspect of the present invention, in preferred embodiments, there is provided an interchangeable pairs of pads, made of composite material, housed in a pocket behind each thigh in a separate thigh sleeve worn under, and separate to, an outer suit. There is one thigh sleeve for each leg to house the hiking support. The sailor then wears a more conventional wetsuit over the top of these thigh sleeves. The removable pad is designed to produce a seamless surface that will be both stiff in the vertical direction and yet flexible in the horizontal direction. The pads can be varied in all dimensions, including flexibility and in depth depending on the users requirements and weather conditions. Pads of different types can also be joined together (for example using Velcro) and used in various combinations together in the same pocket, for different conditions or user requirements. As shown in the accompanying drawings, the application of Velcro is preferably the centre of the pad such that they can combine and maintain flexibility around the leg. The pads can be easily removed entirely, for example if a sailor sails in light winds where the extra weight of the pads is unnecessary and extra flexibility for the sailor is an advantage. In a preferred embodiment to opening of said pocket is stretchable to allow the pad(s) to be inserted whilst also fixing said pad(s) in place during use. In another preferred embodiment, said pad pocket features printed or bonded areas of reduced stretchable material around the edges of said pocket to provide improved connection between sleeve and pad.</p>
+      <p id="p-00015-en" num="0021">In preferred embodiments, the thigh sleeve and pad pocket design is made of a combination of soft, hard wearing, and gripping materials. Optionally the thigh sleeve and pad pocket design can include a specific horizontal or vertical one way stretch direction, in order to optimise fitting and to restrict the thigh sleeves from falling or moving down the leg during use.</p>
+      <p id="p-00016-en" num="0022">In one embodiment the thigh sleeve and pad pocket material is made of nylon laminated neoprene. The nylon laminated on the side of the neoprene that touches the skin can be made soft and comfortable, and optionally chosen to be ‘grippy’ when wet. The material laminated to the outer panel lining, and optionally to the internal lining to the pocket, can be made of a more abrasive resistant nylon. The laminates are optionally chosen to stretch in a one-way vertical direction, so as to help reduce the possibility that the sleeve will fall down the leg during use. The user can place the thigh sleeves with pads inserted onto their leg at their own personal custom position. They then wear an outer wetsuit, which is preferably designed to have good abrasive resistance around the areas of the thigh sleeve. This outer wetsuit is not connected to the thigh sleeves, and just wraps over the top and is not critical to the function of the hiking suit. This outer wetsuit can then be made of lighter and stretchier materials than other hiking support systems, which can increase the comfort for a user.</p>
+      <p id="p-00017-en" num="0023">In accordance with a further aspect of the present invention there is provided a method of providing improved hiking capabilities, the method including the step of: <ul id="ul-00007-en" list-style="none"><li><ul id="ul-00008-en" list-style="none"><li>providing a hiking system as previously described and</li><li>providing pads of fixed stiffness which are fixed to said sleeve whereby said pads are attached by stitching or gluing to said sleeve.</li></ul></li></ul></p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00018-en" num="0026">Notwithstanding any other forms which may fall within the scope of the present invention, preferred forms of the invention will now be described, by way of example only, with reference to the accompanying drawings in which:</p>
+      <p id="p-00019-en" num="0027">
+        <figref>FIG. 1</figref> illustrates an example of hiking from a sailing dinghy.</p>
+      <p id="p-00020-en" num="0028">
+        <figref>FIG. 2</figref> illustrates an example thigh sleeve and pad pocket construction;</p>
+      <p id="p-00021-en" num="0029">
+        <figref>FIG. 3</figref> illustrates an example pad combination with batten inserts front view and top view;</p>
+      <p id="p-00022-en" num="0030">
+        <figref>FIG. 4</figref> illustrates the insertion of a pad combination into a thigh sleeve with pocket;</p>
+      <p id="p-00023-en" num="0031">
+        <figref>FIG. 5</figref> Illustrates a pair of pad combinations going into left and right thigh sleeves;</p>
+      <p id="p-00024-en" num="0032">
+        <figref>FIG. 6</figref> Illustrates side and rear view of thigh sleeve and pad pocket placed on body;</p>
+      <p id="p-00025-en" num="0033">
+        <figref>FIG. 7</figref> Illustrates side and rear views of outer suit over high sleeve and pad pockets on body;</p>
+      <p id="p-00026-en" num="0034">
+        <figref>FIG. 8</figref> Illustrates variations of alternative strapping for pad designs;</p>
+      <p id="p-00027-en" num="0035">
+        <figref>FIG. 9</figref> Illustrates how a flat piece can wrap and close to form a sleeve, which can custom fit to a user's thigh;</p>
+      <p id="p-00028-en" num="0036">
+        <figref>FIG. 10A</figref> Illustrates a sleeve with gradient lines to define a stretch gradient;</p>
+      <p id="p-00029-en" num="0037">
+        <figref>FIG. 10B</figref> Illustrates an inner view of a sleeve panel with gradient lines to define a stretch gradient;</p>
+      <p id="p-00030-en" num="0038">
+        <figref>FIG. 11A</figref> Illustrates a sleeve with printed gradient areas to define locate inserted pad;</p>
+      <p id="p-00031-en" num="0039">
+        <figref>FIG. 11B</figref> Illustrates an outer view of a sleeve with printed gradient areas to define locate inserted pad.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00032-en" num="0040">Referring to <figref>FIG. 2</figref>, an example thigh sleeve <b>20</b> with pad pocket is shown. The thigh sleeve is constructed of a composite of various nylons laminated to neoprene. A pocket panel <b>21</b> having an opening <b>23</b> is sewn to sleeve panel <b>22</b>. Pocket opening <b>23</b> is preferably stretchable to allow the pad to be inserted whilst also fixing said pad in place during use.</p>
+      <p id="p-00033-en" num="0041">Optionally a gripping material can be included on the inside of the sleeve. Said gripping material is preferably printed or bonded to said sleeve in a substantially continuous band or series of bands. Sleeve panel <b>22</b> and pocket panel <b>21</b> is designed to have one way stretch in the vertical direction to help stop the thigh sleeve from falling down the leg.</p>
+      <p id="p-00034-en" num="0042">The nylon laminated to the outside of the sleeve panel <b>22</b> is preferably made to a high abrasive resistant grade. The nylon laminated the pocket panel <b>21</b> is also preferably a high abrasive resistant grade. The nylons laminated to the inside of sleeve panel <b>21</b> are preferably softer grades for comfort. All panels <b>21</b> and <b>22</b> are preferably 1 mm thick neoprene.</p>
+      <p id="p-00035-en" num="0043">
+        <figref>FIG. 3</figref> shows an example pad combination <b>30</b>. A battened pad <b>31</b> is made with three or more fibreglass battens <b>34</b>. These battens are cut, and sharp edges ground. An inner laminate <b>32</b> comprising of neoprene foam or Ethylene vinyl acetate (EVA) or other foam is provided to give comfort to the user whilst an outer laminate <b>33</b> comprising a harder compound of neoprene foam or Ethylene vinyl acetate (EVA) or other foam is provided to give protection to the deck of the vessel. Thickness of said inner and outer laminates is preferably between 1 mm and 6 mm and said laminated preferably have a layer or nylon textile laminated to one or more sides of each layer to provide extra durability.</p>
+      <p id="p-00036-en" num="0044">The battened pad <b>31</b> is laminated together and designed to taper from top to bottom, having curved edges, and taper at the top to match ergonomics of hiking. Soft nylon laminated neoprene sheeting material, with sufficient flexibility and durability, is required so that the whole pad will mould around a user's leg comfortably. Battened pad is preferably moulded or laminated in a curved shape as to better conform to the wearers leg.</p>
+      <p id="p-00037-en" num="0045">A second pad insert <b>35</b> having no internal battens is shown. This pad is designed to simply add extra height and padding. This “extension pad” is designed to be added into sleeve pad pocket with main batten pad. Hook and loop Velcro may be provided at the centre of the pad to fix together with battened pad with the centre position of the Velcro allowing the two pads to flex around the leg without increased stiffness. In one preferred embodiment, this extension pad can be made out of Ethylene vinyl acetate foam and is 5 mm thick.</p>
+      <p id="p-00038-en" num="0046">Referring to <figref>FIG. 4</figref>, the combined pads <b>30</b> are shown being inserted into the thigh sleeve <b>20</b>. It will be appreciated that <figref>FIG. 4</figref> does not show the pad fully inserted within a respective pocket. Preferably, the pads <b>30</b> (in this example comprising pad <b>31</b> and/or pad <b>32</b> as best shown in <figref>FIG. 3</figref>) when fully inserted, are shorter in the vertical direction to the thigh sleeve pocket. Preferably extra material at the top and the bottom of the thigh sleeve and pad pocket helps to keep this hiking support system grip to the leg. Optionally just the single battened pad <b>31</b> or the single extension pad <b>32</b> is inserted into the thigh sleeve, depending on the hiking support required.</p>
+      <p id="p-00039-en" num="0047">The pads can be optionally pre-curved in shape and constructed of moulded plastic or other synthetic material. Due to the curved shape of the pad it will be naturally stiff in the direction up and down the thigh as required for hiking support, yet flexible around the leg for comfort.</p>
+      <p id="p-00040-en" num="0048">
+        <figref>FIG. 5</figref> shown an example complete hiking support system comprising pads <b>51</b>, <b>52</b>, <b>53</b> and <b>54</b> and sleeves <b>55</b> and <b>56</b>. The right thigh sleeve <b>56</b> and left thigh sleeve <b>55</b> with respective extension pads <b>51</b> and <b>53</b> and battened pads <b>52</b> and <b>54</b>. These are placed on the thighs of a user as shown in <figref>FIG. 6</figref>, with side view and rear view.</p>
+      <p id="p-00041-en" num="0049">
+        <figref>FIG. 7</figref> shows an example wetsuit <b>73</b> can be worn over the top of the thigh sleeves. Abrasive resistant material is preferably applied in area <b>74</b>. Knee pads <b>75</b> are also preferably made of an abrasive resistant material.</p>
+      <p id="p-00042-en" num="0050">Referring to <figref>FIG. 8</figref>, pads can be optionally made to strap to the leg in a variety of ways, with three applications of a flexible banding system (<b>111</b>, <b>112</b> and <b>113</b>). This banding could be made of neoprene, elastic or other similar material joined to the pre-curved pads.</p>
+      <p id="p-00043-en" num="0051">
+        <figref>FIG. 9</figref> shows that a relatively flat panel <b>121</b> can wrap <b>122</b> and close <b>123</b> to form a sleeve. This sleeve can be fastened for conforming to a custom fit of a user's thigh. The material choice for this sleeve that wraps on with the pad pocket can similar to the construction of <figref>FIG. 4</figref>.</p>
+      <p id="p-00044-en" num="0052">The pads can be preinstalled at manufacture by sewing them directly into the material. By way of example, an outer laminate <b>125</b> of the panel is a material that connects like Velcro loops to Velcro hooks <b>124</b> to provide a releasable fastening. The shape of the wrap and surface area of the Velcro hooks can be varied depending on the design choice. For example, some systems can wrap with one Velcro Hook tab, other systems could use two or three separate areas.</p>
+      <p id="p-00045-en" num="0053">
+        <figref>FIGS. 10A &amp; 10B</figref> show a sleeve panel <b>22</b> with gradient lines <b>24</b> that describe a stretch gradient. Said gradient lines have substantially reduced stretch compared to the sleeve material and comprise an area of high grip material. The reduced stretch of said gradient lines thereby constricts the areas of high grip material into the wears leg to increase friction and prevent to movement of the sleeve when in use.</p>
+      <p id="p-00046-en" num="0054">It will be appreciated that there are various ways to construct a sleeve that approximates this stretch gradient and high grip areas. In a preferred embodiment said stretch gradient is provided by means of printed or bonded bands comprised of a silicone or other high grip material. Said bands are preferably between 1 mm and 10 mm wide and spaced in a regular or irregular pattern inside the sleeve. In one embodiment said bands are discontinuous to allow for ease of stitching of pad pocket along stitching line <b>103</b>. In another preferred embodiment, the bands are formed to maximize the number of edges and corners (such as in a zig-zag shape) which come into contact with the user's leg, thereby increasing the sleeve's ability to resist movement.</p>
+      <p id="p-00047-en" num="0055">In other configurations for providing a suitable stretch gradient, a stretch pattern can be designed and printed onto the surface of a panel (or sleeve), such that in use the sleeve is tighter in various areas. This pattern can also be designed to more closely follow the ideal muscle compression for optimised hiking comfort, recovery and blood flow. The pattern can be printed on an interior or exterior surface of the panel (or sleeve).</p>
+      <p id="p-00048-en" num="0056">
+        <figref>FIGS. 11A &amp; 11B</figref> show a sleeve panel <b>22</b> with stretch gradient areas <b>111</b> provided on pad pocket <b>21</b> whereby stretch gradient areas are a printed or bonded material with reduced stretch configured to provide better location of inserted pad thereby reducing movement of said pad during use.</p>
+      <p id="p-00049-en" num="0057">The panel (or sleeve) can be wrapped and used with a Velcro closure or similar to provide a custom fit for the user. The sleeve can also be wrapped with Velcro tabs to provide closure and or support.</p>
+      <p id="p-00050-en" num="0058">For easier manufacture and/or user convenience, the pads can be optionally preinstalled by sewing them into the panel (or sleeve). The pads may also be glued or laminated to the sleeve. Further, a pair of sleeves can be attached to nylon briefs.</p>
+      <p id="p-00051-en" num="0059">A sleeve can also work as a compression garment to reduce fatigue and enhance recovery of the working thigh muscles. The sleeve can be designed with optimum compression for hiking.</p>
+      <p id="p-00052-en" num="0060">According with an embodiment, a hiking support system comprises a first substantially planar panel including a layer of lateral stretch Nylon, and Neoprene. Velcro strips are provided at opposite ends of the panel for releasably fastening these ends together to define a sleeve portion. The panel includes a pocket for retaining at least one resilient pad of predetermined stiffness. The pad is fixedly inserted in the pocket, and is comprised of Ethlene Vinyl Acetate (EVA) closed cell foam and high grade strength fibreglass battens. The sleeve, having the pad inserted, is adapted to be worn by a user for providing support to the user while hiking. The panel is adapted to be wrapped around the thigh of the user and fastened in a fitted operative sleeved configuration. Fastening is achieved using a Velcro closure. The panel has a stretch gradient for restricting movement of the sleeve portion during use.</p>
+      <p id="p-00053-en" num="0061">By way of example only, the system can be used in a number of sailing environments, including: <ul id="ul-00009-en" list-style="none"><li><ul id="ul-00010-en" list-style="none"><li>Hiking Pants for Small Boat Dinghy Sailing. In this example, a hiking system works well for sailors of dinghy classes, such as the Olympic Classes Laser or Finn as well as a large range of other classes of boat.</li><li>Hiking Pants for Sportsboat Yachting. In this example, versions of a hiking system can be designed for sportsboat yachting. These systems typically have hiking pads and suit in different dimensions and materials.</li><li>Hiking Shorts for Yachting. In this example a short version of the hiking system, with no straps and a thinner padded insert design may be used for yachting purposes, where the hiking is less strenuous.</li></ul></li></ul></p>
+      <p id="p-00054-en" num="0065">As used herein, unless otherwise specified the use of the ordinal adjectives ‘first’, ‘second’, ‘third’, etc., to describe a common object, merely indicate that different instances of like objects are being referred to, and are not intended to imply that the objects so described must be in a given sequence, either temporally, spatially, in ranking, or in any other manner.</p>
+      <p id="p-00055-en" num="0066">Unless the context clearly requires otherwise, throughout the description and the claims, the words ‘comprise’, ‘comprising’, and the like are to be construed in an inclusive sense as opposed to an exclusive or exhaustive sense; that is to say, in the sense of “including, but not limited to.”</p>
+      <p id="p-00056-en" num="0067">Reference throughout this specification to “one embodiment” or “an embodiment” means that a particular feature, structure or characteristic described in connection with the embodiment is included in at least one embodiment of the present invention. Thus, appearances of the phrases “in one embodiment” or “in an embodiment” in various places throughout this specification are not necessarily all referring to the same embodiment, but may. Furthermore, the particular features, structures or characteristics may be combined in any suitable manner, as would be apparent to one of ordinary skill in the art from this disclosure, in one or more embodiments.</p>
+      <p id="p-00057-en" num="0068">Similarly it should be appreciated that in the above description of exemplary embodiments of the invention, various features of the invention are sometimes grouped together in a single embodiment, figure, or description thereof for the purpose of streamlining the disclosure and aiding in the understanding of one or more of the various inventive aspects. This method of disclosure, however, is not to be interpreted as reflecting an intention that the claimed invention requires more features than are expressly recited in each claim. Rather, as the following claims reflect, inventive aspects lie in less than all features of a single foregoing disclosed embodiment. Thus, the claims following the Detailed Description are hereby expressly incorporated into this Detailed Description, with each claim standing on its own as a separate embodiment of this invention.</p>
+      <p id="p-00058-en" num="0069">Furthermore, while some embodiments described herein include some but not other features included in other embodiments, combinations of features of different embodiments are meant to be within the scope of the invention, and form different embodiments, as would be understood by those in the art. For example, in the following claims, any of the claimed embodiments can be used in any combination.</p>
+      <p id="p-00059-en" num="0070">In the description provided herein, numerous specific details are set forth. However, it is understood that embodiments of the invention may be practiced without these specific details. In other instances, well-known methods, structures and techniques have not been shown in detail in order not to obscure an understanding of this description.</p>
+      <p id="p-00060-en" num="0071">Although the invention has been described with reference to specific examples, it will be appreciated by those skilled in the art that the invention may be embodied in many other forms.</p>
+      <p id="p-00061-en" num="0072">Thus, while there has been described what are believed to be the preferred embodiments of the invention, those skilled in the art will recognize that other and further modifications may be made thereto without departing from the spirit of the invention, and it is intended to claim all such changes and modifications as fall within the scope of the invention. For example, any formulas given above are merely representative of procedures that may be used. Functionality may be added or deleted from the block diagrams and operations may be interchanged among functional blocks. Steps may be added or deleted to methods described within the scope of the present invention.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A hiking support system, comprising:
+<claim-text>a first sleeve portion having a pocket for receiving at least one resilient pad of predetermined stiffness;</claim-text><claim-text>wherein said sleeve portion, having said pad inserted, is adapted to be worn by a user for providing support to the user while hiking and;</claim-text><claim-text>said sleeve portion includes areas of high friction material on the inside of said sleeve to resist movement on the user's leg.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. A system as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said high friction material is provided by printing or bonding a high friction polymeric or silicone material to the inside of the said sleeve.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. A system as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said sleeve portion includes a stretch gradient for restricting stretch in defined areas of said sleeve.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. A system as claimed in <claim-ref idref="clm-00003-en">claim 3</claim-ref> wherein said stretch gradient is provided by printing or bonding a regular or irregular pattern.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. A system as claimed in <claim-ref idref="clm-00004-en">claim 4</claim-ref> whereby said pattern is provided in bands, whereby said pattern also provides a high friction surface.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. A system as claimed in <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein said sleeve portion includes a nylon layer, wherein said nylon layer can be manufactured to incorporate said stretch gradient in its weave.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. A system as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said sleeve portion is further adapted to substantially only stretch in one-direction.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. A system as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said sleeve portion comprises a substantially planar panel, wherein opposite ends of said panel are releasably fastenable together to define said sleeve.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. A system as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said sleeve portion, having said pad inserted, is adapted to be worn by a user beneath a wetsuit for providing support to the user while hiking.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. A system as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said system is manufactured with said pad fixedly inserted in said pocket of said sleeve portion.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. A system as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said sleeve portion is further adapted as a compression garment for reducing fatigue and enhancing recovery of the users thigh muscles.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. A system as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising:
+<claim-text>a second sleeve portion having a pocket for receiving a second pad, and having said second pad inserted;</claim-text><claim-text>wherein said first and second sleeve portion are attached to briefs such that said briefs can be worn by the user beneath said wetsuit.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. A system as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said pad is constructed from any one or more of the set comprising Ethlene Vinyl Acetate (EVA) sheeting, nylon laminated foam and neoprene, which is glued together over fibreglass battens.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. A system as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein two or more pads are inserted in said pocket, wherein said pads are clipped together in their centre with Velcro to maintain flexibility while used in combination.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. A system as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said pocket has at least one drain holes to substantially avoid retaining water in said pocket when in use.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. A system as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref> wherein said pocket has a stretchable opening to allow the pad to be inserted whilst also fixing said pad in place during use.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. A method of providing improved hiking capabilities, the method including the steps of:
+<claim-text>providing a hiking system according to <claim-ref idref="clm-00001-en">claim 1</claim-ref> and</claim-text><claim-text>providing pads of various stiffness which can be inserted into said pockets in different combinations depending on sailing conditions.</claim-text></claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en" independent="true">
+      <claim-text>
+        <b>18</b>. A hiking support systems comprising:
+<claim-text>a first substantially planar panel adapted to releasably fasten opposite ends of said panel together to define a first sleeve portion; said panel including a pocket for receiving at least one resilient pad of predetermined stiffness;</claim-text><claim-text>wherein said sleeve portion, having said pad inserted, is adapted to be worn by a user for providing support to the user while hiking and;</claim-text><claim-text>said sleeve portion includes areas of gripping material on the inside of said sleeve</claim-text></claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. A system as claimed in <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein said panel is adapted for wrapping around the thigh of said user and fastening in a fitted operative sleeved configuration.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. A system as claimed in <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein said system is manufactured with said pad fixedly inserted in said pocket.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. A system as claimed in <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein said fastening is achieved using a Velcro closure.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. A system as claimed in <claim-ref idref="clm-00018-en">claim 18</claim-ref> wherein said high friction material is provided by printing or bonding a high friction polymeric or silicone material to the inside of the said sleeve.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. A system as claimed in <claim-ref idref="clm-00018-en">claim 18</claim-ref> wherein said sleeve portion includes a stretch gradient for restricting stretch in defined areas of said sleeve.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. A system as claimed in <claim-ref idref="clm-00018-en">claim 18</claim-ref> wherein said stretch gradient is provided by printing or bonding a regular or irregular pattern.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>25</b>. A system as claimed in <claim-ref idref="clm-00018-en">claim 18</claim-ref> whereby said pattern is provided in bands, whereby said pattern also provides a high friction surface.</claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>
+        <b>26</b>. A system as claimed in <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein said sleeve portion includes a nylon layer, wherein said nylon layer can be manufactured to incorporate said stretch gradient in its weave.</claim-text>
+    </claim>
+    <claim num="27" id="clm-00027-en" independent="true">
+      <claim-text>
+        <b>27</b>. A hiking support systems comprising:
+<claim-text>a first sleeve portion containing a rigid supporting pad adapted to be worn by a user for providing support to the user while hiking and;</claim-text><claim-text>said sleeve portion includes areas of gripping material on the inside of said sleeve</claim-text></claim-text>
+    </claim>
+    <claim num="28" id="clm-00028-en">
+      <claim-text>
+        <b>28</b>. A system as claimed in <claim-ref idref="clm-00027-en">claim 27</claim-ref> wherein said gripping material is provided by printing or bonding a high friction polymeric or silicone material to the inside of the said sleeve.</claim-text>
+    </claim>
+    <claim num="29" id="clm-00029-en">
+      <claim-text>
+        <b>29</b>. A system as claimed in <claim-ref idref="clm-00027-en">claim 27</claim-ref> wherein said sleeve portion includes a stretch gradient for restricting stretch in defined areas of said sleeve.</claim-text>
+    </claim>
+    <claim num="30" id="clm-00030-en">
+      <claim-text>
+        <b>30</b>. A system as claimed in <claim-ref idref="clm-00027-en">claim 27</claim-ref> wherein said stretch gradient is provided by printing or bonding a regular or irregular pattern.</claim-text>
+    </claim>
+    <claim num="31" id="clm-00031-en">
+      <claim-text>
+        <b>31</b>. A system as claimed in <claim-ref idref="clm-00027-en">claim 27</claim-ref> whereby said pattern is provided in bands, whereby said pattern also provides a high friction surface.</claim-text>
+    </claim>
+    <claim num="32" id="clm-00032-en">
+      <claim-text>
+        <b>32</b>. A system as claimed in <claim-ref idref="clm-00027-en">claim 27</claim-ref>, wherein said sleeve portion includes a nylon layer, wherein said nylon layer can be manufactured to incorporate said stretch gradient in its weave.</claim-text>
+    </claim>
+    <claim num="33" id="clm-00033-en">
+      <claim-text>
+        <b>33</b>. A system as claimed in <claim-ref idref="clm-00027-en">claim 27</claim-ref>, wherein said sleeve portion is further adapted to substantially only stretch in one-direction.</claim-text>
+    </claim>
+    <claim num="34" id="clm-00034-en">
+      <claim-text>
+        <b>34</b>. A system as claimed in <claim-ref idref="clm-00027-en">claim 27</claim-ref>, wherein said sleeve portion comprises a substantially planar panel, wherein opposite ends of said panel are releasably fastenable together to define said sleeve.</claim-text>
+    </claim>
+    <claim num="35" id="clm-00035-en">
+      <claim-text>
+        <b>35</b>. A system as claimed in <claim-ref idref="clm-00026-en">claim 26</claim-ref>, wherein said sleeve portion, having said pad inserted, is adapted to be worn by a user beneath a wetsuit for providing support to the user while hiking.</claim-text>
+    </claim>
+    <claim num="36" id="clm-00036-en">
+      <claim-text>
+        <b>36</b>. A system as claimed in <claim-ref idref="clm-00026-en">claim 26</claim-ref>, wherein said sleeve portion is further adapted as a compression garment for reducing fatigue and enhancing recovery of the user's thigh muscles. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257461A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257461A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257461A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257461A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257461A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257461A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257461A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257461A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257461A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257461A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257461A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257461A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257461A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257461A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257461A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257461A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150257461A1_00009.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257461A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257461A1.PDF" type="pdf" size="580183" pages="13" />
+</lexisnexis-patent-document>

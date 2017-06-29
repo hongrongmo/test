@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="EP2940142A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20151104" time-inserted="091135" date-changed="20151223" time-changed="095904">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Application published with search report">
+      <document-id id="121939758">
+        <country>EP</country>
+        <doc-number>2940142</doc-number>
+        <kind>A1</kind>
+        <date>20151104</date>
+      </document-id>
+    </publication-reference>
+    <application-reference>
+      <document-id>
+        <country>EP</country>
+        <doc-number>14733064</doc-number>
+        <date>20140128</date>
+      </document-id>
+    </application-reference>
+    <language-of-filing>chi</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20151104">
+      <priority-claim sequence="1" kind="national">
+        <country>CN</country>
+        <doc-number>201210585171</doc-number>
+        <date>20121228</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>CN</country>
+        <doc-number>201210585171</doc-number>
+        <kind>A</kind>
+        <date>20121228</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>CN</country>
+        <doc-number>2014000131</doc-number>
+        <kind>W</kind>
+        <date>20140128</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>201210585171</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>2014000131</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>CN20121585171</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>WO2014CN00131</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20151105">
+      <gazette-reference>
+        <date>20151104</date>
+      </gazette-reference>
+      <unexamined-printed-without-grant>
+        <date>20151104</date>
+      </unexamined-printed-without-grant>
+      <examined-printed-without-grant>
+        <date>20151104</date>
+      </examined-printed-without-grant>
+    </dates-of-public-availability>
+    <dates-rights-effective date-changed="20151105">
+      <request-for-examination>
+        <date>20150727</date>
+      </request-for-examination>
+    </dates-rights-effective>
+    <classifications-ipcr date-changed="20151223">
+      <classification-ipcr sequence="1">
+        <text>C12P   7/64        20060101AFI20140718BHEP        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>P</subclass>
+        <main-group>7</main-group>
+        <subgroup>64</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140718</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151223">
+      <classification-cpc sequence="1">
+        <text>C12P   7/649       20130101 FI20151214BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>P</subclass>
+        <main-group>7</main-group>
+        <subgroup>649</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151214</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C12P   7/64        20130101 LI20151104BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>P</subclass>
+        <main-group>7</main-group>
+        <subgroup>64</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151104</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>Y02E  50/13        20130101 LA20140122BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>02</class>
+        <subclass>E</subclass>
+        <main-group>50</main-group>
+        <subgroup>13</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140122</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">10</number-of-claims>
+    <invention-title id="title_ger" date-changed="20151104" lang="ger" format="original">VERFAHREN ZUR VERBESSERUNG DER AUSBEUTE BEI DER ENZYMATISCHEN HERSTELLUNG VON BIODIESEL AUS FETTEN</invention-title>
+    <invention-title id="title_eng" date-changed="20151104" lang="eng" format="original">METHOD FOR IMPROVING YIELD OF ENZYMATIC PREPARATION OF BIODIESEL FROM GREASES</invention-title>
+    <invention-title id="title_fre" date-changed="20151104" lang="fre" format="original">PROCÉDÉ POUR L'AMÉLIORATION DU RENDEMENT DE LA PRÉPARATION ENZYMATIQUE DE BIODIESEL À PARTIR DE GRAISSES</invention-title>
+    <official-remarks lang="eng" date-changed="20151104">
+      <official-remark num="1">Restoration request accepted under due care criterion during international phase, no review needed.</official-remark>
+    </official-remarks>
+    <parties date-changed="20151104">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Tsinghua University</orgname>
+            <registered-number>101025684</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Haidian District</address-1>
+              <city>Beijing 100084</city>
+              <country>CN</country>
+            </address>
+          </addressbook>
+        </applicant>
+        <applicant sequence="2" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Beijing Cenway Bio-Energy Technology Co., Ltd.</orgname>
+            <registered-number>101533720</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Building C-1 Dongsheng Science Park 66 Xixiaokou Road Haidian District</address-1>
+              <city>Beijing 100192</city>
+              <country>CN</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <name>LIU, Dehua</name>
+            <address>
+              <address-1>Tsinghua University Haidian District</address-1>
+              <city>Beijing 100084</city>
+              <country>CN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <name>DU, Wei</name>
+            <address>
+              <address-1>Tsinghua University Haidian District</address-1>
+              <city>Beijing 100084</city>
+              <country>CN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3">
+          <addressbook lang="eng">
+            <name>ZHU, Luole</name>
+            <address>
+              <address-1>Ying Bin West Road No. 490 Hi-Tech Developing District</address-1>
+              <city>Yiyang Hunan 413000</city>
+              <country>CN</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4">
+          <addressbook lang="eng">
+            <name>YANG, Jianchun</name>
+            <address>
+              <address-1>Ying Bin West Road No. 490 Hi-Tech Developing District</address-1>
+              <city>Yiyang Hunan 413000</city>
+              <country>CN</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <name>Matthews, Derek Peter</name>
+            <registered-number>100028988</registered-number>
+            <issuing-office>European Patent Office</issuing-office>
+            <address>
+              <address-1>Dehns St Bride's House 10 Salisbury Square</address-1>
+              <city>London EC4Y 8JD</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <designation-of-states date-changed="20151104">
+      <designation-epc>
+        <contracting-states>
+          <country>AL</country>
+          <country>AT</country>
+          <country>BE</country>
+          <country>BG</country>
+          <country>CH</country>
+          <country>CY</country>
+          <country>CZ</country>
+          <country>DE</country>
+          <country>DK</country>
+          <country>EE</country>
+          <country>ES</country>
+          <country>FI</country>
+          <country>FR</country>
+          <country>GB</country>
+          <country>GR</country>
+          <country>HR</country>
+          <country>HU</country>
+          <country>IE</country>
+          <country>IS</country>
+          <country>IT</country>
+          <country>LI</country>
+          <country>LT</country>
+          <country>LU</country>
+          <country>LV</country>
+          <country>MC</country>
+          <country>MK</country>
+          <country>MT</country>
+          <country>NL</country>
+          <country>NO</country>
+          <country>PL</country>
+          <country>PT</country>
+          <country>RO</country>
+          <country>RS</country>
+          <country>SE</country>
+          <country>SI</country>
+          <country>SK</country>
+          <country>SM</country>
+          <country>TR</country>
+        </contracting-states>
+        <extension-states>
+          <country>BA</country>
+          <country>ME</country>
+        </extension-states>
+      </designation-epc>
+    </designation-of-states>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>CN14000131</doc-number>
+        <date>20140128</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014101902</doc-number>
+        <date>20140703</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151210">
+      <main-family family-id="158522982">
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2014203729</doc-number>
+            <kind>A1</kind>
+            <date>20150813</date>
+          </document-id>
+          <application-date>
+            <date>20140128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940142</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20140128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103131735</doc-number>
+            <kind>A</kind>
+            <date>20130605</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103131735</doc-number>
+            <kind>B</kind>
+            <date>20140903</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150353969</doc-number>
+            <kind>A1</kind>
+            <date>20151210</date>
+          </document-id>
+          <application-date>
+            <date>20140128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014101902</doc-number>
+            <kind>A8</kind>
+            <date>20150813</date>
+          </document-id>
+          <application-date>
+            <date>20140128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014101902</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20140128</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="158522979">
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2014203729</doc-number>
+            <kind>A1</kind>
+            <date>20150813</date>
+          </document-id>
+          <application-date>
+            <date>20140128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2940142</doc-number>
+            <kind>A1</kind>
+            <date>20151104</date>
+          </document-id>
+          <application-date>
+            <date>20140128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103131735</doc-number>
+            <kind>A</kind>
+            <date>20130605</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>103131735</doc-number>
+            <kind>B</kind>
+            <date>20140903</date>
+          </document-id>
+          <application-date>
+            <date>20121228</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150353969</doc-number>
+            <kind>A1</kind>
+            <date>20151210</date>
+          </document-id>
+          <application-date>
+            <date>20140128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014101902</doc-number>
+            <kind>A8</kind>
+            <date>20150813</date>
+          </document-id>
+          <application-date>
+            <date>20140128</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014101902</doc-number>
+            <kind>A1</kind>
+            <date>20140703</date>
+          </document-id>
+          <application-date>
+            <date>20140128</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20151104" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Provided in the present invention is a method for improving the yield of enzymatic preparation of biodiesel from greases, comprising: during enzymatic reaction of short-chain alcohols with greases to prepare biodiesel, introducing online dehydration steps, which lead the volatile gases in the enzyme reactor to enter into the low-temperature absorption tank, and the dehydrated gases flow back into the enzyme reactor. The formation of gas-circulation can constantly bring the moisture inside the enzyme reactor out.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20151104">
+    <heading id="h-00001-en">
+      <b>
+        <u>TECHNICAL FIELD</u>
+      </b>
+    </heading>
+    <p id="p-00001-en" num="0001">The present invention relates to the filed of biochemical engineering, particularly, to a method for improving the yield of enzymatic preparation of biodiesel from greases.</p>
+    <heading id="h-00002-en">
+      <b>
+        <u>BACKGROUND ART</u>
+      </b>
+    </heading>
+    <p id="p-00002-en" num="0002">Biodiesel, a new prospect of grease industry, is a long-chain fatty acid ester-based substance produced by biological greases as raw materials through transesterification or esterification, and it is a novel, nonpolluting, renewable energy. The biodiesel is superior to the petroleum diesel in the flash point, combustion efficacy, sulphur content, oxygen content, aromatic hydrocarbon content, and oxygen consumption for combustion, and other indexes thereof are considerable to that of petroleum diesel. Suspended particles, CO, sulfides and hydrocarbons in the exhaust from combustion are significantly reduced, and thus environmental friendliness is possessed. The study and use of the biodiesel have been widely concerned.</p>
+    <p id="p-00003-en" num="0003">Recently, the biodiesel is produced mainly by the chemical method, which produces a corresponding fatty acid methyl ester or ethyl ester by transesterification using animal and vegetable greases and some low-carbon alcohols (methanol or ethanol) under the actions of alkaline or acidic catalysts. The preparation of biodiesel by the chemical method has the following inevitable drawbacks: (1) the contents of free fatty acids and water in greases as raw materials are strictly required; (2) the saponified matters to be generated easily in the alkaline method increases the viscosity of the reaction system and the difficulty in separation of glycerin, and in the acidic method, the temperature of reaction is higher, and the device is to be easily corroded; (3) in the chemical method, the amount of methanol as used exceeds drastically the molar ratio of the reaction, and the recovery of excessive methanol enhances the energy consumption in the process; (4) a large amount of waste liquids containing waste acids or waste alkalis are generated during the production, which severely pollutes the environment.</p>
+    <p id="p-00004-en" num="0004">Synthesis of biodiesel by bio-enzymatic method has the advantages of mild reaction conditions, low energy consumptions for operation, no pollutant discharge, wide applicability to the greases as raw materials, and the like, and accords with the developing direction of green chemistry, and thus it has increasingly drawn people's attention. However, during catalysis of greases by lipase to prepare biodiesel, when the greases as raw materials have water contents of greater than 0.5% or free fatty acid contents of greater than 3%, the water contained in the greases as raw materials and the water produced from the reaction of free fatty acids with acyl receptor, methanol or ethanol, will influence the esterification, resulting in the final acid value of the product greater than 5 mg KOH/g oil. Nevertheless, the acid value of biodiesel product is currently required to be less than 0.5 mg KOH/g oil in the standard of biodiesel in America, European Union, and China. In order to allow the biodiesel product to meet the requirement of the quality of biodiesel in China and the world for the acid value, a complicated process of alkali neutralization is subsequently needed. This subsequent process of reducing the acid value with alkali neutralization will both influence the yield and quality of product, and result in problems such as environmental pollution and the like.</p>
+    <heading id="h-00003-en">
+      <b>
+        <u>DISCLOSURE OF THE INVENTION</u>
+      </b>
+    </heading>
+    <p id="p-00005-en" num="0005">The object of the present invention is to provide a method for improving the yield of enzymatic preparation of biodiesel from greases and the quality of the product (reducing the acid value of the final product of biodiesel).</p>
+    <p id="p-00006-en" num="0006">In order to achieve the object of the present invention, in the method for improving the yield of enzymatic preparation of biodiesel from greases in the present invention, during enzymatic reaction of short-chain alcohols with greases to prepare biodiesel, online dehydration steps are introduced, which lead the volatile gases in the enzyme reactor to enter into the low-temperature absorption tank, and the dehydrated gases flow back into the enzyme reactor. The formation of gas-circulation can constantly bring the moisture inside the enzyme reactor out, thereby improving the conversion rate of the reaction.</p>
+    <p id="p-00007-en" num="0007">In the above method, the temperature of reaction is 40 °C to 45 °C in the enzyme reactor.</p>
+    <p id="p-00008-en" num="0008">In the above method, the low-temperature absorption tank is a short-chain alcohol absorption tank at 0 °C to 25 °C.</p>
+    <p id="p-00009-en" num="0009">In the above method, the enzyme reactor is a one stage enzyme reactor or a multiple stage enzyme reactor.</p>
+    <p id="p-00010-en" num="0010">In the above method, the enzyme used in the enzymatic reaction of short-chain alcohols with greases to prepare biodiesel is a lipase derived from <i>Candida antarctica, Thermomyces lanuginosus, Aspergillus niger, Aspergillus oryzae, Rhizomucormiehei, Rhizopus Oryzae,</i> or the like.</p>
+    <p id="p-00011-en" num="0011">In the above method, the short-chain alcohol is one or more of methanol, ethanol, propanol, butanol, or the like.</p>
+    <p id="p-00012-en" num="0012">In the above method, the greases are biological greases. The biological greases are one or more of vegetable greases, animal greases or microbial greases. The vegetable greases are one or more of palm oil, soya bean oil, rape-seed oil, curcas oil, jatropha curcasl oil, corn oil, castor oil, peanut oil, cottonseed oil, rice bran oil, shinyleaf yellowhorn oil, or the like; the animal greases are one or more of fish oil, beef tallow, lard, mutton tallow or the like; and the microbial greases are yeast grease, microalgae grease, or the like.</p>
+    <p id="p-00013-en" num="0013">In the above method, the greases are waste edible oils or tailings from the refining of greases. The waste edible oils are hogwash oil, gutter oil or the like. The tailings from the refining of grease are acidified oil or the like.</p>
+    <p id="p-00014-en" num="0014">The present invention introduces firstly the online dehydration technique during the enzymatic preparation of biodiesel from greases to remove online the water in the greases as raw materials or the water produced by esterification, so as to improve conversion rate of the reaction and quality of the product. The online dehydration process may be performed during the preparation of biodiesel by one-step enzymatic reaction (<figref>Fig. 1</figref>), and may also be performed during partial enzymatic reactions of multi-step reactions (<figref>Fig. 2</figref>). Particularly, during the reaction, volatile gases in an enzyme reactor are drawn out from the top of the reactor into a low-temperature absorption tank containing short-chain alcohols. The moisture inside the reactor will be brought out by the volatile gases, and the moisture which is brought out is to be absorbed by low-temperature short-chain alcohols. The dehydrated gases are then pumped into the enzyme reactor via the bottom of the enzyme reactor by an air pump, and a gas-circulation is thus formed so that the moisture in the reaction system can be brought out and absorbed constantly. Such an online dehydration process is achieved primarily utilizing the good water absorption property of short-chain alcohols at low temperatures (0 °C - 20 °C). After online dehydration, the water content in the final reaction system can be controlled to be below 500 ppm, and the acid value of the biodiesel product is lower than 0.5 mg KOH/g oil. This online dehydration process using short-chain alcohols simplifies significantly the operation process, and has good economic and environmental benefits.</p>
+    <heading id="h-00004-en">
+      <b>
+        <u>DESCRIPTION OF THE DRAWINGS</u>
+      </b>
+    </heading>
+    <p id="p-00015-en" num="0015">
+      <ul id="ul-00001-en" list-style="none">
+        <li>
+          <figref>Fig. 1</figref> is a schematic diagram of single stage enzymatic conversion of renewable greases with online dehydration to prepare the biodiesel according to the present invention.</li>
+        <li>
+          <figref>Fig. 2</figref> is a schematic diagram of multiple stage enzymatic conversion of renewable greases with online dehydration to prepare the biodiesel according to the present invention.</li>
+      </ul>
+    </p>
+    <heading id="h-00005-en">
+      <b>
+        <u>THE BEST MODE TO CARRY OUT THE INVENITON</u>
+      </b>
+    </heading>
+    <p id="p-00016-en" num="0016">The following Examples are used to describe the present invention, but not to limit the scope of the present invention. Unless indicated otherwise, the technical means used in the Examples are the conventional means well known to the skilled in the art, and all raw materials as used are commercially available.</p>
+    <heading id="h-00006-en">
+      <b>Example 1. Method for Improving the Yield of Enzymatic Preparation of Biodiesel from Greases</b>
+    </heading>
+    <p id="p-00017-en" num="0017">300 g palm oil and the methanol having a molar ratio of 1:1 of alcohol to oil were placed into an enzyme reactor, and the system contained 0.3% of water. An immobilized lipase derived from <i>Candida Antarctica</i> having 200 standard enzyme activities based on unit grease mass was added, with a temperature of reaction controlled at 45 °C. 150 g methanol with a water content of 400 ppm was placed into the short-chain alcohols absorption tank, with the temperature of the absorption tank controlled at 25 °C. During the reaction, the online dehydration as shown in <figref>Fig. 1</figref> was performed: volatile methanol gases in enzyme reactor were pumped out from the top of the reactor into a low-temperature absorption tank containing methanol; after the water brought out by the methanol gases was absorbed by the low-temperature absorption tank, the dehydrated dry methanol gases were pumped out and flowed back into the enzyme reactor from the bottom of the enzyme reactor by an air pump; so-formed gas-circulation can constantly bring the moisture inside the enzyme reactor out. The reaction was performed at 400 L/H of ventilatory volume for 12 hours, with the conversion rate of the reaction higher than 98%, the water content of the reaction liquid in the enzyme reactor being 500 ppm, and the acid value less than 0.5 mg KOH/g oil.</p>
+    <heading id="h-00007-en">
+      <b>Example 2. Method for Improving the Yield of Enzymatic Preparation of Biodiesel from Greases</b>
+    </heading>
+    <p id="p-00018-en" num="0018">300 g jatropha curcasl oil and the ethanol having a molar ratio of 1:2 of alcohol to oil were placed into the enzyme reactor, and the system contained 0.8% of water. An immobilized lipase derived from <i>Aspergillus oryzae</i> having 100 standard enzyme activities based on unit grease mass and an immobilized lipase derived from <i>Candida Antarctica</i> having 200 standard enzyme activities based on unit grease mass were added, with the temperature of reaction controlled at 45 °C. 150 g ethanol with a water content of 400 ppm was placed into the short-chain alcohols absorption tank, with the temperature controlled at 20 °C. During the reaction, the online dehydration as shown in <figref>Fig. 1</figref> was performed: ethanol gases at the top of the enzyme reactor were pumped out from the top of the reactor into a low-temperature tank; the water brought out by the gases was absorbed by the low-temperature absorption tank; the dehydrated dry ethanol gases were pumped into the enzyme reactor from the bottom of the enzyme reactor by an air pump. The so-formed gas-circulation can constantly bring the moisture inside the enzyme reactor out. The reaction was performed at 400 L/H of ventilatory volume for 12 hours, with the conversion rate of the reaction higher than 98%, the water content of the reaction liquid in the enzyme reactor being 500 ppm, and the acid value less than 0.5 mg KOH/g oil.</p>
+    <heading id="h-00008-en">
+      <b>Example 3. Method for Improving the Yield of Enzymatic Preparation of Biodiesel from Greases</b>
+    </heading>
+    <p id="p-00019-en" num="0019">300 g cottonseed oil and the methanol having a molar ratio of 1:1 of alcohol to oil were placed into the enzyme reactor, and the system contained 1 % of water. An immobilized lipase derived from <i>Rhizomucor miehei</i> having 400 standard enzyme activities based on unit grease mass and an immobilized lipase derived from <i>Rhizopus Oryzae</i> having 100 standard enzyme activities based on unit grease mass were added, with the temperature of reaction controlled at 40 °C. 400 g methanol with a water content of 400 ppm was placed into the short-chain alcohols absorption tank, with the temperature controlled at 15 °C. During the reaction, the online dehydration as shown in <figref>Fig. 1</figref> was performed: methanol gases at the top of the enzyme reactor were pumped out from the top of the reactor into the low-temperature absorption tank; the water brought out by the gases was absorbed by the low-temperature absorption tank; the dehydrated dry methanol gases were pumped into the enzyme reactor from the bottom of the enzyme reactor by an air pump. The so-formed gas-circulation can constantly remove the moisture inside the enzyme reaction system and promote the reaction. The reaction was performed at 300 L/H of ventilatory volume for 10 hours, with the conversion rate of the reaction higher than 98%, the water content of the reaction liquid in the enzyme reactor reaching 560 ppm, and the acid value less than 0.5 mg KOH/g oil.</p>
+    <heading id="h-00009-en">
+      <b>Example 4. Method for Improving the Yield of Enzymatic Preparation of Biodiesel from Greases</b>
+    </heading>
+    <p id="p-00020-en" num="0020">300 g jatropha curcasl oil and the ethanol having a molar ratio of 1:0.5 of alcohol to oil were placed into the enzyme reactor, and the system contained 0.3% of water. An immobilized lipase derived from <i>Aspergillus oryzae</i> having 100 standard enzyme activities based on unit grease mass and an immobilized lipase derived from <i>Candida Antarctica</i> having 200 standard enzyme activities based on unit grease mass were added, with the temperature of reaction controlled at 45 °C. 150 g ethanol was placed into the short-chain alcohols absorption tank, with the temperature controlled at 20 °C. During the reaction, the online dehydration as shown in <figref>Fig. 1</figref> was performed: ethanol gases at the top of the enzyme reactor were pumped out from the top of the reactor into the low-temperature absorption tank; the water in the gases was absorbed by the low-temperature ethanol; the dehydrated dry ethanol gases were pumped into the enzyme reactor from the bottom of the enzyme reactor by an air pump. The so-formed gas-circulation can constantly remove the moisture inside the reaction liquid, so as to effectively promote the esterification of the fatty acid with ethanol. The reaction was performed at 400 L/H of ventilatory volume for 12 hours, with the conversion rate of the reaction higher than 98%, the water content of the reaction liquid in the enzyme reactor reaching 560 ppm, and the acid value less than 0.5 mg KOH/g oil.</p>
+    <heading id="h-00010-en">
+      <b>Example 5. Method for Improving the Yield of Enzymatic Preparation of Biodiesel from Greases</b>
+    </heading>
+    <p id="p-00021-en" num="0021">Methanol and soya bean oil with a molar ratio of 4.5:1 were placed into the enzyme reactor, and the system contained 3% of water. A liquid lipase derived from <i>Candida Antarctica</i> having 400 standard enzyme activities based on unit grease mass was added, with the temperature controlled at 40 °C. The methanol was added over 4 hours at a uniform speed. After 7 hours of reaction, the glycerin and crude biodiesel phase were separated by standing. 335 g crude biodiesel was placed into the enzyme reactor for reaction, and an immobilized lipase derived from <i>Candida Antarctica</i> having 200 standard enzyme activities based on unit grease mass was added, with the temperature of reaction controlled at 25 °C. 400 g methanol with a water content of 0.04% was placed into the short-chain alcohols absorption tank, with the temperature of the methanol controlled at 5 °C. During the reaction, the online dehydration as shown in <figref>Fig. 2</figref> was performed: methanol gases at the top of the enzyme reactor were pumped out from the top of the reactor into the low-temperature absorption tank; the water in the gases was absorbed by the low-temperature methanol; the dehydrated dry methanol gases were pumped into the enzyme reactor from the bottom of the enzyme reactor by an air pump, and fully in contact with the reaction liquid. The so-formed gas-circulation would constantly remove the moisture inside the reaction liquid, and promote the esterification of the fatty acid with methanol. The reaction was performed at 400 L/H of ventilatory volume for 3 hours, with the conversion rate of the reaction higher than 98%, the water content of the reaction liquid in the enzyme reactor reaching 123 ppm, and the acid value reaching 0.24 mg KOH/g oil.</p>
+    <heading id="h-00011-en">
+      <b>Example 6. Method for Improving the Yield of Enzymatic Preparation of Biodiesel from Greases</b>
+    </heading>
+    <p id="p-00022-en" num="0022">Methanol and microalgae grease with a molar ratio of 4.5:1 were placed into the enzyme reactor, and the system contained 3% of water. A liquid lipase derived from <i>Candida Antarctica</i> having 400 standard enzyme activities based on unit grease mass was added, with the temperature controlled at 45 °C. The methanol was added over 4 hours at a uniform speed. After 7 hours of reaction, the glycerin and crude biodiesel phase were separated by centrifugation. 335 g crude biodiesel was placed into the enzyme reactor for reaction, and an immobilized lipase derived from <i>Candida Antarctica</i> having 200 standard enzyme activities based on unit grease mass was added, with the temperature of reaction controlled at 25 °C. 395 g methanol with a water content of 0.55% was placed into the short-chain alcohols absorption tank, with the temperature of the methanol controlled at 11 °C. During the reaction, the online dehydration as shown in <figref>Fig. 2</figref> was performed: methanol gases at the top of the enzyme reactor were pumped out from the top of the reactor into the low-temperature absorption tank; the water in the gases was absorbed by the low-temperature methanol; the dehydrated dry methanol gases were pumped into the enzyme reactor from the bottom of the enzyme reactor by an air pump. The so-formed gas-circulation would constantly remove the moisture inside the reaction liquid, so as to promote the esterification of the fatty acid with methanol. The reaction was performed at 400 L/H of ventilatory volume for 4 hours, with the conversion rate of the reaction higher than 98%, the water content of the reaction liquid in the enzyme reactor reaching 160 ppm, and the acid value reaching 0.26 mg KOH/g oil.</p>
+    <heading id="h-00012-en">
+      <b>Example 7. Method for Improving the Yield of Enzymatic Preparation of Biodiesel from Greases</b>
+    </heading>
+    <p id="p-00023-en" num="0023">Methanol and yeast grease with a molar ratio of 5:1 were placed into the enzyme reactor, and the system contained 5% of water. A liquid lipase derived from <i>Candida Antarctica</i> having 400 standard enzyme activities based on unit grease mass was added, with the temperature controlled at 45 °C. The methanol was added over 4 hours at a uniform speed. After 8 hours of reaction, the glycerin and crude biodiesel phase were separated by centrifugation. 335 g crude biodiesel was placed into the enzyme reactor for reaction, and an immobilized lipase derived from <i>Candida Antarctica</i> having 200 standard enzyme activities based on unit grease mass was added, with the temperature controlled at 23 °C. 336 g methanol with a water content of 5.8% was placed into the short-chain alcohols absorption tank, with the temperature of the methanol controlled at 5 °C. During the reaction, the online dehydration as shown in <figref>Fig. 2</figref> was performed: methanol gases at the top of the enzyme reactor were pumped out from the top of the reactor into the low-temperature absorption tank; the water in the gases was absorbed by the low-temperature methanol; the dehydrated dry methanol gases were pumped into the enzyme reactor from the bottom of the enzyme reactor by an air pump. The so-formed gas-circulation would constantly remove the moisture inside the reaction liquid, so as to promote the esterification of the fatty acid with methanol. The reaction was performed at 400 L/H of ventilatory volume for 4 hours, with the conversion rate of the reaction higher than 98%, the water content of the reaction liquid in the enzyme reactor reaching 186 ppm, and the acid value reaching 0.46 mg KOH/g oil.</p>
+    <heading id="h-00013-en">
+      <b>Example 8. Method for Improving the Yield of Enzymatic Preparation of Biodiesel from Greases</b>
+    </heading>
+    <p id="p-00024-en" num="0024">Propanol and fish oil with a molar ratio of 4.5:1 were placed into the enzyme reactor, and the system contained 10% of water. A liquid lipase derived from <i>Candida Antarctica</i> having 400 standard enzyme activities based on unit grease mass was added, with the temperature controlled at 45 °C. The propanol was added over 6 hours at a uniform speed. After 14 hours of reaction, the glycerin and crude biodiesel phase were separated by centrifugation. 340 g crude biodiesel was placed into the enzyme reactor for reaction, and an immobilized lipase derived from <i>Candida Antarctica</i> having 200 standard enzyme activities based on unit grease mass was added, with the temperature of reaction controlled at 30 °C. 400 g propanol with a water content of 500 ppm was placed into the short-chain alcohols absorption tank, with the temperature of the propanol controlled at 11 °C. During the reaction, the online dehydration as shown in <figref>Fig. 2</figref> was performed: propanol gases at the top of the enzyme reactor were pumped out from the top of the reactor into the low-temperature absorption tank; the water in the gases was absorbed by the low-temperature propanol; the dehydrated dry propanol gases were pumped into the enzyme reactor from the bottom of the enzyme reactor by an air pump. The so-formed gas-circulation would constantly bring the moisture inside the reaction system out, so as to promote the reaction. The reaction was performed at 400 L/H of ventilatory volume for 4 hours, with the conversion rate of the reaction higher than 98%, the water content of the reaction liquid in the enzyme reactor reaching 188 ppm, and the acid value reaching 0.32 mg KOH/g oil.</p>
+    <heading id="h-00014-en">
+      <b>Example 9. Method for Improving the Yield of Enzymatic Preparation of Biodiesel from Greases</b>
+    </heading>
+    <p id="p-00025-en" num="0025">Butanol and beef tallow with a molar ratio of 4.5:1 were placed into the enzyme reactor, and the system contained 10% of water. A liquid lipase derived from <i>Candida Antarctica</i> having 400 standard enzyme activities based on unit grease mass was added, with the temperature controlled at 45 °C. The butanol was added over 6 hours at a uniform speed. After 15 hours of reaction, the glycerin and crude biodiesel phase were separated by centrifugation. 340 g crude biodiesel was placed into the enzyme reactor for reaction, and an immobilized lipase derived from <i>Candida Antarctica</i> having 200 standard enzyme activities based on unit grease mass was added, with the temperature of reaction controlled at 30 °C. 400 g butanol with a water content of 500 ppm was placed into the short-chain alcohols absorption tank, with the temperature of the butanol controlled at 11 °C. During the reaction, the online dehydration as shown in <figref>Fig. 2</figref> was performed: butanol gases at the top of the enzyme reactor were pumped out from the top of the reactor into the low-temperature absorption tank; the water in the gases was absorbed by the low-temperature butanol; the dehydrated dry butanol gases were pumped into the enzyme reactor from the bottom of the enzyme reactor by an air pump. The so-formed gas-circulation would constantly remove the moisture inside the reaction liquid, so as to promote the reaction. The reaction was performed at 400 L/H of ventilatory volume for 4 hours, with the conversion rate of the reaction higher than 98%, the water content of the reaction liquid in the enzyme reactor reaching 196 ppm, and the acid value reaching 0.30 mg KOH/g oil.</p>
+    <heading id="h-00015-en">
+      <b>Example 10. Method for Improving the Yield of Enzymatic Preparation of Biodiesel from Greases</b>
+    </heading>
+    <p id="p-00026-en" num="0026">Methanol and acidified oil with a molar ratio of 4.5:1 were placed into the enzyme reactor, and the system contained 10% of water. A liquid lipase derived from <i>Candida Antarctica</i> having 400 standard enzyme activities based on unit grease mass was added, with the temperature controlled at 35 °C. The methanol was added over 6 hours at a uniform speed. After 8 hours of reaction, the glycerin and crude biodiesel phase were separated by standing. 340 g crude biodiesel was placed into the enzyme reactor for reaction, and an immobilized lipase derived from <i>Candida Antarctica</i> having 200 standard enzyme activities based on unit grease mass was added, with the temperature of reaction controlled at 25 °C. 400 g methanol with a water content of 4.1 % was placed into the short-chain alcohols absorption tank, with the temperature of the methanol controlled at 5 °C. During the reaction, the online dehydration as shown in <figref>Fig. 2</figref> was performed: methanol gases at the top of the enzyme reactor were pumped out from the top of the reactor into the low-temperature absorption tank; the water in the gases was absorbed by the low-temperature methanol; the dehydrated dry methanol gases were pumped into the enzyme reactor from the bottom of the enzyme reactor by an air pump. The so-formed gas-circulation would constantly remove the moisture inside the reaction liquid, so as to promote the reaction. The reaction was performed at 400 L/H of ventilatory volume for 4 hours, with the conversion rate of the reaction higher than 98%, the water content of the reaction liquid in the enzyme reactor reaching 120 ppm, and the acid value reaching 0.30 mg KOH/g oil.</p>
+    <heading id="h-00016-en">
+      <b>Example 11. Method for Improving the Yield of Enzymatic Preparation of Biodiesel from Greases</b>
+    </heading>
+    <p id="p-00027-en" num="0027">Methanol and corn oil with a molar ratio of 4.5:1 were placed into the enzyme reactor, and the system contained 10% of water. A liquid lipase derived from <i>Candida Antarctica</i> having 400 standard enzyme activities based on unit grease mass was added, with the temperature controlled at 45°C. The methanol was added over 4 hours at a uniform speed. After 8 hours of reaction, the glycerin and crude biodiesel phase were separated by centrifugation. 340 g crude biodiesel was placed into the enzyme reactor for reaction, and an immobilized lipase derived from <i>Candida Antarctica</i> having 200 standard enzyme activities based on unit grease mass was added, with the temperature of reaction controlled at 25 °C. 400 g methanol with a water content of 4.55% was placed into the short-chain alcohols absorption tank, with the temperature of the methanol controlled at 5 °C. During the reaction, the online dehydration as shown in <figref>Fig. 2</figref> was performed: methanol gases at the top of the enzyme reactor were pumped out from the top of the reactor into the low-temperature absorption water tank; the water in the gases was absorbed by the low-temperature methanol; the dehydrated dry methanol gases were pumped into the enzyme reactor from the bottom of the enzyme reactor by an air pump. The so-formed gas-circulation would constantly remove the moisture inside the reaction liquid, so as to promote the reaction. The reaction was performed at 400 L/H of ventilatory volume for 4 hours, with the conversion rate of the reaction higher than 98%, the water content of the reaction liquid in the enzyme reactor reaching 146 ppm, and the acid value reaching 0.33 mg KOH/g oil.</p>
+    <heading id="h-00017-en">
+      <b>Example 12. Method for Improving the Yield of Enzymatic Preparation of Biodiesel from Greases</b>
+    </heading>
+    <p id="p-00028-en" num="0028">Methanol and oleic acid with a molar ratio of 4.5:1 were placed into the enzyme reactor, and the system contained 7.5% of water. A liquid lipase derived from <i>Candida Antarctica</i> having 400 standard enzyme activities based on unit grease mass was added, with the temperature controlled at 45 °C. The methanol was added over 4 hours at a uniform speed. After 8 hours of reaction, the glycerin and crude biodiesel phase were separated by centrifugation. 340 g crude biodiesel was placed into the enzyme reactor for reaction, and an immobilized lipase derived from <i>Candida Antarctica</i> having 200 standard enzyme activities based on unit grease mass was added, with the temperature of reaction controlled at 25 °C. 400 g methanol with a water content of 500 ppm was placed into the short-chain alcohols absorption tank, with the temperature of the methanol controlled at 5 °C. During the reaction, the online dehydration as shown in <figref>Fig. 2</figref> was performed: methanol gases at the top of the enzyme reactor were pumped out from the top of the reactor into the low-temperature absorption tank; the water in the gases was absorbed by the low-temperature methanol; the dehydrated dry methanol gases were pumped into the enzyme reactor from the bottom of the enzyme reactor by an air pump. The so-formed gas-circulation would constantly remove the moisture inside the reaction liquid, so as to promote the reaction. The reaction was performed at 400 L/H of ventilatory volume for 4 hours, with the conversion rate of the reaction higher than 98%, the water content of the reaction liquid in the enzyme reactor reaching 156 ppm, and the acid value reaching 0.30 mg KOH/g oil.</p>
+    <heading id="h-00018-en">
+      <b>Example 13. Method for Improving the Yield of Enzymatic Preparation of Biodiesel from Greases</b>
+    </heading>
+    <p id="p-00029-en" num="0029">Methanol and peanut oil with a molar ratio of 4.5:1 were placed into the enzyme reactor, and the system contained 5% of water. A liquid lipase derived from <i>Candida Antarctica</i> having 400 standard enzyme activities based on unit grease mass was added, with the temperature controlled at 45 °C. The methanol was added over 4 hours at a uniform speed. After 8 hours of reaction, the glycerin and crude biodiesel phase were separated by centrifugation. 340 g crude biodiesel was placed into the enzyme reactor for reaction, and an immobilized lipase derived from <i>Candida Antarctica</i> having 200 standard enzyme activities based on unit grease mass was added, with the temperature of reaction controlled at 25 °C. 400 g methanol with a water content of 500 ppm was placed into the short-chain alcohols absorption tank, with the temperature of the methanol controlled at 15 °C. During the reaction, the online dehydration as shown in <figref>Fig. 2</figref> was performed: methanol gases at the top of the enzyme reactor were pumped out from the top of the reactor into the low-temperature water absorbing tank; the water in the gases was absorbed by the low-temperature methanol; the dehydrated dry methanol gases were pumped into the enzyme reactor from the bottom of the enzyme reactor by an air pump. The so-formed gas-circulation would constantly remove the moisture inside the reaction liquid, so as to promote the esterification of the fatty acid with methanol. The reaction was performed at 400 L/H of ventilatory volume for 4 hours, with the conversion rate of the reaction higher than 98%, the water content of the reaction liquid in the enzyme reactor reaching 213 ppm, and the acid value reaching 0.28 mg KOH/g oil.</p>
+    <heading id="h-00019-en">
+      <b>Example 14. Method for Improving the Yield of Enzymatic Preparation of Biodiesel from Greases</b>
+    </heading>
+    <p id="p-00030-en" num="0030">Methanol and shinyleaf yellowhorn oil with a molar ratio of 4.5:1 were placed into the enzyme reactor, and the system contained 5% of water. A liquid lipase derived from <i>Candida Antarctica</i> having 400 standard enzyme activities based on unit grease mass was added, with the temperature controlled at 45 °C. The methanol was added over 4 hours at a uniform speed. After 8 hours of reaction, the glycerin and crude biodiesel phase were separated by centrifugation. 340 g crude biodiesel was placed into the enzyme reactor for reaction, and an immobilized lipase derived from <i>Candida Antarctica</i> having 200 standard enzyme activities based on unit grease mass was added, with the temperature of reaction controlled at 25°C. 400 g methanol with a water content of 500 ppm was placed into the short-chain alcohols absorption tank, with the temperature of the methanol controlled at 15 °C. During the reaction, the online dehydration as shown in <figref>Fig. 2</figref> was performed: methanol gases at the top of the enzyme reactor were pumped out from the top of the reactor into the low-temperature absorption tank; the water in the gases was absorbed by the low-temperature methanol; the dehydrated dry methanol gases were pumped into the enzyme reactor from the bottom of the enzyme reactor by an air pump. The so-formed gas-circulation would constantly remove the moisture inside the reaction liquid, so as to promote the reaction. The reaction was performed at 500 L/H of ventilatory volume for 4 hours, with the conversion rate of the reaction higher than 98%, the water content of the reaction liquid in the enzyme reactor reaching 231 ppm, and the acid value reaching 0.27 mg KOH/g oil.</p>
+    <heading id="h-00020-en">
+      <b>Example 15. Method for Improving the Yield of Enzymatic Preparation of Biodiesel from Greases</b>
+    </heading>
+    <p id="p-00031-en" num="0031">Methanol and rice bran oil with a molar ratio of 4.5:1 were placed into the enzyme reactor, and the system contained 5% of water. A liquid lipase derived from <i>Candida Antarctica</i> having 400 standard enzyme activities based on unit grease mass was added, with the temperature controlled at 45 °C. The methanol was added over 4 hours at a uniform speed. After 8 hours of reaction, the glycerin and crude biodiesel phase were separated by centrifugation. 340 g crude biodiesel was placed into the enzyme reactor for reaction, and an immobilized lipase derived from <i>Candida Antarctica</i> having 200 standard enzyme activities based on unit grease mass was added, with the temperature of reaction controlled at 25 °C. 400 g methanol with a water content of 500 ppm was placed into the short-chain alcohols absorption tank, with the temperature of the methanol controlled at 15 °C. During the reaction, the online dehydration as shown in <figref>Fig. 2</figref> was performed: methanol gases at the top of the enzyme reactor were pumped out from the top of the reactor into the low-temperature absorption tank; the water in the gases was absorbed by the low-temperature methanol; the dehydrated dry methanol gases were pumped into the enzyme reactor from the bottom of the enzyme reactor by an air pump to form a gas-circulation. The so-formed gas-circulation would constantly remove the moisture inside the reaction liquid, so as to promote the reaction. The reaction was performed at 400 L/H of ventilatory volume for 4 hours, with the conversion rate of the reaction higher than 98%, the water content of the reaction liquid in the enzyme reactor reaching 193 ppm, and the acid value reaching 0.26 mg KOH/g oil.</p>
+    <heading id="h-00021-en">
+      <b>Example 16. Method for Improving the Yield of Enzymatic Preparation of Biodiesel from Greases</b>
+    </heading>
+    <p id="p-00032-en" num="0032">Methanol and castor oil with a molar ratio of 4.5:1 were placed into the enzyme reactor, and the system contained 5% of water. A liquid lipase derived from <i>Candida Antarctica</i> having 300 standard enzyme activities based on unit grease mass was added, with the temperature controlled at 45 °C. The methanol was added over 5 hours at a uniform speed. After 8 hours of reaction, the glycerin and crude biodiesel phase were separated by centrifugation. 340 g crude biodiesel was placed into the enzyme reactor for reaction, and an immobilized lipase derived from <i>Candida Antarctica</i> having 200 standard enzyme activities based on unit grease mass was added, with the temperature of reaction controlled at 25 °C. 400 g methanol with a water content of 500 ppm was placed into the short-chain alcohols absorption tank, with the temperature of the methanol controlled at 11 °C. During the reaction, the online dehydration as shown in <figref>Fig. 2</figref> was performed: methanol gases at the top of the enzyme reactor were pumped out from the top of the reactor into the low-temperature absorption tank; the water in the gases was absorbed by the low-temperature methanol; the dehydrated dry methanol gases were pumped into the enzyme reactor from the bottom of the enzyme reactor by an air pump to form a gas-circulation, constantly removing the moisture inside the reaction liquid so as to promote the reaction. The reaction was performed at 400 L/H of ventilatory volume for 4 hours, with the conversion rate of the reaction higher than 98%, the water content of the reaction liquid in the enzyme reactor reaching 163 ppm, and the acid value reaching 0.42 mg KOH/g oil.</p>
+    <heading id="h-00022-en">
+      <b>Example 17. Method for Improving the Yield of Enzymatic Preparation of Biodiesel from Greases</b>
+    </heading>
+    <p id="p-00033-en" num="0033">Methanol and curcas oil with a molar ratio of 4.5:1 were placed into the enzyme reactor, and the system contained 10% of water. A liquid lipase derived from <i>Candida Antarctica</i> having 200 standard enzyme activities based on unit grease mass was added, with the temperature controlled at 45 °C. The methanol was added over 6 hours at a uniform speed. After 8 hours of reaction, the glycerin and crude biodiesel phase were separated by centrifugation. 340 g crude biodiesel was placed into the enzyme reactor for reaction, and an immobilized lipase derived from <i>Candida Antarctica</i> having 400 standard enzyme activities based on unit grease mass was added, with the temperature of reaction controlled at 25 °C. 400 g methanol with a water content of 500 ppm was placed into the short-chain alcohols absorption tank, with the temperature of the methanol controlled at 11 °C. During the reaction, the online dehydration as shown in <figref>Fig. 2</figref> was performed: methanol gases at the top of the enzyme reactor were pumped out from the top of the reactor into the low-temperature absorption tank; the water in the gases was absorbed by the low-temperature methanol; the dehydrated dry methanol gases were pumped into the enzyme reactor from the bottom of the enzyme reactor by an air pump to form a gas-circulation, constantly removing the moisture inside the reaction liquid so as to promote the reaction. The reaction was performed at 400 L/H of ventilatory volume for 2.5 hours, with the conversion rate of the reaction higher than 98%, the water content of the reaction liquid in the enzyme reactor reaching 230 ppm, and the acid value reaching 0.22 mg KOH/g oil.</p>
+    <heading id="h-00023-en">
+      <b>Example 18. Method for Improving the Yield of Enzymatic Preparation of Biodiesel from Greases</b>
+    </heading>
+    <p id="p-00034-en" num="0034">Methanol and gutter oil with a molar ratio of 4.5:1 were placed into the enzyme reactor, and the system contained 10% of water. A liquid lipase derived from <i>Candida Antarctica</i> having 200 standard enzyme activities based on unit grease mass was added, with the temperature controlled at 45 °C. The methanol was added over 6 hours at a uniform speed. After 8 hours of reaction, the glycerin and crude biodiesel phase were separated by centrifugation. 340 g crude biodiesel was placed into the enzyme reactor for reaction, and an immobilized lipase derived from <i>Candida Antarctica</i> having 400 standard enzyme activities based on unit grease mass was added, with the temperature of reaction controlled at 25 °C. 400 g methanol with a water content of 500 ppm was placed into the short-chain alcohols absorption tank, with the temperature of the methanol controlled at 5 °C. During the reaction, the online dehydration as shown in <figref>Fig. 2</figref> was performed: methanol gases at the top of the enzyme reactor were pumped out from the top of the reactor into the low-temperature absorption tank; the water in the gases was absorbed by the low-temperature methanol; the dehydrated dry methanol gases were pumped into the enzyme reactor from the bottom of the enzyme reactor by an air pump to form a gas-circulation, constantly removing the moisture inside the reaction liquid so as to promote the reaction. The reaction was performed at 400 L/H of ventilatory volume for 3 hours, with the conversion rate of the reaction higher than 98%, the water content of the reaction liquid in the enzyme reactor reaching 170 ppm, and the acid value reaching 0.33 mg KOH/g oil.</p>
+    <heading id="h-00024-en">
+      <b>Example 19. Method for Improving the Yield of Enzymatic Preparation of Biodiesel from Greases</b>
+    </heading>
+    <p id="p-00035-en" num="0035">Methanol and cottonseed oil with a molar ratio of 4.5:1 were placed into the enzyme reactor, and the system contained 3% of water. A liquid lipase derived from <i>Candida Antarctica</i> having 200 standard enzyme activities based on unit grease mass was added, with the temperature controlled at 45 °C. The methanol was added over 6 hours at a uniform speed. After 8 hours of reaction, the glycerin and crude biodiesel phase were separated by centrifugation. 340 g crude biodiesel was placed into the enzyme reactor for reaction, and an immobilized lipase derived from <i>Candida Antarctica</i> having 400 standard enzyme activities based on unit grease mass was added, with the temperature of reaction controlled at 25 °C. 400 g methanol with a water content of 500 ppm and 40 g metal mesh packing were placed into the short-chain alcohols water absorbing tower, with the temperature of the methanol controlled at 11 °C. During the reaction, the online dehydration as shown in <figref>Fig. 2</figref> was performed: methanol gases at the top of the enzyme reactor were pumped out from the top of the reactor into the low-temperature absorption tank; the water in the gases was absorbed by the low-temperature methanol; the dehydrated dry methanol gases were pumped into the enzyme reactor from the bottom of the enzyme reactor by an air pump. The so-formed gas-circulation would constantly remove the moisture inside the reaction liquid. The reaction was performed at 400 L/H of ventilatory volume for 2.5 hours, with the conversion rate of the reaction higher than 98%, the water content of the reaction liquid in the enzyme reactor reaching 150 ppm, and the acid value reaching 0.21 mg KOH/g oil.</p>
+    <p id="p-00036-en" num="0036">While general descriptions and specific embodiments have been used above to describe the present invention in detail, it is apparent to the skilled in the art that some modifications or improvements may be made to them based on the present invention. Therefore, these modifications or improvements as made without departing from the spirit of the present invention all belong to the scope claimed by the present invention.</p>
+    <heading id="h-00025-en">
+      <b>
+        <u>INDUSTRIAL APPLICATION</u>
+      </b>
+    </heading>
+    <p id="p-00037-en" num="0037">The present invention has advantages in that: <ul id="ul-00002-en" list-style="none" compact="compact"><li>during the enzymatic preparation of biodiesel from greases by transesterification, one stage enzyme reactor or partial enzyme reactors in a multiple stage enzyme reactors is connected to a low-temperature absorption tank containing short-chain alcohols; volatile gases in an enzyme reactor are drawn out from the top of the reactor into the above low-temperature absorption tank; the dehydrated gases were pumped back into the enzyme reactor via the bottom of the enzyme reactor by an air pump; the so-formed gas-circulation enables the moisture in the enzyme reaction system to be brought out and absorbed constantly so as to achieve the purpose for increasing the conversion rate of the reaction and reducing the acid value of the product. The temperature of the absorption tank containing short-chain alcohols is controlled in the range from 0 °C to 25 °C. After 3 - 12 hours of enzymatic reaction, the conversion rate from greases as raw materials to the biodiesel is greater than 98%, and the acid value of biodiesel as the final product is less than 0.5 mg KOH/g oil.</li></ul></p>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20151104">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>A method for improving the yield of enzymatic preparation of biodiesel from greases, <b>characterized in that</b>: during enzymatic reaction of short-chain alcohols with greases to prepare biodiesel, online dehydration steps are introduced, leading the volatile gases in the enzyme reactor to enter into the low-temperature absorption tank, and the dehydrated gases flow back into the enzyme reactor; the formation of gas-circulation can constantly bring the moisture inside the enzyme reactor out, so as to improve the conversion rate of the reaction.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>The method according to claim 1, characterized in that: the temperature of reaction is 40 °C to 45 °C in the enzyme reactor.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>The method according to claim 1, characterized in that: the low-temperature absorption tank is a short-chain alcohols absorption tank at 0 °C to 25 °C.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>The method according to claim 1, characterized in that: the enzyme reactor is one stage enzyme reactor or multiple stage enzyme reactor.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>The method according to claim 1, characterized in that: the enzyme used in the enzymatic reaction of short-chain alcohols with greases to prepare biodiesel is a lipase derived from Candida antarctica, Thermomyces lanuginosus, Aspergillus niger, Aspergillus oryzae, Rhizomucor miehei, or Rhizopus Oryzae.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>The method according to claim 1, characterized in that: the short-chain alcohols are one or more of methanol, ethanol, propanol, or butanol.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>The method according to claim 1, characterized in that: the greases are biological greases.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>The method according to claim 7, characterized in that: the biological greases are one or more of vegetable greases, animal greases or microbial greases.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>The method according to claim 8, characterized in that: the vegetable greases are one or more of palm oil, soya bean oil, rape-seed oil, curcas oil, jatropha curcasl oil, corn oil, castor oil, peanut oil, cottonseed oil, rice bran oil, or shinyleaf yellowhorn oil; the animal greases are one or more of fish oil, beef tallow, lard, or mutton tallow; and the microbial greases are yeast grease, or microalgae grease.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>The method according to claim 1, characterized in that: the greases are waste edible oils or tailings from the refining of greases.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="EP2940142A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="imgf0001.tif" />
+    </figure>
+  </drawings>
+  <image file="EP2940142A1.PDF" type="pdf" size="257307" pages="12" />
+</lexisnexis-patent-document>

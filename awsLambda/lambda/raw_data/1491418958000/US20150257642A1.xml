@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257642A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030138" date-changed="20151103" time-changed="063351">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121314943">
+        <country>US</country>
+        <doc-number>20150257642</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14727588</doc-number>
+        <date>20150601</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>A61B   3/103       20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>3</main-group>
+        <subgroup>103</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A61B   3/00        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>3</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>A61B   3/103       20130101 FI20140320BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>3</main-group>
+        <subgroup>103</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140320</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61B   3/0025      20130101 LI20140320BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>B</subclass>
+        <main-group>3</main-group>
+        <subgroup>0025</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140320</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">16</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">GEOMETRIC OPTICAL POWER MEASUREMENT DEVICE</invention-title>
+    <references-cited date-changed="20151103">
+      <patent-citations name="patcit" date-changed="20151103" />
+      <citation>
+        <patcit num="1" dnum="US2009174883A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090174883</doc-number>
+            <kind>A1</kind>
+            <name>ZAWAIDEH EMAD [US], et al</name>
+            <date>20090709</date>
+          </document-id>
+          <application-date>
+            <date>20090312</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20150917">
+      <continuation>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13797702</doc-number>
+              <date>20130312</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>9072462</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007275</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61706630</doc-number>
+          <date>20120927</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>WaveTec Vision Systems, Inc.</orgname>
+            <address>
+              <city>Aliso Viejo</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Michaels</last-name>
+            <first-name>Richard J.</first-name>
+            <address>
+              <city>Irvine</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Plumley</last-name>
+            <first-name>Aric K.</first-name>
+            <address>
+              <city>Huntington Beach</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173668040">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257642</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150601</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173668039">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257642</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150601</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">An ophthalmic optical power measurement device can include a light source configured to direct an input beam of light into the eye of a patient. The ophthalmic optical power measurement device can also include an aperture configured to receive an output beam that consists of light from the input beam that scatters from a location on the retina of the eye and exits through the pupil of the eye. The ophthalmic optical power measurement device can also include a detector configured to receive the output beam after it has passed through the aperture. A processor can be configured to determine the size of a spot created by the output beam on the detector, and to determine the optical power of the eye based upon the size of the spot.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">INCORPORATION BY REFERENCE TO ANY PRIORITY APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">Any and all applications for which a foreign or domestic priority claim is identified in the Application Data Sheet as filed with the present application, are hereby incorporated by reference under 37 CFR 1.57. In particular, this application is a continuation of U.S. patent application Ser. No. 13/797,702, filed Mar. 12, 2013, and entitled “GEOMETRIC OPTICAL POWER MEASUREMENT DEVICE,” which claims priority to U.S. Provisional Patent Application 61/706,630, filed Sep. 27, 2012, and entitled “GEOMETRIC OPTICAL POWER MEASUREMENT DEVICE,” both of which are hereby incorporated by reference herein in their entirety.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">1. Field</p>
+      <p id="p-00003-en" num="0003">The field of the invention relates to instruments for performing optical power measurements of an eye.</p>
+      <p id="p-00004-en" num="0004">2. Description of the Related Art</p>
+      <p id="p-00005-en" num="0005">The human eye includes a cornea and a crystalline lens that are intended to focus light that enters the pupil of the eye onto the retina. However, the eye may exhibit various refractive errors which result in light not being properly focused upon the retina, and which may reduce visual acuity. Ocular aberrations can range from the relatively simple spherical and cylindrical errors that cause myopia, hyperopia, or regular astigmatism, to more complex refractive errors that can cause, for example, halos and starbursts in a person's vision.</p>
+      <p id="p-00006-en" num="0006">Many interventions have been developed over the years to correct various ocular aberrations. These include sphero-cylindrical corrective optical elements, such as spectacles, contact lenses, and intraocular lenses (IOLs), or corneal refractive surgery, such as LASIK. The diagnosis and correction of ocular aberrations typically involves the use of an optical power measurement device to determine the optical power of the eye. Although many different types of objective optical power measurement devices have been created, simpler, less-expensive objective optical power measurement devices may be beneficial.</p>
+      <heading id="h-00003-en" level="1">SUMMARY</heading>
+      <p id="p-00007-en" num="0007">An ophthalmic optical power measurement device is disclosed. In some embodiments, the ophthalmic optical power measurement device comprises: a light source configured to direct an input beam of light into the eye of a patient; an aperture configured to receive an output beam of light from the eye, the output beam of light comprising light from the input beam that scatters from a location on the retina of the eye and exits through the pupil of the eye; a detector configured to receive the output beam after it has passed through the aperture; and a processor configured to determine the size of a spot created by the output beam on the detector, and to determine the optical power of the eye based upon the size of the spot.</p>
+      <p id="p-00008-en" num="0008">An ophthalmic optical power measurement method is disclosed. In some embodiments, the ophthalmic optical power measurement method comprises: directing an input beam of light into an eye such that the input beam scatters from a location on the retina, thus creating an output beam that exits through the pupil of the eye; determining the angular size of the output beam; and determining the optical power of the eye based on the angular size of the output beam.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00009-en" num="0009">For purposes of summarizing the disclosure, certain aspects, advantages and features of the invention have been described herein. It is to be understood that not necessarily all such advantages may be achieved in accordance with any particular embodiment of the invention. Thus, the invention may be embodied or carried out in a manner that achieves or optimizes one advantage or group of advantages as taught herein without necessarily achieving other advantages as may be taught or suggested herein. Certain embodiments are illustrated in the accompanying drawings, which are for illustrative purposes only.</p>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 1</figref> is a schematic diagram of an input beam of light scattering from the retina of an emmetropic eye.</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 2</figref> is a schematic diagram of an input beam of light scattering from the retina of a hyperopic eye.</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 3</figref> is a schematic diagram of an optical power measurement device for determining the cone angle of an output beam of light from an eye.</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 4</figref> is a schematic diagram of an optical power measurement device for determining the cone angle of an output beam of light from a hyperopic eye.</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 5</figref> is a schematic diagram of a spot formed on a detector by an output beam from an eye that does not exhibit substantial astigmatic power.</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 6</figref> is a schematic diagram of a spot formed on a detector by an output beam from an eye that exhibits astigmatic power.</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 7</figref> is a schematic diagram of an optical power measurement device that includes a pupil imaging lens for optically determining the diameter of the pupil of an eye.</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 8</figref> is a schematic diagram of an optical power measurement device that includes a relay lens for relaying the output beam to the aperture.</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 9</figref> is a schematic diagram of an optical power measurement device that includes an aperture, a detector, a light source, and a computing device.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 1</figref> is a schematic diagram of an input beam of light <b>112</b> scattering from the retina <b>104</b> of an emmetropic eye <b>102</b>. The input beam of light <b>112</b> is emitted from a light source <b>110</b> along, for example, the visual axis or the optical axis of the emmetropic eye <b>102</b>. The light source can be, for example, a laser or a super luminescent diode. The input beam of light <b>112</b> can be, for example, a collimated beam with a diameter of 1 mm or less. In some embodiments, the light source <b>110</b> outputs infrared light (e.g., 785 nm). The input beam of light <b>112</b> enters the emmetropic eye <b>102</b> at or near the corneal apex and propagates through the eye to the retina <b>104</b>. Once the input beam of light <b>112</b> reaches the retina <b>104</b>, it back scatters, thus creating an output beam of light <b>114</b>. The size of the output beam <b>114</b> is limited by the pupil of the eye <b>102</b> through which it must pass to exit the eye. Since the eye <b>102</b> in <figref>FIG. 1</figref> is emmetropic, the output beam <b>114</b> is substantially collimated. Thus, in the case of the emmetropic eye <b>102</b>, the diameter of the output beam substantially corresponds to the diameter of the pupil, d<sub>pupil</sub>. In the case of a hyperopic or a myopic eye, the output beam of light <b>114</b> will not be collimated but rather will be a diverging or converging beam of light.</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 2</figref> is a schematic diagram of an input beam of light <b>212</b> scattering from the retina <b>204</b> of a hyperopic eye <b>202</b>. The input beam of light <b>212</b> is emitted from a light source <b>210</b>. The input beam of light <b>212</b> and the light source <b>210</b> can be, for example, similar to those described above with respect to <figref>FIG. 1</figref>. In <figref>FIG. 2</figref>, however, the output beam of light <b>214</b> is not collimated because the eye <b>202</b> is hyperopic. In other words, the eye <b>202</b> lacks sufficient optical power to collimate the output beam of light <b>214</b>. Therefore, the output beam of light <b>214</b> is a diverging beam with a cone angle, θ, or a cone half angle, θ<sub>1/2</sub>. Accordingly, the diameter, d, of the output beam <b>212</b> increases with increasing longitudinal distance, z, from the eye <b>202</b>.</p>
+      <p id="p-00021-en" num="0021">If the eye <b>202</b> is more severely hyperopic than illustrated in <figref>FIG. 2</figref>, then the cone angle will be greater. Similarly, if the eye <b>202</b> is less severely hyperopic than illustrated in <figref>FIG. 2</figref>, then the cone angle will be lesser. Although not illustrated, if the eye <b>202</b> were myopic, then the output beam of light <b>214</b> would be a converging beam as it exited the eye until reaching a focal point located outside of the eye. Beyond this point, it would become a diverging beam. Once again, the specific cone angle of the output beam <b>214</b> in the case of a myopic eye would vary as a function of the degree of myopia.</p>
+      <p id="p-00022-en" num="0022">Since the cone angle of the output beam <b>214</b> varies as a function of the optical power of the eye <b>202</b>, whether the eye be hyperopic (e.g., cone angle defined as θ&gt;0), emmetropic (i.e., θ=0), or myopic (e.g., cone angle defined as θ&lt;0), then a measurement of the cone angle can be used in order to determine the optical power of the eye <b>202</b>. For example, the optical power (e.g., spherical and/or cylindrical) of the eye can be defined according to the following equation:</p>
+      <p id="p-00023-en" num="0000">
+        <maths id="maths-00001-en" num="00001">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mi>φ</mi>
+                    <mo>=</mo>
+                    <mfrac>
+                      <mn>1</mn>
+                      <mrow>
+                        <mi>E</mi>
+                        <mo></mo>
+                        <mstyle>
+                          <mspace width="0.3em" height="0.3ex" />
+                        </mstyle>
+                        <mo></mo>
+                        <mi>F</mi>
+                        <mo></mo>
+                        <mstyle>
+                          <mspace width="0.3em" height="0.3ex" />
+                        </mstyle>
+                        <mo></mo>
+                        <mi>L</mi>
+                      </mrow>
+                    </mfrac>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mo>(</mo>
+                    <mn>1</mn>
+                    <mo>)</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="img-00001-en" wi="N/A" he="N/A" file="US20150257642A1_00006.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150257642A1-20150917-M00001.TIF" />
+        </maths>
+      </p>
+      <p id="p-00024-en" num="0000">where EFL is the effective focal length of a lens at the corneal plane of an eye that achieves best focus on the retina from a collimated beam and is measured in, for example, meters. The EFL of the eye can, in turn, be defined according to the following equation:</p>
+      <p id="p-00025-en" num="0000">
+        <maths id="maths-00002-en" num="00002">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mrow>
+                      <mi>E</mi>
+                      <mo></mo>
+                      <mstyle>
+                        <mspace width="0.3em" height="0.3ex" />
+                      </mstyle>
+                      <mo></mo>
+                      <mi>F</mi>
+                      <mo></mo>
+                      <mstyle>
+                        <mspace width="0.3em" height="0.3ex" />
+                      </mstyle>
+                      <mo></mo>
+                      <mi>L</mi>
+                    </mrow>
+                    <mo>=</mo>
+                    <mfrac>
+                      <msub>
+                        <mi>d</mi>
+                        <mi>pupil</mi>
+                      </msub>
+                      <mrow>
+                        <mn>2</mn>
+                        <mo></mo>
+                        <mstyle>
+                          <mspace width="0.3em" height="0.3ex" />
+                        </mstyle>
+                        <mo></mo>
+                        <mi>tan</mi>
+                        <mo></mo>
+                        <mstyle>
+                          <mspace width="0.3em" height="0.3ex" />
+                        </mstyle>
+                        <mo></mo>
+                        <msub>
+                          <mi>θ</mi>
+                          <mrow>
+                            <mn>1</mn>
+                            <mo>/</mo>
+                            <mn>2</mn>
+                          </mrow>
+                        </msub>
+                      </mrow>
+                    </mfrac>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mo>(</mo>
+                    <mn>2</mn>
+                    <mo>)</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="img-00002-en" wi="N/A" he="N/A" file="US20150257642A1_00007.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150257642A1-20150917-M00002.TIF" />
+        </maths>
+      </p>
+      <p id="p-00026-en" num="0000">where d<sub>pupil </sub>is the diameter of the pupil of the eye and θ<sub>1/2 </sub>is the cone half angle of the output beam of light <b>214</b>. Thus, if the cone angle of the output beam of light and the diameter of the pupil of the eye can be determined, then the optical power of the eye can also be determined. In some embodiments, however, the measurement of the cone angle of the output beam is limited to a particular analysis zone of the pupil (e.g., a central ˜4 mm portion of the pupil), as discussed herein. In such embodiments, the diameter of the analysis zone replaces the pupil diameter in Equation (2), and the optical power of the eye can be determined using the measured cone angle without determining the diameter of the pupil of the eye.</p>
+      <p id="p-00027-en" num="0023">
+        <figref>FIG. 3</figref> is a schematic diagram of an optical power measurement device <b>320</b> for determining the cone angle of an output beam of light <b>314</b> from an eye <b>302</b>. Although not illustrated in <figref>FIG. 3</figref>, the optical power measurement device <b>320</b> can include a light source (e.g., similar to light source <b>110</b>) to direct an input beam of light (e.g., similar to input beam <b>112</b>) into the eye <b>302</b> (e.g., via a beamsplitter). The input beam of light back scatters from the retina <b>304</b>, thus forming the output beam of light <b>314</b>. The optical power measurement device <b>320</b> can also include a computing device <b>370</b> that can be used, for example, to analyze detector images and/or control the aperture <b>330</b>, as discussed herein.</p>
+      <p id="p-00028-en" num="0024">The optical power measurement device <b>320</b> also includes an aperture <b>330</b> and a detector <b>340</b>. The aperture <b>330</b> can be, for example, circular in shape and can have a fixed or dynamically variable diameter, as discussed further herein. The detector <b>340</b> can be, for example, a CCD, CMOS, array of sensor elements, film, or a scanning detector. Alternatively, the detector <b>340</b> can be the combination of a diffuse surface that is imaged by a camera (not shown).</p>
+      <p id="p-00029-en" num="0025">An optical axis for the optical power measurement device <b>320</b> can be defined, for example, as the axis that is normal to the surface of the detector <b>340</b> and passes through the center of the aperture <b>330</b>. In some embodiments, the optical power measurement device <b>320</b> also includes an alignment system (not shown) for aligning the optical measurement device <b>320</b> to the eye <b>302</b>. For example, in some embodiments, an alignment system can be used to position the optical power measurement device <b>320</b> (e.g., in the x and y directions) such that its optical axis is coincident with the optical axis or visual axis of the eye <b>302</b>. In addition, the alignment system can be used to position the optical power measurement device <b>320</b> (e.g., in the z direction) at a known distance from the eye <b>302</b>, as discussed herein. An example of such an alignment system is disclosed in U.S. Pat. No. 8,333,474, filed Sep. 9, 2008, and entitled “OPTICAL INSTRUMENT ALIGNMENT SYSTEM,” the entire contents of which are incorporated by reference herein.</p>
+      <p id="p-00030-en" num="0026">When the optical power measurement device <b>320</b> is adequately optically aligned to the eye <b>302</b>, the output beam of light <b>314</b> passes through the aperture <b>330</b> and is incident upon the detector <b>340</b>, thus forming a spot on the detector <b>340</b>. The aperture <b>330</b> can be sized, for example, such that various output beams <b>314</b> with a desired range of cone angles (which, in turn, correspond to a range of ocular optical powers) do not underfill the aperture <b>330</b> when the optical power measurement device <b>320</b> is positioned at a desired distance from the eye <b>302</b> (e.g., the aperture <b>330</b>, rather than the pupil of the eye, can be the limiting aperture of the output beam). In other words, in some embodiments, it is desirable that the aperture <b>330</b> be sized such that the diameter of the output beam of light <b>314</b> is at least as large as the aperture <b>330</b> at the point where the output beam <b>314</b> enters the aperture. The width of the output beam <b>314</b> can be defined using various measurements, such as, for example, the full width at half maximum (FWHM) of the beam.</p>
+      <p id="p-00031-en" num="0027">The cone angle, θ<sub>1/2</sub>, of the output beam of light <b>314</b> can be measured by the optical power measurement device <b>320</b> by, for example, determining the size of the spot formed by the output beam <b>314</b> on the detector <b>340</b>, and then comparing the spot size to the size of the aperture <b>330</b>. The size of the spot on the detector <b>340</b> can be determined using various measurements, such as, for example, the full width at half maximum of the spot. The comparison between the spot size and the aperture diameter can be done, for example, according to the following equation:</p>
+      <p id="p-00032-en" num="0000">
+        <maths id="maths-00003-en" num="00003">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mrow>
+                      <mi>tan</mi>
+                      <mo></mo>
+                      <mstyle>
+                        <mspace width="0.3em" height="0.3ex" />
+                      </mstyle>
+                      <mo></mo>
+                      <msub>
+                        <mi>θ</mi>
+                        <mrow>
+                          <mn>1</mn>
+                          <mo>/</mo>
+                          <mn>2</mn>
+                        </mrow>
+                      </msub>
+                    </mrow>
+                    <mo>=</mo>
+                    <mfrac>
+                      <mrow>
+                        <msub>
+                          <mi>d</mi>
+                          <mi>CCD</mi>
+                        </msub>
+                        <mo>-</mo>
+                        <msub>
+                          <mi>d</mi>
+                          <mi>aperture</mi>
+                        </msub>
+                      </mrow>
+                      <mrow>
+                        <mn>2</mn>
+                        <mo></mo>
+                        <mstyle>
+                          <mspace width="0.3em" height="0.3ex" />
+                        </mstyle>
+                        <mo></mo>
+                        <mi>R</mi>
+                      </mrow>
+                    </mfrac>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mo>(</mo>
+                    <mn>3</mn>
+                    <mo>)</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="img-00003-en" wi="N/A" he="N/A" file="US20150257642A1_00008.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150257642A1-20150917-M00003.TIF" />
+        </maths>
+      </p>
+      <p id="p-00033-en" num="0000">where d<sub>CCD </sub>is the size (e.g., diameter) of the spot formed by the output beam on the detector <b>340</b>, d<sub>aperture </sub>is the size (e.g., diameter) of the aperture <b>330</b>, and R is the known distance between the aperture <b>330</b> and the detector <b>340</b> along the optical axis.</p>
+      <p id="p-00034-en" num="0028">Equation (3) can be derived from, for example, one of the right triangles <b>435</b> formed by the intersection of the edge of the output beam <b>414</b>, the detector <b>440</b>, and a line perpendicular to the detector <b>440</b> at the perimeter of the aperture <b>430</b>. As indicated in <figref>FIG. 4</figref>, one of the angles of such a right triangle <b>435</b> is the cone half angle, θ<sub>1/2</sub>, of the output beam <b>414</b>. The length of the leg of the triangle <b>435</b> opposite θ<sub>1/2 </sub>is half the difference between the diameter of the spot on the detector <b>440</b> and the diameter of the aperture <b>430</b>. The length of the remaining leg of the triangle <b>435</b> is given by R, the distance between the aperture <b>430</b> and the detector <b>440</b>. Accordingly, Equation 3 follows by application of the geometric definition of the tangent function to the right triangle <b>435</b>. Other methods and/or equations can also be used, however, to compare the spot size of the output beam <b>314</b> on the detector <b>340</b> to the size of the aperture <b>330</b> in order to give an indication of the cone angle of the output beam.</p>
+      <p id="p-00035-en" num="0029">In the case of an emmetropic eye <b>302</b>, as is illustrated in <figref>FIG. 3</figref>, the output beam of light <b>314</b> is substantially collimated. Therefore, the size of the spot formed on the detector <b>340</b> by the output beam <b>314</b> is substantially the same (ignoring diffraction) as the size of the aperture <b>330</b>. Accordingly, per Equation (3), the cone half angle of the output beam <b>314</b> equals zero, as illustrated in the following equation:</p>
+      <p id="p-00036-en" num="0000">
+        <maths id="maths-00004-en" num="00004">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mrow>
+                      <mi>tan</mi>
+                      <mo></mo>
+                      <mstyle>
+                        <mspace width="0.3em" height="0.3ex" />
+                      </mstyle>
+                      <mo></mo>
+                      <msub>
+                        <mi>θ</mi>
+                        <mrow>
+                          <mn>1</mn>
+                          <mo>/</mo>
+                          <mn>2</mn>
+                        </mrow>
+                      </msub>
+                    </mrow>
+                    <mo>=</mo>
+                    <mrow>
+                      <mfrac>
+                        <mrow>
+                          <msub>
+                            <mi>d</mi>
+                            <mi>CCD</mi>
+                          </msub>
+                          <mo>-</mo>
+                          <msub>
+                            <mi>d</mi>
+                            <mi>aperture</mi>
+                          </msub>
+                        </mrow>
+                        <mrow>
+                          <mn>2</mn>
+                          <mo></mo>
+                          <mstyle>
+                            <mspace width="0.3em" height="0.3ex" />
+                          </mstyle>
+                          <mo></mo>
+                          <mi>R</mi>
+                        </mrow>
+                      </mfrac>
+                      <mo>=</mo>
+                      <mn>0</mn>
+                    </mrow>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mo>(</mo>
+                    <mn>4</mn>
+                    <mo>)</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="img-00004-en" wi="N/A" he="N/A" file="US20150257642A1_00009.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150257642A1-20150917-M00004.TIF" />
+        </maths>
+      </p>
+      <p id="p-00037-en" num="0030">
+        <figref>FIG. 4</figref> is a schematic diagram of an optical power measurement device <b>420</b> for determining the cone angle of an output beam of light <b>414</b> from a hyperopic eye <b>402</b>. The optical power measurement device <b>420</b> includes an aperture <b>430</b>, a detector <b>440</b>, and a computing device <b>470</b>. The optical power measurement device <b>420</b> can be similar, for example, to the one (i.e., <b>320</b>) discussed herein with respect to <figref>FIG. 3</figref>. However, the optical power measurement device <b>430</b> in <figref>FIG. 4</figref> has a larger aperture <b>430</b> in order to accommodate the diverging output beam <b>414</b> from the hyperopic eye <b>402</b>. Since the output beam <b>414</b> is a diverging beam, it forms a spot on the detector <b>440</b> that is larger than the aperture <b>430</b>. Application of Equation (3) to the optical power measurement device <b>420</b> and the hyperopic eye <b>402</b> of <figref>FIG. 4</figref> gives the following result:</p>
+      <p id="p-00038-en" num="0000">
+        <maths id="maths-00005-en" num="00005">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mrow>
+                      <mi>tan</mi>
+                      <mo></mo>
+                      <mstyle>
+                        <mspace width="0.3em" height="0.3ex" />
+                      </mstyle>
+                      <mo></mo>
+                      <msub>
+                        <mi>θ</mi>
+                        <mrow>
+                          <mn>1</mn>
+                          <mo>/</mo>
+                          <mn>2</mn>
+                        </mrow>
+                      </msub>
+                    </mrow>
+                    <mo>=</mo>
+                    <mrow>
+                      <mfrac>
+                        <mrow>
+                          <msub>
+                            <mi>d</mi>
+                            <mi>CCD</mi>
+                          </msub>
+                          <mo>-</mo>
+                          <msub>
+                            <mi>d</mi>
+                            <mi>aperture</mi>
+                          </msub>
+                        </mrow>
+                        <mrow>
+                          <mn>2</mn>
+                          <mo></mo>
+                          <mstyle>
+                            <mspace width="0.3em" height="0.3ex" />
+                          </mstyle>
+                          <mo></mo>
+                          <mi>R</mi>
+                        </mrow>
+                      </mfrac>
+                      <mo>&gt;</mo>
+                      <mn>0</mn>
+                    </mrow>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mo>(</mo>
+                    <mn>5</mn>
+                    <mo>)</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="img-00005-en" wi="N/A" he="N/A" file="US20150257642A1_00010.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150257642A1-20150917-M00005.TIF" />
+        </maths>
+      </p>
+      <p id="p-00039-en" num="0031">Alternatively, if the optical power measurement device were used to measure the optical power of a myopic eye by analyzing a converging output beam, then the spot on the detector would be smaller than the aperture, and application of Equation (3) would result in a cone half angle measurement that is less than zero. Note that, in some embodiments, the optical power measurement device <b>420</b> is designed to measure the converging beam from a myopic eye at a location nearer to the eye than the focal point of the converging beam. This could constrain the dynamic range of the optical power measurement device <b>420</b> and/or the working distance between the optical power measurement device <b>420</b> and the eye. For example, a −4.0 D eye would focus the output beam <b>414</b> at a point 250 mm from the corneal apex. Thus, the optical power measurement device <b>420</b> could be located nearer to the eye (e.g., one prototype is designed to be positioned 130 mm from the corneal aperture) in order to measure the cone angle of the output beam before the focal point of the beam. Alternatively, in some embodiments, the optical power measurement device <b>420</b> may include optics for relaying the wavefront of the converging beam as it exits the pupil to, for example, the aperture <b>430</b> so as to reduce constraints on the dynamic range and/or working distance of the device when measuring myopic eyes.</p>
+      <p id="p-00040-en" num="0032">In some embodiments, the size of the aperture <b>430</b> is adjustable to accommodate a variety of output beams <b>414</b> from eyes with different amounts of optical power. For example, the aperture <b>430</b> can be stopped down in the case of a converging output beam from a myopic eye, while the size of the aperture <b>430</b> can be increased in the case of a diverging output beam from a hyperopic eye. In some embodiments, the optical power measurement device has a dynamic range of at least about −5.0 Diopters to about +20.0 Diopters. In addition, in some embodiments, the size of the aperture <b>430</b> is dynamically adjusted in order to pass only light that exits from a desired portion, or analysis zone, of the pupil of the eye <b>402</b>. For example, it may be desirable to perform measurements using substantially only light that exits a central optical zone of the pupil. In some embodiments, the analysis zone is the central optical zone of the pupil that is approximately 4 mm in diameter. By limiting the output beam <b>414</b> to light that exits from the central optical zone of the pupil, it may be possible to increase the consistency of optical power measurements made using the device <b>420</b> since the measurements will be less dependent upon pupil size, which can vary depending upon ambient lighting conditions, and optical aberrations that may affect light that passes through the outer periphery of the pupil.</p>
+      <p id="p-00041-en" num="0033">In some embodiments, the size of the aperture <b>430</b> could be made to correspond to a defined analysis zone on the eye and the size of the aperture <b>430</b> could be controlled (e.g., using an iterative process and/or a feedback loop, or any other suitable method) with the measured divergence/convergence to ensure the aperture <b>430</b> is the correct size. For example, in some cases, the measured cone angle of the output beam, and the corresponding measured refractive power of the eye, may be dependent upon spherical aberration that is induced by the outer optical periphery of the eye being measured. Accordingly, the measured cone angle/refractive power may change somewhat as the size of the aperture <b>430</b> is dynamically adjusted to include or exclude portions of the output beam that pass through outer portions of the pupil of the eye. Calibration data, such as a calibration curve, can be determined a priori, using calibrated model eyes (e.g., of one or more optical powers), calibration lenses, etc., to define the relationship between spherical aberration and the measured cone angle/refractive power. Measurements of the cone angle/refractive power can be taken at a plurality of diameter settings for the aperture <b>430</b>. The calibration data can then be used to determine which of the diameter settings for the aperture <b>430</b> corresponds to the desired analysis zone of the pupil (e.g., by fitting the measured values to a calibration curve). For example, a first measurement could be taken at an aperture size, such as 4 mm. Using the calibration data, it may be determined that the first measurement may correspond to an analysis zone of, for example, 6 mm at the pupil. The aperture size can then be adjusted (e.g., based on the calibration data) and a second measurement taken. This process can be continued until it is determined that the aperture size corresponds to the desired analysis zone of the pupil.</p>
+      <p id="p-00042-en" num="0034">In some embodiments, in the case of a hyperopic eye that produces a diverging output beam, the size of the aperture <b>430</b> could be defined or adjusted by using the following relationship:</p>
+      <p id="p-00043-en" num="0000">[in-line-formulae]<i>D</i>=(pupil diameter)+(distance from the aperture to corneal apex)*tan θ<sub>1/2 </sub>[/in-line-formulae]</p>
+      <p id="p-00044-en" num="0000">In the case of a myopic eye that produces a converging beam, the diameter of the aperture could be defined or adjusted by using the following relationship:</p>
+      <p id="p-00045-en" num="0000">[in-line-formulae]<i>D</i>=(pupil diameter)−(distance from the aperture to corneal apex)*tan θ<sub>1/2 </sub>[/in-line-formulae]</p>
+      <p id="p-00046-en" num="0000">With this control scheme, it follows that the larger the divergence, or more hyperopic the measurement, the larger the aperture <b>430</b> would become. These control schemes are but examples. Other control schemes can also be used.</p>
+      <p id="p-00047-en" num="0035">
+        <figref>FIG. 5</figref> is a schematic diagram of a spot <b>542</b> formed on a detector (e.g., <b>440</b>) by an output beam (e.g., <b>414</b>) from an eye that does not exhibit substantial astigmatic power. As illustrated, the spot <b>542</b> is substantially circular, indicating that the primary optical aberration of the eye from which the output beam was measured is rotationally-symmetric defocus error. (The eye could also have zero defocus error, depending upon the cone angle of the output beam.) The amount of defocus error can be characterized by measuring the diameter <b>544</b> of the spot <b>542</b> along any axis in the x-y plane of the detector. For example, the diameter <b>544</b> of the spot <b>542</b> can be determined and then compared to the diameter of the aperture (e.g., <b>430</b>) of the optical power measurement device (e.g., <b>420</b>) using Equation (3). In this way, the cone angle of the output beam (e.g., <b>414</b>) can be determined. This value can then be used to calculate the effective focal length and/or spherical optical power of the eye, as discussed herein.</p>
+      <p id="p-00048-en" num="0036">
+        <figref>FIG. 6</figref> is a schematic diagram of a spot <b>642</b> formed on a detector (e.g., <b>440</b>) by an output beam (e.g., <b>414</b>) from an eye that exhibits astigmatic power. As illustrated, the spot <b>642</b> is ellipse-shaped, indicating that the optical power of the eye from which the output beam was measured is not entirely rotationally-symmetric. Specifically, the ellipse-shaped spot <b>642</b> indicates that the eye has a different degree of optical power in each of two orthogonal meridians (i.e., cylindrical or astigmatic power). The optical power in each of the two meridians can be measured by determining the respective sizes of the spot <b>642</b> in the direction of the major axis <b>644</b> and in the direction of the minor axis <b>646</b>. Each of these measurements can be compared to the diameter of the aperture (e.g., <b>430</b>), by application of Equation (3), in order to measure the cone angle of the output beam (e.g., <b>414</b>) along the axes of the astigmatic power of the eye. As discussed herein, these values can then be used to calculate the effective focal lengths of the eye in each of the orthogonal meridians and/or the spherical and astigmatic optical power of the eye. In addition, the angular orientation of the major axis <b>644</b> or the minor axis <b>646</b> on the detector (i.e., the angle between either of the axes and a reference direction) can be determined in order to identify the axis of the patient's astigmatism. For example, in <figref>FIG. 6</figref>, the major axis <b>644</b> is parallel to the y-axis, while the minor axis <b>646</b> is parallel to the x-axis. However, this need not necessarily be the case, as the ellipse can have any orientation in the x-y plane of the detector, and its orientation will be indicative of the axis of the cylindrical power of the eye. As already discussed, the size of the ellipse in the directions of the major and minor axes will be indicative of the magnitude of the cylindrical power of the eye.</p>
+      <p id="p-00049-en" num="0037">While <figref>FIGS. 5 and 6</figref> illustrate how spherical and cylindrical power of an eye can be measured using the optical power measurement devices described herein, higher-order aberrations can also be measured in some embodiments. This can be done, for example, by introducing a Hartmann plate in the aperture (e.g., <b>430</b>) of the device and performing additional analyses of the resulting spot formed by the passage of the output beam (e.g., <b>414</b>) through the Hartmann plate and onto the detector (e.g., <b>440</b>).</p>
+      <p id="p-00050-en" num="0038">Once the angular size(s) (e.g., cone half angle(s)) of the output beam (e.g., <b>414</b>) is/are determined, the effective focal length(s) and/or optical power(s) of the eye can likewise be determined. Some embodiments may not involve an additional measurement of the diameter of the pupil because the cone angle measurement may be limited to a selected analysis zone of the pupil (e.g., by making the aperture of the measurement device the limiting aperture of the output beam). However, in some embodiments, the pupil diameter is also used to determine the effective focal length(s) and/or optical power(s) of the eye, as indicated in, for example, Equations (1) and (2).</p>
+      <p id="p-00051-en" num="0039">There are various ways to determine the diameter of the pupil of the eye. For example, in some embodiments, the diameter of the pupil is determined in a manner similar to that which was used to measure the cone half angle in Equation (3), as discussed with reference to <figref>FIG. 4</figref>. A similar equation can be written using a similar right triangle <b>436</b> that is formed by the intersection of the edge of the output beam <b>414</b>, the plane of the aperture <b>430</b>, and a line perpendicular to the plane of the aperture <b>430</b> at the perimeter of the pupil of the eye <b>402</b>. Specifically, the equation can be written as follows:</p>
+      <p id="p-00052-en" num="0000">
+        <maths id="maths-00006-en" num="00006">
+          <math overflow="scroll">
+            <mtable>
+              <mtr>
+                <mtd>
+                  <mrow>
+                    <mrow>
+                      <mi>tan</mi>
+                      <mo></mo>
+                      <mstyle>
+                        <mspace width="0.3em" height="0.3ex" />
+                      </mstyle>
+                      <mo></mo>
+                      <msub>
+                        <mi>θ</mi>
+                        <mrow>
+                          <mn>1</mn>
+                          <mo>/</mo>
+                          <mn>2</mn>
+                        </mrow>
+                      </msub>
+                    </mrow>
+                    <mo>=</mo>
+                    <mrow>
+                      <mrow>
+                        <mfrac>
+                          <mrow>
+                            <msub>
+                              <mi>d</mi>
+                              <mi>aperture</mi>
+                            </msub>
+                            <mo>-</mo>
+                            <msub>
+                              <mi>d</mi>
+                              <mi>pupil</mi>
+                            </msub>
+                          </mrow>
+                          <mrow>
+                            <mn>2</mn>
+                            <mo></mo>
+                            <mstyle>
+                              <mspace width="0.3em" height="0.3ex" />
+                            </mstyle>
+                            <mo></mo>
+                            <mi>z</mi>
+                          </mrow>
+                        </mfrac>
+                        <mo>⇒</mo>
+                        <msub>
+                          <mi>d</mi>
+                          <mi>pupil</mi>
+                        </msub>
+                      </mrow>
+                      <mo>=</mo>
+                      <mrow>
+                        <msub>
+                          <mi>d</mi>
+                          <mi>aperture</mi>
+                        </msub>
+                        <mo>-</mo>
+                        <mrow>
+                          <mn>2</mn>
+                          <mo></mo>
+                          <mstyle>
+                            <mspace width="0.3em" height="0.3ex" />
+                          </mstyle>
+                          <mo></mo>
+                          <mi>z</mi>
+                          <mo></mo>
+                          <mstyle>
+                            <mspace width="0.3em" height="0.3ex" />
+                          </mstyle>
+                          <mo></mo>
+                          <mi>tan</mi>
+                          <mo></mo>
+                          <mstyle>
+                            <mspace width="0.3em" height="0.3ex" />
+                          </mstyle>
+                          <mo></mo>
+                          <msub>
+                            <mi>θ</mi>
+                            <mrow>
+                              <mn>1</mn>
+                              <mo>/</mo>
+                              <mn>2</mn>
+                            </mrow>
+                          </msub>
+                        </mrow>
+                      </mrow>
+                    </mrow>
+                  </mrow>
+                </mtd>
+                <mtd>
+                  <mrow>
+                    <mo>(</mo>
+                    <mn>6</mn>
+                    <mo>)</mo>
+                  </mrow>
+                </mtd>
+              </mtr>
+            </mtable>
+          </math>
+          <img id="img-00006-en" wi="N/A" he="N/A" file="US20150257642A1_00011.PNG" alt="embedded image" img-content="math" img-format="png" inline="yes" original="US20150257642A1-20150917-M00006.TIF" />
+        </maths>
+      </p>
+      <p id="p-00053-en" num="0000">where d<sub>aperture </sub>is the size (e.g., diameter) of the aperture <b>430</b>, d<sub>pupil </sub>is the size (e.g., diameter) of the pupil of the eye <b>402</b>, θ<sub>1/2 </sub>is the cone half angle output beam <b>414</b>, which is measured using the optical power measurement device <b>420</b>, and z<sub>0 </sub>is a known distance between the eye <b>402</b> (e.g., the pupil plane) and the plane of the aperture <b>430</b> along the optical axis. Equation (6) follows from the application of the geometric definition of the tangent function to the right triangle <b>436</b>. As discussed herein, the distance, z<sub>0</sub>, or some other correlated distance (e.g., the distance z<sub>0</sub>′ between the corneal apex and the optical power measurement device <b>420</b>) can be determined using, for example, an alignment system to position the optical power measurement device <b>420</b> at a known distance from the eye <b>402</b> along the optical or visual axis of the eye. Alternatively, and/or additionally, the distance, z<sub>0</sub>, or some other correlated distance can be determined using rangefinding, triangulation, distance-measuring interferometry, or some other measurement.</p>
+      <p id="p-00054-en" num="0040">As shown herein, once the cone half angle of the output beam is determined using, for example, Equation (3), and the pupil diameter is determined using, for example, Equation (6), the effective focal length and/or the optical power of the eye <b>402</b> can be determined using Equations (1) and (2). (Incidentally, Equation (2) can be derived on the basis of yet another right triangle (inside of the eye) that is similar to right triangles <b>435</b> and <b>436</b>.) While <figref>FIG. 4</figref> schematically illustrates a method in which pupil diameter is determined, in part, by positioning the optical power measurement device <b>420</b> at a known distance, z<sub>0</sub>, from the eye <b>402</b>, other methods are also possible.</p>
+      <p id="p-00055-en" num="0041">
+        <figref>FIG. 7</figref> is a schematic diagram of an optical power measurement device <b>720</b> that includes a pupil imaging lens <b>752</b> for optically determining the diameter of the pupil of an eye <b>702</b>. The optical power measurement device <b>720</b> includes an aperture <b>730</b> and a detector <b>740</b>, which may be similar to those described elsewhere herein. The optical power measurement device <b>720</b> can also include a computing device <b>770</b> that can be used, for example, to analyze detector images and/or control the aperture <b>730</b>, as discussed herein. In addition, the optical power measurement device <b>720</b> in <figref>FIG. 7</figref> includes a pupil imaging lens <b>752</b>. Light from the pupil is directed to the pupil imaging lens <b>752</b> by, for example, a beam splitter <b>754</b>. The pupil imaging lens <b>752</b> forms an image of the pupil of the eye <b>702</b> on a pupil imaging detector <b>756</b>. In other words, the pupil imaging detector <b>756</b> and the pupil of the eye <b>702</b> can be located at the respective conjugate planes of the pupil imaging lens <b>752</b>. The pupil imaging lens <b>752</b> can be a fixed-focus lens, or a variable-focus lens. It can include one or more optical elements.</p>
+      <p id="p-00056-en" num="0042">The diameter, d<sub>pupil</sub>, of the pupil can be determined by, for example, identifying the size of the pupil on the pupil imaging detector <b>756</b>. The size of the pupil on the detector <b>756</b> can then be related to the actual size of the pupil based on the magnification of the pupil imaging lens <b>752</b>. As discussed herein, once the pupil diameter is determined, it can be used in conjunction with the measured value of the angular size of the output beam <b>714</b> in order to determine the effective focal length and/or the optical power of the eye <b>702</b> using Equations (1) and (2).</p>
+      <p id="p-00057-en" num="0043">
+        <figref>FIG. 8</figref> is a schematic diagram of an optical power measurement device <b>820</b> that includes a relay lens <b>860</b> for relaying the output beam <b>814</b> to the aperture <b>830</b>. The optical power measurement device <b>820</b> also includes a detector <b>840</b> and a computing device similar to those described elsewhere herein. As discussed with respect to <figref>FIG. 4</figref>, the size of the aperture (e.g., <b>430</b>) is adjustable and movable in some embodiments of the optical power measurement device. This can allow for an increase in the dynamic range of optical powers that can be measured. In addition, an adjustable aperture (e.g., <b>430</b>) can be used to gather light from a consistent central optical zone of the pupil in order to increase reliability of the optical power measurements. The optical power measurement device <b>820</b> of <figref>FIG. 8</figref>, however, includes a relay lens <b>860</b> (e.g., with adjustable magnification) that may, in some embodiments, obviate a need for an adjustable aperture. Thus, in some embodiments, the relay lens <b>860</b> in the optical power measurement device <b>820</b> is accompanied by a fixed aperture <b>830</b>.</p>
+      <p id="p-00058-en" num="0044">The relay lens <b>860</b> can be a fixed-focus lens or a variable-focus lens. The relay lens <b>860</b> can include one or more optical elements. In operation, the relay lens <b>860</b> can be focused, for example, on the pupil of the eye <b>802</b>, and can form an image of the pupil at the plane of the aperture <b>830</b>. In this way, the relay lens <b>860</b> relays the output beam <b>814</b>, as it exists at the pupil of the eye <b>802</b>, to the aperture <b>830</b>. The relay lens <b>860</b> therefore may allow the optical power measurement device <b>820</b> to measure a variety of output beams <b>814</b> with differing angular sizes without necessarily requiring that the aperture <b>830</b> be re-sized to accommodate the different output beams. In addition, the size of the aperture <b>830</b> can be set, depending upon the magnification of the relay lens <b>860</b>, to correspond to a desired optical zone of the pupil (e.g., a central 4 mm zone of the pupil). For example, if the relay lens <b>860</b> gives 1:1 magnification, then if the aperture <b>830</b> has a diameter of 4 mm, it will transmit light only from a 4 mm optical zone of the pupil. As disclosed herein, by maintaining a consistent analysis zone of the pupil, the consistency and accuracy of optical power measurements can be improved.</p>
+      <p id="p-00059-en" num="0045">
+        <figref>FIG. 9</figref> is a schematic diagram of an optical power measurement device <b>920</b> that includes an aperture <b>930</b>, a detector <b>940</b>, a light source <b>910</b>, and a computing device <b>970</b>. As illustrated in <figref>FIG. 9</figref>, the optical power measurement device <b>920</b> also includes a beam splitter <b>916</b> for directing the input beam <b>912</b> from the light source <b>910</b> into the eye <b>902</b>. A relay lens <b>960</b> is also illustrated. While not shown, the optical power measurement device <b>920</b> may also include pupil imaging optics. Each of these elements can be similar to any of the corresponding elements described elsewhere herein. For example, the light source <b>910</b> can be an infrared laser or super luminescent diode. The aperture <b>930</b> can be fixed or variable.</p>
+      <p id="p-00060-en" num="0046">As illustrated, the optical power measurement device <b>920</b> can include a computing device <b>970</b> having, for example, a processor and memory. The computing device <b>970</b> can include one or more modules (e.g., software and/or hardware) for determining the angular size of the output beam <b>914</b> and for determining the optical power of the phakic, aphakic, or pseudophakic eye <b>902</b> based on the angular size of the output beam. The computing device <b>970</b> can determine the angular size of the output beam <b>914</b> by using one or more modules to determine the size of the spot formed by the output beam <b>914</b> on the detector <b>940</b>, and to compare that size to the size of the aperture <b>930</b>. The computing device <b>970</b> can be designed, for example, to measure the size of the spot on the detector <b>940</b> along one or more axes. In addition, the computing device <b>970</b> can determine the size of the pupil of the eye <b>902</b>, for example, based upon the size of the pupil on a pupil imaging detector or based upon the optical power measurement device <b>920</b> being located a known distance from the eye <b>902</b>. The computing device <b>970</b> can control the size of the aperture <b>830</b> to measure a desired portion of the output beam <b>814</b> from the eye <b>802</b>. In addition, the computing device <b>970</b> can calculate a suitable spherical and/or cylindrical power for an intraocular lens (IOL) to be inserted into the eye <b>902</b>, as discussed, for example, in U.S. Pat. No. 7,556,378, filed Apr. 8, 2004, and entitled “INTRAOPERATIVE ESTIMATION OF INTRAOCULAR LENS POWER,” and U.S. Patent Publication 2011/0015541, filed Jul. 13, 2010, and entitled “DETERMINATION OF THE EFFECTIVE LENS POSITION OF AN INTRAOCULAR LENS USING APHAKIC REFRACTIVE POWER,” the entire contents of both of which are incorporated by reference herein.</p>
+      <p id="p-00061-en" num="0047">In some embodiments, the optical power measurement device <b>920</b> includes an alignment system for precisely positioning the device transversely and longitudinally with respect to the eye <b>902</b>. The alignment system can be, for example, similar to the one disclosed in U.S. Pat. No. 8,333,474, which was previously incorporated by reference herein.</p>
+      <p id="p-00062-en" num="0048">In some embodiments, the optical power measurement device <b>920</b> is a desktop device or a handheld device. Alternatively, the optical power measurement device <b>920</b> can be designed to be integrated with a surgical microscope that is suitable for performing cataract surgery. For example, the optical power measurement device <b>920</b> can be integrated with a surgical microscope in the same or similar fashion as the wavefront sensor in U.S. Pat. No. 7,883,505, filed Apr. 20, 2005, and entitled “INTEGRATED SURGICAL MICROSCOPE AND WAVEFRONT SENSOR,” the entire contents of which are incorporated by reference herein. In some embodiments, the optical power measurement device <b>920</b> includes a housing with an optical passageway therethrough. A beam splitter, dichroic mirror, etc. can be positioned in the optical passageway of the housing. The optical power measurement device can also include a connector for attaching the device to, and removing the device from, the surgical microscope such that it is optically aligned with the surgical microscope. For example, the optical power measurement device <b>920</b> can be mounted beneath the objective lens of the surgical microscope such that the objective lens can receive light through the optical passageway through the measurement device <b>920</b>. The beam splitter or dichroic mirror located in the optical power measurement device housing can, for example, direct infrared light to the optical components of the measurement device <b>920</b>, while transmitting visible light to the objective lens of the surgical microscope. In some embodiments, the optical power measurement device <b>920</b> and the surgical microscope may not share a lens. In other embodiments, the optical power measurement device <b>920</b> and the surgical microscope may share a lens, but the optical power measurement device <b>920</b> may not substantially compromise the focal length of the surgical microscope.</p>
+      <p id="p-00063-en" num="0049">Embodiments have been described in connection with the accompanying drawings. However, it should be understood that the figures are not drawn to scale. Distances, angles, etc. are merely illustrative and do not necessarily bear an exact relationship to actual dimensions and layout of the devices illustrated. In addition, the foregoing embodiments have been described at a level of detail to allow one of ordinary skill in the art to make and use the devices, systems, etc. described herein. A wide variety of variation is possible. Components, elements, and/or steps may be altered, added, removed, or rearranged in ways that will be appreciated by those of ordinary skill in the art.</p>
+      <p id="p-00064-en" num="0050">The foregoing disclosure has partitioned devices and systems into multiple components or modules for ease of explanation. The components or modules may be embodied as computer hardware (e.g., processors, volatile or non-volatile memories, circuit boards, chipsets, etc.). It is to be understood, however, that one or more components or modules may operate as a single unit. Conversely, a single component or module may comprise one or more sub-components or sub-modules. Further, the communication between components or modules may occur in a variety of ways, such as hardware implementations (e.g., over a network, serial interface, parallel interface, or internal bus), software implementations (e.g., database, passing variables), or a combination of hardware and software. Such communications can use a variety of signals, protocols, and standards. In addition, where methods are described that are, or could be, at least in part carried out by computer software, it should be understood that such methods can be provided on computer-readable media (e.g., optical disks such as CDs or DVDs, hard disk drives, flash memories, diskettes, or the like) that, when read by a computer or other processing device, cause it to carry out the method.</p>
+      <p id="p-00065-en" num="0051">The systems and methods described herein can advantageously be implemented using, for example, computer software, hardware, firmware, or any combination of software, hardware, and firmware. Software modules can comprise computer executable code for performing the functions described herein. In some embodiments, computer-executable code is executed by one or more general purpose computers. However, a skilled artisan will appreciate, in light of this disclosure, that any module that can be implemented using software to be executed on a general purpose computer can also be implemented using a different combination of hardware, software, or firmware. For example, such a module can be implemented completely in hardware using a combination of integrated circuits. Alternatively or additionally, such a module can be implemented completely or partially using specialized computers designed to perform the particular functions described herein rather than by general purpose computers.</p>
+      <p id="p-00066-en" num="0052">A skilled artisan will also appreciate, in light of this disclosure, that multiple distributed computing devices can be substituted for any one computing device illustrated herein. In such distributed embodiments, the functions of the one computing device are distributed such that some functions are performed on each of the distributed computing devices.</p>
+      <p id="p-00067-en" num="0053">While certain embodiments have been explicitly described, other embodiments will become apparent to those of ordinary skill in the art based on this disclosure. Therefore, the scope of the invention is intended to be defined by reference to the claims and not simply with regard to the explicitly described embodiments.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>-<b>22</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>23</b>. An ophthalmic optical power measurement method comprising:
+<claim-text>directing an input beam of light into an eye such that the input beam scatters from a location on the retina, thus creating an output beam that exits through the pupil of the eye;</claim-text><claim-text>determining the angular size of the output beam; and</claim-text><claim-text>determining the optical power of the eye based on the angular size of the output beam.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>24</b>. The method of <claim-ref idref="clm-00002-en">claim 23</claim-ref>, wherein determining the angular size of the output beam comprises determining the cone angle of the output beam.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>25</b>. The method of <claim-ref idref="clm-00003-en">claim 24</claim-ref>, wherein determining the cone angle of the output beam comprises determining a spot size created by the beam on a detector after having passed through an aperture.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>26</b>. The method of <claim-ref idref="clm-00004-en">claim 25</claim-ref>, wherein determining the cone angle of the output beam further comprises determining a width of the spot taken along at least one axis.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>27</b>. The method of <claim-ref idref="clm-00005-en">claim 26</claim-ref>, further comprising determining the spherical power of the eye based on the width taken along at least one axis.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>28</b>. The method of <claim-ref idref="clm-00004-en">claim 25</claim-ref>, wherein determining the cone angle of the output beam further comprises determining a plurality of widths of the spot taken along a plurality of axes.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>29</b>. The method of <claim-ref idref="clm-00007-en">claim 28</claim-ref>, further comprising determining the cylindrical power of the eye based on the plurality of widths taken along the plurality of axes.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>30</b>. The method of <claim-ref idref="clm-00004-en">claim 25</claim-ref>, wherein determining the cone angle of the output beam further comprises comparing the spot size to the size of the aperture.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>31</b>. The method of <claim-ref idref="clm-00004-en">claim 25</claim-ref>, further comprising varying the size of the aperture to transmit only a portion of the output beam that exits through a desired analysis region of the pupil of the eye.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>32</b>. The method of <claim-ref idref="clm-00003-en">claim 24</claim-ref>, further comprising determining the diameter of the pupil of the eye, and determining the optical power of the eye based on the pupil diameter of the eye and the cone angle of the output beam.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>33</b>. The method of <claim-ref idref="clm-00011-en">claim 32</claim-ref>, wherein determining the pupil diameter comprises determining the cone angle of the output beam at a known distance from the eye.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>34</b>. The method of <claim-ref idref="clm-00011-en">claim 32</claim-ref>, wherein determining the pupil diameter comprises determining the cone angle of the output beam at a known distance from the pupil of the eye.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>35</b>. The method of <claim-ref idref="clm-00011-en">claim 32</claim-ref>, wherein determining the pupil diameter comprises optically imaging the pupil of the eye onto a detector using an imaging system, and determining the diameter of the pupil based on the magnification of the imaging system and the diameter of the pupil on the detector.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>36</b>. The method of <claim-ref idref="clm-00003-en">claim 24</claim-ref>, further comprising determining the aphakic optical power of the eye.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>37</b>. The method of <claim-ref idref="clm-00015-en">claim 36</claim-ref>, further comprising determining the power of a suitable intraocular lens for the patient based upon the aphakic optical power of the eye. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257642A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257642A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257642A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257642A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257642A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257642A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257642A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257642A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257642A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257642A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257642A1_00006.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150257642A1-20150917-M00001.TIF" inline="yes" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257642A1_00007.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150257642A1-20150917-M00002.TIF" inline="yes" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257642A1_00008.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150257642A1-20150917-M00003.TIF" inline="yes" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150257642A1_00009.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150257642A1-20150917-M00004.TIF" inline="yes" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150257642A1_00010.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150257642A1-20150917-M00005.TIF" inline="yes" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150257642A1_00011.PNG" alt="mathematical image" img-content="math" img-format="png" original="US20150257642A1-20150917-M00006.TIF" inline="yes" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150257642A1_00012.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257642A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257642A1.PDF" type="pdf" size="471227" pages="12" />
+</lexisnexis-patent-document>

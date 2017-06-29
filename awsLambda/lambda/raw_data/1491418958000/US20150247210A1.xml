@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247210A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021515" date-changed="20151006" time-changed="063104">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140322">
+        <country>US</country>
+        <doc-number>20150247210</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14631918</doc-number>
+        <date>20150226</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C12Q   3/00        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>3</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>G01N  21/359       20140101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20140101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>21</main-group>
+        <subgroup>359</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>G01N  21/39        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>21</main-group>
+        <subgroup>39</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C12Q   3/00        20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>Q</subclass>
+        <main-group>3</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>G01N  21/3577      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>21</main-group>
+        <subgroup>3577</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>G01N  21/359       20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>21</main-group>
+        <subgroup>359</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>G01N  21/39        20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>21</main-group>
+        <subgroup>39</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>G01N2021/399       20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>2021</main-group>
+        <subgroup>399</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>G01N2201/0612      20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>2201</main-group>
+        <subgroup>0612</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>G01N2201/0846      20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>G</section>
+        <class>01</class>
+        <subclass>N</subclass>
+        <main-group>2201</main-group>
+        <subgroup>0846</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">38</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">Methods for Continuous Monitoring and Control of Bioprocesses</invention-title>
+    <related-documents date-changed="20150903">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61946170</doc-number>
+          <date>20140228</date>
+        </document-id>
+      </provisional-application>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61988700</doc-number>
+          <date>20140505</date>
+        </document-id>
+      </provisional-application>
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61953374</doc-number>
+          <date>20140314</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>ASL ANALYTICAL, INC.</orgname>
+            <role>02</role>
+            <address>
+              <city>Coralville</city>
+              <state>IA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Olesberg</last-name>
+            <first-name>Jonathon Todd</first-name>
+            <address>
+              <city>Iowa City</city>
+              <state>IA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Arnold</last-name>
+            <first-name>Mark Allen</first-name>
+            <address>
+              <city>Iowa City</city>
+              <state>IA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Small</last-name>
+            <first-name>Gary Wray</first-name>
+            <address>
+              <city>Coralville</city>
+              <state>IA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Koerperick</last-name>
+            <first-name>Edwin John</first-name>
+            <address>
+              <city>North Liberty</city>
+              <state>IA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Evans</last-name>
+            <first-name>Christine Esther</first-name>
+            <address>
+              <city>North Liberty</city>
+              <state>IA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173463440">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247210</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150226</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173463439">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247210</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150226</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Methods for continuous, real-time process monitoring and control of bioprocesses by means of near-infrared (NIR) spectroscopy provide analysis of static or flowing fluid streams which may range from clear to highly optically dense. A NIR source passes through a wavelength selector to select one or more spectral segments, which are passed through the fluid stream at a fluid sampling interface and received at a sensor. A wavelength reference material is positioned in the optical path for wavelength axis calibration. Quantification of a plurality of characteristics or parameters of a fluid and suspended solids or cells contained therein may be performed. An all-solid-state implementation of the optical system ensures high robustness for bioprocess monitoring and control.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150226</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247210A1</docdb-publication-number>
+      <docdb-application-id>444210316</docdb-application-id>
+      <new-owner>ASL ANALYTICAL, INC., IOWA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:OLESBERG, JONATHON TODD;ARNOLD, MARK ALLEN;SMALL, GARY WRAY;AND OTHERS;REEL/FRAME:035036/0123</free-text-description>
+      <effective-date>
+        <date>20150223</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application claims the benefit of U.S. provisional patent application No. 61/946,170, filed Feb. 28, 2014, for “Near Infrared Process Monitoring and Control”; U.S. provisional patent application No. 61/988,700, filed May 5, 2014, for “System for Near-Infrared Process Monitoring and Control”; and U.S. provisional patent application No. 61/953,374, filed Mar. 14, 2014, for “Optical Flow Cell with Disposable Fluid Flow Cartridge.” Such applications are incorporated herein by reference in their entirety.</p>
+    </related-apps>
+    <govt-interest>
+      <heading id="h-00002-en" level="1">STATEMENT REGARDING FEDERALLY SPONSORED RESEARCH OR DEVELOPMENT</heading>
+      <p id="p-00002-en" num="0002">This invention was made with government support under grant nos. 912828 and 1058434 awarded by the National Science Foundation. The government has certain rights in the invention.</p>
+    </govt-interest>
+    <summary>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">The present invention relates to a system for making continuous, real-time, non-destructive measurements of constituents in optically dense fluids for applications including, but not limited to, pharmaceutical, food, beverage, fuel, enzyme, and chemical manufacturing as well as other industrial processes. In particular, the present invention is well-suited for performing measurements in aqueous fluids, which is significant in a plurality of applications such as bioprocessing.</p>
+      <p id="p-00004-en" num="0004">Access to continuous real-time data on conditions and constituents in fluid processing applications is highly desirable in a multitude of branches of industry and research. While robust sensors are widely available to measure parameters such as pH, dissolved oxygen (DO), temperature, pressure, etc. in-situ and in real-time, such sensors to measure quantities of chemical constituents and suspended solids in fluids in real-time and in a robust manner have remained elusive in the art. Furthermore, sensors that are capable of measuring constituent concentrations often do so in a destructive manner, have inadequate sampling frequencies, and often require manual sampling and off-line analysis.</p>
+      <p id="p-00005-en" num="0005">Quantification of constituent concentrations during fluid processes is most commonly performed by manual sampling and off-line analysis. Techniques such as high performance liquid chromatography (HPLC), gas chromatography—mass spectroscopy (GCMS), as well as various enzyme- and reagent-based electrochemical approaches are available for off-line constituent quantification. Such techniques may be accurate, but suffer in that they are destructive to the sample, often require expensive consumables, take long times to complete, and are prone to calibration difficulties. In addition, the hardware required to perform these analyses is commonly expensive to maintain and typically demand highly trained and dedicated personnel. Due to the labor requirements of manual sampling and time required to perform a measurement, the sampling frequency is typically insufficient to enable any meaningful feedback control of a process. In order to reduce the labor cost of manual sample analysis, samples are commonly run in batches and after a process has run to completion. In this case, constituent quantification data are of limited value as control strategies cannot be implemented and corrective action cannot be taken during a process.</p>
+      <p id="p-00006-en" num="0006">Sampling systems are available to automate the sampling process with some of these measurement approaches, and feedback control capabilities have been advertised. However, the aforementioned limitations still apply, and the total sample and priming volume are often on the order of 1-10 mL, making these systems inapplicable to miniature- and micro-sized fluid processing vessels which are increasing in popularity in research and development environments.</p>
+      <p id="p-00007-en" num="0007">Measurement of characteristics of fluids by optical means is well-known in the art. Electromagnetic radiation impinging on a medium may interact with the medium by absorption, scattering, or fluorescence. Measurement of transmitted, reflected, scattered, or fluoresced radiation by an appropriate sensor may be used to determine multiple characteristics or properties of the medium, such as concentrations of constituents or turbidity, simultaneously. Typical techniques include visible spectroscopy, infrared spectroscopy, and optical scattering measurements such as Raman spectroscopy. On-line constituent monitors utilizing Raman spectroscopy have been described in the prior art and scientific literature, however commercial examples of such systems are most commonly sold as generalized measurement platforms requiring a highly skilled operator to produce useful output. Fundamental issues such as fluorescence background and weak signal often limit the performance of Raman analyzers—while the Raman signal increases with the fourth power of the excitation laser frequency, background fluorescence increases proportionally with the laser frequency. Use of longer wavelength laser sources reduces the background fluorescence, however higher powers must often be applied to the sample to produce acceptable signal levels, and sample damage may result.</p>
+      <p id="p-00008-en" num="0008">Analytical instruments utilizing the near-infrared (NIR) spectral range (roughly 700 to 3000 nm) have found application in numerous industrial and laboratory applications such as chemical processing, food and beverage manufacturing, petroleum processing, and pharmaceutical manufacturing. A variety of configurations of NIR spectrometers and analyzers have been demonstrated in the prior art, having the intended function of determining one or more characteristics or parameters of a substance or its constituents. All such instruments execute similar fundamental operations: generate NIR radiation; direct said radiation to a sample; resolve the resultant radiation having interacted with the sample spectrally; measure the resolved radiation with an appropriate sensor; predict or measure characteristics of the sample or its constituents. These operations need not be performed in the specified order here. For example, a tunable light source may be employed rather than spectrally resolving broad-band radiation into multiple smaller bands. Separation of the radiation into discrete bands may also be performed before interaction with the sample takes place.</p>
+      <p id="p-00009-en" num="0009">Various methods may be employed to perform the fundamental spectroscopic operations. Light sources may include light emitting diodes (LEDs), tungsten halogen lamps, micro electromechanical systems (MEMS)-based sources, and infrared lasers. Spectral resolution of the optical energy may be performed by grating-based solutions (scanning or fixed); Fourier transform infrared (FTIR) interferometry; interference filtering; and acousto-optical tunable filters (AOTF). The sample may be interrogated by means of optical transmission, transflection, reflection, scattering, or fluorescence. The sample may be flowing or static. A variety of sample interrogation methods exist. Furthermore, both free-space and fiber-coupled optical delivery and collection means are possible. Detection of NIR radiation may be accomplished by means of single element or array sensors. Semiconductor sensors comprising, for example: silicon; germanium; indium arsenide (InAs); indium gallium arsenide (InGaAs); indium antimonide (InSb); and lead sulfide (PbS) are available. Other detection platforms including photomultiplier tubes (PMT) and thermal sensors are also available. Determination of sample characteristics, parameters, and constituent concentrations may be performed by one or more chemometric approaches.</p>
+      <p id="p-00010-en" num="0010">In most implementations in the prior art, resolution of broad-band NIR radiation is performed by grating- and FTIR-based approaches. While these approaches may offer advantages in throughput and/or resolution, they are often insufficiently robust for deployment in industrial or manufacturing settings. For example, thermal and mechanical disturbances in industrial environments combined with the inherent mechanical sensitivity of these spectroscopic approaches often limits practical relevance in industry. Furthermore, FTIR instrumentation is often bulky and not accommodating to miniaturization, making such platforms difficult to deploy in laboratory and industrial environments where space is at a premium. Another common limitation of prior art NIR instrumentation when applied to fluid analysis is the speed over which such instruments scan over the wavelength range of interest. Such instruments commonly provide scan times ranging from several hundred milliseconds to several seconds. In applications with flowing or agitated fluid, gas bubbles and solids suspended within the fluid often traverse the optical beam used to interrogate the fluid. If the transit time of such bubbles or suspended solids is faster than the scan time, detection of such disturbances and minimization of the effects they impart on a measurement becomes difficult or impossible.</p>
+      <p id="p-00011-en" num="0011">Optical emitters, elements, and in particular sensors utilized in prior art NIR analyzers are often optimized for spectroscopy in the first C—H overtone region. This also roughly overlaps with the optical telecommunications wavelengths in the 1.3 to 1.6 μm spectral band. Optics and optical emitters in this spectral region are well-developed and widely available due to ubiquitous use in the telecommunications industry. Systems optimized for spectroscopy in the combination band of 1.6 to 2.6 μm are less common. This wavelength band is of particular relevance for measurements of constituent measurements in aqueous fluids due to strong optical absorption features of the constituents as well as the favorable optical transmission of water. Liquid water presents strong optical absorption bands in the infrared due to fundamental O—H stretching vibrations. While strong absorption peaks exist near 3450 cm<sup>−1 </sup>(2.9 μm) and 5128 cm<sup>−1 </sup>(1.95 μm), the combination region therebetween is sufficiently optically transparent to enable transmission measurements to be performed in aqueous solutions.</p>
+      <p id="p-00012-en" num="0012">Sampling approaches in common NIR analyzers include external and internal flow cells, cuvettes, vials, and fiber optically coupled probes. Performance from external flow cells and fiber optic probes tends to suffer due to significant NIR absorption in common optical fibers as well as low throughput owing to the large emitting area of NIR optical emitters compared to optical fiber apertures. Sampling approaches internal to the instrument often present connection and sample loop sterility challenges. Permanent hardware implementations of flow cells are common, though not particularly amenable to the cleaning and sterilization requirements of biotechnology industries.</p>
+      <p id="p-00013-en" num="0013">Another significant limitation of prior art NIR analyzers is that they are most commonly developed as generalized spectroscopic instruments intended for use in a wide variety of applications. While the apparent flexibility may appeal to some users, these platforms often require a highly skilled operator to generate useful output from the instrument and data analysis software.</p>
+      <p id="p-00014-en" num="0014">To overcome the limitations of prior art NIR analyzers, a platform is desired which: is robust to the environment in industrial facilities; is compact and easily portable; interrogates samples non-destructively, continuously, and in real-time; determines fluid component concentrations continuously within complex, dynamic matrices; accommodates samples that are highly turbid; provides a sterilizable sampling interface that may be disposable; enables process control; remains within specified operating parameters for extended periods of time; has a low maintenance burden; is able to reject spectra contaminated by gas bubbles within the fluid; is able to robustly eliminate outlier spectra due to short-term instrument drift or sporadic events within the process fluid; is readily calibrated for complex and/or dynamic sample conditions; maintains calibration over an extended time period; and does not require a highly skilled operator. Preferably systems may be provided which address as many of the aforementioned limitations as possible.</p>
+      <heading id="h-00004-en" level="1">BRIEF SUMMARY</heading>
+      <p id="p-00015-en" num="0015">The present invention provides methods to continuously and non-destructively quantify levels of constituents and suspended materials in bioprocess fluids that are either static or flowing and may be of aqueous composition. In various implementations, fluids may range from non-turbid to highly-turbid, and no filtration or processing of the fluid may be required. Electromagnetic radiation in the near-infrared wavelength band is generated, spectrally resolved, delivered to one or more bioprocess samples which are either static or flowing, measured by one or more appropriate sensors, and analyzed to provide user output and/or control signals. The aforementioned steps need not be performed in the specified order, and may be performed with a plurality of component configurations. Measurements may be conducted during and throughout bioprocesses of interest which may include, for example, protein expression bioprocesses using genetically modified yeast, microbes, or mammalian cells such as Chinese hamster ovary (CHO) cells. Various implementations of the invention find application, for example, in biopharmaceutical research and production, food and beverage manufacturing, and agricultural trade and science.</p>
+      <p id="p-00016-en" num="0016">An advantage of certain implementations of the present invention over the prior art is that a wavelength reference means comprising a polymer optical element is provided to automatically establish a wavelength axis during operation of the invention. The wavelength reference operation may be executed intermittently or continuously, depending on the particular embodiment of the invention. Use of a polymer optical element as a wavelength reference provides the ability to verify the wavelength axis over a plurality of wavelengths in contrast to prior art implementations that commonly provide wavelength calibration only at a single wavelength or over a generally narrow range of wavelengths. For example, prior art wavelength reference implementations commonly comprise a laser, narrow bandpass filter, notch optical filter, absorptive medium embedded in a substrate, or other chemical means to establish the wavelength at a single point or narrow band of wavelengths. Embodiments of the present invention perform wavelength axis determination over the entire spectral region of interest, whereby the wavelength axis may be both shifted and scaled, allowing for a more accurate wavelength axis. During extended measurement times as may occur for monitoring and control of bioprocesses that may be days or weeks long, the wavelength axis may be repeatedly adjusted for increased measurement accuracy. The provision of a wavelength reference utilizing a polymer optical element also allows for mitigation of measurement drift due to, for example, changes in environmental conditions or component performance.</p>
+      <p id="p-00017-en" num="0017">Another advantage of certain implementations of the present invention is that automatic detection of gas bubbles in the fluid sample and rejection of data points with excessive contamination by entrapped bubbles greatly enhances system performance over prior art. Attenuation of near-infrared light by water provides the means to sense changes in the length of optical path through a solution, thereby providing a quantification of measurement contamination by gas bubbles present within the fluid sample. Such an advantage increases measurement accuracy and precision for monitoring and control of bioprocesses which may utilize variations in agitation rate and gas dosing with associated variations in gas bubbles within the bioprocess broth.</p>
+      <p id="p-00018-en" num="0018">Due to the use of near infrared light in the measurement of fluid samples, certain implementations of the present invention are able to perform measurements in a wide range of fluids. Fluid samples may be clear or highly turbid, and do not require filtration or other treatment prior to measurement. Owing to the facts that fluid samples need not be treated, the near-infrared radiation is non-ionizing, and the materials contacting the fluid sample are able to be sterilized, certain implementations provide a measurement whereby the bioprocess sample is not destroyed or altered. Implementations are provided whereby fluid samples are drawn from a bioprocess and subsequently returned to the bioprocess after measurement by the present invention, as well as implementations where optical sampling is performed in-situ. Embodiments are also provided whereby fluid samples may be drawn from a bioprocess and subsequently discarded. In certain embodiments, measurements may be performed automatically, continuously, in real-time, and in the absence of an operator. Furthermore, certain embodiments of the present invention provide for feedback control of processes whereby one or more quantities of a substance in a process may be measured, and the measurement values used to automatically control desired values of the substance(s) in the process vessel. Process automation by means of feedback control further reduces the labor requirements of monitoring and controlling bioprocesses, reduces the probability of human error, and provides for enhanced error detection and outlier condition notification.</p>
+      <p id="p-00019-en" num="0019">Another advantage of certain implementations of the present invention over the prior art is that all spectroscopic analysis is performed within provided software, and operators need not have knowledge of spectroscopy, chemical analysis, or chemometrics. The invention may be calibrated for numerous chemical constituents within various processes; however no specific technical knowledge regarding quantification of the constituents is required of the operator. As these implementations of the present invention utilize near-infrared light, chemical constituents having one or more of, for example, C—H, O—H, C—O, N—H, S—H, and P—H chemical bonds may commonly be measured. Amounts of a variety of alcohols, sugars, lipids, organic acids, fatty acids, peptides, DNA, and proteins within fluid samples may therefore be optically quantified with various embodiments of the present invention. Certain implementations of the present invention also provide for quantification of materials suspended within fluid samples such as particulate matter and cells. Certain implementations are capable of performing measurements in highly complex and dynamic fluids as may be present during bioprocesses and that may comprise a plurality of substances in addition to the substances targeted for measurement. Measurement results of the quantities of the desired substances are presented simultaneously and continuously to the operator on an output device as well as stored for subsequent use, quality control, and documentation. Minimal attention is required from operators, and thus various implementations of the present invention may operate for extended periods of time without requiring maintenance or operator interaction. This capability is particularly important for the monitoring and control of bioprocesses which often operate <b>24</b> hours a day, for extended time periods of days, weeks, or months.</p>
+      <p id="p-00020-en" num="0020">The detailed description and drawings provided herein will offer additional scope to certain implementations of the present invention. It should be understood that the described implementations are provided as examples only. Those skilled in the art will recognize that numerous variations and modifications of the described implementations are within the scope of the invention.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 1</figref> is a block diagram of an embodiment of the invention connected to a process vessel.</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 2</figref> is a block diagram showing various components of the invention.</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 3</figref> is a block diagram of the electronic components of the invention.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 4</figref> is a side view of an embodiment of a tubing assembly.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 5</figref> is an isometric view of a disposable cartridge, tubing assembly, and optical interface for fluid sampling.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 6</figref> is a side view of a disposable cartridge, tubing assembly, and optical interface for fluid sampling.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 7</figref> is a detailed cross sectional view of an optical sampling interface.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 8</figref> is a block diagram of the invention utilizing a fiber optically coupled interface.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 9</figref> is a block diagram of the invention configured to perform multiplexed measurements of multiple fluid processes.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 10</figref> is a block diagram of the invention configured to perform feedback control of multiple substance concentrations in a fluid process.</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 11</figref> is a concentration plot showing glycerol concentrations in a <i>Pichia pastoris </i>fermentation measured continuously by an implementation of the present invention (solid line) and discrete off-line reference measurements (circles).</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 12</figref> is a plot showing the correlation between glycerol measurements performed with an embodiment of the present invention and off-line reference measurements.</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 13</figref> is a concentration plot showing methanol concentrations in a <i>Pichia pastoris </i>fermentation measured continuously with an embodiment of the present invention (solid line) and discrete off-line reference measurements (circles).</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 14</figref> is a plot showing the correlation between methanol measurements performed with an embodiment of the invention and off-line reference measurements.</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIG. 15</figref> is a concentration plot showing methanol concentrations in a <i>Pichia pastoris </i>fermentation with an embodiment of the present invention configured to provide feedback control of the methanol concentration. The measurements made with an embodiment of the present invention (solid line) are shown with off-line reference measurements (circles).</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIG. 16</figref> is a plot of relative cell density measured by an embodiment of the present invention (solid line) and off-line reference measurements (circles).</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIG. 17</figref> is a plot of the current input vs. light output characteristic of a near-infrared superluminescent diode used as an optical emitter in an embodiment of the present invention.</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIG. 18</figref> is a concentration plot showing methanol concentrations in a <i>Pichia pastoris </i>fermentation with an embodiment of the present invention configured with a near-infrared superluminescent diode as the optical emitter.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00039-en" num="0039">As used herein, the terms “optical” and “light” refer to electromagnetic radiation having vacuum wavelengths between 300-20,000 nm.</p>
+      <p id="p-00040-en" num="0040">As used herein, “cartridge” means a housing, case, cover, enclosure or frame generally used to contain and support one or more sections of tubing.</p>
+      <p id="p-00041-en" num="0041">As used herein, “near infrared”, “near-infrared”, and “NIR” mean the region of the electromagnetic spectrum generally spanning wavenumbers between 3300 cm<sup>−1 </sup>and 14,000 cm<sup>−1 </sup>(corresponding to wavelengths of approximately 0.7 μm to 3.0 μm).</p>
+      <p id="p-00042-en" num="0042">As used herein, “interrogation” and “sampling” mean illuminating a sample with optical radiation and collecting at least a portion of the radiation having interacted with said sample for optical analysis.</p>
+      <p id="p-00043-en" num="0043">As used herein, “constituent” means a chemical analyte, protein, DNA, component in a fluid, cell, or solid suspended in a fluid.</p>
+      <p id="p-00044-en" num="0044">A typical fluid sampling configuration in one embodiment of the present invention is a circulation loop arrangement, as shown in the block diagram in <figref>FIG. 1</figref>. In this configuration, the optical instrument <b>110</b> continuously or intermittently optically interrogates a fluid sample drawn from a process and provides quantified values of one or more substances within the fluid sample on a graphical display <b>300</b> shown in <figref>FIG. 2</figref>. The vessel <b>100</b> from which the fluid sample is drawn connects to the optical instrument <b>110</b> by means of a pump <b>120</b>, fluid delivery tubing assembly <b>130</b>, and fluid return tubing assembly <b>140</b>. Sampled fluid may also be discarded by means of an exhaust line <b>150</b> and waste container <b>160</b>. This implementation performs spectroscopic measurements on un-filtered process fluid which may be of high turbidity—no treatment of the fluid sample is required, though filtered fluids may also be analyzed. The vessel <b>100</b> from which fluid is sampled may comprise a plurality of containers such as chemical reactors, bioreactors, filtration systems, pipes, flasks, and flexible polymer containers depending on the application. Fluid may be sampled from a vessel <b>100</b> by a variety of means such as a flexible or metal tube, though numerous alternatives exist. In many fluid processes it is common to provide agitation to the fluid to ensure thorough mixing of the substances contained or suspended in the fluid. Gasses, for example carbon dioxide, oxygen, and air, are also commonly introduced into fluids as part of a process, or are generated as a result of the process as with carbon dioxide production during yeast fermentation. It is commonly desirable to position hardware for fluid sampling such that bubbles of gasses that are introduced into the process or generated by the process are excluded from the fluid sample to be optically interrogated. Gas bubbles are a common source of variation and measurement error in optical and other fluid analysis approaches, and should therefore be excluded to the extent possible.</p>
+      <p id="p-00045-en" num="0045">A block diagram of an embodiment of the optical instrument <b>110</b> is shown in <figref>FIG. 2</figref>. The instrument <b>110</b> comprises an optical emitter <b>170</b> configured to emit near-infrared radiation. The optical emitter <b>170</b> comprises at least an emitter of near-infrared radiation <b>180</b>, and may also comprise optical elements such as a lens <b>190</b> for collimating or otherwise spatially or spectrally manipulating said near-infrared radiation. In one embodiment, the emitter <b>180</b> comprises a broadband optical emitter such as a tungsten halogen bulb. The emitter <b>180</b> may also comprise a semiconductor optical emitter such as a light emitting diode (LED), a tunable laser diode (TLD), or a superluminescent diode (SLD). While lamp-based light sources offer low cost and simplicity, they are not generally accommodating to applications such as fiber optic coupling as the filament area is typically much larger than the core diameter of common optical fibers, resulting in substantial optical losses. Semiconductor light sources, on the other hand, may be manufactured with very small emitting areas, and thus coupling to optical fibers can generally be performed with low optical losses.</p>
+      <p id="p-00046-en" num="0046">In an implementation of the present invention, a wavelength reference <b>200</b> is provided for calibration of the wavelength axis of the near-infrared optical measurement. In one embodiment, the wavelength reference <b>200</b> comprises at least a polymer optical element, and optionally an actuation means to intermittently position the polymer element into an optical beam path. The wavelength reference <b>200</b> may also be continuously positioned within a beam path. The polymer optical element should be chosen such that the absorption characteristic of the material has variation within the wavelength range of interest such that a spectrum acquired with the optical instrument <b>110</b> may be compared with a previously acquired spectrum to determine the degree to which the two spectra differ. The differences between the spectrum acquired with the optical instrument <b>110</b> and a known reference spectrum may be used to confirm or adjust the wavelength axis of a near-infrared measurement. Establishment and verification of the wavelength axis of the measurement provides measurement stability, and maintains an accurate wavelength axis during changing environmental conditions and system component performance. Materials with multiple absorption features within the wavelength range of interest are preferable, with, for example polycarbonate, nylon, Kapton®, polymethylpentene, and polyether ether ketone (PEEK), being candidates for polymer reference materials in the near-infrared. The wavelength reference <b>200</b> need not be placed at the specific location in the beam path as shown in <figref>FIG. 2</figref>.</p>
+      <p id="p-00047-en" num="0047">In the present invention, the wavelength reference operation is preferably performed over the entire wavelength range over which fluid constituent quantification is performed. A regression operation is performed over the wavelength range of interest in order to compare the transmission optical spectrum of the polymer optical element that is acquired with the optical instrument to a previously acquired transmission optical spectrum obtained with a reference instrument. Polymer optical elements are preferably used that exhibit a plurality of optical absorption features over the wavelength range of interest in order to facilitate a high quality regression operation. From the comparison operation, spectral shift and scaling factors may be determined and applied to spectra subsequently acquired with the optical instrument such that the wavelength axis of the optical instrument is stable and well-defined. Such a wavelength reference operation provided by embodiments of the present invention whereby spectral shifting and scaling are performed is preferable to prior art wavelength reference operations. Prior art wavelength reference operations where simple spectral shifting is commonly provided are typically based upon peak fitting to one or few spectral features, and therefore may not provide accurate scaling of the wavelength axis and may be valid only over a limited wavelength range. Embodiments of the present invention provide for performing a plurality of wavelength reference operations throughout a fluid process. For example, a wavelength reference operation may be performed every 30 minutes during fluid processing wherein the fluid process lasts for a period of time of one week or more.</p>
+      <p id="p-00048-en" num="0048">In one embodiment, spectral separation of near-infrared light into one or more segments is performed by a wavelength selector <b>210</b> in the optical beam path. Spectral separation of the light from an optical emitter may be performed by means of an acousto-optic tunable filter (AOTF) crystal. This all-solid-state approach of spectral selection has no moving parts, and allows rapid scanning across all wavelengths of interest. Scans of the entire wavelength range of interest may be performed in less than 100 ms, enabling substantial scan averaging to be performed within a standard data collection period, which for typical applications is generally one second to 10 minutes. The rapid scan time over the wavelength range of interest, commonly 100 ms or less per scan, provided by embodiments of the present invention permits robust operation in fluid processes. As the scan time of such embodiments is commonly of a similar time duration to the fluid transit time across the optical beam, scans that are contaminated by gas bubbles or solids may be excluded from further analysis or averaging, or display to a user. In other embodiments of the present invention, the wavelength selector <b>210</b> may comprise a planar reflection diffraction grating, a non-planar reflection diffraction grating, or a transmission diffraction grating. Embodiments of the present invention comprising a semiconductor light source in the optical emitter <b>170</b> may provide the wavelength selector <b>210</b> integrated into the optical emitter <b>170</b> such that the light source is tunable. A light source <b>170</b> comprising a tunable laser diode would be one such example where the wavelength selector may be integrated with the optical emitter <b>170</b>. In embodiments of the present invention where the sample in which an optical measurement is performed is a fluid, the spectral resolution of the optical wavelength selector <b>210</b> need not be as high as provided by many spectroscopic instruments known in the art. For example, a resolution that may be poorer than 8 cm<sup>−1 </sup>is acceptable in implementations of the present invention as most spectral features in fluid samples are substantially broader than 8 cm<sup>−1</sup>. Instruments such as Fourier transform infrared (FTIR) spectrometers, for example, may provide very high resolutions such as 0.5 cm<sup>−1</sup>. While high spectral resolution may be attractive for gas spectroscopy and other applications, unnecessarily high spectral resolution in spectroscopy of fluid samples may be undesirable as the information gained may be minimal or absent, and the superfluous data merely consume electronic storage space.</p>
+      <p id="p-00049-en" num="0049">In <figref>FIG. 2</figref>, light in a first optical path travels generally in the direction indicated by arrowed line A. The present invention includes an embodiment where only one optical path is required, said optical path originates at the optical emitter <b>170</b>, and terminates with a sensor <b>230</b> connected to a controller <b>270</b> via an analog-to-digital converter <b>280</b>. Said first optical path further comprises the wavelength selector <b>210</b> which is optionally included in the optical emitter <b>170</b>, the wavelength reference <b>200</b>, and a fluid sampling means <b>240</b>. The first optical path may further comprise additional optical components such as lenses <b>250</b> for manipulation of the near-infrared light into and out of the fluid sampling means <b>240</b>. Said additional optical elements may comprise a plurality of optical elements such as flat mirrors, curved mirrors, polarizers, optical filters, waveguides, fibers, wave plates, and beam splitters. In one embodiment, a second optical path, indicated by arrowed line B in <figref>FIG. 2</figref>, comprises a beam splitter <b>220</b> generally intersecting the first optical path, and at least a second sensor <b>260</b> connected to a controller <b>270</b> via an analog-to-digital converter <b>280</b>. Said second optical path may further comprise optical elements such as lenses <b>250</b> to manipulate light in the second optical path. The sensors <b>230</b> and <b>260</b> comprise a material optically sensitive to near-infrared light such as indium gallium arsenide (InGaAs), indium antimonide (InSb), indium arsenide (InAs), lead sulfide (PbS), lead selenide (PbSe), and mercury cadmium telluiride (HgCdTe). Sensors <b>230</b> and <b>260</b> may further comprise coolers such as thermoelectric modules and temperature controllers to improve performance or stability. Sensors may be provided as single-element or multi-element units. Multi-elements sensors such as array sensors may enable increased measurement speed for example when implemented in a spectrograph configuration whereby a grating and multi-element sensor are used in conjunction to enable measurements to be made at multiple wavelengths simultaneously. Said second optical path may be employed for a blank or reference signal where in one embodiment no fluid sample is present in the path. Such a signal is useful for increasing measurement stability, as measurement errors and noise due to fluctuations in the intensity or spectral content of light emerging from the optical emitter <b>170</b> may be minimized. Similarly, measurement errors or noise due to environmental conditions, performance variation in the wavelength selector <b>210</b>, or other conditions common to the first and second optical paths may be reduced. The second optical path may optionally comprise a fluid sampling means <b>240</b> as in the first optical path, providing a means for analysis of a second fluid sample. Said second fluid sample may be similar or dissimilar to the fluid sample measured in the first optical path. Such a configuration may be utilized to perform a differential measurement in order to, for instance, reduce the impact of certain fluid constituents on the measurement. As an example, a solution of growth media for a fermentation or cell culture may be introduced as the second fluid sample, thereby reducing the impact of spectral signatures associated with components of said media and increasing measurement accuracy by allowing subtraction of said spectral signatures. Additional optical paths are within the scope of the invention, and said additional optical paths may be utilized for analysis of additional fluid samples, provision of reference signals, wavelength axis reference measurements, or other operations.</p>
+      <p id="p-00050-en" num="0050">A block diagram of the major electronic components of an embodiment of the invention comprising an AOTF crystal for the wavelength selector <b>210</b>, two sensors <b>230</b> and <b>260</b>, and a wavelength reference <b>200</b> configured with an actuator is shown in <figref>FIG. 3</figref>. A controller <b>270</b> such as a computer or other microprocessor is provided to accept input from sensors such as <b>230</b> and <b>260</b>, and deliver output signals to control for example the wavelength selector <b>210</b> and wavelength reference <b>200</b>. Software installed on the controller <b>270</b> performs spectroscopic calculations to quantify amounts of substances in the fluid samples, and provides the information on the graphical display <b>300</b> and/or sends output information to other instrumentation. Analog signals generated by the sensors <b>230</b> and <b>260</b> are converted to digital signals with the analog-to-digital converter <b>280</b>. A radio frequency (RF) synthesizer <b>310</b> supplies a signal to a RF amplifier <b>290</b> which is used to control the AOTF crystal. A wavelength reference controller <b>320</b> is provided to control actuation of the wavelength reference <b>200</b> into the optical beam. The configuration of electronic components presented above is exemplary only, and those skilled in the art will understand that numerous configurations comprising a plurality of component and interconnection variations are within the scope of the invention.</p>
+      <p id="p-00051-en" num="0051">Embodiments of the present invention provide for multiple optical sampling configurations, both by free-space and fiber optically coupled approaches. In one embodiment shown in <figref>FIGS. 4-6</figref>, a polymer fluid conduit <b>330</b> with a cartridge <b>340</b> and associated optical interface <b>350</b> are provided for fluid sampling. <figref>FIG. 4</figref> shows the fluid conduit <b>330</b> connected to fluid delivery tubing assembly <b>130</b> and fluid return tubing assembly <b>140</b> by connectors <b>370</b>. The fluid conduit <b>330</b> for optical sampling may comprise one or more polymers, and should be chosen such that at least a portion is generally transparent in the wavelength range of interest. Polymers for use in the near-infrared include Teflon® polytetrafluoroethylene (PTFE), ethylene tetrafluoroethylene (ETFE), Teflon® fluorinated ethylene propylene (FEP), Teflon® amorphous fluoroplastics (AF), modified fluoroalkoxy (MFA), and Teflon® perfluoroalkoxy copolymer (PFA). Such perfluorinated polymers commonly offer high transparency and few absorption features in the near-infrared. For use in wavelength ranges other than the near-infrared, the fluid conduit <b>330</b> may be comprised of a plurality of polymer and rubber tubing materials. Examples of such materials include polyethylene, polyether ether ketone (PEEK), polyvinyl chloride (PVC), nylon, and polycarbonate. The fluid delivery tubing assembly <b>130</b> and fluid return tubing assembly <b>140</b> may comprise tubing such as silicone, PharMed®, or Tygon®. The connectors <b>370</b> may comprise polymers, metals, or composites, and joints may be reinforced with for example adhesives, shrink tubing, or cable ties. Joints between the tubing sections may also be formed by welding, overmolding, or adhesive bonding. For biological or pharmaceutical applications, all tubing sections and connectors that are in contact with fluid samples should preferably be comprised of materials that can withstand sterilization by techniques such as autoclave, gamma irradiation, or ethylene oxide.</p>
+      <p id="p-00052-en" num="0052">The cartridge <b>340</b> may be configured to house one or more tubing assemblies <b>360</b> comprising one or more fluid conduits <b>330</b>. In one embodiment the cartridge <b>340</b> is preferably comprised of polymers such as polyethylene or polypropylene that are amenable to manufacturing by injection molding. Manufacturing cartridges <b>340</b> by mass production techniques such as injection molding provides for sufficiently low production costs to render the parts disposable. Components that are considered “single-use” or “disposable” are commonly used in one process and subsequently discarded. Such single-use components and assemblies are desirable in pharmaceutical and bioprocess applications where sterility is a primary concern. Single-use components commonly offer ease of sterilization as the contents are typically free of debris prior to sterilization as well as reduced labor costs as components do not require cleaning subsequent to processing. Cartridges <b>340</b> may also be comprised of other polymers, metals, composites, or combinations thereof and be designed to be single-use or multiple-use components.</p>
+      <p id="p-00053-en" num="0053">
+        <figref>FIG. 5</figref> shows the installation of a tubing assembly <b>360</b> housed within a cartridge <b>340</b> into the optical interface <b>350</b>. The cartridge <b>340</b> may be installed or removed by translating the cartridge <b>340</b> containing the tubing assembly <b>360</b> along the direction indicated by double arrowed line C. The optical interface <b>350</b> comprises an input optical assembly <b>380</b> and output optical assembly <b>390</b>. Each optical assembly may comprise one or more mechanical components such as lens tubes and support rods, as well as one or more optical components such as lenses. Optical and mechanical components may be chosen to best suit the wavelength range of interest. A locking pin recess <b>400</b> on the cartridge <b>340</b> and corresponding locking assembly <b>410</b> are provided to secure the cartridge within the optical interface <b>350</b>. A side view of the optical interface <b>350</b> and cartridge <b>340</b> housing a tubing assembly <b>360</b> is shown in <figref>FIG. 6</figref>. In this embodiment, the cartridge <b>340</b> is shown with an integrated hinge <b>420</b> and snap features <b>430</b> to engage the cartridge when closed around a tubing assembly <b>360</b>. Injection molding enables the cartridge <b>340</b> to comprise a single polymer component that is light weight, durable, and able to be sterilized by common methods. Embodiments of the present invention provide for use of multiple cartridges <b>340</b> in conjunction with a single optical interface <b>350</b>, and may further comprise a means of selecting one cartridge from a group for optical interrogation of the fluid sample contained within one of the fluid conduits contained therein. Such a selection means comprises components to select, install, and remove cartridges <b>340</b> from an optical interface <b>350</b>, and may be configured to do so in an automated fashion. The ability to provide measurement of fluid samples from multiple cartridges <b>340</b> in an automated fashion enables multiplexed measurements to be performed whereby a single optical instrument <b>110</b> may perform measurements on fluid samples from multiple vessels or from multiple locations within the same vessel.</p>
+      <p id="p-00054-en" num="0054">In embodiments of the present invention, the optical interface <b>350</b> provides for establishing a defined optical path length through a fluid sample within a fluid conduit <b>330</b> by compressing the fluid conduit <b>330</b> to form a defined path length. A detailed cross sectional view of the portion of the optical interface <b>350</b> comprising the compression features is shown in <figref>FIG. 7</figref>. The cartridge <b>340</b> containing a fluid conduit <b>330</b> is shown installed within the optical interface <b>350</b>. A defined optical path length is established by compressing the fluid conduit <b>330</b> between a first compression surface <b>430</b> of a first compression block <b>470</b> and a second compression surface <b>440</b> of a second compression block <b>480</b>. Two optical waveguides <b>460</b> installed within the compression blocks <b>470</b> and <b>480</b> provide optical communication of light from the optical emitter <b>170</b> into the fluid conduit <b>330</b> and from the fluid conduit <b>330</b>. The region between the optical waveguides <b>460</b> and compression surfaces <b>430</b> and <b>440</b> comprises a measurement zone <b>450</b> for optical sampling of a fluid. For example, light incident in the direction of arrowed line D may be communicated by one optical waveguide <b>460</b> into the fluid conduit <b>330</b> compressed between the first compression surface <b>430</b> and second compression surface <b>440</b>. At least a portion of light having interacted with said fluid sample may be communicated from the fluid conduit <b>330</b> by another optical waveguide <b>460</b>. A portion of light communicated from the fluid sample by optical waveguide <b>460</b> in a direction indicated by arrowed line E may be collected for example by an output optical assembly <b>390</b> to be communicated to other optical elements or a sensor <b>230</b>. An optical arrangement whereby a portion of light incident in the direction of arrowed line D is communicated through a fluid conduit <b>330</b> and light having traveled through a fluid sample contained within the fluid conduit <b>330</b> is subsequently communicated in the direction of arrowed line E to a sensor provides an optical transmission measurement. An optical transflection measurement may also be provided by the current invention. In this configuration, a portion of light incident in the direction of arrowed line D is communicated by an optical waveguide <b>460</b> into a fluid sample within a fluid conduit <b>330</b>, and a portion of light having interacted with the fluid sample is communicated by the same optical waveguide <b>460</b> in a direction indicated by arrowed line F. Light returning in the direction of arrowed line F will generally comprise portions that have transmitted through the fluid sample and reflected off the second optical waveguide <b>460</b> or an alternative optical element positioned to reflect a portion of the light. The optical waveguides <b>460</b> may comprise for example hollow waveguides, optical fibers, optical rods, or optical windows. In the near-infrared spectral range, materials such as reflective elements, zinc selenide (ZnSe), germanium, sapphire, silicon, BK7 optical glass, B270 optical glass, low hydroxyl silica, and other glasses with low hydroxyl content may be used. Surfaces of the optical waveguides <b>460</b> in proximity to the measurement zone <b>450</b> may be coplanar with the compression surfaces <b>430</b> and <b>440</b> or offset. In a configuration where the surfaces of the optical waveguides <b>460</b> are coplanar with the compression surfaces <b>430</b> and <b>440</b> or offset into the measurement zone <b>450</b>, said surfaces of the optical waveguides <b>460</b> may also provide definition of the optical path length by compression of the fluid conduit <b>330</b>. The optical path length defined by the compression surfaces <b>430</b> and <b>440</b> and optical waveguides <b>460</b> may be set by defining the distance between said compression surfaces. The length of the optical path within a fluid sample when the optical interface <b>350</b> is in a transmission optical configuration is generally the distance that light travels between the compression surfaces <b>430</b> and <b>440</b> or optical waveguides <b>460</b> minus twice the wall thickness of the fluid conduit <b>330</b>. It should be understood that a plurality of optical path lengths may be presented depending on the geometry of the compression surfaces, and that a distribution of optical path lengths may be provided by a configuration. A wide range of optical path lengths may be provided by embodiments of the present invention, and path lengths generally ranging from 0.2 mm to 5.0 mm are typical. In one embodiment, the optical path length is between 0.8 to 1.2 mm. The optical path length is typically determined by the available optical power, the absorption by water and other solvents in the fluid sample, and the scattering by suspended materials such as cells in the fluid sample. Embodiments of the invention are provided whereby the optical path length is adjustable, either manually or automatically, in order to accommodate a plurality of fluid samples with differing characteristics. For example, if optical attenuation by a fluid sample is sufficiently high to degrade system performance, the path length may be shortened to reduce the attenuation and increase optical signal intensity. Embodiments are also provided wherein electromagnetic radiation is communicated by free-space coupling whereby no optical waveguides are utilized.</p>
+      <p id="p-00055-en" num="0055">Optical sampling of fluid samples may also be provided by one or more fiber optically coupled interfaces that are installed at least partially within a vessel. Vessels interrogated by fiber optically coupled interfaces include for example multiple-use vessels such as stirred tank bioreactors as well as single-use vessels such as bag bioreactors and mini- and micro-bioreactors. One such embodiment of sampling with a fiber optically coupled interface wherein the interface is a probe is shown in the block diagram in <figref>FIG. 8</figref>. In this embodiment providing a single-probe configuration <b>490</b>, an optical probe <b>500</b> is installed within a vessel <b>100</b> such that optical elements within the optical probe <b>500</b> are in fluid contact with the contents of the vessel <b>100</b> during fluid processing. One or more optical fibers <b>510</b> connect the optical instrument <b>110</b> to the optical probe <b>500</b>. In an embodiment where the optical probe <b>500</b> is configured for a transmission optical measurement, two optical fibers <b>510</b> may be provided for each optical probe <b>500</b>. In such a configuration, the optical probe <b>500</b> is preferably configured for a single-pass transmission measurement. Light from the optical instrument <b>110</b> is optically coupled to the optical probe <b>500</b> by at least one optical fiber <b>510</b> where at least a portion of light interacts with a fluid in the vessel <b>100</b>, and at least a portion of the light having interacted with said fluid is communicated to the optical instrument <b>110</b> by an optical fiber <b>510</b> and sensed by a sensor <b>230</b>. For use with sterile processes such as bioprocessing, optical probes <b>500</b> should preferably be designed to withstand sterilization by one or more standard processes such as autoclave, gamma irradiation, and ethylene oxide treatment. Due to the need to connect optical probes to the optical instrument <b>110</b> by optical fibers <b>510</b>, the NIR emitter <b>180</b> should preferably be a high brightness emitter, such as a semiconductor light source, amenable to fiber optic coupling as described above. Various implementations of the present invention provide for multiplexed measurements whereby a single optical instrument <b>110</b> is used in conjunction with multiple optical interfaces, such as probes <b>500</b>, to measure fluid samples from multiple vessels or from multiple locations within a single vessel. An embodiment showing a single optical instrument <b>110</b> configured to perform measurements in multiple vessels <b>100</b> is shown in <figref>FIG. 9</figref>. In this multiplexed probe embodiment <b>520</b>, a fiber optic switch <b>530</b> is connected to the optical instrument <b>110</b> by one or more optical fibers <b>510</b>, and one or more optical fibers <b>510</b> optically communicate with one or more fiber optic probes <b>500</b> each with one or more optical fibers <b>510</b>. A fiber optic switch <b>530</b> may also be integrated within an optical instrument <b>110</b>. Fiber optic probes <b>500</b> may be provided with a plurality of optical path lengths as with the optical interface <b>350</b>, generally in the range of 0.2 mm to 5.0 mm. Embodiments of the invention are also provided where optical emitters and/or sensors may be integrated within fiber optic probes. Embodiments are also provided without a fiber optic switch, whereby multiplexed measurements are provided by multiple optical emitters and sensors within an instrument.</p>
+      <p id="p-00056-en" num="0056">In addition to the ability to measure quantities of multiple substances in fluid samples, certain implementations of the present invention provide for feedback control of the quantities of substances or the values of parameters in fluid processes. In one such embodiment, measurements of one or more quantities of substances in a fluid sample from a fluid process are used to control the values of one or more parameters in a fluid process. Quantities such as concentrations of chemical constituents, turbidity, or cell density determined by the optical instrument <b>110</b> may be used as inputs to control parameters of the fluid process such as agitation rate, the level of dissolved oxygen in the fluid, the pH of the fluid, the temperature of the fluid, and level of foaming within the vessel <b>100</b>. <figref>FIG. 10</figref> shows one embodiment where the present invention may provide for control of multiple parameters or quantities of substances within a fluid process. For example, the present invention may be configured to change the agitation rate within the vessel <b>100</b> by adjusting the speed of the agitator <b>540</b> when the measured cell density reaches a specified level. In another example, the present invention may provide control of antifoam additions to the fluid process in response to measurements of cell density or chemical constituent concentration. In another example, the present invention may be used to control the temperature of the fluid process in response to measurements of cell density or chemical constituent concentration. This functionality may be provided directly by optical instrument <b>110</b>, whereby the parameter is controlled by the NIR optical instrument <b>110</b>, or whereby the NIR optical instrument <b>110</b> may provide output signals to a process controller <b>570</b> that accepts said output signals as inputs and controls the parameters of the fluid process.</p>
+      <p id="p-00057-en" num="0057">Embodiments of the present invention provide for feedback control of chemical constituent concentration, either directly or in conjunction with a process controller <b>570</b>. Feedback control of chemical constituent concentration in a fluid process is provided by comparing a measurement performed with the NIR optical instrument to a desired concentration level or concentration level profile. Based upon the difference in the measured concentration value to the desired concentration value or concentration profile, a signal may be provided to a transfer pump <b>550</b> that transfers a quantity of a substance at least partially comprising the measured chemical constituent from a source container <b>580</b> to the fluid process in the vessel <b>100</b>. Concentrations of more than one chemical constituent may be controlled by implementations of the present invention, for example a second transfer pump <b>560</b> may be used to transfer a quantity of a substance at least partially comprising a second measured chemical constituent from a second source container <b>590</b> to the fluid process in the vessel <b>100</b>. Control of parameters in the fluid process or concentrations of chemical constituents may be performed with the present invention in a plurality of configurations. Circulation of one or more fluid samples with pumps <b>120</b>, fluid delivery tubing assemblies <b>130</b> and fluid return tubing assemblies <b>140</b> or fluid exhaust lines <b>150</b> and waste containers <b>160</b> may be provided. Alternatively, fluid sampling in control configurations may be performed with fiber optically coupled interfaces as with embodiments <b>490</b> and <b>520</b> in <figref>FIG. 8</figref> and <figref>FIG. 9</figref>.</p>
+      <p id="p-00058-en" num="0058">Methods for determining quantities of substances within fluid samples in biological and other processes, as well as for providing control of such processes, are presented in the following description. A beam of near-infrared electromagnetic radiation is provided by an optical emitter, said optical emitter may comprise a broad bandwidth emitter such a tungsten halogen bulb, or an emitter having a narrower bandwidth such as a semiconductor emitter. A tungsten halogen bulb or other thermal emitter typically exhibits an optical emission spectrum resembling a black body emission spectrum. Such an emission spectrum is generally broad in extent, and may provide electromagnetic radiation output for example from the visible spectrum into the infrared. In implementations of the present invention optical emitters having electromagnetic radiation emission generally within the wavenumber range including 3300 cm<sup>−1 </sup>to 14,000 cm<sup>−1 </sup>(corresponding to 0.7 to 3.0 μm in wavelength) are preferable. Near-infrared light may also be provided by an optical source having an emission spectrum generally narrower than a thermal source, for example a semiconductor optical source. Semiconductor optical emitters commonly exhibit emission spectra narrower than thermal sources, and the emission characteristics are often configurable. Light emitting diodes, superluminescent diodes, and tunable laser diodes are examples of such semiconductor optical emitters. Semiconductor light sources may be provided with generally fixed emission characteristics such as with LED and SLD sources, or with tunable emission characteristics such as with a TLD. A TLD emitter assembly comprises a semiconductor element configured to emit light at desired wavelengths, and may further comprise tuning optics external to the semiconductor element. Tuning optics may comprise for example a grating, AOTF crystal, or other wavelength selection means as well as other optical elements configured to enable tuning or variation of the emission characteristic.</p>
+      <p id="p-00059-en" num="0059">Electromagnetic radiation generated by a broadband optical source or a semiconductor optical emitter may be directed into a wavelength selector. Said wavelength selector may be configured to select one or more segments of the electromagnetic radiation, and is commonly configured to select a plurality of segments of electromagnetic radiation in order to enable spectroscopic measurements to be performed over a desired wavelength range. The wavelength selector may comprise an AOTF, a planar reflection diffraction grating, a non-planar reflection diffraction grating, or a transmission diffraction grating. The present invention provides for placement of the wavelength selector in numerous locations within the optical path—before or after the fluid sample. As described above, the wavelength selector may also be located within an optical emitter assembly to provide a tunable optical emitter. While it is common in the art to provide optical instruments with high spectral resolution, in the present invention the resolution of the wavelength selector may in certain implementations be poorer than 8 cm<sup>−1</sup>. As the samples of interest are generally fluid samples, often being aqueous fluid samples, the spectral features are generally broader than 8 cm<sup>−1</sup>, often broader than 30 cm<sup>−1</sup>, resolution of the wavelength selector may be poorer than 8 cm<sup>−1</sup>.</p>
+      <p id="p-00060-en" num="0060">Certain implementations of the present invention provide a wavelength reference means comprising a polymer optical element. Spectroscopic analysis of fluids and materials contained therein commonly requires the wavelength axis to be well known if accurate quantification is to be provided. Known spectral characteristics of substances within fluids, such as chemical constituents, are commonly used in the determination and quantification of concentrations or levels of such substances—if the wavelength axis of a spectroscopic measurement is offset, skewed, or otherwise distorted, measurement errors may result. Wavelength reference or calibration means provided in the prior art commonly utilize a single wavelength or narrow wavelength band as a standard, such as a laser, bandpass filter, or other apparatus or material with narrow spectral features. In such configurations the reference or calibration is generally performed by peak fitting to one or few spectral features, and while this may provide an adequate calibration if there is a simple shift in the wavelength axis that is uniform across the spectral range of interest, the calibration may be unsatisfactory if there is skew or other distortions in the wavelength axis. Utilization of a polymer optical element may provide a broad bandwidth wavelength reference whereby shift, skew, and other distortions in the wavelength axis may be corrected. A polymer optical element used for wavelength calibration purposes is preferably at least partially transparent over the wavelength range of interest, and the absorption characteristic of the polymer optical element should differ between at least two wavelengths in order that there is a spectral feature for the purpose of comparing to a reference spectrum. The polymer optical element will preferably have one or more distinct spectral absorption features within the wavelength range of interest to which a comparison may be made. In embodiments of the present invention, a transmission spectrum of the polymer optical element is compared to a reference transmission spectrum by a regression operation performed over the entire wavelength range of interest. By performing the wavelength reference operation over the entire wavelength range of interest, both shifting and scaling operations may be performed on the wavelength axis. The ability to both shift and scale the wavelength axis over the entire wavelength range of interest provides a well-defined wavelength axis permitting robust spectroscopic measurements to be performed. Wavelength reference operations may be performed continuously whereby the polymer optical element is positioned in an optical path throughout operation, or intermittently whereby the optical element is inserted into an optical path with an actuator. Such continuous or intermittent adjustment or calibration of the wavelength axis of the measurement provides for higher measurement accuracy and mitigates against drift due to environmental fluctuations or other perturbations to the fluid measurement instrument. Embodiments of the present invention provide for performing a plurality of wavelength reference operations throughout a fluid process. For example, a wavelength reference operation may be performed every 30 minutes during fluid processing wherein the fluid process lasts for a period of time of one week or more. Ideally, the absorption properties of the reference polymer are insensitive to environmental variations, most notably temperature and humidity.</p>
+      <p id="p-00061-en" num="0061">At least a portion of the electromagnetic radiation generated by the optical emitter is directed to a fluid sample within a fluid sampling interface or fiber optically coupled interface where said electromagnetic radiation may interact with said fluid sample and substances contained therein by processes such as absorption and scattering. The fluid sample interrogated is commonly not homogeneous, and may contain a plurality of fluid components and suspended materials. As certain implementations of the present invention provide for performing measurements in the near-infrared region of the electromagnetic spectrum where an optical transmission band exists in water, fluid samples may be generally aqueous in composition. The fluid sampling interface typically provides a length of optical path through the fluid sample contained therein in the range of 0.2 mm to 5.0 mm. This optical path length generally determines the interaction length whereby the electromagnetic radiation may interact with the fluid sample and materials contained therein. Fluid sampling interfaces may be free-space optically coupled or utilize optical fibers for delivery and collection of light to and from a fluid sample. Free-space optically coupled examples of the fluid sampling interface typically comprise a fluid conduit, said fluid conduit being at least partially transparent in the wavelength range of interest. Fluid sampling interfaces employing fiber optic coupling comprise one or more optical fibers configured to perform at least one of communication of electromagnetic radiation to a fluid sample and communication of electromagnetic radiation having interacted with said fluid sample to an instrument. In one embodiment, the fiber optically coupled fluid sampling interface comprises at least one optical probe immersed in a fluid, said probe being in optical communication with an instrument by means of at least one optical fiber. Both free-space and fiber optically coupled fluid sampling interfaces may be configured to operate in a transmission or transflection optical geometry. In a transmission configuration, electromagnetic radiation incident on a fluid sample passes through said fluid sample once, and a portion of said electromagnetic radiation is collected. In a transflection configuration, a portion of electromagnetic radiation incident on a fluid sample passes through said fluid sample and is directed back through the fluid sample to be collected generally in the incident direction, and a portion of the electromagnetic radiation reflects off the fluid sample and materials therein, and is collected generally in the incident direction. Embodiments of the present invention may additionally comprise an additional analysis module for further characterization of fluid samples by optical or non-optical means. Fluid delivery to such an additional analysis module may be performed by the same fluid conduit used in the near-infrared optical measurement, or by an additional fluid conduit. Examples of such analysis modules include means of performing electrochemical analyses, fluorescence measurements, ultraviolet and visible optical measurements, and Raman scattering analyses.</p>
+      <p id="p-00062-en" num="0062">Electromagnetic radiation having interacted with a fluid sample is collected and communicated to at least one sensor and used to determine at least one quantity of a substance within said fluid sample. Determination of quantities of substances within fluid samples is performed by scrutiny of the spectrum of electromagnetic radiation having interacted with a fluid sample. In one embodiment a second sensor is provided in a second optical path, said second sensor being configured to sense electromagnetic radiation not having interacted with said fluid sample. A second sensor configured to sense electromagnetic radiation not having interacted with a fluid sample may provide a reference or blank signal by which a reference measurement can be performed. Such a reference measurement enables mitigation of drift in instrument performance due to variation in environmental conditions or instrument component parameter fluctuations. Sensors provided in the present invention may be single-element sensors or multi-element sensors such as array sensors in various implementations.</p>
+      <p id="p-00063-en" num="0063">Various implementations of the present invention provide for determination of a plurality of quantities of substances within fluid samples, and commonly such quantification may be performed on multiple substances simultaneously. Given the near-infrared absorption characteristics of substances containing C—H, C—O, S—H, O—H, P—H, and N—H bonds, measurement of the quantities or concentrations of many such substances in fluids samples is provided. Absorption characteristics in the near-infrared spectral range of alcohols, sugars, lipids, organic acids, amino acids, fatty acids, peptides, DNA, and proteins permit determination of quantities of such substances in fluid samples. Specific chemical constituents for which certain implementations of the present invention may provide measurement include, but are not limited to, glucose, glycerol, methanol, ethanol, lactate, acetate, and ammonium. Quantities and concentrations of materials suspended in fluid samples such as cells and particles may also be determined with certain implementations of the present invention. Scattering and absorption of electromagnetic radiation due to interaction with such suspended materials alters the characteristics of electromagnetic radiation used to interrogate fluid samples, thus providing means to determine quantities of such substances. Cell density and fluid turbidity may be measured with certain implementations of the present invention, and information on cell viability may be provided as well. Due to the morphological differences between live cells and dead cells, the optical scattering properties differ as well, permitting extraction of information on cell viability. Such cell density and viability information is highly valuable particularly in biological and pharmaceutical research and manufacturing applications. As the present invention utilizes electromagnetic radiation in the near-infrared spectral range, attenuation of the optical beam interrogating a fluid sample due to scattering from suspended materials is substantially reduced compared to technologies utilizing shorter wavelength light owing to the fact that the intensity of optical scattering process typically scales as the inverse of the wavelength to the fourth power. Certain embodiments of the present invention provide for determination of quantities or concentrations of more than one of the substances and materials listed above simultaneously. Certain embodiments of the present invention may feature automatic rejection of NIR spectra that are sufficiently contaminated by entrapped gas bubbles. Analysis of the collected fluid sample spectrum can be performed to ascertain when a given spectrum falls outside of acceptable bounds and is thereby flagged as contaminated with air, and rejected from further data processing or display to the user.</p>
+      <p id="p-00064-en" num="0064">Quantities of substances within fluid samples may be measured intermittently or continuously with various embodiments of the present invention. Continuous measurements of substances in fluid samples is particularly advantageous for numerous fluid processes and applications, as conditions within the fluid process and quantities or concentrations of substances often change throughout a process, and often on short time scales such as several minutes. Fluid processes such as bioprocesses and chemical processes are examples of such processes where continuous monitoring of substances is advantageous. Embodiments of the present invention are well-suited to performing continuous optical measurements in for example yeast fermentations, bacterial processes, insect cell cultures, mammalian cell cultures, and protein expression processes. Bacterial bioprocesses, for example <i>E. coli </i>processes, are examples of such processes where properties of fluids and materials contained therein change rapidly. In bioprocesses, implementations of the present invention provide for performing measurements in the cell growth stage, the product formation stage, the product purification stage, and the product formulation stage of the process. Fluid processes from which fluid samples to be measured are obtained may be batch processes, semi-continuous processes, continuous processes, or perfusion processes. Processes may be monitored in real-time with certain embodiments of the present invention—the measurement frequency may be greater than one measurement per minute, and each measurement may provide quantification of one or more substances. Continuous monitoring of fluid processes with certain implementations of the present invention provides not only measurements of substances in fluid samples with high time resolution, but also the ability to detect outlier conditions in processes, provide a means of quality control, and enable feedback control of such processes.</p>
+      <p id="p-00065-en" num="0065">Methods concerning various embodiments of the present invention may further comprise steps providing feedback control and associated operations in bioprocesses and other fluid processes. The present invention may provide means for control of parameters of a fluid process, or control of quantities or concentrations of substances within a fluid process. Measurement of quantities of substances in or materials suspended in a fluid sample, such as chemical constituents or cell density, may be used to adjust one or more parameters or quantities in the fluid process from which the fluid sample originates. As an example of parameter adjustment and control, a measured quantity such as cell density in a process may be used to adjust a parameter such as agitation rate or dissolved oxygen level. For instance, upon reaching a specified cell density, agitation rate or dissolved oxygen level may be increased to support the oxygen demands of the growing cell population. Parameters such as temperature and pressure of fluid process may also be controlled. Foaming within a vessel may also be mitigated by control of antifoam addition, for example when the cell density reaches a specified value.</p>
+      <p id="p-00066-en" num="0066">Control of quantities or concentrations of substances such as chemical constituents in fluid processes may be provided by determining one or more quantities of substances and using said one or more determined quantities to adjust one or more quantities or concentrations. Such feedback control strategies are highly valuable in many applications to maintain desired quantities or concentration profiles of substances during fluid processes and to reduce the labor involved with providing such functionality manually. A target concentration or concentration profile may be controlled with embodiments of the present invention based not only upon one or more measured quantities, but also upon one or more consumption rates of substances, said consumption rates of substances being determined by the measured quantities of those substances. Cell growth rate may also be used to control a quantity or concentration profile of one or more substances in a fluid process. Process adjustments such as parameter values and quantities, concentrations, or concentration profiles of substances may also be provided by additional analyses. Analyses such as electrochemical, fluorescence, ultraviolet-visible spectroscopy, and Raman scattering may be provided for such process adjustments in conjunction with the near-infrared measurement provided.</p>
+      <p id="p-00067-en" num="0067">A plurality of experiments has been performed with certain implementations of the present invention to demonstrate the utility of the invention. A concentration profile of glycerol during a portion of a <i>Pichia pastoris </i>fermentation is shown in <figref>FIG. 11</figref>. In <figref>FIG. 11</figref>, the line <b>600</b> represents the concentration measured as a function of time, and the circles <b>610</b> are independent reference measurements performed off-line. The correlation plot shown in <figref>FIG. 12</figref> compares glycerol measurements taken with an implementation of the present invention optical apparatus to measurements taken as off-line reference measurements; each comparison is shown as a filled circle <b>620</b>. The concentration profile <b>630</b> and off-line reference measurements <b>640</b> for a second chemical constituent, methanol, in a portion of a <i>Pichia pastoris </i>fermentation process are shown in <figref>FIG. 13</figref>. The correlation plot showing the accuracy of the measurements provided in comparison to off-line reference measurements is shown in <figref>FIG. 14</figref> where circles <b>650</b> represent individual measurements. The concentration profile in <figref>FIG. 13</figref> highlights the accurate measurements provided across numerous bolus doses of methanol to the process. Feedback control of constituent concentration is demonstrated in <figref>FIG. 15</figref>. The measured concentration profile of methanol provided by an implementation of the present invention <b>660</b> (solid line) is shown with off-line reference measurements <b>670</b> (circles). The tested implementations of the present invention provide continuous measurements over extended time periods, and have been demonstrated with fluid processes exceeding three weeks in duration. Relative cell density or biomass measurements are also provided. Knowledge of cell density is often highly desirable in cell culture and fermentation processes—both relative and absolute measurements are typically useful, as trend information lends key insights into process dynamics. <figref>FIG. 16</figref> shows a relative cell density plot <b>680</b> measured with an implementation of the present invention (solid line) as well as off-line reference measurements <b>690</b> (circles). Off-line reference measurements were performed with a visible spectrometer, and are given as optical density at 600 nm (OD600).</p>
+      <p id="p-00068-en" num="0068">Experiments were also performed with semiconductor light sources used in certain implementations of the present invention. A plot showing a current input vs. light output characteristic <b>700</b> for a superluminescent diode operating in the near-infrared with a peak wavelength of approximately 2.3 μm is shown in <figref>FIG. 17</figref>. High optical powers, exceeding 8 mW, were produced from this semiconductor light source which was used for performing measurements of chemical constituents in <i>Pichia pastoris </i>fermentation processes. A concentration profile <b>710</b> of methanol measured with a superluminescent diode light source in the apparatus during a <i>Pichia pastoris </i>fermentation processes is shown in <figref>FIG. 18</figref>. In this figure, measurement of multiple bolus doses of methanol are shown.</p>
+      <p id="p-00069-en" num="0069">The present invention has been described with reference to the foregoing specific implementations. These implementations are intended to be exemplary only, and not limiting to the full scope of the present invention. Many variations and modifications are possible in view of the above teachings. The invention is limited only as set forth in the appended claims. All references cited herein are hereby incorporated by reference to the extent not inconsistent with the disclosure herein. Unless explicitly stated otherwise, flows depicted herein do not require the particular order shown, or sequential order, to achieve desirable results. In addition, other steps may be provided, or steps may be eliminated, from the described flows, and other components may be added to, or removed from, the described systems. Accordingly, other implementations are within the scope of the following claims. Any disclosure of a range is intended to include a disclosure of all ranges within that range and all individual values within that range.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method of measuring a bioprocess within a vessel, said method comprising:
+<claim-text>a. generating a beam of near-infrared electromagnetic radiation;</claim-text><claim-text>b. transmitting at least a portion of said beam of near infrared electromagnetic radiation through a polymer optical element, said polymer optical element being at least partially transparent in at least a portion of the near infrared spectral range, said polymer further comprising an absorption characteristic that differs in magnitude between at least two wavelengths;</claim-text><claim-text>c. directing said beam of near-infrared electromagnetic radiation into a fluid sample and by means of a sensor measuring the intensity of electromagnetic radiation having interacted with said fluid sample as a function of wavelength to form an optical spectrum; and</claim-text><claim-text>d. using said optical spectrum to determine a quantity of one or more substances in said fluid sample from said bioprocess, wherein a wavelength axis is adjusted based upon a comparison utilizing the polymer optical element for the entire optical spectrum collected over a wavelength range of interest.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said electromagnetic radiation is transmitted through said fluid sample and the measured intensity as a function of wavelength forms a transmission optical spectrum.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said beam of near-infrared electromagnetic radiation is generated by a broadband optical source.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said beam of near-infrared electromagnetic radiation is generated by a tunable optical source.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein said beam of near-infrared electromagnetic radiation is generated by a near-infrared tunable laser diode (TLD).</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00003-en">claim 3</claim-ref>, further comprising the step of directing a beam of broadband optical radiation from the broadband optical source into a wavelength selector.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein said wavelength selector is selected from the group consisting of an Acousto Optic Tunable Filter (AOTF), a planar reflection diffraction grating, a non-planar reflection diffraction grating, and a transmission diffraction grating.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said beam of near-infrared electromagnetic radiation transmitted through said fluid sample comprises wavenumbers between 3300 and 5600 cm<sup>−1</sup>.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising the step of sensing a second beam of near infrared electromagnetic radiation with at least a second sensor as a reference, said sensed second beam of electromagnetic radiation not having interacted with said fluid sample.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising the steps of detecting air bubbles entrapped in the fluid sample and rejecting measurements contaminated by said air bubbles.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said fluid sample is not homogeneous.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the transmission distance through the fluid sample is between 0.2 mm and 5 mm.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said fluid sample is from a bioprocess selected from the list consisting of a bacterial process, a yeast fermentation, an insect cell culture, and a mammalian cell culture.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the fluid sample is measured during at least one of a protein expression, virus, vaccine, or DNA bioprocess.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the bioprocess is measured continuously.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the bioprocess is measured in real-time.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein a measurement frequency for the bioprocess is greater than 1 per minute.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the quantity of one or more substances is measured for chemicals containing one or more of C—H, C—O, S—H, C—N, or N—H bonds.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein the quantity is measured for chemicals in the group consisting of alcohols, sugars, lipids, organic acids, amino acids, fatty acids, peptides, DNA, and proteins.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The method of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein the quantity is measured for chemicals in the group consisting of glucose, glycerol, methanol, ethanol, lactate, acetate, and ammonium.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the quantity measured is one or more of cell density, cell viability, or turbidity.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the fluid is measured during one or more of a growth stage, a product formation stage, a purification stage, or a product formulation stage of the bioprocess.</claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said fluid sample is circulated from the process through a fluid conduit.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein one or more optical fibers is used to illuminate or collect radiation having interacted with the fluid sample.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>25</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein more than one optical fiber is used for measurement of one or more bioprocesses.</claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>
+        <b>26</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said polymer optical element is intermittently positioned at least partially within said beam of near infrared electromagnetic radiation.</claim-text>
+    </claim>
+    <claim num="27" id="clm-00027-en">
+      <claim-text>
+        <b>27</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said polymer optical element is continuously positioned at least partially within said beam of near infrared electromagnetic radiation.</claim-text>
+    </claim>
+    <claim num="28" id="clm-00028-en">
+      <claim-text>
+        <b>28</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein said fluid medium is from a batch process, a continuous process, or a semi-continuous process.</claim-text>
+    </claim>
+    <claim num="29" id="clm-00029-en">
+      <claim-text>
+        <b>29</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising an additional analysis comprising one or more of electrochemical, fluorescence, UV-Vis absorption, or Raman scattering analysis.</claim-text>
+    </claim>
+    <claim num="30" id="clm-00030-en" independent="true">
+      <claim-text>
+        <b>30</b>. A method of controlling a bioprocess within a vessel, said method comprising:
+<claim-text>a. generating a beam of near-infrared electromagnetic radiation;</claim-text><claim-text>b. transmitting at least a portion of said beam of near infrared electromagnetic radiation through a polymer optical element for wavelength reference, said polymer optical element being at least partially transparent in at least a portion of the near infrared spectral range, said polymer further comprising an absorption characteristic that differs in magnitude between at least two wavelengths;</claim-text><claim-text>c. directing near-infrared electromagnetic radiation into a fluid sample and measuring the intensity of the electromagnetic radiation having interacted with said fluid sample as a function of wavelength to form an optical spectrum;</claim-text><claim-text>d. using said optical spectrum to determine a quantity of one or more substance in said fluid sample; and</claim-text><claim-text>e. using said determined quantity of one or more substance in said fluid sample to adjust one or more parameters in said bioprocess, wherein a wavelength axis is adjusted based upon a comparison utilizing the polymer optical element for the entire optical spectrum collected over a wavelength range of interest.</claim-text></claim-text>
+    </claim>
+    <claim num="31" id="clm-00031-en">
+      <claim-text>
+        <b>31</b>. The method of <claim-ref idref="clm-00030-en">claim 30</claim-ref>, wherein said electromagnetic radiation is transmitted through said fluid sample and the measured intensity as a function of wavelength forms a transmission optical spectrum.</claim-text>
+    </claim>
+    <claim num="32" id="clm-00032-en">
+      <claim-text>
+        <b>32</b>. The method of <claim-ref idref="clm-00030-en">claim 30</claim-ref>, further comprising the step of controlling the quantity of at least one substance in a bioprocess.</claim-text>
+    </claim>
+    <claim num="33" id="clm-00033-en">
+      <claim-text>
+        <b>33</b>. The method of <claim-ref idref="clm-00030-en">claim 30</claim-ref>, further comprising the step of controlling one or more parameters in a bioprocess.</claim-text>
+    </claim>
+    <claim num="34" id="clm-00034-en">
+      <claim-text>
+        <b>34</b>. The method of <claim-ref idref="clm-00030-en">claim 30</claim-ref>, wherein said one or more parameters are selected from the group consisting of agitation rate, dissolved oxygen, pH, temperature, pressure, dosing rate, and foaming within the vessel.</claim-text>
+    </claim>
+    <claim num="35" id="clm-00035-en">
+      <claim-text>
+        <b>35</b>. The method of <claim-ref idref="clm-00030-en">claim 30</claim-ref>, wherein said controlling step substantially controls a target concentration, consumption rate, or concentration profile based upon at least one quantity determined by said transmission optical spectrum.</claim-text>
+    </claim>
+    <claim num="36" id="clm-00036-en">
+      <claim-text>
+        <b>36</b>. The method of <claim-ref idref="clm-00030-en">claim 30</claim-ref>, wherein said controlling step substantially controls a target concentration or concentration profile based upon at least one substance consumption rate determined by said optical spectrum.</claim-text>
+    </claim>
+    <claim num="37" id="clm-00037-en">
+      <claim-text>
+        <b>37</b>. The method of <claim-ref idref="clm-00030-en">claim 30</claim-ref>, wherein said controlling step substantially controls a target concentration or concentration profile based upon at least one cell growth rate determined by said transmission optical spectrum.</claim-text>
+    </claim>
+    <claim num="38" id="clm-00038-en">
+      <claim-text>
+        <b>38</b>. The method of <claim-ref idref="clm-00030-en">claim 30</claim-ref>, further comprising process adjustments based on one or more additional analyses selected from the list consisting of electrochemical, fluorescence, UV-Vis absorption, and Raman scattering analysis. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247210A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247210A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247210A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247210A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150247210A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247210A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150247210A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247210A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150247210A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247210A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150247210A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247210A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150247210A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247210A1-20150903-D00007.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150247210A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247210A1-20150903-D00008.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150247210A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247210A1-20150903-D00009.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150247210A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247210A1-20150903-D00010.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150247210A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247210A1-20150903-D00011.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150247210A1.PDF" type="pdf" size="857183" pages="24" />
+</lexisnexis-patent-document>

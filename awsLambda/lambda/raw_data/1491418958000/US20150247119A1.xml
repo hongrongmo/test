@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247119A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021456" date-changed="20150918" time-changed="025330">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140204">
+        <country>US</country>
+        <doc-number>20150247119</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14684490</doc-number>
+        <date>20150413</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="regional">
+        <country>EP</country>
+        <doc-number>10160796</doc-number>
+        <date>20100422</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C12N   5/00        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>5</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C12N   5/0068      20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>5</main-group>
+        <subgroup>0068</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C08G  65/3344      20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>65</main-group>
+        <subgroup>3344</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C08G  75/04        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>G</subclass>
+        <main-group>75</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C12N2533/30        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2533</main-group>
+        <subgroup>30</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C12N2533/50        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>2533</main-group>
+        <subgroup>50</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">15</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">HYDROGEL PRECURSOR FORMULATION AND PRODUCTION PROCESS THEREOF</invention-title>
+    <related-documents date-changed="20150903">
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13640141</doc-number>
+              <date>20121009</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+            <parent-pct-document>
+              <document-id>
+                <country>WO</country>
+                <doc-number>PCT/EP2011/056187</doc-number>
+                <date>20110419</date>
+              </document-id>
+            </parent-pct-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14006844</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>QGEL SA</orgname>
+            <address>
+              <city>Lausanne</city>
+              <country>CH</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>CH</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>RIZZI</last-name>
+            <first-name>Simone</first-name>
+            <address>
+              <city>Novazzano</city>
+              <country>CH</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>LUTOLF</last-name>
+            <first-name>Matthias</first-name>
+            <address>
+              <city>Tolochenaz</city>
+              <country>CH</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>EP11056187</doc-number>
+        <date>20110419</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2011131642</doc-number>
+        <date>20111027</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="145490455">
+        <family-member>
+          <document-id>
+            <country>RU</country>
+            <doc-number>2012149729</doc-number>
+            <kind>A</kind>
+            <date>20140527</date>
+          </document-id>
+          <application-date>
+            <date>20110419</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247119</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150413</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2011244362</doc-number>
+            <kind>B2</kind>
+            <date>20141204</date>
+          </document-id>
+          <application-date>
+            <date>20110419</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2561005</doc-number>
+            <kind>A1</kind>
+            <date>20130227</date>
+          </document-id>
+          <application-date>
+            <date>20110419</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>8471DELNP2012</doc-number>
+            <kind>A</kind>
+            <date>20140321</date>
+          </document-id>
+          <application-date>
+            <date>20120927</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MX</country>
+            <doc-number>2012012248</doc-number>
+            <kind>A</kind>
+            <date>20121123</date>
+          </document-id>
+          <application-date>
+            <date>20110419</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2011244362</doc-number>
+            <kind>A1</kind>
+            <date>20121115</date>
+          </document-id>
+          <application-date>
+            <date>20110419</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>102858845</doc-number>
+            <kind>A</kind>
+            <date>20130102</date>
+          </document-id>
+          <application-date>
+            <date>20110419</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2380920</doc-number>
+            <kind>A1</kind>
+            <date>20111026</date>
+          </document-id>
+          <application-date>
+            <date>20100422</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2013531691</doc-number>
+            <kind>A</kind>
+            <date>20130808</date>
+          </document-id>
+          <application-date>
+            <date>20110419</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>RU</country>
+            <doc-number>2561108</doc-number>
+            <kind>C2</kind>
+            <date>20150820</date>
+          </document-id>
+          <application-date>
+            <date>20110419</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20130040357</doc-number>
+            <kind>A1</kind>
+            <date>20130214</date>
+          </document-id>
+          <application-date>
+            <date>20110419</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2011131642</doc-number>
+            <kind>A1</kind>
+            <date>20111027</date>
+          </document-id>
+          <application-date>
+            <date>20110419</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173260960">
+        <family-member>
+          <document-id>
+            <country>RU</country>
+            <doc-number>2012149729</doc-number>
+            <kind>A</kind>
+            <date>20140527</date>
+          </document-id>
+          <application-date>
+            <date>20110419</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247119</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20150413</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2011244362</doc-number>
+            <kind>B2</kind>
+            <date>20141204</date>
+          </document-id>
+          <application-date>
+            <date>20110419</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2561005</doc-number>
+            <kind>A1</kind>
+            <date>20130227</date>
+          </document-id>
+          <application-date>
+            <date>20110419</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>8471DELNP2012</doc-number>
+            <kind>A</kind>
+            <date>20140321</date>
+          </document-id>
+          <application-date>
+            <date>20120927</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>MX</country>
+            <doc-number>2012012248</doc-number>
+            <kind>A</kind>
+            <date>20121123</date>
+          </document-id>
+          <application-date>
+            <date>20110419</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2011244362</doc-number>
+            <kind>A1</kind>
+            <date>20121115</date>
+          </document-id>
+          <application-date>
+            <date>20110419</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>102858845</doc-number>
+            <kind>A</kind>
+            <date>20130102</date>
+          </document-id>
+          <application-date>
+            <date>20110419</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2380920</doc-number>
+            <kind>A1</kind>
+            <date>20111026</date>
+          </document-id>
+          <application-date>
+            <date>20100422</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2013531691</doc-number>
+            <kind>A</kind>
+            <date>20130808</date>
+          </document-id>
+          <application-date>
+            <date>20110419</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>RU</country>
+            <doc-number>2561108</doc-number>
+            <kind>C2</kind>
+            <date>20150820</date>
+          </document-id>
+          <application-date>
+            <date>20110419</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20130040357</doc-number>
+            <kind>A1</kind>
+            <date>20130214</date>
+          </document-id>
+          <application-date>
+            <date>20110419</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2011131642</doc-number>
+            <kind>A1</kind>
+            <date>20111027</date>
+          </document-id>
+          <application-date>
+            <date>20110419</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention relates to a hydrogel precursor formulation, its process of production as well as a kit comprising said formulation and a method of production of a hydrogel using said formulation. The precursor formulation comprises at least one structural compound, preferably vinyl sulfone (acrylated branched) poly(ethylene glycol), and at least one linker compound, preferably a peptide with two cysteines, wherein said structural compound and said linker compound are polymerizable by a selective reaction between a nucleophile and a conjugated unsaturated bond or group. The precursor formulation is in the form of a powder.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150513</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247119A1</docdb-publication-number>
+      <docdb-application-id>444210139</docdb-application-id>
+      <new-owner>QGEL SA, SWITZERLAND</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:RIZZI, SIMONE;LUTOLF, MATTHIAS;REEL/FRAME:035627/0149</free-text-description>
+      <effective-date>
+        <date>20150427</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <p id="p-00001-en" num="0001">The present invention relates to a hydrogel precursor formulation, its process of production as well as a kit comprising said formulation and a method of production of a hydrogel using said formulation.</p>
+      <p id="p-00002-en" num="0002">Three dimensional cell culture scaffolds have been recognized to allow patterns of gene expression and other cellular activities that more closely mimic living organisms than the conventional two dimensional cell cultures in dishes.</p>
+      <p id="p-00003-en" num="0003">This has led to the development of novel families of synthetic polymer hydrogels, which are often termed artificial. ECMs (aECM), since they mimic many aspects of the extracellular matrix. One major challenge is to provide a chemistry which allows cross-linking of the matrix in the presence of cells or bio-molecules as well as stable tethering of biomolecules to the matrix itself.</p>
+      <p id="p-00004-en" num="0004">In recent years, different mechanisms were developed allowing the formation of gels in the presence of cells or biomolecules. For example, mechanisms based on the self-assembly of low molecular weight building blocks such as peptides (Estroff et al,; Water gelation by small organic molecules; Chem. Rev. 2004; 104(3); 1201-18) or ueidopyrmimidinone (Zhang S.: Fabrication of novel, biomaterials through molecular self-assembly; Nat. Biotechnol. 2003; 21(10); 1171-8) and moderate molecular weight amphiphilic block copolymers (e.g. see Hartgerink et al.: Peptide-amphiphile nanofibers: A versatile scaffold for the preparation of self-assembling materials; Proc. Nat. Acad. Sci. U.S.A. 2002; 99(8); 5133-8) were proposed.</p>
+      <p id="p-00005-en" num="0005">WO 00/454808 describes novel biomaterials, especially for the formation of hydrogels, having a cross-linking chemistry based on a Michael-type addition reaction between a nucleophile and a conjugated unsaturated bond or group, which allows the formation of the gel in the presence of ceils or biomolecules. Moreover, specific signal molecules may be integrated into the gel matrix by a specific reaction.</p>
+      <p id="p-00006-en" num="0006">One major drawback of this system is that it relies on manually mixing at least two precursor components together prior to gelation. In practice, the use of multiple component solutions may be a source of error due to unintentional variations of i) the re-suspension conditions of the different components in powder form, ii) the mixing ratios of the precursor solutions, thus leading to more complex use and reproducibility problems of the gel compositions. Additionally, the upscale of a manufacturing process of a gel system that requires the mixing of several solutions is more expensive than the upscale of a manufacturing process of a gel requiring a single.</p>
+      <p id="p-00007-en" num="0007">It is therefore an objective of the present invention to avoid the disadvantages of the known hydrogel formulations and specifically to provide a hydrogel precursor formulation which is easy in handling and which enables the production of hydrogels with highly reproducible compositions. This objective is solved with a hydrogel precursor according to claim <b>1</b>.</p>
+      <p id="p-00008-en" num="0008">The hydrogel precursor formulation according to the present invention comprises at least one structural compound and at least one linker compound. The structural and the linker compound are polymerizable by a selective reaction between a nucleophile and a conjugated unsaturated bond or group. The hydrogel precursor formulation is in the form of an unreacted powder.</p>
+      <p id="p-00009-en" num="0009">The formulation has the advantage that the powder may simply be re-suspended, preferably in a buffer, to start the gelling reaction. No mixing of different components is required, thus considerably reducing the probability of erroneous ratios between the at least one structural compound and the at least one linker compound. Thus, this increases the reproducibility of the hydrogels produced from these hydrogel precursors. Moreover, the hydrogel precursor of the present invention provides ease of use.</p>
+      <p id="p-00010-en" num="0010">The hydrogel precursor formulation of the present invention is in the form of a powder. The powder may comprise particles having any size and shape. Alternatively, the powder may also be provided as pressed tablet or pill. Host preferably, the powder is provided in the form of a stable compact cake, e.g. at the bottom of a container.</p>
+      <p id="p-00011-en" num="0011">The powder is unreacted, meaning that almost none of the at least, one structural compound has reacted with the at least one linker compound via the selective reaction. Preferably more than 70%, more preferably more than 85%, most preferably more than 95% of the compounds have not undergone the selective reaction.</p>
+      <p id="p-00012-en" num="0012">The selective reaction is a reaction between a nucleophile and a conjugated unsaturated bond or group by nucleophilic addition. Such reactions are also known as Michael-Type addition reactions.</p>
+      <p id="p-00013-en" num="0013">The structural compound has a functionality of at least three, but most preferably the structural compound has a functionality of four or more. By “functionality” the number of reactive sites on a molecule is meant.</p>
+      <p id="p-00014-en" num="0014">The structural compound is preferably selected from the group consisting of oligomers, polymers, biosynthetic or natural proteins or peptides end polysaccharides. Preferably, the structural compound is a polymer selected from the group consisting of poly(ethylene glycol), poly(ethylene oxide), poly(vinyl alcohol), poly(ethylene-co-vinyl alcohol), poly(acrylic acid), poly (ethylene-co-acrylic acid), poly(ethyloxazoline), poly(vinyl pyrrolidone), poly(ethylene-co-vinyl pyrrolidone), poly(maleic acid), poly(ethylene-co-maleic acid), poly(acrylamide), or poly(ethylene oxide)-co-poly(propylene oxide) block copolymers or mixtures thereof. More preferably, the structural compound is a poly(ethylene glycol), most preferably a branched poly(ethylene glycol) with three, four or more arms.</p>
+      <p id="p-00015-en" num="0015">The linker compound has a functionality of at least two and is selected from the group consisting of oligomers, polymers, biosynthetic or natural proteins or peptides and polysaccharides or mixtures thereof. Preferably, the linker compound is a peptide sequence, most, preferably containing an adhesion site, a growth factor binding site, or as protease binding site.</p>
+      <p id="p-00016-en" num="0016">The nucleophile preferably is a strong nucleophile, such as a thiol or a thiol containing group. The nucleophile could also he any other type of nucleophile known in the art, provided that it is strong enough to undergo the selective reaction, e.g. such as an amine. Further, the conjugated unsaturated group preferably is an acrylate, an acrylamide, a quinone or a vinylpyridinium. Most preferably, the unsaturated group is a vinyl sulfone.</p>
+      <p id="p-00017-en" num="0017">Additionally, the hydrogel precursor formulation of the present invention may comprise at least, one bioactive compound, preferably comprising an RGD peptide sequence, which is conjugatable with the structural compound through a selective reaction between a nucleophile and a conjugated unsaturated bond or group.</p>
+      <p id="p-00018-en" num="0018">The bioactive compound may comprise an adhesion site, such as the RGD sequence from fibronectin or the YISG sequence from laminin; a growth factor binding site, such as a heparin binding site; a protease binding site or a therapeutically active compound. Preferably, the bioactive compound comprises a cell adhesion site, most preferably an RGD sequence.</p>
+      <p id="p-00019-en" num="0019">The bioactive compound comprises at least one active group capable of undergoing the self selective reaction. More preferably, the bioactive compound comprises at least one nucleophilic group, most preferably a thiol group.</p>
+      <p id="p-00020-en" num="0020">The bioactive compound is conjugateable with the structural compound through a sell selective reaction between a nucleophile and a conjugated unsaturated bond or group. Most preferably, this self selective reaction is the same reaction as the self selective reaction between the structural compound and the linker compound, especially between the same type of nucleophile and conjugated unsaturated bond or group. Alternatively, the bioactive compound many be conjugated to the structural compound through a self selective reaction prior to the polymerization of the linker compound with the structural compound.</p>
+      <p id="p-00021-en" num="0021">The structural compound preferably is a multi-branched poly (ethylene glycol) (PEG) with functionalized end groups. More preferably, the end groups are functionalized with vinyl sulfone. Most preferably, the structural compound is PEG-tri(vinyl sulfone) or PEG-tetra (vinyl sulfone). Vinyl sulfone functionalization of the alcohol groups off PEG may be carried out with any suitable reaction known in the art. By using branched PEG with three, four or more arms it is possible to produce structural compounds with a functionality of three, four or more.</p>
+      <p id="p-00022-en" num="0022">Preferably, the linker comprises at least two nucleophilic groups, preferably thiol groups. Thiols are strong nucleophiles readily undergoing Michael-Type addition reactions with unsaturated bonds or groups at physiological pH. Moreover, thiols are commonly found in biological systems, so that their use poses no issue in view of toxicity.</p>
+      <p id="p-00023-en" num="0023">The linker compound preferably is a peptide comprising at least two cysteins, preferably located, near the N- and C-terminus of the peptide. Synthesizing peptides with two or more cysteine residues is straightforward. It is further possible to introduce specific protease sites in the peptide such as to produce degradable hydrogels, e.g. for in-vivo use. Further, by varying the amino acids neighbouring the cysteines, it is possible to change the pKa value of the thiol group.</p>
+      <p id="p-00024-en" num="0024">Preferably, the cysteins are located at the N- and C-terminus of the peptide, resulting in peptides with the structure if H<sub>2</sub>N CXXXXXXXXC-COOH (SEQ ID NO: 1), preferably with an acetylated N-terminus, Ac; and an amidated C-terminus, NH2; where C is the one letter representation of cysteine and X represents any amino acid except cysteine. The peptide may be of any length, than the number of X (X<sub>n</sub>) may be any number. Preferably, the peptide has a length of 16 amino acids. Alternatively, the cysteins might be located one or more amino acids away from, the N- or C-terminus, e.g. resulting in peptides with the general structure H<sub>2</sub>N-X<sub>m</sub>CX<sub>n</sub>CX<sub>p</sub>-COOH (SEQ ID NO: 2), where m, n and p may be any integer, including zero.</p>
+      <p id="p-00025-en" num="0025">Most preferably, the linker compound is a peptide with the sequence NH<sub>2</sub>-GCRE-XXXXXXXX-ERCG-COOH (SEQ ID NO: 3). The Glycine (G) serves as spacer, the Arginin (R) increases the reactivity of the thiol group of the neighbouring cysteine, and the glutamic acid (E) enhances the solubility of the peptide in aqueous solutions.</p>
+      <p id="p-00026-en" num="0026">Most preferably, the sequence of the linker compound is NH<sub>2</sub>-GCRE-GPQGIWGQERCG-COOH [SEQ ID NO: 4] or NH<sub>2</sub>-GCREGDQGIAGFERCG-COOH [SEQ ID NO: 5], again preferably with an acetylated N-terminus and an amidated C-terminus.</p>
+      <p id="p-00027-en" num="0027">Peptides for the linker and Proactive compounds should be synthesized and processed in acidic solvents, most preferably in solutions containing trifluoroacetate (TFA). Residual TFA bound to the peptide powder after peptide synthesis has the effect to lower the pH of a water suspension containing the respective peptide below 4.</p>
+      <p id="p-00028-en" num="0028">The structural compound and/or the linker compound are selected such that the reaction rate of the selective reaction between the structural compound and the linker compound is hindered or highly reduced in the mixing conditions. Preferably, the reaction rate is highly reduced at or below pH 4 compared to at or above pH 7.</p>
+      <p id="p-00029-en" num="0029">A selection of the compounds in this way allows to provide a precursor formulation which will readily undergo gelation reaction at physiological conditions, but which allows its preparation under conditions such that no or almost no selective reaction occurs.</p>
+      <p id="p-00030-en" num="0030">Preferably, the structural and/or the linker compound are selected such that the reaction rate of the self selective reaction is at least twice as fast at pH 7.5 compared to pH 7.0.</p>
+      <p id="p-00031-en" num="0031">Another objective of the present, invention is to provide a production process for a hydrogel precursor formulation. This problem is solved by a process as claimed in claim <b>8</b>.</p>
+      <p id="p-00032-en" num="0032">The process comprises the steps of: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>providing a first solution A comprising at least one structural compound;</li><li>providing a second solution B comprising at least one linker compound;</li><li>mixing of the solutions A and B; and</li><li>lyophilization of the resulting precursor solution</li></ul></li></ul></p>
+      <p id="p-00033-en" num="0037">The at least one structural compound and the at least one linker compound are polymerizable by a selective reaction between a nucleophile and a conjugated unsaturated bond or group. Both solutions A and B are mixed under conditions which hinder the selective reaction.</p>
+      <p id="p-00034-en" num="0038">This process allows the production of a hydrogel precursor formulation in form of a powder comprising both the structural compound as well as the linker compound. The mixing conditions have to be selected in such a way, that the self selective reaction is hindered. This means that the reaction rate is sufficiently low, that a very large fraction of the compounds of both solutions A and B do not react through the self selective reaction prior to lyophilization. Preferably, more than 70%, more preferably more than 85%, most preferably more than 90% of the molecules in both solutions have not undergone the selective reaction prior to the lyophilization step.</p>
+      <p id="p-00035-en" num="0039">The mixing conditions may be selected by adjustment of pH, concentration of the different compounds, process time, temperature or solvent condition. Most preferably, the mixing is carried out at or below pH 4. Especially when a thiol is used as nucleophile, a pH at or below 4 sufficiently hinders the self selective reaction. Mixing is preferably performed at room temperature.</p>
+      <p id="p-00036-en" num="0040">It is important that solution A is added to solution B, since the pH of solution A is around 7, whereas the pH of solution B is below 4. If solution B was added to solution A, the self selective polymerization reaction would start during the mixing step. When adding solution A to solution B, the pH of the resulting solution will always be below pH 4, therefore hindering the reaction.</p>
+      <p id="p-00037-en" num="0041">Solution A preferably comprises 5-10% w/v of the at least one structural compound. Most preferably, solution A comprises 7.5% w/v of the at least one structural compound.</p>
+      <p id="p-00038-en" num="0042">Further, solution B preferably comprises 0.1-2% w/v of the at least one linker compound. Most preferably, solution B comprises 1% w/v of the at least one linker compound. This concentration of the linker compound provides for good solubility of the compound in the solution.</p>
+      <p id="p-00039-en" num="0043">Using the concentrations of the structural and the linker compounds as mentioned above for both solutions A and B leads to the formation of a compact powder after the lyophilisation step. This compact powder will form a cake-like layer on the bottom of a container, which is favourable. Additionally, using these relatively low concentrations of both compounds during the production process additionally reduces the probability of unwanted pre-mature reactions between the structural and the linker compound. Further, material losses in subsequent production steps are reduced with these concentrations compared with higher concentrations.</p>
+      <p id="p-00040-en" num="0044">Further, solution A and/or solution B preferably are solutions of the at least one structural compound or the at least one linker compound, respectively, in distilled water. Thus, both compounds are present in an un-buffered solution. Due to the trifluoro acetic acid adhering to the peptide linker compound of solution B, the pH of this solution will be reduced. This leads to a pH which is preferably under 4 for the resulting mixture of solutions A and B. More preferably, the pH of the resulting solution is around 3.5.</p>
+      <p id="p-00041-en" num="0045">Alternatively, prior to mixing with solution B, solution A) may be mixed with an additional solution C comprising a biologically active compound which is dimerizable with the structural compound by a selective reaction between a nucleophile and a conjugated unsaturated bond or group. This bioactive compound may comprise an adhesion site, such as the RGD sequence from fibronectin or the YISG sequence from laminin; a growth factor binding site, such as a heparin binding site; a protease binding site or a therapeutically active compound. Preferably, the bio-active compound comprises a cell adhesion site, most preferably an RGD sequence.</p>
+      <p id="p-00042-en" num="0046">Preferably, solution C comprises 0.1 to 10% w/v of the biologically active compound. More preferably, solution C comprises between 0.1 and 5%, most preferably between 0.1 and 2% of the biologically active compound.</p>
+      <p id="p-00043-en" num="0047">Variation of the respective amounts of the structural, compound in solution A and the biologically active compound in the optional solution C as well as the concentration and nature (e.g. amino acid sequence) of the linker compound in solution B allows the production of hydrogel precursor formulations with different characteristics.</p>
+      <p id="p-00044-en" num="0048">Although the possibilities of variation of the concentration of the compounds in each of solution A and B are many, it is preferred that the concentration of the compounds is selected such that the molar ratio of the nucleophile to the conjugated unsaturated bond or group results in optimal physicochemical properties, like maximum shear modulus and minimal swelling characteristics of the final gels. Normally the optimal ratio of the nucleophile to the conjugated unsaturated bond or group is within the range of 0.8:1 to 1.3:1. This ensures the formation of a hydrogel where almost all active groups have undergone the selective reaction, so that side reactions of any of the reactive groups are considerably reduced.</p>
+      <p id="p-00045-en" num="0049">Further the precursor solution may be subjected to filtration prior to the lyophilization steps. The filtration preferably is a sterile filtration. Any undissolved compounds as well as bacterial contaminations may be removed from the mixture prior to the lyophilization step.</p>
+      <p id="p-00046-en" num="0050">Preferably, the pre-mixed precursor solution is aliquoted and filled into containers, preferably sterile containers, before the lyophilization step. This allows the production of single containers containing a defined amount of a hydrogel precursor formulation. The containers may be of any suitable material, such as plastic or glass. Preferably the containers are vials.</p>
+      <p id="p-00047-en" num="0051">The containers are preferably filled with sterile nitrogen gas and capped immediately after the lyophilization step. This protects the hydrogel precursor powder from contact with moisture and/or oxygen, which may lead to premature polymerization or oxidation of the nucleophiles.</p>
+      <p id="p-00048-en" num="0052">Another object of the present invention is the use of a hydrogel precursor formulation as described herein for the manufacture of a hydrogel.</p>
+      <p id="p-00049-en" num="0053">A further object of the present invention is to provide a simple so use system for the production of hydrogels with highly reproducible results. This problem is solved with a kit according to claim <b>20</b>.</p>
+      <p id="p-00050-en" num="0054">The kit of the present invention comprises at least, one container filled with a hydrogel precursor formulation as described herein and a container with a reaction buffer. The container contains preferably an amount of precursor formulation powder, which will result in a gel with predefined characteristics when re-suspended with a defined amount of reaction buffer.</p>
+      <p id="p-00051-en" num="0055">The reaction buffer preferably has a pH above 7. More preferably the reaction buffer has a pH between 7 and 6. The buffer preferably comprises HEPES, preferably ads 0.3 M concentration with the pH adjusted to a value between 7 and 8. This allows for a sufficiently fast polymerization reaction.</p>
+      <p id="p-00052-en" num="0056">A further object of the present invention is to provide an easy to use method to produce a hydrogel. This objective is achieved with a method according to claim <b>22</b>.</p>
+      <p id="p-00053-en" num="0057">The method of production of a hydrogel comprises the steps of: <ul id="ul-00003-en" list-style="none"><li><ul id="ul-00004-en" list-style="none"><li>Re-suspending a hydrogel precursor formulation as described herein in a buffer having pH 7, more preferably with a buffer having a pH between 7 and 8;</li><li>Optionally adding a cell culture suspension to the precursor suspension;</li><li>Casting of a gel precursor with the precursor suspension; and</li><li>Polymerization of the gel precursor for at least 30 minutes, preferably for 30 to 45 minutes, preferably in an incubator at 37° C.</li></ul></li></ul></p>
+      <p id="p-00054-en" num="0062">The hydrogel precursor formulation of the present invention is polymerisable under physiological conditions, which allows the addition of a cell culture to the precursor suspension so that the cells may be evenly distributed in the suspension prior to gelation. This would not readily be possible with any other precursor system.</p>
+    </summary>
+    <description-of-drawings>
+      <p id="p-00055-en" num="0063">Further details and benefits of the present invention will be apparent from the following figures and examples:</p>
+      <p id="p-00056-en" num="0064">
+        <figref>FIG. 1</figref>: Schematic representation of an embodiment of a manufacturing process of as hydrogel precursor formulation according to the present invention</p>
+      <p id="p-00057-en" num="0065">
+        <figref>FIG. 2</figref>: Schematic representation of a second embodiment of a manufacturing process of a hydrogel precursor formulation according to the present invention</p>
+      <p id="p-00058-en" num="0066">
+        <figref>FIG. 3</figref>: Schematic representation of a third embodiment of a manufacturing process of a hydrogel precursor formulation according to the present invention</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <p id="p-00059-en" num="0067">
+        <figref>FIG. 1</figref> shows a schematic representation of an embodiment of a manufacturing process of a hydrogel precursor formulation according to the present invention. Solution A comprising 7.5% w/v of branched PEG with 4 arms functionalized with vinyl sulfone is added to solution B comprising 1% w/v of a peptide sequence with two cysteines, one near the C- and the other near the N-terminus, in mixing step <b>1</b>.</p>
+      <p id="p-00060-en" num="0068">For example, 275 mL of solution A. comprising 7.5% w/v of functionalized PEG is added to 425 mL of solution B comprising 1% w/v of a linker peptide.</p>
+      <p id="p-00061-en" num="0069">Solutions A and B are prepared by suspending the respective compounds in distilled water. For solution B, the peptide linker compound is preferably added to the water in small portions. Mixing is carried out under continuous stirring with a magnetic stirrer at 400 PPM. The so obtained precursor solution <b>4</b> is subsequently subjected to a sterile filtration step <b>5</b>, e.g. using a Mini Kleenpak filter (PALL Corp.) with a PTFE membrane with an absolute rating of 0.2 μm, yielding the filtrated precursor solution <b>6</b>. This solution is then subjected to lyophilization step <b>7</b>, resulting in the hydrogel precursor formulation <b>8</b> in form of a powder. The resulting powder is in the form of a stable compact cake.</p>
+      <p id="p-00062-en" num="0070">Lyophylization step <b>7</b> may be carried out by first freezing the solution a shelf at −50° C. for 150 min, followed by a first drying step at −10° C. for 570 min at a pressure of 0.26 mbar. A second drying step follows at a temperature of 20° C. for 180 min at a pressure of 0.02 mbar.</p>
+      <p id="p-00063-en" num="0071">On <figref>FIG. 2</figref> a second embodiment of a manufacturing process of a hydrogel precursor formulation according to the present invention is schematically represented. In this embodiment Solution A comprising 7.5% w/v of a branched PEG with 4 arms functionalized with vinyl sulfone is mixed with Solution C comprising 2% w/v of a peptide comprising an RGD sequence m mixing step <b>2</b>.</p>
+      <p id="p-00064-en" num="0072">For example, 275 mL of Solution A comprising 7.5% w/v of a functionalized four branched PEG is mixed with 5 mL of Solution C comprising 2% w/v of a bioactive compound. This solution is then subsequently mixed with solution B comprising 1% w/v of a peptide linker comprising two systems, one near the C- and the other near the N-terminus, in mixing step <b>1</b>.</p>
+      <p id="p-00065-en" num="0073">The so obtained precursor solution <b>4</b> is subsequently subjected, to a sterile filtration step <b>5</b>, yielding the filtrated precursor solution <b>6</b>. This solution is then subjected to lyophilization step <b>7</b>, resulting in the hydrogel precursor formulation <b>8</b> in form of a powder.</p>
+      <p id="p-00066-en" num="0074">
+        <figref>FIG. 3</figref> shows a third embodiment of a manufacturing process of a hydrogel precursor formulation according to the present invention. Solution A comprising 7.5% w/v of branched PEG with 4 arms functionalized with vinyl sulfone is mixed with Solution B comprising 1% w/v of a linker peptide sequence with a cysteine near the C- and N-terminus, in mixing step <b>1</b>. Solutions A and B are prepared by suspending the respective compounds in distilled water. The mixing is carried cut under continuous stirring with a magnetic stirrer, preferably at 400 RPM. The so obtained precursor solution <b>4</b> is subsequently subjected to a sterile filtration step <b>5</b>, yielding the filtrated precursor solution <b>6</b>. This solution is often aliquoted into containers in aliqoting step <b>9</b>. Each container may contain only a small amount, preferably 0.3-0.4 mL. The containers are scalable and are preferably made of glass. The aliquoted precursor solution <b>10</b> is the lyophilized in lyophilization step <b>7</b> to yield the precursor formulation powder <b>8</b>.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>-<b>22</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>23</b>. A process for the production of a hydrogel precursor formulation in form of a powder comprising the steps of:
+<claim-text>providing a first solution A of at least one structural compound;</claim-text><claim-text>providing a second solution B comprising at least one linker compound;</claim-text><claim-text>mixing of the solutions A and B; and</claim-text><claim-text>lyophilization of the resulting precursor solution</claim-text><claim-text>wherein the at least one structural compound and the at least one linker compound are polymerizable by a selective reaction between a nucleophile and a conjugated unsaturated bond or group, wherein the solutions A and B are mixed under conditions which hinder the selective reaction.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>24</b>. The process as claimed in <claim-ref idref="clm-00002-en">claim 23</claim-ref>, wherein the solutions are mixed at or below pH 4.0, preferably at pH 3.5.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>25</b>. The process as claimed in <claim-ref idref="clm-00002-en">claim 23</claim-ref>, wherein solution A comprises 5-10% w/v of the at least one structural compound, preferably 7.5% w/v.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>26</b>. The process as claimed in <claim-ref idref="clm-00002-en">claim 23</claim-ref>, wherein solution B comprises 0.1-2% w/v of the at least one linker compound, preferably 1% w/v,</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>27</b>. The process as claimed in <claim-ref idref="clm-00002-en">claim 23</claim-ref>, wherein a solution C comprising at least one biologically active compound which is dimerizable with the structural compound by a selective reaction between a nucleophile and a conjugated unsaturated bond or group is added to solution A prior to the mixing of the solutions A and B.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>28</b>. The process as claimed in <claim-ref idref="clm-00006-en">claim 27</claim-ref>, wherein solution C comprises 0.1-10% w/v of the at least one active compound, preferably 2%.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>29</b>. The process as claimed in <claim-ref idref="clm-00002-en">claim 23</claim-ref>, wherein solution A, solution B and/or solution C are a solution of the at least one structural compound, the at least one linker compound or the at least one biologically active compound in distilled water.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>30</b>. The process as claimed in <claim-ref idref="clm-00002-en">claim 23</claim-ref>, wherein the concentration of the compounds is selected such that the molar ratio of the nucleophile to the conjugated unsaturated bond or group is in the range of 0.8:1 to 1.3:1.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>31</b>. The process as claimed in <claim-ref idref="clm-00002-en">claim 23</claim-ref>, wherein the precursor solution is subjected to filtration prior to the lyophilization step, preferably to sterile filtration.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>32</b>. The process as claimed in <claim-ref idref="clm-00002-en">claim 23</claim-ref>, wherein the precursor solution is aliquoted and filled into containers, preferably under sterile conditions before the lyophilization step.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>33</b>. The process as claimed in <claim-ref idref="clm-00011-en">claim 32</claim-ref>, wherein the containers are filled with sterile nitrogen gas and capped immediately after the lyophilization step.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>34</b>. A kit of parts comprising at least one container filled with a hydrogel precursor formulation comprising at least one structural compound and at least one linker compound, wherein said structural compound and said linker compound are polymerizable by a selective reaction between a nucleophile and a conjugated unsaturated bond or group, wherein the hydrogel precursor formulation is in the form of an unreacted powder, and a container with a reaction buffer.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>35</b>. The kit of parts as claimed in <claim-ref idref="clm-00013-en">claim 34</claim-ref>, wherein the reaction buffer has a pH of at least 7, preferably the reaction buffer has a pH between 7 and 8.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>36</b>. A method of production of a hydrogel comprising the steps of:
+<claim-text>re-suspending a hydrogel precursor formulation comprising at least one structural compound and at least one linker compound, wherein said structural compound and said linker compound are polymerizable by a selective reaction between a nucleophile and a conjugated unsaturated bond or group, wherein the hydrogel precursor formulation is in the form of an unreacted powder in a buffer having at least pH 7;</claim-text><claim-text>optionally adding a cell culture suspension to the precursor suspension;</claim-text><claim-text>casting of at least one gel with the precursor suspension; and</claim-text><claim-text>polymerization of the at least one gel precursor for at least 30 minutes, preferably in an incubator at 37° C.</claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247119A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247119A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247119A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247119A1-20150903-D00002.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150247119A1.PDF" type="pdf" size="785359" pages="11" />
+</lexisnexis-patent-document>

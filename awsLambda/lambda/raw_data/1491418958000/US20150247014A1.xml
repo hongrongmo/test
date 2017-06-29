@@ -1,0 +1,1809 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247014A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021443" date-changed="20150914" time-changed="041856">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140054">
+        <country>US</country>
+        <doc-number>20150247014</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14429847</doc-number>
+        <date>20130315</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C08J   5/18        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>5</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C08J   5/18        20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>5</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C08J2323/06        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>2323</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C08J2423/08        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>2423</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C08J2451/06        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>J</subclass>
+        <main-group>2451</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C08L  23/0807      20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>23</main-group>
+        <subgroup>0807</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C08L  51/00        20130101 LI20130716BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>51</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130716</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C08L  77/00        20130101 LA20130716BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>77</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20130716</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C08L  77/02        20130101 LA20140311BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>77</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20140311</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">15</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">FUNCTIONALIZED POLYMER COMPOSITIONS AND FILMS FORMED FROM THE SAME</invention-title>
+    <related-documents date-changed="20150903">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61722274</doc-number>
+          <date>20121105</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>DOW GLOBAL TECHNOLOGIES LLC</orgname>
+            <address>
+              <city>Midland</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Oner-Deliormanli</last-name>
+            <first-name>Didem</first-name>
+            <address>
+              <city>Bellaire</city>
+              <state>TX</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Walther</last-name>
+            <first-name>Brian W.</first-name>
+            <address>
+              <city>Clute</city>
+              <state>TX</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Patel</last-name>
+            <first-name>Rajen M.</first-name>
+            <address>
+              <city>Freeport</city>
+              <state>TX</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Bunker</last-name>
+            <first-name>Gregory</first-name>
+            <address>
+              <city>Midland</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Garnett, IV</last-name>
+            <first-name>John W.</first-name>
+            <address>
+              <city>Omaha</city>
+              <state>NE</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>US13032459</doc-number>
+        <date>20130315</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014070237</doc-number>
+        <date>20140508</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173463110">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247014</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130315</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173463109">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247014</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130315</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The invention provides a composition comprising at least the following: A) an anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer having the following properties: i) a melt viscosity (177° C.) less than, or equal to, 200,000 cP, ii) a density from 0.855 to 0.900 g/cc; B) an ethylene-based polymer; and C) a polar polymer.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application claims the benefit of U.S. Provisional Application No. 61/722,274, filed on Nov. 5, 2012.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">Compatibilization of polar polymers, such as polyamide and/or EVOH, with nonpolar polymers such as polyethylene and/or polypropylene is commonly achieved by maleic anhydride grafted polymers. Polymer compositions containing functionalized polymers are described in the following references: U.S. Pat. No. 6,075,091, US 20060199914, WO 1994/025526, WO 2007/146875, and WO2011/163176. See also, A. Mendez-Prieto et al., Multilayer Structure Using Reprocessed Coextruded LLDPE/TIE/PA-6 Films, <i>Journal of Polymer Engineering</i>, Vol. 18, No. 3, 1998, 221-234; M. M. Nir et al., Performance of Reprocessed Multilayer LDPE/Nylon-6 Film, Polymer Engineering and Sciences, 1995, Vol. 35, No. 23, 1878-1883.</p>
+      <p id="p-00003-en" num="0003">Traditional maleic anhydride functionalized olefin-based polymers, containing high maleic anhydride content, have been used as compatibilizers between polyolefin and EVOH and/or polyamide, in multicomponent compositions, where the maleic anhydride functionalized polyolefin compatibilizes olefin-based polymers and EVOH and/or polyamide. However, in multicomponent compositions, where the interfacial surface areas are higher, the traditional maleic anhydride functionalized polyolefins can react and form a crosslinked interphase with the polar polymer. Articles such as films, sheets produced from such compositions typically have poor optical and mechanical properties. There is a need for new polymer compositions that will effectively compatibilize polyolefin/polyamide, polyolefin/EVOH, or, polyolefin/polyamide/EVOH systems, without resulting in crosslinked interphases, and which can be used to form films, or sheets with improved optical and mechanical properties. These needs have been met by the following invention.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00004-en" num="0004">The invention provides a composition comprising at least the following:</p>
+      <p id="p-00005-en" num="0005">A) an anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer having the following properties: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>i) a melt viscosity (177° C.) less than, or equal to, 200,000 cP,</li><li>ii) a density from 0.855 to 0.930 g/cc;</li></ul></li></ul></p>
+      <p id="p-00006-en" num="0008">B) an ethylene-based polymer; and</p>
+      <p id="p-00007-en" num="0009">C) a polar polymer.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00008-en" num="0010">
+        <figref>FIG. 1</figref> shows TEM images of films formed from Comparative Ex. A (left), Comparative Ex. B (center) and Inventive Ex. 1 (right).</p>
+      <p id="p-00009-en" num="0011">
+        <figref>FIG. 2</figref> shows optical microscopy images of films formed from Comparative Ex. A (left), Comparative Ex. B (center) and Inventive Ex. 1 (right).</p>
+      <p id="p-00010-en" num="0012">
+        <figref>FIG. 3</figref> is a spider diagram depicting optical properties of films formed from Comparative Ex.A, Comparative Ex.B, Inventive Ex.1 and Inventive Ex.2.</p>
+      <p id="p-00011-en" num="0013">
+        <figref>FIG. 4</figref> shows TEM images of films formed from Comparative Ex. E (left top), Comparative Ex. F (right top) and Inventive Ex. 4 (center bottom).</p>
+      <p id="p-00012-en" num="0014">
+        <figref>FIG. 5</figref> is a spider diagram depicting optical properties of films formed from Comparative Ex. E, Comparative Ex. F and Inventive Ex. 4.</p>
+      <p id="p-00013-en" num="0015">
+        <figref>FIG. 6</figref> is a spider diagram depicting mechanical properties of films formed from Comparative Ex. E, Comparative Ex. F and Inventive Ex. 4.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00014-en" num="0016">It has been surprisingly discovered that the inventive compositions can be used to form articles with well dispersed, small and discrete particles of polar polymers into a nonpolar polymer matrix. These articles have excellent physical properties, and excellent optical properties.</p>
+      <p id="p-00015-en" num="0017">As discussed above, the invention provides a composition, which comprises at least the following:</p>
+      <p id="p-00016-en" num="0018">A) an anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer having the following properties: <ul id="ul-00003-en" list-style="none"><li><ul id="ul-00004-en" list-style="none"><li>i) a melt viscosity (177° C.) less than, or equal to, 200,000 cP,</li><li>ii) a density from 0.855 to 0.930 g/cc;</li></ul></li></ul></p>
+      <p id="p-00017-en" num="0021">B) an ethylene-based polymer; and</p>
+      <p id="p-00018-en" num="0022">C) a polar polymer.</p>
+      <p id="p-00019-en" num="0023">An inventive composition may comprise a combination of two or more embodiments as described herein.</p>
+      <p id="p-00020-en" num="0024">The anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer (component A) may comprise a combination of two or more embodiments as described herein.</p>
+      <p id="p-00021-en" num="0025">The ethylene-based polymer (component B) may comprise a combination of two or more embodiments as described herein.</p>
+      <p id="p-00022-en" num="0026">The polar polymer (component C) may comprise a combination of two or more embodiments as described herein.</p>
+      <p id="p-00023-en" num="0027">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer has i) a melt viscosity (177° C.) less than, or equal to, 70,000 cP.</p>
+      <p id="p-00024-en" num="0028">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer has i) a melt viscosity (177° C.) less than, or equal to, 50,000 cP.</p>
+      <p id="p-00025-en" num="0029">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer has i) a melt viscosity (177° C.) less than, or equal to, 30,000 cP.</p>
+      <p id="p-00026-en" num="0030">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer has i) a melt viscosity (177° C.) less than, or equal to, 20,000 cP.</p>
+      <p id="p-00027-en" num="0031">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer has i) a melt viscosity (177° C.) greater than, or equal to, 2,000 cP, further greater than, or equal to, 3,000 cP, and further greater than, or equal to, 5,000 cP.</p>
+      <p id="p-00028-en" num="0032">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer has i) a melt viscosity (177° C.) from 5,000 cP to 200,000 cP.</p>
+      <p id="p-00029-en" num="0033">In one embodiment, the polar polymer (component C) is selected from an ethylene vinyl alcohol polymer, a polyamide, a polyester, a polyester glycol, or combinations thereof.</p>
+      <p id="p-00030-en" num="0034">In one embodiment, the polar polymer is selected from ethylene/vinyl alcohol polymer, polyamide, polyethylene terephthalate, polyethylene terephthalate glycol, or combinations thereof.</p>
+      <p id="p-00031-en" num="0035">In one embodiment, the polar polymer (component C) is selected from an ethylene vinyl alcohol polymer, a polyamide, or a combination thereof.</p>
+      <p id="p-00032-en" num="0036">In one embodiment, the polar polymer (component C) has a melt index (I2) from 0.1 to 20 g/10 min, further from 0.2 to 10 g/10 min, and further from 0.5 to 5 g/10 min.</p>
+      <p id="p-00033-en" num="0037">In one embodiment, the polar polymer (component C) has a density from 1.00 to 1.30 g/cc, further from 1.10 to 1.20 g/cc (1 cc=1 cm<sup>3</sup>).</p>
+      <p id="p-00034-en" num="0038">In one embodiment, the polar polymer (component C) is not subject to a drying process to remove absorbed moisture prior to use.</p>
+      <p id="p-00035-en" num="0039">The polar polymer (component C) may comprise a combination of two or more embodiments as described herein.</p>
+      <p id="p-00036-en" num="0040">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer (component A) has a MWD (Mw/Mn) from 1.5 to 3.5, further from 2.0 to 3.0.</p>
+      <p id="p-00037-en" num="0041">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer has a density from 0.855 g/cm<sup>3 </sup>to 0.930 g/cm<sup>3</sup>.</p>
+      <p id="p-00038-en" num="0042">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer has a density from 0.860 g/cm<sup>3 </sup>to 0.900 g/cm<sup>3</sup>, further from 0.865 g/cm<sup>3 </sup>to 0.890 g/cm<sup>3</sup>, further from 0.865 g/cm<sup>3 </sup>to 0.880 g/cm<sup>3</sup>.</p>
+      <p id="p-00039-en" num="0043">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer has a weight average molecular weight (Mw) from 4,000 to 30,000 g/mole.</p>
+      <p id="p-00040-en" num="0044">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer is an anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin copolymer.</p>
+      <p id="p-00041-en" num="0045">The anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer (component A) may comprise a combination of two or more embodiments as described herein.</p>
+      <p id="p-00042-en" num="0046">In one embodiment, the ethylene-based polymer (component B) has a melt index (I2) from 0.5 to 50 g/10 min.</p>
+      <p id="p-00043-en" num="0047">In one embodiment, the ethylene-based polymer (component B) has a density from 0.860 to 0.960 g/cc, further from 0.880 to 0.940 g/cc, further from 0.900 to 0.930 g/cc (1 cc=1 cm<sup>3</sup>).</p>
+      <p id="p-00044-en" num="0048">In one embodiment, the ethylene-based polymer (component B) has a density from greater than, or equal to, 0.920 g/cc.</p>
+      <p id="p-00045-en" num="0049">In one embodiment, the ethylene-based polymer (component B) has a density from 0.920 to 0.940 g/cc.</p>
+      <p id="p-00046-en" num="0050">The ethylene-based polymer (component B) may comprise a combination of two or more embodiments as described herein.</p>
+      <p id="p-00047-en" num="0051">In one embodiment, component A is present in an amount from 0.5 to 30 weight percent, further from 1 to 25 weight percent, further from 2 to 20 weight percent, based on the weight of the composition.</p>
+      <p id="p-00048-en" num="0052">In one embodiment, component C is present in an amount from 1 to 30 weight percent, further from 3 to 25 weight percent, further from 5 to 20 weight percent, based on the weight of the composition.</p>
+      <p id="p-00049-en" num="0053">In one embodiment, the composition further comprises an anhydride and/or carboxylic acid functionalized olefin-based polymer.</p>
+      <p id="p-00050-en" num="0054">In one embodiment, the composition further comprises an anhydride and/or carboxylic acid functionalized ethylene-based polymer, further an anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer, and further an anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin copolymer.</p>
+      <p id="p-00051-en" num="0055">In one embodiment, the composition further comprises an anhydride and/or carboxylic acid functionalized propylene-based polymer, further an anhydride and/or carboxylic acid functionalized propylene/alpha-olefin interpolymer or propylene/ethylene interpolymer, and further an anhydride and/or carboxylic acid functionalized propylene/alpha-olefin copolymer or propylene/ethylene copolymer.</p>
+      <p id="p-00052-en" num="0056">In one embodiment, the composition does not comprise a crosslinking agent.</p>
+      <p id="p-00053-en" num="0057">In one embodiment, the composition comprises less than 0.1 weight percent, further less than 0.01 weight percent, further less than 0.001 weight percent, of a crosslinking agent.</p>
+      <p id="p-00054-en" num="0058">In a preferred embodiment, the composition is not crosslinked.</p>
+      <p id="p-00055-en" num="0059">The invention also provides an article comprising at least one component formed from an inventive composition of any of any embodiment described herein.</p>
+      <p id="p-00056-en" num="0060">The invention also provides a film comprising at least one component formed from an inventive composition of any embodiment described herein.</p>
+      <p id="p-00057-en" num="0061">In one embodiment, the film further comprises at least one layer formed from a composition comprising a polar polymer. In a further embodiment, the composition comprises greater than, or equal to, 50 weight percent, further greater than, or equal to, 80 weight percent, further greater than, or equal to, 95 weight percent, of the polar polymer. In one embodiment, the polar polymer is selected from an ethylene vinyl alcohol polymer, a polyamide, a polyester, a polyester glycol, or combinations thereof.</p>
+      <p id="p-00058-en" num="0062">In one embodiment, the film further comprises at least one layer formed from a composition comprising an olefin-based polymer. In a further embodiment, the composition comprises greater than, or equal to, 50 weight percent, further greater than, or equal to, 80 weight percent, further greater than, or equal to, 95 weight percent of the polar polymer. In one embodiment, the olefin-based polymer is selected from an ethylene-based polymer, a propylene-based polymer, or combinations thereof.</p>
+      <p id="p-00059-en" num="0063">In a preferred embodiment, the film is not crosslinked.</p>
+      <p id="p-00060-en" num="0064">In one embodiment, the film further comprises at least one layer formed from a composition comprising a polar polymer. In a further embodiment, the film further comprises at least one layer formed from a composition comprising an olefin-based polymer.</p>
+      <p id="p-00061-en" num="0065">In one embodiment, the olefin-based polymer is selected from an ethylene-based polymer, a propylene-based polymer, or combinations thereof.</p>
+      <p id="p-00062-en" num="0066">An inventive film may comprise a combination of two or more embodiments as described herein.</p>
+      <p id="p-00063-en" num="0067">The invention also provides a method of making a film, said method comprising extruding an inventive composition of any embodiment described herein. Those skilled in art would know to control the level of moisture in the components A-C before compounding.</p>
+      <p id="p-00064-en" num="0068">In one embodiment, the polar polymer (component C) is not subject to a drying process to remove absorbed moisture prior to use.</p>
+      <p id="p-00065-en" num="0069">An inventive method may comprise a combination of two or more embodiments as described herein.</p>
+      <p id="p-00066-en" num="0070">An inventive composition may comprise a combination of two or more embodiments as described herein.</p>
+      <p id="p-00067-en" num="0071">An inventive article may comprise a combination of two or more embodiments as described herein.</p>
+      <p id="p-00068-en" num="0000">Component A (Anhydride and/or Carboxylic Acid Functionalized Ethylene/Alpha-Olefin Interpolymer)</p>
+      <p id="p-00069-en" num="0072">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer is an anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin copolymer. Preferred α-olefins include, but are not limited to, C3-C20 α-olefins, and preferably C3-C10 α-olefins. More preferred α-olefins include propylene, 1-butene, 1-pentene, 1-hexene, 1-heptene and 1-octene, and more preferably include propylene, 1-butene, 1-hexene and 1-octene.</p>
+      <p id="p-00070-en" num="0073">In one embodiment, component A is an anhydride and carboxylic acid functionalized ethylene/alpha-olefin interpolymer, and further an anhydride and carboxylic acid functionalized ethylene/alpha-olefin copolymer. An example of such a functionalized copolymer includes AFFINITY GA 1000R Polyolefin Plastomer, available from The Dow Chemical Company.</p>
+      <p id="p-00071-en" num="0074">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer of Component A comprises greater than, or equal to, 0.5 weight percent, further greater than, or equal to, 0.8 weight percent, further greater than, or equal to, 0.9 weight percent, and further greater than, or equal to, 1.0 weight percent of the anhydride and/or carboxylic acid functionality, based on the weight of the polymer. In a further embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer is an anhydride and/or carboxylic acid functionalized ethylene/α-olefin copolymer.</p>
+      <p id="p-00072-en" num="0075">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer of Component A comprises from 0.6 to 1.9 weight percent, further from 0.8 to 1.7 weight percent, further from 0.9 to 1.5 weight percent of the anhydride and/or carboxylic acid functionality, based on the weight of the polymer.</p>
+      <p id="p-00073-en" num="0076">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer of Component A has a melt viscosity less than, or equal to, 40,000 cP, further less than, or equal to, 30,000 cP, further less than, or equal to, 20,000 cP, and further less than, or equal to, 15,000 cP, at 350° F. (177° C.). In a further embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer is an anhydride and/or carboxylic acid functionalized ethylene/α-olefin copolymer.</p>
+      <p id="p-00074-en" num="0077">In one embodiment, anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer of Component A has a melt viscosity greater than, or equal to, 2,000 cP, further greater than, or equal to, 3,000 cP, further greater than, or equal to, 4,000 cP, and further greater than, or equal to, 5,000 cP, at 350° F. (177° C.). In a further embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer is an anhydride and/or carboxylic acid functionalized ethylene/α-olefin copolymer.</p>
+      <p id="p-00075-en" num="0078">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer has a melt viscosity from 2,000 cP to 50,000 cP, further from 3,000 cP to 40,000 cP, further from 4,000 cP to 30,000 cP, at 350° F. (177° C.), and further from 5,000 cP to 20,000 cP, at 350° F. (177° C.). In a further embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer is an anhydride and/or carboxylic acid functionalized ethylene/α-olefin copolymer.</p>
+      <p id="p-00076-en" num="0079">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer has a molecular weight distribution (Mw/Mn) less than, or equal to, 5.0, further less than, or equal to, 4.0, further less than, or equal to, 3.0, further less than, or equal to, 2.8, and further less than, or equal to, 2.5. In a further embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer is an anhydride and/or carboxylic acid functionalized ethylene/α-olefin copolymer.</p>
+      <p id="p-00077-en" num="0080">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer has a molecular weight distribution (Mw/Mn) greater than, or equal to, 1.1, further greater than, or equal to, 1.3, further greater than, or equal to, 1.5, and further greater than, or equal to, 2.0. In a further embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer is an anhydride and/or carboxylic acid functionalized ethylene/α-olefin copolymer.</p>
+      <p id="p-00078-en" num="0081">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer has a weight average molecular weight (Mw) less than, or equal to, 50,000 g/mole, further less than, or equal to, 40,000 g/mole, further less than, or equal to, 30,000 g/mole. In a further embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer is an anhydride and/or carboxylic acid functionalized ethylene/α-olefin copolymer.</p>
+      <p id="p-00079-en" num="0082">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer has a weight average molecular weight (Mw) greater than, or equal to, 2000 g/mole, further greater than, or equal to, 3000 g/mole, further greater than, or equal to, 4000 g/mole. In a further embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer is an anhydride and/or carboxylic acid functionalized ethylene/α-olefin copolymer.</p>
+      <p id="p-00080-en" num="0083">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer has a melt index (I2), or calculated melt index (I2), greater than, or equal to, 300 g/10 min, further greater than, or equal to, 400 g/10 min, and more further greater than, or equal to, 500 g/10 min. In a further embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer is an anhydride and/or carboxylic acid functionalized ethylene/α-olefin copolymer.</p>
+      <p id="p-00081-en" num="0084">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer has a melt index (I2), or calculated melt index (I2), less than, or equal to, 1500 g/10 min, further less than, or equal to, 1200 g/10 min, and more further less than, or equal to, 1000 g/10 min. In a further embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer is an anhydride and/or carboxylic acid functionalized ethylene/α-olefin copolymer.</p>
+      <p id="p-00082-en" num="0085">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer has a percent crystallinity of less than, or equal to, 40 percent, further less than, or equal to, 30 percent, further less than, or equal to, 25 percent, and further less than, or equal to, 20 percent, as determined by DSC. In a further embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer is an anhydride and/or carboxylic acid functionalized ethylene/α-olefin copolymer.</p>
+      <p id="p-00083-en" num="0086">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer has a percent crystallinity of greater than, or equal to, 2 percent, further greater than, or equal to, 5 percent, further greater than, or equal to, 10 percent, and further greater than, or equal to, 15 percent, as determined by DSC. In a further embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer is an anhydride and/or carboxylic acid functionalized ethylene/α-olefin copolymer.</p>
+      <p id="p-00084-en" num="0087">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer has a density greater than, or equal to, 0.850 g/cc, further greater than, or equal to, 0.855 g/cc, add further greater than, or equal to, 0.860 g/cc. In a further embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer is an anhydride and/or carboxylic acid functionalized ethylene/α-olefin copolymer.</p>
+      <p id="p-00085-en" num="0088">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer has a density less than, or equal to, 0.900 g/cc, further less than, or equal to, 0.895 g/cc, and further less than, or equal to, 0.890 g/cc. In a further embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer is an anhydride and/or carboxylic acid functionalized ethylene/α-olefin copolymer.</p>
+      <p id="p-00086-en" num="0089">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer has a density less than, or equal to, 0.885 g/cc, further less than, or equal to, 0.880 g/cc, and further less than, or equal to, 0.875 g/cc. In a further embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer is an anhydride and/or carboxylic acid functionalized ethylene/α-olefin copolymer.</p>
+      <p id="p-00087-en" num="0090">In one embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer has a density from 0.855 g/cm<sup>3 </sup>to 0.900 g/cm<sup>3</sup>, further from 0.860 g/cm<sup>3 </sup>to 0.895 g/cm<sup>3</sup>, further from 0.865 g/cm<sup>3 </sup>to 0.890 g/cm<sup>3</sup>, and further from 0.865 g/cm<sup>3 </sup>to 0.880 g/cm<sup>3</sup>. In a further embodiment, the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer is an anhydride and/or carboxylic acid functionalized ethylene/α-olefin copolymer.</p>
+      <p id="p-00088-en" num="0091">In one embodiment, the composition comprises from 2 to 30 weight percent, and further from 5 to 20 weight percent of component A, based on the weight of the composition.</p>
+      <p id="p-00089-en" num="0092">An anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer may comprise a combination of two or more embodiments as described herein.</p>
+      <p id="p-00090-en" num="0093">An anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin copolymer may comprise a combination of two or more embodiments as described herein.</p>
+      <heading id="h-00006-en" level="2">Ethylene/α-Olefin Interpolymers (Based Polymers for Component A)</heading>
+      <p id="p-00091-en" num="0094">The base polymer used to form the anhydride and/or carboxylic acid functionalized ethylene/α-olefin interpolymer is an ethylene/α-olefin interpolymer.</p>
+      <p id="p-00092-en" num="0095">In one embodiment, the ethylene/α-olefin interpolymer, is an ethylene/α-olefin copolymer. Preferred α-olefins include, but are not limited to, C3-C20 α-olefins, and further C3-C10 α-olefins. More preferred α-olefins include propylene, 1-butene, 1-pentene, 1-hexene, 1-heptene and 1-octene, and more further include propylene, 1-butene, 1-hexene and 1-octene.</p>
+      <p id="p-00093-en" num="0096">In one embodiment, the ethylene/α-olefin interpolymer has a melt viscosity less than, or equal to, 50,000 cP, further less than, or equal to, 40,000 cP, and further less than, or equal to, 30,000 cP, at 350° F. (177° C.). In a further embodiment, the ethylene/α-olefin interpolymer is an ethylene/α-olefin copolymer.</p>
+      <p id="p-00094-en" num="0097">In one embodiment, ethylene/α-olefin interpolymer has a melt viscosity greater than, or equal to, 2,000 cP, further greater than, or equal to, 4,000 cP, further greater than, or equal to, 5,000 cP, at 350° F. (177° C.). In a further embodiment, the ethylene/α-olefin interpolymer is an ethylene/α-olefin copolymer.</p>
+      <p id="p-00095-en" num="0098">In one embodiment, the ethylene/α-olefin interpolymer has a melt viscosity from 2,000 cP to 20,000 cP, further from 4,000 cP to 16,000 cP, and further from 5,000 cP to 10,000 cP, at 350° F. (177° C.). In a further embodiment, the ethylene/α-olefin interpolymer is an ethylene/α-olefin copolymer.</p>
+      <p id="p-00096-en" num="0099">In one embodiment, the ethylene/α-olefin interpolymer has a molecular weight distribution (Mw/Mn) less than, or equal to, 5.0, and further less than, or equal to, 4.0, and further less than, or equal to, 3.0. In a further embodiment, the ethylene/α-olefin interpolymer is an ethylene/α-olefin copolymer.</p>
+      <p id="p-00097-en" num="0100">In one embodiment, the ethylene/α-olefin interpolymer has a molecular weight distribution (Mw/Mn) greater than, or equal to, 1.0, and further greater than, or equal to, 1.5, and further greater than, or equal to, 2.0. In a further embodiment, the ethylene/α-olefin interpolymer is an ethylene/α-olefin copolymer.</p>
+      <p id="p-00098-en" num="0101">In one embodiment, the ethylene/α-olefin interpolymers have a molecular weight distribution from 1.1 to 3.5, further from 1.1 to 3, and further from 1.1 to 2.5. In a further embodiment, the ethylene/α-olefin interpolymer is an ethylene/α-olefin copolymer.</p>
+      <p id="p-00099-en" num="0102">In one embodiment, the ethylene/α-olefin interpolymer has a melt index (I2 or MI), or calculated melt index (I2), greater than, or equal to, 500 g/10 min, further greater than, or equal to, 800 g/10 min, and further greater than, or equal to, 1000 g/10 min. In a further embodiment, the ethylene/α-olefin interpolymer is an ethylene/α-olefin copolymer.</p>
+      <p id="p-00100-en" num="0103">In one embodiment, the ethylene/α-olefin interpolymer has a percent crystallinity of less than, or equal to, 40 percent, further less than, or equal to, 30 percent, further less than, or equal to, 25 percent, and further less than, or equal to, 20 percent, as determined by DSC.</p>
+      <p id="p-00101-en" num="0104">In a further embodiment, the ethylene/α-olefin interpolymer is an ethylene/α-olefin copolymer.</p>
+      <p id="p-00102-en" num="0105">In one embodiment, the ethylene/α-olefin interpolymer has a percent crystallinity of greater than, or equal to, 2 percent, further greater than, or equal to, 5 percent, further greater than, or equal to, 10 percent, and further greater than, or equal to, 15 percent, as determined by DSC. In a further embodiment, the ethylene/α-olefin interpolymer is an ethylene/α-olefin copolymer.</p>
+      <p id="p-00103-en" num="0106">In one embodiment, the ethylene/α-olefin interpolymer has a percent crystallinity from 2 to 30 percent, further from 5 to 25 percent, and further from 10 to 20 percent, as determined by DSC. In a further embodiment, the ethylene/α-olefin interpolymer is an ethylene/α-olefin copolymer.</p>
+      <p id="p-00104-en" num="0107">In one embodiment, the ethylene/α-olefin interpolymer has a percent crystallinity from 5 to 30 percent, further from 10 to 25 percent, and further from 15 to 23 percent, as determined by DSC. In a further embodiment, the ethylene/α-olefin interpolymer is an ethylene/α-olefin copolymer.</p>
+      <p id="p-00105-en" num="0108">In one embodiment, the ethylene/α-olefin interpolymer has a density greater than, or equal to, 0.855 g/cc, further greater than, or equal to, 0.860 g/cc, further greater than, or equal to, 0.865 g/cc. In a further embodiment, the ethylene/α-olefin interpolymer is an ethylene/α-olefin copolymer.</p>
+      <p id="p-00106-en" num="0109">In one embodiment, the ethylene/α-olefin interpolymer has a density less than, or equal to, 0.900 g/cc, further less than, or equal to, 0.895 g/cc, further less than, or equal to, 0.890 g/cc. In a further embodiment, the ethylene/α-olefin interpolymer is an ethylene/α-olefin copolymer.</p>
+      <p id="p-00107-en" num="0110">In one embodiment, the ethylene/α-olefin interpolymers has a density from 0.855 g/cm<sup>3 </sup>to 0.900 g/cm<sup>3</sup>, further from 0.860 g/cm<sup>3 </sup>to 0.895 g/cm<sup>3</sup>, and further from 0.865 g/cm<sup>3 </sup>to 0.890 g/cm<sup>3</sup>. In a further embodiment, the ethylene/α-olefin interpolymer is an ethylene/α-olefin copolymer.</p>
+      <p id="p-00108-en" num="0111">Some examples of ethylene/α-olefin copolymers include AFFINITY GA Polyolefin Plastomers, available from The Dow Chemical Company, and LICOCENE Performance Polymers from Clariant. Other examples of ethylene/α-olefin polymers suitable for the invention include the ultra low molecular weight ethylene polymers described in U.S. Pat. Nos. 6,335,410, 6,054,544 and 6,723,810, each fully incorporated herein by reference.</p>
+      <p id="p-00109-en" num="0112">In one embodiment, the ethylene/α-olefin interpolymer is a homogeneously branched linear interpolymer, and further a copolymer, or a homogeneous branched substantially linear interpolymer, and further a copolymer.</p>
+      <p id="p-00110-en" num="0113">In one embodiment, the ethylene/α-olefin interpolymer is a homogeneously branched linear interpolymer, and further a copolymer.</p>
+      <p id="p-00111-en" num="0114">In one embodiment, the ethylene/α-olefin interpolymer is a homogeneous branched substantially linear interpolymer, and further a copolymer.</p>
+      <p id="p-00112-en" num="0115">The terms “homogeneous” and “homogeneously-branched” are used in reference to an ethylene/α-olefin interpolymer, in which the α-olefin comonomer is randomly distributed within a given polymer molecule, and all of the polymer molecules have the same or substantially the same comonomer-to-ethylene ratio.</p>
+      <p id="p-00113-en" num="0116">The homogeneously branched linear ethylene interpolymers are ethylene polymers, which lack long chain branching, but do have short chain branches, derived from the comonomer polymerized into the interpolymer, and which are homogeneously distributed, both within the same polymer chain, and between different polymer chains. These ethylene/α-olefin interpolymers have a linear polymer backbone, no measurable long chain branching, and a narrow molecular weight distribution. This class of polymers is disclosed, for example, by Elston in U.S. Pat. No. 3,645,992, and subsequent processes to produce such polymers, using bis-metallocene catalysts, have been developed, as shown, for example, in EP 0 129 368; EP 0 260 999; U.S. Pat. No. 4,701,432; U.S. Pat. No. 4,937,301; U.S. Pat. No. 4,935,397; U.S. Pat. No. 5,055,438; and WO 90/07526; each incorporated herein by reference. As discussed, the homogeneously branched linear ethylene interpolymers lack long chain branching, just as is the case for the linear low density polyethylene polymers or linear high density polyethylene polymers. Commercial examples of homogeneously branched linear ethylene/α-olefin interpolymers include TAFMER polymers from the Mitsui Chemical Company, and EXACT and EXCEED polymers from ExxonMobil Chemical Company.</p>
+      <p id="p-00114-en" num="0117">The homogeneously branched substantially linear ethylene/α-olefin interpolymers are described in U.S. Pat. Nos. 5,272,236; 5,278,272; 6,054,544; 6,335,410 and 6,723,810; each incorporated herein by reference. The substantially linear ethylene/α-olefin interpolymers have long chain branching. The long chain branches have the same comonomer distribution as the polymer backbone, and can have about the same length as the length of the polymer backbone. “Substantially linear,” typically, is in reference to a polymer that is substituted, on average, with “0.01 long chain branches per 1000 carbons” to “3 long chain branches per 1000 carbons.” The length of a long chain branch is longer than the carbon length of a short chain branch, formed from the incorporation of one comonomer into the polymer backbone.</p>
+      <p id="p-00115-en" num="0118">Some polymers may be substituted with 0.01 long chain branches per 1000 total carbons to 3 long chain branch per 1000 total carbons, further from 0.01 long chain branches per 1000 total carbons to 2 long chain branch per 1000 total carbons, and further from 0.01 long chain branches per 1000 total carbons to 1 long chain branch per 1000 total carbons.</p>
+      <p id="p-00116-en" num="0119">The substantially linear ethylene/α-olefin interpolymers form a unique class of homogeneously branched ethylene polymers. They differ substantially from the well-known class of conventional, homogeneously branched linear ethylene/α-olefin interpolymers, as discussed above, and, moreover, they are not in the same class as conventional heterogeneous “Ziegler-Natta catalyst polymerized” linear ethylene polymers (for example, ultra low density polyethylene (ULDPE), linear low density polyethylene (LLDPE) or high density polyethylene (HDPE), made, for example, using the technique disclosed by Anderson et al., in U.S. Pat. No. 4,076,698); nor are they in the same class as high pressure, free-radical initiated, highly branched polyethylenes, such as, for example, low density polyethylene (LDPE), ethylene-acrylic acid (EAA) copolymers and ethylene vinyl acetate (EVA) copolymers.</p>
+      <p id="p-00117-en" num="0120">The homogeneously branched, substantially linear ethylene/α-olefin interpolymers useful in the invention have excellent processability, even though they have a relatively narrow molecular weight distribution. Surprisingly, the melt flow ratio (I10/I2), according to ASTM D 1238, of the substantially linear ethylene interpolymers can be varied widely, and essentially independently of the molecular weight distribution (Mw/Mn or MWD). This surprising behavior is contrary to conventional homogeneously branched linear ethylene interpolymers, such as those described, for example, by Elston in U.S. Pat. No. 3,645,992, and heterogeneously branched, conventional “Ziegler-Natta polymerized,” linear polyethylene interpolymers, such as those described, for example, by Anderson et al., in U.S. Pat. No. 4,076,698. Unlike substantially linear ethylene interpolymers, linear ethylene interpolymers (whether homogeneously or heterogeneously branched) have rheological properties, such that, as the molecular weight distribution increases, the I10/I2 value also increases.</p>
+      <p id="p-00118-en" num="0121">Long chain branching can be determined by using 13C Nuclear Magnetic Resonance (NMR) spectroscopy, and can be quantified using the method of Randall (Rev. Macromol. Chem. Phys., C29 (2 &amp;3), 1989, p. 285-297), the disclosure of which is incorporated herein by reference. Two other methods are Gel Permeation Chromatography, couple with a Low Angle Laser Light Scattering detector (GPCLALLS), and Gel Permeation Chromatography, coupled with a Differential Viscometer detector (GPC-DV). The use of these techniques for long chain branch detection, and the underlying theories, have been well documented in the literature. See, for example, Zimm, B H and Stockmayer, W. H., J. Chem. Phys., 17, 1301 (1949), and Rudin, A., Modern Methods of Polymer Characterization, John Wiley &amp; Sons, New York (1991) pp. 103-112.</p>
+      <p id="p-00119-en" num="0122">In contrast to “substantially linear ethylene polymer,” “linear ethylene polymer” means that the polymer lacks measurable or demonstrable long chain branches, that is, the polymer is substituted with an average of less than 0.01 long chain branch per 1000 carbons.</p>
+      <p id="p-00120-en" num="0123">An ethylene/α-olefin interpolymer may comprise a combination of two or more embodiments as described herein.</p>
+      <p id="p-00121-en" num="0124">An ethylene/α-olefin copolymer may comprise a combination of two or more embodiments as described herein.</p>
+      <heading id="h-00007-en" level="2">Component B (Ethylene-Based Polymer)</heading>
+      <p id="p-00122-en" num="0125">In one embodiment, the ethylene-based polymer has a melt index (I2) from 0.5 to 50 g/10 min, further from 0.5 to 20 g/10 min, further from 0.5 to 10 g/10 min.</p>
+      <p id="p-00123-en" num="0126">In one embodiment, the ethylene-based polymer has a density from 0.860 to 0.960 g/cc (1 cc=1 cm<sup>3</sup>).</p>
+      <p id="p-00124-en" num="0127">In one embodiment, the ethylene-based polymer has a density from greater than, or equal to, 0.920 g/cc.</p>
+      <p id="p-00125-en" num="0128">In one embodiment, the ethylene-based polymer has a density from 0.920 to 0.940 g/cc.</p>
+      <p id="p-00126-en" num="0129">In one embodiment component B is an ethylene/alpha-olefin interpolymer, and further an ethylene/alpha-olefin copolymer. Preferred α-olefins include, but are not limited to, C3-C20 α-olefins, and preferably C3-C10 α-olefins. More preferred α-olefins include propylene, 1-butene, 1-pentene, 1-hexene, 1-heptene and 1-octene, and more preferably include propylene, 1-butene, 1-hexene and 1-octene.</p>
+      <p id="p-00127-en" num="0130">In one embodiment, the ethylene/alpha-olefin interpolymer of component B has a molecular weight distribution (Mw/Mn) greater than, or equal to, 1.1, further greater than, or equal to, 1.3, further greater than, or equal to, 1.5, and further greater than, or equal to, 1.7. In a further embodiment, the ethylene/alpha-olefin interpolymer is an ethylene/α-olefin copolymer.</p>
+      <p id="p-00128-en" num="0131">In one embodiment, the ethylene/alpha-olefin interpolymer of component B has a molecular weight distribution (Mw/Mn) less than, or equal to, 10, further less than, or equal to, 7.0, and further less than, or equal to, 5.0. In a further embodiment, the ethylene/alpha-olefin interpolymer is an ethylene/α-olefin copolymer.</p>
+      <p id="p-00129-en" num="0132">In one embodiment, the ethylene/alpha-olefin interpolymer of component B has a melt index (I2 or MI) greater than, or equal to, 0.1 g/10 min, further greater than, or equal to, 0.2 g/10 min, and further greater than, or equal to, 0.5 g/10 min. In a further embodiment, the ethylene/alpha-olefin interpolymer is an ethylene/α-olefin copolymer.</p>
+      <p id="p-00130-en" num="0133">In one embodiment, the ethylene/alpha-olefin interpolymer of component B has a melt index (12 or MI) less than, or equal to, 20 g/10 min, further less than, or equal to, 10 g/10 min, and further less than, or equal to, 5 g/10 min. In a further embodiment, the ethylene/alpha-olefin interpolymer is an ethylene/α-olefin copolymer.</p>
+      <p id="p-00131-en" num="0134">In one embodiment, the ethylene/alpha-olefin interpolymer of component B has a density greater than, or equal to, 0.870 g/cc, further greater than, or equal to, 0.880 g/cc, and further greater than, or equal to, 0.890 g/cc. In a further embodiment, the ethylene/alpha-olefin interpolymer is an ethylene/α-olefin copolymer.</p>
+      <p id="p-00132-en" num="0135">In one embodiment, the ethylene/alpha-olefin interpolymer of component B has a density greater than, or equal to, 0.915 g/cc, further greater than, or equal to, 0.918 g/cc, and further greater than, or equal to, 0.920 g/cc. In a further embodiment, the ethylene/alpha-olefin interpolymer is an ethylene/α-olefin copolymer.</p>
+      <p id="p-00133-en" num="0136">In one embodiment, the ethylene/alpha-olefin interpolymer of component B has a density less than, or equal to, 0.950 g/cc, further less than, or equal to, 0.940 g/cc, and further less than, or equal to, 0.930 g/cc. In a further embodiment, the ethylene/alpha-olefin interpolymer is an ethylene/α-olefin copolymer.</p>
+      <p id="p-00134-en" num="0137">In one embodiment, the ethylene/alpha-olefin interpolymer of component B has a density from 0.870 g/cm<sup>3 </sup>to 0.940 g/cm<sup>3</sup>, further from 0.880 g/cm<sup>3 </sup>to 0.930 g/cm<sup>3</sup>, and further from 0.890 g/cm<sup>3 </sup>to 0.920 g/cm<sup>3</sup>. In a further embodiment, the ethylene/alpha-olefin interpolymer is an ethylene/α-olefin copolymer.</p>
+      <p id="p-00135-en" num="0138">The ethylene-based polymer may comprise a combination of two or more embodiments as described herein.</p>
+      <p id="p-00136-en" num="0139">The ethylene/alpha-olefin interpolymer (component B) may comprise a combination of two or more embodiments as described herein.</p>
+      <p id="p-00137-en" num="0140">The ethylene/alpha-olefin copolymer (component B) may comprise a combination of two or more embodiments as described herein.</p>
+      <heading id="h-00008-en" level="1">DEFINITIONS</heading>
+      <p id="p-00138-en" num="0141">Unless stated to the contrary, all test methods are current as of the filing date of this disclosure.</p>
+      <p id="p-00139-en" num="0142">The term “composition,” as used herein, includes materials which comprise the composition, as well as reaction products and decomposition products formed from the materials of the composition.</p>
+      <p id="p-00140-en" num="0143">The term “polymer,” as used herein, refers to a polymeric compound prepared by polymerizing monomers, whether of the same or a different type. The generic term polymer thus embraces the term homopolymer (employed to refer to polymers prepared from only one type of monomer, with the understanding that trace amounts of impurities can be incorporated into the polymer structure), and the term interpolymer as defined hereinafter. A polymer may also contain trace amounts of catalyst residues and/or other residues associated with its polymerization and/or isolation.</p>
+      <p id="p-00141-en" num="0144">The term “interpolymer,” as used herein, refers to polymers prepared by the polymerization of at least two different types of monomers. The generic term interpolymer thus includes copolymers (employed to refer to polymers prepared from two different types of monomers), and polymers prepared from more than two different types of monomers.</p>
+      <p id="p-00142-en" num="0145">The term, “olefin-based polymer,” as used herein, refers to a polymer that comprises, in polymerized form, a majority amount of olefin monomer, for example ethylene or propylene (based on the weight of the polymer), and optionally may comprise one or more comonomers.</p>
+      <p id="p-00143-en" num="0146">The term, “propylene-based polymer,” as used herein, refers to a polymer that comprises, in polymerized form, a majority amount of propylene monomer (based on the weight of the polymer), and optionally may comprise one or more comonomers.</p>
+      <p id="p-00144-en" num="0147">The term, “ethylene-based polymer,” as used herein, refers to a polymer that comprises, in polymerized form, a majority amount of ethylene monomer (based on the weight of the polymer), and optionally may comprise one or more comonomers.</p>
+      <p id="p-00145-en" num="0148">The term, “ethylene/α-olefin interpolymer,” as used herein, refers to an interpolymer that comprises, in polymerized form, a majority amount of ethylene monomer (based on the weight of the interpolymer), and at least one α-olefin.</p>
+      <p id="p-00146-en" num="0149">The term, “ethylene/α-olefin copolymer,” as used herein, refers to a copolymer that comprises, in polymerized form, a majority amount of ethylene monomer (based on the weight of the copolymer), and an α-olefin, as the only two monomer types.</p>
+      <p id="p-00147-en" num="0150">The term “anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer,” as used herein, refers to an ethylene/alpha-olefin interpolymer that comprises at least one anhydride group and/or at least one acid group (for example, —COOH formed by the hydrolysis of an anhydride) linked by a covalent bond.</p>
+      <p id="p-00148-en" num="0151">The term “polar polymer,” as used herein, refers to polymer formed from at least one monomer that comprises at least one heteroatom. Some examples of heteroatoms include O, N, P and S.</p>
+      <p id="p-00149-en" num="0152">The terms “comprising,” “including,” “having,” and their derivatives, are not intended to exclude the presence of any additional component, step or procedure, whether or not the same is specifically disclosed. In order to avoid any doubt, all compositions claimed through use of the term “comprising” may include any additional additive, adjuvant, or compound, whether polymeric or otherwise, unless stated to the contrary. In contrast, the term, “consisting essentially of” excludes from the scope of any succeeding recitation any other component, step or procedure, excepting those that are not essential to operability. The term “consisting of” excludes any component, step or procedure not specifically delineated or listed.</p>
+      <heading id="h-00009-en" level="2">Test Methods</heading>
+      <heading id="h-00010-en" level="2">Melt Viscosity</heading>
+      <p id="p-00150-en" num="0153">Melt viscosity is measured in accordance with ASTM D 3236 (350° F., 177° C.), using a Brookfield Digital Viscometer (Model DV-III, version 3), and disposable aluminum sample chambers. The spindle used, in general, is a SC-31 hot-melt spindle, suitable for measuring viscosities in the range from 10 to 100,000 centipoise. The sample is poured into the chamber, which is, in turn, inserted into a Brookfield Thermoset, and locked into place. The sample chamber has a notch on the bottom that fits the bottom of the Brookfield Thermoset, to ensure that the chamber is not allowed to turn when the spindle is inserted and spinning. The sample (approximately 8-10 grams of resin) is heated to the required temperature, until the melted sample is about one inch below the top of the sample chamber. The viscometer apparatus is lowered, and the spindle submerged into the sample chamber. Lowering is continued, until the brackets on the viscometer align on the Thermoset. The viscometer is turned on, and set to operate at a shear rate which leads to a torque reading in the range of 40 to 60 percent of the total torque capacity, based on the rpm output of the viscometer. Readings are taken every minute for about 15 minutes, or until the values stabilize, at which point, a final reading is recorded.</p>
+      <heading id="h-00011-en" level="2">Melt Index</heading>
+      <p id="p-00151-en" num="0154">Melt index (I2, or MI) of an ethylene-based polymer is measured in accordance with ASTM D-1238, condition 190° C./2.16 kg. For high I2 polymers (I2 greater than, or equal to, 200 g/mole, melt index is preferably calculated from Brookfield viscosity as described in U.S. Pat. Nos. 6,335,410; 6,054,544; 6,723,810. I2(190° C./2.16 kg)=3.6126[10<sup>(log(η)−6.6928)/−1.1363</sup>]−9.31851, where η=melt viscosity, in cP, at 350° F.</p>
+      <heading id="h-00012-en" level="2">Gel Permeation Chromatography</heading>
+      <p id="p-00152-en" num="0155">The average molecular weights and molecular weight distributions for ethylene-base polymers are determined with a chromatographic system, consisting of either a Polymer Laboratories Model PL-210 or a Polymer Laboratories Model PL-220. The column and carousel compartments are operated at 140° C. for ethylene-based polymers. The columns are three Polymer Laboratories 10-micron, Mixed-B columns The solvent is 1,2,4 trichloro-benzene. The samples are prepared at a concentration of “0.1 gram of polymer’ in “50 milliliters” of solvent. The solvent used to prepare the samples contains “200 ppm” of butylated hydroxytoluene (BHT). Samples are prepared by agitating lightly for two hours at 160° C. The injection volume is “100 microliters,” and the flow rate is 1.0 milliliters/minute. Calibration of the GPC column set is performed with narrow molecular weight distribution polystyrene standards, purchased from Polymer Laboratories (UK). The polystyrene standard peak molecular weights are converted to polyethylene molecular weights using the following equation (as described in Williams and Ward, J. Polym. Sci., Polym. Let., 6, 621 (1968)):</p>
+      <p id="p-00153-en" num="0000">[in-line-formulae]<i>M</i><sub>polyethylene</sub><i>=A</i>×(<i>M</i><sub>polystyrene</sub>)<sup>B</sup>,[/in-line-formulae]</p>
+      <p id="p-00154-en" num="0000">where M is the molecular weight, A has a value of 0.4315 and B is equal to 1.0. Polyethylene equivalent molecular weight calculations were performed using VISCOTEK TriSEC software Version 3.0. The molecular weights for polypropylene-based polymers can be determined using Mark-Houwink ratios according to ASTM D6474.9714-1, where, for polystyrene a=0.702 and log K=−3.9, and for polypropylene, a=0.725 and log K=−3.721. For polypropylene-based samples, the column and carousel compartments are operated at 160° C.</p>
+      <heading id="h-00013-en" level="2">DSC</heading>
+      <p id="p-00155-en" num="0156">Differential Scanning calorimetry (DSC) is used to measure crystallinity in polyethylene (PE) based samples and polypropylene (PP) based samples. About five to eight milligrams of sample is weighed and placed in a DSC pan. The lid is crimped on the pan to ensure a closed atmosphere. The sample pan is placed in a DSC cell, and then heated, at a rate of approximately 10° C./min, to a temperature of 180° C. for PE (230° C. for PP). The sample is kept at this temperature for three minutes. Then the sample is cooled at a rate of 10° C./min to −60° C. for PE (−40° C. for PP), and kept isothermally at that temperature for three minutes. The sample is next heated at a rate of 10° C./min, until complete melting (second heat). The percent crystallinity is calculated by dividing the heat of fusion (H<sub>f</sub>), determined from the second heat curve, by a theoretical heat of fusion of 292 J/g for PE (165 J/g, for PP), and multiplying this quantity by 100 (e.g., for PE, % cryst.=(H<sub>f</sub>/292 J/g)×100; and for PP, % cryst.=(H<sub>f</sub>/165 J/g)×100).</p>
+      <p id="p-00156-en" num="0157">Unless otherwise stated, melting point(s) (T<sub>m</sub>) of each polymer is determined from the second heat curve obtained from DSC, as described above. The crystallization temperature (T<sub>c</sub>) is measured from the first cooling curve.</p>
+      <heading id="h-00014-en" level="2">Density</heading>
+      <p id="p-00157-en" num="0158">Density is measured in accordance with ASTM D-792.</p>
+      <heading id="h-00015-en" level="2">Fourier Transform Infrared Spectroscopy (FTIR) Analysis—Maleic Anhydride Content.</heading>
+      <p id="p-00158-en" num="0159">The concentration of maleic anhydride is determined by the ratio of peak heights of the maleic anhydride, at wave number 1791 cm<sup>−1</sup>, to the polymer reference peak, which, in case of polyethylene, is at wave number 2019 cm<sup>−1</sup>. Maleic anhydride content is calculated by multiplying this ratio with the appropriate calibration constant. The equation used for maleic grafted polyolefins (with reference peak for polyethylene) has the following form, as shown in Equation 1A.</p>
+      <p id="p-00159-en" num="0000">[in-line-formulae]<i>MAH </i>(wt. %)=<i>A</i>*{[FTIR PeakArea@1791 cm−1]/[FTIR PeakArea 2019 cm−1<i>]+B</i>*[FTIR PeakArea@1712 cm−1]/[FTIR PeakArea@2019 cm−1]}  (Eqn. 1A)[/in-line-formulae]</p>
+      <p id="p-00160-en" num="0160">The calibration constant A can be determined using C13 NMR standards. The actual calibration constant may differ slightly depending on the instrument and polymer. The signal at wave number 1712 cm<sup>−1 </sup>accounts for the presence of maleic acid, which is negligible for freshly grafted material. Over time however, maleic anhydride is readily converted to maleic acid in the presence of moisture. Depending on surface area, significant hydrolysis can occur in just a few days under ambient conditions. The acid has a distinct peak at wave number 1712 cm<sup>−1</sup>. The constant B in Equation 1 is a correction for the difference in extinction coefficients between the anhydride and acid groups.</p>
+      <p id="p-00161-en" num="0161">The sample preparation procedure begins by making a pressing, typically 0.05 to 0.15 millimeters in thickness, in a heated press, between two protective films, at 150-180° C. for one hour. MYLAR and TEFLON are suitable protective films to protect the sample from the platens. Aluminum foil must never be used (maleic anhydride reacts with aluminum). Platens should be under pressure (˜10 ton) for about five minutes. The sample is allowed to cool to room temperature, placed in an appropriate sample holder, and then scanned in the FTIR. A background scan should be run before each sample scan, or as needed. The precision of the test is good, with an inherent variability of less than ±5%. Samples should be stored with desiccant to prevent excessive hydrolysis. Maleic anhydride and acid are represented by peaks at about 1791 and 1712 cm<sup>−1</sup>, respectively.</p>
+      <heading id="h-00016-en" level="1">EXPERIMENTAL</heading>
+      <heading id="h-00017-en" level="1">Materials</heading>
+      <p id="p-00162-en" num="0162">Materials are shown in Table 1 below.</p>
+      <p id="p-00163-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="266pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Materials used in this study</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="98pt" align="left" />
+              <colspec colname="3" colwidth="56pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Melt Index 12</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>(190° C.; 2.16 kg;</entry>
+                  <entry>Density</entry>
+                </row>
+                <row>
+                  <entry>Materials</entry>
+                  <entry>Composition</entry>
+                  <entry>g/10 min)</entry>
+                  <entry>(g/cc)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="98pt" align="center" />
+              <colspec colname="3" colwidth="56pt" align="char" char="." />
+              <colspec colname="4" colwidth="42pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>AMPLIFY TY 1053H</entry>
+                  <entry>Maleic anhydride (MAH) grafted</entry>
+                  <entry>2.0</entry>
+                  <entry>0.96</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>high density polyethylene</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>AMPLIFY TY 1052H</entry>
+                  <entry>Maleic anhydride (MAH)</entry>
+                  <entry>1.3</entry>
+                  <entry>0.87</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>grafted polyethylene</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>DOWLEX 2045G</entry>
+                  <entry>LLDPE</entry>
+                  <entry>1.0</entry>
+                  <entry>0.92</entry>
+                </row>
+                <row>
+                  <entry>EVAL H171B**</entry>
+                  <entry>38 mol % Ethylene Vinyl Alcohol</entry>
+                  <entry>1.7</entry>
+                  <entry>1.17</entry>
+                </row>
+                <row>
+                  <entry>(lubricated)</entry>
+                  <entry>Copolymer</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>EVAL L171B**</entry>
+                  <entry>27 mol % Ethylene Vinyl</entry>
+                  <entry>4</entry>
+                  <entry>1.2</entry>
+                </row>
+                <row>
+                  <entry>(lubricated)</entry>
+                  <entry>Alcohol Copolymer</entry>
+                  <entry>(at 230° C.)</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ULTRAMID B40L***</entry>
+                  <entry>Polyamide 6</entry>
+                  <entry>1.13</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="left" id="entry-00001-en">**TDS supplied from EVAL Americas</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="left" id="entry-00002-en">***TDS supplied from BASF</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00018-en" level="2">Synthesis of Component A—MAH-g-EO1</heading>
+      <p id="p-00164-en" num="0163">Low molecular weight ethylene-octene copolymer with a viscosity range of 6,000 to 17,000 cps, measured at 350° F., using a Brookfield viscosity. Nominal 1000 MI (calculated—see footnote in Table 2), 0.87 g/cc density ethylene-octene copolymer.</p>
+      <p id="p-00165-en" num="0164">Maleic Anhydride (MAH—DeGussa DHBP or Equivalent)</p>
+      <p id="p-00166-en" num="0165">Hydrobrite 380—hydrotreated paraffinic oil to dilute peroxide as needed. (1:1 ratio of peroxide:oil).</p>
+      <p id="p-00167-en" num="0166">LUPEROX 101—2,5-Bis(tert-butylperoxy)-2,5-dimethylhexane (290.44 g/mol). Barrel, Gear Pump, and Die Temperature settings: Feed barrel—cooling (49° C.); Barrel #3: 120° C., injection of maleic at injection port 3a and peroxide at port 4a; Barrel #4—11: 235° C.; Transfer Lines and Gear pump: 150° C.; Die: 204° C.; Screw Speed 386 rpm; MAH 16.25 lb/hr; MAH % Feed 1.55%; “1:1 Oil:PDX” 3.6 lb/hr; “1:1 Oil:PDX” % Feed 0.34%; Pure PDX Feed 0.17%; Vac. Pressure 20 cm Hg.</p>
+      <p id="p-00168-en" num="0167">MAH-g-EO1 (see Table 2) was made on a “92 mm” co-rotating twin screw extruder (TSE). The process is summarized in the following steps: (a) the TSE was set to run at the selected barrel temperature profiles, and the screw speeds set to the desired RPMs; (b) polymer pellets were fed into the extruder hopper of the extruder by a gravimetrically, controlled auger feeder, at the desired polymer feed rate; (c) molten MAH was injected into the barrel; (d) peroxide was added via a 1:1 mineral oil solution, at a target feed rate, and injected into the barrel, downstream from the MAH; (e) kneading blocks distributed the reactive ingredients and heated the polymer melt through mechanical energy dissipation, and the reaction occurred following thermal decomposition of peroxide initiator; (f) volatile unreacted components and byproducts were removed at a vacuum port; (g) the melt was cooled in the final barrel section and fed to a gear pump; (h) the gear pump fed a die, from which the melt went to an underwater pelletizer. A pellet slurry cooling line of sufficient length was used to achieve residence time greater than 60 seconds, to cool pellets to less than 25° C. The pelletized product was dried and collected. MAH content ≧0.9 weight percent (small amount of acid, from hydrolyzed anhydride may be present; MWD about 2.7).</p>
+      <p id="p-00169-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>MAH-g-EO1</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="center" />
+              <colspec colname="2" colwidth="63pt" align="center" />
+              <colspec colname="3" colwidth="56pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Calculated I2*</entry>
+                  <entry>Melt Viscosity</entry>
+                  <entry>Density</entry>
+                  <entry>MAH</entry>
+                </row>
+                <row>
+                  <entry>Polymer</entry>
+                  <entry>at 190° C. (g/10 min)</entry>
+                  <entry>at 177° C. (cP)</entry>
+                  <entry>(g/cm3)</entry>
+                  <entry>(wt %)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>MAH-g-EO1<sup>a</sup></entry>
+                  <entry>660</entry>
+                  <entry>13000</entry>
+                  <entry>0.878</entry>
+                  <entry>0.7-1.5</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="left" id="entry-00003-en">
+                    <sup>a</sup>MAH-g-homogeneously branched ethylene/octene copolymer.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="left" id="entry-00004-en">*Melt index may be calculated from the following equation (See U.S. Pat. No. 6,335,410): 12(190° C./2.16 kg) = 3.6126[10<sup>(log(η)−6.6928)/−1.1363</sup>] − 9.31851, where η = Melt viscosity, in cP, at 350° F.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00019-en" level="2">Blend Formulations</heading>
+      <p id="p-00170-en" num="0168">All blend formulations were compounded on a Coperion ZSK 26 twin screw extruder. The motor was rated at 40 horsepower, with a maximum speed of 2,650 RPM. The gearbox ratio was 1:89, and the maximum screw speed was 1,200 RPM. The maximum torque for this line was 106 Nm. The feedrate was 30 lbs/hr, the screw RPM was 350. The die temperature was set to 190° C. There was no side arm feeder and no vacuum was pulled. The compounded material was extruded through a two hole die into a 16 foot long chilled water bath. The strands were then passed through a BERLYN Air Knife to remove excess water. Once the strands were cooled and dried, they were pelletized with a LabTech side cut pelletizer. The chopped pellets were then dropped into a plastic lined 50 lb bag. The blends were further dried for 12 hours, at 60° C., at ambient atmosphere.</p>
+      <heading id="h-00020-en" level="2">Film Preparations</heading>
+      <p id="p-00171-en" num="0169">Monolayer films (2 mil thickness) were produced using a LabTech blown film line. The barrel temperatures were set to 400° F./450° F./450° F., with a die temperature of 450° F. The layflat width was 13 inches.</p>
+      <heading id="h-00021-en" level="2">Blend Formulations—Set 1</heading>
+      <p id="p-00172-en" num="0170">Table 3 shows the set of experiments with blends of ethylene/octene copolymer (LLDPE), EVOH and MAH-g-EO1 or other functionalized polymer. EVOH was EVAL L171B with 27 mol % ethylene. Comparative Ex. A was the control blend. Comparative Ex. B and Inventive Ex. 1 were the compatibilized blends containing AMPLIFY TY 1053H and the MAH-g-EO1, respectively. The total maleic anhydride in the blends were kept constant at 0.12 wt % for Comparative Ex. B and Inventive Ex. 1. Inventive Ex.2 was a compatibilized blend with MAH-g-EO1 at a higher loading, with 0.186 wt % total maleic anhydride in the blend. Blends were formulated, and monolayer films prepared as discussed above.</p>
+      <p id="p-00173-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 3</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Blend formulations—Set 1 Amounts in wt %</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="147pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>wt % MAH in the blend*</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>0.036</entry>
+                  <entry>0.12</entry>
+                  <entry>0.12</entry>
+                  <entry>0.186</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Comparative</entry>
+                  <entry>Comparative</entry>
+                  <entry>Inventive</entry>
+                  <entry>Inventive</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ex.A</entry>
+                  <entry>Ex.B</entry>
+                  <entry>Ex.1</entry>
+                  <entry>Ex.2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="char" char="." />
+              <colspec colname="3" colwidth="42pt" align="char" char="." />
+              <colspec colname="4" colwidth="35pt" align="char" char="." />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>AMPLIFY TY 1053H</entry>
+                  <entry>3</entry>
+                  <entry>10</entry>
+                  <entry>3</entry>
+                  <entry>3</entry>
+                </row>
+                <row>
+                  <entry>DOWLEX 2045G</entry>
+                  <entry>91.82</entry>
+                  <entry>84.82</entry>
+                  <entry>83.32</entry>
+                  <entry>76.82</entry>
+                </row>
+                <row>
+                  <entry>EVOH EVAL L171B</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry>MAH-g-EO1</entry>
+                  <entry />
+                  <entry />
+                  <entry>8.5</entry>
+                  <entry>15</entry>
+                </row>
+                <row>
+                  <entry>IRGANOX B215 </entry>
+                  <entry>0.18</entry>
+                  <entry>0.18</entry>
+                  <entry>0.18</entry>
+                  <entry>0.18</entry>
+                </row>
+                <row>
+                  <entry>Antioxidant</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Total</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="left" id="entry-00005-en">*FTIR method.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00022-en" level="2">TEM and Optical Microscopy—Set 1</heading>
+      <p id="p-00174-en" num="0171">Transmission Electron Microscopy: Thin strips of the films (monolayer films) were cut with razor blade, and embedded in an epoxy/hardener system. A block face of each film specimen was polished and trimmed to an appropriate size. A flat specimen surface was finally polished, at −60° C., to prevent smearing, using a diamond knife on a LEICA UCT microtome, prior to staining. The polished specimens were adhered to glass slides with the aid of double-sided tape, and placed in a glass jar with a screw lid. The slides were placed in the jar, in order to suspend the blocks about one inch above the staining solution. The polished blocks were stained using the vapor phase of an aqueous ruthenium tetraoxide solution, for two hours, at ambient temperature.</p>
+      <p id="p-00175-en" num="0172">The staining solution was prepared by weighing “0.2 gm” of ruthenium (III) chloride hydrate (RuCl3×H<sub>2</sub>O) into a glass jar, and adding 10 ml of “5.25 wt %” aqueous sodium hypochlorite to the jar. Sections of approximately 100 nanometers, in thickness, were collected at ambient temperature, using a diamond knife on a LEICA UCT microtome, and these sections were placed on formvar coated, 150 square mesh copper, TEM grids, for TEM observation. A JEOL TEM 1230 was operated at 100 kV accelerating voltage, and bright-field images were collected using GATAN 791 and GATAN 794 cameras.</p>
+      <p id="p-00176-en" num="0173">Optical Microscopy: Optical sections of the monolayer films of approximately, 5 microns thick, were collected at −120° C., using a diamond knife on a LEICA UCT microtome, equipped with an FCS cryo-sectioning chamber. The sections were transferred to a microscope slide, containing a drop of Dow Corning E-200 silicon oil, and covered with a cover glass prior to analysis. Additional sections were obtained and placed on a potassium bromide (KBr) salt window for infra-red micro-spectroscopy analysis. Transmitted, brightfield light, under crossed-polarized, as well as epi-flourescence illumination, modes were used to view the film cross-sections, using a Carl Zeiss Axiolmager Z1m compound microscope. Images were acquired with the aid of a HRc digital camera. In order to capture the observed macro differences between the films, a LEICA MZ-16 stereo microscope was used at low magnification (2 mm scale). The films were illuminated with reflected light to enhance the surface topographies, and reveal the influence of compatibilization on gel formation. Digital images were captured using a NIKON DXM digital camera.</p>
+      <p id="p-00177-en" num="0174">EVOH was agglomerated into larger domains in Comparative Ex. A, which was the control blend, with no additional compatibilizer. Addition of “8.5 wt % MAH-g-EO1” in Inventive Ex.1 significantly improved the EVOH dispersion in the blend, as shown in <figref>FIG. 1</figref> (right TEM images). Inventive Ex.1 produced globally dispersed EVOH domains, in comparison to Comparative Ex. A, which was comprised of a combination of very large domains and a lower concentration of smaller domains. Comparative Ex. B, with 10 wt % TY 1053H as the compatibilizer, resulted in a bimodal size distribution of EVOH domains, with both larger EVOH domains as well as some smaller domains. The optical images in <figref>FIG. 2</figref> (Comparative Ex. A left; Comparative ex. B center; Inventive Ex. 1 right) verified that surfaces of the films formed from Comparative Ex. A and Comparative Ex. B consisted of very large gels, believed to be associated with EVOH, in comparison to Inventive Ex. 1 which displayed much fewer gels.</p>
+      <heading id="h-00023-en" level="2">Optical and Mechanical Properties—Set 1</heading>
+      <p id="p-00178-en" num="0175">The monolayer films were examined for the following properties.</p>
+      <heading id="h-00024-en" level="2">Clarity (ASTM D1746),</heading>
+      <heading id="h-00025-en" level="2">Clarity (Zebedee; ASTM D 1746),</heading>
+      <heading id="h-00026-en" level="2">Haze (ASTM D1003),</heading>
+      <heading id="h-00027-en" level="2">Elmendorf Tear (ASTM D1922) and</heading>
+      <heading id="h-00028-en" level="2">Tensile Testing (ASTM D882).</heading>
+      <p id="p-00179-en" num="0176">Table 4 summarizes the optical properties of the films: Comparative Ex.A, Comparative Ex.B, Inventive Ex.1 and Inventive Ex.2.</p>
+      <p id="p-00180-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 4</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Optical Properties—Set 1</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Comparative</entry>
+                  <entry>Comparative</entry>
+                  <entry>Inventive</entry>
+                  <entry>Inventive</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ex.A</entry>
+                  <entry>Ex.B</entry>
+                  <entry>Ex.1</entry>
+                  <entry>Ex.2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="char" char="." />
+              <colspec colname="3" colwidth="42pt" align="char" char="." />
+              <colspec colname="4" colwidth="35pt" align="char" char="." />
+              <colspec colname="5" colwidth="28pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Clarity—standard (%)</entry>
+                  <entry>31</entry>
+                  <entry>62</entry>
+                  <entry>90</entry>
+                  <entry>94</entry>
+                </row>
+                <row>
+                  <entry>Clarity—Zebedee (%)</entry>
+                  <entry>0.2</entry>
+                  <entry>4</entry>
+                  <entry>37</entry>
+                  <entry>49</entry>
+                </row>
+                <row>
+                  <entry>45° Gloss (%)</entry>
+                  <entry>16</entry>
+                  <entry>16</entry>
+                  <entry>34</entry>
+                  <entry>39</entry>
+                </row>
+                <row>
+                  <entry>Total Haze</entry>
+                  <entry>48</entry>
+                  <entry>44</entry>
+                  <entry>24</entry>
+                  <entry>20</entry>
+                </row>
+                <row>
+                  <entry>Internal Haze</entry>
+                  <entry>4.5</entry>
+                  <entry>3.5</entry>
+                  <entry>2.8</entry>
+                  <entry>3.6</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00181-en" num="0177">
+        <figref>FIG. 3</figref> shows the comparison of the optical properties of the films, Comparative Ex. A, Comparative Ex. B, Inventive Ex. 1 and Inventive Ex. 2 in a spider diagram. Comparative Ex. A exhibited high melt fracture that resulted in poor clarity and haze properties. Comparative Ex. B had improved optical properties versus Comparative Ex. A; however, the best optics (high clarity, low haze, high gloss) were achieved with Inventive Ex. 1 and Inventive Ex. 2.</p>
+      <p id="p-00182-en" num="0178">Table 5 shows the comparison of the mechanical properties of the Comparative Ex. A, Comparative Ex. B, Inventive Ex. 1 and Inventive Ex. 2. Inventive Ex. 1 and Inventive Ex. 2 exhibited 30-50% better tear properties in both CD and MD directions.</p>
+      <p id="p-00183-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 5</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Mechanical Properties of the Monolayer Films (2 mil thick)—Set 1</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="49pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Comparative</entry>
+                  <entry>Comparative</entry>
+                  <entry>Inventive</entry>
+                  <entry>Inventive</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ex.A</entry>
+                  <entry>Ex.B</entry>
+                  <entry>Ex.1</entry>
+                  <entry>Ex.2</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="char" char="." />
+              <colspec colname="3" colwidth="49pt" align="char" char="." />
+              <colspec colname="4" colwidth="35pt" align="char" char="." />
+              <colspec colname="5" colwidth="35pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Normalized </entry>
+                  <entry>491</entry>
+                  <entry>470</entry>
+                  <entry>647</entry>
+                  <entry>675</entry>
+                </row>
+                <row>
+                  <entry>Elmendorf—CD</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Normalized </entry>
+                  <entry>380</entry>
+                  <entry>400</entry>
+                  <entry>630</entry>
+                  <entry>625</entry>
+                </row>
+                <row>
+                  <entry>Elmendorf—MD</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Tensile Strength at </entry>
+                  <entry>2800</entry>
+                  <entry>5250</entry>
+                  <entry>4452</entry>
+                  <entry>3775</entry>
+                </row>
+                <row>
+                  <entry>Break—CD</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Tensile Strength at </entry>
+                  <entry>2484</entry>
+                  <entry>5030</entry>
+                  <entry>4773</entry>
+                  <entry>4350</entry>
+                </row>
+                <row>
+                  <entry>Break—MD</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Tensile Elongation </entry>
+                  <entry>618</entry>
+                  <entry>753</entry>
+                  <entry>795</entry>
+                  <entry>830</entry>
+                </row>
+                <row>
+                  <entry>at Break—CD</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Tensile Elongation </entry>
+                  <entry>447</entry>
+                  <entry>664</entry>
+                  <entry>736</entry>
+                  <entry>744</entry>
+                </row>
+                <row>
+                  <entry>at Break—MD</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00029-en" level="2">Blend Formulations—Set 2</heading>
+      <p id="p-00184-en" num="0179">Table 6 shows the set of experiments with blends of ethylene/octene copolymer (LLDPE), EVOH and MAH-g-EO1, or other functionalized polymer. EVOH was EVAL H171B with 38 mol % ethylene. Blends were prepared as discussed above. Monolayer films were formed as discussed above.</p>
+      <p id="p-00185-en" num="0000">
+        <tables id="tables-00006-en" num="00006">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 6</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Blend Formulations—Set 2 Amounts in wt %</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="147pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Wt % maleic anhydride </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(MAH) in the blend*</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="56pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>0.036</entry>
+                  <entry>0.12</entry>
+                  <entry>0.12</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Comparative</entry>
+                  <entry>Comparative</entry>
+                  <entry>Inventive</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ex.C</entry>
+                  <entry>Ex.D</entry>
+                  <entry>Ex.3</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="56pt" align="char" char="." />
+              <colspec colname="3" colwidth="42pt" align="char" char="." />
+              <colspec colname="4" colwidth="49pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>AMPLIFY TY 1053H</entry>
+                  <entry>3</entry>
+                  <entry>10</entry>
+                  <entry>3</entry>
+                </row>
+                <row>
+                  <entry>DOWLEX 2045G</entry>
+                  <entry>91.82</entry>
+                  <entry>84.82</entry>
+                  <entry>83.32</entry>
+                </row>
+                <row>
+                  <entry>EVOH EVAL H171B</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                  <entry>5</entry>
+                </row>
+                <row>
+                  <entry>MAH-g-EO1</entry>
+                  <entry />
+                  <entry />
+                  <entry>8.5</entry>
+                </row>
+                <row>
+                  <entry>B215 Antioxidant</entry>
+                  <entry>0.18</entry>
+                  <entry>0.18</entry>
+                  <entry>0.18</entry>
+                </row>
+                <row>
+                  <entry>total</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="left" id="entry-00006-en">*FTIR method.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00186-en" num="0180">As can be seen from Table 7, the Inventive Ex. 3 exhibited about an 8-fold increase in clarity (measured by the Zebedee method), as compared to Comparative Ex. C. Table 8 summarizes the mechanical properties of the films—there is no significant reduction in properties upon addition of the MAH-g-EO1. Tear properties of the films formed from Inventive Ex. 3 improved, versus the films formed from Comparative Ex. C or Comparative Ex. D.</p>
+      <p id="p-00187-en" num="0000">
+        <tables id="tables-00007-en" num="00007">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 7</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Optical Properties—Set 2 (2 mil monolayer films)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="56pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Comparative</entry>
+                  <entry>Comparative</entry>
+                  <entry>Inventive</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ex.C</entry>
+                  <entry>Ex.D</entry>
+                  <entry>Ex.3</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="56pt" align="char" char="." />
+              <colspec colname="3" colwidth="42pt" align="char" char="." />
+              <colspec colname="4" colwidth="49pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Clarity—standard (%)</entry>
+                  <entry>71</entry>
+                  <entry>52</entry>
+                  <entry>88</entry>
+                </row>
+                <row>
+                  <entry>Clarity—Zebedee (%)</entry>
+                  <entry>4</entry>
+                  <entry>2</entry>
+                  <entry>30</entry>
+                </row>
+                <row>
+                  <entry>45° Gloss (%)</entry>
+                  <entry>35</entry>
+                  <entry>13</entry>
+                  <entry>33</entry>
+                </row>
+                <row>
+                  <entry>Total Haze</entry>
+                  <entry>22</entry>
+                  <entry>48</entry>
+                  <entry>23</entry>
+                </row>
+                <row>
+                  <entry>Internal Haze</entry>
+                  <entry>3</entry>
+                  <entry>3</entry>
+                  <entry>2.5</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00188-en" num="0000">
+        <tables id="tables-00008-en" num="00008">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 8</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Mechanical Properties—Set 2 (2 mil monolayer films)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="98pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Comparative</entry>
+                  <entry>Comparative</entry>
+                  <entry>Inventive</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ex.C</entry>
+                  <entry>Ex.D</entry>
+                  <entry>Ex.3</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="98pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="char" char="." />
+              <colspec colname="3" colwidth="42pt" align="char" char="." />
+              <colspec colname="4" colwidth="35pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Normalized Elmendorf—CD</entry>
+                  <entry>570</entry>
+                  <entry>515</entry>
+                  <entry>645</entry>
+                </row>
+                <row>
+                  <entry>Normalized Elmendorf—MD</entry>
+                  <entry>445</entry>
+                  <entry>338</entry>
+                  <entry>640</entry>
+                </row>
+                <row>
+                  <entry>Tensile Strength at Break—CD</entry>
+                  <entry>4435</entry>
+                  <entry>5500</entry>
+                  <entry>4980</entry>
+                </row>
+                <row>
+                  <entry>Tensile Strength at Break—MD</entry>
+                  <entry>5590</entry>
+                  <entry>5260</entry>
+                  <entry>4780</entry>
+                </row>
+                <row>
+                  <entry>Tensile Elongation at Break—CD</entry>
+                  <entry>725</entry>
+                  <entry>775</entry>
+                  <entry>836</entry>
+                </row>
+                <row>
+                  <entry>Tensile Elongation at Break—MD</entry>
+                  <entry>710</entry>
+                  <entry>670</entry>
+                  <entry>750</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00030-en" level="2">Blend Formulation—Set 3</heading>
+      <p id="p-00189-en" num="0181">Table 9 shows the set of experiments with blends of ethylene/octene copolymer (LLDPE), polyamide and MAH-g-EO1 or other functionalized polymer. The polyamide was ULTRAMID B40L (Polyamide 6). Blends were prepared as discussed above. Films formed from the blends were prepared as discussed above.</p>
+      <p id="p-00190-en" num="0000">
+        <tables id="tables-00009-en" num="00009">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 9</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Blend Formulations—Set 3 Amounts in wt %</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="147pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Wt % maleic anhydride</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(MAH) in the blend*</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="56pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>0.036</entry>
+                  <entry>0.12</entry>
+                  <entry>0.121</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Comparative</entry>
+                  <entry>Comparative</entry>
+                  <entry>Inventive</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ex.E</entry>
+                  <entry>Ex.F</entry>
+                  <entry>Ex.4</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="56pt" align="char" char="." />
+              <colspec colname="3" colwidth="42pt" align="char" char="." />
+              <colspec colname="4" colwidth="49pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>AMPLIFY TY 1053H</entry>
+                  <entry>3</entry>
+                  <entry>3</entry>
+                  <entry>3</entry>
+                </row>
+                <row>
+                  <entry>AMPLIFY TY 1052H</entry>
+                  <entry />
+                  <entry>10.5</entry>
+                  <entry />
+                </row>
+                <row>
+                  <entry>DOWLEX 2045G</entry>
+                  <entry>76.82</entry>
+                  <entry>66.32</entry>
+                  <entry>68.32</entry>
+                </row>
+                <row>
+                  <entry>ULTRAMID B40L</entry>
+                  <entry>20</entry>
+                  <entry>20</entry>
+                  <entry>20</entry>
+                </row>
+                <row>
+                  <entry>MAH-g-EO1</entry>
+                  <entry />
+                  <entry />
+                  <entry>8.5</entry>
+                </row>
+                <row>
+                  <entry>B215 Antioxidant</entry>
+                  <entry>0.18</entry>
+                  <entry>0.18</entry>
+                  <entry>0.18</entry>
+                </row>
+                <row>
+                  <entry>total</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                  <entry>100</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="left" id="entry-00007-en">*FTIR method.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00191-en" num="0182">As can be seen from <figref>FIG. 4</figref>, the control film (Comparative Ex. E, left top), exhibited large polyamide domains in polyethylene matrix. Films formed from Comparative Ex. F 9 right top) and Inventive Ex. 4 (center bottom) both had smaller domains than the control. However, Comparative Ex. F showed more clustering (aggregation) of the domains—the domains were not as globally dispersed as in Inventive Ex. 4. Inventive Ex. 4 showed globally, well-dispersed, less agglomerating, domain particles. The improved dispersion of the small domains in Inventive Ex. 4 provides better optical and mechanical properties, as shown in Table 10 and 11. See also <figref>FIGS. 5 and 6</figref>.</p>
+      <p id="p-00192-en" num="0000">
+        <tables id="tables-00010-en" num="00010">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 10</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Optical Properties—Set 3 (2 mil monolayer films)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="56pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Comparative</entry>
+                  <entry>Comparative</entry>
+                  <entry>Inventive</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ex. E</entry>
+                  <entry>Ex. F</entry>
+                  <entry>Ex.4</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="56pt" align="char" char="." />
+              <colspec colname="3" colwidth="42pt" align="char" char="." />
+              <colspec colname="4" colwidth="49pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Clarity—standard (%)</entry>
+                  <entry>12.6</entry>
+                  <entry>10</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry>Clarity—Zebedee (%)</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0.56</entry>
+                </row>
+                <row>
+                  <entry>45° Gloss (%)</entry>
+                  <entry>5.7</entry>
+                  <entry>4.6</entry>
+                  <entry>9</entry>
+                </row>
+                <row>
+                  <entry>Total Haze</entry>
+                  <entry>83</entry>
+                  <entry>86</entry>
+                  <entry>56</entry>
+                </row>
+                <row>
+                  <entry>Internal Haze</entry>
+                  <entry>15</entry>
+                  <entry>5</entry>
+                  <entry>9</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00193-en" num="0000">
+        <tables id="tables-00011-en" num="00011">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 11</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Mechanical Properties—Set 3 (2 mil monolayer films)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="98pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Comparative</entry>
+                  <entry>Comparative</entry>
+                  <entry>Inventive</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ex. E</entry>
+                  <entry>Ex. F</entry>
+                  <entry>Ex. 4</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="98pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="char" char="." />
+              <colspec colname="3" colwidth="42pt" align="char" char="." />
+              <colspec colname="4" colwidth="35pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Normalized Elmendorf—CD</entry>
+                  <entry>320</entry>
+                  <entry>240</entry>
+                  <entry>375</entry>
+                </row>
+                <row>
+                  <entry>Normalized Elmendorf—MD</entry>
+                  <entry>260</entry>
+                  <entry>170</entry>
+                  <entry>450</entry>
+                </row>
+                <row>
+                  <entry>Tensile Strength at Break—CD</entry>
+                  <entry>4600</entry>
+                  <entry>4550</entry>
+                  <entry>4240</entry>
+                </row>
+                <row>
+                  <entry>Tensile Strength at Break—MD</entry>
+                  <entry>5100</entry>
+                  <entry>4820</entry>
+                  <entry>4720</entry>
+                </row>
+                <row>
+                  <entry>Tensile Elongation at Break—CD</entry>
+                  <entry>600</entry>
+                  <entry>575</entry>
+                  <entry>710</entry>
+                </row>
+                <row>
+                  <entry>Tensile Elongation at Break—MD</entry>
+                  <entry>530</entry>
+                  <entry>540</entry>
+                  <entry>610</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A composition comprising at least the following:
+<claim-text>A) an anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer having the following properties:
+<claim-text>i) a melt viscosity (177° C.) less than, or equal to, 200,000 cP,</claim-text><claim-text>ii) a density from 0.855 to 0.900 g/cc;</claim-text></claim-text><claim-text>B) an ethylene-based polymer; and</claim-text><claim-text>C) a polar polymer.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer has i) a melt viscosity (177° C.) less than, or equal to, 50,000 cP.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the polar polymer is selected from an ethylene vinyl alcohol polymer, a polyamide, a polyester, a polyester glycol, or combinations thereof.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The composition of <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the polar polymer is selected from an ethylene vinyl alcohol polymer, a polyamide, or a combination thereof.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the anhydride and/or carboxylic acid functionalized ethylene/alpha-olefin interpolymer has a MWD from 1.5 to 3.5.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the anhydride and/or
+<claim-text>carboxylic acid functionalized ethylene/alpha-olefin interpolymer has a density from 0.860 g/cm<sup>3 </sup>to 0.890 g/cm<sup>3</sup>.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the anhydride and/or
+<claim-text>carboxylic acid functionalized ethylene/alpha-olefin interpolymer has a weight average molecular weight (Mw) from 4,000 to 30,000 g/mole.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the ethylene-based polymer (component B) has a melt index (I2) from 0.5 to 50 g/10 min.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein component A is present in an amount from 0.5 to 30 weight percent, based on the weight of the composition.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein component C is present in an amount from 0.5 to 70 weight percent, based on the weight of the composition.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. An article comprising at least one component formed from the composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. A film comprising at least one layer formed from the composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The film of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, further comprising at least one layer formed from a composition comprising a polar polymer.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The film of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, further comprising at least one layer formed from a composition comprising an olefin-based polymer.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. A method of making a film, said method comprising extruding the composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247014A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247014A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247014A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247014A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150247014A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247014A1-20150903-D00003.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150247014A1.PDF" type="pdf" size="1094785" pages="16" />
+</lexisnexis-patent-document>

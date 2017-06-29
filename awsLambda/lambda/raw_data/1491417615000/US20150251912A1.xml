@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150251912A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021938" date-changed="20151214" time-changed="185330">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121230406">
+        <country>US</country>
+        <doc-number>20150251912</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14425603</doc-number>
+        <date>20130510</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150910">
+      <priority-claim sequence="1" kind="national">
+        <country>KR</country>
+        <doc-number>1020120097000</doc-number>
+        <date>20120903</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151006">
+      <classification-ipcr sequence="1">
+        <text>C01B  31/04        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>31</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C01B  31/00        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>31</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151006">
+      <classification-cpc sequence="1">
+        <text>C01B  31/0446      20130101 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>31</main-group>
+        <subgroup>0446</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B82Y  30/00        20130101 LI20141104BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>82</class>
+        <subclass>Y</subclass>
+        <main-group>30</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141104</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>B82Y  40/00        20130101 LI20141104BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>82</class>
+        <subclass>Y</subclass>
+        <main-group>40</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141104</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C01B  31/00        20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>31</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C01B  31/0438      20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>31</main-group>
+        <subgroup>0438</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C01B2204/22        20130101 LA20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>2204</main-group>
+        <subgroup>22</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>Y10T 428/249967    20150401 LA20151001BCEP        </text>
+        <cpc-version-indicator>
+          <date>20150401</date>
+        </cpc-version-indicator>
+        <section>Y</section>
+        <class>10</class>
+        <subclass>T</subclass>
+        <main-group>428</main-group>
+        <subgroup>249967</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151001</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>C</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">8</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">METHOD FOR PRODUCING FOAM-SHAPED GRAPHENE STRUCTURE BY BOILING, AND FOAM-SHAPED GRAPHENE STRUCTURE USING SAME</invention-title>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>POSTECH ACADEMY-INDUSTRY FOUNDATION</orgname>
+            <role>03</role>
+            <address>
+              <city>Pohang-si, Gyeongsangbuk-do</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kim</last-name>
+            <first-name>Moo Hwan</first-name>
+            <address>
+              <city>Pohang-si</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Ahn</last-name>
+            <first-name>Ho Seon</first-name>
+            <address>
+              <city>Pohang-si</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Jang</last-name>
+            <first-name>Ji Wook</first-name>
+            <address>
+              <city>Ulsan</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Lee</last-name>
+            <first-name>Jae Sung</first-name>
+            <address>
+              <city>Pohang-si</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>KR13004154</doc-number>
+        <date>20130510</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014035030</doc-number>
+        <date>20140306</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150910">
+      <main-family family-id="164584638">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014035030</doc-number>
+            <kind>A1</kind>
+            <date>20140306</date>
+          </document-id>
+          <application-date>
+            <date>20130510</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150251912</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20130510</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101382911</doc-number>
+            <kind>B1</kind>
+            <date>20140401</date>
+          </document-id>
+          <application-date>
+            <date>20120903</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020140031485</doc-number>
+            <kind>A</kind>
+            <date>20140313</date>
+          </document-id>
+          <application-date>
+            <date>20120903</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="164584636">
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014035030</doc-number>
+            <kind>A1</kind>
+            <date>20140306</date>
+          </document-id>
+          <application-date>
+            <date>20130510</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150251912</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20130510</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101382911</doc-number>
+            <kind>B1</kind>
+            <date>20140401</date>
+          </document-id>
+          <application-date>
+            <date>20120903</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020140031485</doc-number>
+            <kind>A</kind>
+            <date>20140313</date>
+          </document-id>
+          <application-date>
+            <date>20120903</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention relates to a foam-shaped graphene structure and, more particularly, to a method for producing a foam-shaped graphene structure by boiling, and to a foam-shaped graphene structure using same. Provided is a method for producing a foam-shaped graphene structure by boiling, which includes the steps of: preparing a base substrate (S1); placing the base substrate in a reduced graphene oxide (RGO) colloid solution (S2); applying a heat flux to the base substrate using an exothermic body so as to cause boiling (S3); and generating the foam-shaped graphene structure on the base substrate as bubbles generated by the boiling become overlapped (S4).</p>
+  </abstract>
+  <legal-data date-changed="20150925">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150305</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015251912A1</docdb-publication-number>
+      <docdb-application-id>444309897</docdb-application-id>
+      <new-owner>POSTECH ACADEMY-INDUSTRY FOUNDATION, KOREA, REPUBL</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:KIM, MOO HWAN;AHN, HO SEON;JANG, JI WOOK;AND OTHERS;SIGNING DATES FROM 20150226 TO 20150303;REEL/FRAME:035097/0452</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to a foam-shaped graphene structure, and more particularly, to a method for producing a foam-shaped graphene structure by boiling, and a foam-shaped graphene structure prepared using the same.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND ART</heading>
+      <p id="p-00002-en" num="0002">Since A. Geim and K. Novoselov have simply and successfully isolated a graphene monolayer, which is composed of flat plates having a thickness corresponding to one sp<sup>2</sup>-bound carbon atom, from graphite using a so-called Scotch tape method in 2004, a variety of research groups have conducted ardent research on graphene in an attempt to understand and employ abnormal characteristics such as superior electronic characteristics (semimetals, zero-gap semiconductors, a high electron mobility of 15,000 cm<sup>2</sup>V<sup>−1</sup>s<sup>−1</sup>, and a resistance of 10<sup>−6</sup>Ω lower than silver), thermal conductivity (5,000 Wm<sup>−1</sup>K<sup>−1</sup>), optical characteristics (transparency and absorbing only 2.3% of white light), a high mechanical strength (200 times higher than steel), and a high surface area per unit mass (solution characteristics, and a face area of 3,000 m<sup>2</sup>g<sup>−1</sup>).</p>
+      <p id="p-00003-en" num="0003">Owing to such unique characteristics, graphene has been, for example, known to be highly useful in being used in transparent conductive films, electrodes for energy storage devices, filed-effect devices, microelectronic devices, chemical and biological sensors, and filler-conductive polymer composites.</p>
+      <p id="p-00004-en" num="0004">Most of conventional research has focused on two-dimensional (2D) structures. However, the shape of graphene having a three-dimensional (3-D) structure has been more recommended to make use of most of the excellent physical and electronic characteristics, a high surface, and chemical functions.</p>
+      <p id="p-00005-en" num="0005">In recent years, Chen el al processed a 3-D graphene foam using a template-directed chemical vapor deposition (CVD). The optimized conductivity of the 3-D graphene foam is 10 S·cm<sup>−1</sup>, which is an order of calculation of approximately 6 higher than that of a chemically derived graphene-base composite.</p>
+      <p id="p-00006-en" num="0006">Also, the conductivity of graphene is maintained even after pores are filled with polydimethylsilonxane (PDMS). However, CVD treatment requires a high processing temperature and an etching process, which makes it necessary to make a graphene foam on a nickel or copper foam. And, an additional process of transferring a graphene film onto another substrate is essentially required. However, such a process has a problem in that it is expensive and a large amount of time is required.</p>
+      <p id="p-00007-en" num="0007">Further, conventional CVD methods have a problem in that a metal should be etched again with an acid after a nickel foam is processed, and exposed to a high temperature of 1,000° C. to perform chemical vapor deposition.</p>
+      <heading id="h-00003-en" level="1">DISCLOSURE</heading>
+      <heading id="h-00004-en" level="1">Technical Problem</heading>
+      <p id="p-00008-en" num="0008">The present invention is designed to solve the problems of the prior art, and therefore it is an object of the present invention to provide a method of directly forming a self-assembled foam-like graphene (SFG) structure on various types of substrates to be treated by simple nuclear boiling, and a SFG structure formed by the method.</p>
+      <heading id="h-00005-en" level="1">Technical Solution</heading>
+      <p id="p-00009-en" num="0009">According to an aspect of the present invention, there is provided a method for producing a foam-shaped graphene structure by boiling, which includes the steps of: preparing a base substrate (S1), placing the base substrate in a reduced graphene oxide (RGO) colloid solution (S2), applying a heat flux to the base substrate using an exothermic body so as to cause boiling (S3), and generating a foam-shaped graphene structure on the base substrate as bubbles generated by the boiling overlap (S4).</p>
+      <p id="p-00010-en" num="0010">In this case, in Step S1, the base substrate may be at least one selected from the group consisting of silicone, a transparent conductive oxide (TCO) glass, a metal, a mother glass, and an elastic polymer.</p>
+      <p id="p-00011-en" num="0011">Also, in Step S2, the graphene oxide may be reduced by hydrazine.</p>
+      <p id="p-00012-en" num="0012">In addition, the reduced graphene oxide may be present at a content of 0.01 to 0.0001% wt in the colloid solution in Step S2.</p>
+      <p id="p-00013-en" num="0013">Further, the reduced graphene oxide may be present at a content of 0.005% wt in the colloid solution in Step S2.</p>
+      <p id="p-00014-en" num="0014">Also, the base substrate itself may serve as a heater instead of the exothermic body in Step S3.</p>
+      <p id="p-00015-en" num="0015">Further, in Step S3, the heat flux may be adjusted within a range of 100 kW/m<sup>2 </sup>to 1,500 kW/m<sup>2</sup>.</p>
+      <p id="p-00016-en" num="0016">According to another aspect of the present invention, there is provided a foam-shaped graphene structure produced by the method for producing a foam-shaped graphene structure by boiling.</p>
+      <heading id="h-00006-en" level="1">Advantageous Effects</heading>
+      <p id="p-00017-en" num="0017">According to the method for producing a foam-shaped graphene structure by boiling according to one embodiment of the present invention, a graphene structure can be simply formed using a conventional reduced graphene oxide (RGO) colloid.</p>
+      <p id="p-00018-en" num="0018">Also, the method for producing a foam-shaped graphene structure by boiling according to one embodiment of the present invention provides cost saving and convenience in process since the conventional CVD methods do not require a process of etching a metal with an acid after a nickel foam is processed.</p>
+      <p id="p-00019-en" num="0019">In addition, the method for producing a foam-shaped graphene structure by boiling according to one embodiment of the present invention can be useful in adjusting the thickness of a graphene structure produced under control of the heat flux, and forming a translucent graphene structure.</p>
+      <p id="p-00020-en" num="0020">Additionally, since pores present in foam are much smaller than that of the conventional methods, a large amount of water can be absorbed into the foam. As a result, a dye can easily penetrate through the foam, and thus the foam-shaped graphene structure can be used for solar cells.</p>
+      <p id="p-00021-en" num="0021">Further, the foam-shaped graphene structure has an advantage in that it has higher electrical conductivity than the foam prepared using the CVD methods, and that an SFG structure can be formed on substrates having various sizes.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00007-en" level="1">DESCRIPTION OF DRAWINGS</heading>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 1</figref> is a diagram showing a mechanism of forming a foam-shaped graphene structure according to one embodiment of the present invention: <figref>FIG. 1A</figref> shows a mechanism of forming a base graphene layer (BGL) structure, and <figref>FIG. 1B</figref> shows a mechanism of forming an SFG seed.</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 2A</figref> shows that BGL:RGO platelets are evenly stacked at a thickness of 50 to 100 nm, and <figref>FIGS. 2B and 2C</figref> show a process of forming a SFG structure from a seed and bubbles.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 3</figref> shows the deconvolution of XPS peaks of GO, RGO and SFG.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 4</figref> shows the results of a surface wettability test performed on SFG using environmental-scanning electron microscopy (E-SEM).</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 5</figref> shows the morphologies of 3D SFG structures.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 6</figref> is a side view showing the 3D SFG structure as a highly magnified scanning electron microscopic (HRSEM) image.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 7</figref> shows the characteristics of the SFG structure, that is, Raman spectra, UPS spectra, and work functions of GO, RGO and SFG.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 8</figref> is a diagram showing the results of a nuclear boiling experiment: <figref>FIG. 8A</figref> shows a boiling curve to which the heat flux and a wall temperature are applied, and <figref>FIG. 8B to 8E</figref> show formation of bubbles and SFG structures according to a change in heat flux.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 9</figref> shows the shapes of the SFG structures formed on various substrates; <figref>FIG. 9A to 9D</figref> show pictures and SEM images of SFG films formed on a FTO glass (A), copper foil (B), a glass (C), and PDMS (D).</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 10</figref> shows a nuclear boiling experimental device.</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 11</figref> shows SFG-based quantum dot sensitized solar cells (QDSSCs): <figref>FIG. 11A</figref> is a schematic diagram of SFG-based QDSSCs, <figref>FIG. 11B</figref> is a real image of the SFG-based QDSSCs, and <figref>FIG. 11C</figref> shows the performance of Au, 2-D-RGO and SFG-based QDSSCs.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00008-en" level="1">EMBODIMENT</heading>
+      <p id="p-00033-en" num="0033">Hereinafter, preferred embodiments of a method for producing a foam-shaped graphene structure by boiling according to the present invention, and a foam-shaped graphene structure prepared using the same will be described in detail with reference to the accompanying drawings. However, it is contemplated that like numbers refer to like elements throughout the description of the figures even when the elements are shown in the different drawings. Also, in describing the present invention, detailed descriptions with respect to known functions or constructions of the present invention will be omitted for clarity when the detailed descriptions make the scope of the present invention ambiguous.</p>
+      <p id="p-00034-en" num="0034">The method for producing a foam-shaped graphene structure by boiling according to one embodiment of the present invention is as described below. First, a base substrate is prepared. The base substrate may be at least one selected from the group consisting of silicone, a transparent conductive oxide (TCO) glass, a metal, a mother glass, and an elastic polymer.</p>
+      <p id="p-00035-en" num="0035">Next, the base substrate is placed in a reduced graphene oxide (RGO) colloid solution.</p>
+      <p id="p-00036-en" num="0036">A heat flux is applied to the base substrate using an exothermic body so as to cause boiling. Here, the base substrate itself may serve as a heater instead of the exothermic body.</p>
+      <p id="p-00037-en" num="0037">Bubbles are generated by the boiling, and a foam-shaped graphene structure is produced on the base substrate as the generated bubbles overlap.</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIG. 1</figref> is a diagram showing a mechanism of forming a base graphene layer (BGL) structure, and a mechanism of forming a self-assembled foam-like graphene (SFG) seed.</p>
+      <p id="p-00039-en" num="0039">It shows that a triple line (a line on which gas, liquid and solid phases converge) is moving along a micro-layer in bubbles while forming a base graphene layer (BGL) as the bubbles grow (<figref>FIG. 1A</figref>). The plurality of isolated bubbles are suddenly combined as the bubbles grow and break away. Since the concentration of RGO platelets suddenly increase at local vacancies between the bubbles, the RGO platelets are compressed during a process of forming a seed for SFG structures. The bubbles are generated on a base graphene layer, and an SFG seed is formed in a space in which the bubbles overlap. The SFG seed grows as the bubbles continue to overlap as described above (<figref>FIG. 1B</figref>).</p>
+      <p id="p-00040-en" num="0040">The formation of the foam-shaped graphene structure by boiling is performed using a simple nuclear boiling method. A thin substrate may be put on a heater. In this case, the substrate itself may serve as a heater in a graphene colloid solution. A reduced graphene oxide (RGO) is sufficiently dispersed in the graphene colloid solution by hydrazine due to electrostatic repulsion between carboxyl groups charged into cathodes on a graphene seed. At least 90% of RGO is observed in the form of a monolayer, and the size of the RGO seed suspended in water is measured using an atomic force microscope (AFM). As a result, the size of the RGO seed is in a range of 0.5 to 1 μm. The RGO colloid solution saturated in an atmospheric environment is boiled by a silicone heater coated with silicon dioxide (SiO<sub>2</sub>) for 10 minutes at a heat flux of 1,200 kW/m<sup>2</sup>.</p>
+      <p id="p-00041-en" num="0041">The heat flux and wall temperature of the heater are controlled by adjusting an applied electrical voltage.</p>
+      <p id="p-00042-en" num="0042">First, a base graphene layer (BGL) having a thickness of 50 to 100 nm grows on a surface of silicon dioxide in the RGO solution during nuclear boiling (<figref>FIG. 2A</figref>) The base graphene layer is an assembly 2-D RGO platelet including 5 to 10 RGO layers, and evenly stacked on a substrate. This will comply with a mechanism for forming a base graphene layer. The RGO platelet maintains hydrophilicity due to the presence of carboxyl groups appearing at edges of the RGO plate. The X-ray photoelectron spectroscopic spectra (XPS) of graphene oxide (GO) and RGO at 284.6, 286.5, 287.8 and 289.1 eV are derived from C<sub>1s </sub>peaks of C—C, C—O, C═O, and C(O)O. Among theses, the C—O peak at 286.5 eV is significantly lowered due to epoxides and hydroxyl groups. However, the C═O peak at 287.8 eV is not lowered to the same level as the C—O peak due to the carboxyl groups (<figref>FIG. 3</figref>).</p>
+      <p id="p-00043-en" num="0043">As indicated by a red circle in a highly magnified scanning electron microscopic (HRSEM) image of <figref>FIG. 2A</figref>, a contact angle of a with respect to the interface between BGL and a silicon dioxide substrate is measured. From the fact that the contact angle (56.3°) of the droplet having a volume of 1 μL on BGL is lower than the contact angle (72.2°) of the droplet having a volume of 1 μL on the silicon dioxide substrate, it is revealed that BGL has very high surface wettability. The carboxyl groups charged into the cathodes makes BGL to exhibit very excellent wettability. The SFG structure starts to be formed on BGL by the aid of the bubbles on the substrate due to condensation between hydrogen bonds and RGO plates. Most of the RGO plates are present in the form of a free-standing foam used to manufacture a wall of SFG pores.</p>
+      <p id="p-00044-en" num="0044">The contact angle of the droplet at this early stage is shown to be 62.4°, indicating that the film still has hydrophilicity due to BGL present below the SFG seed (<figref>FIG. 2B</figref>)</p>
+      <p id="p-00045-en" num="0045">However, as the reaction further proceeds, the SFG structure is formed, and the contact angle of the droplet on a surface of the 3-D SFG structure is 120.6°, which indicates that the surface of the SFG structure is superhydrophobic (<figref>FIG. 2C</figref>). An interesting phenomenon is observed while measuring the contact angle of the droplet. In the prior art, it has been accepted that water does not penetrate through pores or a hydrophobic substance having a micro-/nano-scaled structure.</p>
+      <p id="p-00046-en" num="0046">However, when droplets having a volume of 10 μL is dispersed, the droplets are absorbed within one minute, as shown in <figref>FIG. 4A</figref>. To further study the water absorption, the wettability on the SFG layer is observed using environmental-scanning electron microscopy (E-SEM). The results are shown in <figref>FIG. 4B</figref>.</p>
+      <p id="p-00047-en" num="0047">Water on the SFG layer at 30° C. and 0.6 bar is observed using a digital camera. Several droplets are generated on the SFG layer. Most of the droplets on the SFG film disappear as indicated by a red dotted circle in the E-SEM image. From such results, it can be seen that the SFG layer has both hydrophilicity and hydrophobicity.</p>
+      <p id="p-00048-en" num="0048">This is because the RGO plate having hydrophobicity is exposed by means of self-assembly, and the carboxyl groups are buried in the structure. Such two characteristics make the RGO plate applicable as a scaffold in polar and organic solvents. Since the entire surface of the graphene foam grown by the CVD method is hydrophobic, it is difficult to apply the RGO plate as the scaffold in the polar solvent. It is possible to apply the SFG layer as the effective scaffold for a detailed mechanism for forming a QDSSC counter electrode and a SFG structure.</p>
+      <p id="p-00049-en" num="0049">The morphology of the SFG structure is further studied by means of HRSEM analysis and high-resolution transmission electron microscopic (HRTEM) analysis (<figref>FIGS. 2</figref>, <b>5</b> and <b>6</b>). <figref>FIG. 5A to 5C</figref> are enlarged views of SEM images of an SFG structure, and <figref>FIG. 5D</figref> is a diagram showing an AFM image of the SFG structure.</p>
+      <p id="p-00050-en" num="0050">The size of the pores is generally in a range of 1 to 5 μm. The RGO platelets are tightly bound to each other to form a wall of the SFG pores. In fact, the SFG structure is found in many free-standing RGO platelets (<figref>FIG. 5E</figref>). This is one of evidences supporting the above-described mechanism for forming an SFG structure.</p>
+      <p id="p-00051-en" num="0051">The RGO platelets are composed of 5 to 10 graphene layers, and the distance between the layers is 3.52 Å, as analyzed by HRTEM (<figref>FIG. 5F</figref>). This is further verified by the X-ray diffraction radiation (XDR) and Scherer's equation. The average thickness of the SFG structure is approximately 9.3 μm, and the thickness of BGL is approximately 100 nm (<figref>FIG. 6A</figref>).</p>
+      <p id="p-00052-en" num="0052">The role of BGL present below the SFG structure is very important. 2-D BGL serves as an electron reservoir that especially effectively induces the transfer of charges from the 3-D SFG structure on a non-conductive substrate. <figref>FIG. 6B</figref> is a side view showing a HRSEM image of the SFG film. The size of the pores is in a range of 1 to 3 μm, which is identical to the size as viewed from a plane. The SFG structure according to one embodiment of the present invention has a conductivity of 6.7 10 Scm<sup>−1 </sup>which is lower than that of the foam-shaped graphene having a conductivity of 10 Scm<sup>−1</sup>, which is derived by means of the CVD method. However, when the SFG film is annealed (or calcined) at 400° C. for 4 hours under argon gas, the SFG film has a conductivity of 11.8 Scm<sup>−1 </sup>and a surface resistance of 91.2Ω, both of which are higher than those of SFG films prepared by conventional methods (Table 1).</p>
+      <p id="p-00053-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Conductivity and surface resistance of GO, SFG and SFG-A</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <colspec colname="3" colwidth="98pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Sample</entry>
+                  <entry>Resistance (Ω)</entry>
+                  <entry>Conductivity (S/m)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>GO</entry>
+                  <entry>&gt;500 MΩ</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>SFG</entry>
+                  <entry>161.1 (±0.088)</entry>
+                  <entry>6.7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>SFG-A[a]</entry>
+                  <entry> 91.2 (±0.021)</entry>
+                  <entry>11.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="left" id="entry-00001-en">[a]SFG-A: Calcined SFG film at 400° C. for 4 hours under argon</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00054-en" num="0053">The conductivity of the chemically derived SFG structure is mainly determined by the resistance of RGO itself and the resistance between the RGO platelets. As described above, the RGO platelets are self-assembled by means of condensation of hydrogen bonds. The interaction between the platelets is too strong to separate the SFG film using a Scotch tape and ultrasonication in water. The resistance between the RGO platelet may be minimized due to the intimate distance and strong adhesion between the RGO platelets. In addition, the nuclear boiling further reduces the RGO platelets themselves due to a thermal reduction as described above. As shown in <figref>FIG. 3B</figref>, the (C—C and C═C)/(C—O+C═O+C(O)O) ratio of GO (1.1) increases to 1.8 (RGO) and 2.1 (SFG) due to recovery of a sp<sup>2 </sup>domain. These results show that the ratio of GO is further reduced during the nuclear boiling. The XPS results are proven by Raman spectroscopy. In a Raman study, the I<sub>D</sub>/I<sub>G </sub>ratio of GO (0.88) increases to 1.16 (RGO) and 1.43 (SFG) (<figref>FIG. 7</figref> and Table 2).</p>
+      <p id="p-00055-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Raman parameters of GO, RGO and SFG</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="56pt" align="left" />
+              <colspec colname="1" colwidth="161pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Raman parameters</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="70pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="63pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Sample</entry>
+                  <entry>I<sub>D</sub></entry>
+                  <entry>I<sub>G</sub></entry>
+                  <entry>I<sub>D</sub>/I<sub>G</sub></entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="70pt" align="char" char="." />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="63pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>GO</entry>
+                  <entry>0.88</entry>
+                  <entry>1</entry>
+                  <entry>0.88</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>RGO</entry>
+                  <entry>1</entry>
+                  <entry>0.86</entry>
+                  <entry>1.16</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>SFG</entry>
+                  <entry>1</entry>
+                  <entry>0.70</entry>
+                  <entry>1.43</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00056-en" num="0054">A G band (at 1,600 cm<sup>−1</sup>) and a D band (at 1,354 cm<sup>−1</sup>) occur from an aromatic carbon ring such as ripples, edges and defects, and an E2g mode of disorders, respectively. According to direct exfoliation of pure graphene or graphite prepared by a ‘Scotch tape method,’ the G band has a stronger strength than the D band. In most of research on RGO, however, two bands appear to have a similar strength, which indicates that a level of disorders increases during the thermal reduction in spite of the recovery of 6-tiems aromatic rings. After the nuclear boiling, the level of disorders further increases due to the additional thermal reduction.</p>
+      <p id="p-00057-en" num="0055">The ultraviolet photoemission spectroscopic (UPS) spectra of the GO, RGO, and SFG films are measured to further study a binding state and a degree of thermal reduction. In a balance band structure, the strength of peaks around Fermi energy (E<sub>Ferimi</sub>) reflects metallic characteristics of respective substances (<figref>FIG. 7B</figref>). When GO is reduced into RGO, the peak strength further increase due to sp<sup>2 </sup>binding recovery. Also, the peak strength of SFG is much higher than that of the nuclear boiling RGO. E<sub>cutoff </sub>and E<sub>Ferimi </sub>are clearly defined, and the work function of each film is calculated using the following Equation 1.</p>
+      <p id="p-00058-en" num="0000">[in-line-formulae]φ=<i>hv−E</i><sub>cutoff</sub><i>+E</i><sub>Fermi</sub>  Equation 1[/in-line-formulae]</p>
+      <p id="p-00059-en" num="0000">wherein hv (40.8 eV) represents photon energy received from a He II source, and a bias of −5 V applied to form the boundary in an E<sub>cutoff </sub>region. In the case of the GO film, however, E<sub>cutoff </sub>may be measured due to charging on a surface of the GO film. The work function of a conductive film depends mainly on surface properties and volume properties. The surface properties including the work function is known to depend mainly on the nature of a sample. The work function of graphene is in a range of 4.2 eV to 4.5 eV. The real work function of RGO is 4.55 eV (4.90 eV as measured by Kelvin's calculation), and the real work function of SFG is 4.30 eV (4.78 eV), indicating that SFG is more reduced than RGO. The work functions of OH, —O—, and COOH groups on RGO decrease. It is concluded that RGO is further reduced during the nuclear boiling due to a decrease in the work function, an increase in (C—C or C═C)/(C—O+C═O+C(O)O) ratio, and an increase in I<sub>D</sub>/I<sub>G </sub>ratio. The conductivity of SFG is chemically reduced due to a combination of a good binding property and the recovery of sp2 bonds.</p>
+      <p id="p-00060-en" num="0056">BGLs and SFGs explain how the structure is formed on a surface of a heater. First, it is possible to observe which phenomenon occurs between the heater and the RGO colloid solution under control of the heat flux. The heat flux gradually rises to preserve a stable state (<figref>FIG. 8A</figref>). Graphene is not found on a top surface of the heater even as the time increase at a heat flux of 50 kW/m<sup>2 </sup>(in the case of a nuclear boiling point of approximately 112° C.), indicating that it is essential to form bubbles so as to form the RGO structure on the heater. When the heat flux increases to 100 kW/m<sup>2</sup>, the bubbles start to be formed (when the nuclear boiling point slightly increases to approximately 115° C.) (<figref>FIG. 8B</figref>).</p>
+      <p id="p-00061-en" num="0057">While the repeated formation and growth of the bubbles are achieved, a liquid film having a fine thickness (i.e., a microlayer) formed on a bottom surface of a bubble layer has graphene horizontally aligned thereon. As the size of the bubbles increases, a triple line (a line on which gas, liquid and solid phases converge) moves to form BGLs along a microlayer of the bubbles. Much more bubbles are generated at a heat flux of 400 kW/m<sup>2</sup>, and lumping of many bubbles occurs. Several tens of separate bubbles are suddenly combined as the bubbles grow and break away. Since the concentration of the RGO platelets suddenly increases in void spaces between the bubbles, the RGO platelets are compressed during a process of forming a seed for such SGF structures (<figref>FIGS. 8B and 1B</figref>).</p>
+      <p id="p-00062-en" num="0058">
+        <figref>FIGS. 8B to 8E</figref> show only the places in which the bubbles are generated. Here, a seed for BGLs and SFG is placed on a surface of a substrate. Many small bubbles covers the whole of the heater at a high heat flux region (800 to 1,200 kW/m<sup>2</sup>). In this case, the bubbles are combined to be generated. Therefore, SFG structures having relatively small and uniform pores are produced (<figref>FIGS. 8D and 8E</figref>). The pore size of the SFG structures may be adjusted by controlling the heat flux. However, a large amount of time is required in an hour unit to produce the SFG structures at a low heat flux (800 kW/m<sup>2 </sup>or less). Also, it is difficult to obtain the uniform pores (<figref>FIG. 8D</figref>). Cracking of the heater makes it difficult to increase the heat flux to 1200 kW/m<sup>2 </sup>or more. However, when a system is properly controlled, the SFG structures may be formed much more small and uniformly (in a second or minute unit). When the nuclear boiling time is changed to 10 minutes and 60 minutes, SFG films having a thickness of 9.3 μm and 42.2 μm are obtained.</p>
+      <p id="p-00063-en" num="0059">Based on the above-described above mechanism, the SFG structure may be placed on a substrate such as TCO (FTO), a metal (copper), a glass, or a polymer (PDMS) using additional processes, such as etching using a SFG transfer process, and polymer removal, without any surfactant. The SFG structure is easily formed on the conductive substrate such as FTO and copper (<figref>FIGS. 9A and 9B</figref>).</p>
+      <p id="p-00064-en" num="0060">It is possible to produce the SFG structure even on a non-conductive substrate such as a glass or PDMS when the substrate comes in contact with the heater (<figref>FIGS. 9C and 9D</figref>). The SFG structures on each substrate are determined by means of SEM analysis. In all cases, the scaling-up is easy. The size of the SFG structure coated with PDMS is greater than or equal to 6 cm (<figref>FIGS. 9D and 10</figref>). The three films except copper (the metals are opaque) exhibit semi-transparency even when the films have an extremely thin thickness (approximately 10 μm). The pores in the SFG film are made semi-transparent.</p>
+      <p id="p-00065-en" num="0061">Among these, the present inventors apply the SFG structure loaded onto FTO so as to resist against electrodes of quantum dot-sensitized solar cells (QDSSCs). The QDSSCs has the same configuration as dye-sensitized solar cells (DSSCs), but use inorganic quantum dots (QDs) as a light absorbent instead of a molecular dye. The use of the inorganic QDs has several advantages such as generation of multiple exiton generation band gaps by adjusting the configuration and size of QDs, a high molar extinction coefficient, a high dipole moment, etc. However, the maximum current conversion efficiency (η) of QDSSCs is approximately 4%, which is much lower than the maximum current conversion efficiency (η) of the DSSCs. In this system, CdS and CdSe use visible light to absorb QDs, and a ZnO nanowire serves as an electron collector such as an absorber layer (<figref>FIG. 11A</figref>).</p>
+      <p id="p-00066-en" num="0062">Electrons generated by radiation of CdSe (1.7 eV) and CdS (2.4 eV) move to ZnO conductive region. Then, holes move in an opposite direction to oxidize a polysulfide (<figref>FIG. 11A</figref>). A rare and expensive Pt or Au catalyst is used as the counter electrode. In current research, a FTO noble-metal-free counter electrode is applied to manufacture high-efficiency CdSe/CdS/ZnO nanowire-based QDSSCs. A well connected SFG frameworks having many pores provide a very high area, excellent wettability, and charge transfer in electrolytes.</p>
+      <p id="p-00067-en" num="0063">
+        <figref>FIG. 11B</figref> shows a real image of SFG-based QDSSCs. A red dotted box represents a real active region including a CdSe/CdSe/Zn nanowire system (0.25 cm<sup>2</sup>). For comparison, Au- and 2-D RGO-based QDSSCs are also shown. Pt is not contemplated due to the lack in activity caused by a chemical absorption action of sulfur compounds.</p>
+      <p id="p-00068-en" num="0064">The basic J-V characteristics of CdSe/CdS-cosensitized ZnO nanowire solar cells are to use Au, 2-D RGO, and SFG, and use a solar-intensity polysulfide electrolyte with air mass 1.5 global (AM 1.5G). Detailed photovoltaic parameters of respective samples, that is, an open circuit voltage (Voc), a short circuit current density (Jsc), a fill factor (FF), and η are listed in Table 3.</p>
+      <p id="p-00069-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 3</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Photovoltaic properties of QDSSCs with different</entry>
+                </row>
+                <row>
+                  <entry>counter electrodes (Au, SFG, and 2-D RGO)</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="63pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Sample</entry>
+                  <entry>V<sub>oc </sub>(mV)</entry>
+                  <entry>J<sub>sc </sub>(mA/cm<sup>2</sup>)</entry>
+                  <entry>FF</entry>
+                  <entry>η (%)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="char" char="." />
+              <colspec colname="3" colwidth="63pt" align="char" char="." />
+              <colspec colname="4" colwidth="21pt" align="char" char="." />
+              <colspec colname="5" colwidth="42pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Au</entry>
+                  <entry>675</entry>
+                  <entry>12.4</entry>
+                  <entry>0.40</entry>
+                  <entry>3.6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>SFG</entry>
+                  <entry>624</entry>
+                  <entry>14.1</entry>
+                  <entry>0.40</entry>
+                  <entry>3.6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>2-D RGO</entry>
+                  <entry>555</entry>
+                  <entry>9.6</entry>
+                  <entry>0.27</entry>
+                  <entry>1.4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00070-en" num="0065">The SFG cells have the highest η of 3.60%, including a V<sub>oc </sub>of 624 mV, a J<sub>sc </sub>of 14.1 mA/cm<sup>2</sup>, and a FF of 0.42, to shield light from other regions. The η of the SFG cells is highest compared to Au (3.4%) and 2-D RGO (1.4%) (<figref>FIG. 9B</figref> and Table 3).</p>
+      <p id="p-00071-en" num="0066">The electrolytes may penetrate through the pores of the SFG structure due to the wettability of the SFG structure. Thus, a large surface of the SFG structure may be used as a whole. Also, a good binding property between the RGO platelets may help the transfer of electrons through the polysulfide electrolytes. However, only an exposed surface of the 2-D RGOs may be used. In addition, the conductivity of SFG is higher than that of RGO, as described above. As a result, the parameters η, J<sub>sc </sub>and FF of the SFG cells are much higher than those of 2-RGO, and has slightly better cell performance than reference cells (Au). The efficiency of the SFG film may be further improved by adjusting the pore size and thickness of the SFG film. In the case of the bubbles such as graphene grown by the CVD method, the hydrophobicity may prevent the accession of electrolytes, as described above.</p>
+      <p id="p-00072-en" num="0067">As described above, 3-D SFGs may be easily bubbled on any substrate such as TCO, various metals, a glass, and a polymer by nuclear boiling without any additional process. SFGs are formed by self-assembly between the respective RGO platelet due to the bubbles. Also, the XPS, Raman, and UPS analyses show that RGO may be reduced by nuclear boiling. The (C—C or C═C)/(C—O+C═O+C(O)O) ratio and I<sub>D</sub>/I<sub>G </sub>ratio of SFG increase, and the work function of SFG decreases, compared to RGO. The film has a surface resistance of 91.2Ω and a conductivity of 11.8 S/cm, which are similar to those of graphene obtained by the CVD method. An SFG cathode resembles an Au counter electrode in the QDSSCs due to a wide area, a good binding property, and easy diffusion, and has an activity of an electrical catalytic action of a polysulfide redox couple superior to the 2-D RGO cells. The SFG counter electrode exhibits the highest photovoltaic performance. That is, SFG counter electrode has the highest η, Voc, Jsc and FF of 3.60%, 624 mV, 14.1 mA/cm<sup>2 </sup>and 0.41, respectively. The nuclear boiling is a simple and inexpensive method that may be used to produce and easily grow the SFG structure. The SFG structures formed on various substrates may be applied in various fields such as super capacitors, chemical biological sensors, energy storage devices such as high-performance scaffolds of DSSCs or photoelectrochemical cells (PECs), etc.</p>
+      <heading id="h-00009-en" level="1">Examples</heading>
+      <heading id="h-00010-en" level="1">Preparation of SFG Structures</heading>
+      <p id="p-00073-en" num="0068">The nuclear boiling was performed using laboratory equipment equipped with a pull chamber containing saturated water, a reflux condenser, a 400 W preheating device, and a heater substrate formed on a bottom surface thereof. Since gases dissolved in a RGO colloid solution should be removed, the RGO colloid solution was satisfactorily saturated for 2 hour before the heat flux of the heater substrate was adjusted using the preheating device. The silicone substrate having a size of 20×25 mm includes an SiO<sub>2 </sub>layer, which serves as a heater. An exothermic body was a thin platinum film that had a thickness of approximately 1,200 μm. A layer was formed on a bottom surface of the film using an E-beam evaporator. The platinum film was patterned on the bottom surface of the heater, and SiO<sub>2 </sub>coating is required to measure an exact wall temperature (i.e., a temperature of the substrate), and essential to measure the heat flux for a mechanism for forming an SFG structure (<figref>FIG. 8</figref>).</p>
+      <p id="p-00074-en" num="0069">Before a boiling experiment (SFG coating), the patterned platinum film on the bottom surface of the silicone heater was scaled with a pattern using a four-wired method according to a temperature of 100, 120, 140 and 160° C. so as to measure the resistance of the platinum film in a convection oven (JEIO TECH, OF-12GW). Thus, a linear (R<sup>2</sup>: approximately 0.99999) scaling chart between the temperature and the resistance was used to estimate a wall temperature of the silicone heater during a boiling experiment. As shown in <figref>FIG. 10A</figref>, the nuclear boiling of the heater substrate was caused at a heat flux of 300 kW/m<sup>2 </sup>as indicated in a red dotted box. The RGO colloid solution was prepared at a concentration of 0.0005 wt % together, and was based on distilled water. After the preparation process as described above, the heat flux gradually increased to 50 kW/m<sup>2 </sup>to preserve a stable state. In each process, the heat flux was adjusted for 2 minutes, and the heat flux continued to increase to 1,200 kW/m<sup>2</sup>. The SFG structure was coated with copper, FTO, a glass, and PDMS without any SiO<sub>2 </sub>coating and platinum film pattern. FTO having am area of 40×15 mm was prepared, and a heat flux of 600 kW/m<sup>2 </sup>was applied to SFG on FTO for 2 hours by means of direct heating. Copper foil (Aldrich, 349208-33G) having an area of 10×12 mm was prepared, and the same conditions as in FTP were applied to SFG on the copper foil. An indirect heating method was applied to a non-conductive substrate such as PDMS or a glass. The SFG structures were formed on PDMS and glass physically attached to the silicone heater.</p>
+      <p id="p-00075-en" num="0070">Preparation of CdSe/CdS/ZnO Nanowire Photoelectrode and Cell Fabrication</p>
+      <p id="p-00076-en" num="0071">A CdSe/CD/ZnO nanowire array was prepared using a 3-step solution-based method. A ZnO NW array on a FTO substrate (TEC, 13 Ω/sq.) was dipped in solutions of 0.01 M Zn(NO<sub>3</sub>)<sub>2</sub>6H<sub>2</sub>O and 0.5 M NH<sub>4</sub>OH at 95° C. for 20 hours using an ammonia solution method. A ZnO nanowire electrode was sensitized in situ with CdS and CdSe using continuous ion layer absorption, a reaction (SILAR) and chemical bath deposition (CBD). A counter electrode and an optical electrode (having an active region of 0.25 cm<sup>2</sup>) were positioned between hot-melt ionomer films (Surlyn) having a thickness of 60 μm while being heated (at 130° C. for one minute). A polysulfide electrolyte was injected through holes previously formed through the counter electrode, and each hole was sealed with a small-sized Surlyn fragment and a cover glass of a microscope. Such a polysulfide was composed of 0.5 M Na<sub>2</sub>S, 2 M S, and 0.2 M KCl. The optical current density/voltage characteristics of the QDSSCs were measured under an air mass 1.5 G solar spectrum.</p>
+      <p id="p-00077-en" num="0072">Characterization</p>
+      <p id="p-00078-en" num="0073">The morphologies of SFG samples synthesized by an alternating current (AC) power supply device were observed under an electric-filed scanning electron microscope (SEM, XL30S, Phillips), and the detailed microscopic structure was observed under an electron microscope (Cs-corrected HR-[S]TEM, Jeol, JEM 2200FS, 200 kV) at the National Center for Nanomaterial Technology (NCNT) of the POSTECH. The contact angle was measured using two phase flow laboratory high-resolution digital cameras and a cold spot light system from the POSTECH. The absorption of droplets into the SFG structure was observed in an electron microscope (ESEM) mode of SEM (FEI, Quanta 200) at the UNIST. The detailed morphologies and height information were studied using AFM (Nanoscope IIIa, Digital Instrument Inc.), and the Raman spectra were obtained using a Raman spectrometer (Alpha 300R, WITEC) equipped with a diode laser with a wavelength of 532 nm. The AFM and Raman studies were performed at the Nanomaterial Research Laboratory (NRL) of the POSTECH. The binding state and work function of each film were examined by means of XPS and UPS measurements. The resistance of each film was measured using a four-point probe method (KEITHLEY 2000).</p>
+      <p id="p-00079-en" num="0074">The present invention has been described in detail. However, it should be understood that the detailed description and specific examples, while indicating preferred embodiments of the invention, are given by way of illustration only, since various changes and modifications within the scope of the invention will become apparent to those skilled in the art from this detailed description. Therefore, the preferred embodiments disclosed herein are intended to describe the present invention, but not intended to limit the scope of the present invention, and the scope of the present invention is not limited by the preferred embodiments. Thus, the scope of the present invention should be interpreted by the appended claims and their equivalents, and also it should be interpreted that the present invention covers all such modifications provided they come within the scope of the appended claims and their equivalents.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method for producing a foam-shaped graphene structure by boiling, comprising the steps of:
+<claim-text>preparing a base substrate (S1);</claim-text><claim-text>placing the base substrate in a reduced graphene oxide (RGO) colloid solution (S2);</claim-text><claim-text>applying a heat flux to the base substrate using an exothermic body so as to cause boiling (S3); and</claim-text><claim-text>generating a foam-shaped graphene structure on the base substrate as bubbles generated by the boiling overlap (S4).</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the base substrate in Step S1 is at least one selected from the group consisting of silicone, a transparent conductive oxide (TCO) glass, a metal, a mother glass, and an elastic polymer.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the graphene oxide in Step S2 is reduced by hydrazine.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the reduced graphene oxide is present at a content of 0.01 to 0.0001% wt in the colloid solution in Step S2.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the reduced graphene oxide is present at a content of 0.005% wt in the colloid solution in Step S2.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the base substrate itself serves as a heater instead of the exothermic body in Step S3.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the heat flux in Step S3 is adjusted within a range of 100 kW/m<sup>2 </sup>to 1,500 kW/m<sup>2</sup>.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. A foam-shaped graphene structure produced by the method for producing a foam-shaped graphene structure by boiling as defined in <claim-ref idref="clm-00001-en">claim 1</claim-ref>. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150251912A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150251912A1-20150910-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150251912A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251912A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150251912A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251912A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150251912A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251912A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150251912A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251912A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150251912A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251912A1-20150910-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150251912A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251912A1-20150910-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150251912A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251912A1-20150910-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150251912A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251912A1-20150910-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150251912A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251912A1-20150910-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150251912A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251912A1-20150910-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150251912A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150251912A1-20150910-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150251912A1_00013.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150251912A1-20150910-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150251912A1.PDF" type="pdf" size="1371404" pages="18" />
+</lexisnexis-patent-document>

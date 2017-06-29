@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257472A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030158" date-changed="20151002" time-changed="033554">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121315403">
+        <country>US</country>
+        <doc-number>20150257472</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14657122</doc-number>
+        <date>20150313</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>GB</country>
+        <doc-number>1404598</doc-number>
+        <date>20140314</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>A42B   3/12        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>42</class>
+        <subclass>B</subclass>
+        <main-group>3</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A42B   3/08        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>42</class>
+        <subclass>B</subclass>
+        <main-group>3</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>A42B   3/125       20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>42</class>
+        <subclass>B</subclass>
+        <main-group>3</main-group>
+        <subgroup>125</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A42B   3/064       20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>42</class>
+        <subclass>B</subclass>
+        <main-group>3</main-group>
+        <subgroup>064</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A42B   3/08        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>42</class>
+        <subclass>B</subclass>
+        <main-group>3</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">Helmet</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Charles Owen &amp; Company (Bow) Limited</orgname>
+            <role>03</role>
+            <address>
+              <city>Rhostyllen, Wrexham</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>BUREK</last-name>
+            <first-name>Roy</first-name>
+            <address>
+              <city>Chester</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>STEWART</last-name>
+            <first-name>Matthew</first-name>
+            <address>
+              <city>Buckley, Flintshire</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="165781164">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257472</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150313</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2918184</doc-number>
+            <kind>A1</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20150313</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>201404598</doc-number>
+            <kind>D0</kind>
+            <date>20140430</date>
+          </document-id>
+          <application-date>
+            <date>20140314</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>2524089</doc-number>
+            <kind>A</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20140314</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="165781163">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257472</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150313</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2918184</doc-number>
+            <kind>A1</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20150313</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>201404598</doc-number>
+            <kind>D0</kind>
+            <date>20140430</date>
+          </document-id>
+          <application-date>
+            <date>20140314</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>2524089</doc-number>
+            <kind>A</kind>
+            <date>20150916</date>
+          </document-id>
+          <application-date>
+            <date>20140314</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A helmet <b>100</b> comprises a helmet shell <b>16</b>, an outer liner layer <b>14</b> fixed inside the helmet shell <b>16</b>; and an inner liner layer <b>12</b> positioned against the outer liner layer <b>14; </b><ul id="ula-00001-en" list-style="none"><li>the outer liner layer <b>14</b> having a dome-like concave curved internal surface;</li><li>the inner liner layer <b>12</b> having a dome-like convex curved external surface;</li><li>the said surfaces of the inner and outer liner layers <b>12, 14</b> being substantially spherical where they overlap for allowing rotational sliding movement of the inner liner layer against the outer liner layer;</li><li>means being provided for limiting rotation between the inner and outer liner layers;</li><li>and at least one of the said surfaces of the inner and outer liner layers <b>12, 14</b> having recesses <b>18</b> therein for weakening the layer and for facilitating crushing of the layer when a sufficiently large radial force is applied, loosening the inner liner layer <b>12</b> within the outer liner layer <b>14. </b></li></ul></p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150423</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257472A1</docdb-publication-number>
+      <docdb-application-id>444510634</docdb-application-id>
+      <new-owner>CHARLES OWEN &amp; COMPANY (BOW) LIMITED, UNITED KINGD</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:BUREK, ROY;STEWART, MATTHEW;REEL/FRAME:035477/0361</free-text-description>
+      <effective-date>
+        <date>20150421</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">CROSS REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application hereby claims priority under 35 U.S.C. 119 from GB 1404598.3 filed on Mar. 14, 2014 the disclosure of which is hereby incorporated herein by reference in its entirety.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND TO THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">The present invention relates to a helmet which is designed to absorb more energy during an impact, particularly rotational energy, with the aim of reducing brain trauma.</p>
+      <p id="p-00003-en" num="0003">It is known that helmets provide protection against brain injury when they absorb energy in an impact. However, the protection provided is sometimes not sufficient to protect against brain damage, especially if the impact is particularly severe. Attention has recently been focused on protecting the head during oblique impacts, in which both linear and rotational forces are experienced.</p>
+      <p id="p-00004-en" num="0004">During a fall, the head has a combination of linear and rotational energy. Upon impact, this energy has to be transferred, and the time duration of the transfer is often under 10 milliseconds. The brain floats inside the skull in cerebrospinal fluid and can move independently of the skull to a certain degree. The brain will continue to move after the skull has come to rest or reversed direction. As the brain decelerates, strain and shear forces are created which can cause structural damage to the brain, and/or set off a pathophysiological cascade of chemical processes that can lead to neuron and glial death.</p>
+      <p id="p-00005-en" num="0005">The object of a helmet is to reduce peak acceleration, which in turn reduces the strain and shear forces on the brain during an impact, limiting brain damage.</p>
+      <p id="p-00006-en" num="0006">A problem of existing helmet designs is that the response time of the helmet system may be too slow to limit the rotational acceleration, and there may be no rotational energy absorption to prevent serious injury. The greatest increase in acceleration is generally in the first microseconds of an impact, and so fast response time is critical if the peak acceleration is to be reduced.</p>
+      <p id="p-00007-en" num="0007">As described in WO 2011/139224, it is known to provide a helmet having an inner liner layer and an outer liner layer, the inner liner layer being rotatable within the outer liner layer. In this way, rotational acceleration of the brain can be reduced, because the outer liner layer of the helmet will rotate, ‘slipping’ with respect to the inner liner layer. The layers are held together by fixation members between the layers, which deform plastically or elastically to allow rotation when needed. However, the fixation members slow the response time of the helmet, and limit the maximum rotation between the layers. This reduces the effectiveness of the helmet.</p>
+      <p id="p-00008-en" num="0008">The deformation of the fixation members is also the primary mechanism by which rotational energy is absorbed by the helmet. The helmet's capacity to absorb energy is therefore limited. If a fixation member breaks in a serious fall, then it will not be able to absorb any more energy after it has broken.</p>
+      <p id="p-00009-en" num="0009">A further problem with existing helmet designs is that, to provide inner and outer ‘slip’ layers, either the overall size of the helmet must be increased, which may be uncomfortable and/or unsightly, or the amount of padding for absorbing the energy in radial impacts has to be reduced. It is clear from FIG. 1 in WO2011/139224 that a gap must be provided between the inner and outer liner layers, and increased performance in arresting rotational forces is therefore at the cost of decreased performance in arresting radial forces. Regardless of safety considerations, consumers will tend to prefer good-looking and comfortable helmets.</p>
+      <p id="p-00010-en" num="0010">It is an object of this invention to provide an improved helmet which more effectively protects against both linear and rotational impacts, without the need for substantial extra bulk in the helmet.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00011-en" num="0011">According to the present invention there is provided a helmet comprising a helmet shell, an outer liner layer fixed inside the helmet shell; and an inner liner layer positioned against the outer liner layer;</p>
+      <p id="p-00012-en" num="0000">the outer liner layer having a dome-like concave curved internal surface; <br /> the inner liner layer having a dome-like convex curved external surface; <br /> the outer and inner liner layers each including front, back, and two lateral side wall sections, in which the lateral side wall sections of the outer liner layer are substantially truncated compared with the inner liner layer, <br /> the said surfaces of the inner and outer liner layers being substantially spherical where they overlap for allowing rotational sliding movement of the inner liner layer against the outer liner layer; and <br /> a rotation-limiting mechanism being provided for limiting rotation between the inner and outer liner layers. </p>
+      <p id="p-00013-en" num="0012">At least one of the said surfaces of the inner and outer liner layers may have recesses therein for weakening the layer and for facilitating crushing of the layer when a sufficiently large radial force is applied, loosening the inner liner layer within the outer liner layer.</p>
+      <p id="p-00014-en" num="0013">Various types of helmets may incorporate the invention, and the structure of the various parts will depend on the type of helmet. For example, in a horse riding helmet the outer shell will usually be rigid and fairly thick, whereas a cycle helmet usually has a thin and relatively flexible outer shell. All helmets must include means for holding the helmet onto the head, which is usually a chin strap. If the helmet is allowed to rotate too much, then the chin strap may twist and suffocate the wearer. It is therefore vital that means are provided for limiting the amount of rotation between the layers.</p>
+      <p id="p-00015-en" num="0014">Preferably, the helmet includes a flexible textile member across bottom edges of the inner and outer liner layers, which may further extend to or across the bottom edge of the outer shell. The flexible textile member forms a headband, which holds the layers of the helmet together. The headband may provide the means by which rotation between the inner and outer liner layers is limited, and as such it may be made from a substantially elastic material, for example elastane sold under the registered trade mark Lycra. Using an elastic headband for limiting rotation between the layers is particularly advantageous, because the headband at its central unstretched position gives very little resistance to rotation, making for a helmet with a very fast response during an impact. However, as the helmet rotates, the resistance provided by the elastic headband increases, gradually slowing the rotation.</p>
+      <p id="p-00016-en" num="0015">In some embodiments, the elastic headband may be attached only around the inside edge of the inner liner layer, and may stretch all the way over the outer liner layer. In such an embodiment, the elastic headband and the helmet shell are in fact the same component. Alternatively, the elastic headband may be taped or otherwise bonded to the inner liner layer and to the outer shell. Also, the elastic headband may extend all the way over the outer shell, essentially providing the helmet with a secondary skin in addition to the main outer shell.</p>
+      <p id="p-00017-en" num="0016">The inner liner layer includes front, back, and two lateral side wall sections which in use extend substantially vertically around the front, back and sides of a wearer's head. The outer liner layer includes corresponding front, back and side wall sections, but the side sections of the outer liner layer is substantially truncated as compared to the inner liner layer. In other words, a significant area around the sides of the helmet liner is formed of a single (inner) layer which is positioned directly against the outer shell of the helmet.</p>
+      <p id="p-00018-en" num="0017">The structure and shape of the inner and outer liner layers and the outer shell may provide a further mechanism for limiting and slowing rotation. It is generally preferable to have a helmet the overall shape of which is ovaloid rather than spherical, since this better matches the shape of the head, and makes for a helmet which is more attractive and comfortable to wear. At the same time, an ovaloid outer shell can be used to provide resistance to the rotation of a part-spherical inner liner layer. Lateral sides of the outer liner layer are truncated, so that the inner liner layer only moves against the outer liner layer at the front, rear, and top of the helmet. At the sides, the inner liner layer may be positioned directly against the outer shell. The parts of the inner liner layer which are positioned directly against the outer shell may not be spherical. Therefore the inner liner layer cannot move against the ovaloid outer shell unless either the inner liner layer or the ovaloid outer shell deforms in some way.</p>
+      <p id="p-00019-en" num="0018">The configuration described above prevents rotation of the inner liner layer about an axis (referred to as the Z axis) through the top of the helmet, but allows rotation (limited by the headband or another rotation-limiting mechanism) about orthogonal X and Y axes which run from the front to the back and between the lateral sides of the helmet. However, if the inner liner layer is made from a compressible material, for example expanded polystyrene, then it may rotate within the helmet shell if there is a rotational force of sufficiently high magnitude, because the inner liner layer will compress or degrade as its surface scrapes or grinds against the interior of the helmet shell. In other words, the outer surface of the inner liner layer may crush and absorb energy as it turns into the ovaloid shape of the outer shell, limiting the peak acceleration about the Z axis. Alternatively it may be the outer shell which deforms to allow rotation of the inner liner layer about the Z axis, especially if the outer shell is flexible and elastic, for example because it is formed as the same part as the elastic headband.</p>
+      <p id="p-00020-en" num="0019">Also, the relative shape of the inner and outer liner layers may be such that rotation of the inner liner layer about the Z axis causes bending of the front and back walls of the outer liner layer.</p>
+      <p id="p-00021-en" num="0020">In the preferred embodiment, the elastic headband is the primary means of limiting and slowing rotation in the X and Y axes, but the crushing of the outer surface of the inner liner layer against the helmet shell is the primary means of limiting rotation in the Z axis. However, the elastic headband will also act to absorb rotational energy in the Z direction.</p>
+      <p id="p-00022-en" num="0021">Generally, there is a need to restrict movement about the Z axis to a far greater extent than about the X and Y axes. This is because the chin strap of the helmet may tangle and suffocate the wearer, if too much rotation is allowed about the Z axis.</p>
+      <p id="p-00023-en" num="0022">It will be appreciated that the degree to which movement is restricted can be varied by the use of different materials in the elastic headband, by pre-tensioning the elastic headband, or by varying the shape of the inner liner layer and helmet shell.</p>
+      <p id="p-00024-en" num="0023">If the wearer of the helmet experiences a relatively low-magnitude oblique impact to the head, the layers will rotate against each other to reduce peak rotational acceleration on the head. The radial components of the impact force will be absorbed by the layers, primarily by plastic and elastic deformation of the helmet liner in the same way as a traditional helmet.</p>
+      <p id="p-00025-en" num="0024">If the oblique impact is more serious, the radial components of the force will act to crush the weakened region of the inner and/or outer liner layer. The crushing of the layer provides further protection against the radial impact by absorbing energy by plastic deformation of the helmet liner. Also, the crushing of the weakened area changes the shape of the corresponding surface(s) of the inner and/or outer liner layers, loosening the inner liner layer of the helmet liner within the outer liner layer. The degree to which the helmet liner is able to rotate is therefore increased, providing greater protection against the rotational (tangential) components of the more serious oblique impact.</p>
+      <p id="p-00026-en" num="0025">A traditional helmet likewise absorbs energy in a severe impact by plastic deformation of the liner. However, the amount of energy which can be absorbed in this way is increased when recesses are provided. The greatest force on the helmet liner, during an accident, is generally near the interior and exterior surfaces of the helmet, as the helmet is “pincered” between the head and the ground. The helmet absorbs the greatest amount of energy in these areas, and particularly near the outer surface, because the force in these places is sufficient to plastically deform the material. Towards the centre of the helmet, between the inner and outer surfaces, the force is reduced. At some point this force will drop below the plastic deformation threshold of the helmet liner. After this point, the helmet's ability to absorb energy is substantially reduced. In the helmet described, however, the weakened region provides for a helmet liner which plastically deforms through substantially the whole thickness of the helmet, therefore absorbing more energy.</p>
+      <p id="p-00027-en" num="0026">The helmet liner protects against radial and tangential components of force in an oblique impact. It has a very fast response time due to the rotatable inner and outer liner layers. Rotation begins within the first few picoseconds of an impact. The helmet adapts depending on the magnitude of an oblique impact, the inner liner layer becoming progressively looser within the outer liner layer and the helmet shell to provide an appropriate amount of rotation in the helmet liner to give the best protection. In a medium- to high-magnitude impact, the helmet liner deforms to reduce the resistance to rotation between the inner and outer liner layers, depending on the actual magnitude of the oblique impact. Since no fixation members or other components are required to be positioned between the layers, which rotate directly against each other, the mechanism for rotational protection is not at the cost of decreased padding for protection against radial blows. A helmet incorporating the invention may be substantially similar to traditional helmets in terms of size, shape, and outward appearance.</p>
+      <p id="p-00028-en" num="0027">As well as providing a weakened area for collapsing of the helmet liner, as described above, the recesses reduce the contact area between the inner and outer liner layers, allowing smooth sliding. In a particularly serious impact, the ribs collapse as described above, which reduces both the radial force between the inner and outer liner layers and the contact area between the layers. This reduced the friction between the layers and allows more unrestricted movement.</p>
+      <p id="p-00029-en" num="0028">Preferably, the inner and outer liner layers of the helmet liner are formed of expanded polystyrene. Alternative suitable materials include polyurethane, polypropylene, polyethylene and copolymer mixes of any of these materials mentioned.</p>
+      <p id="p-00030-en" num="0029">The skilled person will appreciate that the recesses can be arranged in various configurations to provide the required weakened areas of the inner and outer liner layers. However, the preferred arrangement is for recesses to be provided on the interior surface of the outer liner layer, and for the recesses to be substantially elongate defining ridges or ribs therebetween, the recesses (and ribs) being along arcs on the surface which project onto the X-Y plane parallel to the X and/or Y axes. In other words, recesses/ribs are preferably oriented in a front-to-back or side-to-side orientation on the surface of the outer liner layer.</p>
+      <p id="p-00031-en" num="0030">In one preferred embodiment, recesses run side-to-side in a central area around half way between the front and back of the surface of the outer shell, and further recesses run front-to-back in front of and behind the central area. The front-to-back recesses are essentially interrupted by the side-to-side recesses in the central area, so that recesses do not cross over but form elongate channels.</p>
+      <p id="p-00032-en" num="0031">In another aspect, the helmet liner includes an outer liner layer for fixing inside a helmet shell; and an inner liner layer positioned against the outer liner layer;</p>
+      <p id="p-00033-en" num="0000">the outer liner layer having an internal surface and the inner liner layer having an external surface; <br /> and at least one of the said surfaces of the inner and outer liner layers having recesses therein for creating a weakened region in the helmet liner. </p>
+      <p id="p-00034-en" num="0032">As described above, providing a weakened region in the centre of a helmet liner, between the inner and outer surfaces, allows the helmet liner to absorb energy from an impact by plastic deformation throughout substantially the entire thickness of the liner. The inner and outer liner layers are rotatable against each other.</p>
+      <p id="p-00035-en" num="0033">The recesses may be a plurality of elongate slots and are preferably formed in the internal surface of the outer liner layer. The slots may be oriented in a front-to-back or side-to-side orientation on the surface of the inner and/or outer liner layer(s), which may be made from expanded polystyrene.</p>
+      <p id="p-00036-en" num="0034">The helmet liner may be incorporated into a helmet having a helmet shell.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00037-en" num="0035">The invention will now be more particularly described, by way of example only, with reference to the accompanying drawings, in which:</p>
+      <p id="p-00038-en" num="0036">
+        <figref>FIG. 1</figref>
+        <i>a </i>shows a perspective view of a helmet liner according to the invention, the inner and outer liner layers being located in a substantially central position;</p>
+      <p id="p-00039-en" num="0037">
+        <figref>FIG. 1</figref>
+        <i>b </i>shows a perspective view of the helmet liner of <figref>FIG. 1</figref><i>a</i>, the inner liner layer having been rotated within the outer liner layer;</p>
+      <p id="p-00040-en" num="0038">
+        <figref>FIG. 2</figref> shows the interior surface of the outer liner layer of the helmet liner of <figref>FIGS. 1</figref><i>a </i>and <b>1</b><i>b; </i></p>
+      <p id="p-00041-en" num="0039">
+        <figref>FIG. 3</figref> shows a side view of the helmet liner of <figref>FIGS. 1</figref><i>a </i>and <b>1</b><i>b; </i></p>
+      <p id="p-00042-en" num="0040">
+        <figref>FIG. 4</figref> shows a helmet incorporating the helmet liner of <figref>FIGS. 1</figref><i>a </i>and <b>1</b><i>b</i>, in use on a person's head; and</p>
+      <p id="p-00043-en" num="0041">
+        <figref>FIG. 5</figref> shows an underside view of the helmet of <figref>FIG. 4</figref>.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DESCRIPTION OF PREFERRED EMBODIMENT(S)</heading>
+      <p id="p-00044-en" num="0042">Referring firstly to <figref>FIGS. 1</figref><i>a </i>and <b>1</b><i>b</i>, a helmet liner is indicated generally at <b>10</b>. The liner includes an inner liner layer <b>12</b> which is positioned against and rotatable within an outer liner layer <b>14</b>. In <figref>FIG. 1</figref><i>b </i>the inner liner layer <b>12</b> is seen rotated about the Y axis as indicated on the Figures, but it can also be rotated about the X axis in the same way. The outer surface of the inner liner layer and the inner surface of the outer liner layer are substantially spherical where they overlap, allowing rotation of the surfaces against each other. There are no components disposed between the inner and outer liner layers. The liner <b>10</b> is designed to fit within a helmet shell <b>16</b>, seen in <figref>FIG. 4</figref>.</p>
+      <p id="p-00045-en" num="0043">
+        <figref>FIGS. 2 and 3</figref> more clearly show the shape of the inner <b>12</b> and outer <b>14</b> liner layers. In particular, from <figref>FIG. 2</figref> it can be seen that the outer liner layer <b>14</b> includes a central section <b>14</b><i>a</i>, which in use is at the top of the helmet, above the wearer's head. A front wall section <b>14</b><i>b </i>and a rear wall section <b>14</b><i>c </i>extend from the central section <b>14</b><i>a</i>, the front and rear wall sections <b>14</b><i>b</i>, <b>14</b><i>c </i>being substantially vertical, in front and behind a wearer's head in use. The outer liner layer <b>14</b> also includes lateral side sections <b>14</b><i>d </i>and <b>14</b><i>e</i>. <figref>FIG. 2</figref> shows that the lateral side sections <b>14</b><i>d</i>, <b>14</b><i>e </i>are substantially truncated, and do not extend a significant vertical distance down the sides of the wearer's head in use.</p>
+      <p id="p-00046-en" num="0044">The central portion and the front, back and lateral side wall portions of the inner liner layer are similarly labelled <b>12</b><i>a</i>, <b>12</b><i>b</i>, <b>12</b><i>c</i>, <b>12</b><i>d</i>, <b>12</b><i>e. </i></p>
+      <p id="p-00047-en" num="0045">It is clear from <figref>FIG. 2</figref> that the interior surface of the outer liner layer is not the same shape as the exterior surface of the outer liner layer. The interior surface is substantially spherical, where it rotates against the inner liner <b>12</b>. The exterior surface is substantially ovaloid, to conform with the shape of the outer shell <b>16</b> which is seen in <figref>FIG. 4</figref>. Likewise, as seen in <figref>FIGS. 1</figref><i>a </i>and <b>1</b><i>b</i>, the inner liner <b>12</b> has a substantially ovaloid interior shape for conforming to the shape of a human head. The exterior shape of the inner liner <b>12</b> is substantially spherical where it overlaps with the outer liner layer, but at the lateral sides in the positions where the outer liner layer is cut away, the spherical shape of the surface is interrupted. The overall shape of the inner and outer liners, joined together, is substantially ovaloid for fitting inside a helmet shell <b>16</b> of that general shape.</p>
+      <p id="p-00048-en" num="0046">Because the helmet liner <b>10</b> as a whole has substantially ovaloid exterior and interior surfaces, but the interface surfaces between the inner and outer liner layers <b>12</b>, <b>14</b> are substantially spherical, the outer liner layer <b>12</b> has generally thicker front and back end walls <b>14</b><i>b</i>, <b>14</b><i>c</i>, whereas the inner liner layer has generally thicker lateral side walls <b>12</b><i>d</i>, <b>12</b><i>e. </i></p>
+      <p id="p-00049-en" num="0047">Recesses <b>18</b> are provided in the interior surface of the outer liner layer <b>14</b>. In this embodiment, the recesses <b>18</b> are elongate slots and all the recesses run in straight lines on the X-Y plane, projected onto the curved surface of the outer liner layer <b>14</b>. Recesses run between the lateral sides <b>14</b><i>d</i>, <b>14</b><i>e </i>of the outer liner layer <b>14</b> and between the front and back edges of the outer liner layer. Other arrangements of recesses are possible, but this arrangement is found to be particularly advantageous.</p>
+      <p id="p-00050-en" num="0048">
+        <figref>FIG. 3</figref> shows a side view of the complete helmet liner <b>10</b>, and shows the substantial portion of the side wall <b>12</b><i>e </i>of the inner liner layer <b>12</b> which is not positioned against the interior surface of the outer liner layer <b>14</b>. When the liner forms part of a helmet, as shown in <figref>FIGS. 4 and 5</figref>, this part of the inner liner layer is disposed directly against the hard outer shell <b>16</b>.</p>
+      <p id="p-00051-en" num="0049">
+        <figref>FIGS. 4 and 5</figref> show a complete helmet <b>100</b> which incorporates the helmet liner <b>10</b>. This embodiment includes a hard outer shell <b>16</b>, and is particularly designed for use in horse riding. The outer appearance of the helmet is a similar in size and shape to many known horse riding helmets.</p>
+      <p id="p-00052-en" num="0050">It is envisaged that different types of outer shell <b>16</b> may be provided for different types of helmet. For example, a cycle helmet incorporating the invention may have a much thinner and more flexible outer shell than the hard outer shell <b>16</b> shown in this embodiment.</p>
+      <p id="p-00053-en" num="0051">The helmet <b>100</b> further includes an elastane headband <b>20</b>, which is fixed around an edge of the interior surface of the inner liner layer <b>12</b> and around an edge of the outer surface of the outer liner layer <b>14</b>. In other words, the elastane headband <b>20</b> holds the inner and outer liner layers <b>12</b>, <b>14</b> together at their edges, and stretches as the layers <b>12</b>, <b>14</b> rotate with respect to each other. In this way, the elastane headband <b>20</b> provides increasing resistance to rotation as the layers rotate relative to each other during an impact and acts as an elastic connector.</p>
+      <p id="p-00054-en" num="0052">A chin strap <b>22</b> is provided for holding the helmet on the wearer's head. The chin strap <b>22</b> is of a common design for horse riding helmets.</p>
+      <p id="p-00055-en" num="0053">In use, during an impact, the helmet protects the head against rotational forces by providing an extremely fast response to reduce peak rotational acceleration. The elastane headband and scraping of the outer liner layer <b>14</b> against the helmet shell <b>16</b> absorb the rotational forces, protecting the head. If the impact is particularly severe, the ribs formed between the recesses <b>18</b> in the outer liner layer <b>14</b> will collapse, loosening the rotational interface between the layers <b>12</b>, <b>14</b> and reducing the resistance to rotation.</p>
+      <p id="p-00056-en" num="0054">At the same time, the ribs between the layers increase the performance of the helmet in terms of protection from radial impact. The ribs form a weakened region between the outer and inner surfaces of the helmet, allowing the helmet liner to absorb energy by plastic deformation substantially throughout its entire thickness.</p>
+      <p id="p-00057-en" num="0055">The words “comprises/comprising” and the words “having/including” when used herein with reference to the present invention are used to specify the presence of stated features, integers, steps or components, but does not preclude the presence or addition of one or more other features, integers, steps, components or groups thereof.</p>
+      <p id="p-00058-en" num="0056">It is appreciated that certain features of the invention, which are, for clarity, described in the context of separate embodiments, may also be provided in combination in a single embodiment. Conversely, various features of the invention which are, for brevity, described in the context of a single embodiment, may also be provided separately or in any suitable sub-combination.</p>
+      <p id="p-00059-en" num="0057">The embodiments described above are provided by way of examples only, and various other modifications will be apparent to persons skilled in the field without departing from the scope of the invention as defined by the appended claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A helmet comprising a helmet shell, an outer liner layer fixed inside the helmet shell; and an inner liner layer positioned against the outer liner layer;
+<claim-text>the outer liner layer having a dome-like concave curved internal surface;</claim-text><claim-text>the inner liner layer having a dome-like convex curved external surface;</claim-text><claim-text>the outer and inner liner layers each including front, back, and two lateral side wall sections, in which the lateral side wall sections of the outer liner layer are substantially truncated compared with the inner liner layer,</claim-text><claim-text>the said surfaces of the inner and outer liner layers being substantially spherical where they overlap for allowing rotational sliding movement of the inner liner layer against the outer liner layer; and</claim-text><claim-text>a rotation-limiting mechanism being provided for limiting rotation between the inner and outer liner layers.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. A helmet as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, in which at least one of the said surfaces of the inner and outer liner layers has recesses therein for weakening the layer and for facilitating crushing of the layer when a sufficiently large radial force is applied, loosening the inner liner layer within the outer liner layer.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. A helmet as claimed in <claim-ref idref="clm-00002-en">claim 2</claim-ref>, in which the recesses are a plurality of elongate slots.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. A helmet as claimed in <claim-ref idref="clm-00002-en">claim 2</claim-ref>, in which the recesses are formed in the internal surface of the outer liner layer.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. A helmet as claimed in <claim-ref idref="clm-00003-en">claim 3</claim-ref>, in which the slots are oriented in a front-to-back or side-to-side orientation on the surface of the inner and/or outer liner layer(s).</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. A helmet as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, in which the inner and outer liner layers are made from expanded polystyrene.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. A helmet as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, in which side sections of the inner liner layer have a non-spherical surface.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. A helmet as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, in which the helmet shell has an interior surface which is non-spherical.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. A helmet as claimed in <claim-ref idref="clm-00008-en">claim 8</claim-ref>, in which the interior surface of the helmet shell is ovaloid.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. A helmet as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, including a chin strap.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. A helmet as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, in which the rotation-limiting mechanism for limiting rotation is provided by at least one elastic connector which extends from the inner liner layer to the outer liner layer of the helmet liner, across bottom edges of the respective layers.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. A helmet as claimed in <claim-ref idref="clm-00011-en">claim 11</claim-ref>, in which the elastic connector is an elastic headband.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. A helmet as claimed in <claim-ref idref="clm-00012-en">claim 12</claim-ref>, in which the elastic headband extends to or across a bottom edge of the outer shell.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. A helmet as claimed in <claim-ref idref="clm-00011-en">claim 11</claim-ref>, in which the elastic connector extends substantially all the way over the outer liner layer to form the outer shell, or an additional outer liner layer.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. A helmet as claimed in <claim-ref idref="clm-00011-en">claim 11</claim-ref>, in which the elastic connector is made from elastane.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. A helmet as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, in which the helmet shell is rigid.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. A helmet as claimed in <claim-ref idref="clm-00001-en">claim 1</claim-ref>, in which the helmet shell is flexible.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en" independent="true">
+      <claim-text>
+        <b>18</b>. A helmet comprising a helmet shell, an outer liner layer fixed inside the helmet shell; and an inner liner layer positioned against the outer liner layer;
+<claim-text>the outer liner layer having a dome-like concave curved internal surface;</claim-text><claim-text>the inner liner layer having a dome-like convex curved external surface;</claim-text><claim-text>the said surfaces of the inner and outer liner layers being substantially spherical where they overlap for allowing rotational sliding movement of the inner liner layer against the outer liner layer; and</claim-text><claim-text>means being provided for limiting rotation between the inner and outer liner layers.</claim-text></claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en" independent="true">
+      <claim-text>
+        <b>19</b>. A horse-riding helmet comprising a helmet shell, an outer liner layer fixed inside the helmet shell; and an inner liner layer positioned against the outer liner layer;
+<claim-text>the outer liner layer having a dome-like concave curved internal surface;</claim-text><claim-text>the inner liner layer having a dome-like convex curved external surface;</claim-text><claim-text>the outer and inner liner layers each including front, back, and two lateral side wall sections, in which the lateral side wall sections of the outer liner layer are substantially truncated compared with the inner liner layer,</claim-text><claim-text>the said surfaces of the inner and outer liner layers being substantially spherical where they overlap for allowing rotational sliding movement of the inner liner layer against the outer liner layer; and</claim-text><claim-text>a rotation-limiting mechanism being provided for limiting rotation between the inner and outer liner layers.</claim-text></claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. A horse-riding helmet as claimed in <claim-ref idref="clm-00019-en">claim 19</claim-ref>, in which at least one of the said surfaces of the inner and outer liner layers has recesses therein for weakening the layer and for facilitating crushing of the layer when a sufficiently large radial force is applied, loosening the inner liner layer within the outer liner layer. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257472A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257472A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257472A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257472A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257472A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257472A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257472A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257472A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257472A1_00005.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257472A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257472A1.PDF" type="pdf" size="383287" pages="9" />
+</lexisnexis-patent-document>

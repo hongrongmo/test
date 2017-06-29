@@ -17,6 +17,8 @@ import org.ei.dataloading.DataLoadDictionary;
 import org.ei.domain.DataDictionary;
 import org.ei.xml.Entity;
 
+import org.ei.dataloading.cafe.WriteEsDocToFile;
+
 import javax.json.*;
 
 
@@ -25,23 +27,45 @@ public class CombinedAuAfJSON {
 	String docid = null;
 	String doc_type;
 	int loadNumber;
+	
+	String esIndexType = null;
+	
+	
 	String root;
 	File ESdir;    		 // to hold Extracted JSON AU/AF files
 	String currDir;     // to hold current working dir
 	String fileName;   // JSON File
 	private DataLoadDictionary dictionary = new DataLoadDictionary();
+	WriteEsDocToFile docWrite;
 
 	PrintWriter out;
 	
 	Map<String,Object> config;   //JsonBuilder config
 	JsonBuilderFactory factory; //JsonBuilder Factory
 
+	
+	
+	
 	public CombinedAuAfJSON() {}
 	public CombinedAuAfJSON(String doctype, int load_number)
 	{
 		this.doc_type = doctype;
 		this.loadNumber = load_number;
 	}
+	public CombinedAuAfJSON(String doctype, int load_number, String esIndxtype)
+	{
+		this.doc_type = doctype;
+		this.loadNumber = load_number;
+		this.esIndexType = esIndxtype;
+	}
+	public CombinedAuAfJSON(String doctype, int load_number, WriteEsDocToFile w, String esIndxtype)
+	{
+		this.doc_type = doctype;
+		this.loadNumber = load_number;
+		this.docWrite = w;
+		this.esIndexType = esIndxtype;
+	}
+	
 
 	public void init(int count)
 	{
@@ -116,6 +140,7 @@ public class CombinedAuAfJSON {
 				.add("docproperties", factory.createObjectBuilder()
 						.add("doc_type", notNull(rec.getString(AuAfCombinedRec.DOC_TYPE)))
 						.add("status",notNull(rec.getString(AuAfCombinedRec.STATUS)))
+						.add("updateepoch",notNull(rec.getString(AuAfCombinedRec.UPDATEEPOCH)))
 						.add("loaddate",notNull(rec.getString(AuAfCombinedRec.LOADDATE)))
 						.add("itemtransactionid",replaceDot(notNull(rec.getString(AuAfCombinedRec.ITEMTRANSACTIONID))))
 						.add("indexeddate",notNull(rec.getString(AuAfCombinedRec.INDEXEDDATE)))
@@ -127,6 +152,8 @@ public class CombinedAuAfJSON {
 								.add("doc_id",notNull(rec.getString(AuAfCombinedRec.DOCID)))
 								.add("eid",notNull(rec.getString(AuAfCombinedRec.EID)))
 								.add("afid",notNull(rec.getString(AuAfCombinedRec.AFID)))
+								.add("parafid",notNull(rec.getString(AuAfCombinedRec.PARAFID)))
+								.add("aftype", notNull(rec.getString(AuAfCombinedRec.AFTYPE)))
 								.add("sortname",notNull(rec.getString(AuAfCombinedRec.AFFILIATION_SORT_NAME)))
 								.add("affiliation_name", factory.createObjectBuilder()
 										.add("preferred", notNull(rec.getString(AuAfCombinedRec.AFFILIATION_PREFERRED_NAME)))
@@ -147,7 +174,11 @@ public class CombinedAuAfJSON {
 		//InstitutionCombiner.s3upload.EsDocumentIndex("affiliation", this.docid, profile_contents.toString(), getEsDirName());   // for ES
 		//InstitutionCombiner.s3upload.EsBulkIndex("ipr", this.docid, profile_contents.toString(),getEsDirName());
 
-		InstitutionCombiner.esIndex.createBulkIndex("affiliation", this.docid, esDocument);
+		if(esIndexType !=null && esIndexType.equalsIgnoreCase("direct"))
+			InstitutionCombiner.esIndex.createBulkIndex("affiliation", this.docid, esDocument);
+		else if(esIndexType !=null && esIndexType.equalsIgnoreCase("file"))
+			docWrite.createBulkIndexFile("affiliation", this.docid, esDocument);
+			
 		
 	}
 	
@@ -162,6 +193,7 @@ public class CombinedAuAfJSON {
 				.add("docproperties", factory.createObjectBuilder()
 						.add("doc_type", notNull(rec.getString(AuAfCombinedRec.DOC_TYPE)))
 						.add("status",notNull(rec.getString(AuAfCombinedRec.STATUS)))
+						.add("updateepoch",notNull(rec.getString(AuAfCombinedRec.UPDATEEPOCH)))
 						.add("loaddate", notNull(rec.getString(AuAfCombinedRec.LOADDATE)))
 						.add("itemtransactionid", replaceDot(notNull(rec.getString(AuAfCombinedRec.ITEMTRANSACTIONID))))
 						.add("indexeddate", notNull(rec.getString(AuAfCombinedRec.INDEXEDDATE)))
@@ -223,7 +255,16 @@ public class CombinedAuAfJSON {
 		
 		//AuthorCombiner.s3upload.UploadFileToS3("apr", "evcafe", this.docid, profile_contents.toString());   // for S3 & Lambda
 		//AuthorCombiner.s3upload.EsDocumentIndex("author", this.docid, profile_contents.toString(), getEsDirName());   // for ES using Jest
-		AuthorCombiner.esIndex.createBulkIndex("author", this.docid, esDocument);
+		
+		
+		if(esIndexType !=null && esIndexType.equalsIgnoreCase("direct"))
+			AuthorCombiner.esIndex.createBulkIndex("author", this.docid, esDocument);
+		
+		else if(esIndexType !=null && esIndexType.equalsIgnoreCase("file"))
+			docWrite.createBulkIndexFile("author", this.docid, esDocument);
+	
+			
+		
 		
 		
 	}

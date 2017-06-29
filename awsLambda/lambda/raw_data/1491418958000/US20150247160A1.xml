@@ -1,0 +1,2715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247160A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021509" date-changed="20150928" time-changed="060513">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140269">
+        <country>US</country>
+        <doc-number>20150247160</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14384561</doc-number>
+        <date>20120312</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150903">
+      <priority-claim sequence="1" kind="national">
+        <country>GB</country>
+        <doc-number>1204304</doc-number>
+        <date>20120312</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C12N  15/82        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>15</main-group>
+        <subgroup>82</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C12N  15/8273      20130101 FI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>15</main-group>
+        <subgroup>8273</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C12N  15/8223      20130101 LI20130514BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>15</main-group>
+        <subgroup>8223</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130514</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C12N  15/8237      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>15</main-group>
+        <subgroup>8237</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C12N  15/8271      20130101 LI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>15</main-group>
+        <subgroup>8271</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C12N  15/8279      20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>12</class>
+        <subclass>N</subclass>
+        <main-group>15</main-group>
+        <subgroup>8279</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">18</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">STRESS TOLERANCE IN PLANTS</invention-title>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Universidad Nacional Del Litoral</orgname>
+            <address>
+              <city>Santa Fe</city>
+              <country>AR</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>AR</country>
+          </residence>
+        </applicant>
+        <applicant sequence="2" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>Consejo Nacional De Investigaciones Cientificas Y Tecnicas</orgname>
+            <address>
+              <city>Cdad. de Buenos Aires</city>
+              <country>AR</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>AR</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Cabello</last-name>
+            <first-name>Julieta Virginia</first-name>
+            <address>
+              <city>Sante fe</city>
+              <country>AR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Chan</last-name>
+            <first-name>Raquel Lia</first-name>
+            <address>
+              <city>Santa Fe</city>
+              <country>AR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>GB13050600</doc-number>
+        <date>20120312</date>
+      </document-id>
+      <us-371c124-date>
+        <date>20141231</date>
+      </us-371c124-date>
+    </pct-or-regional-filing-data>
+    <patent-family date-changed="20151105">
+      <main-family family-id="151685695">
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2866964</doc-number>
+            <kind>A1</kind>
+            <date>20130919</date>
+          </document-id>
+          <application-date>
+            <date>20130312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104321433</doc-number>
+            <kind>A</kind>
+            <date>20150128</date>
+          </document-id>
+          <application-date>
+            <date>20130312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AR</country>
+            <doc-number>090299</doc-number>
+            <kind>A1</kind>
+            <date>20141105</date>
+          </document-id>
+          <application-date>
+            <date>20130311</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013234140</doc-number>
+            <kind>A1</kind>
+            <date>20141030</date>
+          </document-id>
+          <application-date>
+            <date>20130312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247160</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20120312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2013136058</doc-number>
+            <kind>A1</kind>
+            <date>20130919</date>
+          </document-id>
+          <application-date>
+            <date>20130312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2825655</doc-number>
+            <kind>A1</kind>
+            <date>20150121</date>
+          </document-id>
+          <application-date>
+            <date>20130312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>201204304</doc-number>
+            <kind>D0</kind>
+            <date>20120425</date>
+          </document-id>
+          <application-date>
+            <date>20120312</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="151685694">
+        <family-member>
+          <document-id>
+            <country>CA</country>
+            <doc-number>2866964</doc-number>
+            <kind>A1</kind>
+            <date>20130919</date>
+          </document-id>
+          <application-date>
+            <date>20130312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104321433</doc-number>
+            <kind>A</kind>
+            <date>20150128</date>
+          </document-id>
+          <application-date>
+            <date>20130312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AR</country>
+            <doc-number>090299</doc-number>
+            <kind>A1</kind>
+            <date>20141105</date>
+          </document-id>
+          <application-date>
+            <date>20130311</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013234140</doc-number>
+            <kind>A1</kind>
+            <date>20141030</date>
+          </document-id>
+          <application-date>
+            <date>20130312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247160</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20120312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2013136058</doc-number>
+            <kind>A1</kind>
+            <date>20130919</date>
+          </document-id>
+          <application-date>
+            <date>20130312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2825655</doc-number>
+            <kind>A1</kind>
+            <date>20150121</date>
+          </document-id>
+          <application-date>
+            <date>20130312</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>GB</country>
+            <doc-number>201204304</doc-number>
+            <kind>D0</kind>
+            <date>20120425</date>
+          </document-id>
+          <application-date>
+            <date>20120312</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">We provide methods for increasing yield in plants under moderate stress conditions by expression of a transcription factor gene belonging to the HD Zip family of transcription factors.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is a U.S. national phase application, filed in accordance with 35 U.S.C. §371, of International Application No. PCT/GB2013/050600, filed Mar. 12, 2013, which claims the benefit of the priority of Great Britain Application No. 1204304.8, filed Mar. 12, 2012.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">SEQUENCE LISTING</heading>
+      <p id="p-00002-en" num="0002">The instant application contains a Sequence Listing which has been submitted in ASCII format via EFS-Web and is hereby incorporated by reference in its entirety. The ASCII copy, created on May 18, 2015, is named “SequenceListing5D107002US1.txt” and is 23.6 KB (24,249 bytes) in size.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00003-en" num="0003">Adverse climate conditions and human activity as well as biological agents are stress effectors for plants and seriously affect their productivity and survival. Losses in productivity due to this kind of stress reach sometimes more than 50%. Plant breeders have been and are devoted to developing strategies in order to avoid or diminish the negative impact of these situations.</p>
+      <p id="p-00004-en" num="0004">Among abiotic stress-causing factors, drought, salinity of the soil and extreme temperatures are some of the most harmful. Temperatures stresses are classified into three types: freezing (caused by temperatures below 0° C.), chilling (caused by low temperatures over 0° C.) and heat stress (caused by high temperatures). Chilling temperatures cause damage to photosynthetic tissues, inhibit the whole photosynthetic process and carbohydrate transport as well as protein biosynthesis and respiration rates. Simultaneously, protein degradation is accelerated. All of these effects occur rather slowly and involve partial or total loss of membrane functionality. In contrast, freezing temperatures cause quick damage, killing the plants. It has been observed, however, that plants subjected to chilling during several days tolerate freezing temperatures better than plants subjected to freezing without first having been exposed to a period of chilling; this process is termed “acclimation”.</p>
+      <p id="p-00005-en" num="0005">Species such as winter cereals are adapted to cold or moderate-cold weather and can tolerate temperatures ranging from 0° C. to 15° C., as well as freezing temperatures, rather well if they have previously been acclimated to reduced temperatures. By contrast, tropical and subtropical species, including important crops, such as maize, rice or tomato, are sensitive to low temperatures and appear to lack efficient acclimation mechanisms.</p>
+      <p id="p-00006-en" num="0006">Furthermore, in <i>Arabidopsis </i>research, stress is often assessed under severe conditions that are lethal to wild type plants. For example, drought tolerance is assessed predominantly under quite severe conditions in which plant survival is scored after a prolonged period of soil drying. However, in temperate climates, limited water availability rarely causes plant death, but restricts biomass and seed yield. Moderate water stress, that is suboptimal availability of water for growth can occur during intermittent intervals of days or weeks between irrigation events and may limit leaf growth, light interception, photosynthesis and hence yield potential. Leaf growth inhibition by water stress is particularly undesirable during early establishment.</p>
+      <p id="p-00007-en" num="0007">In a recent study, different transgenic <i>Arabidopsis </i>events with enhanced tolerance to lethal drought were analyzed in a mild stress assay (Skirycz et al., 2011). The authors screened the literature in order to identify <i>Arabidopsis </i>genes that in gain- or loss-of-function situations confer drought stress tolerance without penalties in growth, and then selected 25 to perform the assay. In this assay, two lines showed larger plants while the rest were smaller, either in control or under drought conditions. However, growth reduction under mild stress was similar for all of the genotypes tested. The authors therefore concluded that enhanced survival under severe drought is not a good indicator for improved growth performance under mild/moderate stress conditions which can often be found in temperate climates. Superior survival under severe drought is often associated with constitutive activation of water-saving mechanisms, such as stomatal closure, that can lead to growth penalty.</p>
+      <p id="p-00008-en" num="0008">Therefore, genes that are useful in conferring tolerance to severe stress conditions in transgenic plants and increase survival rates are in most cases detrimental to plant yield when the transgenic plant expressing such transgene(s) is exposed to mild stress conditions.</p>
+      <p id="p-00009-en" num="0009">Among the 25 genes tested in the study Skirycz et al., 2011, several encode transcription factors (TFs), but none of them belong to the HD-Zip family.</p>
+      <p id="p-00010-en" num="0010">One of the strategies to reduce losses in plant productivity is to increase natural stress tolerance, by strengthening endogenous systems. Transcription factors (TFs) play a crucial role in the plant response to environmental factors as well as in the morphogenetic program. They are proteins acting in trans, able to recognize and bind specific DNA sequences (cis-acting elements) localized in the regulatory regions of their target genes. When these proteins bind their targets, they activate or repress whole transduction signals pathways.</p>
+      <p id="p-00011-en" num="0011">About 1500 TFs have been identified in plants using bioinformatics, and TFs comprise numerous gene families. However, while they might be involved in the response, they may not necessarily confer a tolerance. Therefore, it continues to be necessary to undertake a series of functional genomic experiments in order to test and demonstrate the effects of TFs on stress tolerance as such effects cannot be predicted (Arce et al., 2008).</p>
+      <p id="p-00012-en" num="0012">HD-Zip proteins characterized by the presence of a homeodomain associated with a leucine zipper constitute one family of plant transcription factors. The association of the DNA binding domain (HD) with an adjacent dimerization motif (leucine zipper abbreviated ZipLZ or LZ) is a combination found only in the plant kingdom, although the domains are found independently of each other in a large number of eukaryotic transcription factors. This large family of plant TFs has been divided into four subfamilies (I to IV) according to sequence similarity in and outside the conserved domains and by the intron/exon patterns of the corresponding genes (Chan et al. 1998, Henriksson et al., 2005; Ariel et al., 2007). Members of subfamily I interact with the pseudopalindromic sequence CAAT(A/T)ATTG; subfamily II proteins recognize a motif CAAT(C/G)ATTG. In all cases, the formation of protein homo- or hetero-dimers is a prerequisite for DNA binding.</p>
+      <p id="p-00013-en" num="0013">HaHB1 (<i>Helianthus Annuus </i>Homeobox 1) cDNA was isolated in 1992 from a sunflower stem cDNA library and its sequence was deposited in the Genebank (accession number L22847). HaHB1 is a member of the HD-Zip subfamily I (HD-Zip I). All HD-Zip I family members show high sequence similarity in the N-terminal homeodomain (HD) and leucine zipper domain (LZ), but are notably much more diverse in the C-terminal region. For example, HaHB1 and HaHB4 are both members of HD-Zip I, but they share very little sequence similarity in their C-terminal regions. Although HD-Zip I are grouped into a single family, different HD-Zip I family members exhibit differential expression patterns and are involved in different developmental and physiological processes. The disclosure in WO 2010/139993 and Cabello et al., 2012 (both incorporated herein by reference) demonstrate the utility of HaHB1 in the production of transgenic plants with enhanced tolerance to a number of different stresses under severe conditions. These disclosures also show that when exposed to different types of severe stress, such as drought, salinity, chilling or freezing, plants that have been transformed with a HaHB1 nucleic acid sequence and express a HaHB1 polypeptide show a higher survival rate compared to non-transformed control plants. In the disclosure in WO 2010/139993, the inventors have characterised HaHB1 and compared its structure to homologous sequences. Using chimeric constructs, the inventors have also found that it is the C-terminus of the HaHB1 protein that is important in conferring HaHB1 function. It was also shown that AtHB13 has a similar effect as HaHB1 when expressed in transgenic plants. Furthermore, other genes homologous to HaHB1 that show high homology not only in the HD and LZ domains, but also in the C-terminal domains, are also predicted to have a similar effect as HaHB1 when expressed in transgenic plants.</p>
+      <p id="p-00014-en" num="0014">There is a need for methods for making plants with increased yield under moderate stress conditions. In other words, whilst plant research in making stress tolerant plants is often directed at identifying plants that show increased stress tolerance under severe conditions that will lead to death of a wild type plant, these plants do not perform well under moderate stress conditions and often show growth reduction which leads to unnecessary yield loss. The invention is aimed at addressing this need.</p>
+      <heading id="h-00004-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00015-en" num="0015">Plant genes that are useful in conferring tolerance to severe stress conditions in transgenic plants and increase survival rates are in most cases detrimental to plant yield when the transgenic plant expressing such transgenes and grown under normal conditions is then exposed to mild stress conditions. The inventors have surprisingly found that expression of HaHB1 (which is known to confer stress tolerance under severe stress conditions) in transgenic plants results in plants that show increased yield compared to control plants when the plants are exposed to moderate stress or when the plants are well watered. In other words, the loss in yield experienced by a plant when exposed to moderate stress is less in plants expressing HaHB1 than in control plants. The presence of the transgene therefore mitigates against yield loss. Moreover, yield increases in the transgenic plants expressing HaHB1 compared to control plants have also been observed.</p>
+      <p id="p-00016-en" num="0016">In the present patent disclosure, we describe the use of HaHB1, a transcription factor that is a member of the sunflower subfamily I of HD-Zip proteins and functional variants, functional parts or homologues thereof, such as AtHB13, to modify plant responses to moderate stress conditions, including freezing, drought, salinity and biotic stress. Thus, the various aspects of the invention all relate to uses of HaHB1, functional variants, functional parts or homologues thereof and methods which increase yield. Specifically, as shown herein these methods confer increased yield to a plant under moderate stress conditions. We demonstrate that by making transgenic plants expressing the sunflower HaHB1 cDNA under the control of the constitutive 35S promoter, transgenic plants are produced which exhibit clear increases in yield in response to moderate stress conditions compared to a control plant.</p>
+      <p id="p-00017-en" num="0017">Thus, in a first aspect, the invention relates to a method for increasing yield of a plant under one or multiple moderate stress conditions comprising introducing and expressing in said plant a HaHB1 nucleic acid sequence, a functional part, homologue or functional variant thereof. The HaHB1 nucleic acid sequence may be as defined by SEQ ID NO:2, 6 or 7. In one embodiment, the HaHB1 nucleic acid sequence comprises or consists of SEQ ID NO:2, 6 or 7.</p>
+      <p id="p-00018-en" num="0018">In another aspect, the invention relates to the use of a nucleic acid sequence as defined by SEQ ID NO:2, 6 or 7, a functional part, homologue or functional variant thereof in increasing yield under moderate stress conditions.</p>
+      <p id="p-00019-en" num="0019">From the information provided herein, those skilled in the art will appreciate that HaHB1, a functional variant, functional part or a homolog thereof, confers enhanced yield under moderate stress conditions under the control of a constitutive promoter such as the CaMV 35S promoter, or under the control of another type of promoter, such as for example a cold inducible promoter or an abiotic stress inducible promoter or the HaHB1 promoter.</p>
+      <p id="p-00020-en" num="0020">In light of the general information provided herein, those skilled in the art will appreciate that this invention describes and enables those skilled in the art to obtain and isolate a gene sequence from sunflower or related variants from other plant species which can be used to confer enhanced stress tolerance and thus increased yield to plants under moderate stress conditions, including those of chilling, freezing, tolerance, drought or high salinity and/or biotic stress.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 1</figref>. Sunflower HaHB1 and <i>Arabidopsis </i>AtHB13 were up-regulated by drought</p>
+      <p id="p-00022-en" num="0022">Kinetics of expression of HaHB1 in sunflower R1 leaves (A) and AtHB13 in 21-day-old seedlings (B) subjected to drought stress during the periods indicated.</p>
+      <p id="p-00023-en" num="0023">Transcript levels were quantified by qPCR and the values normalized with respect to that measured at time 0, arbitrarily assigned a value of one. Error bars are standard deviations calculated from three independent samples in which actin transcripts (ACTIN2 plus ACTING) were used as reference genes.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 2</figref>. Transgenic plants expressing HaHB1 or AtHB13 were tolerant to drought and exhibited stabilized membranes and higher yield in mild stress conditions</p>
+      <p id="p-00025-en" num="0025">(A) Illustrative photograph of 25-day-old 35S:HaHB1 (H1-A, H1-B and H1-C), 35S:AtHB13 (A13-A, A13-B, A1-C) and WT plants grown in standard conditions and then subjected to drought for 17 days.</p>
+      <p id="p-00026-en" num="0026">The experiment was carried out with 112 plants of each genotype and repeated three times. The photographs were taken 4 days after rehydration.</p>
+      <p id="p-00027-en" num="0027">(B) Membrane stability (expressed as % of leakage) assay performed with 25-day-old transgenic (35S:HaHB1 and 35S:AtHB13 respectively) and WT plants subjected to drought stress for 17 days. (C) Chlorophyll content in 25-day-old plants under drought stress related to plant fresh weight. The samples were collected and quantified after 10 days of stress.</p>
+      <p id="p-00028-en" num="0028">(D) Weight of seeds obtained after harvest of 35S:HaHB1 and WT plants grown in standard conditions or subjected to a mild stress throughout the life cycle as described herein. The assay was repeated three times and standard deviation was calculated from the results obtained from 4 plants of each genotype per experiment repetition. Asterisks indicate a significant difference between genotypes under the same condition with P&lt;0.05 using ANOVA test.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 3</figref>. PR2 and PR4 were up-regulated by drought stress and the plants overexpressing these two genes or GLU exhibited stabilized membranes and higher chlorophyll concentration when subjected to drought</p>
+      <p id="p-00030-en" num="0030">(A) Kinetics of expression of PR2 and PR4 in 21-day-old seedlings subjected to drought stress during the indicated periods.</p>
+      <p id="p-00031-en" num="0031">Transcript levels were quantified by qPCR and the values normalized with respect to that measured at time 0, arbitrarily assigned a value of one. Error bars represent standard deviations calculated from three independent samples in which actin transcripts (ACTIN2 plus ACTIN8) were used as reference genes.</p>
+      <p id="p-00032-en" num="0032">(B) Membrane stability assay performed with 25-day-old transgenic (35S:PR2, 35S:PR4 and 35S:GLU three independent lines for each transgene, named PR2 A, B, C; PR4 A, B, C and GLU A, B, C) and WT plants subjected to drought stress during 16 days.</p>
+      <p id="p-00033-en" num="0033">(C) Chlorophyll content in 25-day-old plants under drought stress related to plant fresh weight. The samples were collected after 10 days of stress.</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 4</figref>. Sunflower HaNB1 and <i>Arabidopsis </i>AtHB13, PR2, PR4 and GLU were up-regulated by salinity (NaCl) and the transgenic plants overexpressing these genes exhibited stabilized membranes under this stress</p>
+      <p id="p-00035-en" num="0035">(A) Kinetics of expression of HaHB1 in sunflower R1 leaves and of AtHB13, PR2, PR3 and PR4 in 21-day-old seedlings subjected to salinity stress during the periods indicated as: a: one day after 50 mM NaCl addition; b: three days after 50 mM NaCl addition; c: one day after 150 mM NaCl addition; d: three days after 150 mM NaCl addition; e: one day after 200 mM NaCl addition; f: three days after 200 mM NaCl addition, and g: seven days after 200 mM NaCl addition.</p>
+      <p id="p-00036-en" num="0036">Transcript levels were quantified by qPCR and the values normalized with respect to that measured at time 0, arbitrarily assigned a value of one. Error bars are standard deviations calculated from three independent samples in which actin transcripts (ACTIN2 plus ACTING) were used as reference genes.</p>
+      <p id="p-00037-en" num="0037">(B) Membrane stability assay performed with 25-day-old transgenic (35S:HaHB1, 35S:AtHB13 35S:PR2, 35S:PR4 and 35S:GLU, three independent lines per genotype named H1-A, -B, -C; A13-A, -B, -C, PR2-A, -B, -C, PR4-A, -B, -C and GLU-A, -B, -C) and WT plants subjected to salinity stress during the periods described in (A).</p>
+      <p id="p-00038-en" num="0038">(C) Weight of seeds obtained from 35S:HaHB1 (H1-A; H1-B; H1-C) or WT plants grown in standard conditions or subjected to salinity stress as described in the Methods section. The assay was repeated four times and standard deviation was calculated from the results obtained from 4 plants of each genotype per experiment. Asterisks indicate a significant difference between transgenic and WT plants under the same condition with P&lt;0.05 using ANOVA test.</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIG. 5</figref>. PR2, PR4 and GLU are down-regulated in athb13 plants</p>
+      <p id="p-00040-en" num="0040">RNA was extracted from 25-day-old athb13 mutant plants and transcript levels of the putative AtHB13 targets, PR2, PR4 and GLU were quantified by RT-qPCR. Average and standard deviation were calculated from three biological replicas.</p>
+      <p id="p-00041-en" num="0041">
+        <figref>FIG. 6</figref>. Plants transformed with PrH1:HaHB1 are tolerant to drought</p>
+      <p id="p-00042-en" num="0042">(A) Illustrative photograph of 25-day-old PrH1:HaHB1 (lines A, B and C) and WT plants cultured in normal growth conditions and then subjected to drought over 17 days. The experiment was carried out with 16 plants of each genotype and repeated three times. The photograph was taken on the 15<sup>th </sup>day.</p>
+      <p id="p-00043-en" num="0043">(B) Weight of seeds obtained from PrH1:HaHB1 and WT plants grown in standard conditions or subjected to a mild stress as described herein. The assay was repeated three times and standard deviation was calculated from the results obtained from 4 plants of each genotype per experiment repetition.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION OF THE PREFERRED EMBODIMENTS OF THE INVENTION</heading>
+      <p id="p-00044-en" num="0044">The present invention will now be further described. In the following passages, different aspects of the invention are defined in more detail. Each aspect so defined may be combined with any other aspect or aspects unless clearly indicated to the contrary. In particular, any feature indicated as being preferred or advantageous may be combined with any other feature or features indicated as being preferred or advantageous.</p>
+      <p id="p-00045-en" num="0045">The practice of the present invention will employ, unless otherwise indicated, conventional techniques of botany, microbiology, tissue culture, molecular biology, chemistry, biochemistry and recombinant DNA technology, which are within the skill of the art. Such techniques are explained fully in the literature.</p>
+      <p id="p-00046-en" num="0046">In a first aspect, the invention relates to a method for increasing yield of a plant under moderate stress conditions comprising introducing and expressing in said plant a HaHB1 nucleic acid sequence, a functional part, homologue or functional variant thereof. The HaHB1 nucleic acid sequence may be as defined by SEQ ID NO:2, 6 or 7. Thus, the sequence may comprise or consist of SEQ ID NO:2, 6 or 7.</p>
+      <p id="p-00047-en" num="0047">The method therefore includes the preparation of a transgenic plant which expresses an HaHB1 sequence by a transformation method. Methods for plant transformation to introduce the HaHB1 transgene as described herein, for example by <i>Agrobacterium </i>mediated transformation or particle bombardment, and subsequent techniques for regeneration and selection of transformed plants are well known in the field. Also within the scope of the invention is chloroplast transformation through biobalistics.</p>
+      <p id="p-00048-en" num="0048">The increase in yield in the transgenic plant is compared to a control plant which has not been transformed with a HaHB1 nucleic acid sequence to express said sequence, for example a wild type plant. The control plant is typically of the same plant species, preferably the same ecotype as the plant to be assessed.</p>
+      <p id="p-00049-en" num="0049">As used herein, the words “nucleic acid”, “nucleic acid sequence”, “nucleotide”, or “polynucleotide” are intended to include DNA molecules (e.g., cDNA or genomic DNA), RNA molecules (e.g., mRNA), natural occurring, mutated, synthetic DNA or RNA molecules, and analogs of the DNA or RNA generated using nucleotide analogs. It can be single-stranded or double-stranded. Such nucleic acids or polynucleotides include, but are not limited to, coding sequences of structural genes, anti-sense sequences, and non-coding regulatory sequences that do not encode mRNAs or protein products. These terms also encompass a gene. The term “gene” or “gene sequence” is used broadly to refer to a DNA nucleic acid associated with a biological function. Thus, genes may include introns and exons as in genomic sequence, or may comprise only a coding sequence as in cDNAs, and/or may include cDNAs in combination with regulatory sequences.</p>
+      <p id="p-00050-en" num="0050">The term “stress” or “stress condition” as used herein includes abiotic and biotic stress. Said stress/stress tolerance is preferably selected from one or any combination of the following: freezing, low temperature, chilling, drought, high salinity and/or invasion of pathogens, for example <i>Pseudomonas</i>. In one preferred embodiment, the stress is drought. In another embodiment, the stress is high salinity. The inventors have shown that HaHB1 is able to trigger a variety of different stress pathways and can therefore confer increased tolerance to multiple stresses.</p>
+      <p id="p-00051-en" num="0051">According to the methods of the invention, yield may be increased in response to one or more than one type of moderate stress. Therefore, in accordance with the various aspects of the invention, methods are provided that confer an increase in yield under not only a single, but more than one type of stress. In one embodiment, an increase in yield is conferred in response to all of the following stresses when said stress is moderate: freezing, low temperature, chilling, drought, high salinity and/or invasion of pathogens. Thus, the invention relates to a method for conferring increasing yield of a plant under multiple moderate stress conditions comprising introducing and expressing in said plant a HaHB1 nucleic acid sequence, a functional part, homologue or functional variant thereof wherein said stress is selected from at least two, three, four, five or all of freezing, low temperature, chilling, drought, high salinity and/or invasion of pathogens. Any combination is covered. For example, the stress may be drought and freezing and/or low temperature and/or chilling and/or high salinity and/or invasion of pathogens.</p>
+      <p id="p-00052-en" num="0052">As shown herein, the transgenic plants show enhanced tolerance to these types of stresses compared to a control plant and are able to mitigate any loss in yield/growth. The tolerance can therefore be measured as an increase in yield as shown in the examples.</p>
+      <p id="p-00053-en" num="0053">It is important to distinguish the difference between chilling and freezing conditions because the consequences and the responses triggered by the plants are not the same in these two distinct stresses. Prolonged freezing causes tissue death and, ultimately, plant death while prolonged chilling results in plant acclimation and developmental arrest.</p>
+      <p id="p-00054-en" num="0054">Chilling and freezing tolerance occurs via different mechanisms. The response to chilling involves the activation of unsaturases which are able to change the lipid composition of the membranes generating increased membrane fluidity at low temperatures. On the other hand, freezing tolerance requires a previous acclimation period. During this acclimation period, certain specific proteins are synthesized and accumulated. Chilling and freezing are stresses that show different effects on plants: the first leads to slow biochemical reactions, such as enzyme and membrane transport activities; the second leads to ice crystal formation that can cause the disruption of the cell membrane system.</p>
+      <p id="p-00055-en" num="0055">The terms moderate or mild stress/stress conditions are used interchangeably and refer to non-severe stress. In other words, moderate stress, unlike severe stress, does not lead to plant death. Under moderate, that is non-lethal, stress conditions, wild type plants are able to survive, but show a decrease in growth and seed production and prolonged moderate stress can also result in developmental arrest. The decrease can be at least 5%-50% or more. Tolerance to severe stress is measured as a percentage of survival, whereas moderate stress does not affect survival, but growth rates.</p>
+      <p id="p-00056-en" num="0056">Accordingly, the term moderate stress as used herein results in a measurable decrease of growth rates in wild type plants. Assays that mimic moderate stress conditions for <i>Arabidopsis thaliana </i>plants are described herein and in Skirycz et al, 2011. The decrease may be at least 5%-50% or more, for example 5%-10%, 1-25%, 20-30%, 30-40%, 40-50%.</p>
+      <p id="p-00057-en" num="0057">The precise conditions that define moderate stress vary from plant to plant and also between climate zones, but ultimately, these moderate conditions do not cause the plant to die. With regard to high salinity for example, most plants can tolerate and survive about 4 to 8 dS/m. Specifically, in rice, soil salinity beyond ECe ˜4 dS/m is considered moderate salinity while more than 8 dS/m becomes high. Similarly, pH 8.8-9.2 is considered as non-stress while 9.3-9.7 as moderate stress and equal or greater than 9.8 as higher stress.</p>
+      <p id="p-00058-en" num="0058">Drought stress can be measured through leaf water potentials. Generally speaking, moderate drought stress is defined by a water potential of between −1 and −2 Mpa. This has for example been applied in experiments relating to barley and <i>Phaseolus vulgaris </i>L (Wingler et al, 1999 and Torres-Franklin et al 2007).</p>
+      <p id="p-00059-en" num="0059">Moderate temperatures vary from plant to plant and specially between species. Normal temperature growth conditions for <i>Arabidopsis </i>are defined at 22-24° C. For example, at 28° C., <i>Arabidopsis </i>plants grow and survive, but show severe penalties because of “high” temperature stress associated with prolonged exposure to this temperature. However, the same temperature of 28° C. is optimal for sunflower, a species for which 22° C. or 38° C. causes mild, but not lethal stress. In other words, for each species and genotype, an optimal temperature range can be defined as well as a temperature range that induces mild stress or severe stress which leads to lethality.</p>
+      <p id="p-00060-en" num="0060">Also, depending on the soil conditions and/or geographic region in which the plant is grown, “mild stress conditions” can be constant/permanent. For example, the yield of the same soybean (or maize) genotype exhibits differences every year when comparing different regions presenting varied rainfall regimes, even when no drought season occurred during this time.</p>
+      <p id="p-00061-en" num="0061">Moderate stress conditions are common even in temperate climates and affect yield. A skilled person would be able to determine temperatures that can lead to mild stress for any given species based on common general knowledge in the technical field and/or routine methods.</p>
+      <p id="p-00062-en" num="0062">The term “functional part or functional variant of HaHB1/HaHB1” as used herein refers to a variant gene or amino acid sequence or part of the gene or amino acid sequence which retains the biological function of the full non-variant sequence, i.e., it confers an increase in yield under moderate stress conditions when expressed in a transgenic plant. It also confers, as shown in WO 2010/139993, tolerance to severe stress and an increase in survival.</p>
+      <p id="p-00063-en" num="0063">According to embodiments of the methods of the invention, a nucleic acid is expressed in a transgenic plant transformed with a vector as described herein or transformed with a gene sequence as described herein. Thus, the plant transformed according to the methods of the invention expresses or overexpresses a gene encoding for the sunflower HaHB1 protein or a functional variant or functional part thereof. Preferably, the HaHB1 protein comprises or substantially consists of a sequence as defined in SEQ ID NO:5, a functional part or functional variant thereof.</p>
+      <p id="p-00064-en" num="0064">Specifically, the functional variant according to the methods of the invention may be a chimeric sequence that encodes for the C-terminus of HaHB1 as described herein wherein said C-terminus comprises or consists of SEQ ID NO:8. Alternatively, the chimeric sequence encodes a sequence comprising the CI and/or CII motif of HaHB1. In another embodiment, the chimeric sequence encodes a sequence comprising the CI and/or CII motif consensus sequences. These C-terminal sequences may be coupled to the N-terminus including the HD-Zip domain of another HD-Zip I family member.</p>
+      <p id="p-00065-en" num="0065">The term “chimeric nucleic acid construct” is understood to mean that the two parts which are joined in the construct are originally derived from different nucleic acids and coded for separate proteins. Translation of this fusion gene results in a single polypeptide with functional properties derived from each of the original proteins.</p>
+      <p id="p-00066-en" num="0066">The term “variant” may also refer to a sequence that encodes a peptide/protein sequence that is homologous to HaHB1 and which shows homology in the HD and LZ domains and also in the C-terminal domains (in particular to CI and CII). A functional variant also comprises a variant of HaHB1 which is substantially identical, i.e., has only slight sequence variations, for example in non conserved residues, to the HAaHB1 and HaHB1 sequences as shown herein and confers stress tolerance. A functional part may be the sequence encoding for the CI and/or CII motif.</p>
+      <p id="p-00067-en" num="0067">The nucleic acids used in the methods of the invention may be part of an expression cassette that may, for example, be part of an expression vector. In an expression cassette or expression vector, the nucleic acid sequence is under the control of a promoter that preferably drives overexpression of the gene, such as the CaMV35S promoter. Other promoters that can be used are known to the skilled person. Also within the scope of the invention is the use of inducible promoters. Vectors may also have a selection marker to select transformed plants.</p>
+      <p id="p-00068-en" num="0068">In one embodiment, the promoter is the endogenous promoter that directs expression of an HaHB1 gene. For example, the promoter may comprise or consist of the HaHB1 promoter as shown in SEQ ID NO:1 or a functional variant thereof. In one embodiment the promoter may comprise or consist of SEQ ID NO:1 directing the expression of a gene that is a functional homolog or variant of HaHB1.</p>
+      <p id="p-00069-en" num="0069">The terms “regulatory element”, “control sequence” and “promoter” are all used interchangeably herein and are to be taken in a broad context to refer to regulatory nucleic acid sequences capable of effecting expression of the sequences to which they are ligated. The term “promoter” typically refers to a nucleic acid control sequence located upstream from the transcriptional start of a gene and which is involved in recognising and binding of RNA polymerase and other proteins, thereby directing transcription of an operably linked nucleic acid. Encompassed by the aforementioned terms are transcriptional regulatory sequences derived from a classical eukaryotic genomic gene (including the TATA box which is required for accurate transcription initiation, with or without a CCAAT box sequence) and additional regulatory elements (i.e., upstream activating sequences, enhancers and silencers) which alter gene expression in response to developmental and/or external stimuli, or in a tissue-specific manner. Also included within the term is a transcriptional regulatory sequence of a classical prokaryotic gene, in which case it may include a −35 box sequence and/or −10 box transcriptional regulatory sequences. The term “regulatory element” also encompasses a synthetic fusion molecule or derivative that confers, activates or enhances expression of a nucleic acid molecule in a cell, tissue or organ. According to the invention, plants that express an HaHB1 nucleic acid sequence, or a functional variant of homolog thereof, show less decrease in yield than control plants when exposed to moderate stress. Yield is thus increased in plants that express an HaHB1 nucleic acid sequence compared to control plants. Yield can be measured in a number of ways, for example by measuring plant growth, seed production or biomass. An increase in yield can, for example, be assessed by the harvest index, i.e., the ratio of seed yield to aboveground dry weight. Thus, according to the invention, an increase in yield comprises one or more of: increased seed yield per plant, increased seed filling rate, increased number of filled seeds, increased harvest index, increased number of seed capsules/pods, increased seed size, increased growth or increased branching, for example inflorescences with more branches. Preferably, yield comprises an increased number of seed capsules/pods and/or increased branching. Yield is increased relative to control plants. The increase in yield is at least about 10%, 15%, 20%, 25%, 30%, 35%, 40%, 45% or 50% compared to a control plant. In one embodiment, the increase in yield is about 10% to about 50%.</p>
+      <p id="p-00070-en" num="0070">Yield can also be measured as the difference in the loss of yield observed in plants that are grown under moderate stress conditions when compared to plants grown under normal conditions. As shown in the examples, both wild type plants and plants transformed with an HaHB1 transgene and expressing the HaHB1 protein have decreased yield when grown under moderate stress conditions when compared to plants grown under normal conditions. However, in plants expressing the HaHB1 protein, the decrease in yield is less than the decrease observed in the control plants. According to the methods described herein, the plant into which a vector or sequence as defined herein is introduced may be <i>Arabidopsis</i>. In WO 2010/139993, the inventors have shown that the HaHB1 gene sequence from sunflower can direct the expression of the HaHB1 protein in <i>Arabidopsis</i>. Moreover, the inventors have shown that transgenic expression of 35S:HaBH1 and expression of 35S:AtHB13 respectively in other plants or plant tissue results in the up-regulation of the expected target genes, thus providing evidence that both HaBH1 and ATHB13 are effective in exogenous plant hosts and that transgenic expression of HaBH1 and AtHB13 has universal application in genetically manipulating plants. The skilled person would thus know that the invention is not limited to <i>Arabidopsis </i>and that any monocot or dicot plant can be used according to the different aspects of the invention.</p>
+      <p id="p-00071-en" num="0071">A dicot plant may be selected from the families including, but not limited to <i>Asteraceae, Brassicaceae </i>(eg <i>Brassica napus</i>); <i>Chenopodiaceae, Cucurbitaceae, Leguminosae </i>(<i>Caesalpiniaceae, Aesalpiniaceae Arimosaceae, Papilionaceae </i>or <i>Fabaceae</i>), <i>Malvaceae, Rosaceae </i>or <i>Solanaceae</i>. For example, the plant may be selected from lettuce, sunflower, <i>Arabidopsis</i>, broccoli, spinach, water melon, squash, cabbage, tomato, potato, <i>capsicum</i>, tobacco, cotton, okra, apple, rose, strawberry, alfalfa, bean, soybean, field (fava) bean, pea, lentil, peanut, chickpea, apricots, pears, peach, grape vine or citrus species. In one embodiment, the plant is oilseed rape.</p>
+      <p id="p-00072-en" num="0072">Also included are biofuel and bioenergy crops such as sugar cane, oilseed rape/canola, linseed, and willow, poplar, poplar hybrids, switchgrass, <i>Miscanthus </i>or gymnosperms, such as loblolly pine. Also included are crops for silage (eg forage maize), grazing or fodder (grasses, clover, sanfoin, alfalfa), fibres (e.g., cotton, flax), building materials (e.g., pine, oak), pulping (e.g., poplar), feeder stocks for the chemical industry (e.g., high erucic acid oil seed rape, linseed) and for amenity purposes (e.g., turf grasses for golf courses), ornamentals for public and private gardens (e.g., snapdragon, <i>petunia</i>, roses, geranium, <i>Nicotiana </i>sp.) and plants and cut flowers for the home (African violets, Begonias, chrysanthemums, geraniums, <i>Coleus </i>spider plants, Dracaena, rubber plant).</p>
+      <p id="p-00073-en" num="0073">A monocot plant may, for example, be selected from the families Arecaceae, Amaryllidaceae or Poaceae. For example, the plant may be a cereal crop, such as wheat, rice, barley, maize, oat, sorghum, rye, onion, leek, millet, buckwheat, turf grass, Italian rye grass, switchgrass, <i>Miscanthus</i>, sugarcane or <i>Festuca </i>species.</p>
+      <p id="p-00074-en" num="0074">Preferably, the plant into which a sequence or vector of the invention is introduced is a crop plant. By crop plant is meant any plant which is grown on a commercial scale for human or animal consumption or use or other non-food/feed use.</p>
+      <p id="p-00075-en" num="0075">Preferred plants are maize, tobacco, wheat, rice, oilseed rape, sorghum, soybean, potato, tomato, barley, pea, bean, field bean, cotton, lettuce, broccoli or other vegetable brassicas or poplar.</p>
+      <p id="p-00076-en" num="0076">The gene or nucleic acid sequence used in the aspects of the invention may be an exogenous gene, such as sunflower HaHB1, a functional variant, part or homologue thereof, expressed in a different plant species, for example one of the plants listed above. For example, the homologue which is expressed or overexpressed as an exogenous transgene in a different plant, for example one of the plants listed above, may be a nucleic acid sequence comprising or consisting of SEQ ID NO:15 and encoding for <i>Arabidopsis </i>HaHB1 (AtHB13). Another example that can be used is ATHB23, a gene that shares high homology with HaHB1. Also included are functional variants and homologs of AtHB13 and AtHB23. Expression of AtHB13 or AtHB23 may be driven by the HaHB1 promoter comprising SEQ ID NO:1.</p>
+      <p id="p-00077-en" num="0077">Alternatively, the invention also relates to using a plant's endogenous HaHB1 gene (which is endogenous to the plant in which it is introduced as a transgene by recombinant DNA technology and expressed or overexpressed) which is a homologue of the sunflower HaHB1, i.e., a gene encoding for a homologue of HaHB1.</p>
+      <p id="p-00078-en" num="0078">The homologous gene shows high sequence similarity in the HD and LZ domains, but also in the C-terminal domains (CI and CII) as the C-terminus is crucial in conferring HaHB1 function.</p>
+      <p id="p-00079-en" num="0079">A homologue of the sunflower HaHB1 polypeptide has, in increasing order of preference, at least 25%, 26%, 27%, 28%, 29%, 30%, 31%, 32%, 33%, 34%, 35%, 36%, 37%, 38%, 39%, 40%, 41%, 42%, 43%, 44%, 45%, 46%, 47%, 48%, 49%, 50%, 51%, 52%, 53%, 54%, 55%, 56%, 57%, 58%, 59%, 60%, 61%, 62%, 63%, 64%, 65%, 66%, 67%, 68%, 69%, 70%, 71%, 72%, 73%, 74%, 75%, 76%, 77%, 78%, 79%, 80%, 81%, 82%, 83%, 84%, 85%, 86%, 87%, 88%, 89%, 90%, 91%, 92%, 93%, 94%, 95%, 96%, 97%, 98%, or 99% overall sequence identity to the amino acid represented by SEQ ID NO:5. In one embodiment, a homologue of the sunflower HaHB1 polypeptide has at least 90%, 91%, 92%, 93%, 94%, 95%, 96%, 97%, 98%, or 99% overall sequence identity to the amino acid represented by SEQ ID NO:5. The overall sequence identity can be determined using a global alignment algorithm, such as the Needleman Wunsch algorithm in the program GAP (GCG Wisconsin Package, Accelrys), preferably with default parameters and preferably with sequences of mature proteins (i.e., without taking into account secretion signals or transit peptides).</p>
+      <p id="p-00080-en" num="0080">A homologue of the sunflower HaHB1 nucleic acid sequence has, in increasing order of preference, at least 25%, 26%, 27%, 28%, 29%, 30%, 31%, 32%, 33%, 34%, 35%, 36%, 37%, 38%, 39%, 40%, 41%, 42%, 43%, 44%, 45%, 46%, 47%, 48%, 49%, 50%, 51%, 52%, 53%, 54%, 55%, 56%, 57%, 58%, 59%, 60%, 61%, 62%, 63%, 64%, 65%, 66%, 67%, 68%, 69%, 70%, 71%, 72%, 73%, 74%, 75%, 76%, 77%, 78%, 79%, 80%, 81%, 82%, 83%, 84%, 85%, 86%, 87%, 88%, 89%, 90%, 91%, 92%, 93%, 94%, 95%, 96%, 97%, 98%, or 99% overall sequence identity to the amino acid represented by SEQ ID NO:2. In one embodiment, a homologue of the sunflower HaHB1 polypeptide has at least 90%, 91%, 92%, 93%, 94%, 95%, 96%, 97%, 98%, or 99% overall sequence identity to the amino acid represented by SEQ ID NO:2.</p>
+      <p id="p-00081-en" num="0081">The classification of HD-Zip proteins into four subfamilies is supported by the following four distinguishing characteristics: conservation of the HD-Zip domain determining DNA binding specificities, gene structures, additional conserved motifs and functions (Ariel F D et al., 2007).</p>
+      <p id="p-00082-en" num="0082">Members of the HD-Zip family exhibit a LZ motif just downstream from the HD motif. The two motifs are present in transcription factors belonging to other eukaryotic kingdoms, but their association with each other in a single protein is unique to plants. The HD is responsible for the specific binding to DNA while the LZ acts as a dimerization motif. HD-Zip proteins bind to DNA as dimers, and the absence of the LZ absolutely abolishes their binding ability, indicating that the relative orientation of the monomers, driven by this motif, is crucial for an efficient recognition of DNA (Ariel F D et al., 2007, Tron A E et al., 2005).</p>
+      <p id="p-00083-en" num="0083">Thus, a homolog of the sunflower HaHB1 polypeptide is characterised by the presence of conserved domains, including the HD-Zip domain and the LZ motif.</p>
+      <p id="p-00084-en" num="0084">In one embodiment the homolog has at least 90%, 91%, 92%, 93%, 94%, 95%, 96%, 97%, 98%, or 99% overall sequence identity to the amino acid represented by SEQ ID NO:8, 9, 10, 11 or 12.</p>
+      <p id="p-00085-en" num="0085">In <i>Arabidopsis</i>, subfamily I is composed of seventeen members (ATHB1/HAT5, 3/HAT7, 5, 6, 7, 12, 13, 16, 20, 21, 22, 23, 40, 51, 52, 53, 54). HD-Zip I subsets of genes (in <i>Arabidopsis</i>) share their intron/exon distribution in accordance with their phylogenetic relationships. The molecular weight of the encoded proteins is about 35 kDa and they exhibit a highly conserved HD and a less conserved LZ. Other similarities and conserved motifs are described in Acre et al, 2011, incorporated herein by reference.</p>
+      <p id="p-00086-en" num="0086">A full in vitro description, consisting of PCR-assisted binding site selection and footprinting assays, determined that all the proteins encoded by HD-Zip I genes and tested, recognize, as dimmers, the pseudopalindromic sequence CAAT(A/T)ATTG (Ariel et al., 2007).</p>
+      <p id="p-00087-en" num="0087">WO 2010/139993 discloses consensus sequences, in particular for the carboxy terminus domain in Subfamily I. The C-terminal region provides a disordered protein-protein interaction domain, and the interaction of this domain with other diverse proteins determines the function of the protein. Without the HD-Zip domain, the HaHB1 C-terminus does not function autonomously. The HD-Zip of HaHB4 (with its C-terminus deleted) fused to the C-terminus of HaHB1, appears to behave like HaHB1. All the HD-Zip I members characterized up to now bind the same DNA sequence.</p>
+      <p id="p-00088-en" num="0088">Therefore, it is believed that the HaHB1 C-terminus fused to the HD-Zip region of any subfamily I HD-Zip domain acts as a functional HaHB1. The C-terminal region confers protein function (Arce et al., 2011).</p>
+      <p id="p-00089-en" num="0089">The methods and uses of the invention comprise the use of chimeric sequences/constructs which act as functional variants of HaHB1. For example, chimeric constructs which comprise the HaHB1 C-terminus fused to the HD-Zip region of any subfamily I HD-Zip domain act as a functional HaHB1 can therefore also be used in the methods for conferring increased yield as described herein.</p>
+      <p id="p-00090-en" num="0090">In such a chimeric construct, the N-terminal region is characterised in that it comprises a homeodomain with homology to the consensus as shown in SEQ ID NO:14 (which was obtained from subfamily I), associated in its C-terminus to a leucine zipper. Moreover, this conserved homeodomain is able to bind the palindromic sequence CAAT(A/T)ATTG which is characteristic for this subfamily and differs from the sequences bound by members of other subfamilies.</p>
+      <p id="p-00091-en" num="0091">Therefore, in one embodiment of the invention, the functional variant is a chimeric nucleic acid construct comprising a nucleic acid sequence encoding for the N-terminal sequence including the HD-Zip domain of an HD Zip protein of subfamily I or a sequence comprising a N-terminal consensus motif or part thereof operatively associated with a nucleic acid sequence encoding for a sequence comprising or consisting of the C-terminus of HaHB1, or a sequence comprising a C-terminal consensus motif or part thereof. The C-terminal sequence may comprise or consist of SEQ ID NO:8 or comprise one or more of SEQ ID NO:9, 10, 11 or 12.</p>
+      <p id="p-00092-en" num="0092">Preferably, the C-terminal sequence comprises a sequence with at least 80%, preferably at least 90%, more preferably at least 95% homology to the consensus sequence of SEQ ID NO:8. In one embodiment, the homology is more preferably at least 95%, 96%, 97%, 98% or 99%.</p>
+      <p id="p-00093-en" num="0093">In one embodiment, the N-terminal sequence including the HD-Zip domain of the chimeric construct comprises a sequence with homology to the consensus sequence of SEQ ID NO:14. Said homology may be at least 80%, preferably at least 90%, more preferably at least 95%. In one embodiment, the homology is more preferably at least 95%, 96%, 97%, 98% or 99%.</p>
+      <p id="p-00094-en" num="0094">In another embodiment, the N-terminus including the HD-Zip domain of said chimeric polypeptide is the N-terminus of HaHB4 including the HD-Zip domain.</p>
+      <p id="p-00095-en" num="0095">In another aspect, the invention relates to a method for producing a plant with increased yield under moderate stress conditions comprising introducing and expressing in said plant a nucleic acid sequence as defined herein.</p>
+      <p id="p-00096-en" num="0096">The invention also relates to the use of a HaHB1 nucleic acid sequence, a functional part, homologue or functional variant thereof, preferably, a sequence comprising or consisting of SEQ ID NO:2, 6 or 7 to increase yield of a plant under moderate stress conditions.</p>
+      <p id="p-00097-en" num="0097">A sequence or vector described herein encoding for the HaHB1 protein is introduced as a transgene into the plant.</p>
+      <p id="p-00098-en" num="0098">For the purposes of the invention, “transgenic”, “transgene” or “recombinant” means with regard to, for example, a nucleic acid sequence, an expression cassette, gene construct or a vector comprising the nucleic acid sequence or an organism transformed with the nucleic acid sequences, expression cassettes or vectors according to the invention, all those constructions brought about by recombinant methods in which either</p>
+      <p id="p-00099-en" num="0000">(a) the nucleic acid sequences encoding proteins useful in the methods of the invention, or <br /> (b) genetic control sequence(s) which is operably linked with the nucleic acid sequence according to the invention, for example a promoter, or <br /> (c) a) and b) <br /> are not located in their natural genetic environment or have been modified by recombinant methods. The natural genetic environment is understood as meaning the natural genomic or chromosomal locus in the original plant. The environment flanks the nucleic acid sequence at least on one side and has a sequence length of at least 50 bp, preferably at least 500 bp, especially preferably at least 1000 bp, most preferably at least 5000 bp. </p>
+      <p id="p-00100-en" num="0099">A transgenic plant for the purposes of the invention is thus understood as meaning, as above, that the nucleic acids used in the method of the invention are not at their natural locus in the genome of said plant, it being possible for the nucleic acids to be expressed homologously or heterologously.</p>
+      <p id="p-00101-en" num="0100">Methods that solely rely on conventional breeding techniques and do not involve recombinant technologies are disclaimed.</p>
+      <p id="p-00102-en" num="0101">It will be understood by the skilled person that the transgene is preferably stably integrated into the transgenic plants described herein and passed on to successive generations.</p>
+      <p id="p-00103-en" num="0102">While the foregoing disclosure provides a general description of the subject matter encompassed within the scope of the present invention, including methods, as well as the best mode thereof, of making and using this invention, the following examples are provided to further enable those skilled in the art to practice this invention and to provide a complete written description thereof. However, those skilled in the art will appreciate that the specifics of these examples should not be read as limiting on the invention, the scope of which should be apprehended from the claims and equivalents thereof appended to this disclosure. Various further aspects and embodiments of the present invention will be apparent to those skilled in the art in view of the present disclosure.</p>
+      <p id="p-00104-en" num="0103">All documents mentioned in this specification are incorporated herein by reference in their entirety.</p>
+      <p id="p-00105-en" num="0104">The term “and/or” where used herein is to be taken as specific disclosure of each of the two specified features or components with or without the other. For example “A and/or B” is to be taken as specific disclosure of each of (i) A, (ii) B and (iii) A and B, just as if each is set out individually herein.</p>
+      <p id="p-00106-en" num="0105">Unless context dictates otherwise, the descriptions and definitions of the features set out above are not limited to any particular aspect or embodiment of the invention and apply equally to all aspects and embodiments which are described.</p>
+      <heading id="h-00007-en" level="1">EXAMPLES</heading>
+      <p id="p-00107-en" num="0106">Having generally described the invention disclosed herein, including methods by which those skilled in the art could make and use the invention, the following examples are provided to further extend this description, to enable those skilled in the art to practice this invention, including its best mode. However, the specifics of the examples which follow are not limiting. Rather, for an appreciation of the scope of the invention contemplated herein, reference should be had to the appended claims and the equivalents thereof.</p>
+      <heading id="h-00008-en" level="2">Materials and Methods</heading>
+      <heading id="h-00009-en" level="2">Constructs and Transgenic Plants</heading>
+      <p id="p-00108-en" num="0107">35S:HaHB1, 35S:AtHB13, 35S:PR2, 35S:PR4, ProH1:HaHB1, 35S:GLU and 35S:GUS constructs (used as control) as well as the transgenic plants bearing these constructs were previously described (Cabello et al., 2011). AtHB13 mutant plants (athb13 background) were obtained from the ABRC (<i>Arabidopsis </i>Biologic Resource Center) as heterozygous and homozygous lines were selected after two complete life cycles.</p>
+      <heading id="h-00010-en" level="2">Plant Material and Growth Conditions</heading>
+      <p id="p-00109-en" num="0108">
+        <i>Arabidopsis thaliana </i>Heyhn. ecotype Columbia (Col-0) was purchased from Lehle Seeds (Tucson, Ariz.) and reproduced in the culture chamber. WT and transgenic plants were grown directly in soil in a growth chamber at 22-24° C. under long-day photoperiods (16 h of illumination with a mixture of cool-white and GroLux fluorescent lamps) at an intensity of approximately 150 μE m<sup>−1 </sup>s<sup>−1 </sup>in 8 cm diameter×7 cm height pots during the periods of time indicated in the figures.</p>
+      <p id="p-00110-en" num="0109">
+        <i>Helianthus annuus </i>seeds were germinated on wet filter paper for 7 days and then transferred to 8×7 cm pots each with an equal amount of vermiculite-perlite mix, one plant per pot and water-saturated. They were placed in a 45-cm plastic square tray and cultured as described below except that further water was not added until stress was evident. Plants were harvested and frozen for RNA isolation.</p>
+      <heading id="h-00011-en" level="2">RNA Isolation and Expression Analyses by Real Time RT-PCR</heading>
+      <p id="p-00111-en" num="0110">RNA for real-time RT-PCR was prepared with Trizol® reagent (Invitrogen™) according to the manufacturer's instructions. RNA (2 μg) was used for the RT reactions using M-MLV reverse transcriptase (Promega). Quantitative PCRs were carried out using a MJ-Cromos 4 apparatus in a 20 μl final volume containing 1 μl SyBr green (10×), 8 pmol of each primer, 2 mM MgCl<sub>2</sub>, 10 μl of a 1/25 dilution of the RT reaction and 0.12 μl Platinum Taq (Invitrogen Inc.). Fluorescence was measured at 78-80° C. during 40 cycles. Sunflower RNA was also prepared with the Trizol (Invitrogen Inc.) technique, but in this case the dilution of the RT reaction was 1/50.</p>
+      <p id="p-00112-en" num="0111">Specific oligonucleotides for each gene were designed using publicly available sequences (<i>Arabidopsis</i>.org web page and ncbi.nlm.nih.gov). The designed sequences specified below, correspond to the oligonucleotides used for qRT-PCR.</p>
+      <p id="p-00113-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" tabstyle="monospace">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="175pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>H1qF: </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(SEQ ID NO: 17)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>5′ GGCCGGCAGATCATCAACTTC 3′ </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>H1qR: </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(SEQ ID NO: 18)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>5′ CCAACCATGGCCAAAACCCTG 3′ </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>A13qF: </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(SEQ ID NO: 19)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>5′ CTCCATGGATTTGCTTCG 3′ </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>A13qR: </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(SEQ ID NO: 20)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>5′ TCCCATTTGTGACCCATC 3′ </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>qAtPR2-F:</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(SEQ ID NO: 21)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>5′ TAAGAAGGAACCAACGTATGAGAA 3′</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>qAtPR2-R: </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(SEQ ID NO: 22)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>5′ CATAAAAAGCCCACAAGTCTCTAA 3′</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>qAtPR4-F:</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(SEQ ID NO: 23)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>5′ GTTTAAGGGTGAAGAACACAAGAAC 3′</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>qAtPR4-R: </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(SEQ ID NO: 24)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>5′ ATTGAACATTGCTACATCCAAATC 3′</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>qAtGLU-F: </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(SEQ ID NO: 25)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>5′ ACCAAAACCTCTTTGACGCTTTAC 3′</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>qAtGLU-R:</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(SEQ ID NO: 26)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>5′ AATACGTTTCCACTCCTCTTCCAG 3′</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00012-en" level="2">Water Stress and Salinity Treatments</heading>
+      <p id="p-00114-en" num="0112">Early water-stress treatment in soil was carried out as follows: 16 pots (8×7 cm), each one with a weighed amount of vermiculite-perlite mix was used to germinate 4 seeds, water-saturated and placed in a 45-cm plastic square tray. For severe drought assays, plants were not watered again until damage was observed. During this period, samples were harvested for RNA or cell membrane tests.</p>
+      <p id="p-00115-en" num="0113">Water-stress treatment was also carried out with standard-conditions using 4-week-old plants. At this point, watering was stopped until damage became evident (approximately 16 additional days). In both cases, photographs were taken 2 days after re-watering.</p>
+      <p id="p-00116-en" num="0114">Mild water stress treatments were carried out as follows: Plants were grown in standard-conditions for 25 days. Then, watering was stopped until a mild stress level was reached, 10 days later. Subsequently, the stress was maintained by watering the pots every two days, maintaining the same weight in all the pots, equal to the weight measured on day 35.</p>
+      <p id="p-00117-en" num="0115">Salinity stress was performed as follows: 1 l (one litre) of 50 mM NaCl was added to the plastic square tray in which 16 pots with 25-day-old plants were placed. After 7 days another 1 l of 150 mM NaCl was added. Fourteen days after the first addition an additional 1 l of 200 mM NaCl was added. The samples for RNA extraction were collected one and three days after each NaCl addition and for membrane stability assay one day after each NaCl addition.</p>
+      <p id="p-00118-en" num="0116">For seed production experiments, salinity stress was performed as follows: 1 l of 100 mM NaCl was added to the plastic tray with 16 pots containing each one a 21-day-old plant. After 7 days another 1 l of 100 mM NaCl was added. Fourteen days after the first addition an additional 1 l of 100 mM NaCl was added. After that, the plants were watered normally until harvesting.</p>
+      <heading id="h-00013-en" level="2">Cell Membrane Stability Evaluation by the Ion Leakage Technique</heading>
+      <p id="p-00119-en" num="0117">The ion leakage technique was carried out essentially as described by Sukumaran and Waiser (1972) with minor changes. Under drought, leaves were detached at different times as described in the figure legends. Under salinity stress, leaves were detached three days after each NaCl addition.</p>
+      <p id="p-00120-en" num="0118">Leaves were exhaustively washed with distilled water prior to subjecting them to the stress by placing individual leaf samples in 15 ml of double-distilled deionized water with continuous agitation in a water bath at 25° C. for 3 hr. After decantation the aqueous extract conductance (C1) was measured. Then, the leaves were placed in a 65° C. water bath for 16 h with continuous agitation and one additional hour at 25° C. prior to measure the solution conductance (C2). The real conductance was calculated as the ratio between C2/C1 (L=C1/C) and used as index of injury. L values higher than 0.5 indicate severe injury.</p>
+      <heading id="h-00014-en" level="2">Chlorophyll Quantification</heading>
+      <p id="p-00121-en" num="0119">Chlorophyll was quantified following the method described by Chory et al., 1994. Hundred mg of rosette leaves from 25-day-old plants were weighted and pulverized using liquid N<sub>2</sub>. The powder was transferred to a 1.5 ml tube and 1.5 ml of 80% acetone was added. The tubes were placed in the dark for 30 minutes and then centrifuged 5 minutes at 12000 rpm. Absorbance at 645 and 663 nm was measured in the supernatants. Total chlorophyll content was calculated using the following formula: Total chlorophyll (μg/ml)=20.2*A<sub>645</sub>+8.02*A<sub>663</sub></p>
+      <p id="p-00122-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Survival rate of overexpressing lines for each of</entry>
+                </row>
+                <row>
+                  <entry>HahB1, AtHB13, PR2, PR4 and GLU</entry>
+                </row>
+                <row>
+                  <entry>A total of three overexpressing lines for each genotype with 64</entry>
+                </row>
+                <row>
+                  <entry>(for WT, A13, PR2, PR4 and GLU) or 112 (for WT or H1) plants per</entry>
+                </row>
+                <row>
+                  <entry>line were assayed under severe drought. Data represents three</entry>
+                </row>
+                <row>
+                  <entry>experimental repetitions, and it is reported as the percentage</entry>
+                </row>
+                <row>
+                  <entry>of average survival rate with the standard error.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="70pt" align="left" />
+              <colspec colname="1" colwidth="35pt" align="left" />
+              <colspec colname="2" colwidth="63pt" align="center" />
+              <colspec colname="3" colwidth="14pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>Average No of</entry>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Genotype</entry>
+                  <entry>survivors (%)</entry>
+                  <entry>SE</entry>
+                  <entry>N</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="6" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="56pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="left" />
+              <colspec colname="3" colwidth="63pt" align="char" char="." />
+              <colspec colname="4" colwidth="14pt" align="char" char="." />
+              <colspec colname="5" colwidth="35pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>35S: HaHB1</entry>
+                  <entry>WT</entry>
+                  <entry>19</entry>
+                  <entry>7</entry>
+                  <entry>112</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>H1-A</entry>
+                  <entry>94</entry>
+                  <entry>9</entry>
+                  <entry>112</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>H1-B</entry>
+                  <entry>81</entry>
+                  <entry>13</entry>
+                  <entry>112</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>H1-C</entry>
+                  <entry>78</entry>
+                  <entry>16</entry>
+                  <entry>112</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>35S: AtHB13</entry>
+                  <entry>WT</entry>
+                  <entry>13</entry>
+                  <entry>11</entry>
+                  <entry>64</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>A13-A</entry>
+                  <entry>86</entry>
+                  <entry>6</entry>
+                  <entry>64</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>A13-B</entry>
+                  <entry>85</entry>
+                  <entry>11</entry>
+                  <entry>64</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>A13-C</entry>
+                  <entry>71</entry>
+                  <entry>14</entry>
+                  <entry>64</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>35S: PR2</entry>
+                  <entry>WT</entry>
+                  <entry>31</entry>
+                  <entry>17</entry>
+                  <entry>64</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>PR2-A</entry>
+                  <entry>72</entry>
+                  <entry>13</entry>
+                  <entry>64</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>PR2-B</entry>
+                  <entry>50</entry>
+                  <entry>8</entry>
+                  <entry>64</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>PR2-C</entry>
+                  <entry>60</entry>
+                  <entry>13</entry>
+                  <entry>64</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>35S: PR4</entry>
+                  <entry>WT</entry>
+                  <entry>22</entry>
+                  <entry>8</entry>
+                  <entry>64</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>PR4-A</entry>
+                  <entry>73</entry>
+                  <entry>21</entry>
+                  <entry>64</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>PR4-B</entry>
+                  <entry>80</entry>
+                  <entry>24</entry>
+                  <entry>64</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>PR4-C</entry>
+                  <entry>65</entry>
+                  <entry>16</entry>
+                  <entry>64</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>35S: GLU</entry>
+                  <entry>WT</entry>
+                  <entry>29</entry>
+                  <entry>7</entry>
+                  <entry>64</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>GLU-A</entry>
+                  <entry>75</entry>
+                  <entry>21</entry>
+                  <entry>64</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>GLU-B</entry>
+                  <entry>83</entry>
+                  <entry>20</entry>
+                  <entry>64</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry>GLU-C</entry>
+                  <entry>79</entry>
+                  <entry>10</entry>
+                  <entry>64</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00015-en" level="2">Results</heading>
+      <heading id="h-00016-en" level="2">HaHB1 and AtHB13 are Up-Regulated by Drought</heading>
+      <p id="p-00123-en" num="0120">In order to characterize in detail the expression of HaHB1 and AtHB13 in conditions of abiotic stresses, total RNA was isolated at various time points from R2 <i>Helianthus annuus </i>leaves and from 25-day-old WT <i>Arabidopsis </i>rosette leaves, both subjected to drought stress for 10 and 14 days respectively. Transcript levels of each gene were determined by qPCR with specific oligonucleotides. <figref>FIG. 1</figref> shows that HaHB1 was induced around 20-fold after 4 days of starting the stress treatment while AtHB13 around 5-fold after 8 days, both slowly decreasing after this period. These results suggested a possible involvement of these genes in the drought response.</p>
+      <p id="p-00124-en" num="0000">Transgenic Plants Ectopically Expressing HaHB1 or AtHB13 Exhibited Tolerance of Drought and Increased Yield Under this Stress</p>
+      <p id="p-00125-en" num="0121">Considering the known up-regulation of HaHB1 and AtHB13 by drought, <i>Arabidopsis </i>plants transformed with these genes under the control of the 35S CaMV promoter were tested to determine their phenotype under this stress. Plants transformed with the pBI 101.3 plasmid (thereafter called WT) were used as controls. Individuals from three independent lines of each genotype were grown in standard conditions during 4 weeks and then no water was applied during the following 16 days; this treatment gradually resulted in a severe drought condition. After that, the plants were watered and allowed to recover over a period of two days. A significant difference in the percentage of survivors was observed between transgenics and WT (Table 1). <figref>FIG. 2</figref><i>a </i>shows an illustrative image of HaHB1 and AtHB13 plants after the treatment. The experiment was repeated several times with plants either in the vegetative or in the reproductive stage with similar results.</p>
+      <p id="p-00126-en" num="0122">The membrane state of these plants was evaluated during the treatment by the ion leakage technique and the results indicated that transgenic plants had a better cell membrane stabilizing mechanism than their WT counterparts, especially during the last/severe stress period (<figref>FIG. 2</figref><i>b</i>). This difference could be at least in part the cause of the higher survival rate of the transgenics following the stress treatment. Chlorophyll content was also quantified as an indication of plant health and stress-provoked senescence. HaHB1 and AtHB13 plants exhibited a higher chlorophyll concentration during the stress treatment than the WT controls consistent with their more stabilized membranes (<figref>FIG. 2</figref><i>c</i>).</p>
+      <p id="p-00127-en" num="0123">Considering that while tolerance of a lethal stress has value as a biotechnological indicator, less extreme stress conditions are more widespread in agriculture and so, plants were subjected to mild stress conditions, in order to emulate these. Four week-old plants grown in standard conditions were either given a normal watering regime or subjected to mild stress by stopping the watering for a 10-day period. After that, the pot weight was maintained constant by weighting each pot daily and then adding water to compensate for any loss (see Experimental procedures). This mild water stress treatment did not cause plant death and plants flowered and set seeds, so that seed productivity could be measured for each plant. <figref>FIG. 2</figref><i>d </i>shows the seed weight obtained for HaHB1 and WT plants in standard conditions or under mild stress. When the plants were well watered, the transgenics and WT both produced a similar seed weight of around 160-180 mg/plant. Both genotypes decreased in yield after a continuous mild stress; however, the difference in yield between treatments observed for WT plants was significantly larger (−43%) than for transgenics (−30% average).</p>
+      <p id="p-00128-en" num="0000">
+        <i>Arabidopsis </i>PR2 and PR4 were Up-Regulated by Drought and the Transgenic Plants Ectopically Expressing these Genes and GLU Exhibited Tolerance of Drought</p>
+      <p id="p-00129-en" num="0124">The exploratory transcriptome analysis performed with plants transformed with 35S:HaHB1 indicated that genes encoding glucanases and chitinases proteins were upregulated (Cabello et al., 2011). These plants as well as plants expressing the homologous AtHB13 or the indirect targets PR2, PR4 and GLU, exhibited tolerance of freezing temperatures and displayed stabilized membranes after such stress. Wondering if the HD-Zip TF target genes were also regulated by drought stress, total RNA was isolated from 25-day-old <i>Arabidopsis </i>plants subjected to severe drought (watering was completely stopped) for a 14-day period. <figref>FIG. 3</figref> shows that PR2 transcripts strongly increased from the 12<sup>th </sup>day continuing until the 14th. After that, the plants were too severely damaged to extract RNA. PR4 was induced after 8 days of treatment decreasing after that, while GLU expression could not be detected in <i>Arabidopsis </i>leaves either after this stress treatment, probably due to its specific expression in roots (<figref>FIG. 3</figref><i>a</i>).</p>
+      <p id="p-00130-en" num="0125">Considering this expression pattern, transgenic <i>Arabidopsis </i>plants expressing PR2, PR4 and GLU (all them under the control of the 35S CaMV) were tested in conditions of drought stress. Individuals from three independent lines of each genotype were grown in standard watering conditions for 25 days and then no water was applied for the next 16 days, which resulted in a potentially lethal drought condition. After this treatment, the plants were watered, placed in the culture chamber to recover (or not) and the survivors were counted. A strong difference between transgenics and WT was observed (Table 1).</p>
+      <p id="p-00131-en" num="0126">Notably, GLU plants exhibited tolerance in spite of the fact that, as mentioned above, transcripts of this gene could not be detected in stressed WT leaves. The experiment was repeated several times, both in the vegetative and in the reproductive stage with similar results. Membrane stability was evaluated during the treatment and the results, shown in <figref>FIG. 3</figref><i>b</i>, indicated that transgenics triggered a better cell membrane stabilizing mechanism than their WT counterparts. This difference could be at least in part the cause of tolerance. Moreover, the chlorophyll content of these plants was quantified during drought stress. The results, shown in <figref>FIG. 3</figref><i>c</i>, indicated that transgenic plants had more chlorophyll than their controls.</p>
+      <p id="p-00132-en" num="0000">HaHB1, AtHB13, PR2, PR4 and GLU were Up-Regulated by Salinity Stress and Transgenic Plants Overexpressing these Genes Exhibited More Stabilized Cell Membranes and Increased Yield</p>
+      <p id="p-00133-en" num="0127">Since separate signal transduction pathways activated to deal with different abiotic stresses are usually connected at some point or other, we wondered if HaHB1, AtHB13 and their target genes were, besides their participation in cold and drought responses, also involved in the response to the stress caused by salinity. HaHB1, AtHB13, PR2, PR4 and GLU transcript levels were quantified in plants subjected to salt stress. Total RNA was isolated at different periods of time from R2 sunflower leaves and from 25-day-old WT <i>Arabidopsis </i>plants as described in Experimental procedures. <figref>FIG. 4</figref> shows that HaHB1, AtHB13, PR4 and GLU transcripts increase considerably three days after the addition of 50 mM NaCl while PR2 transcripts start to increase later and after a 200 mM NaCl addition.</p>
+      <p id="p-00134-en" num="0128">The relative increase in expression was slightly different for each gene and also was dependent on the detectable basal expression levels (almost undetectable for GLU and PR2). Cell membrane stability was also evaluated under salinity stress for all the transgenic genotypes described above and the results shown in <figref>FIG. 4</figref>. Like under the other abiotic stress factors tested, the transgenic genotypes displayed a better response under high salt concentrations suggesting that these plants might have higher tolerance of salinity than WT plants. However, this enhanced cell membrane stability was not sufficient to confer the tolerance needed to cause a difference in survival rate, at least under these particular high salt conditions.</p>
+      <p id="p-00135-en" num="0129">In order to test seed production after a salinity stress, two week-old plants grown in standard conditions were treated with NaCl reaching a final 300 mM concentration (see Experimental procedures) and after that, watered normally. This treatment did not cause plant death and seeds could be individually collected. <figref>FIG. 4</figref><i>c </i>shows that both genotypes (HaHB1 and WT) produced a similar yield of around 160-180 mg/plant in control conditions and both decreased under stress. However, the difference between treatments for WT was significantly larger (−50%); than for transgenics (−20% average).</p>
+      <p id="p-00136-en" num="0000">PR2, PR4 and GLU were Down-Regulated in Athb13 Mutant Plants Indicating that these Proteins are Targets of AtHB13</p>
+      <p id="p-00137-en" num="0130">Athb13 mutants (athb13) were obtained from ABRC seed stock. Homozygous lines were selected after kanamycin-resistance selection, then reproduced and grown under normal conditions. RNA was extracted from 25-day-old-rosette leaves and RT-qPCR analysis indicated that PR2, PR4 and GLU were down-regulated in athb13 plants in comparison with WT plants.</p>
+      <p id="p-00138-en" num="0000">Transgenic Plants Expressing HaHB1 Under the Control of its Own Promoter were Tolerant to Drought Conditions</p>
+      <p id="p-00139-en" num="0131">A 1021 by HaHB1 promoter region was previously isolated (Cabello et al., 2011) and found to contain cis elements such as ABRE and DRE, characterized as responsive to abiotic stresses. When <i>Arabidopsis </i>transgenic plants transformed with the construct PrH1:HaHB1 were subjected to drought and salinity stresses, they displayed a better phenotype than their controls (<figref>FIG. 5</figref> and Table 1) indicating that the HaHB1 promoter was able to sufficiently induce HaHB1 expression, which in place triggered drought/salinity tolerance. In order to evaluate the yield of these plants either in normal or mild stress conditions, a productivity assay was performed. No differences between genotypes were detected (<figref>FIG. 6</figref><i>b</i>) indicating that this construct was less efficient in providing tolerance than the constitutive 35S:HaHB1</p>
+      <heading id="h-00017-en" level="1">REFERENCES</heading>
+      <p id="p-00140-en" num="0000">
+        <ul id="ul-00001-en" list-style="none">
+          <li>Arce A. L., Cabello J. V., Chan R. L. 2008. Patents on Plant Transcription Factors. Recent Patents on Biotechnology, 2: 209-217</li>
+          <li>Arce, A. L., Raineri, J., Capella, M., Cabello, J. V. and Chan, R. L. (2011) Uncharacterized conserved motifs outside the HD-Zip domain in HD-Zip subfamily I transcription factors; a potential source of functional diversity. <i>BMC Plant Biol. </i>11, 42.</li>
+          <li>Ariel F. D., Manavella P. A., Dezar C. A., Chan R. L. 2007. The true story of the HD-Zip family. Trends Plant Sci. 12, 419-426.</li>
+          <li>Cabello, J. V., Arce, A. L. and Chan, R. L. (2012) The homologous HD-Zip I transcription factors HaHB1 and AtHB13 confer cold tolerance via the induction of pathogenesis related and glucanase proteins. <i>Plant J. </i>69, 141-153</li>
+          <li>Chan R. L., Gago G. M., Palena C. M., Gonzalez D. H. 1998. Homeoboxes in plant development. Biochim. Biophys. Acta 1442: 1-19.</li>
+          <li>Chory, J., Reinecke, D., Sim, S., Washburn, T. and Brenner, M. (1994) A role for citokinins in de-etiolation in <i>Arabidopsis. Plant Physiol. </i>104, 339-347.</li>
+          <li>Henriksson, E., Olsson, A. S. B., Johannesson, H., Johansson, H., Hanson, J., Engstrom, P. and Soderman, E. (2005) Homeodomain Leucine Zipper Class I Genes in <i>Arabidopsis</i>. Expression Patterns and Phylogenetic Relationships. <i>Plant Physiol. </i>139, 509-518.</li>
+          <li>Skirycz, A et al (2011) Survival and growth of <i>Arabidopsis </i>plants given limited water are not equal. <i>Nat. Biotechnol</i>. 29, 212-214.</li>
+          <li>Torres-Franklin et al (2007) Molecular cloning of glutathione reductase cDNAs and analysis of G R gene expression in cowpea and common bean leaves during recovery from moderate drought stress Journal of Plant Physiology Volume 165, Issue 5, 31 Mar. 2008, pages 514-521</li>
+          <li>Tron A E, Comelli R N, Gonzalez D H: Structure of homeodomain-leucine zipper/DNA complexes studied using hydroxyl radical cleavage of DNA and methylation interference. <i>Biochemistry </i>2005, 44:16796-16803</li>
+          <li>Wingler et al (1999) The role of photorespiration during drought stress: an analysis utilizing barley mutants with reduced activities of photorespiratory enzymes Plant, Cell and Environment 22, 361-373</li>
+        </ul>
+      </p>
+      <heading id="h-00018-en" level="2">Selected Sequences</heading>
+      <p id="p-00141-en" num="0143" />
+      <p id="p-00142-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0" tabstyle="monospace">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>HAHB1 promoter</entry>
+                </row>
+                <row>
+                  <entry>SEQ ID NO: 1</entry>
+                </row>
+                <row>
+                  <entry>gtcgagctcgtctcgtaaaatgttcgagtcagctccaattaaatcat</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>gtcggcttgttatattttttttaatttatttttgatattttttacat</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>atatttataacataaaaaacaaaataaaaataaaaattacacatata</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>tctatatgtattatttttctaaaattttaaatagcgaaagacatatt</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>aaaagtattatatgtataattttgtttagcttcccatatttttatat</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>gttattaattaattaaacttaaaatgttaacactttaacacctctta</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>catactttttagttcaatacatttaaaattaaaattaatctatatgc</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>aataaaataattcaagcaggcttgcaagctcacgagtcgagccatgc</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ctggctcgagctcgactcatttacaaatcgagccaccaagccgactc</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>gtttataaccgagttttttttagccgagtttttttcaagcgaacttc</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>aaacaagtcacgcgcttttaattaacacattctagtctaaagaagat</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>aattgaaagagaaagtagatataagtaaaaggagtagccaaagatat</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>aaatttagggtctaaacaacctaatattgtttaattttttttaaata</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>aactagtttttttttaccgattatctgtgttatatgtcttagtttga</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>catgataagttatcataattacttgtagtatttttatatcagaaata</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>tacgttggagaattaaattttatcctgatcgtcaattgacaagaaca</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>aaaatcaacatctcatggttttttactaatttatatgattaaagata</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>tatggttgtaagaaaaagaacaatgtacatcaaatggtgaaatttga</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>atatttgatagtaacgtaatccattgtgtatttcttattattttatc</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>attttcccaaggtgtgtcatatatagtgtctccattctttctatagc</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>acaatatccttcacctccctctctctctctctctctctaaaaatgat</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>gatgagacgacaaagatcgaattc</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>HaHB1 mRNA</entry>
+                </row>
+                <row>
+                  <entry>SEQ ID NO: 2</entry>
+                </row>
+                <row>
+                  <entry>uugaaauucugagaaaagccacauaaucaaagcuaaagaggugguuu</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>aaacagcugAUGACUUGCACUGGAAUGGCUUUCUUCUCCUCCAAUUU</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CAUGUUACAAUCCUCCCAAGAAGAUGACCAUCAUGCCCCUACAUCUC</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>UCUCUCCAAUCCUCCCACCUUGCAGUACCACCACUCAAGAUUUCAGU</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>GG<u><b>UG</b></u>CUGCUUUCUUGGGAAAAAGAUCUAUGUCUUCUUACUCAGGUUU</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>GAACAACAACAACAUGGAUGGAUGUGAUCAAGAAGGGAACAUGAAUG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>GAGAAGAUGAGUUAUCAGAUGAUGGAUCACAGCUUCUUGCAGGAGAG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AAAAAGAGGAGAUUAAACAUGGAACAAGUGAAGACACUUGAGAGAAA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CUUUGAGUUAGGAAAUAAGCUUGAACCUGAGAGGAAAAUGCAACUUG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CAAGAGCACUUGGACUACAACCAAGACAGAUUGCUAUAUGGUUUCAA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AACAGAAGAGCUAGAUGGAAAACUAAACAGUUGGAAAAAGACUAUGA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>UGCCCUCAAGAGACAGUUUGAAGCUGUUAAAGCUGAGAAUGAUUCAC</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>UCCAAUCUCAAAAUCAUAAACUUCAUGCU<u><b>GA</b></u>GAUAAUGGCACUAAAA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AAUAGGGAGCCAGCAGAACUAAUCAACCUCAACAUAAAAGAAACAGA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AGGAUCUUGCAGCAACCGAAGCGAAAACAGCUCUGAAAUCAAACUAG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ACAUCUCAAGAACACCGGCUACCGAUAGCCCUUUAUCAUCACACCAU</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CAACACCAACACCAGCCAAUACCUAAUCUUUUUCCAUCGUCGAAUAU</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CGAUAGGCCUAAUUCGAAUAACAUUGUGGCGCAUCAACUUUUCCACA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AUUCGUCAUCAAGGCCGGCAGAUCAUCAACUUCAUUGCCACAAACUC</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>GAUCAAUCGAAUGCCAUUAAAGAAGAAUGUUUUAGCACAAUGUUUGU</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>UGGUAUGGAUGAUCAAUCAGGGUUUUGGCCAUGGUUGGAACAACCAC</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AAUUCAAUUGAuggaaucaagaagcaaaaaagcaaaagaaaacggua</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>cccgauucgccuucuuggcuuugguuugauuauauuaaagauggaga</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ucaucaaucuguuuguucucuaagcuuuaaauucuuguuuuuuggua</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>cuuaaauuaauagaguaaaaauuagaagaaaaaacguauuauuauuu</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>uaaauucaagauuaguguuu</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables> Coding sequence: in upper case <br /> 5″ and 3′ untranslated regions: in lower case <br /> Flanking nucleotides from first and second introns: in bold and underlined </p>
+      <p id="p-00143-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0" tabstyle="monospace">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>Intron 1</entry>
+                </row>
+                <row>
+                  <entry>SEQ ID NO: 3</entry>
+                </row>
+                <row>
+                  <entry>aattaactcaccttaactaagttacttatgacaacatctctctcata</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>gatcttgatgcagcttgcattcatgagttgtgatgtacaactcattc</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>atgcattagggtttcagttttttcaaagttttttttttattttttct</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>tctgtttcaagatcatgatgatgagttgtgctgaacacttgaacagc</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>tcattgatgcattagggtttgttttagtttcaagttctttcttttct</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ttcattttcatgcactaaatccatatgggcttgaagaaagtttgaat</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ctttatatgttagttgatgatcttgatgcaggt</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Intron 2</entry>
+                </row>
+                <row>
+                  <entry>SEQ ID NO: 4</entry>
+                </row>
+                <row>
+                  <entry>gtaatattagtttgattgtttattgcatctatcaatcattagattct</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>actctttacttgatcacacagaaagtaactaaaccttttttcctaat</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>gataacaatatttgttttgcaaatctaatggcaatcaaataaaagtt</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>tctggtaagcagccatgatctatttatttttcactatttgagtaagt</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ttaaaagttgcatttatcctcactaattatatacaacactaaaataa</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>tcattaaactgactgttataattactttccgtaaacggtatgccaaa</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>acttaaaatgattaacaattttataagaatggaaagtaaaatcatta</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>cactatttcccatattagtcatgaccaaagtttgtttctttctgaag</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ggcaaaagggtcaatatgcttatatgcagcatgggcaaaagaagtag</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>agtgtatatcaaaattcatatctttattttcttttcaaagtttaggt</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>aacaaaaagaagaaattataaacgagtttgttacaattccacaagta</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>catgaagaaacaaaatttgttagtatttttattttccatgtttttag</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>taacttccatatcaatttagcactagaagataactttttttaggact</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>cggtaaaccatacaagtagggtcatactttatcgtttatccattaat</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>gtatatccataaattcactgattatgcggtatttcctttgttacact</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>gtcttgaacaagtattagtacatgtagtttcttaaagattgtttaat</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>caaccaaaaagattgaaactttgcag</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>HaHB1 protein</entry>
+                </row>
+                <row>
+                  <entry>SEQ ID NO: 5</entry>
+                </row>
+                <row>
+                  <entry>MTCTGMAFFSSNFMLQSSQEDDHHAPTSLSPILPPCSTTTQDFSGAA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>FLGKRSMSSYSGLNNNNMDGCDQEGNMNGEDELSDDGSQLLAGEKKR</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>RLNMEQVKTLERNFELGNKLEPERKMQLARALGLQPRQIAIWFQNRR</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ARWKTKQLEKDYDALKRQFEAVKAENDSLQSQNHKLHAEIMALKNRE</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>PAELINLNIKETEGSCSNRSENSSEIKLDISRTPATDSPLSSHHQHQ</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>HQPIPNLFPSSNIDRPNSNNIVAHQLFHNSSSRPADHQLHCHKLDQS</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>NAIKEECFSTMFVGMDDQSGFWPWLEQPQFN</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>HaHB1 cDNA</entry>
+                </row>
+                <row>
+                  <entry>SEQ ID NO: 6</entry>
+                </row>
+                <row>
+                  <entry>ttgaaattctgagaaaagccacataatcaaagctaaagaggtggttt</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>aaacagctgATGACTTGCACTGGAATGGCTTTCTTCTCCTCCAATTT</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CATGTTACAATCCTCCCAAGAAGATGACCATCATGCCCCTACATCTC</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>TCTCTCCAATCCTCCCACCTTGCAGTACCACCACTCAAGATTTCAGT</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>GG<u><b>TG</b></u>CTGCTTTCTTGGGAAAAAGATCTATGTCTTCTTACTCAGGTTT</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>GAACAACAACAACATGGATGGATGTGATCAAGAAGGGAACATGAATG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>GAGAAGATGAGTTATCAGATGATGGATCACAGCTTCTTGCAGGAGAG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AAAAAGAGGAGATTAAACATGGAACAAGTGAAGACACTTGAGAGAAA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CTTTGAGTTAGGAAATAAGCTTGAACCTGAGAGGAAAATGCAACTTG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CAAGAGCACTTGGACTACAACCAAGACAGATTGCTATATGGTTTCAA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AACAGAAGAGCTAGATGGAAAACTAAACAGTTGGAAAAAGACTATGA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>TGCCCTCAAGAGACAGTTTGAAGCTGTTAAAGCTGAGAATGATTCAC</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>TCCAATCTCAAAATCATAAACTTCATGCT<u><b>GA</b></u>GATAATGGCACTAAAA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AATAGGGAGCCAGCAGAACTAATCAACCTCAACATAAAAGAAACAGA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AGGATCTTGCAGCAACCGAAGCGAAAACAGCTCTGAAATCAAACTAG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ACATCTCAAGAACACCGGCTACCGATAGCCCTTTATCATCACACCAT</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CAACACCAACACCAGCCAATACCTAATCTTTTTCCATCGTCGAATAT</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CGATAGGCCTAATTCGAATAACATTGTGGCGCATCAACTTTTCCACA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ATTCGTCATCAAGGCCGGCAGATCATCAACTTCATTGCCACAAACTC</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>GATCAATCGAATGCCATTAAAGAAGAATGTTTTAGCACAATGTTTGT</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>TGGTATGGATGATCAATCAGGGTTTTGGCCATGGTTGGAACAACCAC</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AATTCAATTGAtggaatcaagaagcaaaaaagcaaaagaaaacggta</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>cccgattcgccttcttggctttggtttgattatattaaagatggaga</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>tcatcaatctgtttgttctctaagctttaaattcttgttttttggta</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>cttaaattaatagagtaaaaattagaagaaaaaacgtattattattt</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>taaattcaagattagtgttt</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables> Coding sequence: in upper case <br /> 5′ and 3′ untranslated regions: in lower case <br /> Flanking nucleotides from first and second introns: in bold and underlined </p>
+      <p id="p-00144-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0" tabstyle="monospace">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>HaHB1 gene sequence</entry>
+                </row>
+                <row>
+                  <entry>SEQ ID NO: 7</entry>
+                </row>
+                <row>
+                  <entry>gtcgagctcgtctcgtaaaatgttcgagtcagctccaattaaatcat</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>gtcggcttgttatattttttttaatttatttttgatattttttacat</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>atatttataacataaaaaacaaaataaaaataaaaattacacatata</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>tctatatgtattatttttctaaaattttaaatagcgaaagacatatt</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>aaaagtattatatgtataattttgtttagcttcccatatttttatat</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>gttattaattaattaaacttaaaatgttaacactttaacacctctta</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>catactttttagttcaatacatttaaaattaaaattaatctatatgc</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>aataaaataattcaagcaggcttgcaagctcacgagtcgagccatgc</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ctggctcgagctcgactcatttacaaatcgagccaccaagccgactc</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>gtttataaccgagttttttttagccgagtttttttcaagcgaacttc</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>aaacaagtcacgcgcttttaattaacacattctagtctaaagaagat</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>aattgaaagagaaagtagatataagtaaaaggagtagccaaagatat</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>aaatttagggtctaaacaacctaatattgtttaattttttttaaata</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>aactagtttttttttaccgattatctgtgttatatgtcttagtttga</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>catgataagttatcataattacttgtagtatttttatatcagaaata</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>tacgttggagaattaaattttatcctgatcgtcaattgacaagaaca</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>aaaatcaacatctcatggttttttactaatttatatgattaaagata</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>tatggttgtaagaaaaagaacaatgtacatcaaatggtgaaatttga</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>atatttgatagtaacgtaatccattgtgtatttcttattattttatc</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>attttcccaaggtgtgtcatatatagtgtctccattctttctatagc</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>acaatatccttcacctccctctctctctctctctctctaaaaatgat</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>gatgagacgacaaagatcgaattc<u>ttgaaattctgagaaaagccaca</u></entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <u>taatcaaagctaaagaggtggtttaaacagctg</u>ATGACTTGCACTGG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AATGGCTTTCTTCTCCTCCAATTTCATGTTACAATCCTCCCAAGAAG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ATGACCATCATGCCCCTACATCTCTCTCTCCAATCCTCCCACCTTGC</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AGTACCACCACTCAAGATTTCAGTGGT<b>aattaactcaccttaactaa</b></entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <b>gttacttatgacaacatctctctcatagatcttgatgcagcttgcat</b>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <b>tcatgagttgtgatgtacaactcattcatgcattagggtttcagttt</b>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <b>tttcaaagttttttttttattttttcttctgtttcaagatcatgatg</b>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <b>atgagttgtgctgaacacttgaacagctcattgatgcattagggttt</b>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <b>gttttagtttcaagttctttcttttctttcattttcatgcactaaat</b>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <b>ccatatgggcttgaagaaagtttgaatctttatatgttagttgatga</b>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <b>tcttgatgcaggt</b>GCTGCTTTCTTGGGAAAAAGATCTATGTCTTCTT</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ACTCAGGTTTGAACAACAACAACATGGATGGATGTGATCAAGAAGGG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AACATGAATGGAGAAGATGAGTTATCAGATGATGGATCACAGCTTCT</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>TGCAGGAGAGAAAAAGAGGAGATTAAACATGGAACAAGTGAAGACAC</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>TTGAGAGAAACTTTGAGTTAGGAAATAAGCTTGAACCTGAGAGGAAA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ATGCAACTTGCAAGAGCACTTGGACTACAACCAAGACAGATTGCTAT</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ATGGTTTCAAAACAGAAGAGCTAGATGGAAAACTAAACAGTTGGAAA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AAGACTATGATGCCCTCAAGAGACAGTTTGAAGCTGTTAAAGCTGAG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AATGATTCACTCCAATCTCAAAATCATAAACTTCATGCTG<b>gtaatat</b></entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <b>tagtttgattgtttattgcatctatcaatcattagattctactcttt</b>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <b>acttgatcacacagaaagtaactaaaccttttttcctaatgataaca</b>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <b>atatttgttttgcaaatctaatggcaatcaaataaaagtttctggta</b>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <b>agcagccatgatctatttatttttcactatttgagtaagtttaaaag</b>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <b>ttgcatttatcctcactaattatatacaacactaaaataatcattaa</b>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <b>actgactgttataattactttccgtaaacggtatgccaaaacttaaa</b>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <b>atgattaacaattttataagaatggaaagtaaaatcattacactatt</b>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <b>tcccatattagtcatgaccaaagtttgtttctttctgaagggcaaaa</b>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <b>gggtcaatatgcttatatgcagcatgggcaaaagaagtagagtgtat</b>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <b>atcaaaattcatatctttattttcttttcaaagtttaggtaacaaaa</b>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <b>agaagaaattataaacgagtttgttacaattccacaagtacatgaag</b>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <b>aaacaaaatttgttagtatttttattttccatgtttttagtaacttc</b>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <b>catatcaatttagcactagaagataactttttttaggactcggtaaa</b>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <b>ccatacaagtagggtcatactttatcgtttatccattaatgtatatc</b>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <b>cataaattcactgattatgcggtatttcctttgttacactgtcttga</b>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <b>acaagtattagtacatgtagtttcttaaagattgtttaatcaaccaa</b>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <b>aaagattgaaactttgcag</b>AGATAATGGCACTAAAAAATAGGGAGCC</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AGCAGAACTAATCAACCTCAACATAAAAGAAACAGAAGGATCTTGCA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>GCAACCGAAGCGAAAACAGCTCTGAAATCAAACTAGACATCTCAAGA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ACACCGGCTACCGATAGCCCTTTATCATCACACCATCAACACCAACA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CCAGCCAATACCTAATCTTTTTCCATCGTCGAATATCGATAGGCCTA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ATTCGAATAACATTGTGGCGCATCAACTTTTCCACAATTCGTCATCA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AGGCCGGCAGATCATCAACTTCATTGCCACAAACTCGATCAATCGAA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>TGCCATTAAAGAAGAATGTTTTAGCACAATGTTTGTTGGTATGGATG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ATCAATCAGGGTTTTGGCCATGGTTGGAACAACCACAATTCAATTGA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <u>tggaatcaagaagcaaaaaagcaaaagaaaacggtacccgattcgcc</u>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <u>ttcttggctttggtttgattatattaaagatggagatcatcaatctg</u>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <u>tttgttctctaagctttaaattcttgttttttggtacttaaattaat</u>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <u>agagtaaaaattagaagaaaaaacgtattattattttaaattcaaga</u>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>
+                    <u>ttagtgttt</u>
+                  </entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables> Coding sequence: in upper case <br /> Promoter region: lower case <br /> 5′ and 3′ untranslated regions: in underlined lower case <br /> First and second introns: in bold lower case </p>
+      <p id="p-00145-en" num="0000">
+        <tables id="tables-00006-en" num="00006">
+          <table frame="none" colsep="0" rowsep="0" tabstyle="monospace">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry>C-terminus of HaHB1</entry>
+                </row>
+                <row>
+                  <entry>SEQ ID NO: 8</entry>
+                </row>
+                <row>
+                  <entry>LINLNIKETEGSCSNRSENSSEIKLDISRTPATDSPLSSHHQHQHQP</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>IPNLFPSSNIDRPNSNNIVAHQLFHNSSSRPADHQLHCHKLDQSNAI</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>KEECFSTMFVGMDDQSGFWPWLEQPQFN</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>HAaHB1 C-terminus motif I (CI)</entry>
+                </row>
+                <row>
+                  <entry>SEQ ID NO: 9</entry>
+                </row>
+                <row>
+                  <entry>LINLNIKETEGSCSNRSENSSEIKLDISRTPATDS</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>HaHB1 C-terminus motif II (CII)</entry>
+                </row>
+                <row>
+                  <entry>SEQ ID NO: 10</entry>
+                </row>
+                <row>
+                  <entry>IKEECFSTMFVGMDDQSGFWPWLEQPQFN</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Consensus sequence for the conserved region </entry>
+                </row>
+                <row>
+                  <entry>adjacent to the leucine zipper </entry>
+                </row>
+                <row>
+                  <entry>(CI, 34 aminoacids)</entry>
+                </row>
+                <row>
+                  <entry>SEQ ID NO: 11</entry>
+                </row>
+                <row>
+                  <entry>SINLNKETEGSCSNRSENSSDIKLDISRTPAIDS</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>Consensus sequence for the second conserved </entry>
+                </row>
+                <row>
+                  <entry>region located at the C-terminal end</entry>
+                </row>
+                <row>
+                  <entry>(CII, 29 aminoacids)</entry>
+                </row>
+                <row>
+                  <entry>SEQ ID NO: 12</entry>
+                </row>
+                <row>
+                  <entry>VKEESLSNMFCGIDDQSGFWPWLEQQHFN</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>N-terminus of HaHB1</entry>
+                </row>
+                <row>
+                  <entry>SEQ ID NO: 13</entry>
+                </row>
+                <row>
+                  <entry>MTCTGMAFFSSNFMLQSSQEDDHHAPTSLSPILPPCSTTTQDFSGAA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>FLGKRSMSSYSGLNNNNMDGCDQEGNMNGEDELSDDGSQLLAGE</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>N-terminal homeodomain consensus sequence</entry>
+                </row>
+                <row>
+                  <entry>SEQ ID NO: 14</entry>
+                </row>
+                <row>
+                  <entry>KKRRLTDEQVKALEKSFELENKLEPERKVQLARELGLQPRQVAVWFQ</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>NRRARWKTKQ</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ATHB13</entry>
+                </row>
+                <row>
+                  <entry>SEQ ID NO: 15:</entry>
+                </row>
+                <row>
+                  <entry>ACCAGAAGTGGTATAGTCTAGGCCGATACATTTCACTATCTCTCTCT</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CTTTTGTTTTTCCTCTTCTTCTTTTTTTCCATTTGATTTCAAACTCT</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CACACAAAGAGCTTCAGATTTATAAGACCATGATAATGGCTTTAAGA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CAAAGATTGGCAAGAAGAAAAAACTAAAGAGAAACGACCAAAATCTC</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AAGCAAACAGTACTAACTTCTGTTGCAAAACAGAAGAAGATGTCTTG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>TAATAATGGAATGTCTTTTTTCCCTTCAAATTTCATGATCCAAACCT</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CTTACGAAGATGATCATCCTCATCAATCTCCATCTCTTGCTCCTCTT</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CTTCCTTCTTGCTCTCTACCTCAAGATCTCCATGGTATATATACATA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AACTTCCACACACATCTCCTCTGTTTTCTCTCTATCTCTTTCTAATG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CTCTGTTCTGTTCTGTTTCAGGATTTGCTTCGTTTCTAGGTAAGAGA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>TCTCCAATGGAAGGGTGTTGTGATTTAGAAACAGGGAACAATATGAA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>TGGAGAAGAGGATTATTCAGATGATGGGTCACAAATGGGAGAGAAGA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AGAGGAGATTGAACATGGAACAAGTGAAGACACTAGAGAAGAACTTT</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>GAGCTTGGAAACAAACTTGAACCAGAGAGGAAAATGCAGCTAGCTCG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>TGCCTTAGGTTTGCAACCAAGACAGATCGCGATTTGGTTTCAAAATC</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>GAAGAGCTCGTTGGAAAACAAAGCAGCTAGAGAAAGATTATGATACT</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CTTAAACGACAGTTTGATACACTTAAAGCTGAAAATGATCTTCTTCA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AACTCATAATCAGAAACTCCAAGCTGAGGTAATTAATCTCATAAATT</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AACAAAAAAAATCAATATGTGTTATTTTTTTTTGGGTTAATGATCAA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>TAATTACAGTTATTTTCCATCTAAAGGATGATTTTTTTCTTTTTAAA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AAAGGTTAAAAATTATATTTCTGGTTTATAATTATTTGGATCAGGAG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>TTGCTTTCAGGTAGGGTTAAAAAACTGGACATGATTCATGACTTTTC</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AGACATCATTATCTCTTTTTTTCTTCACTCTTGTCTGGAAAGAGATC</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>TGAAAACAATAGTTTCTTTATGCTTATCACATTGTACAGTAACTCTG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>TTTATGTTTAAAATTTTGTCTTTAATTACGCAGATAATGGGATTAAA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AAACAGAGAACAAACAGAATCAATAAATCTAAACAAAGAAACTGAAG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>GATCTTGCAGTAACAGAAGTGATAACAGTTCAGATAATCTCAGACTA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>GATATCTCAACTGCGCCGCCATCAAACGACAGTACATTAACCGGTGG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CCACCCACCGCCACCACAGACAGTTGGTCGACACTTCTTCCCACCGT</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>CGCCAGCCACCGCAACGACAACTACTACAACAATGCAGTTCTTTCAA</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>AACTCATCTTCAGGACAGAGTATGGTTAAAGAAGAGAATAGTATCAG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>TAACATGTTCTGTGCAATGGATGACCATTCTGGTTTTTGGCCATGGC</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>TTGATCAGCAACAGTACAATTGAAATTGGTCTACCTGTTTTTTTTGT</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>TTTTGTTTTTAAAAAAATTTATATTTTTTTTTTTTGTATTTGGAATT</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>TTGATCAGAAGAACCCATGCATGTTTTCAAAAACTGGAATCTATATC</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ATTAGCTCACTTTGAAATCTGCAACCAAACACCACTGAGGTTTTTTG</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>TTTACTTTTTGAGTAAATGAGATGTAAAAAAATGGGTAATATCCATT</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ATATTATATAAAAAATAATATCATTATGGCCCAACATTTTTCTGTAT</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>GGAGAAAAATAAAATAAATTGTATATT</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ATHB13 protein</entry>
+                </row>
+                <row>
+                  <entry>SEQ ID NO: 16:</entry>
+                </row>
+                <row>
+                  <entry>mscnngmsffpsnfmiqtsyeddhphqspslapllpscslpqdlhgf</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>asflgkrspmegccdletgnnmngeedysddgsqmgekkrrlnmeqv</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>ktleknfelgnkleperkmqlaralglqprqiaiwfqnrrarwktkq</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>lekdydtlkrqfdtlkaendllqthnqklqaeimglknreqtesinl</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>nketegscsnrsdnssdnlrldistappsndstltgghppppqtygr</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>hffppspatattttttmqffqnsssggsmykeensisnmfcamddhs</entry>
+                </row>
+                <row>
+                  <entry />
+                </row>
+                <row>
+                  <entry>gfwpwldqqqyn</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method for increasing yield of a plant under moderate stress conditions, the method comprising introducing and expressing in the plant a nucleic acid sequence comprising SEQ ID NO:2, 6 or 7, a functional part of SEQ ID NO:2, 6, or 7, or a homologue or functional variant of SEQ ID NO:2, 6, or 7.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the functional part is a nucleic acid sequence encoding the polypeptide of SEQ ID NO:8.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. A method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising transforming the plant with a nucleic acid sequence encoding AtHB13 comprising SEQ ID NO:15.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the functional variant is a chimeric nucleic acid construct comprising a nucleic acid sequence encoding the N-terminal sequence of an HD Zip protein comprising the HD-Zip domain of subfamily I or a sequence comprising an N-terminal consensus motif or part thereof operatively associated with a nucleic acid sequence encoding a sequence comprising the C-terminus of HaHB1, or a sequence comprising a C-terminal consensus motif or part thereof.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the C-terminal sequence comprises SEQ ID NO:8 or one or more of SEQ ID NOs:9, 10, 11 or 12.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the C-terminal sequence comprises a sequence with at least 80%, at least 90%, or at least 95% homology to the consensus sequence of SEQ ID NO:8.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the C-terminal sequence comprises a sequence with at least 95%, 96%, 97%, 98% or 99% homology to SEQ ID NO:8.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the N-terminal sequence comprises a sequence with at least 80% homology to the consensus sequence of SEQ ID NO:14.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the N-terminal sequence comprises a sequence with at least 90% homology, or at least 95% homology to SEQ ID NO:14.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the homology is at least 95%, 96%, 97%, 98% or 99%.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the moderate stress conditions include drought, freezing, low-temperature, chilling, high salinity and/or invading pathogens.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the moderate stress conditions include drought.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the moderate stress conditions include high salinity.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the plant is a crop plant.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en" independent="true">
+      <claim-text>
+        <b>15</b>. A method for producing a plant with increased yield under moderate stress conditions, the method comprising introducing and expressing in the plant a nucleic acid sequence comprising SEQ ID NO:2, 6 or 7, a functional part of SEQ ID NO:2, 6, or 7, or a homologue or functional variant of SEQ ID NO:2, 6, or 7.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the nucleic acid comprises a regulatory sequence.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The method of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the regulatory sequence comprises SEQ ID NO:1.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en" independent="true">
+      <claim-text>
+        <b>18</b>. (canceled)</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247160A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247160A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247160A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247160A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150247160A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247160A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150247160A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247160A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150247160A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247160A1-20150903-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150247160A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247160A1-20150903-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150247160A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247160A1-20150903-D00007.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150247160A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247160A1-20150903-D00008.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150247160A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247160A1-20150903-D00009.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150247160A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247160A1-20150903-D00010.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150247160A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247160A1-20150903-D00011.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150247160A1.PDF" type="pdf" size="2592916" pages="37" />
+</lexisnexis-patent-document>

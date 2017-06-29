@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257483A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030204" date-changed="20151223" time-changed="182847">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121315536">
+        <country>US</country>
+        <doc-number>20150257483</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14718449</doc-number>
+        <date>20150521</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151223">
+      <classification-ipcr sequence="1">
+        <text>A43B  13/20        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>43</class>
+        <subclass>B</subclass>
+        <main-group>13</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151223">
+      <classification-cpc sequence="1">
+        <text>A43B  13/206       20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>43</class>
+        <subclass>B</subclass>
+        <main-group>13</main-group>
+        <subgroup>206</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A43B  13/20        20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>43</class>
+        <subclass>B</subclass>
+        <main-group>13</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A43B  21/28        20130101 LI20150401BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>43</class>
+        <subclass>B</subclass>
+        <main-group>21</main-group>
+        <subgroup>28</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150401</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">TETHERED FLUID-FILLED CHAMBER WITH MULTIPLE TETHER CONFIGURATIONS</invention-title>
+    <related-documents date-changed="20150917">
+      <continuation-in-part>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13563458</doc-number>
+              <date>20120731</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>14007184</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </continuation-in-part>
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>12630642</doc-number>
+              <date>20091203</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>8479412</doc-number>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>13563458</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+    </related-documents>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>NIKE, INC.</orgname>
+            <role>02</role>
+            <address>
+              <city>Beaverton</city>
+              <state>OR</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Meschter</last-name>
+            <first-name>James C.</first-name>
+            <address>
+              <city>Portland</city>
+              <state>OR</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Peyton</last-name>
+            <first-name>Lee D.</first-name>
+            <address>
+              <city>Tigard</city>
+              <state>OR</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Taylor</last-name>
+            <first-name>Danielle L.</first-name>
+            <address>
+              <city>Portland</city>
+              <state>OR</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Thompson</last-name>
+            <first-name>Dolores S.</first-name>
+            <address>
+              <city>Beaverton</city>
+              <state>OR</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150917">
+      <main-family family-id="173668960">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257483</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150521</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173668957">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257483</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20150521</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">An article comprises a chamber that includes a barrier formed from a polymer material. The barrier has a first portion that forms a first surface of the chamber, and a second portion that forms an opposite second surface of the chamber. The barrier forms at least one interior cavity between the first portion and the second portion. The at least one interior cavity is filled with fluid retained by the barrier.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150810</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257483A1</docdb-publication-number>
+      <docdb-application-id>444510656</docdb-application-id>
+      <new-owner>NIKE, INC., OREGON</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:MESCHTER, JAMES C.;PEYTON, LEE D.;TAYLOR, DANIELLE L.;AND OTHERS;SIGNING DATES FROM 20150615 TO 20150709;REEL/FRAME:036291/0556</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is a continuation-in-part of U.S. application Ser. No. 13/563,458, filed Jul. 31, 2012, which is a divisional of U.S. application Ser. No. 12/630,642, filed Dec. 3, 2009, and claims the benefit of both applications which are incorporated by reference in their entireties.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00002-en" num="0002">The present teachings generally include an article comprising a chamber including a barrier forming a fluid-filled cavity with tethers connecting portions of the barrier.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND</heading>
+      <p id="p-00003-en" num="0003">Articles of footwear generally include two primary elements, an upper and a sole structure. The upper is formed from a variety of material elements (e.g., textiles, foam, leather, and synthetic leather) that are stitched or adhesively bonded together to form a void on the interior of the footwear for comfortably and securely receiving a foot. More particularly, the upper generally extends over the instep and toe areas of the foot, along the medial and lateral sides of the foot, under the foot, and around the heel area of the foot. In some articles of footwear, such as basketball footwear and boots, the upper may extend upward and around the ankle to provide support or protection for the ankle. Access to the void on the interior of the upper is generally provided by an ankle opening in a heel region of the footwear. A lacing system is often incorporated into the upper to adjust the fit of the upper, thereby permitting entry and removal of the foot from the void within the upper. The lacing system also permits the wearer to modify certain dimensions of the upper, particularly girth, to accommodate feet with varying dimensions. In addition, the upper may include a tongue that extends under the lacing system to enhance adjustability of the footwear.</p>
+      <p id="p-00004-en" num="0004">The sole structure is located adjacent to a lower portion of the upper and is generally positioned between the foot and the ground. In many articles of footwear, including athletic footwear, the sole structure conventionally incorporates an insole, a midsole, and an outsole. The insole is a thin compressible member located within the void and adjacent to a lower surface of the void to enhance footwear comfort. The midsole, which may be secured to a lower surface of the upper and extends downward from the upper, forms a middle layer of the sole structure. In addition to attenuating ground reaction forces (i.e., providing cushioning for the foot), the midsole may limit foot motions or impart stability, for example. The outsole, which may be secured to a lower surface of the midsole, forms the ground-contacting portion of the footwear and is usually fashioned from a durable and wear-resistant material that includes texturing to improve traction.</p>
+      <p id="p-00005-en" num="0005">The conventional midsole is primarily formed from a foamed polymer material, such as polyurethane or ethylvinylacetate, that extends throughout a length and width of the footwear. In some articles of footwear, the midsole may include a variety of additional footwear elements that enhance the comfort or performance of the footwear, including plates, moderators, fluid-filled chambers, lasting elements, or motion control members. In some configurations, any of these additional footwear elements may be located between the midsole and either of the upper and outsole, embedded within the midsole, or encapsulated by the foamed polymer material of the midsole, for example. Although many conventional midsoles are primarily formed from a foamed polymer material, fluid-filled chambers or other non-foam structures may form a majority of some midsole configurations.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00006-en" num="0006">
+        <figref>FIG. 1</figref> is a lateral side elevational view of an article of footwear.</p>
+      <p id="p-00007-en" num="0007">
+        <figref>FIG. 2</figref> is a medial side elevational view of the article of footwear.</p>
+      <p id="p-00008-en" num="0008">
+        <figref>FIG. 3</figref> is a cross-sectional view of the article of footwear, as defined by section line <b>3</b>-<b>3</b> in <figref>FIG. 2</figref>.</p>
+      <p id="p-00009-en" num="0009">
+        <figref>FIG. 4</figref> is a perspective view of a first chamber from the article of footwear.</p>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 5</figref> is an exploded perspective view of the first chamber.</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 6</figref> is a side elevational view of the first chamber.</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 7</figref> is an exploded side elevational view of the first chamber.</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIGS. 8A and 8B</figref> are cross-sectional views of the first chamber, as defined by section lines <b>8</b>A and <b>8</b>B in <figref>FIG. 4</figref>.</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIGS. 9A-9D</figref> are partial cross-sectional views corresponding with an enlarged area in <figref>FIG. 8A</figref> and depicting further configurations of the first chamber.</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIGS. 10A and 10B</figref> are cross-sectional views corresponding with <figref>FIG. 8B</figref> and depicting a force acting upon the first chamber.</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIGS. 11A-11C</figref> are perspective views depicting further configurations of the first chamber.</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIGS. 12A-12N</figref> are cross-sectional views corresponding with <figref>FIG. 8B</figref> and depicting further configurations of the first chamber.</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 13</figref> is a perspective view of a second chamber.</p>
+      <p id="p-00019-en" num="0019">
+        <figref>FIG. 14</figref> is an exploded perspective view of the second chamber.</p>
+      <p id="p-00020-en" num="0020">
+        <figref>FIG. 15</figref> is a side elevational view of the second chamber.</p>
+      <p id="p-00021-en" num="0021">
+        <figref>FIG. 16</figref> is an exploded side elevational view of the second chamber.</p>
+      <p id="p-00022-en" num="0022">
+        <figref>FIGS. 17A and 17B</figref> are cross-sectional views of the second chamber, as defined by section lines <b>17</b>A and <b>17</b>B in <figref>FIG. 13</figref>.</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIGS. 18A-18D</figref> are cross-sectional views corresponding with <figref>FIG. 17A</figref> and depicting further configurations of the second chamber.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 19</figref> is a perspective view of a third chamber.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 20</figref> is an exploded perspective view of the third chamber.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 21</figref> is a side elevational view of the third chamber.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 22</figref> is an exploded side elevational view of the third chamber.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIGS. 23A and 23B</figref> are cross-sectional views of the third chamber, as defined by section lines <b>23</b>A and <b>23</b>B in <figref>FIG. 19</figref>.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIGS. 24A-24D</figref> are cross-sectional views corresponding with <figref>FIG. 23A</figref> and depicting further configurations of the third chamber.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 25</figref> is a perspective view of a fourth chamber.</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 26</figref> is an exploded perspective view of the fourth chamber.</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 27</figref> is a side elevational view of the fourth chamber.</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 28</figref> is an exploded side elevational view of the fourth chamber.</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIGS. 29A and 29B</figref> are cross-sectional views of the fourth chamber, as defined by section lines <b>29</b>A and <b>29</b>B in <figref>FIG. 25</figref>.</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIGS. 30A-30C</figref> are cross-sectional views corresponding with <figref>FIG. 29A</figref> and depicting further configurations of the fourth chamber.</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIG. 31</figref> is a schematic illustration in bottom view of a fifth chamber.</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIG. 32</figref> is a schematic cross-sectional illustration of the fifth chamber taken at lines <b>32</b>-<b>32</b> in <figref>FIG. 31</figref>.</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIG. 33</figref> is a schematic cross-sectional illustration of the fifth chamber taken at lines <b>33</b>-<b>33</b> in <figref>FIG. 32</figref>.</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIG. 34</figref> is a schematic illustration in bottom view of a sixth chamber.</p>
+      <p id="p-00040-en" num="0040">
+        <figref>FIG. 35</figref> is a schematic cross-sectional illustration of the sixth chamber taken at lines <b>35</b>-<b>35</b> in <figref>FIG. 34</figref>.</p>
+      <p id="p-00041-en" num="0041">
+        <figref>FIG. 36</figref> is a schematic illustration in bottom view of a seventh chamber.</p>
+      <p id="p-00042-en" num="0042">
+        <figref>FIG. 37</figref> is a schematic illustration in bottom view of an eighth chamber.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DESCRIPTION</heading>
+      <p id="p-00043-en" num="0043">An article comprises a chamber that includes a barrier formed from a polymer material. The barrier has a first portion that forms a first surface of the chamber, and a second portion that forms an opposite second surface of the chamber. The barrier forms at least one interior cavity between the first portion and the second portion. The barrier retains fluid in the at least one interior cavity.</p>
+      <p id="p-00044-en" num="0044">The chamber includes a plurality of first tethers having a first configuration in the at least one interior cavity. The plurality of first tethers operatively connect the first portion to the second portion at a first area of the chamber. The chamber also has a plurality of second tethers having a second configuration in the at least one interior cavity. The plurality of second tethers operatively connect the first portion to the second portion at a second area of the chamber. The first configuration of the first plurality of tethers imparts a first compression characteristic to the chamber at the first area, and the second configuration of the second plurality of tethers imparts a second compression characteristic to the chamber at the second area. The second compression characteristic is different than the first compression characteristic.</p>
+      <p id="p-00045-en" num="0045">The first and second compression characteristics can be imparted due to a variety of configurations of the tethers. For example, in an embodiment, the first configuration of the first plurality of tethers includes a first density and the second configuration of the second plurality of tethers includes a second density different than the first density. In the same or a different embodiment, the first configuration includes a first material, and the second configuration includes a second material different than the first material. In the same or a different embodiment, the first configuration includes a first length, and the second configuration includes a second length different than the first length.</p>
+      <p id="p-00046-en" num="0046">In an embodiment, the chamber comprises a first polymer sheet including the first portion of the barrier and a second polymer sheet including the second portion of the barrier. The first polymer sheet and the second polymer sheet are bonded to one another so that the at least one interior cavity includes a first interior cavity and a second interior cavity. The plurality of first tethers is in the first interior cavity and the plurality of second tethers is in the second interior cavity. For example, the article may be an article of footwear having a heel region, a midfoot region, and a forefoot region. The first interior cavity may be in one of the heel region, the midfoot region, and the forefoot region, and the second interior cavity may be in any other one of the heel region, the midfoot region, and the forefoot region.</p>
+      <p id="p-00047-en" num="0047">In an embodiment, the article is an article of footwear having a heel region, a midfoot region, and a forefoot region. The chamber comprises a first polymer sheet including the first portion of the barrier and a second polymer sheet including the second portion of the barrier. The first polymer sheet and the second polymer sheet are bonded to one another so that the at least one interior cavity includes a first interior cavity and a second interior cavity. The first interior cavity is in each of the heel region, the midfoot region, and the forefoot region, and the second interior cavity is in at least one of the heel region, the midfoot region, and the forefoot region. The plurality of first tethers is in the first interior cavity and the plurality of second tethers is in the second interior cavity.</p>
+      <p id="p-00048-en" num="0048">In various embodiments, the second area borders the first area, and the second area may at least partially surround the first area. For example, the article may be an article of footwear having a heel region, a midfoot region, and a forefoot region. The chamber may comprise a first polymer sheet including the first portion of the barrier and a second polymer sheet including the second portion of the barrier. The first polymer sheet and the second polymer sheet may be bonded to one another so that the at least one interior cavity includes a first interior cavity and a second interior cavity. The first interior cavity may be in at least one of the heel region, the midfoot region, and the forefoot region, and the second interior cavity may be in at least one of the heel region, the midfoot region, and the forefoot region. The plurality of first tethers and the plurality of second tethers may both be in the first interior cavity or may both be in the second interior cavity. In another example embodiment, the first interior cavity is in each of the heel region, the midfoot region, and the forefoot region, the second interior cavity is in any one of the heel region, the midfoot region, and the forefoot region, and the plurality of first tethers and the plurality of second tethers are both in the first interior cavity or are both in the second interior cavity.</p>
+      <p id="p-00049-en" num="0049">In an embodiment, the chamber includes a first plate secured to an inner surface of the first portion, and a second plate secured to an inner surface of the second portion. The plurality of first tethers is joined to the first plate and to the second plate. The plurality of second tethers may also be joined to the first plate and to the second plate, or, in an embodiment in which the chamber further includes a third plate secured to the inner surface of the first portion, and a fourth plate secured to the inner surface of the second portion, the plurality of second tethers may be joined to the third plate and to the fourth plate.</p>
+      <p id="p-00050-en" num="0050">An article may comprise a chamber including a barrier formed from a first polymer sheet and a second polymer sheet bonded to one another to form a first interior cavity and a second interior cavity. The first and second interior cavities are filled with fluid retained by the barrier. A first tether element is in the first interior cavity and operatively connects the first polymer sheet to the second polymer sheet. A second tether element is in the second interior cavity and also operatively connects the first polymer sheet to the second polymer sheet.</p>
+      <p id="p-00051-en" num="0051">In an embodiment, the first tether element includes a first plate secured to an inner surface of the first polymer sheet, a second plate secured to an inner surface of the second polymer sheet, a plurality of first tethers joined to the first plate and to the second plate and extending between the first plate and the second plate in the first interior cavity, and the second tether element includes a third plate secured to the inner surface of the first polymer sheet, a fourth plate secured to the inner surface of the second polymer sheet, and a plurality of second tethers joined to the third plate and the fourth plate and extending between the third plate and the fourth plate in the second interior cavity. The plurality of first tethers may have a first configuration that imparts a first compression characteristic to the chamber at the first tether element, and the plurality of second tethers may have a second configuration that imparts a second compression characteristic different than the first compression characteristic to the chamber at the second tether element.</p>
+      <p id="p-00052-en" num="0052">In another embodiment, the first tether element includes a plurality of first tethers having a first configuration operatively connecting the first portion to the second portion at a first area of the chamber, a plurality of second tethers having a second configuration operatively connecting the first portion to the second portion at a second area of the chamber. The first configuration may impart a first compression characteristic to the chamber at the first area, and the second configuration may impart a second compression characteristic different than the first compression characteristic to the chamber at the second area. In such an embodiment, the second area may border and at least partially surround the first area. Furthermore, the article may be an article of footwear having a heel region, a midfoot region, and a forefoot region, and the first interior cavity may be in at least one different one of the heel region, the midfoot region, and the forefoot region than the second interior cavity.</p>
+      <p id="p-00053-en" num="0053">The above features and advantages and other features and advantages of the present teachings are readily apparent from the following detailed description of the modes for carrying out the present teachings when taken in connection with the accompanying drawings.</p>
+      <p id="p-00054-en" num="0054">“A,” “an,” “the,” “at least one,” and “one or more” are used interchangeably to indicate that at least one of the items is present. A plurality of such items may be present unless the context clearly indicates otherwise. All numerical values of parameters (e.g., of quantities or conditions) in this specification, unless otherwise indicated expressly or clearly in view of the context, including the appended claims, are to be understood as being modified in all instances by the term “about” whether or not “about” actually appears before the numerical value. “About” indicates that the stated numerical value allows some slight imprecision (with some approach to exactness in the value; approximately or reasonably close to the value; nearly). If the imprecision provided by “about” is not otherwise understood in the art with this ordinary meaning, then “about” as used herein indicates at least variations that may arise from ordinary methods of measuring and using such parameters. In addition, a disclosure of a range is to be understood as specifically disclosing all values and further divided ranges within the range.</p>
+      <p id="p-00055-en" num="0055">The terms “comprising,” “including,” and “having” are inclusive and therefore specify the presence of stated features, steps, operations, elements, or components, but do not preclude the presence or addition of one or more other features, steps, operations, elements, or components. Orders of steps, processes, and operations may be altered when possible, and additional or alternative steps may be employed. As used in this specification, the term “or” includes any one and all combinations of the associated listed items. The term “any of” is understood to include any possible combination of referenced items, including “any one of” the referenced items. The term “any of” is understood to include any possible combination of referenced claims of the appended claims, including “any one of” the referenced claims.</p>
+      <p id="p-00056-en" num="0056">Those having ordinary skill in the art will recognize that terms such as “above,” “below,” “upward,” “downward,” “top,” “bottom,” etc., are used descriptively relative to the figures, and do not represent limitations on the scope of the invention, as defined by the claims.</p>
+      <p id="p-00057-en" num="0057">The following discussion and accompanying figures disclose an article of footwear, as well as various fluid-filled chambers that may be incorporated into the footwear. Concepts related to the chambers are disclosed with reference to footwear that is suitable for running. The chambers are not limited to footwear designed for running, however, and may be utilized with a wide range of athletic footwear styles, including basketball shoes, cross-training shoes, cycling shoes, football shoes, soccer shoes, tennis shoes, and walking shoes, for example. The chambers may also be utilized with footwear styles that are generally considered to be non-athletic, including dress shoes, loafers, sandals, and boots. The concepts disclosed herein may, therefore, apply to a wide variety of footwear styles, in addition to the specific style discussed in the following material and depicted in the accompanying figures. The chambers may also be utilized with a variety of other products, including backpack straps, mats for yoga, seat cushions, and protective apparel, for example.</p>
+      <p id="p-00058-en" num="0058">General Footwear Structure</p>
+      <p id="p-00059-en" num="0059">An article of footwear <b>10</b> is depicted in <figref>FIGS. 1-3</figref> as including an upper <b>20</b> and a sole structure <b>30</b>. For reference purposes, footwear <b>10</b> may be divided into three general regions: a forefoot region <b>11</b>, a midfoot region <b>12</b>, and a heel region <b>13</b>, as shown in <figref>FIGS. 1 and 2</figref>. Footwear <b>10</b> also includes a lateral side <b>14</b> and a medial side <b>15</b>. Forefoot region <b>11</b> generally includes portions of footwear <b>10</b> corresponding with the toes and the joints connecting the metatarsals with the phalanges. Midfoot region <b>12</b> generally includes portions of footwear <b>10</b> corresponding with the arch area of the foot, and heel region <b>13</b> corresponds with rear portions of the foot, including the calcaneus bone. Lateral side <b>14</b> and medial side <b>15</b> extend through each of regions <b>11</b>-<b>13</b> and correspond with opposite sides of footwear <b>10</b>. Regions <b>11</b>-<b>13</b> and sides <b>14</b>-<b>15</b> are not intended to demarcate precise areas of footwear <b>10</b>. Rather, regions <b>11</b>-<b>13</b> and sides <b>14</b>-<b>15</b> are intended to represent general areas of footwear <b>10</b> to aid in the following discussion. In addition to footwear <b>10</b>, regions <b>11</b>-<b>13</b> and sides <b>14</b>-<b>15</b> may also be applied to upper <b>20</b>, sole structure <b>30</b>, and individual elements thereof.</p>
+      <p id="p-00060-en" num="0060">Upper <b>20</b> is depicted as having a substantially conventional configuration incorporating a plurality of material elements (e.g., textiles, foam, leather, and synthetic leather) that are stitched or adhesively bonded together to form an interior void for securely and comfortably receiving a foot. The material elements may be selected and located with respect to upper <b>20</b> in order to selectively impart properties of durability, air-permeability, wear-resistance, flexibility, and comfort, for example. An ankle opening <b>21</b> in heel region <b>13</b> provides access to the interior void. In addition, upper <b>20</b> may include a lace <b>22</b> that is utilized in a conventional manner to modify the dimensions of the interior void, thereby securing the foot within the interior void and facilitating entry and removal of the foot from the interior void. Lace <b>22</b> may extend through apertures in upper <b>20</b>, and a tongue portion of upper <b>20</b> may extend between the interior void and lace <b>22</b>. Given that various aspects of the present discussion primarily relate to sole structure <b>30</b>, upper <b>20</b> may exhibit the general configuration discussed above or the general configuration of practically any other conventional or non-conventional upper. Accordingly, the structure of upper <b>20</b> may vary significantly within the scope of the present invention.</p>
+      <p id="p-00061-en" num="0061">Sole structure <b>30</b> is secured to upper <b>20</b> and has a configuration that extends between upper <b>20</b> and the ground. In addition to attenuating ground reaction forces (i.e., providing cushioning for the foot), sole structure <b>30</b> may provide traction, impart stability, and limit various foot motions, such as pronation. The primary elements of sole structure <b>30</b> are a midsole element <b>31</b>, an outsole <b>32</b>, and a chamber <b>33</b>. Midsole element <b>31</b> is secured to a lower area of upper <b>20</b> and may be formed from various polymer foam materials (e.g., polyurethane or ethylvinylacetate foam) that extend through each of regions <b>11</b>-<b>13</b> and between sides <b>14</b> and <b>15</b>. Additionally, midsole element <b>31</b> at least partially envelops or receives chamber <b>33</b>, which will be discussed in greater detail below. Outsole <b>32</b> is secured to a lower surface of midsole element <b>31</b> and may be formed from a textured, durable, and wear-resistant material (e.g., rubber) that forms the ground-contacting portion of footwear <b>10</b>. In addition to midsole element <b>31</b>, outsole <b>32</b>, and chamber <b>33</b>, sole structure <b>30</b> may incorporate one or more support members, moderators, or reinforcing structures, for example, that further enhance the ground reaction force attenuation characteristics of sole structure <b>30</b> or the performance properties of footwear <b>10</b>. Sole structure <b>30</b> may also incorporate a sockliner <b>34</b>, as depicted in <figref>FIG. 3</figref>, that is located within a lower portion of the void in upper <b>20</b> and is positioned to contact a plantar (i.e., lower) surface of the foot to enhance the comfort of footwear <b>10</b>.</p>
+      <p id="p-00062-en" num="0062">When incorporated into sole structure <b>30</b>, chamber <b>33</b> has a shape that fits within a perimeter of midsole element <b>31</b> and extends through heel region <b>13</b>, extends into midfoot region <b>12</b>, and also extends from lateral side <b>14</b> to medial side <b>15</b>. Although chamber <b>33</b> is depicted as being exposed through the polymer foam material of midsole element <b>31</b>, chamber <b>33</b> may be entirely encapsulated within midsole element <b>31</b> in some configurations of footwear <b>10</b>. When the foot is located within upper <b>20</b>, chamber <b>33</b> extends under a heel area of the foot in order to attenuate ground reaction forces that are generated when sole structure <b>30</b> is compressed between the foot and the ground during various ambulatory activities, such as running and walking. In some configurations, chamber <b>33</b> may protrude outward from midsole element <b>31</b> or may extend further into midfoot region <b>12</b> and may also extend forward to forefoot region <b>11</b>. Accordingly, the shape and dimensions of chamber <b>33</b> may vary significantly to extend through various areas of footwear <b>10</b>. Moreover, any of a variety of other chambers <b>100</b>, <b>200</b>, and <b>300</b> (disclosed in greater detail below) may be utilized in place of chamber <b>33</b> in footwear <b>10</b>.</p>
+      <p id="p-00063-en" num="0063">First Chamber Configuration</p>
+      <p id="p-00064-en" num="0064">The primary components of chamber <b>33</b>, which is depicted individually in <figref>FIGS. 4-8B</figref>, are a barrier <b>40</b> and a tether element <b>50</b>. Barrier <b>40</b> forms an exterior of chamber <b>33</b> and (a) defines an interior cavity that receives both a pressurized fluid and tether element <b>50</b> and (b) provides a durable sealed barrier for retaining the pressurized fluid within chamber <b>33</b>. The polymer material of barrier <b>40</b> includes a first or upper barrier portion <b>41</b>, an opposite second or lower barrier portion <b>42</b>, and a sidewall barrier portion <b>43</b> that extends around a periphery of chamber <b>33</b> and between barrier portions <b>41</b> and <b>42</b>. Tether element <b>50</b> is located within the interior cavity and has a configuration that includes a first or upper plate <b>51</b>, an opposite second or lower plate <b>52</b>, and a plurality of tethers <b>53</b> that extend between plates <b>51</b> and <b>52</b>. Whereas upper plate <b>51</b> is secured to an inner surface of upper barrier portion <b>41</b>, lower plate <b>52</b> is secured to an inner surface of lower barrier portion <b>42</b>. Either adhesive bonding or thermobonding, for example, may be utilized to secure tether element <b>50</b> to barrier <b>40</b>.</p>
+      <p id="p-00065-en" num="0065">In manufacturing chamber <b>33</b>, a pair of polymer sheets may be molded and bonded during a thermoforming process to define barrier portions <b>41</b>-<b>43</b>. More particularly, the thermoforming process (a) imparts shape to one of the polymer sheets in order to form upper barrier portion <b>41</b>, (b) imparts shape to the other of the polymer sheets in order to form lower barrier portion <b>42</b> and sidewall barrier portion <b>43</b>, and (c) forms a peripheral bond <b>44</b> that joins a periphery of the polymer sheets and extends around an upper area of sidewall barrier portion <b>43</b>. The thermoforming process may also locate tether element <b>50</b> within chamber <b>33</b> and bond tether element <b>50</b> to each of barrier portions <b>41</b> and <b>42</b>. Although substantially all of the thermoforming process may be performed with a mold, each of the various parts of the process may be performed separately in forming chamber <b>33</b>. Other processes that utilize blowmolding, rotational molding, or the bonding of polymer sheets without thermoforming may also be utilized to manufacture chamber <b>33</b>.</p>
+      <p id="p-00066-en" num="0066">Following the thermoforming process, a fluid may be injected into the interior cavity and pressurized. The pressurized fluid exerts an outward force upon barrier <b>40</b> and plates <b>51</b> and <b>52</b>, which tends to separate barrier portions <b>41</b> and <b>42</b>. Tether element <b>50</b>, however, is secured to each of barrier portions <b>41</b> and <b>42</b> in order to retain the intended shape of chamber <b>33</b> when pressurized. More particularly, tethers <b>53</b> extend across the interior cavity and are placed in tension by the outward force of the pressurized fluid upon barrier <b>40</b>, thereby preventing barrier <b>40</b> from expanding outward and retaining the intended shape of chamber <b>33</b>. Whereas peripheral bond <b>44</b> joins the polymer sheets to form a seal that prevents the fluid from escaping, tether element <b>50</b> prevents chamber <b>33</b> from expanding outward or otherwise distending due to the pressure of the fluid. That is, tether element <b>50</b> effectively limits the expansion of chamber <b>33</b> to retain an intended shape of surfaces of barrier portions <b>41</b> and <b>42</b>.</p>
+      <p id="p-00067-en" num="0067">The fluid within chamber <b>33</b> may be pressurized between zero and three-hundred-fifty kilopascals (i.e., approximately fifty-one pounds per square inch) or more. In addition to air and nitrogen, the fluid may include any of the gasses disclosed in U.S. Pat. No. 4,340,626 to Rudy, which is incorporated by reference in its entirety. In some configurations, chamber <b>33</b> may incorporate a valve or other structure that permits the wearer or another individual to adjust the pressure of the fluid.</p>
+      <p id="p-00068-en" num="0068">A wide range of polymer materials may be utilized for barrier <b>40</b>. In selecting materials for barrier <b>40</b>, engineering properties of the material (e.g., tensile strength, stretch properties, fatigue characteristics, dynamic modulus, and loss tangent) as well as the ability of the material to prevent the diffusion of the fluid contained by barrier <b>40</b> may be considered. When formed of thermoplastic urethane, for example, barrier <b>40</b> may have a thickness of approximately 1.0 millimeter, but the thickness may range from 0.25 to 4.0 millimeters or more, for example. In addition to thermoplastic urethane, examples of polymer materials that may be suitable for barrier <b>40</b> include polyurethane, polyester, polyester polyurethane, and polyether polyurethane. Barrier <b>40</b> may also be formed from a material that includes alternating layers of thermoplastic polyurethane and ethylene-vinyl alcohol copolymer, as disclosed in U.S. Pat. Nos. 5,713,141 and 5,952,065 to Mitchell, et al. which are incorporated by reference in their entireties. A variation upon this material may also be utilized, wherein a center layer is formed of ethylene-vinyl alcohol copolymer, layers adjacent to the center layer are formed of thermoplastic polyurethane, and outer layers are formed of a regrind material of thermoplastic polyurethane and ethylene-vinyl alcohol copolymer. Another suitable material for barrier <b>40</b> is a flexible microlayer membrane that includes alternating layers of a gas barrier material and an elastomeric material, as disclosed in U.S. Pat. Nos. 6,082,025 and 6,127,026 to Bonk, et al., which are incorporated by reference in their entireties. Additional suitable materials are disclosed in U.S. Pat. Nos. 4,183,156 and 4,219,945 to Rudy, which are incorporated by reference in their entireties. Further suitable materials include thermoplastic films containing a crystalline material, as disclosed in U.S. Pat. Nos. 4,936,029 and 5,042,176 to Rudy, which are incorporated by reference in their entireties, and polyurethane including a polyester polyol, as disclosed in U.S. Pat. Nos. 6,013,340; 6,203,868; and 6,321,465 to Bonk, et al., which are incorporated by reference in their entireties.</p>
+      <p id="p-00069-en" num="0069">As discussed above, tether element <b>50</b> includes upper plate <b>51</b>, the opposite lower plate <b>52</b>, and the plurality of tethers <b>53</b> that extend between plates <b>51</b> and <b>52</b>. Each of plates <b>51</b> and <b>52</b> have a generally continuous and planar configuration. Tethers <b>53</b> are secured to each of plates <b>51</b> and <b>52</b> and space plates <b>51</b> and <b>52</b> apart from each other. More particularly, the outward force of the pressurized fluid places tethers <b>53</b> in tension and restrains further outward movement of plates <b>51</b> and <b>52</b> and barrier portions <b>41</b> and <b>42</b>.</p>
+      <p id="p-00070-en" num="0070">Plates <b>51</b> and <b>52</b> impart a particular shape and contour to the upper and lower surfaces of chamber <b>33</b>. Given that plates <b>51</b> and <b>52</b> exhibit a planar configuration, the upper and lower surfaces of chamber <b>33</b> exhibit a corresponding planar configuration. As discussed in greater detail below, however, one or both of plates <b>51</b> and <b>52</b> may be contoured to impart a contoured configuration to surfaces of chamber <b>33</b>. Although plates <b>51</b> and <b>52</b> may extend across substantially all of the length and width of chamber <b>33</b>, plates <b>51</b> and <b>52</b> are depicted in <figref>FIGS. 8A and 8B</figref> as being spaced inward from sidewall barrier portion <b>43</b>. That is, plates <b>51</b> and <b>52</b> are depicted as only extending across a portion of the length and width of chamber <b>33</b>. In this configuration, upper plate <b>51</b> extends adjacent to at least fifty percent of upper barrier portion <b>41</b>, and lower plate <b>52</b> extends adjacent to at least fifty percent of lower barrier portion <b>42</b>. Without tether element <b>50</b>, chamber <b>33</b> would effectively bulge or otherwise distend to a generally rounded shape. Plates <b>51</b> and <b>52</b>, however, retain an intended shape in barrier portions <b>41</b> and <b>42</b>, and tethers <b>53</b> limit the degree to which plates <b>51</b> and <b>52</b> may separate. Given that areas where plates <b>51</b> and <b>52</b> are absent may bulge or distend outward, extending plates <b>51</b> and <b>52</b> adjacent to at least fifty percent of barrier portions <b>41</b> and <b>42</b> ensures that central areas of barrier portions <b>41</b> and <b>42</b> remain properly shaped. Although peripheral areas of barrier portions <b>41</b> and <b>42</b> may protrude outward due to the absence of plates <b>51</b> and <b>52</b>, forming chamber <b>33</b> such that plates <b>51</b> and <b>52</b> extend adjacent to at least fifty percent of barrier portions <b>41</b> and <b>42</b> ensures that chamber <b>33</b> remains suitably-shaped for use in footwear <b>10</b>.</p>
+      <p id="p-00071-en" num="0071">A variety of structures may be utilized to secure tethers <b>53</b> to each of plates <b>51</b> and <b>52</b>. As depicted in an enlarged area of <figref>FIG. 8A</figref>, for example, tethers <b>53</b> are merely secured to upper plate <b>51</b>, and a similar configuration may be utilized to join tethers <b>53</b> to lower plate <b>52</b>. A variety of securing structures may also be utilized. Referring to <figref>FIG. 9A</figref>, ends of tethers <b>53</b> include enlarged areas that may assist with anchoring tethers <b>53</b> within upper plate <b>51</b>. <figref>FIG. 9B</figref> depicts a configuration wherein each of tethers <b>53</b> are secured to a restraint <b>54</b> located on an upper surface of upper plate <b>51</b> (i.e., between upper plate <b>51</b> and upper barrier portion <b>41</b>). Each of restraints <b>54</b> may have the configuration of a disk that is joined to an end of one of tethers <b>53</b>. In another configuration, as depicted in <figref>FIG. 9C</figref>, a single tether <b>53</b> extends through upper plate <b>51</b> in two locations and runs along the upper surface of upper plate <b>51</b>. The various tethers <b>53</b> may, therefore, be formed from a single strand or other element that repeatedly passes through plates <b>51</b> and <b>52</b>. As another example, individual tethers <b>53</b> may be secured to a lower surface of upper plate <b>51</b>, as depicted in <figref>FIG. 9D</figref>, with an adhesive or thermobonding. Accordingly, tethers <b>51</b> may be secured to plates <b>51</b> and <b>52</b> in a variety of ways.</p>
+      <p id="p-00072-en" num="0072">Plates <b>51</b> and <b>52</b> may be formed from a variety of materials, including various polymer materials, composite materials, and metals. More particularly, plates <b>51</b> and <b>52</b> may be formed from polyethylene, polypropylene, thermoplastic polyurethane, polyether block amide, nylon, and blends of these materials. Composite materials may also be formed by incorporating glass fibers or carbon fibers into the polymer materials discussed above in order to enhance the overall strength of tether element <b>50</b>. In some configurations of chamber <b>33</b>, plates <b>51</b> and <b>52</b> may also be formed from aluminum, titanium, or steel. Although plates <b>51</b> and <b>52</b> may be formed from the same materials (e.g., a composite of polyurethane and carbon fibers), plates <b>51</b> and <b>52</b> may be formed from different materials (e.g., a composite and aluminum, or polyurethane and polyethylene). As a related matter, the material forming barrier <b>40</b> generally has lesser stiffness than plates <b>51</b> and <b>52</b>. Whereas the foot may compress barrier <b>40</b> during walking, running, or other ambulatory activities, plates <b>51</b> and <b>52</b> may remain more rigid and less flexible when the material forming plates <b>51</b> and <b>52</b> generally has greater stiffness than the material forming barrier <b>40</b>.</p>
+      <p id="p-00073-en" num="0073">Tethers <b>53</b> may be formed from any generally one-dimensional material. As utilized with respect to the present invention, the term “one-dimensional material” or variants thereof is intended to encompass generally elongate materials exhibiting a length that is substantially greater than a width and a thickness. Accordingly, suitable materials for tethers <b>53</b> include various strands, filaments, fibers, yarns, threads, cables, or ropes that are formed from rayon, nylon, polyester, polyacrylic, silk, cotton, carbon, glass, aramids (e.g., para-aramid fibers and meta-aramid fibers), ultra high molecular weight polyethylene, liquid crystal polymer, copper, aluminum, and steel. Whereas filaments have an indefinite length and may be utilized individually as tethers <b>53</b>, fibers have a relatively short length and generally go through spinning or twisting processes to produce a strand of suitable length. An individual filament utilized in tethers <b>53</b> may be formed form a single material (i.e., a monocomponent filament) or from multiple materials (i.e., a bicomponent filament). Similarly, different filaments may be formed from different materials. As an example, yarns utilized as tethers <b>53</b> may include filaments that are each formed from a common material, may include filaments that are each formed from two or more different materials, or may include filaments that are each formed from two or more different materials. Similar concepts also apply to threads, cables, or ropes. The thickness of tethers <b>53</b> may also vary significantly to range from 0.03 millimeters to more than 5 millimeters, for example. Although one-dimensional materials will often have a cross-section where width and thickness are substantially equal (e.g., a round or square cross-section), some one-dimensional materials may have a width that is greater than a thickness (e.g., a rectangular, oval, or otherwise elongate cross-section). Despite the greater width, a material may be considered one-dimensional if a length of the material is substantially greater than a width and a thickness of the material.</p>
+      <p id="p-00074-en" num="0074">Tethers <b>53</b> are arranged in rows that extend longitudinally along the lengths of plate <b>51</b> and <b>52</b>. Referring to <figref>FIG. 8B</figref>, nine tethers <b>53</b> extend across the width of chamber <b>33</b>, and each of the nine tethers are within one of the longitudinally-extending rows. Whereas the central row of tethers <b>53</b> is oriented to have a generally vertical orientation, the more peripheral rows of tethers <b>53</b> are oriented diagonally. That is, tethers <b>53</b> may be secured to offset areas of plates <b>51</b> and <b>52</b> in order to induce the diagonal orientation. An advantage of the diagonal orientation of tethers <b>53</b> relates to the stability of footwear <b>10</b>. Referring to <figref>FIG. 10A</figref>, a force <b>16</b> is shown as compressing sole structure <b>30</b> and thrusting toward lateral side <b>14</b>, which may correspond to a cutting motion that is utilized in many athletic activities to move an individual side-to-side. When force <b>16</b> deforms chamber <b>33</b> in this manner, tethers <b>53</b> adjacent to medial side <b>15</b> are placed in tension due to their sloping or diagonal orientation, as represented by various arrows <b>17</b>. The tension in tethers <b>53</b> adjacent to medial side <b>15</b> resists the deformation of chamber <b>33</b>, thereby resisting the collapse of lateral side <b>14</b>. Similarly, referring to <figref>FIG. 10B</figref>, force <b>16</b> is shown as compressing sole structure <b>30</b> and thrusting toward medial side <b>15</b>, which may also correspond to a cutting motion. When force <b>16</b> deforms chamber <b>33</b> in this manner, tethers <b>53</b> adjacent to lateral side <b>14</b> are placed in tension due to their sloping or diagonal orientation, as represented by the various arrows <b>17</b>. The tension in tethers <b>53</b> adjacent to lateral side <b>14</b> resists the deformation of chamber <b>33</b>, thereby resisting the collapse of medial side <b>15</b>. Accordingly, the diagonal orientation of tethers <b>53</b> resists deformation in chamber <b>33</b>, thereby enhancing the overall stability of footwear <b>10</b> during walking, running, or other ambulatory activities.</p>
+      <p id="p-00075-en" num="0075">The overall shape of chamber <b>33</b> and the areas of footwear <b>10</b> in which chamber <b>33</b> is located may vary significantly. Referring to <figref>FIG. 11A</figref>, chamber <b>33</b> has a generally round configuration that may be located solely within heel region <b>13</b>, for example. Another shape is depicted in <figref>FIG. 11B</figref>, wherein chamber <b>33</b> has a configuration that extends through both heel region <b>13</b> and midfoot region <b>12</b>. In this configuration chamber <b>33</b> may replace midsole element <b>31</b> such that chamber <b>33</b> extends from lateral side <b>14</b> to medial side <b>15</b> and from upper <b>20</b> to outsole <b>32</b>. A similar configuration is depicted in <figref>FIG. 11C</figref>, wherein chamber <b>33</b> has a shape that fits within a perimeter of sole structure <b>30</b> and extends under substantially all of the foot, thereby corresponding with a general outline of the foot. In this configuration chamber <b>33</b> may also replace midsole element <b>31</b> such that chamber <b>33</b> extends from lateral side <b>14</b> to medial side <b>15</b>, from heel region <b>13</b> to forefoot region <b>11</b>, and from upper <b>20</b> to outsole <b>32</b>.</p>
+      <p id="p-00076-en" num="0076">Although the structure of chamber <b>33</b> discussed above and depicted in the figures provides a suitable example of a configuration that may be utilized in footwear <b>10</b>, a variety of other configurations may also be utilized. Referring to <figref>FIG. 12A</figref>, chamber <b>33</b> exhibits a tapered configuration. One manner of imparting the tapered configuration relates to the relative lengths of tethers <b>53</b>. Whereas tethers <b>53</b> are relatively long in the areas of chamber <b>33</b> exhibiting greater thicknesses, tethers <b>53</b> are relatively short in the areas of chamber <b>33</b> exhibiting lesser thicknesses. By varying the lengths of tethers <b>53</b>, therefore, tapers or other features may be incorporated into chamber <b>33</b>. The taper in <figref>FIG. 12A</figref> extends from lateral side <b>14</b> to medial side <b>15</b>. A taper may also extend from heel region <b>13</b> to forefoot region <b>12</b>, as in the configuration of chamber <b>33</b> depicted in <figref>FIG. 11C</figref>. Another configuration of chamber <b>33</b> is depicted in <figref>FIG. 12B</figref>, wherein a central area of chamber <b>33</b> is depressed relative to the peripheral areas. More particularly, upper plate <b>51</b> is contoured to have a non-planar configuration, thereby forming a depression in the central area. When incorporated into footwear <b>10</b>, the depression may correspond with the location of the heel of the wearer, thereby providing an area for securely-receiving the heel. A similar depression is also formed in the configuration of chamber <b>33</b> depicted in <figref>FIG. 11C</figref>. In other configurations, upper plate <b>51</b> may be contoured to form a protruding arch support area, for example. As a related matter, the relative lengths of tethers <b>53</b> vary throughout the configuration depicted in <figref>FIG. 12B</figref>. More particularly, tethers <b>53</b> in the peripheral areas have greater lengths than tethers <b>53</b> in the central area.</p>
+      <p id="p-00077-en" num="0077">Various aspects relating to tethers <b>53</b> may also vary. Referring to <figref>FIG. 12C</figref>, each of tethers <b>53</b> exhibit a diagonal orientation. In some configurations, tethers <b>53</b> may cross each other to form x-shaped structures with opposing diagonal orientations, as depicted in <figref>FIG. 12D</figref>. Additionally, the spacing between adjacent tethers <b>53</b> may vary significantly, as depicted in <figref>FIG. 12E</figref>, and tethers <b>53</b> may be absent from some areas of chamber <b>33</b>. While tethers <b>53</b> may be formed from any generally one-dimensional material, a variety of other materials or structures may be located between plates <b>51</b> and <b>52</b> to prevent barrier <b>40</b> from expanding outward and retain the intended shape of chamber <b>33</b>. Referring to <figref>FIG. 12F</figref>, for example, a variety of other tethers are located between plates <b>51</b> and <b>51</b>. More particularly, a fluid-filled member <b>55</b> and a foam member <b>56</b> are bonded to plates <b>51</b> and <b>52</b>, both of which may resist tension and compression. A textile member <b>57</b> may also be utilized and may have the configuration of either a woven or knit textile. In some configurations, textile member <b>57</b> may be a spacer knit textile. A truss member <b>58</b> may also be utilized in chamber <b>33</b> and has the configuration of a semi-rigid polymer element that extends between plates <b>51</b> and <b>52</b>. Additionally, a telescoping member <b>59</b> that freely collapses but also resists tension may be utilized. Accordingly, a variety of other materials or structures may be utilized with tethers <b>53</b> or in place of tethers <b>53</b>.</p>
+      <p id="p-00078-en" num="0078">Although a single plate <b>51</b> and a single plate <b>52</b> may be utilized in chamber <b>33</b>, some configurations may incorporate multiple plates <b>51</b> and <b>52</b>. Referring to <figref>FIG. 12G</figref>, two plates <b>51</b> and two plates <b>52</b> are located within the interior cavity of barrier <b>40</b>. An advantage to this configuration is that each of plates <b>51</b> may deflect independently when compressed by the foot. A similar configuration is depicted in <figref>FIG. 12H</figref>, wherein a central bond <b>45</b> joins barrier portions <b>41</b> and <b>42</b> in the central area of chamber <b>33</b>. Bond <b>45</b> may, for example, form separate subchambers within chamber <b>33</b>, which may be pressurized differently to affect the compressibility of different areas of chamber <b>33</b>. As an additional matter, each of plates <b>51</b> or each of plates <b>52</b> may be formed from different materials to impart different properties to various areas of chamber <b>33</b>.</p>
+      <p id="p-00079-en" num="0079">A further configurations of chamber <b>33</b> is depicted in <figref>FIG. 12I</figref> as including a tether element <b>60</b> that has an upper tie piece <b>61</b>, a lower tie piece <b>62</b>, and a tether <b>63</b>. Whereas upper tie piece <b>61</b> is secured, bonded, or otherwise joined to upper barrier portion <b>41</b>, lower tie piece <b>62</b> is secured, bonded, or otherwise joined to lower barrier portion <b>42</b>. Additionally, tether <b>63</b> is joined to each of tie pieces <b>61</b> and <b>62</b> and extends through the interior cavity. In this configuration, tether <b>63</b> is placed in tension by the outward force of the pressurized fluid within chamber <b>33</b>. Tie pieces <b>61</b> and <b>62</b> are similar to plates <b>51</b> and <b>52</b>, but are generally associated with a single tether <b>63</b> or a relatively small number of tethers <b>63</b>, rather than multiple tethers. Although tie pieces <b>61</b> and <b>62</b> may be round disks with common diameters, tie pieces <b>61</b> and <b>62</b> may have any shape or size. By modifying the lengths of tethers <b>63</b>, various contours may be imparted to chamber <b>33</b>. For example, <figref>FIG. 12J</figref> depicts chamber <b>33</b> as having a tapered configuration, and <figref>FIG. 12K</figref> depicts chamber <b>33</b> as having a central depression. In further configurations, tie pieces <b>61</b> and <b>62</b> may be offset from each other to impart a diagonal configuration to tethers <b>63</b>, as depicted in <figref>FIG. 12L</figref>.</p>
+      <p id="p-00080-en" num="0080">Some configurations of chamber <b>33</b> may have both a tether element <b>50</b> and one or more tether elements <b>60</b>, as depicted in <figref>FIG. 12M</figref>. That is, chamber <b>33</b> may have (a) a first area that includes tether element <b>50</b> and (b) a second area that includes a plurality of tether elements <b>60</b>. Given the difference in sizes of tether element <b>50</b> and the individual tether elements <b>60</b>, the compression characteristics of chamber <b>33</b> differ in areas where tether element <b>50</b> is present and in areas where tether elements <b>60</b> are present. More particularly, the deflection of chamber <b>33</b> when a force is applied to a particular area may be different, depending upon the type of tether element that is utilized. Accordingly, tether element <b>50</b> and tether elements <b>60</b> may both be utilized in chamber <b>33</b> to impart different compression characteristics to different areas of chamber <b>33</b>.</p>
+      <p id="p-00081-en" num="0081">As discussed above, chamber <b>33</b> may have (a) a first area that includes tether element <b>50</b> and (b) a second area that includes a plurality of tether elements <b>60</b> in order to impart different compression characteristics to the first and second areas of chamber <b>33</b>. As an example, the plurality of tether elements <b>60</b> may be utilized in lateral side <b>14</b> to impart greater deflection as the heel compresses sole structure <b>30</b>, and tether element <b>50</b> may be utilized in medial side <b>15</b> to impart a stiffer deflection as the foot rolls or pronates toward medial side <b>15</b>. As another example, the plurality of tether elements <b>60</b> may be utilized in heel region <b>13</b> to impart greater deflection as the heel compresses sole structure <b>30</b>, and tether element <b>50</b> may be utilized in forefoot region <b>11</b> to impart a stiffer deflection. In other configurations, the plurality of tether elements <b>60</b> may be utilized in forefoot region <b>11</b> and tether elements <b>60</b> may be utilized in heel region <b>13</b>. In either configuration, however, tether element <b>50</b> and a plurality of tether elements <b>60</b> may be utilized in combination to impart different compression characteristics to different areas of footwear <b>10</b>. Moreover, any of the additional tether element configurations shown in <figref>FIG. 12F</figref> may be utilized in combination with tether element <b>50</b> and one or more of tether elements <b>60</b> to vary the compression characteristics in different areas of chamber <b>33</b> or other chambers.</p>
+      <p id="p-00082-en" num="0082">Some conventional chambers utilize bonds between opposite surfaces to prevent the barrier from expanding outward and retaining the intended shape of the chamber. Often, the bonds form indentations or depressions in the upper and lower surfaces of the chamber and have different compression characteristics than other areas of the chamber (i.e., the areas without the bonds). Referring to <figref>FIG. 12N</figref>, chamber <b>33</b> has a configuration wherein areas with the various tether elements <b>60</b> form indentations in barrier portions <b>41</b> and <b>42</b>. That is, barrier portions <b>41</b> and <b>42</b> form depressions in areas where tie pieces <b>61</b> and <b>62</b> are secured to barrier <b>40</b>. In some configurations, these depressions may be molded or otherwise formed in barrier portions <b>41</b> and <b>42</b>, or barrier <b>40</b> may take this shape due to the pressure of the fluid within barrier <b>40</b>. In other configurations, a variety of other tensile members (e.g., foam members, spacer textiles) may be utilized in place of tether elements <b>60</b>.</p>
+      <p id="p-00083-en" num="0083">Second Chamber Configuration</p>
+      <p id="p-00084-en" num="0084">The various configurations of chamber <b>33</b> discussed above provide examples of fluid-filled chambers that may be incorporated into footwear <b>10</b> or other articles of footwear. A variety of other fluid-filled chambers may also be incorporated into footwear <b>10</b> or the other articles of footwear, including a chamber <b>100</b>. Referring to <figref>FIGS. 13-17B</figref>, chamber <b>100</b> has a barrier <b>110</b> and a plurality of tether elements <b>120</b>. Barrier <b>110</b> forms an exterior of chamber <b>100</b> and defines an interior cavity for receiving both a pressurized fluid and tether elements <b>120</b>. Barrier <b>110</b> includes a first or upper barrier portion <b>111</b>, an opposite second or lower barrier portion <b>112</b>, and a sidewall barrier portion <b>113</b> that extends around a periphery of chamber <b>100</b> and between barrier portions <b>111</b> and <b>112</b>. In addition, barrier <b>110</b> includes a peripheral bond <b>114</b>, which may be absent in some configurations. Tether elements <b>120</b> are located within the interior cavity and have the configurations of textile or polymer sheets, for example. Either adhesive bonding or thermobonding, for example, may be utilized to secure tether elements <b>120</b> to barrier <b>110</b>. Any of the manufacturing processes, materials, fluids, fluid pressures, and other features of barrier <b>40</b> discussed above may also be utilized for barrier <b>110</b>.</p>
+      <p id="p-00085-en" num="0085">Tether elements <b>120</b> are secured to each of barrier portions <b>111</b> and <b>112</b> in order to retain the intended shape of chamber <b>100</b> when pressurized. More particularly, tether elements <b>120</b> extend across the interior cavity and are placed in tension by the outward force of the pressurized fluid upon barrier <b>110</b>, thereby preventing barrier <b>110</b> from expanding outward and retaining the intended shape of chamber <b>100</b>. That is, tether elements <b>120</b> prevent chamber <b>100</b> from expanding outward or otherwise distending due to the pressure of the fluid.</p>
+      <p id="p-00086-en" num="0086">Although a variety of materials may be utilized, tether elements <b>120</b> may be formed from any generally two-dimensional material. As utilized with respect to the present invention, the term “two-dimensional material” or variants thereof is intended to encompass generally flat materials exhibiting a length and a width that are substantially greater than a thickness. Accordingly, suitable materials for tether elements <b>120</b> include various textiles, polymer sheets, or combinations of textiles and polymer sheets, for example. Textiles are generally manufactured from fibers, filaments, or yarns that are, for example, either (a) produced directly from webs of fibers by bonding, fusing, or interlocking to construct non-woven fabrics and felts or (b) formed through a mechanical manipulation of yarn to produce a woven or knitted fabric. The textiles may incorporate fibers that are arranged to impart one-directional stretch or multi-directional stretch. The polymer sheets may be extruded, rolled, or otherwise formed from a polymer material to exhibit a generally flat aspect. Two-dimensional materials may also encompass laminated or otherwise layered materials that include two or more layers of textiles, polymer sheets, or combinations of textiles and polymer sheets. In addition to textiles and polymer sheets, other two-dimensional materials may be utilized for tether elements <b>120</b>. In some configurations, mesh materials or perforated materials may be utilized for tether elements <b>120</b>.</p>
+      <p id="p-00087-en" num="0087">Each of tether elements <b>120</b> are formed from a single element of a two-dimensional material, such as a textile or polymer sheet. Moreover, each of tether elements <b>120</b> have an upper end area <b>121</b>, a lower end area <b>122</b>, and a central area <b>123</b>. Whereas upper end area <b>121</b> is secured, bonded, or otherwise joined to upper barrier portion <b>111</b>, lower end area <b>122</b> is secured, bonded, or otherwise joined to lower barrier portion <b>112</b>. In this configuration, central area <b>123</b> extends through the interior cavity and is placed in tension by the outward force of the pressurized fluid within chamber <b>100</b>.</p>
+      <p id="p-00088-en" num="0088">Although the structure of chamber <b>100</b> discussed above and depicted in the figures provides a suitable example of a configuration that may be utilized in footwear <b>10</b>, a variety of other configurations may also be utilized. Referring to <figref>FIG. 18A</figref>, tether elements <b>120</b> are secured to offset areas of barrier portions <b>111</b> and <b>112</b> in order to impart a diagonal orientation to central areas <b>123</b>. More particularly, end areas <b>121</b> and <b>122</b> are secured to offset locations to induce the slanting or diagonal orientation in central areas <b>123</b>. As discussed above, the diagonal orientation resists deformation in chamber <b>100</b>, thereby enhancing the overall stability of footwear <b>10</b> during walking, running, or other ambulatory activities. Referring to <figref>FIG. 18B</figref>, a single tether element <b>120</b> is joined to barrier portions <b>111</b> and <b>112</b> in various locations and has a zigzagging configuration within chamber <b>100</b>. By modifying the lengths of tether elements <b>120</b>, various contours may be imparted to chamber <b>100</b>. For example, <figref>FIG. 18C</figref> depicts chamber <b>100</b> as having a tapered configuration, and <figref>FIG. 18D</figref> depicts chamber <b>100</b> as having a central depression. Each of these contours are formed by selectively utilizing tether elements <b>120</b> with varying lengths.</p>
+      <p id="p-00089-en" num="0089">Third Chamber Configuration</p>
+      <p id="p-00090-en" num="0090">In the various configurations of chamber <b>100</b> discussed above, each of tether elements <b>120</b> are formed from a single element of a two-dimensional material. In some configurations, two or more elements of a two-dimensional material may be utilized to form tether elements. Referring to <figref>FIGS. 19-23B</figref>, a chamber <b>200</b> having a barrier <b>210</b> and a plurality of tether elements <b>220</b> is depicted. Barrier <b>210</b> forms an exterior of chamber <b>200</b> and defines an interior cavity for receiving both a pressurized fluid and tether elements <b>220</b>. Barrier <b>210</b> includes a first or upper barrier portion <b>211</b>, an opposite second or lower barrier portion <b>212</b>, and a sidewall barrier portion <b>213</b> that extends around a periphery of chamber <b>200</b> and between barrier portions <b>211</b> and <b>212</b>. In addition, barrier <b>210</b> includes a peripheral bond <b>214</b>, which may be absent in some configurations. Tether elements <b>220</b> are located within the interior cavity and are formed from at least two elements of a two-dimensional material, such as textile or polymer sheets. Either adhesive bonding or thermobonding, for example, may be utilized to secure tether elements <b>220</b> to barrier <b>210</b>.</p>
+      <p id="p-00091-en" num="0091">Tether elements <b>220</b> are secured to each of barrier portions <b>211</b> and <b>212</b> in order to retain the intended shape of chamber <b>200</b> when pressurized. More particularly, tether elements <b>220</b> extend across the interior cavity and are placed in tension by the outward force of the pressurized fluid upon barrier <b>210</b>, thereby preventing barrier <b>210</b> from expanding outward and retaining the intended shape of chamber <b>200</b>. That is, tether elements <b>220</b> prevent chamber <b>200</b> from expanding outward or otherwise distending due to the pressure of the fluid. Each of tether elements <b>220</b> are formed from an upper sheet <b>221</b> that is joined to upper barrier portion <b>211</b> and a lower sheet <b>222</b> that is joined to lower barrier portion <b>212</b>. Each of sheets <b>221</b> and <b>222</b> have an incision or cut that forms a central tab <b>223</b>. Whereas peripheral areas of sheets <b>221</b> and <b>222</b> are joined with barrier <b>210</b>, tabs <b>223</b> are unsecured and extend into the interior cavity. End areas of both tabs <b>223</b> contact each other and are joined to secure sheets <b>221</b> and <b>222</b> together. When chamber <b>200</b> is pressurized, tabs <b>223</b> are placed in tension and extend across the interior cavity, thereby preventing chamber <b>200</b> from expanding outward or otherwise distending due to the pressure of the fluid.</p>
+      <p id="p-00092-en" num="0092">Any of the manufacturing processes, materials, fluids, fluid pressures, and other features of barrier <b>40</b> discussed above may also be utilized for barrier <b>210</b>. In order to prevent tabs <b>223</b> from being bonded to barrier <b>210</b>, a blocker material may be utilized. More particularly, a material that inhibits bonding between tabs <b>223</b> and barrier <b>210</b> (e.g., polyethylene terephthalate, silicone, polytetrafluoroethylene) may be utilized to ensure that tabs <b>223</b> remain free to extend across the interior cavity between barrier portions <b>211</b> and <b>212</b>. In many configurations, the blocker material may be located on tabs <b>223</b>, but may also be on surfaces of barrier <b>210</b> or may be a film, for example, that extends between tabs <b>223</b> and surfaces of barrier <b>210</b>.</p>
+      <p id="p-00093-en" num="0093">Although the structure of chamber <b>200</b> discussed above and depicted in the figures provides a suitable example of a configuration that may be utilized in footwear <b>10</b>, a variety of other configurations may also be utilized. Referring to <figref>FIG. 24A</figref>, tether elements <b>220</b> are secured to offset areas of barrier portions <b>211</b> and <b>212</b> in order to impart a diagonal orientation. Referring to <figref>FIG. 24B</figref>, a single sheet <b>221</b> and a single sheet <b>222</b> define a plurality of tabs <b>223</b>. Whereas each of sheets <b>221</b> and <b>222</b> may form a single tab <b>223</b>, sheets <b>221</b> and <b>222</b> may form multiple tabs <b>223</b>. By modifying the lengths of tabs <b>223</b>, various contours may be imparted to chamber <b>200</b>. For example, <figref>FIG. 24C</figref> depicts chamber <b>200</b> as having a tapered configuration, and <figref>FIG. 24D</figref> depicts chamber <b>200</b> as having a central depression. Each of these contours are formed by selectively utilizing tabs <b>223</b> with varying lengths.</p>
+      <p id="p-00094-en" num="0094">Fourth Chamber Configuration</p>
+      <p id="p-00095-en" num="0095">Another configuration wherein two or more elements of a two-dimensional material are utilized to form tether elements is depicted as a chamber <b>300</b> in <figref>FIGS. 25-29B</figref>. Chamber <b>300</b> having a barrier <b>310</b> and a plurality of tether elements <b>320</b>. Barrier <b>310</b> forms an exterior of chamber <b>300</b> and defines an interior cavity for receiving both a pressurized fluid and tether elements <b>320</b>. Barrier <b>310</b> includes a first or upper barrier portion <b>311</b>, an opposite second or lower barrier portion <b>312</b>, and a sidewall barrier portion <b>313</b> that extends around a periphery of chamber <b>300</b> and between barrier portions <b>311</b> and <b>312</b>. In addition, barrier <b>310</b> includes a peripheral bond <b>314</b>, which may be absent in some configurations. Tether elements <b>320</b> are located within the interior cavity and are formed from at least two elements of a two-dimensional material, such as textile or polymer sheets. Either adhesive bonding or thermobonding, for example, may be utilized to secure tether elements <b>320</b> to barrier <b>310</b>.</p>
+      <p id="p-00096-en" num="0096">Tether elements <b>320</b> are secured to each of barrier portions <b>311</b> and <b>212</b> in order to retain the intended shape of chamber <b>300</b> when pressurized. More particularly, tether elements <b>320</b> extend across the interior cavity and are placed in tension by the outward force of the pressurized fluid upon barrier <b>310</b>, thereby preventing barrier <b>310</b> from expanding outward and retaining the intended shape of chamber <b>300</b>. That is, tether elements <b>320</b> prevent chamber <b>300</b> from expanding outward or otherwise distending due to the pressure of the fluid. Each of tether elements <b>320</b> are formed from an upper sheet <b>321</b> that is joined to upper barrier portion <b>311</b> and a lower sheet <b>322</b> that is joined to lower barrier portion <b>312</b>. Each of sheets <b>321</b> and <b>322</b> have circular or disk-shaped configuration. Whereas peripheral areas of sheets <b>321</b> and <b>322</b> are joined with each other, central areas are joined to barrier portions <b>311</b> and <b>312</b>. Once placed in tension, sheets <b>321</b> and <b>322</b> may distend to form the shapes seen in the various figures. When chamber <b>300</b> is pressurized, sheets <b>321</b> and <b>322</b> are placed in tension and extend across the interior cavity, thereby preventing chamber <b>300</b> from expanding outward or otherwise distending due to the pressure of the fluid.</p>
+      <p id="p-00097-en" num="0097">Any of the manufacturing processes, materials, fluids, fluid pressures, and other features of barrier <b>40</b> discussed above may also be utilized for barrier <b>310</b>. In order to prevent peripheral areas of sheets <b>321</b> and <b>322</b> from being bonded to barrier <b>210</b>, a blocker material may be utilized. More particularly, a material that inhibits bonding between the peripheral areas of sheets <b>321</b> and <b>322</b> and barrier <b>310</b> may be utilized to ensure that sheets <b>321</b> and <b>322</b> remain free to extend across the interior cavity.</p>
+      <p id="p-00098-en" num="0098">Although the structure of chamber <b>300</b> discussed above and depicted in the figures provides a suitable example of a configuration that may be utilized in footwear <b>10</b>, a variety of other configurations may also be utilized. Referring to <figref>FIG. 30A</figref>, the peripheral areas of sheets <b>321</b> and <b>322</b> are bonded to barrier <b>310</b>, whereas the central areas of sheets <b>321</b> and <b>322</b> are bonded to each other. By modifying the diameters or other dimensions of sheets <b>321</b> and <b>322</b>, various contours may be imparted to chamber <b>200</b>. For example, <figref>FIG. 30B</figref> depicts chamber <b>300</b> as having a tapered configuration, but a central depression or other contour may also be formed by selectively varying the dimensions of sheets <b>321</b> and <b>322</b>.</p>
+      <p id="p-00099-en" num="0099">Fifth Chamber Configuration</p>
+      <p id="p-00100-en" num="0100">
+        <figref>FIG. 31</figref> shows a fifth chamber <b>400</b> that may be used in the article of footwear <b>10</b>. The chamber <b>400</b> has a barrier <b>402</b> formed from a polymer material. For example, the barrier <b>402</b> may be formed from a first polymer sheet <b>404</b> and a second polymer sheet <b>406</b> bonded to one another at a peripheral bond <b>408</b>. The chamber <b>400</b> may be formed as described with respect to chamber <b>33</b>, and the polymer material from which the chamber <b>400</b> is formed may be any of the materials described with respect to chamber <b>33</b>, such as a gas barrier polymer capable of retaining a pressurized gas such as air or nitrogen, as discussed with respect to chamber <b>33</b>.</p>
+      <p id="p-00101-en" num="0101">For example, the first and second polymer sheets <b>404</b>, <b>406</b> are bonded to one another at the peripheral bond <b>408</b> to form at least one interior cavity <b>410</b>A. In the embodiment of <figref>FIG. 32</figref>, the first polymer sheet <b>404</b> and the second polymer sheet <b>406</b> are also bonded to one another at several intermediate locations <b>409</b>, referred to as webbing, surrounded by the peripheral bond <b>408</b>. The additional bonding at locations <b>409</b> causes the first and second polymer sheets <b>404</b>, <b>406</b> to form and define multiple interior cavities, such as the interior cavities <b>410</b>A, <b>410</b>B, <b>410</b>C, <b>410</b>D, <b>410</b>E, <b>410</b>F, and <b>410</b>G. For purposes of discussion, interior cavity <b>410</b>A is referred to as a first interior cavity, and interior cavity <b>410</b>B is referred to as a second interior cavity. The interior cavities are also referred to as pods, and the barrier <b>402</b> is referred to as podular. In other embodiments, the first polymer sheet <b>404</b> may be bonded to the second polymer sheet <b>406</b> only at the peripheral bond <b>408</b> so that only a single, large interior cavity is formed. The first and second sheets <b>404</b>, <b>406</b> may be shaped and bonded to one another in a thermoforming mold assembly. The second sheet <b>406</b> is molded to have stiffening ribs <b>413</b> in the midfoot region <b>12</b>.</p>
+      <p id="p-00102-en" num="0102">As shown in <figref>FIG. 31</figref>, the first and second polymer sheets <b>404</b>, <b>406</b> also form channels <b>411</b> between various adjacent ones of the interior cavities <b>410</b>A, <b>410</b>B, <b>410</b>C, <b>410</b>D, <b>410</b>E, <b>410</b>F, and <b>410</b>G so that the interior cavities <b>410</b>A, <b>410</b>B, <b>410</b>C, <b>410</b>D, <b>410</b>E, <b>410</b>F, and <b>410</b>G are fluidly interconnected, and may be filled with fluid through a common port between the sheets <b>404</b>, <b>406</b>, which is then plugged. Alternatively, one or more of the various interior cavities <b>410</b>A, <b>410</b>B, <b>410</b>C, <b>410</b>D, <b>410</b>E, <b>410</b>F, and <b>410</b>G can be isolated from the remaining interior cavities so that different fluid pressures can be maintained within the various interior cavities <b>410</b>A, <b>410</b>B, <b>410</b>C, <b>410</b>D, <b>410</b>E, <b>410</b>F, and <b>410</b>G.</p>
+      <p id="p-00103-en" num="0103">As shown in <figref>FIG. 33</figref>, the first polymer sheet <b>404</b> includes a first portion or upper barrier portion <b>412</b>. The second polymer sheet <b>406</b> includes a second portion or lower barrier portion <b>414</b>, as well as a sidewall barrier portion <b>416</b>. The first barrier portion <b>412</b> forms a first surface of the barrier <b>402</b>, which is an inner surface <b>418</b> of the first polymer sheet <b>404</b>. The second barrier portion <b>414</b> forms a second surface of the barrier <b>402</b> opposite to the inner surface <b>418</b>. The second surface is an inner surface <b>420</b> of the second polymer sheet <b>406</b>. As discussed, portions of the inner surfaces <b>418</b>, <b>420</b> are bonded to one another at the web <b>409</b>.</p>
+      <p id="p-00104-en" num="0104">Different tethers of different configurations can be in the at least one of the interior cavities, operatively connecting the first portion to the second portion, and providing different compression characteristics to the chamber <b>400</b> at different areas of the chamber <b>400</b>. Various tether elements are within the interior cavities and operatively connect the inner surface <b>418</b> to the inner surface <b>420</b>. For example, with reference to <figref>FIGS. 31 and 32</figref>, a first tether element <b>450</b>A is positioned in the first interior cavity <b>410</b>A, a second tether element <b>450</b>B is positioned in the second interior cavity <b>410</b>B, and additional tether elements <b>450</b>C, <b>450</b>D, <b>450</b>E, <b>450</b>F, and <b>450</b>G are positioned in interior cavities <b>410</b>C, <b>410</b>D, <b>410</b>E, <b>410</b>F, and <b>410</b>G, respectively. The tether elements <b>450</b>A, <b>450</b>B, <b>450</b>C, <b>450</b>D, <b>450</b>E, <b>450</b>F, <b>450</b>G may be configured as described with respect to tether element <b>50</b> discussed herein. For example, as shown in <figref>FIG. 33</figref>, the first tether element <b>450</b>A includes a first plate <b>451</b>A secured to the inner surface <b>418</b> of the first portion <b>412</b>, and a second plate <b>452</b>A secured to the inner surface <b>420</b> of the second portion <b>414</b>. The plates <b>451</b>A, <b>452</b>A can be a thermoplastic material that thermally bonds to the first and second polymer sheets <b>404</b>, <b>406</b> during thermoforming of the polymer sheets <b>404</b>, <b>406</b>.</p>
+      <p id="p-00105-en" num="0105">A plurality of first tethers <b>453</b>A having a first configuration are secured to the first plate <b>451</b>A and the second plate <b>452</b>A and placed in tension between the plates <b>451</b>A, <b>452</b>A by fluid in the interior cavity <b>410</b>A. Multiple rows of tethers <b>453</b>A are present and extend across a width of the tether element <b>450</b>A. Each tether <b>453</b>A shown in the cross-section of <figref>FIG. 32</figref> is in a different one of the rows. The tethers <b>453</b>A may be a variety of configurations, such as described with respect to tethers in <figref>FIGS. 1-30C</figref>, including single strands secured at each end to plates <b>451</b>A, <b>452</b>A, or repeatedly passing through one or both plates <b>451</b>A, <b>452</b>A. The tethers <b>453</b>A therefore operatively connect the first portion <b>412</b> of the barrier <b>402</b> to the second portion <b>414</b> of the barrier <b>402</b> at a first area A<b>1</b> of the chamber <b>400</b>. The first area A<b>1</b> is generally the area of the barrier <b>402</b> above and below the tether element <b>450</b>A in <figref>FIG. 32</figref>, and is represented by the area of the second plate <b>452</b>A shown in <figref>FIG. 31</figref>.</p>
+      <p id="p-00106-en" num="0106">The second tether element <b>450</b>B includes a plurality of second tethers <b>453</b>B having a second configuration that are secured to a third plate <b>451</b>B and the fourth plate <b>452</b>B and placed in tension between the plates <b>451</b>B, <b>452</b>B by fluid in the interior cavity <b>410</b>B. Multiple rows of tethers <b>453</b>B are present, and each tether <b>453</b>B shown represents a single row. The third plate <b>451</b>B is secured to the inner surface <b>418</b> of the first polymer sheet <b>404</b> in the second interior cavity <b>410</b>B, and the fourth plate <b>452</b>B is secured to the inner surface <b>420</b> of the second polymer sheet <b>406</b> in the second interior cavity <b>410</b>B. The tethers <b>453</b>B may be a variety of configurations, such as described with respect to tethers <b>53</b> in <figref>FIGS. 8A-9D</figref>, including single strands secured at each end to plates <b>451</b>B, <b>452</b>B, or repeatedly passing through one or both plates <b>451</b>B, <b>452</b>B. The tethers <b>453</b>B therefore operatively connect the first portion <b>412</b> of the barrier <b>402</b> to the second portion <b>414</b> of the barrier <b>402</b> at a second area A<b>2</b> of the chamber <b>400</b> via the plates <b>451</b>B, <b>452</b>B. The second area A<b>2</b> is generally the area of the barrier <b>402</b> above and below the tether element <b>450</b>B in <figref>FIG. 32</figref>, and is represented by the area of the third plate <b>452</b>B in <figref>FIG. 31</figref>.</p>
+      <p id="p-00107-en" num="0107">As shown in <figref>FIG. 31</figref>, the first area A<b>1</b> of the first tether element <b>450</b>A is in the heel region <b>13</b> of the chamber <b>400</b>, and the second area A<b>2</b> of the second tether element <b>450</b>B is in the forefoot region <b>11</b> of the chamber <b>400</b>. Although the first and second tethers <b>453</b>A, <b>453</b>B are shown and described with respect to separate tether elements <b>450</b>A, <b>450</b>B in separate interior cavities <b>410</b>A, <b>410</b>B, the differently configured first and second tethers <b>453</b>A, <b>453</b>B could instead be within the same tether element, i.e., attached between the same two plates, such as is shown and described with respect to the embodiments of <figref>FIGS. 34-37</figref>.</p>
+      <p id="p-00108-en" num="0108">The first configuration of the first plurality of tethers <b>453</b>A imparts a first compression characteristic to the chamber <b>400</b> at the first area A<b>1</b>, and the second configuration of the second plurality of tethers <b>453</b>B imparts a second compression characteristic different than the first compression characteristic to the chamber <b>400</b> at the second area A<b>2</b>. For example, as shown in <figref>FIG. 32</figref>, the tethers <b>453</b>A are longer than the tethers <b>453</b>B, enabling the first polymer sheet <b>404</b> to be spaced further from the second polymer sheet <b>406</b> in the interior cavity <b>410</b>A than in the interior cavity <b>410</b>B under pressure from the fluid in the interior cavity <b>410</b>A. Depression of the chamber <b>400</b> under loading may be greater in the heel region <b>13</b> than in the forefoot region <b>11</b> and the greater lengths of the tethers <b>453</b>A may provide greater cushioning in the heel region <b>13</b>. Pluralities of tethers <b>453</b>C and <b>453</b>D within the interior cavities <b>410</b>C and <b>410</b>D in the forefoot portion <b>11</b> and midfoot portion <b>12</b>, respectively, have lengths greater than tethers <b>453</b>B and less than tethers <b>453</b>A. The lengths of the tethers of the tether elements <b>450</b>B, <b>450</b>C, <b>450</b>D, <b>450</b>A in the chamber <b>400</b> thus increase from the forefoot region <b>11</b> to the heel region <b>13</b>. Additionally or alternatively, the tethers <b>453</b>A could be thicker or thinner than tethers <b>453</b>B, or could be a different material than the tethers <b>453</b>B, imparting different compression characteristics to the chamber <b>400</b> at the first area A<b>1</b> than at the second area A<b>2</b>. The tethers <b>453</b>A could be spaced more densely relative to one another than the tethers <b>453</b>B, or tethers <b>453</b>B could be spaced more densely relative to one another than the tethers <b>453</b>A, within the same row of tethers, or adjacent rows could be spaced more densely to impart different compression characteristics.</p>
+      <p id="p-00109-en" num="0109">Sixth Chamber Configuration</p>
+      <p id="p-00110-en" num="0110">
+        <figref>FIGS. 34 and 35</figref> show a sixth chamber <b>500</b> with multiple interior cavities containing different tether elements, at least some of which have different pluralities of tethers having different configurations in the same tether element. For example, a first plurality of tethers <b>553</b>A with a first configuration is bordered by and may be partially or completely surrounded by a second plurality of tethers <b>553</b>AA with a second configuration in the same tether element <b>550</b>A. The chamber <b>500</b> has a barrier <b>502</b> formed from a polymer material. For example, the barrier <b>502</b> may be formed from a first polymer sheet <b>504</b> and a second polymer sheet <b>506</b> bonded to one another at a peripheral bond <b>508</b>. The chamber <b>500</b> may be formed as described with respect to chamber <b>33</b>, and the polymer material from which the chamber <b>500</b> is formed may be any of the materials described with respect to chamber <b>33</b>, such as a gas barrier polymer capable of retaining a pressurized gas such as air or nitrogen, as discussed with respect to chamber <b>33</b>.</p>
+      <p id="p-00111-en" num="0111">For example, the first and second polymer sheets <b>504</b>, <b>506</b> are bonded to one another at the peripheral bond <b>508</b> to form at least one interior cavity <b>510</b>A. In the embodiment of <figref>FIG. 34</figref>, the first polymer sheet <b>504</b> and the second polymer sheet <b>506</b> are also bonded to one another at several intermediate locations <b>509</b>, referred to as webbing, surrounded by the peripheral bond <b>508</b>. The additional bonding at locations <b>509</b> causes the first and second polymer sheets <b>504</b>, <b>506</b> to form and define multiple interior cavities, such as the interior cavities <b>510</b>A, <b>510</b>B, and <b>510</b>C. For purposes of discussion, interior cavity <b>510</b>A is referred to as a first interior cavity, and interior cavity <b>510</b>B is referred to as a second interior cavity. The interior cavities are also referred to as pods, and the barrier <b>502</b> is referred to as podular. In other embodiments, the first polymer sheet <b>504</b> may be bonded to the second polymer sheet <b>506</b> only at the peripheral bond <b>508</b> so that only a single, large interior cavity is formed. The first and second sheets <b>504</b>, <b>506</b> may be shaped and bonded to one another in a thermoforming mold assembly.</p>
+      <p id="p-00112-en" num="0112">As shown in <figref>FIG. 34</figref>, the first and second polymer sheets <b>504</b>, <b>506</b> also form channels <b>511</b> between various adjacent ones of the interior cavities <b>510</b>A, <b>510</b>B, and <b>510</b>C so that the interior cavities <b>510</b>A, <b>510</b>B, and <b>510</b>C are fluidly interconnected, and may be filled with fluid through a common port between the sheets <b>504</b>, <b>506</b>, which is then plugged. Alternatively, one or more of the various interior cavities <b>510</b>A, <b>510</b>B, and <b>510</b>C can be isolated from the remaining interior cavities so that different fluid pressures can be maintained within the various interior cavities <b>510</b>A, <b>510</b>B, and <b>510</b>C.</p>
+      <p id="p-00113-en" num="0113">As shown in <figref>FIG. 35</figref>, the first polymer sheet <b>504</b> includes a first portion or upper barrier portion <b>512</b>. The second polymer sheet <b>506</b> includes a second portion or lower barrier portion <b>514</b>A, as well as a sidewall barrier portion <b>516</b>. The first barrier portion <b>512</b> forms a first surface of the barrier <b>502</b>, which is an inner surface <b>518</b> of the first polymer sheet <b>504</b>. The second barrier portion <b>514</b> forms a second surface of the barrier <b>502</b> opposite to the inner surface <b>518</b>. The second surface is an inner surface <b>520</b> of the second polymer sheet <b>506</b>. As discussed, portions of the inner surfaces <b>518</b>, <b>520</b> are bonded to one another at the web <b>509</b>.</p>
+      <p id="p-00114-en" num="0114">Different tethers of different configurations can be in the at least one interior cavity <b>510</b>A, operatively connecting the first portion <b>512</b> to the second portion <b>514</b>, and providing different compression characteristics to the chamber <b>500</b> at different areas of the chamber <b>500</b>. Various tether elements are within the interior cavities and operatively connect the inner surface <b>518</b> to the inner surface <b>520</b>. For example, with reference to <figref>FIG. 35</figref>, a first tether element <b>550</b>A is positioned in the first interior cavity <b>510</b>A, a second tether element <b>550</b>B is positioned in the second interior cavity <b>510</b>B, and an additional tether element <b>550</b>C is positioned in interior cavity <b>510</b>C. The tether elements <b>550</b>A, <b>550</b>B, <b>550</b>C may be configured as described with respect to tether element <b>50</b> discussed herein. For example, as shown in <figref>FIG. 35</figref>, the first tether element <b>550</b>A includes a first plate <b>551</b>A secured to the inner surface <b>518</b> of the first portion <b>512</b>, and a second plate <b>552</b>A secured to the inner surface <b>520</b> of the second portion <b>514</b>. The plates <b>551</b>A, <b>552</b>A can be a thermoplastic material that thermally bonds to the first and second polymer sheets <b>504</b>, <b>506</b> during thermoforming of the polymer sheets <b>504</b>, <b>506</b>.</p>
+      <p id="p-00115-en" num="0115">A plurality of first tethers <b>553</b>A having a first configuration are secured to the first plate <b>551</b>A and the second plate <b>552</b>A and placed in tension between the plates <b>551</b>A, <b>552</b>A by fluid in the interior cavity <b>510</b>A. The tethers <b>553</b>A may be a variety of configurations, such as described with respect to tethers <b>53</b> in <figref>FIGS. 8A-9D</figref>, including single strands secured at each end to plates <b>551</b>A, <b>552</b>A, or repeatedly passing through one or both plates <b>551</b>A, <b>552</b>A. The tethers <b>553</b>A therefore operatively connect the first portion <b>512</b> of the barrier <b>502</b> to the second portion <b>514</b> of the barrier <b>502</b> at a first area A<b>11</b> of the chamber <b>500</b>. The first area A<b>11</b> is generally the area of the barrier <b>502</b> above and below the tethers <b>553</b>A in <figref>FIG. 35</figref>, and can be represented by the area within the phantom line <b>570</b>A in <figref>FIG. 34</figref>.</p>
+      <p id="p-00116-en" num="0116">A plurality of second tethers <b>553</b>AA are also attached to the same first plate <b>551</b>A and second plate <b>552</b>A as the plurality of first tethers <b>553</b>A in the same first interior cavity <b>510</b>A. The second tethers <b>553</b>AA are operatively connected to the first portion <b>512</b> of the barrier <b>502</b> and to the second portion <b>514</b> of the barrier <b>502</b> at a second area of the chamber <b>500</b>. The second area is generally the area above and below the tethers <b>553</b>AA in <figref>FIG. 35</figref> and can be represented by the area A<b>21</b> between the hidden line of the boundary of the tether element <b>550</b>A and the phantom line <b>570</b>A representing the boundary of the area A<b>11</b> of the first tethers <b>553</b>A. Accordingly, the second area A<b>21</b> borders the first area A<b>11</b> and surrounds the first area A<b>11</b>. The tethers <b>553</b>A and the tethers <b>553</b>AA are both in the heel region <b>13</b> of the chamber <b>500</b>.</p>
+      <p id="p-00117-en" num="0117">The first configuration of the first plurality of tethers <b>553</b>A imparts a first compression characteristic to the chamber <b>500</b> at the first area A<b>1</b>, and the second configuration of the second plurality of tethers <b>553</b>B imparts a second compression characteristic different than the first compression characteristic to the chamber <b>500</b> at the second area A<b>21</b>. For example, as shown in <figref>FIG. 35</figref>, the tethers <b>553</b>A are less dense (i.e., spaced further from one another) than the tethers <b>553</b>AA. Depression of the chamber <b>500</b> under loading may be greater in the area A<b>11</b> than in the area A<b>21</b> due to the less dense tethers <b>553</b>A, potentially providing greater cushioning in the area A<b>11</b> of the heel region <b>13</b>. Additionally or alternatively, the tethers <b>553</b>A could be thicker or thinner than tethers <b>553</b>AA, or could be a different material than the tethers <b>553</b>AA, imparting different compression characteristics to the chamber <b>500</b> at the first area A<b>11</b> than at the second area A<b>21</b>. The tethers <b>553</b>A could be longer or shorter than the tethers <b>553</b>AA, either within the same row, or adjacent rows to impart different compression characteristics. For example, the tethers <b>553</b>A and <b>553</b>AA could be any of the tethers shown and described with respect to <figref>FIGS. 1-30C</figref>.</p>
+      <p id="p-00118-en" num="0118">The second tether element <b>550</b>B includes a plurality of tethers <b>553</b>B having a second configuration that are secured to a third plate <b>551</b>B and the fourth plate <b>552</b>B and placed in tension between the plates <b>551</b>B, <b>552</b>B by fluid in the interior cavity <b>510</b>B. The third plate <b>551</b>B is secured to the inner surface <b>518</b> of the first polymer sheet <b>504</b> in the second interior cavity <b>510</b>B, and the fourth plate <b>552</b>B is secured to the inner surface <b>520</b> of the second polymer sheet <b>506</b> in the second interior cavity <b>510</b>B. The tethers <b>553</b>B may be a variety of configurations, such as described with respect to tethers in <figref>FIGS. 1-30C</figref>, including single strands secured at each end to plates <b>551</b>B, <b>552</b>B, or repeatedly passing through one or both plates <b>551</b>B, <b>552</b>B. The tethers <b>553</b>B therefore operatively connect the first portion <b>512</b> of the barrier <b>502</b> to the second portion <b>514</b> of the barrier <b>502</b> at an area A<b>12</b> of the chamber <b>500</b> via the plates <b>551</b>B, <b>552</b>B. The area A<b>12</b> is generally the area of the barrier <b>502</b> above and below the tethers <b>553</b>B in <figref>FIG. 35</figref>, and can be partially represented by the area A<b>12</b> within the phantom boundary line <b>570</b>B in <figref>FIG. 34</figref>. Differently configured tethers <b>553</b>B are connected to the plates <b>551</b>B and <b>552</b>B generally bordering and surrounding the tethers <b>553</b>B and impart a compression characteristic to the chamber <b>500</b> at the area A<b>22</b> in <figref>FIG. 34</figref>. The tethers <b>553</b>B and the tethers <b>553</b>BB are both in the forefoot region <b>11</b> of the chamber <b>500</b>.</p>
+      <p id="p-00119-en" num="0119">The tether element <b>550</b>C includes a plurality of tethers <b>553</b>C that are secured to a plate <b>551</b>C and a plate <b>552</b>C and placed in tension between the plates <b>551</b>C, <b>552</b>C by fluid in the interior cavity <b>510</b>C. The plate <b>551</b>C is secured to the inner surface <b>518</b> of the first polymer sheet <b>504</b> in the interior cavity <b>510</b>C, and the plate <b>552</b>C is secured to the inner surface <b>520</b> of the second polymer sheet <b>506</b> in the second interior cavity <b>510</b>C. The tethers <b>553</b>C may be a variety of configurations, such as described with respect to tethers <b>53</b> in <figref>FIGS. 1-30C</figref>, including single strands secured at each end to plates <b>551</b>C, <b>552</b>C, or repeatedly passing through one or both plates <b>551</b>C, <b>552</b>C. The tethers <b>553</b>C therefore operatively connect the first portion <b>512</b> of the barrier <b>502</b> to the second portion <b>514</b> of the barrier <b>502</b> at an area A<b>13</b> of the chamber <b>500</b> via the plates <b>551</b>C, <b>552</b>C. The area A<b>13</b> is generally the area of the barrier <b>502</b> above and below the tethers <b>553</b>C in <figref>FIG. 35</figref>, and can be partially represented by the area A<b>13</b> within the phantom boundary lines <b>570</b>C and <b>570</b>D in <figref>FIG. 34</figref>. Differently configured tethers <b>553</b>CC are connected to the plates <b>551</b>C and <b>552</b>C generally bordering and surrounding the tethers <b>553</b>C and impart a compression characteristic to the chamber <b>500</b> at the area A<b>23</b> in <figref>FIG. 34</figref>. The area A<b>23</b> surrounds area A<b>13</b>. The area A<b>13</b> is split into two sub-areas by the surrounding area A<b>23</b>. The tethers <b>553</b>C and the tethers <b>553</b>CC are both in the midfoot region <b>12</b> of the chamber <b>500</b>.</p>
+      <p id="p-00120-en" num="0120">Seventh Chamber Configuration</p>
+      <p id="p-00121-en" num="0121">
+        <figref>FIG. 36</figref> shows a chamber <b>600</b> configured similarly to chamber <b>500</b> except with an additional interior cavity. The chamber <b>600</b> is formed from first and second polymer sheets having multiple interior cavities <b>610</b>A, <b>610</b>B, <b>610</b>C, <b>610</b>D fluidly connected with one another by channels <b>611</b>, as described with respect to chamber <b>500</b>, and has tether elements <b>650</b>A, <b>650</b>B, <b>650</b>C, and <b>650</b>D within the interior cavities. The tether elements <b>650</b>A, <b>650</b>B, and <b>650</b>C are configured similarly to tether elements <b>550</b>A, <b>550</b>B, and <b>550</b>C, respectively, with plates secured to inner surfaces of the first and second polymer sheets, and different configuration of tethers connecting the plates. The tether elements can be any of those shown and described herein, such as in <figref>FIGS. 1-35</figref>. Accordingly, a phantom boundary line <b>670</b>A separates a first plurality of tethers having a first configuration from a second plurality of tethers having a second configuration in the interior cavity <b>610</b>A. Different compression characteristics are provided at the different areas. A phantom boundary line <b>670</b>B separates areas of the chamber <b>600</b> having different compression characteristics due to the different configurations of tethers in the interior cavity <b>610</b>B. Phantom boundary lines <b>670</b>C and <b>670</b>D separate different configurations of tethers in the interior cavity <b>610</b>C. Tether element <b>650</b>D includes first and second plates connected by tethers that may all be of a first configuration.</p>
+      <p id="p-00122-en" num="0122">Eighth Chamber Configuration</p>
+      <p id="p-00123-en" num="0123">
+        <figref>FIG. 37</figref> shows a chamber <b>700</b> configured with only two interior cavities, including chamber <b>710</b>A which extends over the forefoot region <b>11</b>, the midfoot region <b>12</b>, and the heel region <b>13</b>. The chamber <b>700</b> is formed from first and second polymer sheets having multiple interior cavities <b>710</b>A and <b>710</b>B fluidly connected with one another by a channel <b>711</b>, as described with respect to chamber <b>500</b>, and has tether elements <b>750</b>A and <b>750</b>B within the interior cavities <b>710</b>A, <b>710</b>B. The interior cavity <b>710</b>A extends from and is in the forefoot region <b>11</b> to the heel region <b>13</b> and is in the forefoot region <b>11</b>, the midfoot region <b>12</b>, and the heel region <b>13</b>. The tether elements <b>750</b>A and <b>750</b>B are configured similarly to tether elements <b>550</b>A and <b>550</b>B, with plates secured to inner surfaces of the first and second polymer sheets, and different configuration of tethers connecting the plates. Accordingly, a phantom boundary line <b>770</b>A separates a first plurality of tethers having a first configuration from a second plurality of tethers having a second configuration in the interior cavity <b>710</b>A. The second plurality of tethers is in the area between the boundary of the tether element <b>750</b>A and the phantom boundary lines <b>770</b>A, <b>770</b>A<b>1</b>, <b>770</b>A<b>2</b>, and <b>770</b>A<b>3</b>. Boundary lines <b>770</b>A<b>1</b>, <b>770</b>A<b>2</b>, and <b>770</b>A<b>3</b> separate additional pluralities of tethers, which may be of the same or of different configurations from the first plurality of tethers, from the second plurality of tethers that surround each of the plurality of tethers within the boundary lines <b>770</b>A, <b>770</b>A<b>1</b>, <b>770</b>A<b>2</b>, and <b>770</b>A<b>3</b>. The tether elements can be any of those shown and described herein, such as in <figref>FIGS. 1-35</figref>.</p>
+      <p id="p-00124-en" num="0124">In the interior cavity <b>710</b>B, the tether element <b>750</b>B has configurations of tethers connected to first and second plates and operatively connecting the first and second polymer sheets and within the boundary lines <b>770</b>B<b>1</b> and <b>770</b>B<b>2</b>. A plurality of tethers of a different configuration is in the area between the boundary of the tether element <b>750</b>B and the phantom boundary lines <b>770</b>B <b>1</b> and <b>770</b>B<b>2</b>.</p>
+      <heading id="h-00006-en" level="1">CONCLUSION</heading>
+      <p id="p-00125-en" num="0125">The above discussion and various figures disclose a variety of fluid-filled chambers that may be utilized in footwear <b>10</b> or other articles of footwear, as well as a variety of other products (e.g., backpack straps, mats for yoga, seat cushions, and protective apparel). Although many of the concepts regarding the barriers and tensile elements are discussed individually, fluid-filled chambers may gain advantages from combinations of these concepts. That is, various types of tether elements may be utilized in a single chamber to provide different properties to different areas of the chamber. For example, <figref>FIG. 30C</figref> depicts a configuration wherein chamber <b>300</b> includes each of tensile elements <b>60</b>, <b>120</b>, <b>220</b>, and <b>320</b>, as well as fluid-filled member <b>55</b>, foam member <b>56</b>, and truss member <b>58</b>. Whereas tensile elements <b>60</b>, <b>120</b>, <b>220</b>, and <b>320</b> may have a configuration that collapses with the compression of chamber <b>300</b>, members <b>55</b>, <b>56</b>, and <b>58</b> may form more rigid structures that resist collapsing. This configuration may be utilized, therefore, to impart compressibility to one area of chamber <b>300</b>, while limiting compressibility in another area. Accordingly, various types of tensile elements may be utilized to impart different properties to a fluid-filled chamber.</p>
+      <p id="p-00126-en" num="0126">While several modes for carrying out the many aspects of the present teachings have been described in detail, those familiar with the art to which these teachings relate will recognize various alternative aspects for practicing the present teachings that are within the scope of the appended claims. It is intended that all matter contained in the above description or shown in the accompanying drawings shall be interpreted as illustrative only and not as limiting.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. An article comprising:
+<claim-text>a chamber including:
+<claim-text>a barrier formed from a polymer material and having a first portion that forms a first surface of the chamber, a second portion that forms an opposite second surface of the chamber; wherein the barrier forms at least one interior cavity between the first portion and the second portion and retains fluid in said at least one interior cavity;</claim-text><claim-text>a plurality of first tethers having a first configuration in said at least one interior cavity and operatively connecting the first portion to the second portion at a first area of the chamber;</claim-text><claim-text>a plurality of second tethers having a second configuration in said at least one interior cavity and operatively connecting the first portion to the second portion at a second area of the chamber; and</claim-text><claim-text>wherein the first configuration of the first plurality of tethers imparts a first compression characteristic to the chamber at the first area, and the second configuration of the second plurality of tethers imparts a second compression characteristic different than the first compression characteristic to the chamber at the second area.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The article of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the first configuration includes a first density and the second configuration includes a second density different than the first density.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The article of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the first configuration includes a first material, and the second configuration includes a second material different than the first material.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The article of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the first configuration includes a first length, and the second configuration includes a second length different than the first length.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The article of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein:
+<claim-text>the chamber comprises a first polymer sheet including the first portion of the barrier and a second polymer sheet including the second portion of the barrier;</claim-text><claim-text>the first polymer sheet and the second polymer sheet are bonded to one another so that the at least one interior cavity includes a first interior cavity and a second interior cavity; and</claim-text><claim-text>the plurality of first tethers is in the first interior cavity and the plurality of second tethers is in the second interior cavity.</claim-text></claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The article of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein:
+<claim-text>the article is an article of footwear having a heel region, a midfoot region, and a forefoot region; and</claim-text><claim-text>the first interior cavity is in one of the heel region, the midfoot region, and the forefoot region, and the second interior cavity is in any other one of the heel region, the midfoot region, and the forefoot region.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The article of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein:
+<claim-text>the article is an article of footwear having a heel region, a midfoot region, and a forefoot region;</claim-text><claim-text>the chamber comprises a first polymer sheet including the first portion of the barrier and a second polymer sheet including the second portion of the barrier;</claim-text><claim-text>the first polymer sheet and the second polymer sheet are bonded to one another so that the at least one interior cavity includes a first interior cavity and a second interior cavity;</claim-text><claim-text>the first interior cavity is in each of the heel region, the midfoot region, and the forefoot region, and the second interior cavity is in at least one of the heel region, the midfoot region, and the forefoot region; and</claim-text><claim-text>the plurality of first tethers is in the first interior cavity and the plurality of second tethers is in the second interior cavity.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The article of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the second area borders the first area.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The article of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the second area at least partially surrounds the first area.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The article of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein:
+<claim-text>the article is an article of footwear having a heel region, a midfoot region, and a forefoot region;</claim-text><claim-text>the chamber comprises a first polymer sheet including the first portion of the barrier and a second polymer sheet including the second portion of the barrier;</claim-text><claim-text>the first polymer sheet and the second polymer sheet are bonded to one another so that the at least one interior cavity includes a first interior cavity and a second interior cavity;</claim-text><claim-text>the first interior cavity is in at least one of the heel region, the midfoot region, and the forefoot region, and the second interior cavity is in at least one of the heel region, the midfoot region, and the forefoot region; and</claim-text><claim-text>the plurality of first tethers and the plurality of second tethers are both in the first interior cavity or are both in the second interior cavity.</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The article of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein:
+<claim-text>the article is an article of footwear having a heel region, a midfoot region, and a forefoot region;</claim-text><claim-text>the chamber comprises a first polymer sheet including the first portion of the barrier and a second polymer sheet including the second portion of the barrier;</claim-text><claim-text>the first polymer sheet and the second polymer sheet are bonded to one another so that the at least one interior cavity includes a first interior cavity and a second interior cavity;</claim-text><claim-text>the first interior cavity is in each of the heel region, the midfoot region, and the forefoot region, and the second interior cavity is in any one of the heel region, the midfoot region, and the forefoot region; and</claim-text><claim-text>the plurality of first tethers and the plurality of second tethers are both in the first interior cavity or are both in the second interior cavity.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The article of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the chamber includes:
+<claim-text>a first plate secured to an inner surface of the first portion;</claim-text><claim-text>a second plate secured to an inner surface of the second portion; and</claim-text><claim-text>wherein the plurality of first tethers is joined to the first plate and to the second plate.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The article of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the plurality of second tethers is joined to the first plate and to the second plate.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The article of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the chamber includes:
+<claim-text>a third plate secured to the inner surface of the first portion;</claim-text><claim-text>a fourth plate secured to the inner surface of the second portion; and</claim-text><claim-text>wherein the plurality of second tethers is joined to the third plate and to the fourth plate.</claim-text></claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en" independent="true">
+      <claim-text>
+        <b>15</b>. An article comprising:
+<claim-text>a chamber including:
+<claim-text>a barrier formed from a first polymer sheet and a second polymer sheet bonded to one another to form a first interior cavity and a second interior cavity; wherein the first and second interior cavities are filled with fluid retained by the barrier;</claim-text><claim-text>a first tether element in the first interior cavity operatively connecting the first polymer sheet to the second polymer sheet; and</claim-text><claim-text>a second tether element in the second interior cavity operatively connecting the first polymer sheet to the second polymer sheet.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The article of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein:
+<claim-text>the first tether element includes:
+<claim-text>a first plate secured to an inner surface of the first polymer sheet;</claim-text><claim-text>a second plate secured to an inner surface of the second polymer sheet; and</claim-text><claim-text>a plurality of first tethers joined to the first plate and to the second plate and extending between the first plate and the second plate in the first interior cavity; and</claim-text></claim-text><claim-text>the second tether element includes:
+<claim-text>a third plate secured to the inner surface of the first polymer sheet;</claim-text><claim-text>a fourth plate secured to the inner surface of the second polymer sheet; and</claim-text><claim-text>a plurality of second tethers joined to the third plate and the fourth plate and extending between the third plate and the fourth plate in the second interior cavity.</claim-text></claim-text></claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The article of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein:
+<claim-text>the plurality of first tethers has a first configuration that imparts a first compression characteristic to the chamber at the first tether element; and</claim-text><claim-text>the plurality of second tethers has a second configuration that imparts a second compression characteristic different than the first compression characteristic to the chamber at the second tether element.</claim-text></claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The article of <claim-ref idref="clm-00015-en">claim 15</claim-ref>, wherein the first tether element includes:
+<claim-text>a plurality of first tethers having a first configuration operatively connecting the first portion to the second portion at a first area of the chamber;</claim-text><claim-text>a plurality of second tethers having a second configuration operatively connecting the first portion to the second portion at a second area of the chamber; and</claim-text><claim-text>wherein the first configuration imparts a first compression characteristic to the chamber at the first area, and the second configuration imparts a second compression characteristic different than the first compression characteristic to the chamber at the second area.</claim-text></claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The article of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein the second area borders and at least partially surrounds the first area.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The article of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein:
+<claim-text>the article is an article of footwear having a heel region, a midfoot region, and a forefoot region; and</claim-text><claim-text>the first interior cavity is in at least one different one of the heel region, the midfoot region, and the forefoot region than the second interior cavity. </claim-text></claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00013.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00014.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00015.TIF" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00017.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00016.TIF" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00018.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00017.TIF" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00019.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00018.TIF" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00020.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00019.TIF" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00021.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00020.TIF" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00022.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00021.TIF" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00023.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00022.TIF" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00024.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00023.TIF" />
+    </figure>
+    <figure num="25">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00025.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00024.TIF" />
+    </figure>
+    <figure num="26">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00026.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00025.TIF" />
+    </figure>
+    <figure num="27">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00027.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00026.TIF" />
+    </figure>
+    <figure num="28">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00028.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00027.TIF" />
+    </figure>
+    <figure num="29">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00029.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00028.TIF" />
+    </figure>
+    <figure num="30">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00030.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00029.TIF" />
+    </figure>
+    <figure num="31">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00031.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00030.TIF" />
+    </figure>
+    <figure num="32">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00032.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00031.TIF" />
+    </figure>
+    <figure num="33">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00033.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00032.TIF" />
+    </figure>
+    <figure num="34">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00034.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00033.TIF" />
+    </figure>
+    <figure num="35">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00035.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00034.TIF" />
+    </figure>
+    <figure num="36">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00036.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00035.TIF" />
+    </figure>
+    <figure num="37">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00037.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00036.TIF" />
+    </figure>
+    <figure num="38">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00038.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00037.TIF" />
+    </figure>
+    <figure num="39">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00039.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00038.TIF" />
+    </figure>
+    <figure num="40">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00040.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00039.TIF" />
+    </figure>
+    <figure num="41">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00041.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00040.TIF" />
+    </figure>
+    <figure num="42">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00042.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00041.TIF" />
+    </figure>
+    <figure num="43">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00043.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00042.TIF" />
+    </figure>
+    <figure num="44">
+      <img he="N/A" wi="N/A" file="US20150257483A1_00044.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150257483A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150257483A1.PDF" type="pdf" size="2180734" pages="57" />
+</lexisnexis-patent-document>

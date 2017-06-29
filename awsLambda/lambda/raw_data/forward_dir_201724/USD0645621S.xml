@@ -1,0 +1,1059 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2017 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20170531" file="USD0645621S.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20110920" time-inserted="040801" date-changed="20170531" time-changed="105528">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Grant" publ-desc="Design patent">
+      <document-id id="99921390">
+        <country>US</country>
+        <doc-number>D0645621</doc-number>
+        <kind>S</kind>
+        <date>20110920</date>
+      </document-id>
+      <document-id data-format="original">
+        <doc-number>~D645621</doc-number>
+        <kind>S</kind>
+      </document-id>
+      <document-id data-format="docdb" id="337124269">
+        <doc-number>D645621</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>USD645621S</doc-number>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="design">
+      <document-id id="59150003">
+        <country>US</country>
+        <doc-number>29389528</doc-number>
+        <kind>F</kind>
+        <date>20110413</date>
+      </document-id>
+      <document-id data-format="original">
+        <doc-number>29389528</doc-number>
+      </document-id>
+      <document-id data-format="docdb" id="337008589">
+        <doc-number>201129389528</doc-number>
+      </document-id>
+      <document-id data-format="epodoc">
+        <doc-number>US201129389528F</doc-number>
+      </document-id>
+    </application-reference>
+    <application-series-code>29</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20110920">
+      <priority-claim sequence="1" kind="regional">
+        <country>EM</country>
+        <doc-number>000918362</doc-number>
+        <date>20080408</date>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="docdb">
+        <country>US</country>
+        <doc-number>201129389528</doc-number>
+        <date>20110413</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="docdb">
+        <country>EM</country>
+        <doc-number>09183620000</doc-number>
+        <date>20080408</date>
+        <priority-active-indicator>true</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="docdb">
+        <country>US</country>
+        <doc-number>37880010</doc-number>
+        <date>20101110</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="4" data-format="docdb">
+        <country>US</country>
+        <doc-number>36074310</doc-number>
+        <date>20100430</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="5" data-format="docdb">
+        <country>US</country>
+        <doc-number>31222708</doc-number>
+        <date>20081007</date>
+        <priority-active-indicator>false</priority-active-indicator>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="original">
+        <doc-number>000918362</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="original">
+        <doc-number>29378800</doc-number>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="original">
+        <doc-number>29360743</doc-number>
+      </priority-claim>
+      <priority-claim sequence="4" data-format="original">
+        <doc-number>29312227</doc-number>
+      </priority-claim>
+      <priority-claim sequence="1" data-format="epodoc">
+        <doc-number>US201129389528F</doc-number>
+      </priority-claim>
+      <priority-claim sequence="2" data-format="epodoc">
+        <doc-number>EM200091836200F</doc-number>
+      </priority-claim>
+      <priority-claim sequence="3" data-format="epodoc">
+        <doc-number>US20100378800F</doc-number>
+      </priority-claim>
+      <priority-claim sequence="4" data-format="epodoc">
+        <doc-number>US20100360743F</doc-number>
+      </priority-claim>
+      <priority-claim sequence="5" data-format="epodoc">
+        <doc-number>US20080312227F</doc-number>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20110929">
+      <printed-with-grant>
+        <date>20110920</date>
+      </printed-with-grant>
+    </dates-of-public-availability>
+    <term-of-grant>
+      <length-of-grant>14</length-of-grant>
+    </term-of-grant>
+    <classification-locarno date-changed="20110929">
+      <edition>9</edition>
+      <main-classification>
+        <text>15/05</text>
+        <class>15</class>
+        <subclass>05</subclass>
+      </main-classification>
+    </classification-locarno>
+    <classification-national date-changed="20110929">
+      <country>US</country>
+      <main-classification>
+        <text>D32/3</text>
+        <class>D32</class>
+        <subclass>3</subclass>
+      </main-classification>
+    </classification-national>
+    <field-of-search date-changed="20110920">
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>D32/1-3</text>
+          <class>D32</class>
+          <subclass>1-3</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>D32/25</text>
+          <class>D32</class>
+          <subclass>25</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>D32/28</text>
+          <class>D32</class>
+          <subclass>28</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>D07/340</text>
+          <class>D07</class>
+          <subclass>340</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>D07/348-361</text>
+          <class>D07</class>
+          <subclass>348-361</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>D07/404</text>
+          <class>D07</class>
+          <subclass>404</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>68/212</text>
+          <class>68</class>
+          <subclass>212</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>312/31</text>
+          <class>312</class>
+          <subclass>31</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>134/56.D</text>
+          <class>134</class>
+          <subclass>56.D</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>134/57.D</text>
+          <class>134</class>
+          <subclass>57.D</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>134/58.D</text>
+          <class>134</class>
+          <subclass>58.D</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>134/58.DL</text>
+          <class>134</class>
+          <subclass>58.DL</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>134/113</text>
+          <class>134</class>
+          <subclass>113</subclass>
+        </main-classification>
+      </classification-national>
+      <classification-national>
+        <country>US</country>
+        <main-classification>
+          <text>134/201</text>
+          <class>134</class>
+          <subclass>201</subclass>
+        </main-classification>
+      </classification-national>
+    </field-of-search>
+    <number-of-claims>1</number-of-claims>
+    <exemplary-claim>1</exemplary-claim>
+    <invention-title id="title_eng" date-changed="20110920" lang="eng" format="original">Dishwasher panel</invention-title>
+    <references-cited date-changed="20170103">
+      <patent-citations name="patcit" date-changed="20110920" />
+      <forward-citations name="fwdcit" date-changed="20170103" />
+      <citation srep-phase="e">
+        <patcit num="1" dnum="D385069">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0385069</doc-number>
+            <kind>S</kind>
+            <name>Hughes et al.</name>
+            <date>19971014</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>D385069</doc-number>
+          </document-id>
+          <application-date>
+            <date>19960709</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="2" dnum="D493583">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0493583</doc-number>
+            <kind>S</kind>
+            <name>Kaczmarek</name>
+            <date>20040727</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>D493583</doc-number>
+          </document-id>
+          <application-date>
+            <date>20030604</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="3" dnum="D495104">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0495104</doc-number>
+            <kind>S</kind>
+            <name>Kaczmarek</name>
+            <date>20040824</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>D495104</doc-number>
+          </document-id>
+          <application-date>
+            <date>20030604</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="4" dnum="D511031">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0511031</doc-number>
+            <kind>S</kind>
+            <name>Ott et al.</name>
+            <date>20051025</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>D511031</doc-number>
+          </document-id>
+          <application-date>
+            <date>20030528</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="5" dnum="D530048">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0530048</doc-number>
+            <kind>S</kind>
+            <name>Knochner</name>
+            <date>20061010</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>D530048</doc-number>
+          </document-id>
+          <application-date>
+            <date>20060215</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="6" dnum="D530460">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0530460</doc-number>
+            <kind>S</kind>
+            <name>Knochner</name>
+            <date>20061017</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>D530460</doc-number>
+          </document-id>
+          <application-date>
+            <date>20060215</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="7" dnum="D533691">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0533691</doc-number>
+            <kind>S</kind>
+            <name>Knochner</name>
+            <date>20061212</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>D533691</doc-number>
+          </document-id>
+          <application-date>
+            <date>20050211</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="8" dnum="D539992">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0539992</doc-number>
+            <kind>S</kind>
+            <name>Yamamoto et al.</name>
+            <date>20070403</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>D539992</doc-number>
+          </document-id>
+          <application-date>
+            <date>20060822</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="9" dnum="D545009">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0545009</doc-number>
+            <kind>S</kind>
+            <name>Jung et al.</name>
+            <date>20070619</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>D545009</doc-number>
+          </document-id>
+          <application-date>
+            <date>20060914</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="10" dnum="D568563">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0568563</doc-number>
+            <kind>S</kind>
+            <name>Stephens</name>
+            <date>20080506</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>D568563</doc-number>
+          </document-id>
+          <application-date>
+            <date>20070227</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="11" dnum="D577869">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0577869</doc-number>
+            <kind>S</kind>
+            <name>Tartan et al.</name>
+            <date>20080930</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>D577869</doc-number>
+          </document-id>
+          <application-date>
+            <date>20071218</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="12" dnum="D618403">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0618403</doc-number>
+            <kind>S</kind>
+            <name>Kaczmarek</name>
+            <date>20100622</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>D618403</doc-number>
+          </document-id>
+          <application-date>
+            <date>20080910</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation srep-phase="e">
+        <patcit num="13" dnum="D618406">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0618406</doc-number>
+            <kind>S</kind>
+            <name>Ott</name>
+            <date>20100622</date>
+          </document-id>
+          <document-id data-format="original">
+            <doc-number>D618406</doc-number>
+          </document-id>
+          <application-date>
+            <date>20081219</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <fwdcit num="1">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0668404</doc-number>
+            <kind>S</kind>
+            <date>20121002</date>
+          </document-id>
+          <application-date>
+            <date>20120412</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="2">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0668109</doc-number>
+            <kind>S</kind>
+            <date>20121002</date>
+          </document-id>
+          <application-date>
+            <date>20111229</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="3">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0668110</doc-number>
+            <kind>S</kind>
+            <date>20121002</date>
+          </document-id>
+          <application-date>
+            <date>20111229</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="4">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0668111</doc-number>
+            <kind>S</kind>
+            <date>20121002</date>
+          </document-id>
+          <application-date>
+            <date>20111229</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="5">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0668112</doc-number>
+            <kind>S</kind>
+            <date>20121002</date>
+          </document-id>
+          <application-date>
+            <date>20111229</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="6">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0670457</doc-number>
+            <kind>S</kind>
+            <date>20121106</date>
+          </document-id>
+          <application-date>
+            <date>20120412</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="7">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0672101</doc-number>
+            <kind>S</kind>
+            <date>20121204</date>
+          </document-id>
+          <application-date>
+            <date>20120412</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="8">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0677023</doc-number>
+            <kind>S</kind>
+            <date>20130226</date>
+          </document-id>
+          <application-date>
+            <date>20111229</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="9">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0677024</doc-number>
+            <kind>S</kind>
+            <date>20130226</date>
+          </document-id>
+          <application-date>
+            <date>20111229</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="10">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0681290</doc-number>
+            <kind>S</kind>
+            <date>20130430</date>
+          </document-id>
+          <application-date>
+            <date>20120820</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="11">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0684422</doc-number>
+            <kind>S</kind>
+            <date>20130618</date>
+          </document-id>
+          <application-date>
+            <date>20120628</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="12">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0689248</doc-number>
+            <kind>S</kind>
+            <date>20130903</date>
+          </document-id>
+          <application-date>
+            <date>20120801</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="13">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0693069</doc-number>
+            <kind>S</kind>
+            <date>20131105</date>
+          </document-id>
+          <application-date>
+            <date>20111102</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="14">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0697755</doc-number>
+            <kind>S</kind>
+            <date>20140121</date>
+          </document-id>
+          <application-date>
+            <date>20130320</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="15">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0702897</doc-number>
+            <kind>S</kind>
+            <date>20140415</date>
+          </document-id>
+          <application-date>
+            <date>20120221</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="16">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0705605</doc-number>
+            <kind>S</kind>
+            <date>20140527</date>
+          </document-id>
+          <application-date>
+            <date>20130614</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="17">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0720100</doc-number>
+            <kind>S</kind>
+            <date>20141223</date>
+          </document-id>
+          <application-date>
+            <date>20120405</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="18">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0724889</doc-number>
+            <kind>S</kind>
+            <date>20150324</date>
+          </document-id>
+          <application-date>
+            <date>20140611</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="19">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0733980</doc-number>
+            <kind>S</kind>
+            <date>20150707</date>
+          </document-id>
+          <application-date>
+            <date>20130918</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="20">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0758026</doc-number>
+            <kind>S</kind>
+            <date>20160531</date>
+          </document-id>
+          <application-date>
+            <date>20141121</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="21">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0758679</doc-number>
+            <kind>S</kind>
+            <date>20160607</date>
+          </document-id>
+          <application-date>
+            <date>20141121</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+      <citation>
+        <fwdcit num="22">
+          <document-id>
+            <country>US</country>
+            <doc-number>D0775770</doc-number>
+            <kind>S</kind>
+            <date>20170103</date>
+          </document-id>
+          <application-date>
+            <date>20141121</date>
+          </application-date>
+        </fwdcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20110920">
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>29378800</doc-number>
+              <date>20101110</date>
+            </document-id>
+            <parent-status>PENDING</parent-status>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>29389528</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>29360743</doc-number>
+              <date>20100430</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>D633664</doc-number>
+                <date>20110301</date>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>29378800</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+      <division>
+        <relation>
+          <parent-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>29312227</doc-number>
+              <date>20081007</date>
+            </document-id>
+            <parent-status>GRANTED</parent-status>
+            <parent-grant-document>
+              <document-id>
+                <country>US</country>
+                <doc-number>D618404</doc-number>
+                <date>20100622</date>
+              </document-id>
+            </parent-grant-document>
+          </parent-doc>
+          <child-doc>
+            <document-id>
+              <country>US</country>
+              <doc-number>29360743</doc-number>
+            </document-id>
+          </child-doc>
+        </relation>
+      </division>
+    </related-documents>
+    <parties date-changed="20110920">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>BSH Bosch und Siemens Hausgeraete GmbH</orgname>
+            <role>03</role>
+            <address>
+              <city>Munich</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1">
+          <addressbook lang="eng">
+            <last-name>Jenkins</last-name>
+            <first-name>James</first-name>
+            <address>
+              <city>San Diego</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </inventor>
+        <inventor sequence="2">
+          <addressbook lang="eng">
+            <last-name>Ott</last-name>
+            <first-name>Thomas</first-name>
+            <address>
+              <city>Neubiberg</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>DE</country>
+          </residence>
+        </inventor>
+      </inventors>
+      <agents>
+        <agent sequence="1" rep-type="attorney">
+          <addressbook lang="eng">
+            <last-name>Howard</last-name>
+            <first-name>James E.</first-name>
+          </addressbook>
+        </agent>
+        <agent sequence="2" rep-type="attorney">
+          <addressbook lang="eng">
+            <last-name>Pallapies</last-name>
+            <first-name>Andre</first-name>
+          </addressbook>
+        </agent>
+      </agents>
+    </parties>
+    <examiners>
+      <primary-examiner>
+        <last-name>Nelson</last-name>
+        <first-name>T. Chase</first-name>
+        <department>2914</department>
+      </primary-examiner>
+      <assistant-examiner>
+        <last-name>Sims</last-name>
+        <first-name>Kathleen M</first-name>
+      </assistant-examiner>
+    </examiners>
+    <patent-family date-changed="20110920">
+      <main-family family-id="138352158">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>D0645621</doc-number>
+            <kind>S</kind>
+            <date>20110920</date>
+          </document-id>
+          <application-date>
+            <date>20110413</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>D0642751</doc-number>
+            <kind>S</kind>
+            <date>20110802</date>
+          </document-id>
+          <application-date>
+            <date>20101110</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>D0618404</doc-number>
+            <kind>S</kind>
+            <date>20100622</date>
+          </document-id>
+          <application-date>
+            <date>20081007</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>D0633664</doc-number>
+            <kind>S</kind>
+            <date>20110301</date>
+          </document-id>
+          <application-date>
+            <date>20100430</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="138352156">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>D0645621</doc-number>
+            <kind>S</kind>
+            <date>20110920</date>
+          </document-id>
+          <application-date>
+            <date>20110413</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>D0642751</doc-number>
+            <kind>S</kind>
+            <date>20110802</date>
+          </document-id>
+          <application-date>
+            <date>20101110</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>D0618404</doc-number>
+            <kind>S</kind>
+            <date>20100622</date>
+          </document-id>
+          <application-date>
+            <date>20081007</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>D0633664</doc-number>
+            <kind>S</kind>
+            <date>20110301</date>
+          </document-id>
+          <application-date>
+            <date>20100430</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20110920">
+    <description-of-drawings>
+      <p id="p-00001-en" num="0001">
+        <figref>FIG. 1</figref> is a front view of a dishwasher panel showing a first embodiment of our new design;</p>
+      <p id="p-00002-en" num="0002">
+        <figref>FIG. 2</figref> is a perspective view thereof;</p>
+      <p id="p-00003-en" num="0003">
+        <figref>FIG. 3</figref> is a front view of a dishwasher panel showing a second embodiment of our new design;</p>
+      <p id="p-00004-en" num="0004">
+        <figref>FIG. 4</figref> is a perspective view thereof;</p>
+      <p id="p-00005-en" num="0005">
+        <figref>FIG. 5</figref> is a front view of a dishwasher panel showing a third embodiment of our new design;</p>
+      <p id="p-00006-en" num="0006">
+        <figref>FIG. 6</figref> is a perspective view thereof;</p>
+      <p id="p-00007-en" num="0007">
+        <figref>FIG. 7</figref> is a perspective view of a dishwasher panel showing a fourth embodiment of our new design;</p>
+      <p id="p-00008-en" num="0008">
+        <figref>FIG. 8</figref> is a front view thereof;</p>
+      <p id="p-00009-en" num="0009">
+        <figref>FIG. 9</figref> is a top view thereof; and,</p>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 10</figref> is a right side view thereof.</p>
+      <p id="p-00011-en" num="0011">The rear and bottom views of the dishwasher panels are not shown and do not form a part of the claimed design.</p>
+    </description-of-drawings>
+  </description>
+  <us-claim-statement>CLAIM</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20110920">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>The ornamental design for a dishwasher panel, as shown and described.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="USD0645621S_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="USD0645621-20110920-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="USD0645621S_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="USD0645621-20110920-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="USD0645621S_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="USD0645621-20110920-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="USD0645621S_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="USD0645621-20110920-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="USD0645621S_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="USD0645621-20110920-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="USD0645621S_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="USD0645621-20110920-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="USD0645621S_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="USD0645621-20110920-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="USD0645621S_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="USD0645621-20110920-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="USD0645621S_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="USD0645621-20110920-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="USD0645621S_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="USD0645621-20110920-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="USD0645621S_00011.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="USD0645621-20110920-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="USD0645621S.PDF" type="pdf" size="113834" pages="10" />
+</lexisnexis-patent-document>

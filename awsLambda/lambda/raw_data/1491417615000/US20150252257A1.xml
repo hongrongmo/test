@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150252257A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021815" date-changed="20151021" time-changed="053731">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121229252">
+        <country>US</country>
+        <doc-number>20150252257</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>13617932</doc-number>
+        <date>20120914</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>13</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150917">
+      <classification-ipcr sequence="1">
+        <text>C09K  11/74        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>11</main-group>
+        <subgroup>74</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C22B   5/00        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>B</subclass>
+        <main-group>5</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C22B  58/00        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>B</subclass>
+        <main-group>58</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C22C   1/00        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>1</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>C22C  28/00        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>22</class>
+        <subclass>C</subclass>
+        <main-group>28</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150917">
+      <classification-cpc sequence="1">
+        <text>B82Y  20/00        20130101 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>82</class>
+        <subclass>Y</subclass>
+        <main-group>20</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B82Y  30/00        20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>82</class>
+        <subclass>Y</subclass>
+        <main-group>30</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C09K  11/62        20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>11</main-group>
+        <subgroup>62</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C09K  11/66        20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>11</main-group>
+        <subgroup>66</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C09K  11/74        20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>11</main-group>
+        <subgroup>74</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>H01L  21/024       20130101 LI20130422BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>024</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130422</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>H01L  21/02521     20130101 LI20130422BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>02521</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130422</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>H01L  21/02601     20130101 LI20130422BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>02601</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130422</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>H01L  21/02628     20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>02628</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">14</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">HIGHLY LUMINESCENT SEMICONDUCTOR NANOCRYSTALS</invention-title>
+    <related-documents date-changed="20150910">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61535597</doc-number>
+          <date>20110916</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Harris</last-name>
+            <first-name>Daniel</first-name>
+            <address>
+              <city>Wilton</city>
+              <state>CT</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+        <applicant sequence="2" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Bawendi</last-name>
+            <first-name>Moungi G.</first-name>
+            <address>
+              <city>Cambridge</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Harris</last-name>
+            <first-name>Daniel</first-name>
+            <address>
+              <city>Wilton</city>
+              <state>CT</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Bawendi</last-name>
+            <first-name>Moungi G.</first-name>
+            <address>
+              <city>Cambridge</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20151020">
+      <main-family family-id="173566095">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9162882</doc-number>
+            <kind>B2</kind>
+            <date>20151020</date>
+          </document-id>
+          <application-date>
+            <date>20120914</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252257</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20120914</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173566094">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9162882</doc-number>
+            <kind>B2</kind>
+            <date>20151020</date>
+          </document-id>
+          <application-date>
+            <date>20120914</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252257</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20120914</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A method of making a semiconductor nanocrystal can include contacting an M-containing compound with an X donor having the formula X(Y(R)<sub>3</sub>)<sub>3</sub>, where X is a group V element and Y is a group IV element.</p>
+  </abstract>
+  <legal-data date-changed="20150925">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20121219</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015252257A1</docdb-publication-number>
+      <docdb-application-id>444310573</docdb-application-id>
+      <new-owner>MASSACHUSETTS INSTITUTE OF TECHNOLOGY, MASSACHUSET</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:HARRIS, DANIEL;BAWENDI, MOUNGI G.;REEL/FRAME:029498/0175</free-text-description>
+      <effective-date>
+        <date>20121121</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CLAIM OF PRIORITY</heading>
+      <p id="p-00001-en" num="0001">This application claims priority to provisional U.S. Patent Application No. 61/535,597, filed Sep. 16, 2011, which is incorporated by reference in its entirety.</p>
+    </related-apps>
+    <govt-interest>
+      <heading id="h-00002-en" level="1">STATEMENT REGARDING FEDERALLY SPONSORED RESEARCH OR DEVELOPMENT</heading>
+      <p id="p-00002-en" num="0002">This invention was made with government support under Grant No. HR0011-10-C-0081 awarded by the Defense Advanced Research Projects Agency. The government has certain rights in this invention.</p>
+    </govt-interest>
+    <summary>
+      <heading id="h-00003-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00003-en" num="0003">This invention relates to highly luminescent semiconductor nanocrystals and methods of making and using them.</p>
+      <heading id="h-00004-en" level="1">BACKGROUND</heading>
+      <p id="p-00004-en" num="0004">Semiconductor nanocrystals are a powerful class of nanostructures that exhibit high photoluminescence quantum yields, large molar extinction coefficients, high photostability compared to typical molecular fluorophores, and size-tunable emission wavelengths that can extend across the visible and near-IR spectral range. These properties make semiconductor nanocrystals useful in applications including biological fluorescent tags and light-emitting devices, among others.</p>
+      <p id="p-00005-en" num="0005">Nanocrystals having small dimensions can have properties intermediate between molecular and bulk forms of matter. For example, nanocrystals of semiconductor materials having sufficiently small dimensions can exhibit quantum confinement of excitons (excited state electron-hole pair) in all three dimensions. Quantum confinement leads to an increase in the effective band gap of the material with decreasing crystallite size. Consequently, both the optical absorption and emission of nanocrystals shift to the blue (i.e., to higher energies) as the size of the nanocrystal decreases.</p>
+      <p id="p-00006-en" num="0006">The quantum efficiency of emission from nanocrystals having a core of a first semiconductor material can be enhanced by applying an overcoating of a second semiconductor material such that the conduction band of the second semiconductor material is of higher energy than that of the first semiconductor material, and the valence band of the second semiconductor material is of lower energy than that of the first semiconductor material. As a result, both charge carriers of an exciton, i.e., electrons and holes, are confined in the core of the nanocrystal.</p>
+      <heading id="h-00005-en" level="1">SUMMARY</heading>
+      <p id="p-00007-en" num="0007">Semiconductor nanocrystals have size-dependent optical and electronic properties. In particular, the band gap energy of a semiconductor nanocrystal of a particular semiconductor material varies with the diameter of the crystal. Generally, a semiconductor nanocrystal is a member of a population of nanocrystals having a distribution of sizes. When the distribution is centered about a single value and narrow, the population can be described as monodisperse. Monodisperse particles can be defined as having at least 60% of the particles fall within a specified particle size range. Monodisperse particles can deviate less in their diameters less than 10% rms and preferably less than 5% rms.</p>
+      <p id="p-00008-en" num="0008">Many applications of semiconductor nanocrystals depend on their photoluminescent properties. Accordingly, semiconductor nanocrystals having narrow emission linewidths (expressed, for example, as a full width at half max) and high quantum yields are desirable.</p>
+      <p id="p-00009-en" num="0009">Semiconductor nanocrystals containing pnictides (group V elements) are among the most challenging to synthesize. Nevertheless, pnictide containing nanocrystals are an area of intense interest for cadmium-free nanocrystals that emit visible wavelengths and for nanocrystals that emit in the infrared. Infrared-emitting nanocrystals can be useful in devices such as solar cells and photodetectors. A longstanding challenge for the III-V nanocrystals (e.g., indium arsenide nanocrystals) has been the synthesis of large particles, particularly with narrow size distributions.</p>
+      <p id="p-00010-en" num="0010">In one aspect, a method of making a semiconductor nanocrystal includes contacting an M-containing compound with an X donor, wherein the X donor has formula (I):</p>
+      <p id="p-00011-en" num="0000">[in-line-formulae]X(Y(R)<sub>3</sub>)<sub>3</sub>  (I)[/in-line-formulae]</p>
+      <p id="p-00012-en" num="0000">where X is a group V element; Y is Ge, Sn, or Pb; and each R, independently, is alkyl, alkenyl, alkynyl, cycloalkyl, cycloalkenyl, heterocyclyl, aryl, or heteroaryl, wherein each R, independently, is optionally substituted by 1 to 6 substituents independently selected from hydrogen, halo, hydroxy, nitro, cyano, amino, alkyl, cycloalkyl, cycloalkenyl, alkoxy, acyl, thio, thioalkyl, alkenyl, alkynyl, cycloalkenyl, heterocyclyl, aryl, or heteroaryl.</p>
+      <p id="p-00013-en" num="0011">In some embodiments, X can be N, P, As, or Sb. Y can be Ge. Each R, independently, can be alkyl, cycloalkyl, or aryl. Each R, independently, can be unsubstituted alkyl, unsubstituted cycloalkyl, or unsubstituted aryl. The M-containing compound can be an M-containing salt. M can be a group III element. M can be In.</p>
+      <p id="p-00014-en" num="0012">The compound of formula (I) can be tris(trimethylgermyl)nitride; tris(trimethylstannyl)nitride; tris(trimethylplumbyl)nitride; tris(trimethylgermyl)phosphide; tris(trimethylstannyl)phosphide; tris(trimethylplumbyl)phosphide; tris(trimethylgermyl)arsine; tris(trimethylstannyl)arsine; tris(trimethylplumbyl)arsine; tris(trimethylgermyl)stibine; tris(trimethylstannyl)stibine; or tris(trimethylplumbyl)stibine.</p>
+      <p id="p-00015-en" num="0013">In another aspect, a method of making a semiconductor nanocrystal, includes contacting an M-containing salt with an X donor, wherein the X donor has formula (I):</p>
+      <p id="p-00016-en" num="0000">[in-line-formulae]X(Y(R)<sub>3</sub>)<sub>3</sub>  (I)[/in-line-formulae]</p>
+      <p id="p-00017-en" num="0000">where X is P, As, or Sb; Y is Ge, Sn or Pb; each R, independently, is unsubstituted alkyl or unsubstituted cycloalkyl; and M is a group III element.</p>
+      <p id="p-00018-en" num="0014">In some embodiments, X can be As or Sb. Y can be Ge. M can be In. The compound of formula (I) can be tris(trimethylgermyl)arsine; tris(trimethylstannyl)arsine; tris(trimethylplumbyl)arsine; tris(trimethylgermyl)stibine; tris(trimethylstannyl)stibine; or tris(trimethylplumbyl)stibine.</p>
+      <p id="p-00019-en" num="0015">In some embodiments, X is P or As; Y is Ge; M is In; and each R, independently, is unsubstituted alkyl.</p>
+      <p id="p-00020-en" num="0016">Other aspects, embodiments, and features will be apparent from the following description, the drawings, and the claims.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00006-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00021-en" num="0017">
+        <figref>FIG. 1</figref> shows <sup>1</sup>H NMR spectra of arsine nanocrystal precursors.</p>
+      <p id="p-00022-en" num="0018">
+        <figref>FIG. 2</figref> shows <sup>1</sup>H NMR spectra of stibine nanocrystal precursors.</p>
+      <p id="p-00023-en" num="0019">
+        <figref>FIGS. 3A-3C</figref> show absorbance spectra of InAs nanocrystals prepared with tris(trimethylsilyl)arsine (<figref>FIG. 3A</figref>); tris(trimethylgermyl)arsine (<figref>FIG. 3B</figref>); or tris(trimethylstannyl)arsine (<figref>FIG. 3C</figref>).</p>
+      <p id="p-00024-en" num="0020">
+        <figref>FIG. 4</figref> shows a time series of <sup>1</sup>H NMR spectra.</p>
+      <p id="p-00025-en" num="0021">
+        <figref>FIG. 5</figref> is a graph illustrating the kinetics of the reaction of different tris(trimethyl)-group IV compounds with indium (III) myristate.</p>
+      <p id="p-00026-en" num="0022">
+        <figref>FIGS. 6</figref>
+        <i>a</i>-<b>6</b><i>d </i>show absorption spectra of aliquots taken during growth of InAs (<figref>FIGS. 6</figref><i>a</i>, <b>6</b><i>b</i>) and InP (<figref>FIGS. 6</figref><i>c</i>, <b>6</b><i>d</i>) using the silyl-V precursor (<figref>FIG. 6</figref><i>a</i>, <figref>FIG. 6</figref><i>c</i>) and the germyl-V precursor (<figref>FIG. 6</figref><i>b</i>, <figref>FIG. 6</figref><i>d</i>).</p>
+      <p id="p-00027-en" num="0023">
+        <figref>FIGS. 7</figref>
+        <i>a</i>-<b>7</b><i>d </i>show absorbance traces during precursor injection at 130° C. for InP (<figref>FIG. 7</figref><i>a</i>) and InAs (<figref>FIG. 7</figref><i>b</i>). The injection of silyl-V and germyl-V precursor was alternated so that the absorbance rise could be directly compared. The absorbance rise at 310 nm (from <figref>FIGS. 7</figref><i>a</i>, <b>7</b><i>b</i>) was normalized truncated, and adjusted so that each injection was plotted with t=0 (<figref>FIGS. 7</figref><i>c</i>, <b>7</b><i>d</i>). The TMSi<sub>3</sub>V precursor injections in c and d are offset for clarity.</p>
+      <p id="p-00028-en" num="0024">
+        <figref>FIG. 8</figref>
+        <i>a </i>shows a time series of NMR spectra showing simultaneous reaction of TMSi<sub>3</sub>P and TMGe<sub>3</sub>P with 2.5 mM InMy<sub>3</sub>. <figref>FIG. 8</figref><i>b </i>shows integrated peak area for TMSi<sub>3</sub>P and TMGe<sub>3</sub>P normalized and plotted on a semilog plot. <figref>FIG. 8</figref><i>c </i>shows integrated peak areas normalized by total proton concentration associated with the corresponding TME-peaks.</p>
+      <p id="p-00029-en" num="0025">
+        <figref>FIGS. 9</figref>
+        <i>a </i>and <b>9</b><i>b </i>show <sup>1</sup>H NMR spectra showing the evolution of precursor concentration as well as two intermediates for the reaction of TMGe<sub>3</sub>P with InMy<sub>3</sub>. The reaction solution was 3 mM InMy<sub>3</sub>.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00007-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00030-en" num="0026">Semiconductor nanocrystals demonstrate quantum confinement effects in their luminescent properties. When semiconductor nanocrystals are illuminated with a primary energy source, a secondary emission of energy occurs at a frequency that relates to the band gap of the semiconductor material used in the nanocrystal. In quantum confined particles, the frequency is also related to the size of the nanocrystal.</p>
+      <p id="p-00031-en" num="0027">Core-shell heterostructures have been widely explored as a means to adjust the photophysical properties of semiconductor nanocrystals, and can be used to increase their brightness as fluorophores in two ways: (1) maximizing the photoluminescence (PL) quantum yield (QY) through electronic and chemical isolation of the core from surface-associated recombination centers; and (2) increasing the excitation rate (absorption cross-section) by building a high density of electronic states at energies above the shell bandgap. These two roles for the shell present a potential trade-off in terms of shell material. A wide bandgap shell imposes large electronic barriers for carrier access to the surface but will be less able to contribute to absorption, while a narrower gap shell could participate in light harvesting but may make it harder to achieve high QY.</p>
+      <p id="p-00032-en" num="0028">In general, the method of manufacturing a nanocrystal is a colloidal growth process. See, for example, U.S. Pat. Nos. 6,322,901 and 6,576,291, and U.S. patent application Ser. No. 12/862,195, filed Aug. 24, 2010, each of which is incorporated by reference in its entirety. Colloidal growth can result when an M-containing compound and an X donor are rapidly injected into a hot coordinating solvent. The coordinating solvent can include an amine. The M-containing compound can be a metal, an M-containing salt, or an M-containing organometallic compound. The injection produces a nucleus that can be grown in a controlled manner to form a nanocrystal. The reaction mixture can be gently heated to grow and anneal the nanocrystal. Both the average size and the size distribution of the nanocrystals in a sample are dependent on the growth temperature. The growth temperature necessary to maintain steady growth increases with increasing average crystal size. The nanocrystal is a member of a population of nanocrystals. As a result of the discrete nucleation and controlled growth, the population of nanocrystals obtained has a narrow, monodisperse distribution of diameters. The monodisperse distribution of diameters can also be referred to as a size. The process of controlled growth and annealing of the nanocrystals in the coordinating solvent that follows nucleation can also result in uniform surface derivatization and regular core structures. As the size distribution sharpens, the temperature can be raised to maintain steady growth. By adding more M-containing compound or X donor, the growth period can be shortened.</p>
+      <p id="p-00033-en" num="0029">The M-containing salt can be a non-organometallic compound, e.g., a compound free of metal-carbon bonds. M can be cadmium, zinc, magnesium, mercury, aluminum, gallium, indium, thallium, or lead. The M-containing salt can be a metal halide, metal carboxylate, metal carbonate, metal hydroxide, metal oxide, or metal diketonate, such as a metal acetylacetonate. The M-containing salt is less expensive and safer to use than organometallic compounds, such as metal alkyls. For example, the M-containing salts are stable in air, whereas metal alkyls are generally unstable in air. M-containing salts such as 2,4-pentanedionate (i.e., acetylacetonate (acac)), halide, carboxylate, hydroxide, oxide, or carbonate salts are stable in air and allow nanocrystals to be manufactured under less rigorous conditions than corresponding metal alkyls. In some cases, the M-containing salt can be a long-chain carboxylate salt, e.g., a C<sub>8 </sub>or higher (such as C<sub>8 </sub>to C<sub>20</sub>, or C<sub>12 </sub>to C<sub>18</sub>), straight chain or branched, saturated or unsaturated carboxylate salt. Such salts include, for example, M-containing salts of lauric acid, myristic acid, palmitic acid, stearic acid, arachidic acid, palmitoleic acid, oleic acid, linoleic acid, linolenic acid, or arachidonic acid.</p>
+      <p id="p-00034-en" num="0030">Suitable M-containing salts include cadmium acetylacetonate, cadmium iodide, cadmium bromide, cadmium chloride, cadmium hydroxide, cadmium carbonate, cadmium acetate, cadmium myristate, cadmium oxide, zinc acetylacetonate, zinc iodide, zinc bromide, zinc chloride, zinc hydroxide, zinc carbonate, zinc acetate, zinc myristate, zinc oxide, magnesium acetylacetonate, magnesium iodide, magnesium bromide, magnesium chloride, magnesium hydroxide, magnesium carbonate, magnesium acetate, magnesium myristate, magnesium oxide, mercury acetylacetonate, mercury iodide, mercury bromide, mercury chloride, mercury hydroxide, mercury carbonate, mercury acetate, mercury myristate, aluminum acetylacetonate, aluminum iodide, aluminum bromide, aluminum chloride, aluminum hydroxide, aluminum carbonate, aluminum acetate, aluminum myristate, gallium acetylacetonate, gallium iodide, gallium bromide, gallium chloride, gallium hydroxide, gallium carbonate, gallium acetate, gallium myristate, indium acetylacetonate, indium iodide, indium bromide, indium chloride, indium hydroxide, indium carbonate, indium acetate, indium myristate, thallium acetylacetonate, thallium iodide, thallium bromide, thallium chloride, thallium hydroxide, thallium carbonate, thallium acetate, or thallium myristate.</p>
+      <p id="p-00035-en" num="0031">Prior to combining the M-containing salt with the X donor, the M-containing salt can be contacted with a coordinating solvent to form an M-containing precursor. Typical coordinating solvents include alkyl phosphines, alkyl phosphine oxides, alkyl phosphonic acids, or alkyl phosphinic acids; however, other coordinating solvents, such as pyridines, furans, and amines may also be suitable for the nanocrystal production. Examples of suitable coordinating solvents include pyridine, tri-n-octyl phosphine (TOP) and tri-n-octyl phosphine oxide (TOPO). Technical grade TOPO can be used. The coordinating solvent can include a 1,2-diol or an aldehyde. The 1,2-diol or aldehyde can facilitate reaction between the M-containing salt and the X donor and improve the growth process and the quality of the nanocrystal obtained in the process. The 1,2-diol or aldehyde can be a C<sub>6</sub>-C<sub>20 </sub>1,2-diol or a C<sub>6</sub>-C<sub>20 </sub>aldehyde. A suitable 1,2-diol is 1,2-hexadecanediol or myristol and a suitable aldehyde is dodecanal is myristic aldehyde.</p>
+      <p id="p-00036-en" num="0032">The X donor is a compound capable of reacting with the M-containing salt to form a material with the general formula MX. Typically, the X donor is a chalcogenide donor or a pnictide donor, such as a phosphine chalcogenide, a bis(silyl) chalcogenide, dioxygen, an ammonium salt, or a tris(silyl) pnictide. Suitable X donors include dioxygen, elemental sulfur, bis(trimethylsilyl) selenide ((TMS)<sub>2</sub>Se), trialkyl phosphine selenides such as (tri-n-octylphosphine) selenide (TOPSe) or (tri-n-butylphosphine) selenide (TBPSe), trialkyl phosphine tellurides such as (tri-n-octylphosphine) telluride (TOPTe) or hexapropylphosphorustriamide telluride (HPPTTe), bis(trimethylsilyl)telluride ((TMS)<sub>2</sub>Te), sulfur, bis(trimethylsilyl)sulfide ((TMS)<sub>2</sub>S), a trialkyl phosphine sulfide such as (tri-n-octylphosphine) sulfide (TOPS), tris(dimethylamino) arsine, an ammonium salt such as an ammonium halide (e.g., NH<sub>4</sub>Cl), tris(trimethylsilyl)phosphide ((TMS)<sub>3</sub>P), tris(trimethylsilyl) arsenide ((TMS)<sub>3</sub>As), or tris(trimethylsilyl) antimonide ((TMS)<sub>3</sub>Sb). In certain embodiments, the M donor and the X donor can be moieties within the same molecule.</p>
+      <p id="p-00037-en" num="0033">The X donor can be a compound of formula (I):</p>
+      <p id="p-00038-en" num="0000">[in-line-formulae]X(Y(R)<sub>3</sub>)<sub>3</sub>  (I)[/in-line-formulae]</p>
+      <p id="p-00039-en" num="0000">where X is a group V element, Y is a group IV element, and each R, independently, is alkyl, alkenyl, alkynyl, cycloalkyl, cycloalkenyl, heterocyclyl, aryl, or heteroaryl, where each R, independently, is optionally substituted by 1 to 6 substituents independently selected from hydrogen, halo, hydroxy, nitro, cyano, amino, alkyl, cycloalkyl, cycloalkenyl, alkoxy, acyl, thio, thioalkyl, alkenyl, alkynyl, cycloalkenyl, heterocyclyl, aryl, or heteroaryl.</p>
+      <p id="p-00040-en" num="0034">In some embodiments, X can be N, P, As, or Sb. Y can be C, Si, Ge, Sn, or Pb. Each R, independently, can be alkyl, cycloalkyl, or aryl. In some cases, each R, independently, can be unsubstituted alkyl, unsubstituted cycloalkyl, or unsubstituted aryl; for example, a C<sub>1 </sub>to C<sub>8 </sub>unsubstituted alkyl, a C<sub>3 </sub>to C<sub>8 </sub>unsubstituted cycloalkyl, or a C<sub>6 </sub>unsubstituted aryl (e.g., phenyl). In some embodiments, X can be P, As, or Sb. In some embodiments, Y can be Ge, Sn, or Pb.</p>
+      <p id="p-00041-en" num="0035">In some embodiments, X can be P, As, or Sb, Y can be Ge, Sn, or Pb, and each R, independently, can be unsubstituted alkyl, unsubstituted cycloalkyl, or unsubstituted aryl; for example, a C<sub>1 </sub>to C<sub>8 </sub>unsubstituted alkyl, a C<sub>3 </sub>to C<sub>8 </sub>unsubstituted cycloalkyl, or a C<sub>6 </sub>unsubstituted aryl (e.g., phenyl). Each R, independently, can be unsubstituted alkyl, for example, a C<sub>1 </sub>to C<sub>6 </sub>unsubstituted alkyl.</p>
+      <p id="p-00042-en" num="0036">Alkyl is a branched or unbranched saturated hydrocarbon group of 1 to 30 carbon atoms, such as methyl, ethyl, n-propyl, isopropyl, n-butyl, isobutyl, t-butyl, octyl, decyl, tetradecyl, hexadecyl, eicosyl, tetracosyl and the like. Optionally, an alkyl group can be substituted by 1 to 6 substituents independently selected from hydrogen, halo, hydroxy, nitro, cyano, amino, alkyl, cycloalkyl, cycloalkenyl, alkoxy, acyl, thio, thioalkyl, alkenyl, alkynyl, cycloalkenyl, heterocyclyl, aryl, or heteroaryl. Optionally, an alkyl group can contain 1 to 6 linkages selected from —O—, —S—, -M- and —NR— where R is hydrogen, or C<sub>1</sub>-C<sub>8 </sub>alkyl or lower alkenyl. Cycloalkyl is a cyclic saturated hydrocarbon group of 3 to 10 carbon atoms, such as cyclopropyl, cyclobutyl, cyclopentyl, cyclohexyl, cycloheptyl, cyclooctyl, and the like. A cycloalkyl group can be optionally substituted, or contain linkages, as an alkyl group does.</p>
+      <p id="p-00043-en" num="0037">Alkenyl is a branched or unbranched unsaturated hydrocarbon group of 2 to 20 carbon atoms containing at least one double bond, such as vinyl, propenyl, butenyl, and the like. Cycloalkenyl is a cyclic unsaturated hydrocarbon group of 3 to 10 carbon atoms including at least one double bond. An alkenyl or cycloalkenyl group can be optionally substituted, or contain linkages, as an alkyl group does.</p>
+      <p id="p-00044-en" num="0038">Alkynyl is a branched or unbranched unsaturated hydrocarbon group of 2 to 20 carbon atoms containing at least one triple bond, such as ethynyl, propynyl, butynyl, and the like. An alkynyl group can be optionally substituted, or contain linkages, as an alkyl group does.</p>
+      <p id="p-00045-en" num="0039">Heterocyclyl is a 3- to 10-membered saturated or unsaturated cyclic group including at least one ring heteroatom selected from O, N, or S. A heterocylyl group can be optionally substituted, or contain linkages, as an alkyl group does.</p>
+      <p id="p-00046-en" num="0040">Aryl is a 6- to 14-membered carbocyclic aromatic group which may have one or more rings which may be fused or unfused. In some cases, an aryl group can include an aromatic ring fused to a non-aromatic ring. Exemplary aryl groups include phenyl, naphthyl, or anthracenyl. Heteroaryl is a 6- to 14-membered aromatic group which may have one or more rings which may be fused or unfused. In some cases, a heteroaryl group can include an aromatic ring fused to a non-aromatic ring. An aryl or heteroaryl group can be optionally substituted, or contain linkages, as an alkyl group does.</p>
+      <p id="p-00047-en" num="0041">Examples of X donors of formula (I) include: tris(trimethylgermyl)nitride, N(Ge(CH<sub>3</sub>)<sub>3</sub>)<sub>3</sub>; tris(trimethylstannyl)nitride, N(Sn(CH<sub>3</sub>)<sub>3</sub>)<sub>3</sub>; tris(trimethylplumbyl)nitride, N(Pb(CH<sub>3</sub>)<sub>3</sub>)<sub>3</sub>; tris(trimethylgermyl)phosphide, P(Ge(CH<sub>3</sub>)<sub>3</sub>)<sub>3</sub>; tris(trimethylstannyl)phosphide, P(Sn(CH<sub>3</sub>)<sub>3</sub>)<sub>3</sub>; tris(trimethylplumbyl)phosphide, P(Pb(CH<sub>3</sub>)<sub>3</sub>)<sub>3</sub>; tris(trimethylgermyl)arsine, As(Ge(CH<sub>3</sub>)<sub>3</sub>)<sub>3</sub>; tris(trimethylstannyl)arsine, As(Sn(CH<sub>3</sub>)<sub>3</sub>)<sub>3</sub>; tris(trimethylplumbyl)arsine, As(Pb(CH<sub>3</sub>)<sub>3</sub>)<sub>3</sub>; tris(trimethylgermyl)stibine, Sb(Ge(CH<sub>3</sub>)<sub>3</sub>)<sub>3</sub>; tris(trimethylstannyl)stibine, Sb(Sn(CH<sub>3</sub>)<sub>3</sub>)<sub>3</sub>; and tris(trimethylplumbyl)stibine, Sb(Pb(CH<sub>3</sub>)<sub>3</sub>)<sub>3</sub>.</p>
+      <p id="p-00048-en" num="0042">For given values of X and R, varying Y can produce X donors having varying reactivity, e.g., different reaction kinetics in the formation of semiconductor nanocrystals. Thus, the reactivity of tris(trimethylsilyl)arsine in the formation of nanocrystals can be different from the reactivity of tris(trimethylstannyl)arsine or tris(trimethylplumbyl)arsine in an otherwise similar reaction. Likewise, for given values of X and Y, variations in R can produce variations in reactivity. In the formation of nanocrystals, reactivity (and particularly reaction kinetics) can affect the size and size distribution of the resulting population of nanocrystals. Thus, selection of precursors having appropriate reactivity can aid in forming a population of nanocrystals having desirable properties, such as a particular desired size and/or a narrow size distribution.</p>
+      <p id="p-00049-en" num="0043">The nanocrystal manufactured from an M-containing salt can grow in a controlled manner when the coordinating solvent includes an amine. The amine in the coordinating solvent can contribute to the quality of the nanocrystal obtained from the M-containing salt and X donor. Preferably, the coordinating solvent is a mixture of the amine and an alkyl phosphine oxide. The combined solvent can decrease size dispersion and can improve photoluminescence quantum yield of the nanocrystal. The preferred amine is a primary alkyl amine or a primary alkenyl amine, such as a C<sub>2</sub>-C<sub>20 </sub>alkyl amine, a C<sub>2</sub>-C<sub>20 </sub>alkenyl amine, preferably a C<sub>8</sub>-C<sub>18 </sub>alkyl amine or a C<sub>8</sub>-C<sub>18 </sub>alkenyl amine. For example, suitable amines for combining with tri-octylphosphine oxide (TOPO) include 1-hexadecylamine, or oleylamine. When the 1,2-diol or aldehyde and the amine are used in combination with the M-containing salt to form a population of nanocrystals, the photoluminescence quantum efficiency and the distribution of nanocrystal sizes are improved in comparison to nanocrystals manufactured without the 1,2-diol or aldehyde or the amine.</p>
+      <p id="p-00050-en" num="0044">The nanocrystal can be a member of a population of nanocrystals having a narrow size distribution. The nanocrystal can be a sphere, rod, disk, or other shape. The nanocrystal can include a core of a semiconductor material. The nanocrystal can include a core having the formula MX, where M is cadmium, zinc, magnesium, mercury, aluminum, gallium, indium, thallium, or mixtures thereof, and X is oxygen, sulfur, selenium, tellurium, nitrogen, phosphorus, arsenic, antimony, or mixtures thereof.</p>
+      <p id="p-00051-en" num="0045">The emission from the nanocrystal can be a narrow Gaussian emission band that can be tuned through the complete wavelength range of the ultraviolet, visible, or infrared regions of the spectrum by varying the size of the nanocrystal, the composition of the nanocrystal, or both. For example, both CdSe and CdS can be tuned in the visible region and InAs can be tuned in the infrared region.</p>
+      <p id="p-00052-en" num="0046">A population of nanocrystals can have a narrow size distribution. The population can be monodisperse and can exhibit less than a 15% rms deviation in diameter of the nanocrystals, preferably less than 10%, more preferably less than 5%. Spectral emissions in a narrow range of between 10 and 100 nm full width at half max (FWHM) can be observed. Semiconductor nanocrystals can have emission quantum efficiencies (i.e., quantum yields, QY) of greater than 2%, 5%, 10%, 20%, 40%, 60%, 70%, 80%, or 90%. Semiconductor nanocrystals can have a QY of at least 90%, at least 91%, at least 92%, at least 93%, at least 94%, at least 95%, at least 96%, at least 97%, at least 97%, at least 98%, or at least 99%.</p>
+      <p id="p-00053-en" num="0047">The semiconductor forming the core of the nanocrystal can include Group II-VI compounds, Group II-V compounds, Group III-VI compounds, Group III-V compounds, Group IV-VI compounds, Group I-III-VI compounds, Group II-IV-VI compounds, and Group II-IV-V compounds, for example, ZnS, ZnSe, ZnTe, CdS, CdSe, CdTe, HgS, HgSe, HgTe, AlN, AlP, AlAs, AlSb, GaN, GaP, GaAs, GaSb, GaSe, InN, InP, InAs, InSb, TlN, TlP, TlAs, TlSb, PbS, PbSe, PbTe, or mixtures thereof.</p>
+      <p id="p-00054-en" num="0048">The quantum efficiency of emission from nanocrystals having a core of a first semiconductor material can be enhanced by applying an overcoating of a second semiconductor material such that the conduction band of the second semiconductor material is of higher energy than that of the first semiconductor material, and the valence band of the second semiconductor material is of lower energy than that of the first semiconductor material. As a result, charge carriers, i.e., electrons and holes, are confined in the core of the nanocrystal when in an excited state. Alternatively, the conduction band or valence band of overcoating material can have an energy intermediate between the energies of the conduction and valence bands of the core material. In this case, one carrier can be confined to the core while the other is confined to the overcoating material when in an excited state. See, for example, U.S. Pat. No. 7,390,568, which is incorporated by reference in its entirety. The core can have an overcoating on a surface of the core. The band gap of core and overcoating can have a desired band offset. In CdTe/CdSe (core/shell) nanocrystals, the conduction band of the shell is intermediate in energy to the valence band and conduction band of the core. CdTe/CdSe (core/shell) nanocrystals have lower potentials for the holes in the core and for the electrons in the shell. As a result, the holes can be mostly confined to the CdTe core, while the electrons can be mostly confined to the CdSe shell. CdSe/ZnTe (core/shell) nanocrystals have the valence band of the shell intermediate in energy to the valence band and conduction band of the core. As a result, the electrons reside mostly in the CdSe cores, while the holes reside mostly in the ZnTe shells. The overcoating can be a semiconductor material having a composition different from the composition of the core, and can have a band gap greater than the band gap of the core. The overcoat of a semiconductor material on a surface of the nanocrystal can include a Group II-VI compounds, Group II-V compounds, Group III-VI compounds, Group III-V compounds, Group IV-VI compounds, Group compounds, Group II-IV-VI compounds, and Group II-IV-V compounds, for example, ZnS, ZnSe, ZnTe, CdS, CdSe, CdTe, HgS, HgSe, HgTe, AlN, AlP, AlAs, AlSb, GaN, GaP, GaAs, GaSb, GaSe, InN, InP, InAs, InSb, TlN, TlP, TlAs, TlSb, PbS, PbSe, PbTe, or mixtures thereof.</p>
+      <p id="p-00055-en" num="0049">Shells are formed on nanocrystals by introducing shell precursors at a temperature where material adds to the surface of existing nanocrystals but at which nucleation of new particles is rejected. In order to help suppress nucleation and anisotropic elaboration of the nanocrystals, selective ionic layer adhesion and reaction (SILAR) growth techniques can be applied. See, e.g., U.S. Pat. No. 7,767,260, which is incorporated by reference in its entirety. In the SILAR approach, metal and chalcogenide precursors are added separately, in an alternating fashion, in doses calculated to saturate the available binding sites on the nanocrystal surfaces, thus adding one-half monolayer with each dose. The goals of such an approach are to: (1) saturate available surface binding sites in each half-cycle in order to enforce isotropic shell growth; and (2) avoid the simultaneous presence of both precursors in solution so as to minimize the rate of homogenous nucleation of new nanoparticles of the shell material.</p>
+      <p id="p-00056-en" num="0050">In the SILAR approach, it can be beneficial to select reagents that react cleanly and to completion at each step. In other words, the reagents selected should produce few or no reaction by-products, and substantially all of the reagent added should react to add shell material to the nanocrystals. Completion of the reaction can be favored by adding sub-stoichiometric amounts of the reagent. In other words, when less than one equivalent of the reagent is added, the likelihood of any unreacted starting material remaining is decreased.</p>
+      <p id="p-00057-en" num="0051">Furthermore, the quality of core-shell nanocrystals produced (e.g., in terms of size monodispersity and QY) can be enhanced by using a constant and lower shell growth temperature than has been typically been used in the past. Alternatively, high temperatures may also be used. The techniques described here are amenable to a wide temperature range, unlike earlier SILAR methods that worked only at very high temperatures. In addition, a low-temperature or room temperature “hold” step can be used during the synthesis or purification of core materials prior to shell growth.</p>
+      <p id="p-00058-en" num="0052">The outer surface of the nanocrystal can include a layer of compounds derived from the coordinating agent used during the growth process. The surface can be modified by repeated exposure to an excess of a competing coordinating group to form an overlayer. For example, a dispersion of the capped nanocrystal can be treated with a coordinating organic compound, such as pyridine, to produce crystals which disperse readily in pyridine, methanol, and aromatics but no longer disperse in aliphatic solvents. Such a surface exchange process can be carried out with any compound capable of coordinating to or bonding with the outer surface of the nanocrystal, including, for example, phosphines, thiols, amines and phosphates. The nanocrystal can be exposed to short chain polymers which exhibit an affinity for the surface and which terminate in a moiety having an affinity for a suspension or dispersion medium. Such affinity improves the stability of the suspension and discourages flocculation of the nanocrystal.</p>
+      <p id="p-00059-en" num="0053">Monodentate alkyl phosphines (and phosphine oxides; the term phosphine below will refer to both) can passivate nanocrystals efficiently. When nanocrystals with conventional monodentate ligands are diluted or embedded in a non-passivating environment (i.e., one where no excess ligands are present), they tend to lose their high luminescence. Typical are an abrupt decay of luminescence, aggregation, and/or phase separation. In order to overcome these limitations, polydentate ligands can be used, such as a family of polydentate oligomerized phosphine ligands. The polydentate ligands show a high affinity between ligand and nanocrystal surface. In other words, they are stronger ligands, as is expected from the chelate effect of their polydentate characteristics.</p>
+      <p id="p-00060-en" num="0054">In general, a ligand for a nanocrystal can include a first monomer unit including a first moiety having affinity for a surface of the nanocrystal, a second monomer unit including a second moiety having a high water solubility, and a third monomer unit including a third moiety having a selectively reactive functional group or a selectively binding functional group. In this context, a “monomer unit” is a portion of a polymer derived from a single molecule of a monomer. For example, a monomer unit of poly(ethylene) is —CH<sub>2</sub>CH<sub>2</sub>—, and a monomer unit of poly(propylene) is —CH<sub>2</sub>CH(CH<sub>3</sub>)—. A “monomer” refers to the compound itself, prior to polymerization, e.g., ethylene is a monomer of poly(ethylene) and propylene of poly(propylene).</p>
+      <p id="p-00061-en" num="0055">A selectively reactive functional group is one that can form a covalent bond with a selected reagent under selected conditions. One example of a selectively reactive functional group is a primary amine, which can react with, for example, a succinimidyl ester in water to form an amide bond. A selectively binding functional group is a functional group that can form a noncovalent complex with a selective binding counterpart. Some well-known examples of selectively binding functional groups and their counterparts include biotin and streptavidin; a nucleic acid and a sequence-complementary nucleic acid; FK506 and FKBP; or an antibody and its corresponding antigen.</p>
+      <p id="p-00062-en" num="0056">A moiety having high water solubility typically includes one or more ionized, ionizable, or hydrogen bonding groups, such as, for example, an amine, an alcohol, a carboxylic acid, an amide, an alkyl ether, a thiol, or other groups known in the art. Moieties that do not have high water solubility include, for example, hydrocarbyl groups such as alkyl groups or aryl groups, haloalkyl groups, and the like. High water solubility can be achieved by using multiple instances of a slightly soluble group: for example, diethyl ether is not highly water soluble, but a poly(ethylene glycol) having multiple instances of a —CH<sub>2</sub>—O—CH<sub>2</sub>— alkyl ether group can be highly water soluble.</p>
+      <p id="p-00063-en" num="0057">For example, the ligand can include a polymer including a random copolymer. The random copolymer can be made using any method of polymerization, including cationic, anion, radical, metathesis or condensation polymerization, for example, living cationic polymerization, living anionic polymerization, ring opening metathesis polymerization, group transfer polymerization, free radical living polymerization, living Ziegler-Natta polymerization, or reversible addition fragmentation chain transfer (RAFT) polymerization.</p>
+      <heading id="h-00008-en" level="1">EXAMPLES</heading>
+      <p id="p-00064-en" num="0058">Due to the highly reactive and toxic nature of many of the reactants, extreme care was and should be taken to exclude oxygen and water from the reaction mixtures; all procedures were performed on a Schlenk line.</p>
+      <p id="p-00065-en" num="0059">Preparation of tris(trimethylsilyl)arsine is described in, for example, R. L. Wells, et al., <i>Inorganic Syntheses, </i>31:150-158, 1997, which is incorporated by reference in its entirety. Preparations of tris(trimethylgermyl)stibine and tris(trimethylstannyl)stibine are described in, for example, M. Atesa, et al., <i>Phosphorus, Sulfur, and Silicon and the Related Elements, </i>102:287-289, 1995, which is incorporated by reference in its entirety.</p>
+      <p id="p-00066-en" num="0060">Tris(trimethylgermyl)arsine and tris(trimethylstannyl)arsine could be synthesized in a manner similar to that of tris(trimethylsilyl)arsine (see, e.g., E. Amberger and G Salazar, <i>Journal of Organometallic Chemistry, </i>8:111-114, 1967, which is incorporated by reference in its entirety), but synthesizing a large quantity of tris(trimethylsilyl)arsine and then performing subsequent exchange of the trimethyl-IV groups was less expensive, faster, and safer.</p>
+      <p id="p-00067-en" num="0061">The synthesis of tris(trimethylsilyl)arsine was performed according to the following scheme:</p>
+      <p id="p-00068-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="14.22mm" wi="69.77mm" alt="embedded image" img-content="chem" file="US20150252257A1_00010.PNG" img-format="png" original="US20150252257A1-20150910-C00001.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00069-en" num="0062">Following isolation and purification of tris(trimethylsilyl)arsine, synthesis of the of tris(trimethylgermyl)arsine was by exchange of trimethyl-IV groups:</p>
+      <p id="p-00070-en" num="0000">[in-line-formulae]As(Si(CH<sub>3</sub>)<sub>3</sub>)<sub>3</sub>+3Ge(CH<sub>3</sub>)<sub>3</sub>Cl→As(Ge(CH<sub>3</sub>)<sub>3</sub>)<sub>3</sub>+3Si(CH<sub>3</sub>)<sub>3</sub>Cl[/in-line-formulae]</p>
+      <p id="p-00071-en" num="0063">and analogously for synthesis of tris(trimethylstannyl)arsine:</p>
+      <p id="p-00072-en" num="0000">[in-line-formulae]As(Si(CH<sub>3</sub>)<sub>3</sub>)<sub>3</sub>+3Sn(CH<sub>3</sub>)<sub>3</sub>Cl→As(Sn(CH<sub>3</sub>)<sub>3</sub>)<sub>3</sub>+3Si(CH<sub>3</sub>)<sub>3</sub>Cl[/in-line-formulae]</p>
+      <p id="p-00073-en" num="0064">The synthesis of indium arsenide nanocrystals followed reported procedures, see Peter M. Allen, et al., <i>J. Am. Chem. Soc., </i>132(2):470-471, 2010, which is incorporated by reference in its entirety. The arsenide source was tris(trimethylsilyl)arsine, tris(trimethylgermyl)arsine, or tris(trimethylstannyl)arsine.</p>
+      <p id="p-00074-en" num="0065">Synthesis of Tris(Trimethylsilyl)Arsine.</p>
+      <p id="p-00075-en" num="0066">Using a procedure adapted from R. L. Wells, et al., <i>Inorganic Syntheses, </i>31:150-158, 1997, which is incorporated by reference in its entirety, 220 mL of 1,2-dimethoxyethane (distilled over sodium-benzophenone), 10 g of sodium-potassium alloy and 7 g of arsenic were mixed in a nitrogen glovebox in a 500 mL three neck flask. Under vigorous argon purge, a mechanical stirrer and condenser were attached to the three neck flask. The solution was then heated to reflux and vigorously stirred for 24 hours. During this time, the solution turned black.</p>
+      <p id="p-00076-en" num="0067">The solution was cooled to room temperature and under a vigorous flow of argon, an addition funnel was attached to the three neck flask. Then 38 g of trimethylsilylchloride (distilled over CaH<sub>2</sub>) was added to the addition funnel via cannula and subsequently added to the solution dropwise. After the addition was complete, the solution was heated to reflux for another 16 hours. During this time the solution turned from black to grey, with precipitate clearly visible.</p>
+      <p id="p-00077-en" num="0068">After standing at room temperature for 8 hours, the condenser and stirring rod were removed and replaced with a stopper and a Schlenk filter with a 500 mL Schlenk receiving flask. The apparatus was inverted and vacuum was applied periodically to the receiving flask in order to force the liquid through the filter.</p>
+      <p id="p-00078-en" num="0069">The receiving flask was removed from the filter and the DME was removed by vacuum at room temperature. This left 20 mL of yellow/brown oily liquid. This was then purified by distillation under vacuum; yielding 12 g of tris(trimethylsilyl)arsine as a clear liquid (46% yield). See <figref>FIG. 1</figref>.</p>
+      <p id="p-00079-en" num="0070">Synthesis of Tris(Trimethylgermyl)Arsine and of Tris(Trimethylstannyl)Arsine.</p>
+      <p id="p-00080-en" num="0071">To synthesize the tris(trimethylgermyl)arsine and tris(trimethylstannyl)arsine, the following procedures were adopted from M. Atesa, et al., <i>Phosphorus, Sulfur, and Silicon and the Related Elements, </i>102:287-289, 1995; and H. Schumann, et al., J. Organometallic Chem. 222(2):217-225, 1981, each of which is incorporated by reference in its entirety.</p>
+      <p id="p-00081-en" num="0072">For the preparation of tris(trimethylgermyl)arsine, 2.36 g of tris(trimethylsilyl)arsine (8 mmol) were mixed with 5.7 g of trimethylgermanium bromide (29 mmol). The solution was stirred at room temperature for 3 hours under argon. Then the solution was heated in an oil bath with temperature of 150° C. to distill off the trimethylgermanium bromide and to drive the reaction to completion. At this point the reaction mixture was an oily brown liquid with with black solid precipitating on the side of the flask. The product was purified by distillation under vacuum. <sup>1</sup>H NMR showed a singlet at 0.47 ppm referenced to toluene. See <figref>FIG. 1</figref>.</p>
+      <p id="p-00082-en" num="0073">For the preparation of tris(trimethylstannyl)arsine, 2.95 g of tris(trimethylsilyl)arsine and 6.98 g of trimethyltin chloride were mixed in a round bottom flask under argon. The solution was stirred for 3 hours and then evacuated to remove trimethyltin chloride before vacuum distilling the product. <sup>1</sup>H NMR showed a triplet (due to coupling with Sn) at 0.34 ppm referenced to toluene. See <figref>FIG. 1</figref>.</p>
+      <p id="p-00083-en" num="0074">Synthesis of Tris(Trimethylsilyl)Stibine.</p>
+      <p id="p-00084-en" num="0075">This synthesis was adapted from Becker et al., In W A Herrmann and H H Karsch, eds., <i>Synthetic Methods of Organometallic and Inorganic Chemistry</i>, Thieme, which is incorporated by reference in its entirety. It proceeded identically to the synthesis of tris(trimethylsilyl)arsine described above, with the following modifications:</p>
+      <p id="p-00085-en" num="0076">1. The amounts involved were 19 g NaK, 22 g antimony powder, 67 g trimethylsilyl chloride, and 800 mL DME.</p>
+      <p id="p-00086-en" num="0077">2. The NaK was added slowly (to maximize the formation of small droplets and thus maximize surface area).</p>
+      <p id="p-00087-en" num="0078">3. The NaK and antimony were allowed to reflux for four days.</p>
+      <p id="p-00088-en" num="0079">4. After removing most of the DME by vacuum, the product was not distilled all at once, to minimize the risk of thermal decomposition. Instead, small amounts were distilled in a Hickmann still as needed.</p>
+      <p id="p-00089-en" num="0080">
+        <sup>1</sup>H NMR showed one singlet at 0.392 ppm. See <figref>FIG. 2</figref>.</p>
+      <p id="p-00090-en" num="0081">Synthesis of Tris(Trimethylgermyl)Stibine.</p>
+      <p id="p-00091-en" num="0082">This synthesis was adapted from M. Atesa, et al., <i>Phosphorus, Sulfur, and Silicon and the Related Elements, </i>102:287-289, 1995; which is incorporated by reference in its entirety. 5 g of trimethylgermyl chloride and 3.7 g of impure tris(trimethylsilyl)stibene (65% wt in DME) were mixed in a round bottom flask under argon. The solution was stirred for 20 minutes and then heated in an oil bath (bath temperature was gradually increased to 135° C.) to remove trimethylgermyl chloride before vacuum distilling the product. <sup>1</sup>H NMR showed one singlet at 0.550 ppm. See <figref>FIG. 2</figref>.</p>
+      <heading id="h-00009-en" level="1">Example 1</heading>
+      <heading id="h-00010-en" level="1">Synthesis of InAs Nanocrystals</heading>
+      <p id="p-00092-en" num="0083">In a typical synthesis, a solution of tris(trimethylsilyl)arsine, tris(trimethylgermyl)arsine, or tris(trimethylstannyl)arsine in n-trioctylphosphine (TOP) was swiftly injected into a solution of indium(III) myristate in 1-octadecene at 150° C. The temperature was subsequently raised to 250° C. for growth of nanocrystals.</p>
+      <p id="p-00093-en" num="0084">The nanocrystals prepared from the different precursors had markedly different spectra (<figref>FIGS. 3A-3C</figref>). A more nearly monodisperse sample has better defined absorption features than a more polydisperse sample, due to a decreased degree of inhomogeneous broadening. Accordingly, absorption peak definition can be used as a guide to the size distribution of a nanocrystal population. Inspection of the spectra showed that nanocrystals synthesized from tri(trimethylgermyl)arsine were both smaller and had a narrower size distribution than those synthesized from tris(trimethylsilyl)arsine. It was apparent that the growth kinetics using different precursors were different based on the location of the peak absorption feature and the definition of this feature. See (<figref>FIGS. 3A-3C</figref>), which shows absorption spectra from three reactions using identical conditions with different arsenic precursors. <figref>FIG. 3A</figref>, tris(trimethylsilyl)arsine; <figref>FIG. 3B</figref>, tris(trimethylgermyl)arsine; <figref>FIG. 3C</figref>, tris(trimethylstannyl)arsine. The inset of (c) shows the absorption spectrum of InAs nanocrystals synthesized from tris(trimethylstannyl)arsine after 3 hrs with filtration to remove insoluble precipitates.</p>
+      <p id="p-00094-en" num="0085">The rapid, high temperature reaction makes direct study of reaction kinetics difficult. However, the growth kinetics can be monitored at a series of temperatures using variable temperature NMR. In this way, the thermodynamic properties associated with the chemical reaction (e.g., ΔH and ΔS) can be determined. By tracing the peak intensity (or integrated area) as a function of time (see <figref>FIG. 4</figref>), the reaction can be monitored in the NMR tube and the reaction rate determined quantitatively.</p>
+      <p id="p-00095-en" num="0086">Results for the reaction of tris(trimethylgermyl)arsine and tris(trimethylsilyl)arsine with indium (III) myrsitate (InMy<sub>3</sub>) are shown in <figref>FIG. 5</figref>. These data show that, at room temperature, the reaction with tris(trimethylsilyl)arsine was much faster. If the reaction at temperatures used in nanocrystal synthesis of is also faster for the silyl precursor than for the germyl precursor, then the sizes of the two samples shown in <figref>FIG. 3</figref> contradict general theoretical predictions and observations specific to the synthesis of cadmium selenide nanocrystals about the effect of precursor conversion rate on particle size. See, e.g., Jane Y Rempel et al., <i>J. Am. Chem. Soc., </i>131(12):4479-89, 2009; Flurin Hänseler. PhD thesis, MIT &amp; ETH Zurich, 2011; and Jonathan S. Owen, et al., <i>J. Am. Chem. Soc., </i>132(51):18206-13, 2010; each of which is incorporated by reference in its entirety.</p>
+      <heading id="h-00011-en" level="1">Example 2</heading>
+      <heading id="h-00012-en" level="1">Synthesis of Nanocrystals</heading>
+      <p id="p-00096-en" num="0087">Nanocrystals were prepared by reaction with indium(III) myristate (InMy<sub>3</sub>) using the different group-V sources under otherwise identical conditions: a modified version of previously reported procedures (P. M. Allen, et al., <i>J. Am. Chem. Soc. </i>2010, 132, 470-1; and D. Battaglia, X. Peng, <i>Nano Letters </i>2002, 2, 1027-1030, each of which is incorporated by reference in its entirety). 0.3 mmoles (240 mg) of indium myristate were placed in a three neck round bottom flask (25 mL). 4 mL of 1-octadecene were added, and the resulting mixture was heated under vacuum, turning clear before reaching 100° C. After degassing to a pressure of &lt;100 mtorr at 100° C., the solution was then placed under argon and heated to 130° C. In a nitrogen glovebox, 0.15 mmoles TME<sub>3</sub>V (tris(trimethyl)E-V, where E=Si, Ge, or Sn and V=P or As) were mixed into 1 mL of tri-n-octylphosphine (Strem, 97%), and rapidly injected into the solution with magnetic stirring at 1150 rpm. Two minutes after injection, the temperature controller was increased to 210° C. Aliquots were removed and their absorption spectra measured throughout the nanocrystal growth. The system was removed from heat after 20 minutes. Aliquots were removed from the growth solution and characterized by measuring absorbance spectra (<figref>FIGS. 6</figref><i>a</i>-<b>6</b><i>d</i>). In order to ensure that the results were as comparable as possible, all experimental parameters were kept the same (stirring rate, flask size, etc). The absorption spectra for the aliquots from the indium phosphide solutions prepared using TMGe<sub>3</sub>P and TMSi<sub>3</sub>P were similar (the absorption peak from the TMGe<sub>3</sub>P sample was slightly better defined), however the absorption spectra from the aliquots from the indium arsenide solutions prepared from TMGe<sub>3</sub>As showed significantly better defined features than those prepared from TMSi<sub>3</sub>As (the HWHM of nanocrystals prepared from TMGe<sub>3</sub>As was 37 nm vs. 45 nm for TMSi<sub>3</sub>As, a 21% difference). The sharp features in the absorption spectrum were an indication of a narrow particle size distribution, suggesting that the indium arsenide particles prepared from TMGe<sub>3</sub>As were more monodisperse than those prepared from the TMSi<sub>3</sub>As. Attempting the same synthesis using TMSn<sub>3</sub>P and TMSn<sub>3</sub>As did not produce nanocrystal samples with absorption features.</p>
+      <p id="p-00097-en" num="0088">During synthesis, the color change upon injection of group-V precursor seemed to occur smoothly over several seconds for the TMGe<sub>3</sub>V precursors, while nearly instantaneously for the TMSi<sub>3</sub>V precursors. To quantify this observation, an absorption dip probe was used to measure the rise in absorbance after precursor injection at 130° C., the injection temperature used for nanocrystal growth in <figref>FIGS. 6</figref><i>a</i>-<b>6</b><i>d</i>. Previous experiments have indicated that the extinction coefficient of quantum dots in the UV region scales with particle volume (C. A. Leatherdale, et al., <i>J. Phys. Chem. B </i>2002, 106, 7619-7622, which is incorporated by reference in its entirety). Thus, absorbance at 310 nm was used to monitor the formation of InAs and InP clusters (<figref>FIGS. 7</figref><i>a</i>-<b>7</b><i>b</i>). Although the absorbance in the UV rose quickly, the particles did not show absorption features without heating at elevated temperature. In order to directly compare the rate of absorbance rise upon injection of the two different precursors, a large excess of indium(III) myristate was used and the TMGe<sub>3</sub>As and TMSi<sub>3</sub>As solutions were injected alternately. This eliminated any source of error from variations in concentration. The absorbance rise appeared to be insensitive to when in the injection sequence they occurred. When the absorbance traces were normalized by the intensity change and overlaid for comparison, the two traces for each precursor were nearly identical (<figref>FIGS. 7</figref><i>c</i>-<b>7</b><i>d</i>). These results clearly showed that particle formation occurred more slowly for the TMGe<sub>3</sub>V precursors than for the TMSi<sub>3</sub>V precursors. In fact, the absorbance rise for the TMSi<sub>3</sub>V-based precursor occurred on a timescale that was competitive with the time required for mixing. Although these data clearly showed that the absorbance rise was much slower for the TMGe<sub>3</sub>V precursors than for the TMSi<sub>3</sub>V precursors, the data were difficult to directly attribute to molecular precursor conversion. To compare the rates of molecular precursor conversion, NMR spectroscopy was used to monitor the evolution of precursor concentration in time.</p>
+      <p id="p-00098-en" num="0089">An NMR tube was loaded with InMy<sub>3 </sub>and tri-n-octylphosphine (TOP). Just before the NMR tube was inserted into the instrument, a solution containing both group-V precursors was injected. A time series of NMR spectra (<figref>FIG. 8</figref><i>a</i>) showed that the TMSi<sub>3</sub>P peak disappeared much faster than the TMGe<sub>3</sub>P peak. The reaction was performed under pseudo-first order conditions, where the concentration of indium was &gt;10× that of the phosphorous and arsenic. Exponential fits to the data indicated that under these conditions the reaction rate of TMSi<sub>3</sub>P was more than 4× faster than the reaction rate of TMGe<sub>3</sub>P. The concentration of TME<sub>3</sub>P over time was consistent with a reaction with first order dependence on phosphorous precursor (<figref>FIG. 8</figref><i>b</i>). An intermediate was observed (<figref>FIG. 8</figref><i>a</i>) that was believed to be similar to that reported for the reaction of InMy<sub>3 </sub>with TMSi<sub>3</sub>P in the presence of amines (P. M. Allen, B. J. Walker, M. G. Bawendi, <i>Angew. Chem., Int. Ed. </i>2010, 49, 760-2, which is incorporated by reference in its entirety). This intermediate peak was observed to be present when the TMGe<sub>3</sub>P precursor was allowed to react without the presence of the TMSi<sub>3</sub>P precursor, and a second intermediate was also observed (<figref>FIGS. 9</figref><i>a </i>and <b>9</b><i>b</i>). The second intermediate occurred at 0.28 ppm and was obscured by the presence of TMSi-Myristate in <figref>FIG. 8</figref>.</p>
+      <p id="p-00099-en" num="0090">A similar experiment was performed with the two arsenic precursors. However the reaction rate of TMSi<sub>3</sub>As was too fast to observe, as no TMSi<sub>3</sub>As remained after the NMR tube containing the reaction mixture had been inserted into the NMR spectrometer and the instrument prepared for acquisition. However, the reaction of TMGe<sub>3</sub>As was readily observed to proceed from TMGe<sub>3</sub>As to TMGe-myristate. By assuming that the height of any remaining TMSi<sub>3</sub>As peak in the NMR spectrum was less than the level of the noise, and because the time between precursor mixing and the acquisition of the first spectrum was &lt;1.5 minutes, it was inferred that the rate constant for the reaction of TMSi<sub>3</sub>As was at least 30× faster than the reaction rate of TMGe<sub>3</sub>As under the same conditions. The reaction rate could also be slowed by increasing the concentration of TOP, an effect similar to that observed previously with indium phosphide and octylamine. In order to further characterize the reaction between InMy<sub>3 </sub>and TMGe<sub>3</sub>As, the concentration of InMy<sub>3 </sub>was varied and the reaction order in indium was determined to be second order. This result differed from the reaction order determined by observing the absorption rise times with varying concentrations of indium at 130° C. The discrepancy between the reaction order observed using these two sets of conditions points to a chemical mechanism that is sensitive to changes in temperature, TOP concentration, or both.</p>
+      <p id="p-00100-en" num="0091">Other embodiments are within the scope of the following claims.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method of making a semiconductor nanocrystal, comprising:
+<claim-text>contacting an M-containing compound with an X donor, wherein the X donor has formula (I):
+<claim-text>X(Y(R)<sub>3</sub>)<sub>3</sub>  (I)</claim-text></claim-text><claim-text>wherein</claim-text><claim-text>X is a group V element, wherein X is not P;</claim-text><claim-text>Y is Ge, Sn, or Pb; and</claim-text><claim-text>each R, independently, is alkyl, alkenyl, alkynyl, cycloalkyl, cycloalkenyl, heterocyclyl, aryl, or heteroaryl, wherein each R, independently, is optionally substituted by 1 to 6 substituents independently selected from hydrogen, halo, hydroxy, nitro, cyano, amino, alkyl, cycloalkyl, cycloalkenyl, alkoxy, acyl, thio, thioalkyl, alkenyl, alkynyl, cycloalkenyl, heterocyclyl, aryl, or heteroaryl.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein X is N, As, or Sb.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein Y is Ge.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein each R, independently, is alkyl, cycloalkyl, or aryl.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein each R, independently, is unsubstituted alkyl, unsubstituted cycloalkyl, or unsubstituted aryl.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the M-containing compound is an M-containing salt.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein M is a group III element.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The method of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein M is In.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the compound of formula (I) is tris(trimethylgermyl)nitride; tris(trimethylstannyl)nitride; tris(trimethylplumbyl)nitride; tris(trimethylgermyl)phosphide; tris(trimethylstannyl)phosphide; tris(trimethylplumbyl)phosphide; tris(trimethylgermyl)arsine; tris(trimethylstannyl)arsine; tris(trimethylplumbyl)arsine; tris(trimethylgermyl)stibine; tris(trimethylstannyl)stibine; or tris(trimethylplumbyl)stibine.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en" independent="true">
+      <claim-text>
+        <b>10</b>. A method of making a semiconductor nanocrystal, comprising:
+<claim-text>contacting an M-containing salt with an X donor, wherein the X donor has formula (I):
+<claim-text>X(Y(R)<sub>3</sub>)<sub>3</sub>  (I)</claim-text></claim-text><claim-text>wherein</claim-text><claim-text>X is As or Sb;</claim-text><claim-text>Y is Ge, Sn or Pb;</claim-text><claim-text>each R, independently, is unsubstituted alkyl or unsubstituted cycloalkyl; and</claim-text><claim-text>M is a group III element.</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en" independent="true">
+      <claim-text>
+        <b>11</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The method of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein Y is Ge.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The method of <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein M is In.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The method of <claim-ref idref="clm-00010-en">claim 10</claim-ref>, wherein the compound of formula (I) is tris(trimethylgermyl)nitride; tris(trimethylstannyl)nitride; tris(trimethylplumbyl)nitride; tris(trimethylgermyl)phosphide; tris(trimethylstannyl)phosphide; tris(trimethylplumbyl)phosphide; tris(trimethylgermyl)arsine; tris(trimethylstannyl)arsine; tris(trimethylplumbyl)arsine; tris(trimethylgermyl)stibine; tris(trimethylstannyl)stibine; or tris(trimethylplumbyl)stibine.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150252257A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252257A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150252257A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252257A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150252257A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252257A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150252257A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252257A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150252257A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252257A1-20150910-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150252257A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252257A1-20150910-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150252257A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252257A1-20150910-D00007.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150252257A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252257A1-20150910-D00008.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150252257A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252257A1-20150910-D00009.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150252257A1_00010.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252257A1-20150910-C00001.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150252257A1.PDF" type="pdf" size="834960" pages="18" />
+</lexisnexis-patent-document>

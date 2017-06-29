@@ -1,0 +1,1856 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150257412A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030227" date-changed="20151202" time-changed="021614">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121316284">
+        <country>US</country>
+        <doc-number>20150257412</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14438834</doc-number>
+        <date>20131031</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="regional">
+        <country>EP</country>
+        <doc-number>12190902</doc-number>
+        <date>20121031</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>A23K   1/16        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>23</class>
+        <subclass>K</subclass>
+        <main-group>1</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A23K   1/18        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>23</class>
+        <subclass>K</subclass>
+        <main-group>1</main-group>
+        <subgroup>18</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>A23K   1/1621      20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>K</subclass>
+        <main-group>1</main-group>
+        <subgroup>1621</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A23K   1/1618      20130101 LI20140630BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>K</subclass>
+        <main-group>1</main-group>
+        <subgroup>1618</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140630</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A23K   1/1634      20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>K</subclass>
+        <main-group>1</main-group>
+        <subgroup>1634</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A23K   1/1637      20130101 LI20130521BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>K</subclass>
+        <main-group>1</main-group>
+        <subgroup>1637</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130521</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A23K   1/1846      20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>K</subclass>
+        <main-group>1</main-group>
+        <subgroup>1846</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A23L   1/22091     20130101 LI20140512BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>23</class>
+        <subclass>L</subclass>
+        <main-group>1</main-group>
+        <subgroup>22091</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140512</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">16</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">FLAVOUR ADDITIVES</invention-title>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>MCGRANE</last-name>
+            <first-name>Scott</first-name>
+            <address>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+        <applicant sequence="2" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>TAYLOR</last-name>
+            <first-name>Andrew</first-name>
+            <address>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+        <applicant sequence="3" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>MARS, INCORPORATED</orgname>
+            <address>
+              <city>Mclean</city>
+              <state>VA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>McGrane</last-name>
+            <first-name>Scott</first-name>
+            <address>
+              <city>Melton Mowbray Leicestershire</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Taylor</last-name>
+            <first-name>Andrew</first-name>
+            <address>
+              <city>Melton Mowbray Leicestershire</city>
+              <country>GB</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>EP13072788</doc-number>
+        <date>20131031</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014068043</doc-number>
+        <date>20140508</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151221">
+      <main-family family-id="165558891">
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>3883DELNP2015</doc-number>
+            <kind>A</kind>
+            <date>20151002</date>
+          </document-id>
+          <application-date>
+            <date>20150506</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2914133</doc-number>
+            <kind>A1</kind>
+            <date>20150909</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013340861</doc-number>
+            <kind>A1</kind>
+            <date>20150528</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104837365</doc-number>
+            <kind>A</kind>
+            <date>20150812</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015536139</doc-number>
+            <kind>A</kind>
+            <date>20151221</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014068043</doc-number>
+            <kind>A1</kind>
+            <date>20140508</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257412</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="165558963">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150250210</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>IN</country>
+            <doc-number>3883DELNP2015</doc-number>
+            <kind>A</kind>
+            <date>20151002</date>
+          </document-id>
+          <application-date>
+            <date>20150506</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2914133</doc-number>
+            <kind>A1</kind>
+            <date>20150909</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2914134</doc-number>
+            <kind>A1</kind>
+            <date>20150909</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014068043</doc-number>
+            <kind>A1</kind>
+            <date>20140508</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014068044</doc-number>
+            <kind>A1</kind>
+            <date>20140508</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>AU</country>
+            <doc-number>2013340861</doc-number>
+            <kind>A1</kind>
+            <date>20150528</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104837365</doc-number>
+            <kind>A</kind>
+            <date>20150812</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2914131</doc-number>
+            <kind>A1</kind>
+            <date>20150909</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2914132</doc-number>
+            <kind>A1</kind>
+            <date>20150909</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>JP</country>
+            <doc-number>2015536139</doc-number>
+            <kind>A</kind>
+            <date>20151221</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150282506</doc-number>
+            <kind>A1</kind>
+            <date>20151008</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014068045</doc-number>
+            <kind>A1</kind>
+            <date>20140508</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014068047</doc-number>
+            <kind>A1</kind>
+            <date>20140508</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257412</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150257415</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20131031</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The present invention relates to the use of a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine or a mixture of two or more thereof; a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline and hydroxyproline or a mixture of two or more thereof and one or more furanones for increasing the palatability of a foodstuff to a companion animal. The invention also relates to a pet foodstuff or supplement comprising a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine or a mixture of two or more thereof; a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline and hydroxyproline or a mixture of two or more thereof and one or more furanones, and also to a method of increasing the palatability of a foodstuff to a companion animal.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150804</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015257412A1</docdb-publication-number>
+      <docdb-application-id>444510516</docdb-application-id>
+      <new-owner>MARS, INCORPORATED, VIRGINIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:MCGRANE, SCOTT;TAYLOR, ANDREW;SIGNING DATES FROM 20150727 TO 20150729;REEL/FRAME:036250/0808</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <p id="p-00001-en" num="0001">The present invention relates to the use of a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine or a mixture of two or more thereof; a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline and hydroxyproline or a mixture of two or more thereof and one or more furanones for increasing the palatability of a foodstuff to a companion animal. The invention also relates to a pet foodstuff or supplement comprising a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine or a mixture of two or more thereof; a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline and hydroxyproline or a mixture of two or more thereof and one or more furanones, and also to a method of increasing the palatability of a foodstuff to a companion animal.</p>
+      <p id="p-00002-en" num="0002">It is well known that many feline and canine companion animals are fussy with their food. An animal will often refuse to eat a foodstuff that it has been accepting over some time, or refuse to eat any more than a minimal amount of a foodstuff. Part of this phenomenon can be driven by subtle changes in the sensory profile of the raw materials. These changes might not be perceived by the human consumer, but due to a difference in the olfactory and gustatory systems, feline and canine companion animals may well perceive these differences. These sensory differences can be due to natural variation of the raw materials used or when materials are in short supply and have to be substituted with alternatives. This can be very frustrating for the owner and can result in the owner perceiving that the animal is unhappy and not enjoying its food. An animal may also fail to ingest its required amount of essential nutrients if not consuming an adequate amount of food available to it. Therefore, it can clearly be seen that there exists a need for a way to encourage companion animals to eat the foodstuff with which it is provided. Many solutions have been suggested to overcome this problem. Most commercially available pet foods are provided in a range of different flavours and/or textures. However, the companion animal owner will know that often a companion animal will suddenly, for no clear reason, refuse the flavour that the owner perceives to be its most preferred. Much research has been carried out on the flavour preferences of companion animals, by offering them a choice of different foodstuffs. The present inventors have taken this research further by studying the key taste receptor in cat, the umami receptor (umami flavour is also referred to as savoury or meat flavour and identifying the associated taste mechanisms. They have looked at a range of compounds, volatile and non-volatile, that are found in naturally occurring foodstuffs and established the interactions of these compounds and therefore developed a combination for optimal taste. Of particular interest and importance has been a focus on compounds that interact with and are perceived via the umami receptor.</p>
+      <p id="p-00003-en" num="0003">Surprisingly, the inventors have found that companion animals show a strong and consistent preference for certain combinations of compounds, whether presented to the animals in water, a gel or in a model foodstuff. The present invention therefore relates to a use of a combination of compounds that is highly desirable to a companion animal for increasing palatability of a foodstuff to a companion animal. The companion animal is preferably a mammalian companion animal.</p>
+      <p id="p-00004-en" num="0004">When a companion animal eats its recommended amount of (main meal) foodstuff each day, the animal will receive its required level of vitamins and minerals, and thus is highly likely to remain healthy and happy. Furthermore, the owner is satisfied that the animal is eating well. The inventors have identified certain volatile and non-volatile compounds that are present in natural products that particularly appeal to companion animals in combination. Non-volatile compounds relate to taste, (i.e. they are detected on the tongue); volatile compounds relate to aroma, and are compounds that affect the smell of the food, (i.e. compounds detected in the nose); and some compounds fall within both categories. The combination of both taste and aroma give the food its flavour. Flavour, as used herein, therefore encompasses both the taste and aroma of a foodstuff.</p>
+      <p id="p-00005-en" num="0005">The invention, therefore, provides as a first aspect the use of a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine or a mixture of two or more thereof; a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline and hydroxyproline or a mixture of two or more thereof and one or more furanones for increasing the palatability of a foodstuff to a companion animal and, therefore, for use in ensuring an adequate intake of food stuff by a companion animal.</p>
+      <p id="p-00006-en" num="0006">The first amino acid is selected from the group consisting of glycine, asparagine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine or a mixture of 2, 3, 4, 5, 6, 7, 8, 9, 10 or 11 thereof. The amino acid is preferably in the L-amino acid form.</p>
+      <p id="p-00007-en" num="0007">The second amino acid is selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline and hydroxyproline or a mixture of 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 or 12 thereof. The amino acid is preferably in the L-amino acid form.</p>
+      <p id="p-00008-en" num="0008">The furanone is suitably as set out in formula I or formula II, below, optionally substituted by hydroxyl, C<sub>1-6 </sub>alkyl, C<sub>1-6 </sub>alkoxy.</p>
+      <p id="p-00009-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="56.81mm" wi="58.25mm" alt="embedded image" img-content="chem" file="US20150257412A1_00017.PNG" img-format="png" original="US20150257412A1-20150917-C00001.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00010-en" num="0009">Each R<sub>1 </sub>and R<sub>2 </sub>are independently selected from hydrogen or C<sub>1-6 </sub>alkyl, preferably hydrogen, methyl or ethyl;</p>
+      <p id="p-00011-en" num="0000">R<sub>3 </sub>is hydrogen, hydroxyl or C<sub>1-6 </sub>alkyl, preferably methyl; <br /> R<sub>4 </sub>is hydrogen, hydroxyl or C<sub>1-6 </sub>alkyl, preferably hydroxyl; <br /> R<sub>5 </sub>is hydrogen, hydroxyl, C<sub>1-6 </sub>alkyl, C<sub>1-6 </sub>alkoxy, 5 or 6 membered saturated heterocycle or —OC(O)R<sub>7</sub>, preferably hydroxyl, —OCH<sub>3</sub>, —OCH<sub>2</sub>CH<sub>3</sub>, —OC(O)CH<sub>3</sub>, methyl or pyrrolidine; <br /> R<sub>6 </sub>is hydrogen or C<sub>1-6 </sub>alkyl, preferably hydrogen or methyl; <br /> R<sub>7 </sub>is C<sub>1-6 </sub>alkyl, preferably methyl. </p>
+      <p id="p-00012-en" num="0010">The furanone may be selected from the group consisting of the furanones set out in Table 1, or a mixture of 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 or 12 thereof. Suitably, the furanone is furaneol, homofuraneol, sotolon, norfuraneol, abhexon, mesifuranone, dimethoxyfuranone, or norfuraneol, as defined in Table 1. Alternatively, the furanone may be selected from the group consisting of furaneol, sotolon and abhexon, as defined herein in Table 1. Sotolon may also be referred to as sotolone.</p>
+      <p id="p-00013-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="center" />
+              <colspec colname="2" colwidth="119pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Key Furanones</entry>
+                  <entry>Additional Furanones</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>
+                    <chemistry id="chem-00002-en" num="00002">
+                      <img id="img-00002-en" he="21.00mm" wi="19.05mm" alt="embedded image" img-content="table" file="US20150257412A1_00018.PNG" img-format="png" original="US20150257412A1-20150917-C00002.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>
+                    <chemistry id="chem-00003-en" num="00003">
+                      <img id="img-00003-en" he="33.10mm" wi="19.05mm" alt="embedded image" img-content="table" file="US20150257412A1_00019.PNG" img-format="png" original="US20150257412A1-20150917-C00003.TIF" />
+                    </chemistry>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>
+                    <chemistry id="chem-00004-en" num="00004">
+                      <img id="img-00004-en" he="23.45mm" wi="24.13mm" alt="embedded image" img-content="table" file="US20150257412A1_00020.PNG" img-format="png" original="US20150257412A1-20150917-C00004.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>
+                    <chemistry id="chem-00005-en" num="00005">
+                      <img id="img-00005-en" he="25.40mm" wi="24.72mm" alt="embedded image" img-content="table" file="US20150257412A1_00021.PNG" img-format="png" original="US20150257412A1-20150917-C00005.TIF" />
+                    </chemistry>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>
+                    <chemistry id="chem-00006-en" num="00006">
+                      <img id="img-00006-en" he="21.08mm" wi="19.90mm" alt="embedded image" img-content="table" file="US20150257412A1_00022.PNG" img-format="png" original="US20150257412A1-20150917-C00006.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>
+                    <chemistry id="chem-00007-en" num="00007">
+                      <img id="img-00007-en" he="28.79mm" wi="22.69mm" alt="embedded image" img-content="table" file="US20150257412A1_00023.PNG" img-format="png" original="US20150257412A1-20150917-C00007.TIF" />
+                    </chemistry>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>
+                    <chemistry id="chem-00008-en" num="00008">
+                      <img id="img-00008-en" he="20.74mm" wi="16.09mm" alt="embedded image" img-content="table" file="US20150257412A1_00024.PNG" img-format="png" original="US20150257412A1-20150917-C00008.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>
+                    <chemistry id="chem-00009-en" num="00009">
+                      <img id="img-00009-en" he="24.05mm" wi="23.96mm" alt="embedded image" img-content="table" file="US20150257412A1_00025.PNG" img-format="png" original="US20150257412A1-20150917-C00009.TIF" />
+                    </chemistry>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>
+                    <chemistry id="chem-00010-en" num="00010">
+                      <img id="img-00010-en" he="21.08mm" wi="24.81mm" alt="embedded image" img-content="table" file="US20150257412A1_00026.PNG" img-format="png" original="US20150257412A1-20150917-C00010.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>
+                    <chemistry id="chem-00011-en" num="00011">
+                      <img id="img-00011-en" he="23.79mm" wi="24.13mm" alt="embedded image" img-content="table" file="US20150257412A1_00027.PNG" img-format="png" original="US20150257412A1-20150917-C00011.TIF" />
+                    </chemistry>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry />
+                  <entry>
+                    <chemistry id="chem-00012-en" num="00012">
+                      <img id="img-00012-en" he="26.50mm" wi="20.83mm" alt="embedded image" img-content="table" file="US20150257412A1_00028.PNG" img-format="png" original="US20150257412A1-20150917-C00012.TIF" />
+                    </chemistry>
+                  </entry>
+                  <entry>
+                    <chemistry id="chem-00013-en" num="00013">
+                      <img id="img-00013-en" he="24.05mm" wi="23.96mm" alt="embedded image" img-content="table" file="US20150257412A1_00029.PNG" img-format="png" original="US20150257412A1-20150917-C00013.TIF" />
+                    </chemistry>
+                  </entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00014-en" num="0011">Optionally, the invention may also include the use of a pyrophosphate, such as tetra potassium pyrophosphate or a disodium pyrophosphate. Polyphosphates may be included in the composition also, such as sodium tripolyphosphate. The pyrophosphates and/or polyphosphates may be present in the composition at a concentration of 1 mM or above. Suitably, the concentration of pyrophosphate and/or polyphosphate may be 5 mM, 10 mM, 15 mM, 20 mM, 25 mM, 30 mM, 40 mM, 50 mM, 100 mM or 500 mM.</p>
+      <p id="p-00015-en" num="0012">The invention includes a composition comprising a first amino acid, a second amino acid and one or more furanones, as herein defined, for use in increasing the palatability of a foodstuff to a companion animal. The composition may also comprise a pyrophosphate and/or polyphosphate as herein defined.</p>
+      <p id="p-00016-en" num="0013">The first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine or a mixture of two or more thereof; and a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline and hydroxyproline or a mixture of two or more thereof may be present (individually or as a combination) in an amount of less than 1M, 1 mM to 1M, 250 mM to 1M, 5 mM to 500 mM, 10 mM to 100 mM, 10 mM to 50 mM or 20 mM to 50 mM. The amount of amino acid may be less than 200 mM, less than 100 mM, less than 20 mM or less than 10 mM. The amino acid(s) may be present in an amount of 25 mM, 50 mM or 60 mM.</p>
+      <p id="p-00017-en" num="0014">The one or more furanones may be present (individually or as a combination) at a concentration of greater than 0.005 ppm, 0.001 ppm to 40 ppm, 0.005 ppm to 20 ppm, 0.001 ppm to 5 ppm, 1 ppm to 10 ppm or 2 ppm to 5 ppm. The furanone(s) may be present in an amount less than 40 ppm. The furanone(s) may be present in an amount of 4 ppm.</p>
+      <p id="p-00018-en" num="0015">The amino acids and the one or more furanones for use in the invention are in addition to those found naturally in meat, vegetable or dairy products that may form part of a food stuff. The amino acid(s) and furanone(s) may be added to a pet food during or after manufacture. The amino acid(s) and furanone(s) are added in order to enhance or optimise the flavour profile of the basic meat (or other macronutrient) ingredients of the pet food.</p>
+      <p id="p-00019-en" num="0016">The companion animal is preferably a feline animal (cat), or a canine animal (dog) although it may also be a guinea pig, a rabbit, bird or a horse.</p>
+      <p id="p-00020-en" num="0017">The invention also provides as a second aspect a pet foodstuff comprising a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine or a mixture of two or more thereof; a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline and hydroxyproline or a mixture of two or more thereof, and one or more furanones. The foodstuff may be packaged, wherein the packaging carries written or graphic information indicating that the pet foodstuff is meant to be consumed by a cat or a dog, or a guinea pig, a rabbit, a bird or a horse. The suitable and preferred features of the first aspect also apply to the second aspect, mutatis mutandis.</p>
+      <p id="p-00021-en" num="0018">It should be noted that taurine is not included as an amino acid in respect of the invention. In fact, taurine is an organic sulfonic acid and lacks the carboxyl group which is characteristic of amino acids i.e. there is no COOH group. However in the art, such as described in US 2006/0286276 and US 2006/286275, taurine is often described as an amino acid, which is incorrect. Additionally, since taurine does not contain a carboxyl group it is postulated that it does not fit in the same way into the binding site of the umami receptor as does a first amino acid as defined by the invention.</p>
+      <p id="p-00022-en" num="0019">The invention also relates to, as a third aspect, a composition comprising a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine or a mixture of two or more thereof; a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline and hydroxyproline or a mixture of two or more thereof and one or more furanones for use in increasing the acceptance and/or ensuring adequate intake of a foodstuff in a companion animal. Increasing the palatability leads to increased enjoyment and acceptance of the foodstuff to the animal. Increased acceptance and enjoyment helps to overcome the fussiness of a companion animal with regard to food. Since the animal accepts and enjoys the foodstuff in accordance with the invention, it is more likely to reach its required daily calorie and nutrient intake.</p>
+      <p id="p-00023-en" num="0020">The composition may be for use in increasing the appetising appeal of a foodstuff to an animal in order to encourage an animal to eat a healthy amount of foodstuff. Thus, the use of a composition comprising a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine or a mixture of two or more thereof; a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline and hydroxyproline or a mixture of two or more thereof and one or more furanones in increasing the appetising appeal of a foodstuff; in encouraging a healthy intake of a foodstuff; in ensuring the required intake of nutrients and calories in a companion animal, is included in the present invention. By healthy level it is meant an amount that enables the animal to maintain or achieve an intake contributing to its overall general health in terms of micronutrients, macronutrients and calories. By this it is meant that an animal may eat sufficient calories and receive a nutritionally complete diet without needing to eat excess calories and thus maintaining a healthy balance, such as set out in the “Mars Petcare Essential Nutrient Standards”.</p>
+      <p id="p-00024-en" num="0021">As mentioned above, the umami receptor has been studied as a target for flavour compounds. Many studies relating to the activation of the umami receptor focus on the human umami receptor. However, surprisingly the inventors have found that the umami receptor of humans differs in sequence to that of certain companion animals as shown in <figref>FIG. 13</figref>. Moreover, even though certain companion animals have shown preferences according to the art to particular amino acids, these preferences differ from animal to animal. Therefore, it is not possible to predict from work carried out in humans whether a companion animal would have the same response to the same amino acids.</p>
+      <p id="p-00025-en" num="0022">In the human umami receptor, the key active site residues involved in glutamate and IMP binding have been identified by in silico modelling and by site-directed mutagenesis. These studies show that the key residues are at positions H71, T149, S172, D192, Y220, E301 S306 and S385 and the residues are highly conserved in other species. A comparison of the human, pig, mouse and cat sequences showed only two changes in these particular residues (pig L220 and mouse A385).</p>
+      <p id="p-00026-en" num="0023">The high level of conservation in these active site residues does not fit well with the different amino acid specificity for the umami receptor in the species studied. A study on pig umami receptors identified other residues in the active site that were reported as being important in binding. The amino acids in these locations were conserved between humans and pigs (R277, R307 and H308). On the basis of this similarity, pig umami was proposed as a model for human umami. However, the pig umami receptor showed a wide amino acid specificity (glutamate, alanine, asparagine, glutamine, serine and threonine) compared to the usual glutamate and aspartate ligands that are associated with human umami receptor activation. A report that used some other amino acids (glycine, alanine, serine) at high concentrations (up to 1M) suggested that these compounds delivered a umami sensation in humans but the effect was only monitored using sensory analysis and no receptor studies were reported. Thus it seems that the range of amino acids that activate the human umami receptor are very limited compared to other species and that the residues identified so far do not satisfactorily explain the difference in amino acid specificity between the pig and human umami receptors.</p>
+      <p id="p-00027-en" num="0024">The invention also provides a method of enhancing the umami flavour/taste of a foodstuff, the method comprising adding to or including in the foodstuff a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine or a mixture of two or more thereof; and a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline and hydroxyproline or a mixture of two or more thereof and one or more furanones.</p>
+      <p id="p-00028-en" num="0025">By enhancing it is meant that the umami flavour is detected more strongly/more intensely by the animal. The addition of a furanone synergistically increases the umami flavour potency.</p>
+      <p id="p-00029-en" num="0026">The present invention also provides a method of increasing an animal's preference for a foodstuff, the method comprising the addition of a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine or a mixture of two or more thereof; a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline and hydroxyproline or a mixture of two or more thereof and a furanone to the foodstuff. Also provided is a method of enhancing the umami flavour of a foodstuff, the method comprising the addition of a nucleotide, a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine or a mixture of two or more thereof; a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline and hydroxyproline or a mixture of two or more thereof and a furanone to the foodstuff. A method of increasing the meaty (savoury) flavour of a foodstuff is also achieved by the use of a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine or a mixture of two or more thereof a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline and hydroxyproline and a furanone as described herein. The combination of the three components enables them to work in synergy to enhance umami flavour perception.</p>
+      <p id="p-00030-en" num="0027">As a further aspect, the invention relates to a process for producing a pet foodstuff comprising a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine or a mixture of two or more thereof; a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline and hydroxyproline or a mixture of two or more thereof and one or more furanones, the method comprising the steps of adding and mixing a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine or a mixture of two or more thereof; a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline and hydroxyproline or a mixture of two or more thereof and one or more furanones with a pet foodstuff. The addition and/or mixing may be carried out prior to, during or after formulating, processing or packaging the foodstuff. The addition and/or mixing of the first amino acid, the second amino acid and furanone may be sequential or simultaneous.</p>
+      <p id="p-00031-en" num="0028">All features of all aspects apply to all other aspects, mutatis mutandis.</p>
+      <p id="p-00032-en" num="0029">The inventors have found that the addition of a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine or a mixture of two or more thereof a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline and hydroxyproline or a mixture of two or more thereof and one or more furanones to a pet food product significantly increases the preference of a companion animal for the foodstuff. The animals show a strong preference for a foodstuff or water comprising a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine or a mixture of two or more thereof; a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline and hydroxyproline or a mixture of two or more thereof and one or more furanones over a foodstuff or water having none, or one or two of these compounds. This overcomes the difficulties associated with fussy animals and ensures an animal eats the entirety of the recommended daily amount of foodstuff provided to it, resulting in the health and wellbeing of the animal as well as the peace of mind of the owner.</p>
+      <p id="p-00033-en" num="0030">The advantage, therefore, of a three component mixture for inclusion in a foodstuff is several-fold: an animal will be encouraged to eat the foodstuff on a consistent and long term basis; the synergistic effect means that a lower amount of each of the ingredients needs to be included in a foodstuff, meaning cost effective use of each of the amino acids and furanone.</p>
+      <p id="p-00034-en" num="0031">Without wishing to be bound by theory, the present inventors believe that the umami taste receptor on the tongue of an animal can detect a first amino acid (importantly, selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine) and an alternative receptor or receptor detects the second amino acid (selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline and hydroxyproline) and thus, the effect of combining such a first amino acid and a second amino acid in the composition provides more than an additive effect of each component individually to the animal. This effect is further amplified by the addition of a furanone. The umami receptor is a heterodimeric transmembrane protein receptor and is also referred to in the art as T1R1/T1R3.</p>
+      <p id="p-00035-en" num="0032">The present application shows that through in silico modelling of a non-human umami receptor and in vitro assays using a non-human umami receptor the inventors have found that the first amino acids of the present invention, (namely glycine, asparagine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine) are each able to bind to and activate the umami receptor to different extents. The same in vitro assay demonstrated that the amino acids from the second group do not activate the umami receptor, and therefore are likely to bind and activate one or more different receptors. The positive acceptance of amino acids of the second group (aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline and hydroxyproline), shown in in vivo tests confirm that these amino acids exert a flavour effect.</p>
+      <p id="p-00036-en" num="0033">Further modelling of the cat umami receptor identified two other positions in the active site (170 and 302) that contained very different residues between human and other species and could potentially modify the access of amino acids of group one to the binding site and also modify the binding behaviour of such amino acids. It appears that the binding of one of the first amino acids of the invention may change the conformation of the umami receptor. As can be seen in <figref>FIG. 12</figref>, the receptor could be described in terms of a Venus Fly Trap, wherein the binding site consists of a structure similar to ‘jaws’, which close upon being bound by the compounds according to the invention. Once the amino acid of group one has bound within the “jaws” of the receptor, the receptor may be more amenable to the binding of other flavour components. It can be said that the amino acid potentially optimises the molecular environment for receptor binding of other molecules. It is hypothesised that amino acid ligands have a primary binding site in the T1R1 active site but they also make interactions with other residues around the active site. The nature and extent of the interactions depends on the functional groups present in the amino acid side chain e.g. carboxyl, amino or hydrophobic groups. Thus changes in other residues in the active site are postulated as a possible reason for the different amino acid binding specificities observed between species. Furthermore, it is postulated that once the amino acid of group one has bound, the furanone interacts synergistically to increase the umami flavour perception. This interaction may occur by cross talk between binding sites or during the transduction and neural processes.</p>
+      <p id="p-00037-en" num="0034">The flytrap domain consists of two lobes, an upper lobe and a lower lobe that are connected by a region known as the hinge, (<figref>FIG. 12</figref>). The flytrap transitions from an open confirmation to a closed conformation upon binding of an amino acid of group one.</p>
+      <p id="p-00038-en" num="0035">Further in vitro testing by the inventors has shown that the amino acids of the second group do not activate the umami receptor, as mentioned above.</p>
+      <p id="p-00039-en" num="0036">Thus, the amino acids (selected from those listed herein) appear to work together in a coordinated manner increasing the perception of both compounds by the animal on one or more taste receptors when they are delivered together in a composition. Again, without wishing to be bound by theory, it appears that a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine or a mixture of two or more thereof; and a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline and hydroxyproline or a mixture of two or more thereof, complement each other by binding to different binding sites/receptors. The umami flavour perception created from the amino acids binding is further increased by the presence of a furanone, which acts in a synergistic manner.</p>
+      <p id="p-00040-en" num="0037">The first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine all have in common an uncharged side chain, and it should be noted that this list does not include cyclic amino acids, spyro amino acids or alpha disubstituted amino acids. Furthermore, the types of amino acids that bind to the umami receptor to increase the perception of such compounds by an animal may include aromatic, polar, lipophilic or small saturated ring amino acids.</p>
+      <p id="p-00041-en" num="0038">As mentioned above, in addition to in silico modelling of the feline umami receptor, sequence alignments of the human, cat and dog receptors have been performed. Interestingly, the human sequence alignment shows that two amino acids at position 170 and 302 (numbered in relation to the human T1R1 receptor) are found as alanine residues in human, whereas these positions are glutamate and aspartate in the other species. Additionally, the feline umami receptor does not bind aspartate or glutamate, which are natural ligands for the human T1R1/T1R3 receptor. Therefore, due to these significant differences, it would not be expected by the skilled person that compounds that are known to bind to the human receptor would affect the umami receptor of other animals as described herein.</p>
+      <p id="p-00042-en" num="0039">It is noted that Yoshi et al., (<i>Synergistic Effects of </i>5′-<i>Nucleotides on Rat Taste Responses to Various Amino Acids, Brain Research, </i>367 (1986) 45-51), conclude that a synergistic effect is seen between the amino acids and nucleotides. However, the experiments described were not carried out in vivo, but rather utilised in vitro nerve signalling. Notably, it was assumed that a nerve response was concluded to be a positive response. However, as it is well known in the art, a nerve response can also be a negative response for an animal i.e. in vivo a nerve response could be a negative taste perception. Further, it can be seen that the amino acids discovered to be most responsive are not those that correlate to the information provided by the present invention. This is almost certainly due to the ‘artificial’ environment in which the amino acids were tested by Yoshi et al.,</p>
+      <p id="p-00043-en" num="0040">U.S. Pat. No. 3,524,747 describes the addition of a minimum of seven amino acids to a foodstuff to impart a “meaty” flavour. However, although a combination of seven amino acids could be contemplated by the present invention, the knowledge obtained by the inventors (that certain amino acids and a furanone achieve increased palatability) enables fewer than seven amino acids to be utilised to increase the palatability of a foodstuff.</p>
+      <p id="p-00044-en" num="0041">It is notable that none of the prior art known to the inventors contemplates the use of at least two amino acids, (particularly, a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine or a mixture of two or more thereof; and a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline and hydroxyproline or a mixture of two or more thereof) together with a furanone for enhancing the flavour of a foodstuff for a companion animal. As mentioned, the amino acids are thought to work in a synergistic way; the first amino acids binding to the umami receptor whereas the second amino acids do not appear to bind to the umami receptor, but having a mechanism of action through a different receptor or receptors.</p>
+      <p id="p-00045-en" num="0042">The amino acids and furanone according to the present invention may be incorporated into any product which an animal, such as a dog or a cat, may consume in its diet. Thus, the invention covers standard food products, supplements, pet food, drinks, snacks and treats. The food product is preferably a cooked product. It may incorporate meat or animal derived material (such as beef, chicken, turkey, lamb, blood plasma, marrowbone etc. or two or more thereof). The food stuff alternatively may be meat free (preferably including a meat substitute such as soya, maize gluten or a soya product) in order to provide a protein source. The product may contain additional protein sources such as soya protein concentrate, milk proteins, gluten etc. The product may also contain a starch source, such as gelatinised starch, such as one or more grains (e.g. wheat, corn, rice, oats, barely etc) or may be starch free. A typical dry commercial cat and dog food contains about 10-70% crude protein, about 10-60% fat and the remainder being carbohydrate, including dietary fibre and ash. A typical wet, or moist product contains (on a dry matter basis) about 40% fat, 50% protein and the remainder being fibre and ash. The present invention is particularly relevant for a pet foodstuff as herein described which is sold as a diet, foodstuff or supplement for a cat or dog. In the present text the terms “domestic” dog and “domestic” cat mean dogs and cats, in particular <i>Felis domesticus </i>and <i>Canis domesticus</i>. Preferably, the pet foodstuff will meet the macronutrient requirements of an animal preferably a ratio of protein:fat:carbohydrate of approximately 50:40:10 for feline animals and 30:60:10 for a canine animal.</p>
+      <p id="p-00046-en" num="0043">As can be seen from the examples, below, it has been surprisingly found that a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine or a mixture of two or more thereof; a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline and hydroxyproline or a mixture of two or more thereof, and a furanone of the invention provide a greater than additive effect when presented to an animal. In other words, the preference of a companion animal for the combination of a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan and tyrosine or a mixture of two or more thereof; a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline and hydroxyproline or a mixture of two or more thereof is greater than an additive effect of the preference for any or each of the individual compounds. The addition of a furanone increases this preference to a greater extent. That is, inclusion of a furanone increases preference by more than the additive effect of the preference for the furanone alone.</p>
+      <p id="p-00047-en" num="0044">Thus, the unexpected benefit of the combination of the amino acids and one or more furanones is increased palatability. Without wishing to be bound by theory, the present inventors believe that this is due to the conformation and positioning of the binding site of the umami receptor for a first amino acid, the alternative receptor(s) for a second amino acid and the enhancing effect of furanone, as described above.</p>
+    </summary>
+    <description-of-drawings>
+      <p id="p-00048-en" num="0045">The invention will now be described in reference to the following Figures and Examples in which:</p>
+      <p id="p-00049-en" num="0046">
+        <figref>FIG. 1</figref> shows the results in a difference test of a composition comprising 25 mM proline+25 mM histidine with a composition comprising 50 mM histidine only;</p>
+      <p id="p-00050-en" num="0047">
+        <figref>FIG. 2</figref> shows the results in a difference test of a composition comprising 25 mM proline+25 mM histidine with a composition comprising 50 mM proline only;</p>
+      <p id="p-00051-en" num="0048">
+        <figref>FIG. 3</figref> shows the results in a difference test of a composition comprising 25 mM threonine+25 mM histidine with a composition comprising 50 mM threonine only;</p>
+      <p id="p-00052-en" num="0049">
+        <figref>FIG. 4</figref> shows the results in a difference test of a composition comprising 25 mM alanine+25 mM threonine with a composition comprising 50 mM alanine only.</p>
+      <p id="p-00053-en" num="0050">
+        <figref>FIG. 5</figref> shows the results in a difference test of a composition comprising 25 mM alanine+25 mM threonine with a composition comprising 50 mM threonine only;</p>
+      <p id="p-00054-en" num="0051">
+        <figref>FIG. 6</figref> shows the results in a difference test of a composition comprising 25 mM glycine+25 mM threonine with a composition comprising 50 mM glycine only;</p>
+      <p id="p-00055-en" num="0052">
+        <figref>FIG. 7</figref> shows the results in a difference test of a composition comprising 25 mM glycine+25 mM threonine with a composition comprising 50 mM threonine only;</p>
+      <p id="p-00056-en" num="0053">
+        <figref>FIG. 8</figref> shows the results of a difference test of a composition comprising 25 mM histidine+25 mM proline+4 ppm furaneol with a composition comprising 25 mM proline+25 mM histidine;</p>
+      <p id="p-00057-en" num="0054">
+        <figref>FIG. 9</figref> shows the resulting dose response curves of each first amino acid of the invention that were screened in vitro for their ability to activate the T1R1/T1R3 receptor in the presence of 0.2 mM IMP—the corresponding EC<sub>50 </sub>values are shown in the table;</p>
+      <p id="p-00058-en" num="0055">
+        <figref>FIG. 10</figref> shows the resulting dose response curves of some second amino acids of the invention that were screened in vitro for their ability to activate the T1R1/T1R3 receptor in the presence of 0.2 mM IMP—the corresponding EC<sub>50 </sub>values are shown in the table;</p>
+      <p id="p-00059-en" num="0056">
+        <figref>FIG. 11</figref> shows the predicted structure of the T1R1/T1R3 umami receptor;</p>
+      <p id="p-00060-en" num="0057">
+        <figref>FIG. 12</figref> shows a schematic of the predicted structure of the umami receptor; and</p>
+      <p id="p-00061-en" num="0058">
+        <figref>FIG. 13</figref> shows a sequence alignment of the human, feline and canine umami receptors.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00001-en" level="1">EXAMPLES</heading>
+      <p id="p-00062-en" num="0059">All amino acids of the examples are of the L-form.</p>
+      <heading id="h-00002-en" level="1">Example 1</heading>
+      <p id="p-00063-en" num="0060">Cats were allowed access to water containing either 25 mM proline+25 mM histidine with a composition comprising 50 mM histidine. The methodology used a 2-bottle choice test with 24 cats (the final number of cats for each test can vary due to data being discarded by spillage, etc.). Cats were housed individually during trial periods and had free access to water available between testing periods. The test involved a choice test between the tastant/mixture at a given concentration dissolved in deionised water versus deionised water only or another tastant/mixture. Control was made for positional bias (e.g. A/B exposure 1 and B/A exposure 2) and evaporation loss. The testing time was 36 hours (i.e. 18 hours per day, allowing a two-day crossover). Following two consecutive days of each testing, cats had two consecutive days of rest. Cats were offered a dry diet as a single meal at the start of the test period for one hour, calculated to meet the individual requirements for each cat.</p>
+      <p id="p-00064-en" num="0061">The results are shown in the table below, and in <figref>FIG. 1</figref>.</p>
+      <heading id="h-00003-en" level="2">Analysis of Intake g</heading>
+      <heading id="h-00004-en" level="2">ANOVA Table for Fixed Effects</heading>
+      <p id="p-00065-en" num="0062" />
+      <p id="p-00066-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="70pt" align="left" />
+              <colspec colname="1" colwidth="84pt" align="center" />
+              <colspec colname="2" colwidth="63pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Degrees of Freedom</entry>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="49pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Factor</entry>
+                  <entry>Numerator</entry>
+                  <entry>Denominator</entry>
+                  <entry>F-value</entry>
+                  <entry>P-value</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Product Difference</entry>
+                  <entry>1</entry>
+                  <entry>23</entry>
+                  <entry>15.78</entry>
+                  <entry>0.0006</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00005-en" level="2">Table of Mean Product Difference, Standard Error &amp; 95% Confidence Intervals</heading>
+      <p id="p-00067-en" num="0063" />
+      <p id="p-00068-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="91pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Product</entry>
+                  <entry />
+                  <entry>Standard</entry>
+                  <entry>95% Confidence Interval</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Difference</entry>
+                  <entry>Mean</entry>
+                  <entry>Error</entry>
+                  <entry>Lower</entry>
+                  <entry>Upper</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Histidine − His + Pro</entry>
+                  <entry>−43.60</entry>
+                  <entry>10.98</entry>
+                  <entry>−66.30</entry>
+                  <entry>−20.89</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00069-en" num="0064">It can be seen that the amount of proline+histidine intake was on average 43.60 g more than histidine alone intake, i.e. the combination of proline and histidine was significantly preferable to the animals over histidine alone.</p>
+      <heading id="h-00006-en" level="1">Example 2</heading>
+      <p id="p-00070-en" num="0065">The difference test was carried out as for Example 1, however, the composition containing 25 mM proline+25 mM histidine was compared with a composition containing 50 mM proline only.</p>
+      <p id="p-00071-en" num="0066">The results are shown below and in <figref>FIG. 2</figref>.</p>
+      <heading id="h-00007-en" level="2">Analysis of Intake g</heading>
+      <heading id="h-00008-en" level="2">ANOVA Table for Fixed Effects</heading>
+      <p id="p-00072-en" num="0067" />
+      <p id="p-00073-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="91pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Degrees of Freedom</entry>
+                  <entry />
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Factor</entry>
+                  <entry>Numerator</entry>
+                  <entry>Denominator</entry>
+                  <entry>F-value</entry>
+                  <entry>P-value</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Product Difference</entry>
+                  <entry>1</entry>
+                  <entry>24</entry>
+                  <entry>26.95</entry>
+                  <entry>0.0000*</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="left" id="entry-00001-en">*0.0000 indicates a FIGURE of less than 0.0001</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00009-en" level="2">Table of Mean Product Difference, Standard Error &amp; 95% Confidence Intervals</heading>
+      <p id="p-00074-en" num="0068" />
+      <p id="p-00075-en" num="0000">
+        <tables id="tables-00005-en" num="00005">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="91pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Product</entry>
+                  <entry />
+                  <entry>Standard</entry>
+                  <entry>95% Confidence Interval</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="63pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="49pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Difference</entry>
+                  <entry>Mean</entry>
+                  <entry>Error</entry>
+                  <entry>Lower</entry>
+                  <entry>Upper</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Proline − His + Pro</entry>
+                  <entry>−56.07</entry>
+                  <entry>10.80</entry>
+                  <entry>−78.36</entry>
+                  <entry>−33.78</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00076-en" num="0069">It can be seen that the amount of proline+histidine intake was on average 56.07 g more than proline alone intake, i.e. the combination of proline and histidine was significantly preferable to the animals over proline alone.</p>
+      <heading id="h-00010-en" level="1">Example 3</heading>
+      <p id="p-00077-en" num="0070">The difference test was carried out as for Example 1, however, a composition containing 25 mM threonine+25 mM histidine was compared with a composition containing 50 mM threonine only.</p>
+      <p id="p-00078-en" num="0071">The results are shown below and in <figref>FIG. 3</figref>.</p>
+      <heading id="h-00011-en" level="2">Analysis of Intake g</heading>
+      <heading id="h-00012-en" level="2">ANOVA Table for Fixed Effects</heading>
+      <p id="p-00079-en" num="0072" />
+      <p id="p-00080-en" num="0000">
+        <tables id="tables-00006-en" num="00006">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="91pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Degrees of Freedom</entry>
+                  <entry />
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Factor</entry>
+                  <entry>Numerator</entry>
+                  <entry>Denominator</entry>
+                  <entry>F-value</entry>
+                  <entry>P-value</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Product Difference</entry>
+                  <entry>1</entry>
+                  <entry>23</entry>
+                  <entry>34.58</entry>
+                  <entry>0.0000</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00013-en" level="2">Table of Mean Product Difference, Standard Error &amp; 95% Confidence Intervals</heading>
+      <p id="p-00081-en" num="0073" />
+      <p id="p-00082-en" num="0000">
+        <tables id="tables-00007-en" num="00007">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="84pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Product</entry>
+                  <entry />
+                  <entry>Standard</entry>
+                  <entry>95% Confidence Interval</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="70pt" align="center" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Difference</entry>
+                  <entry>Mean</entry>
+                  <entry>Error</entry>
+                  <entry>Lower</entry>
+                  <entry>Upper</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Threonine − His + Thr</entry>
+                  <entry>−34.48</entry>
+                  <entry>5.86</entry>
+                  <entry>−46.61</entry>
+                  <entry>−22.35</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00083-en" num="0074">It can be seen that the amount of threonine+histidine intake was on average 34.48 g more than threonine alone intake, i.e. the combination of threonine and histidine was significantly preferable to the animals over threonine alone.</p>
+      <heading id="h-00014-en" level="1">Example 4</heading>
+      <p id="p-00084-en" num="0075">A difference test was carried out as for Example 1, however, a composition containing 25 mM alanine+25 mM threonine was compared with a composition containing 50 mM alanine only.</p>
+      <p id="p-00085-en" num="0076">The results are shown below and in <figref>FIG. 4</figref></p>
+      <heading id="h-00015-en" level="2">ANOVA Table for Fixed Effects</heading>
+      <p id="p-00086-en" num="0077" />
+      <p id="p-00087-en" num="0000">
+        <tables id="tables-00008-en" num="00008">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="91pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Degrees of Freedom</entry>
+                  <entry />
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Factor</entry>
+                  <entry>Numerator</entry>
+                  <entry>Denominator</entry>
+                  <entry>F-value</entry>
+                  <entry>P-value</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Product Difference</entry>
+                  <entry>1</entry>
+                  <entry>23</entry>
+                  <entry>0.91</entry>
+                  <entry>0.3499</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00016-en" level="2">Table of Mean Product Difference, Standard Error &amp; 95% Confidence Intervals</heading>
+      <p id="p-00088-en" num="0078" />
+      <p id="p-00089-en" num="0000">
+        <tables id="tables-00009-en" num="00009">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="98pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Product</entry>
+                  <entry />
+                  <entry>Standard</entry>
+                  <entry>95% Confidence Interval</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="56pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Difference</entry>
+                  <entry>Mean</entry>
+                  <entry>Error</entry>
+                  <entry>Lower</entry>
+                  <entry>Upper</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Ala + Thr − 2xAla</entry>
+                  <entry>5.17</entry>
+                  <entry>5.41</entry>
+                  <entry>−6.03</entry>
+                  <entry>16.36</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00090-en" num="0079">It can be seen that the amount of alanine+threonine intake was on average 5.17 g more than alanine alone intake, i.e. the combination of alanine+threonine was preferable over alanine alone.</p>
+      <heading id="h-00017-en" level="1">Example 5</heading>
+      <p id="p-00091-en" num="0080">A difference test was carried out as for Example 1, however, a composition containing 25 mM threonine+25 mM alanine was compared with a composition containing 50 mM threonine only.</p>
+      <p id="p-00092-en" num="0081">The results are shown below and in <figref>FIG. 5</figref></p>
+      <heading id="h-00018-en" level="2">Analysis of Intake g</heading>
+      <heading id="h-00019-en" level="2">ANOVA Table for Fixed Effects</heading>
+      <p id="p-00093-en" num="0082" />
+      <p id="p-00094-en" num="0000">
+        <tables id="tables-00010-en" num="00010">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="91pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Degrees of Freedom</entry>
+                  <entry />
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Factor</entry>
+                  <entry>Numerator</entry>
+                  <entry>Denominator</entry>
+                  <entry>F-value</entry>
+                  <entry>P-value</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Product Difference</entry>
+                  <entry>1</entry>
+                  <entry>23</entry>
+                  <entry>5.30</entry>
+                  <entry>0.0307</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00020-en" level="2">Table of Mean Product Difference, Standard Error &amp; 95% Confidence Intervals</heading>
+      <p id="p-00095-en" num="0083" />
+      <p id="p-00096-en" num="0000">
+        <tables id="tables-00011-en" num="00011">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="91pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Product</entry>
+                  <entry />
+                  <entry>Standard</entry>
+                  <entry>95% Confidence Interval</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="56pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Difference</entry>
+                  <entry>Mean</entry>
+                  <entry>Error</entry>
+                  <entry>Lower</entry>
+                  <entry>Upper</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>2xThr − Ala + Thr</entry>
+                  <entry>−11.80</entry>
+                  <entry>5.12</entry>
+                  <entry>−22.40</entry>
+                  <entry>−1.20</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00097-en" num="0084">It can be seen that the amount of threonine+alanine intake was on average 11.80 g more than threonine alone intake, i.e. the combination of threonine and alanine was significantly preferable to the animals over threonine alone.</p>
+      <heading id="h-00021-en" level="1">Example 6</heading>
+      <p id="p-00098-en" num="0085">A difference test was carried out as for Example 1, however, a composition containing 25 mM glycine+25 mM threonine was compared with a composition 50 mM glycine.</p>
+      <p id="p-00099-en" num="0086">The results are shown below and in <figref>FIG. 6</figref></p>
+      <heading id="h-00022-en" level="2">ANOVA Table for Fixed Effects</heading>
+      <p id="p-00100-en" num="0087" />
+      <p id="p-00101-en" num="0000">
+        <tables id="tables-00012-en" num="00012">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="91pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Degrees of Freedom</entry>
+                  <entry />
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Factor</entry>
+                  <entry>Numerator</entry>
+                  <entry>Denominator</entry>
+                  <entry>F-value</entry>
+                  <entry>P-value</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Product Difference</entry>
+                  <entry>1</entry>
+                  <entry>23</entry>
+                  <entry>0.80</entry>
+                  <entry>0.3818</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00023-en" level="2">Table of Mean Product Difference, Standard Error &amp; 95% Confidence Intervals</heading>
+      <p id="p-00102-en" num="0088" />
+      <p id="p-00103-en" num="0000">
+        <tables id="tables-00013-en" num="00013">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="98pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Product</entry>
+                  <entry />
+                  <entry>Standard</entry>
+                  <entry>95% Confidence Interval</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="56pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Difference</entry>
+                  <entry>Mean</entry>
+                  <entry>Error</entry>
+                  <entry>Lower</entry>
+                  <entry>Upper</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Gly + Thr − 2xGly </entry>
+                  <entry>5.26</entry>
+                  <entry>5.90</entry>
+                  <entry>−6.95</entry>
+                  <entry>17.47</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00104-en" num="0089">It can be seen that the amount of glycine+threonine intake was on average 5.26 g more than glycine intake, i.e. the combination of threonine and glycine was preferable to the animals over glycine alone.</p>
+      <heading id="h-00024-en" level="1">Example 7</heading>
+      <p id="p-00105-en" num="0090">A difference test was carried out as for Example 1, however, a composition containing 25 mM threonine+25 mM glycine was compared with a composition containing 50 mM threonine only.</p>
+      <p id="p-00106-en" num="0091">The results are shown below and in <figref>FIG. 7</figref></p>
+      <heading id="h-00025-en" level="2">ANOVA Table for Fixed Effects</heading>
+      <p id="p-00107-en" num="0092" />
+      <p id="p-00108-en" num="0000">
+        <tables id="tables-00014-en" num="00014">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="91pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Degrees of Freedom</entry>
+                  <entry />
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Factor</entry>
+                  <entry>Numerator</entry>
+                  <entry>Denominator</entry>
+                  <entry>F-value</entry>
+                  <entry>P-value</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Product Difference</entry>
+                  <entry>1</entry>
+                  <entry>23</entry>
+                  <entry>0.38</entry>
+                  <entry>0.5447</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00026-en" level="2">Table of Mean Product Difference, Standard Error &amp; 95% Confidence Intervals</heading>
+      <p id="p-00109-en" num="0093" />
+      <p id="p-00110-en" num="0000">
+        <tables id="tables-00015-en" num="00015">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="98pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Product</entry>
+                  <entry />
+                  <entry>Standard</entry>
+                  <entry>95% Confidence Interval</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="56pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Difference</entry>
+                  <entry>Mean</entry>
+                  <entry>Error</entry>
+                  <entry>Lower</entry>
+                  <entry>Upper</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Gly + Thr − 2xThr </entry>
+                  <entry>2.46</entry>
+                  <entry>4.00</entry>
+                  <entry>−5.81</entry>
+                  <entry>10.72</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00111-en" num="0094">It can be seen that the amount of threonine+glycine intake was on average 2.46 g more than threonine alone intake, i.e. the combination of threonine and glycine was preferable to the animals over threonine alone.</p>
+      <heading id="h-00027-en" level="1">Example 8</heading>
+      <p id="p-00112-en" num="0095">A difference test was carried out as for Example 1, however, a composition containing 25 mM histidine+25 mM proline+4 ppm furaneol was compared with a composition containing 25 mM proline+25 mM histidine.</p>
+      <p id="p-00113-en" num="0096">The results are shown below and in <figref>FIG. 8</figref></p>
+      <heading id="h-00028-en" level="2">ANOVA Table for Fixed Effects</heading>
+      <p id="p-00114-en" num="0097" />
+      <p id="p-00115-en" num="0000">
+        <tables id="tables-00016-en" num="00016">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="91pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Degrees of Freedom</entry>
+                  <entry />
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="56pt" align="center" />
+              <colspec colname="2" colwidth="49pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Factor</entry>
+                  <entry>Numerator</entry>
+                  <entry>Denominator</entry>
+                  <entry>F-value</entry>
+                  <entry>P-value</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Product Difference</entry>
+                  <entry>1</entry>
+                  <entry>24</entry>
+                  <entry>32.43</entry>
+                  <entry>0.0000</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00029-en" level="2">Table of Mean Product Difference, Standard Error &amp; 95% Confidence Intervals</heading>
+      <p id="p-00116-en" num="0098" />
+      <p id="p-00117-en" num="0000">
+        <tables id="tables-00017-en" num="00017">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="84pt" align="center" />
+              <colspec colname="2" colwidth="21pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="84pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Product</entry>
+                  <entry />
+                  <entry>Standard</entry>
+                  <entry>95% Confidence Interval</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="84pt" align="center" />
+              <colspec colname="2" colwidth="21pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="42pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>Difference</entry>
+                  <entry>Mean</entry>
+                  <entry>Error</entry>
+                  <entry>Lower</entry>
+                  <entry>Upper</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>His + Pro + Fur − His + Pro</entry>
+                  <entry>34.84</entry>
+                  <entry>6.12</entry>
+                  <entry>22.21</entry>
+                  <entry>47.47</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00118-en" num="0099">It can be seen that the amount of histidine+proline+furaneol intake was on average 34.84 g more than proline+histidine intake, i.e. the combination of histidine+proline+furaneol was significantly preferable to the animals over proline+histidine alone.</p>
+      <heading id="h-00030-en" level="1">Example 9</heading>
+      <p id="p-00119-en" num="0100">In vitro screening was carried out in order to establish which first amino acids bind and activate the umami receptor. Results are shown in <figref>FIG. 9</figref>.</p>
+      <heading id="h-00031-en" level="1">Example 10</heading>
+      <p id="p-00120-en" num="0101">In vitro screening was carried out in order to establish which second amino acids bind and activate the umami receptor. Results are shown in <figref>FIG. 10</figref>.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. Use of a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan, tyrosine and a mixture of two or more thereof; a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline, hydroxyproline and a mixture of two or more thereof; and one or more furanones for increasing the palatability of a foodstuff to a companion animal.</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The use according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the one or more furanones are a compound according to formula I or formula II</claim-text>
+      <claim-text>
+        <chemistry id="chemc-00001-en" num="00014">
+          <img id="imgc-00001-en" he="56.81mm" wi="58.17mm" alt="embedded image" img-content="chem" file="US20150257412A1_00030.PNG" img-format="png" original="US20150257412A1-20150917-C00014.TIF" />
+        </chemistry><claim-text>wherein R<sub>1 </sub>and R<sub>2 </sub>are independently selected from hydrogen, C<sub>1-6 </sub>alkyl, methyl or ethyl;</claim-text><claim-text>R<sub>3 </sub>is hydrogen, hydroxyl, C<sub>1-6 </sub>alkyl or methyl;</claim-text><claim-text>R<sub>4 </sub>is hydrogen, hydroxyl or C<sub>1-6 </sub>alkyl;</claim-text><claim-text>R<sub>5 </sub>is hydrogen, hydroxyl, C<sub>1-6 </sub>alkyl, C<sub>1-6 </sub>alkoxy, 5 or 6 membered saturated heterocycle, —OC(O)R<sub>7</sub>, —OCH<sub>3</sub>, —OCH<sub>2</sub>CH<sub>3</sub>, —OC(O)CH<sub>3</sub>, methyl or pyrrolidine;</claim-text><claim-text>R<sub>6 </sub>is hydrogen, C<sub>1-6 </sub>alkyl or methyl;</claim-text><claim-text>R<sub>7 </sub>is C<sub>1-6 </sub>alkyl or methyl.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The use according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the one or more furanones are selected from the group consisting of furaneol, homofuraneol, sotolon, norfuraneol, abhexon, mesifuranone or dimethoxyfuranone, as defined in Table 1.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The use according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the first amino acid, the second amino acid and the furanone are in addition to any amino acids and furanones that may be found in any meat, vegetable or dairy component of the foodstuff.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The use according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the total amount of amino acids present is less than 1M.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The use according to <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the one or more furanones are present at an amount of less than 40 ppm.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en" independent="true">
+      <claim-text>
+        <b>7</b>. A first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan, tyrosine and a mixture of two or more thereof; a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline, hydroxyproline and a mixture of two or more thereof; and one or more furanones for use in increasing the acceptance of a pet foodstuff in a companion animal.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. A first amino acid, a second amino acid and a furanone for use according to <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the acceptance is a preference for a foodstuff comprising the first amino acid, the second amino acid and the furanone over a foodstuff that does not comprise a first amino acid, a second amino acid and a furanone.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en" independent="true">
+      <claim-text>
+        <b>9</b>. A pet foodstuff comprising a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan, tyrosine and a mixture of two or more thereof; a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline, hydroxyproline and a mixture of two or more thereof, and one or more furanones.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. A pet foodstuff according to <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the first amino acid, the second amino acid and the furanone are in a combination selected from the group consisting of:
+<claim-text>Histidine, proline and Furaneol;</claim-text><claim-text>Proline, alanine and Furaneol;</claim-text><claim-text>Glycine, threonine and Furaneol;</claim-text><claim-text>Alanine, threonine and Furaneol;</claim-text><claim-text>Threonine, histidine and Furaneol;</claim-text><claim-text>Glutamic Acid, histidine and Furaneol;</claim-text><claim-text>Histidine, proline and Sotolon;</claim-text><claim-text>Proline, alanine and Sotolon;</claim-text><claim-text>Glycine, threonine and Sotolon;</claim-text><claim-text>Alanine, threonine and Sotolon;</claim-text><claim-text>Threonine, histidine and Sotolon; and</claim-text><claim-text>Glutamic Acid, histidine and Sotolon.</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en" independent="true">
+      <claim-text>
+        <b>11</b>. A method for increasing acceptance of a foodstuff in a companion animal comprising allowing the animal access to a pet food comprising a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan, tyrosine and a mixture of two or more thereof; a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline, hydroxyproline and a mixture of two or more thereof; and one or more furanones.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en" independent="true">
+      <claim-text>
+        <b>12</b>. A process of preparing a pet foodstuff comprising a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan, tyrosine and a mixture of two or more thereof; a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline, hydroxyproline and a mixture of two or more thereof, and one or more furanones, the process comprising the steps of adding and mixing at least one first amino acid at least one second amino acid and one or more furanones with a pet foodstuff.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. A process of preparing a pet foodstuff according to <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the process comprises combining one or more pet food ingredient; the first amino acid; the second amino acid; and one or more furanones, wherein the first amino acid, the second amino acid and one or more furanones are added together or separately, and wherein the amino acids and the furanones together provide no more than 30 wt % of the dry matter that is contained in the foodstuff.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. A process according to <claim-ref idref="clm-00013-en">claim 13</claim-ref>, wherein the one or more pet food ingredients include one or more of the edible materials selected from meat, animal fat, blood plasma, marrowbone, vegetable protein, vegetable fat, milk protein, grains and starch, wherein the one or more edible ingredients provide at least 60 wt % of the dry matter that is contained in the pet foodstuff.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en" independent="true">
+      <claim-text>
+        <b>15</b>. A method for increasing the palatability of a foodstuff, the method comprising adding to a foodstuff during or after manufacture a first amino acid selected from the group consisting of glycine, alanine, cysteine, histidine, leucine, methionine, phenylalanine, serine, tryptophan, tyrosine and a mixture of two or more thereof; a second amino acid selected from the group consisting of aspartic acid, cystine, glutamic acid, glutamine, isoleucine, lysine, aspartic acid, ornithine, threonine, valine, proline, hydroxyproline and a mixture of two or more thereof, and one or more furanones.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. A pet foodstuff produced by the method of <claim-ref idref="clm-00012-en">claim 12</claim-ref>.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00001.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257412A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257412A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257412A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257412A1-20150917-D00004.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257412A1-20150917-D00005.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257412A1-20150917-D00006.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257412A1-20150917-D00007.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257412A1-20150917-D00008.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257412A1-20150917-D00009.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257412A1-20150917-D00010.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257412A1-20150917-D00011.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257412A1-20150917-D00012.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257412A1-20150917-D00013.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257412A1-20150917-D00014.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257412A1-20150917-D00015.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150257412A1-20150917-D00016.TIF" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00017.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150257412A1-20150917-C00001.TIF" inline="yes" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00018.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150257412A1-20150917-C00002.TIF" inline="yes" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00019.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150257412A1-20150917-C00003.TIF" inline="yes" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00020.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150257412A1-20150917-C00004.TIF" inline="yes" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00021.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150257412A1-20150917-C00005.TIF" inline="yes" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00022.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150257412A1-20150917-C00006.TIF" inline="yes" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00023.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150257412A1-20150917-C00007.TIF" inline="yes" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00024.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150257412A1-20150917-C00008.TIF" inline="yes" />
+    </figure>
+    <figure num="25">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00025.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150257412A1-20150917-C00009.TIF" inline="yes" />
+    </figure>
+    <figure num="26">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00026.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150257412A1-20150917-C00010.TIF" inline="yes" />
+    </figure>
+    <figure num="27">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00027.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150257412A1-20150917-C00011.TIF" inline="yes" />
+    </figure>
+    <figure num="28">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00028.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150257412A1-20150917-C00012.TIF" inline="yes" />
+    </figure>
+    <figure num="29">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00029.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150257412A1-20150917-C00013.TIF" inline="yes" />
+    </figure>
+    <figure num="30">
+      <img he="N/A" wi="N/A" file="US20150257412A1_00030.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150257412A1-20150917-C00014.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150257412A1.PDF" type="pdf" size="4038085" pages="38" />
+</lexisnexis-patent-document>

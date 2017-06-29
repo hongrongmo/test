@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150252015A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021748" date-changed="20150925" time-changed="020449">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121229010">
+        <country>US</country>
+        <doc-number>20150252015</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14431571</doc-number>
+        <date>20130926</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150910">
+      <priority-claim sequence="1" kind="national">
+        <country>FR</country>
+        <doc-number>12059102</doc-number>
+        <date>20120927</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150917">
+      <classification-ipcr sequence="1">
+        <text>C07D 307/42        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>307</main-group>
+        <subgroup>42</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C07D 307/12        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>307</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150917">
+      <classification-cpc sequence="1">
+        <text>C07D 307/42        20130101 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>307</main-group>
+        <subgroup>42</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C07D 307/12        20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>307</main-group>
+        <subgroup>12</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C07D 307/40        20130101 LI20140402BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>07</class>
+        <subclass>D</subclass>
+        <main-group>307</main-group>
+        <subgroup>40</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140402</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">12</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">METHOD FOR SYNTHESISING 2,5-DI(HYDROXYMETHYL)FURAN AND 2,5-DI(HYDROXYMETHYL)TETRAHYDROFURAN BY SELECTIVE HYDROGENATION OF FURAN-2,5-DIALDEHYDE</invention-title>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>ROQUETTE FRERES</orgname>
+            <address>
+              <city>Lestrem</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>FR</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Ibert</last-name>
+            <first-name>Mathias</first-name>
+            <address>
+              <city>La Chapelle d'Armentieres</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Chambon</last-name>
+            <first-name>Flora</first-name>
+            <address>
+              <city>Marc En Baroeul</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Dambrine</last-name>
+            <first-name>Laurent</first-name>
+            <address>
+              <city>Sains en Gohelle</city>
+              <country>FR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>FR13052272</doc-number>
+        <date>20130926</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014049275</doc-number>
+        <date>20140403</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150910">
+      <main-family family-id="165027413">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2900648</doc-number>
+            <kind>A1</kind>
+            <date>20150805</date>
+          </document-id>
+          <application-date>
+            <date>20130926</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>FR</country>
+            <doc-number>2995897</doc-number>
+            <kind>B1</kind>
+            <date>20141010</date>
+          </document-id>
+          <application-date>
+            <date>20120927</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104662009</doc-number>
+            <kind>A</kind>
+            <date>20150527</date>
+          </document-id>
+          <application-date>
+            <date>20130926</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>FR</country>
+            <doc-number>2995897</doc-number>
+            <kind>A1</kind>
+            <date>20140328</date>
+          </document-id>
+          <application-date>
+            <date>20120927</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150063058</doc-number>
+            <kind>A</kind>
+            <date>20150608</date>
+          </document-id>
+          <application-date>
+            <date>20130926</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252015</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20130926</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014049275</doc-number>
+            <kind>A1</kind>
+            <date>20140403</date>
+          </document-id>
+          <application-date>
+            <date>20130926</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="165027412">
+        <family-member>
+          <document-id>
+            <country>EP</country>
+            <doc-number>2900648</doc-number>
+            <kind>A1</kind>
+            <date>20150805</date>
+          </document-id>
+          <application-date>
+            <date>20130926</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>FR</country>
+            <doc-number>2995897</doc-number>
+            <kind>B1</kind>
+            <date>20141010</date>
+          </document-id>
+          <application-date>
+            <date>20120927</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104662009</doc-number>
+            <kind>A</kind>
+            <date>20150527</date>
+          </document-id>
+          <application-date>
+            <date>20130926</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>FR</country>
+            <doc-number>2995897</doc-number>
+            <kind>A1</kind>
+            <date>20140328</date>
+          </document-id>
+          <application-date>
+            <date>20120927</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020150063058</doc-number>
+            <kind>A</kind>
+            <date>20150608</date>
+          </document-id>
+          <application-date>
+            <date>20130926</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252015</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20130926</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014049275</doc-number>
+            <kind>A1</kind>
+            <date>20140403</date>
+          </document-id>
+          <application-date>
+            <date>20130926</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A method for selective hydrogenation of furan-2,5-dialdehyde (DFF) into 2,5-di(hydroxymethyl)furan (DHMF) and into 2,5-di(hydroxymethyl)tetrahydrofuran (DHMTHF). In relation to the prior art, which uses C6 sugars or 5-hydroxymethyl furaldehyde (5-HMF) as raw materials, the method can be performed at low temperatures (lower than 120° C., preferably 80° C.), while consuming low amounts of catalyst relative to the initial reagent (in particular less than 5%, preferably less than 2% relative to the weight of the reagent). The heterogeneous catalyst used can also be recycled from one reaction to another. Finally, the choice of experimental conditions enables the selective formation of DHMF or DHMTHF.</p>
+  </abstract>
+  <legal-data date-changed="20150925">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150402</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015252015A1</docdb-publication-number>
+      <docdb-application-id>444310097</docdb-application-id>
+      <new-owner>ROQUETTE FRERES, FRANCE</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:IBERT, MATHIAS;CHAMBON, FLORA;DAMBRINE, LAURENT;SIGNING DATES FROM 20150325 TO 20150330;REEL/FRAME:035320/0301</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <p id="p-00001-en" num="0001">The present invention relates to a process for the selective hydrogenation of furan-2,5-dialdehyde (DFF) to give 2,5-di(hydroxymethyl)furan (DHMF) and 2,5-di(hydroxymethyl)-10 tetrahydrofuran (DHMTHF). Quite advantageously with respect to the prior art which uses</p>
+      <p id="p-00002-en" num="0002">C6 sugars or 5-hydroxymethyl furaldehyde (5-HMF) as initial raw materials, the process according to the present invention takes place at low temperatures (preferably between 30° C. and 120° C.), while using a small amount of catalyst with respect to the initial reactant (preferably less than 2% with respect to the weight of the reactant).</p>
+      <p id="p-00003-en" num="0003">While avoiding technical constraints linked to the use of high temperatures, the Applicant has therefore developed an economically advantageous process by reducing the amount of catalyst used, allowing the selective synthesis of DHMF and DHMTHF, while exploring a new DFF-based pathway for attaining these compounds.</p>
+      <p id="p-00004-en" num="0004">There has been considerable development in the chemistry of furan and its derivatives over the last few years. Among the furan compounds of significance, mention may especially be made of 2,5-di(hydroxymethyl)furan (DHMF) and 2,5-di(hydroxymethyl)-tetrahydrofuran (DHMTHF) which find applications in adhesives, seals, composites, coatings, foams and solvents or else as synthetic intermediates for the manufacture of polymers, these applications being disclosed in document US 2011/306780. The specific use of DHMF in the production of polyurethane foams and polyesters is itself reported in the document “Biomass into chemicals: Conversion of sugars to furan derivatives by catalytic processes” (Applied Catalysis A: General 285, pp.1-13, 2010).</p>
+      <p id="p-00005-en" num="0005">2,5-Di(hydroxymethyl)furan (DHMF) and 2,5-di(hydroxymethyl)tetrahydrofuran (DHMTHF) correspond to the following formulae :</p>
+      <p id="p-00006-en" num="0000">
+        <chemistry id="chem-00001-en" num="00001">
+          <img id="img-00001-en" he="19.22mm" wi="48.26mm" alt="embedded image" img-content="chem" file="US20150252015A1_00001.PNG" img-format="png" original="US20150252015A1-20150910-C00001.TIF" />
+        </chemistry>
+      </p>
+      <p id="p-00007-en" num="0006">There are 2 pathways that lead to the production of these products: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>the catalytic hydrogenation of 5-hydroxymethyl furaldehyde (5-HMF) or</li><li>the tandem (or bifunctional) catalysis that consists in dehydrating and then hydrogenating C6 sugars.</li></ul></li></ul></p>
+      <p id="p-00008-en" num="0009">In the first category, mention may be made of document “Total hydrogenation of furan derivatives over silica-supported Ni-Pd alloy catalyst” (Catal. Comm., 12, pp. 154-156, 2010) which discloses the synthesis of DHMTHF from 5-HMF dissolved in water and methanol, in the presence of a nickel-palladium bimetallic catalyst supported on silica. The reaction takes place over 2 hours at 40 degrees, with a degree of conversion of the reactant of 99 mol % and a yield in moles of 96% DHMTHF. However, the amount of catalyst used is large since it is equal to 16% of the total weight of 5-HMF used.</p>
+      <p id="p-00009-en" num="0010">Reference may also be made to document U.S. Pat. No. 7,317,116 which describes the synthesis of DHMF starting from 5-HMF. The latter is dissolved in methanol and the reaction is catalyzed by nickel. The conversion is complete and a yield of greater than 90 mol %</p>
+      <p id="p-00010-en" num="0011">DHMF is obtained. Nevertheless, a significant amount of catalyst is consumed (6.7% with respect to the weight of 5-HMF) and it is necessary to work at high temperature (150° C.).</p>
+      <p id="p-00011-en" num="0012">Document WO 2007/146836 describes the synthesis, in water, of DHMF, with a bulk catalyst of Raney cobalt type. The synthesis is then carried out at 60° C. for a complete conversion of the 5-HMF and a yield of 97 mol % of final product. It should be emphasised that a very large amount of catalyst is used here: this catalyst represents 51% by weight of the initial 5-HMF.</p>
+      <p id="p-00012-en" num="0013">Lastly, the document “Hydrogenation of 5-hydroxymethylfurfural, in aqueous medium” (Bull. Soc. Chim. Fr., 1991, 128, pp. 704-711) presents the synthesis of DHMF and DHMTHF with respective yields, in moles, of 100% and 92%, with different bulk catalysts used in an amount of around 10% with respect to the weight of 5-HMF, and at a temperature of 140° C.</p>
+      <p id="p-00013-en" num="0014">The other method of synthesizing DHMF and DHMTHF consists in dehydrating, then catalytically hydrogenating C6 sugars. In this regard, mention may be made of document WO 2008/053284 which describes the hydrogenation of glucose in the presence of a palladium-on-carbon catalyst, in a proportion of the order of 3% with respect to the weight of reactant. However, it is necessary to work at 130° C. in order to obtain a degree of conversion of 90% with respect to the glucose and a yield of 90 mol % DHMF.</p>
+      <p id="p-00014-en" num="0015">In this same category, mention may lastly be made of document WO 2012/082665 which focuses on fructose as initial raw material. The amounts of catalyst vary between 3% and 33% with respect to the weight of fructose. No information is given regarding the yields and the degrees of conversion; it appears on the other hand that it is necessary to work at 130° C., or even at 180° C.</p>
+      <p id="p-00015-en" num="0016">Consequently, the prior art processes that aim to obtain DHMF and/or DHMTHF from 5-HMF or from C6 sugars have the drawback of using high temperatures (need for systems for heating and insulating the plants, for control of the cooling conditions, and dangerousness for the user) and/or of consuming large amounts of catalyst with respect to the mass of the initial reactant (processes that are not very profitable economically, especially considering the price of the catalyst).</p>
+      <p id="p-00016-en" num="0017">Working to overcome these drawbacks, the Applicant has successfully developed a novel process for synthesizing DHMF and DHMTHF. This process is based on the selective hydrogenation of DFF, a raw material never before envisaged for the synthesis of the aforementioned compounds. Very advantageously, this process makes it possible to work at relatively low temperatures, in particular preferably between 30° C. and 120° C. Furthermore, the amounts of catalyst used remain very low with respect to the initial DFF: they are less than 5% of the weight of said DFF.</p>
+      <p id="p-00017-en" num="0018">Another advantage of the process developed by the Applicant lies in the possibility of obtaining the preferential formation of DHMF or DHMTHF depending on the experimental conditions. The initial reactant is therefore a composition containing DFF, which means that said composition may contain a compound other than DFF. Advantageously, the composition containing DFF has a very high content of DFF; it contains said DFF in a proportion by weight at least equal to 90%, preferably 95%, very preferably 98%. Quite advantageously, the composition containing DFF in the aforementioned proportions is derived from the oxidation of 5-HMF according to the process that is the subject of the French patent application having the filing number 1162343. This application describes a process that makes it possible to very easily obtain a composition having a high content of</p>
+      <p id="p-00018-en" num="0019">DFF from 5-HMF, the initial 5-HMF not necessarily having a high degree of purity. In comparison, the processs for producing DHMF and DHMTHF from 5-HMF in general require a very high degree of purity of 5-HMF.</p>
+      <p id="p-00019-en" num="0020">In the initial DFF composition, the residual product is in general FFCA (5-furaldehyde-2-carboxylic acid) resulting from the process that is the subject of the aforementioned patent application. The initial composition then preferably contains at least 90% by weight of DFF, preferably at least 95% by weight of DFF, more preferably 99% by weight of DFF, the FFCA representing in each of these cases the remainder of the composition.</p>
+      <p id="p-00020-en" num="0021">Thus, a first subject of the present invention consists of a process for synthesizing DHMF and/or DHMTHF, by bringing into contact: <ul id="ul-00003-en" list-style="none"><li><ul id="ul-00004-en" list-style="none"><li>a) a composition containing DFF at a high content (&gt;90%),</li><li>b) a protic solvent,</li><li>c) a source of hydrogen,</li><li>d) and a hydrogenation catalyst.</li></ul></li></ul></p>
+      <p id="p-00021-en" num="0026">Throughout the present application, the terms selectivity (S), conversion (C) and yield (Y) are used with reference to the following definitions:</p>
+      <p id="p-00022-en" num="0000">[in-line-formulae]<i>C </i>(mol %)=((amount of DFF converted)×100)/initial amount of DFF[/in-line-formulae]</p>
+      <p id="p-00023-en" num="0000">[in-line-formulae]<i>S=</i>(amount of DHMF or of DHMTHF formed)/amount of DFF converted[/in-line-formulae]</p>
+      <p id="p-00024-en" num="0000">[in-line-formulae]<i>Y </i>(mol %)<i>=S×C/</i>100[/in-line-formulae]</p>
+      <p id="p-00025-en" num="0027">The process that is the subject of the aforementioned patent application no. 1162343 is characterized in that it comprises a step of oxidation of 5-HMF in the presence of at least an organic acid, a nitroxyl radical, a source of oxygen and an oxygen transfer agent. The nitroxyl radical is in particular chosen from (2,2,6,6-tetramethylpiperidin-1-yl)oxyl radicals, also referred to as TEMPO radicals.</p>
+      <p id="p-00026-en" num="0028">The protic solvent used in the present invention is more specifically selected from water, methanol, ethanol, isopropanol, 1-propanol, 1-butanol and the mixtures of these solvents, water being the preferred solvent.</p>
+      <p id="p-00027-en" num="0029">The synthesis reaction via hydrogenation takes place at a temperature between 30° C. and 180° C., preferably between 30° C. and 150° C., more preferably between 50° C. and 120° C.</p>
+      <p id="p-00028-en" num="0030">The source of hydrogen is selected from all sources available to a person skilled in the art. Preferably, it is molecular hydrogen, which is generally stored in pressurized containers. The hydrogen may also be extracted from “hydrogen donors”, which are often solvents such as hydrazine, dihydronaphthalene, dihydroanthracene, isopropanol, methanoic acid, or else cyclohexadiene. When it is molecular hydrogen, this is under a pressure of between 1 bar and 400 bar, preferably between 10 bar and 110 bar.</p>
+      <p id="p-00029-en" num="0031">The hydrogenation catalyst is selected from heterogeneous catalysts well known to a person skilled in the art, and in particular from conventional metal catalysts for hydrogenation. The catalyst is of bulk or supported type. In the first case, it is preferably a catalyst based on a Raney metal. In the second case, the support is selected from activated carbon, silica, alumina, mixtures of silica and alumina, oxides of titanium, zirconium, magnesium and cerium, mixed oxides based on Si, Al, Ti and Zr. In this case, the metal content represents from 0.1% to 90% of the total weight of the catalyst. In all cases, the catalyst is based on Ni, Cu, Fe, Pd, Rh, Ir, Ru, Co, Pt, and more preferably based on Ni and Pd.</p>
+      <p id="p-00030-en" num="0032">The contact time between the various constituents a), b), c) and d) is between 1 minute and 8 hours, preferably between 15 minutes and 2 hours.</p>
+      <p id="p-00031-en" num="0033">As for the rest, the hydrogenation process of the present invention may be carried out in any type of fixed bed or batch reactor that is pressurized or unpressurized, preferably pressurized. The type of batch reactor may be an autoclave provided with a variable speed agitator. Preferably, the reactor is additionally provided with a gas inlet tube, connected to a pressurized system provided with a pressure-reducing valve and with a gas discharge tube. The reactor may additionally comprise a cooling system and also a system for measuring and regulating the temperature. Within the context of a batch reactor, the amount of catalyst is between 0.01% and 30%, more preferably between 0.1% and 5%, very preferably between 0.15% and 2.5% with respect to the weight of the DFF composition.</p>
+      <p id="p-00032-en" num="0034">During the hydrogenation process, the reaction medium is kept stirring. The stirring speed is preferably set at between 800 and 2200 rpm, more preferably between 1500 and 1700 rpm.</p>
+      <p id="p-00033-en" num="0035">The process according to the invention may additionally comprise a step of filtering the reaction medium resulting from the hydrogenation step, thus making it possible to separate the DHMF and/or DHMTHF reaction product(s) from the solid catalyst.</p>
+      <p id="p-00034-en" num="0036">Owing in particular to the high DFF content of the initial composition, the catalyst used in the present invention can easily be recycled. The Applicant has even been able to observe, during the experiments that it carried out, that the activity of the catalyst was not modified, even when said catalyst had been recycled 5 times.</p>
+      <p id="p-00035-en" num="0037">The following examples make it possible to better understand the present invention, without however limiting the scope thereof.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00001-en" level="1">EXAMPLES</heading>
+      <heading id="h-00002-en" level="1">Example of the Synthesis of DHMTHF in the Presence of the Palladium-on-Carbon Catalyst</heading>
+      <p id="p-00036-en" num="0038">In this test, use is made of: <ul id="ul-00005-en" list-style="none"><li><ul id="ul-00006-en" list-style="none"><li>a composition containing DFF (93.1% by weight of DFF and 6.9% by weight of FFCA): 9 g;</li><li>a Pd/C palladium-on-carbon catalyst in an amount of 0.2% by weight of Pd with respect to the weight of DFF;</li><li>demineralized water: 420 ml.</li></ul></li></ul></p>
+      <p id="p-00037-en" num="0042">Operating conditions: <ul id="ul-00007-en" list-style="none"><li><ul id="ul-00008-en" list-style="none"><li>reaction temperature: 120° C.;</li><li>initial pH of the reaction: 5.5;</li><li>hydrogen pressure: 50 bar;</li><li>reaction time: 1 h 15 min.</li></ul></li></ul></p>
+      <p id="p-00038-en" num="0047">Introduced into a stainless steel autoclave having an internal capacity of 600 ml are: 9 g of a composition containing DFF, and the Pd/C commercial catalyst and also 420 ml of demineralized water. The pH of the reaction medium is adjusted to 5.5. When all the reactants have been placed in the autoclave, the latter is purged under nitrogen, then placed under 50 bar of hydrogen at the start of the heating while stirring (1600 rpm). From 70° C. onwards, a consumption of hydrogen is observed, indicating the start of the hydrogenation reaction. After a contact time of 1 h 15 min, the autoclave is cooled using the cooling coil and by cutting the heating. The stirring is reduced to 250 rpm during the cooling. When the reactor reaches 30° C., the stirring is stopped and the autoclave is depressurized. The autoclave is opened and the reaction medium obtained is filtered through an 8 pm Millipore filter in order to separate the reaction medium from the solid catalyst, which can be reused in another hydrogenation reaction. A sample of the crude reaction product is withdrawn then analyzed by gas chromatography.</p>
+      <p id="p-00039-en" num="0048">A conversion of 100% is observed with a DHMTHF selectivity of 79%. This test corresponds to test no. 10 in table 1.</p>
+      <heading id="h-00003-en" level="1">Example of the Synthesis of DHMF in the Presence of the Palladium-on-Carbon Catalyst</heading>
+      <p id="p-00040-en" num="0049">In this test, use is made of: <ul id="ul-00009-en" list-style="none"><li><ul id="ul-00010-en" list-style="none"><li>a composition containing DFF (99.2% by weight of DFF and 0.8% by weight of FFCA): 10 g;</li><li>a Pd/C palladium-on-carbon catalyst in an amount of 0.2% by weight of Pd with respect to the weight of DFF;</li><li>demineralized water: 400 ml.</li></ul></li></ul></p>
+      <p id="p-00041-en" num="0053">Operating conditions: <ul id="ul-00011-en" list-style="none"><li><ul id="ul-00012-en" list-style="none"><li>reaction temperature: 70° C.;</li><li>initial pH of the reaction: 5;</li><li>hydrogen pressure: 20 bar;</li><li>reaction time: 1 h 30 min.</li></ul></li></ul></p>
+      <p id="p-00042-en" num="0058">Introduced into a stainless steel autoclave having an internal capacity of 600 ml are: 10 g of a composition containing DFF, and the Pd/C catalyst and also 400 ml of demineralized water. The pH of the reaction medium is adjusted to 5. When all the reactants have been placed in the autoclave, the latter is purged under nitrogen, then placed under 20 bar of hydrogen at the start of the heating while stirring (1600 rpm). From 60° C. onwards, a consumption of hydrogen is observed, indicating the start of the hydrogenation reaction. After a contact time of 1 h 30 min, the autoclave is cooled using the cooling coil and by cutting the heating. The stirring is reduced to 250 rpm during the cooling. When the reactor reaches 30° C., the stirring is stopped and the autoclave is depressurized. The autoclave is opened and the reaction medium obtained is filtered through an 8 pm Millipore filter in order to separate the reaction medium from the solid catalyst, it being possible for the latter to be reused in another hydrogenation reaction.</p>
+      <p id="p-00043-en" num="0059">A sample of the crude reaction product is withdrawn then analyzed by gas chromatography. A conversion of 100% is observed with a DHMF selectivity of 83.2%. This test corresponds to test no. 12 in table 1.</p>
+      <heading id="h-00004-en" level="1">Example of the Synthesis of DHMF in the Presence of the Raney Nickel Bulk Catalyst</heading>
+      <p id="p-00044-en" num="0060">In this test, use is made of: <ul id="ul-00013-en" list-style="none"><li><ul id="ul-00014-en" list-style="none"><li>a composition containing DFF (97.4% by weight of DFF and 2.6% by weight of FFCA): 10 g;</li><li>a Raney nickel bulk catalyst in an amount of 2% by weight of Ni with respect to the weight of DFF;</li><li>demineralized water: 400 ml.</li></ul></li></ul></p>
+      <p id="p-00045-en" num="0064">Operating conditions: <ul id="ul-00015-en" list-style="none"><li><ul id="ul-00016-en" list-style="none"><li>reaction temperature: 100° C.;</li><li>hydrogen pressure: 50 bar;</li><li>initial pH of the reaction: 8.2;</li><li>reaction time: 1 h 00 min.</li></ul></li></ul></p>
+      <p id="p-00046-en" num="0069">Introduced into a stainless steel autoclave having an internal capacity of 600 ml are: 10 g of a composition containing DFF, and the Raney nickel catalyst and also 400 ml of demineralized water. The pH is adjusted to 8.2. When the reactants have been placed in the autoclave, the latter is purged under nitrogen, then placed under 20 bar of hydrogen at the start of the heating while stirring (1600 rpm). From 60° C. onwards, a consumption of hydrogen is observed, indicating the start of the hydrogenation reaction. After a contact time of 1 h 00 min, the autoclave is cooled using the cooling coil and by cutting the heating. The stirring is reduced to 250 rpm during the cooling. When the reactor reaches 30° C., the stirring is stopped and the autoclave is depressurized. The autoclave is opened and the reaction medium obtained is filtered through an 8 pm Millipore filter in order to separate the reaction medium from the solid catalyst, it being possible for the latter to be reused in another hydrogenation reaction.</p>
+      <p id="p-00047-en" num="0070">A sample of the crude reaction product is withdrawn then analyzed by gas chromatography. A conversion of 100% is observed with a DHMF selectivity of 60.1%.</p>
+      <p id="p-00048-en" num="0071">This test corresponds to test no. 6 in table 1.</p>
+      <p id="p-00049-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="14pt" align="left" />
+              <colspec colname="1" colwidth="91pt" align="center" />
+              <colspec colname="2" colwidth="28pt" align="center" />
+              <colspec colname="3" colwidth="63pt" align="center" />
+              <colspec colname="4" colwidth="175pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Composition containing DFF</entry>
+                  <entry />
+                  <entry>Catalyst</entry>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="13" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="14pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="28pt" align="center" />
+              <colspec colname="4" colwidth="21pt" align="center" />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="35pt" align="center" />
+              <colspec colname="8" colwidth="21pt" align="center" />
+              <colspec colname="9" colwidth="21pt" align="center" />
+              <colspec colname="10" colwidth="28pt" align="center" />
+              <colspec colname="11" colwidth="42pt" align="center" />
+              <colspec colname="12" colwidth="28pt" align="center" />
+              <colspec colname="13" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>DFF</entry>
+                  <entry>FFCA</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>wt %</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>test</entry>
+                  <entry>content</entry>
+                  <entry>content</entry>
+                  <entry>Mass</entry>
+                  <entry />
+                  <entry />
+                  <entry>metal/</entry>
+                  <entry>P H<sub>2</sub></entry>
+                  <entry>T</entry>
+                  <entry />
+                  <entry>Conversion</entry>
+                  <entry>DHMF</entry>
+                  <entry>DHMTHF</entry>
+                </row>
+                <row>
+                  <entry>no.</entry>
+                  <entry>(%)</entry>
+                  <entry>(%)</entry>
+                  <entry>(g)</entry>
+                  <entry>Solvent</entry>
+                  <entry>Nature</entry>
+                  <entry>substrate</entry>
+                  <entry>(bar)</entry>
+                  <entry>(° C.)</entry>
+                  <entry>Time</entry>
+                  <entry>(%)</entry>
+                  <entry>(%)</entry>
+                  <entry>(%)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="13" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="13" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="14pt" align="char" char="." />
+              <colspec colname="2" colwidth="42pt" align="char" char="." />
+              <colspec colname="3" colwidth="28pt" align="char" char="." />
+              <colspec colname="4" colwidth="21pt" align="char" char="." />
+              <colspec colname="5" colwidth="28pt" align="center" />
+              <colspec colname="6" colwidth="28pt" align="center" />
+              <colspec colname="7" colwidth="35pt" align="char" char="." />
+              <colspec colname="8" colwidth="21pt" align="char" char="." />
+              <colspec colname="9" colwidth="21pt" align="char" char="." />
+              <colspec colname="10" colwidth="28pt" align="center" />
+              <colspec colname="11" colwidth="42pt" align="char" char="." />
+              <colspec colname="12" colwidth="28pt" align="char" char="." />
+              <colspec colname="13" colwidth="35pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>1</entry>
+                  <entry>93.1</entry>
+                  <entry>6.9</entry>
+                  <entry>10</entry>
+                  <entry>H<sub>2</sub>O</entry>
+                  <entry>Raney</entry>
+                  <entry>2</entry>
+                  <entry>50</entry>
+                  <entry>95</entry>
+                  <entry>1 h 00</entry>
+                  <entry>100</entry>
+                  <entry>39</entry>
+                  <entry>25.9</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Ni</entry>
+                </row>
+                <row>
+                  <entry>2</entry>
+                  <entry>99.2</entry>
+                  <entry>0.8</entry>
+                  <entry>10</entry>
+                  <entry>H<sub>2</sub>O</entry>
+                  <entry>Raney</entry>
+                  <entry>2</entry>
+                  <entry>10</entry>
+                  <entry>65</entry>
+                  <entry>1 h 30</entry>
+                  <entry>100</entry>
+                  <entry>46.8</entry>
+                  <entry>2.7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Ni</entry>
+                </row>
+                <row>
+                  <entry>3</entry>
+                  <entry>99.2</entry>
+                  <entry>0.8</entry>
+                  <entry>4.5</entry>
+                  <entry>H<sub>2</sub>O</entry>
+                  <entry>Raney</entry>
+                  <entry>2</entry>
+                  <entry>50</entry>
+                  <entry>60</entry>
+                  <entry>1 h 00</entry>
+                  <entry>100</entry>
+                  <entry>34</entry>
+                  <entry>30</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Ni</entry>
+                </row>
+                <row>
+                  <entry>4</entry>
+                  <entry>99.2</entry>
+                  <entry>0.8</entry>
+                  <entry>4.5</entry>
+                  <entry>H<sub>2</sub>O</entry>
+                  <entry>Raney</entry>
+                  <entry>2</entry>
+                  <entry>100</entry>
+                  <entry>60</entry>
+                  <entry>1 h 00</entry>
+                  <entry>100</entry>
+                  <entry>55.2</entry>
+                  <entry>14.8</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Ni</entry>
+                </row>
+                <row>
+                  <entry>5</entry>
+                  <entry>97.4</entry>
+                  <entry>2.6</entry>
+                  <entry>30</entry>
+                  <entry>H<sub>2</sub>O</entry>
+                  <entry>Raney</entry>
+                  <entry>1</entry>
+                  <entry>100</entry>
+                  <entry>50</entry>
+                  <entry>1 h 15</entry>
+                  <entry>100</entry>
+                  <entry>42.8</entry>
+                  <entry>0.4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Ni</entry>
+                </row>
+                <row>
+                  <entry>6</entry>
+                  <entry>97.4</entry>
+                  <entry>2.6</entry>
+                  <entry>10</entry>
+                  <entry>H<sub>2</sub>O</entry>
+                  <entry>Raney</entry>
+                  <entry>2</entry>
+                  <entry>100</entry>
+                  <entry>50</entry>
+                  <entry>1 h 00</entry>
+                  <entry>100</entry>
+                  <entry>60.1</entry>
+                  <entry>18.2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Ni</entry>
+                </row>
+                <row>
+                  <entry>7</entry>
+                  <entry>97.4</entry>
+                  <entry>2.6</entry>
+                  <entry>10</entry>
+                  <entry>MeOH</entry>
+                  <entry>Raney</entry>
+                  <entry>2</entry>
+                  <entry>100</entry>
+                  <entry>60</entry>
+                  <entry>1 h 00</entry>
+                  <entry>100</entry>
+                  <entry>43.4</entry>
+                  <entry>0.5</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Ni</entry>
+                </row>
+                <row>
+                  <entry>8</entry>
+                  <entry>97.4</entry>
+                  <entry>2.6</entry>
+                  <entry>10</entry>
+                  <entry>EtOH</entry>
+                  <entry>Raney</entry>
+                  <entry>2</entry>
+                  <entry>100</entry>
+                  <entry>60</entry>
+                  <entry>1 h 00</entry>
+                  <entry>100</entry>
+                  <entry>19.7</entry>
+                  <entry>0.7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Ni</entry>
+                </row>
+                <row>
+                  <entry>9</entry>
+                  <entry>99.2</entry>
+                  <entry>0.8</entry>
+                  <entry>20</entry>
+                  <entry>H<sub>2</sub>O</entry>
+                  <entry>Raney</entry>
+                  <entry>2</entry>
+                  <entry>100</entry>
+                  <entry>60</entry>
+                  <entry>1 h 30</entry>
+                  <entry>100</entry>
+                  <entry>35</entry>
+                  <entry>28.7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Ni</entry>
+                </row>
+                <row>
+                  <entry>10</entry>
+                  <entry>93.1</entry>
+                  <entry>6.9</entry>
+                  <entry>9</entry>
+                  <entry>H<sub>2</sub>O</entry>
+                  <entry>5%</entry>
+                  <entry>0.2</entry>
+                  <entry>50</entry>
+                  <entry>120</entry>
+                  <entry>1 h 15</entry>
+                  <entry>100</entry>
+                  <entry>0</entry>
+                  <entry>78.9</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Pd/C</entry>
+                </row>
+                <row>
+                  <entry>11</entry>
+                  <entry>97.4</entry>
+                  <entry>2.6</entry>
+                  <entry>10</entry>
+                  <entry>H<sub>2</sub>O</entry>
+                  <entry>5%</entry>
+                  <entry>0.2</entry>
+                  <entry>20</entry>
+                  <entry>65</entry>
+                  <entry>0 h 15</entry>
+                  <entry>100</entry>
+                  <entry>0</entry>
+                  <entry>69.4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Pd/C</entry>
+                </row>
+                <row>
+                  <entry>12</entry>
+                  <entry>99.2</entry>
+                  <entry>0.8</entry>
+                  <entry>10</entry>
+                  <entry>H<sub>2</sub>O</entry>
+                  <entry>5%</entry>
+                  <entry>0.2</entry>
+                  <entry>20</entry>
+                  <entry>70</entry>
+                  <entry>1 h 10</entry>
+                  <entry>100</entry>
+                  <entry>83.2</entry>
+                  <entry>4.9</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Pd/C</entry>
+                </row>
+                <row>
+                  <entry>13</entry>
+                  <entry>97.4</entry>
+                  <entry>2.6</entry>
+                  <entry>10</entry>
+                  <entry>H<sub>2</sub>O</entry>
+                  <entry>5%</entry>
+                  <entry>0.2</entry>
+                  <entry>20</entry>
+                  <entry>65</entry>
+                  <entry>0 h 15</entry>
+                  <entry>100</entry>
+                  <entry>0</entry>
+                  <entry>73.4</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Pd/C</entry>
+                </row>
+                <row>
+                  <entry>14</entry>
+                  <entry>97.4</entry>
+                  <entry>2.6</entry>
+                  <entry>9</entry>
+                  <entry>MeOH</entry>
+                  <entry>5%</entry>
+                  <entry>0.2</entry>
+                  <entry>20</entry>
+                  <entry>45</entry>
+                  <entry>0 h 15</entry>
+                  <entry>100</entry>
+                  <entry>0</entry>
+                  <entry>70.6</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Pd/C</entry>
+                </row>
+                <row>
+                  <entry>15</entry>
+                  <entry>97.4</entry>
+                  <entry>2.6</entry>
+                  <entry>9</entry>
+                  <entry>EtOH</entry>
+                  <entry>5%</entry>
+                  <entry />
+                  <entry>20</entry>
+                  <entry>45</entry>
+                  <entry>0 h 20</entry>
+                  <entry>100</entry>
+                  <entry>0</entry>
+                  <entry>74.7</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Pd/C</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="13" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00050-en" num="0072">All of the other tests, nos. 1 to 8, 10 and 12 to 14, were carried out in the same manner as described above, while varying the nature and amount of catalyst, the solvent, the pH, the temperature, the molecular hydrogen pressure and the reaction time. All the results obtained appear in table 1.</p>
+      <p id="p-00051-en" num="0073">This table demonstrates the very advantage of the process that is the subject of the present invention: it is thus possible, working at low temperatures and under moderate pressures, with low doses of catalyst, to selectively obtain DHMF and DHMTHF.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en">
+      <claim-text>
+        <b>1</b>-<b>11</b>. (canceled)</claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>12</b>. A process for synthesizing 2,5-di(hydroxymethyl)furan (DHMF) and/or 2,5-di(hydroxymethyl)tetrahydrofuran DHMTHF, by bringing into contact:
+<claim-text>a) a composition containing furan-2,5-dialdehyde (DFF),</claim-text><claim-text>b) a protic solvent,</claim-text><claim-text>c) a source of hydrogen,</claim-text><claim-text>d) and a hydrogenation catalyst.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>13</b>. The process as claimed in <claim-ref idref="clm-00002-en">claim 12</claim-ref>, wherein the composition a) has a content of DFF by weight at least equal to 90%, preferably 95%, very preferably 98%.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>14</b>. The process as claimed in <claim-ref idref="clm-00002-en">claim 12</claim-ref>, wherein the composition a) is derived from the oxidation of 5-hydroxymethyl furaldehyde (5-HMF) in the presence of at least an organic acid, a nitroxyl radical, a source of oxygen and an oxygen transfer agent.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>15</b>. The process as claimed in <claim-ref idref="clm-00002-en">claim 12</claim-ref>, wherein the protic solvent b) is selected from water, methanol, ethanol, isopropanol, 1-propanol, 1-butanol and the mixtures of these solvents, water being preferred.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>16</b>. The process as claimed in <claim-ref idref="clm-00002-en">claim 12</claim-ref>, wherein the synthesis reaction via hydrogenation takes place at a temperature between 30° C. and 180° C., preferably between 30° C. and 150° C., more preferably between 50° C. and 120° C.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>17</b>. The process as claimed in <claim-ref idref="clm-00002-en">claim 12</claim-ref>, wherein the source of hydrogen c) is molecular hydrogen, under a pressure of between 1 bar and 400 bar, preferably between 10 bar and 110 bar.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>18</b>. The process as claimed in <claim-ref idref="clm-00002-en">claim 12</claim-ref>, wherein the hydrogenation catalyst is selected from metal catalysts of bulk or supported type, based on Ni, Cu, Fe, Pd, Rh, Ir, Ru, Co, Pt, more preferably based on Ni and Pd.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>19</b>. The process as claimed in <claim-ref idref="clm-00008-en">claim 18</claim-ref>, wherein the support for the supported catalyst is selected from activated carbon, silica, alumina, mixtures of silica and alumina, oxides of titanium, zirconium, magnesium and cerium, mixed oxides based on Si, Al, Ti and Zr, and in the metal content represents from 0.1% to 90% of the total weight of the catalyst.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>20</b>. The process as claimed in <claim-ref idref="clm-00002-en">claim 12</claim-ref>, wherein the contact time between the various constituents a), b), c) and d) is between 1 minute and 8 hours, preferably between 15 minutes and 2 hours.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>21</b>. The process as claimed in <claim-ref idref="clm-00002-en">claim 12</claim-ref>, wherein the process is carried out in a fixed bed or batch reactor that is pressurized or unpressurized, preferably pressurized.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>22</b>. The process as claimed in <claim-ref idref="clm-00011-en">claim 21</claim-ref>, wherein the amount of catalyst is between 0.01% and 30%, more preferably between 0.1% and 5%, more preferably between 0.15% and 2.5% with respect to the weight of DFF, in the case of a batch reactor.</claim-text>
+    </claim>
+  </claims>
+  <drawings>
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150252015A1_00001.PNG" alt="chemical image" img-content="chem" img-format="png" original="US20150252015A1-20150910-C00001.TIF" inline="yes" />
+    </figure>
+  </drawings>
+  <image file="US20150252015A1.PDF" type="pdf" size="351520" pages="5" />
+</lexisnexis-patent-document>

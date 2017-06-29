@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150264857A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150924" time-inserted="021026" date-changed="20151005" time-changed="025059">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121423867">
+        <country>US</country>
+        <doc-number>20150264857</doc-number>
+        <kind>A1</kind>
+        <date>20150924</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14665724</doc-number>
+        <date>20150323</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20151001">
+      <unexamined-printed-without-grant>
+        <date>20150924</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151001">
+      <classification-ipcr sequence="1">
+        <text>A01B  63/32        20060101AFI20150924BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>63</main-group>
+        <subgroup>32</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>A01B  49/06        20060101ALI20150924BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>49</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>A01B  61/04        20060101ALI20150924BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>61</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>A01B  63/28        20060101ALI20150924BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>63</main-group>
+        <subgroup>28</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>A01C   5/06        20060101ALI20150924BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>01</class>
+        <subclass>C</subclass>
+        <main-group>5</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151001">
+      <classification-cpc sequence="1">
+        <text>A01B  63/32        20130101 FI20150924BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>63</main-group>
+        <subgroup>32</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A01B  49/06        20130101 LI20150924BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>49</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A01B  61/044       20130101 LI20150924BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>61</main-group>
+        <subgroup>044</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A01B  63/28        20130101 LI20150924BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>63</main-group>
+        <subgroup>28</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A01C   5/062       20130101 LI20150924BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>C</subclass>
+        <main-group>5</main-group>
+        <subgroup>062</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150924</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A01C   7/203       20130101 LI20150925BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>01</class>
+        <subclass>C</subclass>
+        <main-group>7</main-group>
+        <subgroup>203</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150925</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">20</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150924" lang="eng" format="original">APPARATUSES, METHODS, AND SYSTEMS FOR PROVIDING DOWN FORCE FOR AN AGRICULTURAL IMPLEMENT</invention-title>
+    <related-documents date-changed="20150924">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61968820</doc-number>
+          <date>20140321</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150924">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>KINZE MANUFACTURING, INC.</orgname>
+            <address>
+              <city>Williamsburg</city>
+              <state>IA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Achen</last-name>
+            <first-name>Courtney N.</first-name>
+            <address>
+              <city>Iowa City</city>
+              <state>IA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Bachman</last-name>
+            <first-name>Marvin</first-name>
+            <address>
+              <city>Marengo</city>
+              <state>IA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Schildroth</last-name>
+            <first-name>Rhett</first-name>
+            <address>
+              <city>North Liberty</city>
+              <state>IA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Rolffs</last-name>
+            <first-name>Merlan</first-name>
+            <address>
+              <city>Pella</city>
+              <state>IA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Myers</last-name>
+            <first-name>Michael J.</first-name>
+            <address>
+              <city>Williamsburg</city>
+              <state>IA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="6" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kollman</last-name>
+            <first-name>John</first-name>
+            <address>
+              <city>Iowa City</city>
+              <state>IA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="7" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Mulherin</last-name>
+            <first-name>John P.</first-name>
+            <address>
+              <city>Cedar Rapids</city>
+              <state>IA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150924">
+      <main-family family-id="173800371">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150264857</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20150323</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173800369">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150264857</doc-number>
+            <kind>A1</kind>
+            <date>20150924</date>
+          </document-id>
+          <application-date>
+            <date>20150323</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150924" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">An agricultural planter includes systems, methods, and apparatus for providing down force pressure at row units of the planter. The row units may include an electric linear actuator connected to linkages of the row units to provide and maintain a down force pressure for the row unit. The linkage may also be removed and replaced with a strut or like mechanism to apply a direct down force pressure to components of the row unit. One or more sensors can be included to obtain information related to the ground to automatically adjust the amount of down force provided based upon a ground characteristic in order to maintain a substantially uniform furrow depth.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150924">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application claims priority under 35 U.S.C. §119 to provisional application Ser. No. 61/968,820, filed Mar. 21, 2014, herein incorporated by reference in its entirety.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">The invention relates generally to agricultural implements. More specifically, but not exclusively, the invention relates to systems, methods, and apparatus for providing down force pressure at row units of an agricultural planter.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00003-en" num="0003">An agricultural row crop planter is a machine built for precisely distributing seed into the ground. The row crop planter generally includes a horizontal toolbar fixed to a hitch assembly for towing behind a tractor or other implement. Row units including seed meters are mounted to the toolbar. In different configurations, seed may be stored at individual hoppers on each row unit, or it may be maintained in a central hopper and delivered to the row units on an as needed basis. The row units include ground-working tools for opening and closing a seed furrow, and a seed metering system for distributing seed to the seed furrow.</p>
+      <p id="p-00004-en" num="0004">In its most basic form, the seed meter includes a housing, a seed disc, and a seed chute. The housing is constructed such that it creates a reservoir to hold a seed pool. The seed disc resides within the housing and rotates about a generally horizontal central axis. As the seed disc rotates, it passes through the seed pool where it picks up individual seeds. The seeds are subsequently dispensed into the seed chute where they drop into the seed furrow.</p>
+      <p id="p-00005-en" num="0005">As the agricultural planter row unit travels across fields with variable soil types, soil moisture, residue levels and topography, it can be difficult to maintain constant seed depth and other parameters due to changing conditions which would ideally require varying the row unit down force pressure. For example, farming with higher residue levels also requires higher row unit down force levels as row cleaners, coulters and other attachments require applied force to keep them in the ground and at consistent depths.</p>
+      <p id="p-00006-en" num="0006">At the same time, in many locations there are immovable rocks or other obstructions at or below the soil surface which require the planter row unit to be able to quickly and freely (without undue increase in the row unit down force) rise up and over the obstruction freely and then quickly move back down, leaving a minimum amount of the row unplanted. All this must be accomplished at continually increasing ground speeds.</p>
+      <p id="p-00007-en" num="0007">Traditionally, springs have been used to urge row units downward. Air bag systems have also been used to overcome some of the drawbacks to mechanical spring systems. Air systems provide a more uniform down force through the vertical range of travel, compared to springs, and are somewhat easier to adjust than springs. However due to the compressibility of air and the relatively large volumes required, changes in air pressure are very cumbersome and not adaptable to very fast change and response to in-cab controls on the go. Air bag systems typically have a very large cross-sectional area in relation to the hose feeding the air spring with pressure, which can provide a large multiplication of force and allow for relatively good isolation of one row unit relative to another. However, air bag systems typically do not allow for rapid change of the force being applied, because of the large volume of the air spring in relation to the cross section of the hose supplying the air. Furthermore, as computers and GPS systems have allowed crop production to be managed in a location-specific way as an implement moves through the field, it has become necessary to achieve more rapid changes in the setting or adjustment of the implement. In the case of a planter row unit, it is also necessary to generate a large amount of force. Each individual planter row unit must be able to react to the soil it encounters independently of the other row units.</p>
+      <p id="p-00008-en" num="0008">Therefore, there is a need in the art for improved apparatuses, systems, and/or methods for providing down force at the row units in a way that provides for a sufficient amount of down force for varying types of row units, while also providing a near instantaneous response to variations in soil conditions, obstructions, and other changes in a field being planted.</p>
+      <heading id="h-00004-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00009-en" num="0009">Thus, it is a principle object, feature, and/or advantage of the invention to overcome deficiencies in the art.</p>
+      <p id="p-00010-en" num="0010">It is another object, feature, and/or advantage of the invention to provide an electric linear actuator to provide down force pressure at various locations of the row unit.</p>
+      <p id="p-00011-en" num="0011">It is yet another object, feature, and/or advantage of the invention to provide a strut in place of a four bar linkage of a row unit.</p>
+      <p id="p-00012-en" num="0012">It is yet a further object, feature, and/or advantage of the invention to connect a seed meter to a toolbar via a solenoid.</p>
+      <p id="p-00013-en" num="0013">It is another object, feature, and/or advantage of the invention to provide a row unit that is attached to a toolbar via a slider either behind or underneath the toolbar.</p>
+      <p id="p-00014-en" num="0014">It is yet another object, feature, and/or advantage of the invention to provide a moving actuator to the opening wheel of a row unit to reduce the amount of force needed for the wheel to penetrate the ground.</p>
+      <p id="p-00015-en" num="0015">It is still another object, feature, and/or advantage of the invention to provide a monitoring and/or foresight system for use with a down force pressure provider to view ahead of the row unit in order to preload the down force provided.</p>
+      <p id="p-00016-en" num="0016">It is yet a further object, feature, and/or advantage of the invention to provide a rotating bit to open a furrow in the ground for a row unit.</p>
+      <p id="p-00017-en" num="0017">These and/or other objects, features, and advantages of the present invention will be apparent to those skilled in the art. The present invention is not to be limited to or by these objects, features and advantages. No single embodiment need provide each and every object, feature, or advantage.</p>
+      <p id="p-00018-en" num="0018">The invention relates generally to agricultural implements, and more particularly to methods, apparatuses, and systems for providing down force pressure or pressures at the row units of the agricultural implement. The down force pressure is utilized to maintain a pressure such that the row units are able to maintain a substantially similar depth when planting a material (seed) throughout a field. As the soil types, compositions, obstructions, and other factors affect the general makeup of fields, the down force and ability of a row unit to float or otherwise move in a substantially vertical direction will provide that the row unit maintains a substantially similar depth during the planting process. The maintaining of depth of the planting process increases the yield of an eventual crop by placing the seed at a desired depth within the soil, which may be based upon known or determined test results.</p>
+      <p id="p-00019-en" num="0019">Therefore, the invention includes numerous aspects which pertain to the providing of down force at and to a row unit of an agricultural implement. As will be understood, the down force could be provided in many different ways, and also at different locations of the row unit to provide that the components of the row unit, e.g., the opener wheels, penetrate the ground to place a seed at a desired depth and to maintain that desired depth throughout a field, regardless of changing soil characteristics or obstructions in the field. For example, according to some aspects of the invention, a linear actuator is provided to provide the required down force to the row unit. The linear actuator can include a sensor or other foresight technology to provide information regarding an area of the field in front of the row unit, wherein the linear actuator is able to adjust the amount of down force prior to or at the location of a particular place in the field. This allows the row unit to preload or otherwise be ahead of a change in the composition of a field or of the presence of an obstruction in the field.</p>
+      <p id="p-00020-en" num="0020">Still other aspects of the invention provide for different methods, apparatuses, and/or systems of attaching a row unit to a toolbar of an agricultural implement. These different ways of attaching the row unit to the toolbar can allow for different mechanisms to be utilized which will allow for a maintaining of down force on the row unit, while allowing the row unit to float or otherwise move in a vertical direction upon interaction with an obstruction. In some instances, the direct connection between the row unit and the toolbar will alleviate some of the required down force, as the down force providing mechanism can be actuated in a more vertical manner, as opposed to having both vertical and horizontal components. In addition, some of the aspects remove or otherwise readjust the weight of a row unit such that less down force is required to move the components of the row unit.</p>
+      <p id="p-00021-en" num="0021">In any of the embodiments, the location of a down force provider can be positioned generally anywhere on the row unit. For example, and according to some aspects of the invention, it is contemplated that a down force provider or actuator be provided between the toolbar and the row unit.</p>
+      <p id="p-00022-en" num="0022">In other aspects, the down force actuator can be provided at an opening and/or closing wheel of the row unit. And still other aspects, there may be multiple actuators located at multiple positions including some of said previously mentioned locations.</p>
+      <p id="p-00023-en" num="0023">Still further, it is contemplated that the actuator be placed ahead of the toolbar such that the down force is determined ahead of the actual location of a furrow creating mechanism, such as an opening wheel or other mechanism.</p>
+      <p id="p-00024-en" num="0024">According to some aspects of the invention, the introduction of a foresight technology may be included. The foresight technology can be technology that is used to view or otherwise sense an area ahead of an opening or furrow creating mechanism, row units, and/or gauge wheels of an agricultural implement. The foresight technology can determine the distance from a toolbar of the implement to the ground, which can aid in determining a system which provides for data at a set distance ahead of the opening mechanism. This foresight technology could be utilized to set a determined down force or alleviate a down force based upon information gained from said foresight technology. For example, if an obstruction is determined to be in a path of one or more row units, the information could be relayed to the row unit such that the row unit is able to float, move, or otherwise be displaced while mitigating damage to the row unit due to the obstruction. Immediately after the obstruction, the down force could be reactivated to provide that the row unit begins to create a furrow or other opening in the field at a predetermined depth. In addition, the foresight technology could also be utilized to determine a change in composition, such as the hardness or softness of soil, to adjust or preprogram the amounts of down force that will be required to place the seed at a predetermined and desired depth within said soil.</p>
+      <p id="p-00025-en" num="0025">It is contemplated that in any of the embodiments, aspects, or otherwise versions of the down force providing mechanisms of the invention, numerous types of actuators or other mechanisms could be used. For example, linear actuators, pneumatic actuators, hydraulic actuators, mechanical actuators, active orientation systems, or other mechanisms may all be utilized to provide a down force and/or floating aspect to the row unit to provide that the row unit accomplishes its task. As will be understood, any of the variations could be utilized with any of the embodiments, and a combination of the variations could also be utilized at the same time.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00005-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 1</figref> is a perspective view of an agricultural planter.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 2</figref> is a perspective view of a row unit for use with an agricultural planter.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 3</figref> is a side elevation view of the row unit of <figref>FIG. 2</figref>.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 4</figref> is a perspective view of a row unit for use with an agricultural planter including additional aspects.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 5</figref> is a side elevation view of the row unit of <figref>FIG. 4</figref>.</p>
+      <p id="p-00031-en" num="0031">
+        <figref>FIG. 6</figref> is a perspective view of a row unit for use with an agricultural planter showing additional aspects.</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 7</figref> is a side elevation view of the row unit of <figref>FIG. 6</figref>.</p>
+      <p id="p-00033-en" num="0033">
+        <figref>FIG. 8</figref> is a side elevation view of a row unit for use with an agricultural planter showing additional aspects.</p>
+      <p id="p-00034-en" num="0034">
+        <figref>FIG. 9</figref> is a side elevation view of a row unit for use with an agricultural planter showing additional aspects.</p>
+      <p id="p-00035-en" num="0035">
+        <figref>FIG. 10</figref> is a side elevation view of a row unit for use with an agricultural planter showing additional aspects.</p>
+      <p id="p-00036-en" num="0036">
+        <figref>FIG. 11</figref> is a side elevation view of a row unit for use with an agricultural planter showing additional aspects.</p>
+      <p id="p-00037-en" num="0037">
+        <figref>FIG. 12</figref> is a side elevation view of a row unit for use with an agricultural planter showing additional aspects.</p>
+      <p id="p-00038-en" num="0038">
+        <figref>FIG. 13</figref> is a schematic view of a block diagram showing components of the row unit of <figref>FIG. 12</figref>.</p>
+      <p id="p-00039-en" num="0039">
+        <figref>FIG. 14</figref> is a side elevation view of a row unit for use with an agricultural planter showing additional aspects.</p>
+      <p id="p-00040-en" num="0040">
+        <figref>FIG. 15</figref> is a schematic view of a block diagram showing components of the row unit of <figref>FIG. 14</figref>.</p>
+      <p id="p-00041-en" num="0041">
+        <figref>FIG. 16</figref> is a perspective view of a rotating drill bit for use with a row unit according to aspects of the invention.</p>
+      <p id="p-00042-en" num="0042">
+        <figref>FIG. 17</figref> is another perspective view of the rotating drill bit.</p>
+      <p id="p-00043-en" num="0043">
+        <figref>FIG. 18</figref> is another perspective view of the rotating drill bit.</p>
+      <p id="p-00044-en" num="0044">
+        <figref>FIG. 19</figref> is another perspective view of the rotating drill bit.</p>
+      <p id="p-00045-en" num="0045">
+        <figref>FIG. 20</figref> is another perspective view of the rotating drill bit.</p>
+      <p id="p-00046-en" num="0046">
+        <figref>FIG. 21</figref> is a side elevation view of the rotating drill.</p>
+      <p id="p-00047-en" num="0047">
+        <figref>FIG. 22</figref> is a bottom view of the rotating drill bit.</p>
+      <p id="p-00048-en" num="0048">
+        <figref>FIG. 23</figref> is a top view of the rotating drill bit.</p>
+      <p id="p-00049-en" num="0049">
+        <figref>FIG. 24</figref> is a sectional view according to the lines A-A of <figref>FIG. 23</figref>.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <p id="p-00050-en" num="0050">Various embodiments of the present invention will be described in detail with reference to the drawings, wherein like reference numerals represent like parts throughout the several views. Reference to various embodiments does not limit the scope of the invention. Figures represented herein are not limitations to the various embodiments according to the invention and are presented for exemplary illustration of the invention.</p>
+      <heading id="h-00006-en" level="1">DETAILED DESCRIPTION OF THE PREFERRED EMBODIMENTS</heading>
+      <p id="p-00051-en" num="0051">
+        <figref>FIG. 1</figref> shows an agricultural implement <b>10</b>, in this case, an agricultural planter. The planter <b>10</b> is usually attached to and pulled by a tractor. However, it should be appreciated that other equipment and/or vehicles may move the implement <b>10</b>. For purposes of the present disclosure, the implement <b>10</b> will be referred to as a planter.</p>
+      <p id="p-00052-en" num="0052">The planter <b>10</b> includes a tongue <b>14</b> having a first end <b>16</b> and an opposite second end (not shown). The tongue <b>14</b> includes a hitch <b>18</b> at the first end <b>16</b>, with the hitch <b>18</b> being connected to the tractor. At the opposite end of the tongue <b>14</b> is a central toolbar <b>22</b>. The tongue <b>14</b> may be a telescoping tongue with components capable of being inserted into one another such that the implement <b>10</b> is a front folding style implement. However, the present invention is not to be limited to such front folding style implements and is to include any such implement for use in the agricultural industry.</p>
+      <p id="p-00053-en" num="0053">As shown in <figref>FIG. 1</figref>, central hoppers <b>24</b> are positioned at the central toolbar <b>22</b>. The hoppers <b>24</b> are configured to store seed, fertilizer, insecticide, or other types of material for use in farming. The hoppers <b>24</b> may both contain the same material, or could contain separate materials. The use of the central hoppers <b>24</b> allows for a large amount of material to be added and stored at a centralized location. However, the invention also contemplates the use of one or more hoppers positioned at each of the row units <b>34</b> for providing seed to be planted at the row units, as is shown in <figref>FIG. 3</figref>. When central hoppers <b>24</b> are used at the central toolbar <b>22</b>, it should be appreciated that the central hoppers will be in fluid communication with each of the row units <b>34</b>. This can be done by use of separate hoses to each of the row units, or fewer hoses that include splitters, wherein the hose is split to provide seed or other material to more than one row unit. Also connected to the central toolbar is a plurality of central wheels, which may be known as transport wheels <b>26</b> extending generally downwardly from the central toolbar <b>22</b>. The wheels <b>26</b> contact the ground and support the central hoppers <b>24</b>. The wheels stabilize the implement <b>10</b> and are the wheels that contact the ground when in a working position or a transport position, e.g., if the implement <b>10</b> is a front folding implement such that the wings <b>28</b>, <b>30</b> are folded forward with wing wheels <b>32</b> not contacting the ground.</p>
+      <p id="p-00054-en" num="0054">Extending generally from both sides of the toolbar <b>22</b> are first and second wings <b>28</b>, <b>30</b>. The wings <b>28</b>, <b>30</b> are generally identical and mirror images of one another. Therefore, only one wing will be described with the understanding that the other wing will be generally the same configuration. The first wing <b>28</b> includes a bar <b>29</b>. Mounted to the bar <b>29</b> are a plurality of row units <b>34</b>, as well as a plurality of wheels <b>32</b>. The wheels <b>32</b> are configured to contact the ground. The row units <b>34</b> may be seeders, fertilizers, insecticide sprayers, or other dispensers, discs, or plows. The wings <b>28</b>, <b>30</b> may also include at least one fold cylinder and a down force cylinder. It is further contemplated that multiple down force cylinders be used with an implement having more sections. The fold cylinder(s) is configured to fold the wings to a position wherein the first and second wings <b>28</b>, <b>30</b> are generally adjacent the tongue <b>14</b> of the implement <b>10</b>.</p>
+      <p id="p-00055-en" num="0055">
+        <figref>FIGS. 2 and 3</figref> are views of a row unit <b>40</b> including aspects of the invention which utilize a linear actuator <b>49</b> for providing down force at the row unit <b>40</b>. The row unit <b>40</b> can be one of a plurality of row units that can be positioned for use with a planter <b>10</b>, such as that shown in <figref>FIG. 1</figref>. The row unit <b>40</b> shown in <figref>FIGS. 2 and 3</figref> includes a mount <b>41</b> for attaching to a toolbar (not shown) of an agricultural implement, such as the agricultural planter <b>10</b> of <figref>FIG. 1</figref>. A linkage <b>42</b> extends generally between the mount <b>41</b> and the frame <b>45</b> of the row unit <b>40</b> to connect the row unit <b>40</b> to the toolbar. The linkage <b>42</b> is shown to be a four bar linkage including substantially parallel upper bars <b>43</b> and lower bars <b>44</b>.</p>
+      <p id="p-00056-en" num="0056">The frame <b>45</b> is therefore able to rotate and/or move in a generally vertical direction relative to the toolbar based upon the allowed movement of the linkage <b>42</b>. Operatively attached to the frame <b>45</b> are opening wheels <b>46</b>, gauge wheels <b>47</b>, and a depth adjustment mechanism <b>48</b>. Closing wheels (not shown) would also be included with many versions of the row unit <b>40</b>. The opening wheels <b>46</b> create a furrow, trench, or other opening in the ground in which seed is deposited from a seed meter. The gauge wheels <b>47</b> and depth mechanism <b>48</b> work to set a depth of the opening created by the opening wheels <b>46</b> and are utilized to try to maintain said depth throughout the field. However, due to changing conditions of the field, and/or the presence of obstructions as the implement moves through the field, the gauge wheels may have made too much depth, not enough depth, or may encounter obstructions, which cause the row unit <b>40</b> to bounce in a substantially vertical direction. In such a situation, the row unit <b>40</b> may not go back to its original depth. Therefore, a down force providing mechanism, which is shown to be a linear actuator <b>49</b> in <figref>FIGS. 2 and 3</figref>, is provided. The linear actuator <b>49</b> can be an electric linear actuator, which can be used in place of a pneumatic down pressure bag, which is currently used in the agricultural industry. The linear actuator <b>49</b> provides down force for the row unit <b>40</b>.</p>
+      <p id="p-00057-en" num="0057">Power for the electric linear actuator <b>49</b> could be provided from the tractor or an electric power source mounted or otherwise connected to the agricultural planting implement. The linear actuator <b>49</b> could be set to be moved fast enough to maintain depth of the opening wheels <b>46</b>, while allowing for give due to obstructions or other changes in the field. For example, the pressure could be maintained by the linear actuator <b>49</b>, but could be alleviated upon a substantial upward force on the row unit <b>40</b>. With such a situation, an actuator or rod of the linear actuator <b>49</b> can be allowed to retract within the housing of the linear actuator <b>49</b>. However, the linear actuator <b>49</b> could be set to provide that as soon as the substantially upward forces pass, the rod can be re-extended to force the row unit via the linkages <b>42</b> to the desired depth, thus providing a substantial and desired down force pressure to the row unit <b>40</b>.</p>
+      <p id="p-00058-en" num="0058">The electric linear actuators <b>49</b> could be of the screw type, magnetic solenoids, electro-fluid (wherein the viscosity is changed upon a voltage change), and/or damping systems. Such systems will provide for a down force pressure, while allowing a rod or other extension member to be moved in and out at least partially within the housing of the linear actuator <b>49</b>. Furthermore, the linear actuator <b>49</b> could be a solid state actuator, which comprises a memory metal. In such a situation, a magnetic force, heat, or other source (such as a compressible gas or other fluid) can be utilized to change the size of the cylinder as is needed throughout the movement of the row unit <b>40</b> and agricultural implement through the field.</p>
+      <p id="p-00059-en" num="0059">Furthermore, sensors could be placed at the gauge wheels <b>47</b> to measure the pressure of the gauge wheels as they move through the field. This is known as the gauge wheels “walking”. The walking of the gauge wheels will provide a measurement that can be utilized by the linear actuator <b>49</b> to provide a sufficient amount of down force pressure to the row unit <b>40</b> based upon said walking. Therefore, the linear actuator <b>49</b> can include fast actuators to consistently actuate based upon the changing measurements received by the linear actuator <b>49</b>. It is to be appreciated that additional aspects are also contemplated by the invention.</p>
+      <p id="p-00060-en" num="0060">
+        <figref>FIGS. 4 and 5</figref> are views of a row unit <b>50</b> showing additional aspects of the invention. The row unit <b>50</b> shown in <figref>FIGS. 4 and 5</figref> include many of the elements of the row unit <b>40</b>. For example, the row unit <b>50</b> includes a mount <b>51</b>, linkage <b>52</b> including substantially parallel upper bars <b>53</b> and lower bars <b>54</b>, and a frame <b>55</b>. Furthermore, the row unit <b>50</b> includes opening wheels <b>56</b> to create a furrow or trench in a field, gauge wheels <b>57</b> for aiding and maintain the depth of the opening wheels <b>56</b>, and a depth mechanism <b>58</b> for adjusting the depth of the opening wheels <b>56</b> in the field via the gauge wheels <b>57</b>. The row unit <b>50</b> would also likely include closing wheels to close a trench created by the opening wheels. The row unit <b>50</b> also includes an electric linear actuator <b>59</b> for providing down force pressure of the row unit <b>50</b>. However, the row unit <b>50</b> shown in <figref>FIGS. 4 and 5</figref> also includes a spring <b>61</b> for use with the electric linear actuator <b>59</b>. The spring <b>61</b> and linear actuator <b>59</b> work together to provide a down force pressure of the row unit <b>50</b>.</p>
+      <p id="p-00061-en" num="0061">In the row unit <b>50</b> shown in <figref>FIGS. 4 and 5</figref>, the electric linear actuator <b>59</b> is operatively connected between the mount <b>51</b> and a sliding mechanism <b>60</b>. The slide or sliding mechanism <b>60</b> is any mechanism capable of moving relative to the upper and/or lower bars <b>53</b>, <b>54</b> of the linkage <b>52</b>. As shown in the figures, the slide is positioned to move relative the upper bars <b>53</b> of the linkage <b>52</b>. The slide moves based upon the actuation of the electric linear actuator <b>59</b>, such as by the extension and retraction of the rod in and out of the housing of the linear actuator <b>59</b>. Furthermore, the spring <b>61</b>, which may actually include first and second springs attached between opposite ends of the slide <b>60</b> and opposite lower bars <b>54</b>, can be compressed or decompressed based upon the movement of the linear actuator <b>59</b> and slide <b>60</b>, in which case the spring can provide or reduce down force pressure for the row unit.</p>
+      <p id="p-00062-en" num="0062">For example, the actuator <b>59</b> is positioned to be extended and retracted in a generally horizontal or substantially a horizontal direction. This moves the slide <b>60</b> about or parallel to the upper bars <b>53</b> of the linkage <b>52</b>. In the particular embodiment shown, the slides “ride” on the upper linkage bars, but it is to be appreciated that the slide could otherwise move in relation to the row unit <b>50</b>. When the slide moves in a rearward direction, i.e., towards the frame <b>55</b> of the row unit <b>50</b>, the load on the spring or springs <b>61</b> is lessened, which provides less of a down force pressure on the row unit <b>50</b>. However, when the linear actuator rod is retracted, and the slide <b>60</b> moved towards the mount <b>51</b>, the spring <b>61</b> can be loaded, such that it provides a greater downward force on the linkage <b>52</b>, which provides a greater down force pressure on the row unit <b>50</b>. However, it should be noted that the springs and actuator can be set such that the opposite movement can load or lessen the force provided on the row unit <b>50</b>. In addition, it should be appreciated that the linear actuator <b>59</b> can be reversed such that it extends between the frame and the slide <b>60</b>, instead of between the mount <b>51</b> and the slide <b>60</b>. The configuration shown in <figref>FIGS. 4 and 5</figref> are for exemplary purposes only, and the combination of a linear actuator and a mechanical actuator, such as a spring or plurality of springs, can be configured in any manner to provide down force pressure to the row unit <b>50</b>, while also providing a mechanism that allows the row unit to float or otherwise move in a vertical direction upon interaction with an obstruction.</p>
+      <p id="p-00063-en" num="0063">For example, while the spring <b>61</b> provides down force pressure for the row unit <b>50</b>, the spring can also be compressed, such as when the row unit hits an obstruction and the components are thrust in a vertical manner. The spring is a substantially non-rigid member that will allow for some float of the row unit, while also providing that the down force pressure will be re-exerted once the obstruction is passed.</p>
+      <p id="p-00064-en" num="0064">Similar to the row unit <b>40</b>, the components of the row unit <b>50</b> provide down force pressure for the row unit <b>50</b> such that the depth of the furrow or trench is maintained to provide the depositing of seeds in the depth of a predetermined range, which may be desired for planting a particular type of seed. Therefore, the linear actuator can be generally any sort of electric linear actuator, such as a screw type, magnetic solenoid, electro-fluid, damping system, and/or solid state actuator. In addition, the spring or springs <b>61</b> can be generally any spring or springs which are capable of providing and lessening a downward force on a row unit. The choice in size of spring can be determined based upon the particular weight of a row unit. Furthermore, the combination of the linear actuator <b>59</b> and springs <b>61</b> can work with sensors on the gauge wheels or other portions of the row unit <b>50</b> in order to provide and maintain a down force pressure on the row unit to maintain the depth of the trench, regardless of changing field conditions, and/or obstructions in the path of the agricultural implement and/or row units.</p>
+      <p id="p-00065-en" num="0065">
+        <figref>FIGS. 6 and 7</figref> show additional aspects of the row unit <b>40</b> incorporating a linear actuator <b>49</b> to provide down force pressure for the row unit <b>40</b>. While the additional aspects will be directed towards the row unit <b>40</b>, it should be appreciated that the same or similar components as will be mentioned can be utilized with the row unit <b>50</b> of <figref>FIGS. 4 and 5</figref> as well. In addition to the linear actuator <b>49</b> of the row unit <b>40</b>, the embodiment shown in <figref>FIGS. 6 and 7</figref> include one or more sensors <b>62</b> operably connected to the row unit <b>40</b>. As shown in the figures, the sensor <b>62</b> is operatively connected to the linkage <b>42</b>, the mount <b>41</b>, or some other portion of the row unit <b>40</b>. It is also to be contemplated that the sensor could be placed on or at a toolbar (not shown), to which the row unit <b>40</b> is attached. The sensor <b>62</b> provides a monitoring system for monitoring the ground in front of or adjacent the row unit <b>40</b> to “read” the ground to prepare depth of the units ahead of time. Thus, the sensor may be any sort of sensor, including but not limited to a soil characteristic sensor, visual sensor, temperature sensor, distance or other vision sensor, or generally any other sort of sensor which is capable of determining a change in a ground condition in front of or adjacent the row unit. The sensor <b>62</b> provides a viewing area <b>63</b>, which is positioned to “view” a known distance between the viewing area <b>63</b> and the opening wheel <b>46</b>.</p>
+      <p id="p-00066-en" num="0066">The sensor <b>62</b> can be operated along with the down force providing mechanism, e.g., the linear actuator alone or the linear actuator in spring combination, to pre-adjust or otherwise prepare the down force pressure of the row unit based upon real time or historical data acquired by or stored in the sensor <b>62</b>. For example, when the sensor <b>62</b> determines a change in the soil composition within the viewing area <b>63</b>, the sensor can interact via an intelligent control or control unit to actuate the linear actuator <b>49</b> accordingly. For example, if the sensor <b>62</b> determines a softening of the ground ahead of the opening wheel <b>46</b>, at a known and/or predetermined distance, the sensor can work with the system to actuate the linear actuator <b>49</b> to lessen the down pressure force of the row unit. As the ground will be softer, less down force is needed to penetrate the ground at the predetermined depth. However, if the ground is determined to be harder at the known distance, the linear actuator <b>49</b> can be activated to provide more down force pressure to penetrate the ground with a harder force to obtain a trench of a selected depth. In addition, if the sensor <b>62</b> were to determine an obstruction, such as a rock, dirt clod, field trash, or the like, the actuator can be alerted to temporarily disable any down force pressure. Such disabling of the linear actuator will allow the row unit to temporarily float and/or move in an upward direction. Upon passing of the obstruction, the linear actuator <b>49</b> can be activated to provide the desired down force pressure to be able to create the trench and/or furrow in the ground. At the same time, the down force can be maintained even during the float of the row unit, such that the row unit will revert to its original position after passing the obstruction.</p>
+      <p id="p-00067-en" num="0067">Thus, the use of a sensor <b>62</b> with either of the row units <b>40</b>, <b>50</b> will provide many benefits and/or advantages, such as a preloading or setting for the down force providing mechanism. Such use of a sensor can aid in mitigating the amount of damage based upon the rigidity of a row unit upon interaction with an obstruction. Furthermore, the knowledge of a change in soil condition prior to a trench opening device reaching said change in the soil condition, and thus the change in the amount of down force pressure that can or should be provided, can aid in maintaining a desired furrow depth for placing the seed within an acceptable depth range for planting. For example, the sensors could test the ground conditions and relay them to the down force provider and/or could use historical data from a system or other implement to pre-plot or map the field with soil conditions and use to adjust the down force provider. The sensor could be a memory database and/or communicator. When the sensor is a database, the sensor can obtain and store information related to the soil conditions of a field. For example, a field may include a section of soil that may be notoriously dry in certain areas, which would necessitate a higher down force pressure. This could be stored in the sensor, such that in the following year, the sensor will relay this information to the down force provider to automatically provide the additional down force at said location. Furthermore, the invention contemplates that another vehicle travels ahead of the agricultural planter to determine and plot soil characteristics throughout a field. This lead apparatus could then relay the information wirelessly and/or wired to the sensor <b>62</b>. For example, the two or more vehicles could be in a field at the same time, such that the planter consistently receives information in real time about the rest of a field. In contrast, a farmer could “scout” a field with sensors, store the information, and then later upload the information into the system controlling the down force providing members of the planter for use during the planting. The information could then be used to adjust the amount of down force pressure provided by the down force pressure provider at the specific locations as the implement moves through the field. Thus, the system could be an open loop (real time information used to continuously update) or closed loop (farmer sets a particular depth and this is maintained regardless of the information received). Still other benefits obvious to those skilled in the art are to be considered part of the invention.</p>
+      <p id="p-00068-en" num="0068">Additional aspects of the invention include a different configuration for the actuator <b>49</b> for providing the down force pressure for the row unit <b>40</b>. It is contemplated that a linear actuator could be used over a compressed gas. The gas would work as a damper to absorb shock loads of the row unit and acted on the linear actuator <b>49</b>. This could help to reduce field noise by utilizing the compressed gas to allow the rod of the linear actuator to be moved upon a shock load, while moving the rod back to the preferred position after the load has passed. This will aid in maintaining an amount of down force acting on the row unit as the implement moves through the field, and also accounts for some obstructions or changes in the field.</p>
+      <p id="p-00069-en" num="0069">
+        <figref>FIGS. 8-11</figref> are additional embodiments of row units that provide additional ways of providing a down force pressure for the said row units. For example, <figref>FIG. 8</figref> is a row unit <b>65</b> in which the row unit is attached to the toolbar <b>66</b> without the use of a four bar linkage. Instead, the row unit <b>65</b> is directly or otherwise operatively attached to the toolbar <b>66</b> via a connector <b>74</b> with the use of a strut <b>73</b>. Additional aspects of the row unit <b>65</b> include a hopper <b>67</b>, seed meter <b>68</b>, opening wheel <b>69</b>, gauge wheel <b>70</b>, closing wheel <b>71</b> and trash wheel <b>72</b>, which may also be known as a leader wheel. The row unit <b>65</b> may also include a frame <b>77</b> for aiding and attaching the components to one another.</p>
+      <p id="p-00070-en" num="0070">As mentioned, the row unit <b>65</b> includes a strut <b>73</b> that attaches the row unit <b>65</b> to the toolbar <b>66</b>. The strut <b>73</b> may be a down force providing mechanism that is actuated by air, hydraulic fluid, mechanical pressure (spring), compressible fluid, or some combination thereof to provide the needed down force and vertical travel of the row unit. For example, as shown in <figref>FIG. 8</figref>, the strut <b>73</b> is an actuator including a housing <b>75</b> and an actuator rod <b>76</b> extending and retracting relative the housing <b>75</b>. Certain components of the row unit <b>65</b> will maintain a substantially rigid configuration, while other components will be fluid. The housing <b>75</b> of the strut <b>73</b> is connected to the toolbar <b>66</b> via the connector <b>74</b>. Furthermore, the hopper <b>67</b> and seed meter <b>68</b> are operably connected to the strut housing <b>75</b>. These components will be substantially rigid and will not move or need to be moved in a vertical direction, and may be referred to as fluid components. However, according to some aspects of the invention, other combinations of the components can be substantially rigid, movable, or somewhere in between. For example, components such as the hopper, seed meter and closing wheels could be rigidly mounted to the toolbar or moving with the opener disks or in any combination.</p>
+      <p id="p-00071-en" num="0071">The frame <b>77</b> and components attached thereto, which include, but are not limited to, the opening wheel <b>69</b>, gauge wheel <b>70</b>, and trash wheel <b>72</b>, may be attached to the actuator rod <b>76</b> of the strut <b>73</b>, and may be known as fluid components. Therefore, in such configurations, movement of the actuator <b>76</b> relative to the housing <b>75</b> of the strut <b>73</b> will also cause movement of those components. Therefore, the strut <b>73</b> can provide a down force pressure via the actuator <b>76</b> to the trash wheel <b>72</b>, opening wheel <b>69</b>, and gauge wheel <b>70</b>, which are the components that most need to be maintained with a desired amount of down force pressure during transport of the row unit <b>65</b>. In addition, the strut <b>73</b> would allow these fluid components to move in a vertical direction upon interaction with an obstruction, which would provide a floating type movement for the system. The frame <b>77</b> could also be attached to a slide or other guide member, which can aid in controlling the movement of the fluid components such that they will move in a substantially vertical direction, while not rotating about the strut <b>73</b>. It should be again noted that, while certain components have been designated as being rigidly and/or fluidly connected, any of the components or any combination of the components could be connected in either manner (i.e., rigidly or fluidly).</p>
+      <p id="p-00072-en" num="0072">Advantages to such a system will provide a situation in which the seed released from the seed meter <b>68</b> does not pass through a tube which will move very much. Thus, this will reduce the bounce of the seeds as they travel towards the trench, which will increase meter efficiency and will increase the efficiency of the desired spacing between the seeds. In such a situation, the substantially rigid components of the row units <b>65</b> will not be influenced by changing soil types, obstructions, or other things in a field, as they will be maintained as though nothing is changing. For example, while the fluid components will “bounce” or “float”, the rigid components will act as if there were no vertical change. The fluid components connected to the strut mechanism <b>73</b> will be the moving components which move in a substantially vertical direction up and down, while the substantially rigid components can be maintained in a relatively constant manner.</p>
+      <p id="p-00073-en" num="0073">
+        <figref>FIG. 9</figref> is a side view of a row unit <b>80</b> showing additional aspects of the invention. The row unit <b>80</b> includes a portion of a toolbar <b>81</b> of an agricultural implement. The row unit <b>80</b> is attached to the toolbar <b>81</b> via a connector <b>85</b>, which is positioned between the toolbar <b>81</b> and a strut <b>84</b>. In the embodiment shown in <figref>FIG. 9</figref>, the seed meter <b>82</b> of the row unit <b>80</b> is connected either directly to the toolbar <b>81</b> or is otherwise remote from the rest of the components of the row unit <b>80</b>. The seed meter <b>82</b> also includes a seed tube <b>83</b> extending therefrom for passing the seed from the seed meter <b>82</b> and adjacent the opening trench in the ground. The strut <b>84</b> is connected to the connector <b>85</b> and includes a housing <b>86</b>, which is connected to said connector <b>85</b>. The strut <b>84</b> also includes an actuator rod <b>87</b> moveable relative to the housing <b>86</b>, as the actuator <b>87</b> can be extended from or retracted with said housing <b>86</b>. A distal end of the actuator <b>87</b> is connected to a frame <b>88</b> of the row unit <b>80</b>. Operatively connected to the frame <b>88</b> are the opening wheels <b>89</b> and the gauge wheels <b>90</b>. As shown in <figref>FIG. 9</figref>, the closing wheels <b>91</b> are operatively connected to the seed tube <b>83</b>, and thus are part of the rigid components. As can be understood, the configuration shown in <figref>FIG. 9</figref> provides that the seed meter <b>82</b>, seed tube <b>83</b>, and closing wheels <b>91</b> are attached to the toolbar <b>81</b> such that they are substantially rigid with regard to the movement of the components. In other words, the components will not substantially move upon external forces acting thereon.</p>
+      <p id="p-00074-en" num="0074">The frame <b>88</b> of the row unit <b>80</b> is also operatively connected to a slide member <b>92</b> for guiding the frame <b>88</b> and attached components thereto as they float. The strut <b>84</b> is configured to provide a down force pressure for the fluid components of the row unit <b>80</b>, which comprise the frame <b>88</b>, opening wheels <b>89</b>, and gauge wheels <b>90</b>. Thus, the fluid components of the row unit <b>80</b> are able to move relative to the rigid components of the row unit <b>80</b>. The actuator portion <b>87</b> of the strut <b>84</b> can provide a down force pressure to the fluid components of the row unit <b>80</b> to aid in maintaining a depth of trench or furrow created by the opening wheels <b>89</b>. The gauge wheels <b>90</b> can aid in setting the desired depth thereof. An advantage of such a situation is that there is less weight in the rigid components that need the down force pressure, and thus, less down force pressure is required. This would allow for a lighter load down force providing mechanism (e.g., electrical linear actuator) to be used.</p>
+      <p id="p-00075-en" num="0075">The strut <b>84</b>, which can actuated by air, hydraulic fluid, mechanical actuation (spring), compressible fluid, or some combination thereof, provides for both the down force pressure and the floating capabilities of the row unit <b>80</b>. In other words, the fluid components of the row unit <b>80</b> are able slide or otherwise move relative to the toolbar <b>81</b> as the actuator moves the fluid components along the slide based upon a sensed or otherwise determined distance between a sensor of the row unit <b>80</b> and the field. As a sensor determines that additional down force is required, the actuator member <b>87</b> of the strut <b>84</b> will extend to provide more force thereon. However, if an obstruction or other item is in the way of the row unit <b>80</b>, the strut <b>84</b> will react to allow the actuator <b>87</b> to retract at least partially within the housing <b>86</b> of the strut <b>84</b>, at least temporarily. The strut <b>84</b> can then reposition the components at the ground with the required down force. The movement of the actuator <b>87</b> in either a downward or upward direction will cause the frame <b>88</b> and components attached thereto to move substantially in tandem. Such movement can be facilitated by the frame being positioned adjacent the slide member <b>92</b>. The slide can be positioned on opposite sides thereof to aid in the movement of the frame <b>88</b> and fluid components of the row unit <b>80</b>, while also providing some stability such that the components will not rotate, and will instead move in a generally vertical direction.</p>
+      <p id="p-00076-en" num="0076">Other components that may be included with the row unit <b>80</b> of <figref>FIG. 9</figref> may include, but are not limited to, a sensor or other foresight technology, a database member, or other communicator. Such components may provide either real time or stored data for the row unit to alert the strut <b>84</b> of upcoming conditions such that the strut can adjust the down force pressure and/or floating of the fluid components accordingly. It should be acknowledged that, as there are fewer fluid components in the row unit <b>80</b> of <figref>FIG. 9</figref>, there will be less force required by the strut to move the fluid components in either direction.</p>
+      <p id="p-00077-en" num="0077">
+        <figref>FIG. 10</figref> is a side elevation view of a row unit <b>80</b> including additional aspects of the invention. The row unit <b>80</b> of <figref>FIG. 10</figref> is similar to that of the row unit shown in <figref>FIG. 9</figref>. However, the orientation of the row unit <b>80</b> of <figref>FIG. 10</figref> has been reconfigured such that the row unit is positioned on the front side of the toolbar <b>81</b>. The seed meter <b>82</b> of the row unit <b>80</b> is positioned generally ahead of the toolbar <b>81</b> and includes a seed tube <b>83</b> extending rearwardly to allow seed to be directed rearward of the opening wheels <b>89</b> and gauge wheels <b>90</b> to place the seed in the trench at said location. In addition, the seed meter <b>82</b>, seed tube <b>83</b>, and closing wheels <b>91</b> may be connected directly to the toolbar <b>81</b>, such that they are substantially rigid members or components or they may be attached to the frame <b>88</b> of the row unit <b>80</b> to become part of the fluid components of the row unit <b>80</b>. In either situation, a strut mechanism <b>84</b> comprising a housing <b>86</b> and an actuator rod <b>87</b> housed at least partially therein and capable of extending from or retracting within is connected to the toolbar <b>81</b> via a connector <b>85</b>. The actuator <b>87</b> is also connected to a frame <b>88</b>, which may be riding on a slide member <b>92</b> of the row unit <b>80</b>. Also connected to the frame <b>88</b> are openings wheels <b>89</b> and gauge wheels <b>90</b>. The row unit <b>80</b> of <figref>FIG. 10</figref> works substantially similar to that of the row unit in <figref>FIG. 9</figref> in that the actuator <b>87</b> extends or withdraws relative to the housing <b>86</b> of the strut <b>84</b> in order to adjust the down force pressure of the fluid components of the row unit <b>80</b>.</p>
+      <p id="p-00078-en" num="0078">However, as most of the components of the row unit <b>80</b> are positioned ahead of the toolbar <b>81</b>, the amount of down force pressure and the ability to detect down force, such as with foresight technology, may be configured differently than that of previous embodiments. In addition, the positioning of the components of the row unit <b>80</b> in <figref>FIG. 10</figref> may allow different amounts of down force pressure to be utilized by the strut <b>84</b>, as the components will not be behind said row unit, but will be able to use leverage based upon their location in front of the toolbar <b>81</b>.</p>
+      <p id="p-00079-en" num="0079">Other aspects similar to the row unit <b>80</b>, including types of strut, and types of sensors, databases, communicators, and other foresight technology are to be included and considered part of the configuration shown and described with regard to <figref>FIG. 10</figref>.</p>
+      <p id="p-00080-en" num="0080">
+        <figref>FIG. 11</figref> is a side elevation view of another configuration of a row unit <b>65</b>, which removes the need for gauge wheels for use with the row unit <b>65</b> to aid in maintaining the depth of the opening wheel <b>69</b>. The configuration shown in <figref>FIG. 11</figref> removes said gauge wheels and otherwise remains or keeps many of the components of the row unit <b>65</b> as that shown in <figref>FIG. 8</figref>. However, instead of maintaining control of the strut <b>73</b> with the use of the gauge wheel and any sensor attached thereto, a vision sensor, distance sensor, or other type of sensor is utilized to determine the depth created by the opener wheel <b>69</b>. Such a sensor may be positioned at the axle of the opening wheels, or directly behind the wheels, positioned ahead of or oriented behind, or in any other configuration in which the sensor is able to determine a depth of furrow or trench created by the opener wheels <b>69</b>. The data collected by said sensor can then be communicated to the strut <b>73</b> in order to adjust said the down force pressure provided by said strut <b>73</b>. For example, it may be determined that the actuator <b>76</b> of the strut <b>73</b> may be extended to provide a more down pressure for the opener wheel <b>69</b> to create a deeper trench. In addition, when the soil characteristics change and a too deep of trench is created, the sensor can communicate the same to the strut <b>73</b> to retract or otherwise adjust the strut to reduce the amount of down force pressure provided by the strut <b>73</b>, which can reduce the depth of the trench created by the opener wheel <b>69</b>.</p>
+      <p id="p-00081-en" num="0081">Furthermore, the trash wheel <b>72</b> may include sensors or other data collecting devices on or adjacent said trash wheel <b>72</b> in order to obtain information which can be directed or communicated to the strut <b>73</b> to adjust the down force, as needed. For example, as the trash wheel <b>72</b> is positioned generally ahead of the opener wheel <b>69</b> with regard to the direction of travel of the implement and row unit <b>65</b>, the trash wheel <b>72</b> will experience the ground characteristics and any obstructions thereon of the field. Data, such as soil characteristics, obstructions, elevation change such as holes, or other conditions which may affect the ability of the row unit to create and maintain a trench of a predetermined and desired depth may be collected by the trash wheel <b>72</b> as it passes. This information can then be communicated wireless or in a wire manner to the strut <b>73</b> in order to adjust the down force and floatability of the strut before or when the opener wheel <b>69</b> gets to the location of a change in soil condition or location of an obstruction. Therefore, the row unit <b>65</b> can be an open loop system in which the data is continuously collected and the amount of down force is continuously updated per the conditions of a field being planted. However, it should also be appreciated that the system can be a closed loop system in which a desired amount of down force pressure is provided, and the strut <b>73</b> is automatically adjusted to maintain said amount of down pressure based upon a farmer's input.</p>
+      <p id="p-00082-en" num="0082">As noted, in any of the configurations shown in <figref>FIGS. 8-11</figref>, any combination of the components could be rigidly or fluidly connected to the toolbar and/or each other, and the specific configurations noted should not be limiting on the configurations. For example, while the seed meter has been described as a component rigidly connected to the toolbar, in some configurations, it will be operatively connected to one or more of the fluidly connected components, wherein it is able to move with the actuating device. In some instances, for example, all of the components or none of the components can be fluidly connected to the toolbar such that they are able to be manipulated by the actuating device or allowed to float. In other configurations, only some of the components are fluidly connected, while others are rigidly connected. The invention should be understood to include any and all such combinations.</p>
+      <p id="p-00083-en" num="0083">
+        <figref>FIG. 12</figref> shows an example of a row unit <b>95</b> connected to a toolbar <b>96</b> without the use of a four bar linkage and including a foresight technology in the form of a ground sensor <b>101</b> positioned on the front side of the toolbar <b>96</b>. The row unit <b>95</b> shown in <figref>FIG. 12</figref> includes a linear slide connected to the toolbar <b>96</b> and also connected to a linear actuator <b>98</b>, which is connected to the row unit <b>95</b>. The linear slide includes a mechanism that can be attached to the toolbar, while also including at least a component that is moveable relative to a rigid portion of the said slide <b>97</b>. Thus, the rigid portion may be a housing of the linear actuator <b>98</b>, wherein the actuator rod component of the actuator is connected to the rest of the components of the row unit <b>95</b>, includes the opening wheels <b>99</b> and the closing wheels <b>100</b>.</p>
+      <p id="p-00084-en" num="0084">The sensor can be a foresight technology, which is used to view ahead of the opening wheels and other components of the row unit. It can be positioned on a follower wheel of a fertilizer opener, a leader wheel ahead of a culture wheel or gauge wheel, or even positioned on a sensor when no leader or other wheel is used with a row unit. The sensor can eliminate gauge wheels by determining a distance from the ground of each unit, i.e., the distance between the ground and the toolbar ahead of the opener wheel. The known distance can be included in any system, based upon speed of travel, to calculate the time between the sensed condition and the opening mechanism reaching said sensed condition location. Examples of types of sensors which can be utilized include, but are not limited to, laser, radar, temperature, moisture content, distance, soil type, nutrients, compaction, and the like. Other sensors are intended to be included, such as vision sensors and laser distance sensors. Furthermore, the sensor may be a GPS or other mapping member, in which a field can be mapped ahead of time such that the ground conditions and location of obstructions may be known prior to the planting with the row unit <b>95</b>. When such a sensor is utilized, the map of the data base in the said sensor will determine its location and will utilize known or historical data related to the soil content or compaction of said soil to adjust the down force pressure of the row unit accordingly.</p>
+      <p id="p-00085-en" num="0085">For example, when the foresight technology of the ground sensor <b>101</b> determines that a change in the height of one or more row units should be made, it can communicate to the linear actuator <b>98</b> of said row unit <b>95</b>. The actuator, which is connected to the linear slide <b>97</b>, can extend, retract, make rigid, or make more fluid the interior of said linear actuator <b>98</b> in order to provide for a change of height of the row unit(s). For example, when the actuator is made more fluid, this will allow for the row unit <b>95</b> to have more flow with regards to the toolbar <b>96</b>. Making it rigid will provide so that there is little to no movement of the row unit <b>95</b>. In addition, a movement of the linear actuator will adjust the height of the row unit provided by the actuator to the row unit <b>95</b>. It should also be appreciated that, while a linear actuator <b>98</b> is shown and described with regard to the row unit <b>95</b> of <figref>FIG. 12</figref>, other types of actuators, included but not limited to, hydraulic, pneumatic, and the like may be included or used alone or in combination with one another.</p>
+      <p id="p-00086-en" num="0086">
+        <figref>FIG. 13</figref> is a schematic view of a block diagram showing components of the down force pressure system of the row unit <b>95</b> of <figref>FIG. 12</figref>. As shown in the schematic of <figref>FIG. 13</figref>, the system <b>102</b> includes the ground sensor <b>101</b>, which has shown to be positioned on the front side of the toolbar <b>96</b>. The sensor <b>101</b> is connected to a row control unit <b>104</b>, which is the control unit or the dedicated row unit of the implement. This row control unit <b>104</b> is also connected to the linear actuator <b>98</b>. The row control unit <b>104</b> is also connected to a master controller <b>103</b>, which may also be known as an intelligent control for the entire agricultural implement. Thus, as shown by the box <b>105</b>, each row unit, which is designated by row “n+1”, of the implement is connected to the master controller <b>103</b> for the implement. Furthermore, a display <b>106</b> is connected to the master controller <b>103</b>. The display <b>106</b> may be a display in a cab of a tractor pulling said implement, or may be a wireless display such as a tablet, phone, computer, or other computing device, in which a person is able to view the data related to the down force pressure for an individual row unit or all of the row units of a particular implement.</p>
+      <p id="p-00087-en" num="0087">In operation, the ground sensor <b>101</b> determines the configuration of the field, or the location and field configuration based on historical data. This includes the level of the ground in front of the tool bar. This information is sent to the row control unit <b>104</b>. The master controller, which may receive an input from the display or other user interface, selects and sets a desired down force pressure and/or trench depth for a planter. The row control unit uses the information from the sensor along with the preset information coming from the master controller <b>103</b> to determine if a change of the linear actuator <b>98</b> is needed. For example, the ground sensor will determine the distance between the sensor and the ground in front of the tool bar and then just adjust the height. Thus, the row control unit <b>104</b> can send an instruction to the linear actuator <b>98</b> to adjust the depth of the row unit and the height of one or more row units in order to account for said change in the elevation and/or landscape of the field. The system <b>102</b>, which can be an open loop system or a closed loop system, can be continually updated at each of the row units to maintain or change itself to provide desired row unit height to maintain a trench or furrow within an allotted range in order to deposit seed within a desired range of depth.</p>
+      <p id="p-00088-en" num="0088">
+        <figref>FIG. 14</figref> is a side elevation view of a row unit <b>110</b> for use with an agricultural planter showing additional aspects of the invention. The row unit <b>110</b> is connected to the toolbar <b>111</b> via the fore bar linkage <b>113</b> having upper bars <b>114</b> and lower bars <b>115</b>. Extending from the toolbar <b>111</b> is a leader wheel <b>120</b>. The leader wheel <b>120</b> can include more than one wheel, and can include one or more load cells positioned there at. The load cells can obtain information related to the compaction and other soil conditions of the ground. The information obtained by the load cells <b>121</b> can then be sent to the down force actuator <b>119</b>, which may be a linear actuator positioned between the upper and lower bars <b>113</b>, <b>115</b> of the linkage <b>114</b> to adjust the down force pressured provided to the row unit <b>110</b>.</p>
+      <p id="p-00089-en" num="0089">For example, as the row unit <b>110</b> moves across a field, the opener wheel <b>116</b> will open a trench, the gauge wheel <b>117</b> will aid in maintain said trench depth, and a closing wheel <b>118</b> will close said trench. A seed will be positioned or deposited in the trench prior to closing of the trench. However, the soil conditions may change from one location to another, and/or an obstruction may appear in front of one or more row units. The leader wheel <b>120</b> of the system shown fit in <figref>FIG. 14</figref> can determine a change or an obstruction prior to the location of a particular opener wheel <b>160</b>. Said leader wheel can obtain the information via a load cell positioned thereon, and can send said information to the down force actuator <b>119</b> to adjust the down force pressure accordingly. For example, the down force pressure may be increased, decreased, or the row unit may be needed to be allowed to float, such as when an obstruction may appear.</p>
+      <p id="p-00090-en" num="0090">
+        <figref>FIG. 15</figref> is a schematic diagram showing components of the system of the row unit shown in <figref>FIG. 14</figref>. As shown in the schematic of <figref>FIG. 15</figref>, a master control unit <b>123</b> is included. Connected to the master control unit <b>123</b> are the down force control unit <b>124</b>, load cell <b>121</b> and actuator <b>119</b> of a particular row unit. Also connected to the master control unit <b>123</b> is each additional row unit, which is shown by the box <b>125</b>. The system <b>122</b> further includes a display and/or user interface <b>126</b>, which is connected to the master control unit <b>123</b>.</p>
+      <p id="p-00091-en" num="0091">As shown in the system <b>122</b>, the load cell <b>121</b> is connected to the down force control unit <b>124</b>. Information is thus directed from the load cell <b>121</b> to the down force control unit <b>124</b>, wherein the information is processed such that information can be sent to the actuator <b>119</b> to adjust the amount of down force provided or to provide for a fluidness of the actuator such that float is allowed of the components of the system. All instructions can then be sent to the master control unit <b>123</b>, which can send the information to the display <b>126</b>. Thus, an operator or other individual can view the information, which can include individual row unit down force values, changes therein, and any other issues related to the row units in order to view the amount of down force at each of the row units, and, also if there is any trouble there at. And, in a closed system, the operator can also set the amount of down force desired, and can view the down force of the row units to ensure that each of the row units are maintaining said down force values. In addition, when the system is in an open loop system, the operator can simply view to make sure that the amount of down force pressure provided by each of the row units is being updated as the conditions of the field change. This information can also be stored for later use, such as to map a field such that historically dry or wet areas can be mapped so that a future system can have a greater heads up in determining the amount of down force provided for said areas of a field.</p>
+      <p id="p-00092-en" num="0092">While each of the row units heretofore shown and described have been connected to a toolbar in different manners, each has also included the use of traditional opener wheels for creating a trench or furrow for planting.</p>
+      <p id="p-00093-en" num="0093">
+        <figref>FIGS. 16-24</figref> show an additional aspect of the invention, which can be utilized with or without the down force pressure providing mechanisms heretofore shown and described, and which replaces the traditional opener wheels of a row unit. <figref>FIGS. 16-24</figref> disclose a rotating bit, which can be used in place of an opening wheel of a row unit. The rotating bit includes a shaft <b>131</b> connected to an opener mechanism <b>132</b>, which is rotatably connected to a housing <b>135</b>. The shaft and opener <b>132</b> may comprise a single, unitary element. Such element is rotated at a high speed in order to cause the shaft and rotating opening <b>132</b> at a very high rotational velocity. At the same time, the housing <b>135</b> can be maintained in a non-rotational, rigid manner with respect to the direction of travel of the row unit. As shown best in <figref>FIGS. 17 and 22</figref>, the opener <b>132</b> of the rotating bit <b>130</b> is generally conical shaped, and includes a first cutting face <b>133</b> and a second cutting face <b>134</b>, which are formed generally 180° from one another, and in opposite orientation. Thus, as the bit rotates in the direction shown by the arrow <b>140</b> in the figures, the first and second faces <b>133</b>, <b>134</b> will come in contact with the soil as the implement moves across a field. The shape of the faces, including a sharp cutting edge, will allow the opening <b>132</b> to cut through the field to create a trench therein. Therefore, it should be appreciated that the height of the opener member <b>132</b> can be selected to provide a desired depth of a trench created by the rotating bit <b>130</b>. The shape and configuration of the rotating bit <b>130</b>, which can be varied according to seed type being planted, field conditions, and other factors, will allow the planter to create a trench in a wide variety of field conditions, including soggy, muddy conditions and up to and not including compacted and hard field conditions.</p>
+      <p id="p-00094-en" num="0094">The housing <b>135</b>, which is shown alone in <figref>FIG. 20</figref>, includes a rear bit fender-guard <b>136</b> and an above bit fender-guard <b>137</b>. The rear guard <b>136</b> is positioned generally behind the rotating opener <b>132</b> of the bit <b>130</b>. The above guard <b>137</b> is positioned generally between the upper portion of the opener <b>132</b> and the shaft <b>131</b> and includes a mechanism for allowing the shaft and opening <b>131</b>, <b>132</b> to rotate relative to the housing <b>135</b>. The guards <b>136</b>, <b>137</b> also provide faces for protecting seed and other components of a row unit utilizing said rotating bit <b>130</b> from any line portions of the field which may be created by the high speed rotation of the opener <b>132</b>. The opening <b>132</b> can comprise a carbide, nitride tool steel, diamond, or other relative hard materials. The rear guard <b>136</b> aids in cleaning the opener bit <b>132</b>. The above guard <b>137</b> controls displaced soil created by said opener bit <b>132</b>.</p>
+      <p id="p-00095-en" num="0095">Other components of the rotating bit assembly <b>130</b> include a trench or furrow smoother <b>138</b> and a lower seed tube <b>139</b>. The trench smoother <b>138</b> prevents the furrow created by the opener bit <b>132</b> from collapsing. Thus, it aids in pushing soil displaced by the opener outwardly to create walls for the trench. Said trench can then be closed by traditional closing wheels after a seed is deposited in said trench.</p>
+      <p id="p-00096-en" num="0096">The lower seed tube <b>139</b> can be connected to or configured to be part of a lower end of a seed tube extending from a seed meter, as is known with traditional row units. Thus, seed that is displaced by the seed meter can be passed through a seed tube and into the lower seed tube <b>139</b> of the rotating bit assembly <b>130</b> to place the seed or deposit the seed in the formed trench created by the trench rotating bit <b>130</b>.</p>
+      <p id="p-00097-en" num="0097">The present invention has heretofore been shown and described. Other aspects obvious to those skilled in the art are to be considered part of the invention. For example, while the figures has shown generally a single row unit, it is to be appreciated that similar or different row units can be spaced and used along a toolbar of an agricultural implement. In addition, the rotating bit can be used in place of or in addition to the opening wheels of a road unit to create a trench for depositing a seed at a desired depth within a field, regardless of the field conditions.</p>
+      <p id="p-00098-en" num="0098">Various aspects, not mentioned, but which are to be considered part of the invention, may be found in U.S. patent application Ser. Nos. 13/458,012, 13/457,815, and Ser. No. 13/457,577, which are all hereby incorporated in their entirety. Furthermore, it should be appreciated that the figures shown here and described are for exemplary purposes only, and are not to be considered the entirety of the invention.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150924">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. An agricultural implement, comprising:
+<claim-text>a toolbar;</claim-text><claim-text>a row unit coupled to the toolbar by a linkage, wherein the linkage includes a first arm and a second arm, and wherein each of the first arm and the second arm includes a first end coupled to the toolbar and a second end coupled to the row unit;</claim-text><claim-text>an opening device for creating a furrow; and</claim-text><claim-text>an electric linear actuator operatively connected to the toolbar and linkage to provide a down force for the row unit to provide a substantially uniform furrow depth.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The agricultural implement of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the electric linear actuator comprises:
+<claim-text>a. a screw type actuator;</claim-text><claim-text>b. a magnetic solenoid actuator;</claim-text><claim-text>c. an electro-fluid actuator; or</claim-text><claim-text>d. an electric damping system.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The agricultural implement of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a compressed gas operatively connected to the electric linear actuator to dampen the load acted on the actuator as the implement moves through a field.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The agricultural implement of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising one or more sensors positioned at one or more gauge wheels of the row unit, wherein the sensors will provide a measurement that can be utilized by the linear actuator to provide a sufficient amount of down force pressure to the row unit.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The agricultural implement of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a spring operatively connected to the electric linear actuator for aiding in providing down force for the row unit.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The agricultural implement of <claim-ref idref="clm-00005-en">claim 5</claim-ref>, wherein the electric linear actuator is operatively connected between the toolbar and a sliding mechanism, said sliding mechanism capable of moving relative to one of the upper or lower linkage bars.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The agricultural implement of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein movement of the electric linear actuator causes the sliding mechanism to move, thereby setting force of the spring acting upon the row unit.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The agricultural implement of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising at least one sensor operatively positioned on the row unit to provide monitoring of the ground in front of the row unit.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The agricultural implement of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the at least one sensor communicates to the electric linear actuator the amount of force to provide to the row unit to create a furrow of a depth.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The agricultural implement of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the at least one sensor comprises one or more of:
+<claim-text>a. a soil characteristic sensor;</claim-text><claim-text>b. a visual sensor;</claim-text><claim-text>c. a temperature sensor; or</claim-text><claim-text>d. a distance determining sensor.</claim-text></claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en" independent="true">
+      <claim-text>
+        <b>11</b>. A down force system for use with a row unit of an agricultural implement, comprising:
+<claim-text>an electric linear actuator operatively connected to a linkage of the row unit; and</claim-text><claim-text>at least one sensor for sensing at least one soil characteristic and operatively connected to the electric linear actuator;</claim-text><claim-text>wherein the at least one sensor monitors a portion of the ground adjacent the row unit to determine the amount of down force needed to create a furrow based upon the at least one soil characteristic.</claim-text></claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The down force system of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, further comprising an intelligent control connected to the at least one sensor and the electric linear actuator to determine the amount of down force based upon the at least one seed characteristic.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The down force system of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the electric linear actuator is temporarily disabled upon detection of an obstruction.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The down force system of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, wherein the at least one soil characteristic comprises:
+<claim-text>a. ground hardness;</claim-text><claim-text>b. moisture content;</claim-text><claim-text>c. an obstruction;</claim-text><claim-text>d. soil temperature; or</claim-text><claim-text>e. distance between the at least one sensor and the ground.</claim-text></claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The down force system of <claim-ref idref="clm-00014-en">claim 14</claim-ref>, wherein the at least one sensor comprises one or more of:
+<claim-text>a. a soil characteristic sensor;</claim-text><claim-text>b. a visual sensor;</claim-text><claim-text>c. a temperature sensor; or</claim-text><claim-text>d. a distance determining sensor.</claim-text></claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The down force system of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, further comprising a compressed gas operatively connected to the electric linear actuator to dampen the load acted on the actuator.</claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The down force system of <claim-ref idref="clm-00011-en">claim 11</claim-ref>, further comprising at least one spring operatively connected to the electric linear actuator to be set by the actuator to provide down force for the row unit.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en" independent="true">
+      <claim-text>
+        <b>18</b>. An agricultural implement, comprising:
+<claim-text>a toolbar; and</claim-text><claim-text>a row unit comprising a strut connected to the toolbar;</claim-text><claim-text>the strut having a housing generally fixed in position and connected to a seed meter for planting seed, and a rod movable relative to the housing, the rod connected to at least a furrow opener of the row unit;</claim-text><claim-text>wherein the strut provides a down force for the furrow opener.</claim-text></claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The agricultural implement of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, further comprising a trash when and gauge wheels connected to the movable rod of the strut.</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The agricultural implement of <claim-ref idref="clm-00018-en">claim 18</claim-ref>, wherein the strut further comprises a compressible gas opposite the rod, wherein the rod will move in response to an obstruction, but the compressible gas will revert the rod to its previous position. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150264857A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150264857A1-20150924-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150264857A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264857A1-20150924-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150264857A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264857A1-20150924-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150264857A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264857A1-20150924-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150264857A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264857A1-20150924-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150264857A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264857A1-20150924-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150264857A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264857A1-20150924-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150264857A1_00008.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264857A1-20150924-D00007.TIF" />
+    </figure>
+    <figure num="9">
+      <img he="N/A" wi="N/A" file="US20150264857A1_00009.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264857A1-20150924-D00008.TIF" />
+    </figure>
+    <figure num="10">
+      <img he="N/A" wi="N/A" file="US20150264857A1_00010.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264857A1-20150924-D00009.TIF" />
+    </figure>
+    <figure num="11">
+      <img he="N/A" wi="N/A" file="US20150264857A1_00011.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264857A1-20150924-D00010.TIF" />
+    </figure>
+    <figure num="12">
+      <img he="N/A" wi="N/A" file="US20150264857A1_00012.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264857A1-20150924-D00011.TIF" />
+    </figure>
+    <figure num="13">
+      <img he="N/A" wi="N/A" file="US20150264857A1_00013.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264857A1-20150924-D00012.TIF" />
+    </figure>
+    <figure num="14">
+      <img he="N/A" wi="N/A" file="US20150264857A1_00014.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264857A1-20150924-D00013.TIF" />
+    </figure>
+    <figure num="15">
+      <img he="N/A" wi="N/A" file="US20150264857A1_00015.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264857A1-20150924-D00014.TIF" />
+    </figure>
+    <figure num="16">
+      <img he="N/A" wi="N/A" file="US20150264857A1_00016.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264857A1-20150924-D00015.TIF" />
+    </figure>
+    <figure num="17">
+      <img he="N/A" wi="N/A" file="US20150264857A1_00017.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264857A1-20150924-D00016.TIF" />
+    </figure>
+    <figure num="18">
+      <img he="N/A" wi="N/A" file="US20150264857A1_00018.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264857A1-20150924-D00017.TIF" />
+    </figure>
+    <figure num="19">
+      <img he="N/A" wi="N/A" file="US20150264857A1_00019.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264857A1-20150924-D00018.TIF" />
+    </figure>
+    <figure num="20">
+      <img he="N/A" wi="N/A" file="US20150264857A1_00020.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264857A1-20150924-D00019.TIF" />
+    </figure>
+    <figure num="21">
+      <img he="N/A" wi="N/A" file="US20150264857A1_00021.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264857A1-20150924-D00020.TIF" />
+    </figure>
+    <figure num="22">
+      <img he="N/A" wi="N/A" file="US20150264857A1_00022.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264857A1-20150924-D00021.TIF" />
+    </figure>
+    <figure num="23">
+      <img he="N/A" wi="N/A" file="US20150264857A1_00023.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150264857A1-20150924-D00022.TIF" />
+    </figure>
+    <figure num="24">
+      <img he="N/A" wi="N/A" file="US20150264857A1_00024.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150264857A1-20150924-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150264857A1.PDF" type="pdf" size="1180895" pages="33" />
+</lexisnexis-patent-document>

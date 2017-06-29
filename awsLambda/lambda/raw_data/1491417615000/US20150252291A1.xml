@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150252291A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021817" date-changed="20151117" time-changed="080554">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121229286">
+        <country>US</country>
+        <doc-number>20150252291</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14202231</doc-number>
+        <date>20140310</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151117">
+      <classification-ipcr sequence="1">
+        <text>C11B   9/00        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>11</class>
+        <subclass>B</subclass>
+        <main-group>9</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151117">
+      <classification-cpc sequence="1">
+        <text>A61L   9/013       20130101 FI20151113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>L</subclass>
+        <main-group>9</main-group>
+        <subgroup>013</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">19</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">Formulation and Method of Making Vitamin Infused Air Spray</invention-title>
+    <references-cited date-changed="20151027">
+      <patent-citations name="patcit" date-changed="20151027" />
+      <citation>
+        <patcit num="1" dnum="US6060045A" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6060045</doc-number>
+            <kind>A</kind>
+            <name>METTLER LEO [US]</name>
+            <date>20000509</date>
+          </document-id>
+          <application-date>
+            <date>19990316</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US2011274643A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110274643</doc-number>
+            <kind>A1</kind>
+            <name>YONTZ DORIE J [US]</name>
+            <date>20111110</date>
+          </document-id>
+          <application-date>
+            <date>20110510</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant">
+          <addressbook lang="eng">
+            <orgname>Kittrich Corporation</orgname>
+            <role>02</role>
+            <address>
+              <city>La Mirada</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Levine</last-name>
+            <first-name>Robin K.</first-name>
+            <address>
+              <city>Pasadena</city>
+              <state>CA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150910">
+      <main-family family-id="173566144">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252291</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20140310</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173566143">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252291</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20140310</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A formulation for a 100% natural non-aerosol air freshener infused with vitamins. The formulation may further include plant material known to have naturally occurring fungicidal, bactericidal, disinfectant, germicidal, antiseptic, antibiotic and/or antimicrobial properties. Also, a method of preparing a formulation for a 100% natural non-aerosol air freshener infused with vitamins.</p>
+  </abstract>
+  <legal-data date-changed="20150925">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20140402</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015252291A1</docdb-publication-number>
+      <docdb-application-id>444310641</docdb-application-id>
+      <new-owner>KITTRICH CORPORATION, CALIFORNIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:LEVINE, ROBIN K.;REEL/FRAME:032591/0478</free-text-description>
+      <effective-date>
+        <date>20140402</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD OF THE INVENTION</heading>
+      <p id="p-00001-en" num="0001">The present invention pertains generally to non-aerosol air fresheners. More particularly, the present invention pertains to safe and natural non-aerosol air fresheners infused with vitamins.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE ART</heading>
+      <p id="p-00002-en" num="0002">Our sense of smell is a powerful tool used to judge a location's healthfulness and cleanliness, which is why retailers offer such a wide array of chemical sprays, gels, solids and plug-ins to scent our spaces. Three-quarters of all American homes are now scented with some type of commercial air freshener, an increase of nearly 30 percent since 1999.</p>
+      <p id="p-00003-en" num="0003">Synthetic scents contain harmful chemicals. A study published in the Archives of Environmental Health linked chronic exposure to the volatile organic compounds (VOCs) in air fresheners to headaches and depression in new mothers and diarrhea and ear aches in their babies.</p>
+      <p id="p-00004-en" num="0004">Harmful VOCs in air fresheners include benzene and formaldehyde, which are byproducts of the manufacturing process. Benzene exposure can damage bone marrow, which can decrease red blood cells and affect immunity. Long-term exposure to airborne benzene has also been linked to increased risk of anemia and leukemia. Formaldehyde, a known carcinogenic neurotoxin, can irritate the eyes, nose, throat and skin.</p>
+      <p id="p-00005-en" num="0005">Most air fresheners—even some labeled “all natural”—use phthalates as fixatives. Easily inhaled or absorbed through the skin, these chemicals accumulate in the body's fatty tissue and liver, where they can remain for decades. High phthalate levels have been shown to cause low sperm counts and reproductive damage to male rat fetuses.</p>
+      <p id="p-00006-en" num="0006">There are two broad air freshener categories: continuous action and instant action. Continuous action products include: scented candles and devices which use a candle flame or some other heat source to heat and vaporize a fragrance formulation, Incense burners, wall plug-ins which either use piezoelectric technology to aerosolize fragrance or heat to vaporize it, fragrance impregnated gels which release fragrance as the gel evaporates sometimes with the help of an electric fan, wick and reed diffusers which release fragrance by evaporation from fragrance-soaked wicks or wooden reeds; and fragrance impregnated materials like floor wax, paper, plastics, wood which release fragrance by off gassing; and lastly nebulization systems which convert liquid fragrances into a vapor in a cold process without the use of heat.</p>
+      <p id="p-00007-en" num="0007">Instant action systems are mainly aerosol sprays, or atomizers. The aerosol spray uses a propellant and fragrance packaged under pressure in a sealed metal or glass container with a valve which is opened by pressing down a button which contains a spray nozzle—the actuator. When the container's valve is opened by pressing the actuator, fragrance is forced through the spray nozzle located inside the actuator to create a mist of droplets containing fragrance. These droplets are 30 to 50 micrometers in diameter. The atomizer is a glass, metal or plastic container of fragrance which operates in a similar fashion except that the actuator is a pump which when pressed a few times creates the pressure to aspirate the fragrance from the container through a tube into the actuator and spray nozzle. The mist created contains droplets 50 to 150 micrometers in diameter.</p>
+      <p id="p-00008-en" num="0008">Many aerosol air fresheners contain para-dichlorobenzene, naphthalene and formaldehyde—central nervous system depressants. Formaldehyde can cause symptoms such as headaches, ear infections, sinus problems, watery eyes, asthma, bronchitis, joint pains, chronic fatigue syndrome, dizziness and chest pain. According to the Environmental Protection Agency, formaldehyde is known to cause cancer in animals and may cause cancer in humans. Another common air freshener ingredient, P-dichlorobenzene, has been found to diminish the sense of smell and may cause cancer. Tri-chloroethylene, also commonly found in aerosol air fresheners, has been found to cause dizziness and irregular breathing.</p>
+      <p id="p-00009-en" num="0009">According to the Natural Resources Defense Council (NRDC), a recent study found harmful chemicals known as phthalates in 12 air freshener products, including some marketed as “all-natural”and “unscented.” None of the air fresheners listed phthalates on their labels. When air freshener is sprayed, the phthalates are released into the air where they can be inhaled or absorbed through a person's skin. Once in the bloodstream, they can alter hormone levels and cause other health problems. According to the State of California, five types of phthalates, including one commonly found in air fresheners, are known to cause birth defects and reproductive harm. Phthalate exposure in indoor environments has also been associated with allergic symptoms and asthma.</p>
+      <p id="p-00010-en" num="0010">Non-spray air fresheners, such as those designed to plug into an outlet or stick to a hard surface have also been found to carry health risks. Many of these products contain a toxic chemical known as benzyl acetate. According to International Programme on Chemical Safety, short-term exposure to benzyl acetate can cause irritation to the eyes and respiratory tract, and it may affect the central nervous system. Benzyl acetate can be absorbed by inhalation or ingestion. Long-term repeated exposure may cause kidney damage.</p>
+      <p id="p-00011-en" num="0011">There remains a need for a 100% all natural, safe and effective composition of air freshener.</p>
+      <p id="p-00012-en" num="0012">In light of the above, it is an object of the present invention to provide the desired features described herein as well as additional advantages of providing an 100% natural air freshener that is infused with vitamins.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00013-en" num="0013">In general, the present invention is a 100% natural air freshener, comprising: <ul id="ul-00001-en" list-style="none"><li><ul id="ul-00002-en" list-style="none"><li>water;</li><li>vegetable glycerin;</li><li>a plant-based solubilizer;</li><li>at least one plant essential oil;</li><li>at least one natural preservative; and</li><li>at least one vitamin.</li></ul></li></ul></p>
+      <p id="p-00014-en" num="0020">The present invention also includes a method of preparing a formulation according to the present invention, wherein the method comprises: <ul id="ul-00003-en" list-style="none"><li><ul id="ul-00004-en" list-style="none"><li>a) filling a clean vessel with water;</li><li>b) mixing and blending at least a first preservative with the water in step a);</li><li>c) mixing and blending at least a second preservative with the solution of step b);</li><li>d) mixing a vegetable glycerin and at least one vitamin in a separate container;</li><li>e) adding the vitamin mixture with the solution of step b) at high speed;</li><li>f) mixing and blending at least one plant-based solubilizer with the solution of step e) at low speed to avoid foaming; and</li><li>g) mixing and blending at least one plant essential oil with the solution of step f) at low speed to avoid foaming.</li></ul></li></ul></p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00015-en" num="0028">Vitamins are naturally found in plants and animals. Vitamins are essential to growth, energy production, and normal nerve function. There are two different types of vitamins used by the body to support health: fat-soluble (oils) and water-soluble. Many daily recommended vitamins are commercially available in liquid form, including vitamins A, B, B complex, B1, B12, B15, B2, B5, B6, C, D, E and K.</p>
+      <p id="p-00016-en" num="0029">Naturally occurring fragrant molecules include “essential” oils derived from plants. Essential oils are concentrated, hydrophobic liquids containing volatile fragrant molecules from plants. Essential oils are also known as volatile, ethereal oils or aetherolea or simply as the “oil of” the plant from which they were extracted, such as, for example, oil of clove. Oil is “essential” in the sense that it carries a distinctive scent, or essence, of the plant. Essential oils do not have any specific chemical properties in common, beyond conveying characteristic fragrances. Some essential oils such as lavender, peppermint, and <i>eucalyptus</i>, are steam distilled. Raw plant material, comprising flowers, leaves, wood, bark, roots, seeds, or peel, are put into a distillation apparatus over water. As the water is heated the steam passes through the plant material, vaporizing the volatile compounds. The vapors flow through a coil where they condense back to liquid, which is then collected in the receiving vessel.</p>
+      <p id="p-00017-en" num="0030">Essential oils are derived from berries, allspice, juniper, seeds, almond, anise, celery, <i>cumin</i>, nutmeg oil, bark, <i>cassia</i>, cinnamon, <i>sassafras</i>, wood, camphor, cedar, rosewood, sandalwood, agar wood, rhizome, galangal, ginger, leaves, basil, bay leaf, common sage, <i>eucalyptus</i>, lemon grass, <i>melaleuca</i>, oregano, patchouli, peppermint, pine, rosemary, spearmint, tea tree, thyme, wintergreen, resin, frankincense, myrrh, flowers, <i>cannabis</i>, chamomile, clary sage, clove, scented <i>geranium</i>, hops, hyssop, jasmine, lavender, manuka, marjoram, rose, ylang-ylang, peel, bergamot, grapefruit, lemon, lime, orange, tangerine, root, valerian, mango, or the like, or a combination comprising at least one of the foregoing.</p>
+      <p id="p-00018-en" num="0031">Examples of fragrant compounds include, for example, acai oil, almond oil, <i>aloe vera </i>oil, andiroba oil, annatto oil, babassu oil, borage oil, brazil nut oil, burit oil, camelina oil, coffee oil, copaiba oil, passion fruit oil, castor oil, coconut oil, grape seed oil, jojoba oil, macadamia nut oil, rose hip oil, ajwain oil, angelic root oil, anise oil, aragan oil, asafetida, balsam oil, basil oil, bay oil, bergamot oil, black pepper essential oil, buchu oil, birch oil, camphor, <i>cannabis </i>oil, caraway oil, cardamom seed oil, carrot seed oil, chamomile oil, calamus root oil, cinnamon oil, citronella oil, clary sage, clove leaf oil, coffee, coriander, costmary oil, cranberry seed oil, cubeb, <i>cumin </i>oil, cypress, cypriol, curry leaf, davana oil, dill oil, elecampane, <i>eucalyptus </i>oil, fennel seed oil, fenugreek oil, fir, frankincense oil, galangal, <i>geranium </i>oil, ginger oil, goldenrod, grapefruit oil, grape seed oil, henna oil, helichrysum, horseradish oil, hyssop, Idaho tansy, jasmine oil, juniper berry oil, lavender oil, lemon oil, lemongrass, marjoram, <i>melaleuca</i>, lemon balm oil, mountain savory, mugwort oil, mustard oil, myrrh oil, myrtle, neem tree oil, neroli, nutmeg, orange oil, oregano oil, orris oil, palo santo, parsley oil, patchouli oil, <i>perilla </i>oil, pennyroyal oil, peppermint oil, petit grain, pine oil, plum oil, ravensara, red cedar, roman chamomile, rose oil, rosehip oil, rosemary oil, rosewood oil, sandalwood oil, <i>sassafras </i>oil, savory oil, schisandra oil, spikenard, spruce, star anise oil, tangerine, tarragon oil, tea tree oil, thyme oil, <i>tsuga </i>oil, turmeric, valerian, vetiver oil, western red cedar, wintergreen, yarrow oil, ylang-ylang, and zedoary oil.</p>
+      <p id="p-00019-en" num="0032">Examples of fragrant molecules are alcohols (e.g., furaneol (strawberry), 1-hexanold (herbaceous, woody), cis-3-hexen-1-ol (fresh cut grass), menthol (peppermint), or the like, or a combination comprising at least one of the foregoing alcohols); esters (e.g., fructone (fruity, apple-like), hexyl acetate (apple, floral, fruity), ethyl methyphenylglycidate (strawberry), methyl formate, methyl acetate, methyl butyrate, methyl butanoate, ethyl acetate, ethyl butyrate, ethyl butanoate, isoamyl acetate, pentyl butyrate, pentyl butanoate, pentyl pentanoate, benzoin (extracted from resin of <i>styrax benzoin </i>tree); black pepper (from the plant <i>piper nigrum </i>of the piperaceae family), cajuput oil (from <i>melaleuca cajuput</i>), caraway, carrot seed, coriander, cypress, dill, fennel, helichrysum, lavandin, lemon verena, bee balm (lemon balm essential oil extracted from <i>Melissa officinalis </i>of the labiatae family), niaouli, palmarosa, petit grain, <i>tagetes</i>, vetiver, or the like, or a combination comprising at least one of the foregoing esters); ketones (e.g., dihydrojasmone (fruity woody floral), oct-1-en-3one (blood, metallic, mushroom-like), 2-acetyl-1-pyrroline (fresh bread, jasmine rice), 6-acetyl-2,3,4,5-tetrahydropyridine (fresh bread, tortillas, popcorn), or the like, or a combination comprising at least one of the foregoing ketones); lactones (γ-decalactone (intense peach flavor), γ-nonalactone (coconut odor, popular in suntan lotions), δ-octalactone (creamy note, jasmine lactone powerful fatty fruity peach and apricot), <i>massoia </i>lactone (powerful creamy coconut, wine lactone sweet coconut odor), sotolon (maple syrup, curry, fenugreek), or the like, or a combination comprising at least one of the foregoing lactones); thiols (ethenethiol (commonly called ethyl mercaptan), grapefruit mercaptan (grapefruit), methanethiol (commonly called methyl mercaptan), 2-methyl-2-propanethiol (commonly called tertiary-butyl mercaptan)); linear terpenes (e.g., myrcene (woody, complex), geraniol (rose, flowery), nerol (sweet rose, flowery), citral, lemonal, geranial, neral (lemon, lemon myrtle, lemongrass), citronellal (lemon, lemongrass), citronellol (lemon, lemongrass, rose, <i>pelargonium</i>), linalool (floral, sweet, woody, lavender), nerolidol (woody, fresh bark), or the like, or a combination comprising at least one of the foregoing linear terpenes; cyclic terpenes (e.g., limonene, camphor, terpineol, ionone, thujuon, or the like, or a combination comprising at least one of the foregoing cyclic terpenes); aromatic species (e.g., benzaldehyde, eugenol, cinnamaldehyde, ethyl maltol, vanillin, anisole, anethole, estragole, thymol, or the like or a combination comprising at least one of the foregoing aromatic species); amines (e.g., thiethylamine, triethylamine, cadaverine, pyridine, indole, skatole, or the like, or a combination comprising at least one of the foregoing amines) or the like, or a combination comprising at least one of the foregoing fragrant molecules.</p>
+      <p id="p-00020-en" num="0033">Solubilizers are generally used to incorporate oil based ingredient into a water based product. Ingredients like polysorbate 20, polysorbate 80, Caprol Micro Express, Cromollient SCE, and caprylyl/capryl glucoside would be considered solubilizers.</p>
+      <p id="p-00021-en" num="0034">Caprylyl/capryl glucoside (aka octyl/decyl glucoside or C8-10 alkyl polyglucoside) is an Ecocert non-ionic solubilizer with a pH of 5.5 to 6 that can be used as a solubilizer and a very gentle surfactant. It comes to us as a 60% active ingredient product, and the suggested usage is 1% to 10%. It can be used in our surfactant based products to increase viscosity and boost foaming, which is always a bonus, and it can also be used as a very gentle surfactant in things like make-up removers.</p>
+      <p id="p-00022-en" num="0035">Decyl glucoside is produced by the reaction of glucose from corn starch with the fatty alcohol decanol which is derived from coconut(s). It is considered to be biodegradable and created from a renewable resource.</p>
+      <p id="p-00023-en" num="0036">A preservative is a naturally occurring or synthetically produced substance that is added to products such as foods, pharmaceuticals, paints, biological samples, wood, etc. to prevent decomposition by microbial growth or by undesirable chemical changes. Preservatives can be divided into two types, depending on their origin. Class I preservatives refers to those preservatives which are naturally occurring, everyday substances. Examples include sugar, honey, alcohol, salt, and glycerine.</p>
+      <p id="p-00024-en" num="0037">A preservative based on an antimicrobial peptide derived from the lactic acid bacteria, <i>Leuconostoc kimchii. L. kimchii </i>restricts the growth of other microorganisms by acidifying its environment, and produces a novel antimicrobial peptide as a second mechanism of defense.</p>
+      <p id="p-00025-en" num="0038">Food grade preservatives, like sorbic acid, were also first discovered as a component of a plant. In this case, sorbic acid was discovered in the berries of the rowan tree, <i>Sorbus aucuparia</i>, in 1859. The antimicrobial effect of sorbic acid was discovered in the late 1930s. Salts of sorbic acid are the preferred form, as they are water soluble. Potassium sorbate is a commonly used salt of sorbic acid.</p>
+      <p id="p-00026-en" num="0039">It is further contemplated that the present invention may alternatively include natural plant-based fungicides, bactericides, disinfectants, germicides, antiseptics, antibiotics and/or antimicrobials.</p>
+      <p id="p-00027-en" num="0040">Examples of plant materials known to have naturally occurring fungicidal properties include, but are not limited to, <i>Ajuga bracteosa </i>Wall. ex Benth., <i>Aleurites moluccans, Allium sativum, Aloe barbadensis, Aloe vera, Anacardium occidentale, Anthemis nobilis, Arctium lappa, Argemone mexicana, Artemisia tridentata </i>Nutt, <i>Arthraxon hispidus </i>(Thunb.) Merr., <i>Arthraxon ciliaris </i>Beauv., <i>Arthraxon hispidus </i>(Thunb.) Merr., <i>Azadirachta indica, Barringtonia racemosa </i>(L.) Blume ex DC., <i>Bonafousia muelleriana </i>(Mart.) Boit. &amp; L. Allorge, <i>Bonafousia undulata </i>(Pahl) A.DC., <i>Calendula officinalis, Canarium luzonicum, Carica papaya, Caryocar villosum </i>(Aublet) Pers., <i>Cassia alata, Cassia absus, Cassia occidentalis, Cassia tora, Cassuvium pomiferum, Celastrus angulatus </i>Maxim. (<i>C. latifoliu </i>Hemsl.)., <i>Cetraria islandica, Chelidonium majus, Chlorophora excelsa, Citrus sinensis, Citrus racemosa, Citrus decumana, Citrus bigaradia, Citrus paradisi, Commiphora molmol, Commiphora myrrha, Coriandrum sativum, Cumin cyminum, Curcuma amada, Cymbopogon citratus </i>(syn. <i>Adropogon citratus</i>), <i>Echinacea angustifolia, Eucalyptus globulus, Ficus racemosa, Geranium maculatum, Hirtella racemosa </i>Lam., <i>Iryanthera juruensis </i>Warb., <i>Jatropha multifida </i>Linné, <i>Jatropha curcas </i>Linné, <i>Juglans regia, Lavandula officinalis, Lavandula angustifolia, Lawsonia alba, Ligusticum sinense, Lygodium circinnatum </i>(N. L. Burm.) Swartz, <i>Majorana hortensis, Majorana onites, Matricaria officinalis, Melaleuca alternifolia, Origanum majorana, Origanum onites, Origanum vulgare, Origanum heracleoticum, Phytolacca decandra, Phytolacca americana, Phytolacca rigida, Pinus silvestris, Poria cocas, Prostanthera striatiflora, Rubus fruticosus, Salix babylonica </i>L., <i>Scutellaria baiacalensis, Thymus vulgaris, Trifolium pratense, Usnea barbata</i>, and <i>Zanha africana, Zingiber officinale. </i></p>
+      <p id="p-00028-en" num="0041">Examples of plant materials known to have naturally occurring bactericidal properties include, but are not limited to, <i>Abelmoschus moschatus </i>Medic., <i>Allium odorum, Allium sativum, Aloe barbadensis, Aloysia triphylla, Anthemis nobilis, Artemisia absinthium, Bellis perennis, Berberis vulgaris, Calendula officinalis, Canarium luzonicum, Caryophyllus aromaticus, Centella asiatica, Cetraria islandica, Cinnamonium zeylanicum, Citrus paradisi, Citrus limonum, Citrus medica, Citrus racemosa, Citrus decumana, Eucalyptus globulus, Eugenia caryophyllata, Eugenia aromatica, Eupatorium fortunei, Gentiana lutea, Ginkgo biloba, Hibiscus abelmoschus, Hippophae rhamnoides, Humulus lupulus, Hydrocotyle asiatica, Inula helenium, Jambosa caryophyllus, Lippia citriodora, Lithospermum erythrorhizon, Matricaria officinalis, Mauritia flexosa, Melaleuca alternifolia, Monotropa un flora, Myrica cerifera, Persea americana, Phellodendron amurence, Propolis, Prostanthera striatiflora, Salvia officinalis, Syzygium aromaticum, Taraktogenos kurzii King, Thymus vulgaris, Usnea barbata, Valeriana officinalis, </i>and <i>Verbascum Thapsus. </i></p>
+      <p id="p-00029-en" num="0042">Examples of plant materials known to have naturally occurring disinfectant properties include, but are not limited to, <i>Agave americana, Allium sativum, Allium cepa, Aloe barbadensis, Aloe vera, Arctostaphylos uva</i>-<i>ursi, Artemisia abrotanum, Artemisia tridentata </i>Nutt, <i>Ascophylum nodosum, Aster tataricus </i>L., <i>Aster tataricus </i>L., <i>Baphia nitida, Betula pendula, Betula alba, Calendula officinalis, Calluna vulgaris, Carum carvi, Caryophyllus aromaticus, Chrysanthemum parthenium, Cinchona succirubra, Citrus decumana, Citrus paradisi, Citrus racemosa, Cochlearia officinalis, Commiphora myrrha, Commiphora molmol, Cupresses sempervirens, Eucalyptus globulus, Eugenia caryophyllata, Eugenia aromatica, Fagara capensis, Humulus lupulus, Hydrastis canadensis, Hypericum perforatum, Jambosa caryophyllus, Juglans regia, Juniperus communis, Kigelia africana, Lavandula officinalis, Lavandula angustifolia, Lygodium circinnatum </i>(N. L. Burm) Swartz, <i>Magnolia glauca, Majorana hortensis, Majorana onites, Melaleuca alternifolia, Melissa officinalis, Mentha piperita, Origanum heracleoticum, Origanum vulgare, Origanum onites, Origanum majorana, Oxycoccus quadripetalus, Petasites vulgaris, Pyrola minor, Salix vitellina, Salvia officinalis, Santalum album, Saponaria officinalis, Solidago virgaurea, Symphytum officinale, Syzygium aromaticum, Tabernaemontana crassa, Tanacetum vulgare, Tanacetum parthenium, Taraktogenos kurzii </i>King, <i>Taraxacum officinale, Thymus vulgaris, Tropaeolum majus, Tussilago petasites, Umbellularia californica </i>[H. &amp; A] Nutt., <i>Vaccinium vitis</i>-<i>idaea</i>, and <i>Zanthoxylum capense. </i></p>
+      <p id="p-00030-en" num="0043">Examples of plant material known to have naturally occurring germicidal properties include, but are not limited to, <i>Andira araroba, Betula alba, Betula pendula, Carum copticum, Carum ajowan, Citrus mitis, Citrus microcarpa </i>Bge. (by Tanaka), <i>Humulus lupulus, Lavandula officinalis, Lavandula angustifolia, Lithospermum erythrorhizon, Melaleuca alternifolia, Phellodendron amurence, Sclerocarya birrea </i>subsp. <i>caffra, Thymus vulgaris, Trachyspermum ammi</i>, and <i>Vaccinium myrtillus. </i></p>
+      <p id="p-00031-en" num="0044">Examples of plant material known to have naturally occurring antiseptic properties include, but are not limited to, <i>Abies cilicia, Achillea millefolium, Adropogon citratus, Agathosma betulina, Agave americana, Ajuga </i>spp, <i>Alkanna tinctoria, Alliaria petiolata, Allium sativum, Allium cepa, Aloe barbadensis, Amyris balsamifera, Anthemis nobilis, Anthriscus sylvestris, Anthriscus cerefolium, Anthyllis vulneraria, Apium graveolens, Aquilegia vulgaris, Arbutus unedo, Arctium lappa, Arctostaphylos uva</i>-<i>ursi, Armeria maritima, Armoracia rusticana, Arnica montana, Artemisia tridentata </i>Nutt, <i>Artemisia absinthium, Artemisia dracunculus, Azadirachta indica, Baptisia tinctoria, Berberis vulgaris, Betula pendula, Betula alba, Boldea fragrans, Boldo boldus, Boswellia thurifera, Brucea javanica, Calendula officinalis, Calluna vulgaris, Cananga odorata, Cannabis sativa, Capsella bursa</i>-<i>pastoris, Capsicum frutescens, capsicum minimum, Carlina acaulis, Carum copticum, Carum ajowan, Carum carvi, Caryophyllus aromaticus, Centaurium erythraea, Centaurium vulgare, Centella asiatica, Cetraria islandica, Chelidonium majus, Chlorophora excelsa, Cinchona succirubra, Cinnamomum cassia, Cinnamomum camphora, Cinnamonium zeylanicum, Citrus bigaradia, Citrus microcarpa </i>Bge. (by Tanaka), <i>Citrus mitis, Citrus bergamia, Citrus sinensis, Citrus limonum, Citrus medica, Cnicus benedictus, Commiphora myrrha, Commiphora molmol, Copaifera officinalis, Copaifera multijuga, Copaifera guyanensis, Copaifera reticulata, Corydalis cava, Corydalis ambigua </i>Cham. et Schlect., <i>Crithmum maritimum, Cupresses sempervirens, Curcuma amada, Curcuma amada, Cymbopogon citratus, Daucus carota, Diospyros mespiliformis, Echinacea angustifolia, Elettaria cardamomum, Elymus repens, Epigaea repens, Erythraea centaurium, Eucalyptus globulus, Eucryphia lucida, Eugenia caryophyllata, Eugenia aromatica, Eupatorium perfoliatum, Fagus sylvatica, Filipendula ulmaria, Foeniculum vulgare, Fragaria vesca, Galium verum, Gaultheria procumbens, Gentiana lutea, Geranium maculatum, Gerardia pedicularis, Geum urbanum, Gleditschia triacanthos, Gnaphalium stoeches, Gnaphalium citrinum, Gnaphalium dioicum, Gnaphalium polycephalum, Gnaphalium arenarium, Gratiola officinalis, Hamamelis virginiana, Hedeome pulegioides, Hedera helix, Heliotropium europaeum, Hieracium pilosella, Houttuynia cordata, Houyttuyniae cordata, Humulus lupulus, Hydrastis canadensis, Hydrocotyle asiatica, Hypericum perforatum, Hyssopus officinalis, Indigofera tinctoria, Inula heknium, Isatis tinctoria, Jambosa caryophyllus, Juglans regia, Juniperus communis, Lactuca sativa, Lantana camara </i>Linné, <i>Larrea divaricata </i>(DC) Cov., <i>Lavandula angustifolia, Lavandula officinalis, Legusticum levisticum, Levisticum officinale, Lilium candidum, Liquidambar styraciflua, Lonicera caprifolium, Lonicera periclymenum, Lysimachia nummularia, Magnolia glauca, Matricaria officinalis, Melaleuca leucadendron, Melaleuca alternifolia, Melaleuca viridiflora, Melissa officinalis, Mentha piperita, Meum athamanticum, Mimosa tenuiflora, Musa sapientum, Musa paradisiaca, Myroxylon pereirae, Myroxylon balsamum, Myrtus communis, Nabalus serpentaria, Nymphaea alba major aquatica, Nymphaea candida, Nymphaea lotus, Ocimum basilicum, Paeonia officinalis, Pelargonium odorantissimum, Pelargonium graveolens, Pentaglottis sempervirens, Perilla frutescens, Peumus boldus, Phaulopsis barteri, Phellodendron amurense </i>Rupr., <i>Phellodendron amurense, Pilosella officinarum, Pimenta dioica, Pimenta officinalis, Pimpinella anisum, Pinus montana </i>Mill., <i>Pinus pumilio Haenke, Pinus silvestris, Pinus mughus </i>Scop., <i>Pinus mugo </i>Turra, <i>Piper methysticum, Plantago major, Plantago lanceolata, Podalyria tinctoria, Pogostemon patchouli </i>Pellet, <i>Populus tremula, Prunella vulgaris, Psidium guajava, Pulmonaria officinalis, Pyrola minor, Quercus robur, Quercus petraea, Rhus glabra, Rhus aromatica, Rhus cotinus </i>(<i>Cotinus coggyria</i>), <i>Ribes rubrum, Rosa gallica, Rosmarinus officinalis, Rubia tinctorum, Rubia peregrina, Rubus fruticosus, Rubus fructicosus, Rumex acetosa, Sabbatia angularis, Salix vitellina, Salvia sclarea, Salvia rnultiorrhiza, Salvia officinalis, Sambucus nigra, Sanguinaria canadensis, Santalum album, Sassafras albidum, Satureia hortensis</i>—Summer Savory, <i>Satureia montana</i>—Winter Savory, <i>Saussurea lappa </i>Clarke, <i>Scabiosa arvensis, Scutellaria baiacalensis, Senecio vulgaris, Senecio jacobaea, Serenoa repens, Smilax regelii, Smilax ornata, Solidago virgaurea, Sophora tinctoria, Sphagnum cymbifolium, Spiraea ulmaria, Stachys palustris, Statice caroliniana </i>(<i>limonium</i>), <i>Styrax benzoin, Styrax officinalis, Syzygium aromaticum, Tamarindus indica, Tamariscus narbonensis, Tamarix gallica, Terminalia avicennioides, Terminalia glaucescens, Terminalia ivorensis, Terminalia macroptera, Teucrium chamaedrys, Teucrium scordium, Thymus vulgaris, Tilea europaea, Trachyspermum ammi, Trifolium pratense, Trillium grandiflorum, Trillium erectum, Trillium flavum, Trillium pendulum, Turnera diffusa, Tussilago farfara, Vaccinium vitis</i>-<i>idaea, Vaccinium myrtillus, Verbena officinalis, Viola odorata, Viola canina, Xylopia aethiopica, Zanthoxylum armatum </i>DC., <i>Zanthoxylum armatum </i>DC., and <i>Zea mays. </i></p>
+      <p id="p-00032-en" num="0045">Examples of plant material known to have naturally occurring antibiotic properties include, but are not limited to, <i>Abies cilicia, Achillea millefolium, Acorus calamus, Agrimonia eupatoria, Agropyrun repens, Alkanna tinctoria, Allium sativum, Allium cepa, Aloe barbadensis, Aloysia triphylla, Ananas sativus, Ananas comosus, Arbutus unedo, Arctium lappa, Armeria maritima, Armoracia rusticana, Artemisia tridentata </i>Nutt, <i>Calophyllum inophyllum, Carlina acaulis, Cassia tora, Cassia alata, Cassia occidentalis, Cassia nigricans </i>Vahl ex D.C., <i>Cassia absus, Centella asiatica, Cera alba, Cetraria islandica, Cetraria islandica, Citrus sinensis, Citrus bigaradia, Cnicus benedictus, Commiphora molmol, Commiphora myrrha, Curcuma amada, Drosera anglica, Echinacea angustifolia, Elymus repens, Evernia purpuracea, Ginkgo biloba, Gramen caninum vulgatius, Hepatica americana, Hieracium pilosella, Humulus lupulus, Hydrastis canadensis, Hydrocotyle asiatica, Hypericum perforatum, Lepidium sativum, Lippia citriodora, Lupinus sativus, Lycopersicon esculenturn, Lythrum salicaria, Mangifera indica, Melilotus officinalis, Mimosa tenuiflora, Musa sapientum, Musa paradisiaca, Nigella sativa, Pentaglottis sempervirens, Pilosella officinarum, Pinus silvestris, Plumbago zeylanica, Plumbago europaea, Polytrichum </i>spp, <i>Prunella vulgaris, Raphanus sativus, Salix vitellina, Santalum album, Solanum esculentum, Solanum lycopersicum, Terminalia avicennioides, Terminalia ivorensis, Terminalia glaucescens, Terminalia macroptera, Trichodesma zeylanicum, Triticum repens, Tropaeolum majus, Usnea barbarta, Viola odorata</i>, and <i>Viola canina. </i></p>
+      <p id="p-00033-en" num="0046">Examples of plant material known to have naturally occurring antimicrobial properties include, but are not limited to, <i>Adropogon citratus, Alkanna tinctoria, Allium sativum, Aloe barbadensis, Aniba rosaeodora </i>Ducke, <i>Anthemis nobilis, Arctium lappa, Arctostaphylos uva</i>-<i>ursi, Argemone mexicana, Arnica montana, Artemisia tridentata </i>Nutt, <i>Azadirachta indica, Baptisia tinctoria, Betula alba, Betula pendula, Calamintha officinalis, Calluna vulgaris, Carum carni, Carum petroselinum, Cassia nigricans </i>Vahl ex D.C., <i>Cassia alata, Cassia absus, Cassia occidentalis, Cassia tora, Caulophyllum thalictroides </i>(L) Michx., <i>Cetraria islandica, Cimicifuga racemosa, Cinnamomum cassia, Cinnamonium zeylanicum, Cistus villosus, Citrus racemosa, Citrus medica, Citrus limonum, Citrus decumana, Citrus paradisi, Commiphora myrrha, Commiphora molmol, Croton </i>spp., <i>Cryptolepis obtusa </i>N. E. Brown, <i>Cryptolepis sanguinolenta </i>Schltr., <i>Cumin cyminum, Cymbopogon citratus, Daucus carota, Echinacea angustifolia, Eucalyptus globulus, Glycyrrhiza glabra, Gnaphalium stoeches, Gnaphalium polycephalum, Gnaphalium citrinum, Gnaphalium dioicum, Gnaphalium arenarium, Guiera senegalensis, Houyttuyniae cordata, Humulus lupulus, Hydrastis canadensis, Indigofera tinctoria, Juglans regia, Juniperus communis, Lapacho morado, Lapacho colorado, Larrea tridenta, Larrea divaricata </i>(DC) Cov., <i>Lavandula officinalis, Lavandula angustifolia, Legusticum levisticum, Levisticum officinale, Lippia chevalieri </i>Moldenke, <i>Matricaria officinalis, Melaleuca alternifolia, Melissa officinalis, Mimosa tenuiflora, Nymphaea alba major aquatica, Nymphaea candida, Ocimum sanctum, Ocimum basilicum, Passiflora incarnata, Pavetta oblongifolia </i>(Hiern) Bremek, <i>Pelargonium odorantissimum, Pelargonium graveolens, Pentaglottis sempervirens, Petroselinum crispum, Piliostigma thonningii, Pinus silvestris, Piper methysticum, Plantago major, Plumbago zeylanica, Podalyria tinctoria, Rosmarinus officinalis, Salvia hispanica, Salvia officinalis, Sanguinaria canadensis, Sanguisorba officinalis, Satureia montana, Satureia hortensis, Sophora tinctoria, Terminalia macroptera, Terminalia glaucescens, Terminalia ivorensis, Terminalia avicennioides, Teucrium scorodonia, Teucrium chamaedrys, Thymus vulgaris, Verbena officinalis. </i></p>
+      <p id="p-00034-en" num="0047">In general, the present invention is a 100% natural air freshener, comprising: <ul id="ul-00005-en" list-style="none"><li><ul id="ul-00006-en" list-style="none"><li>water;</li><li>vegetable glycerin;</li><li>a plant-based solubilizer;</li><li>at least one plant essential oil;</li><li>at least one natural preservative; and</li><li>at least one vitamin.</li></ul></li></ul></p>
+      <heading id="h-00005-en" level="1">Examples</heading>
+      <heading id="h-00006-en" level="1">Formulation One</heading>
+      <p id="p-00035-en" num="0054" />
+      <p id="p-00036-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="63pt" align="left" />
+              <colspec colname="2" colwidth="70pt" align="center" />
+              <colspec colname="3" colwidth="63pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ingredient</entry>
+                  <entry>%</entry>
+                  <entry>Category</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Vitamin K</entry>
+                  <entry>0.52%</entry>
+                  <entry>Ingredient</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Capryl Glucoside</entry>
+                  <entry>1.05</entry>
+                  <entry>Ingredient</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Potassium sorbate</entry>
+                  <entry>1.05</entry>
+                  <entry>Preservative</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Leucidal</entry>
+                  <entry>1.98</entry>
+                  <entry>Preservative</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Glycerin (vegetable)</entry>
+                  <entry>2.1</entry>
+                  <entry>Ingredient</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Berry Essential Oil</entry>
+                  <entry>2.31</entry>
+                  <entry>Fragrance</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Water</entry>
+                  <entry>90.99</entry>
+                  <entry>Ingredient</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00007-en" level="1">Formulation Two</heading>
+      <p id="p-00037-en" num="0055" />
+      <p id="p-00038-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="77pt" align="left" />
+              <colspec colname="2" colwidth="63pt" align="center" />
+              <colspec colname="3" colwidth="56pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ingredient</entry>
+                  <entry>%</entry>
+                  <entry>Category</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Vitamin B6</entry>
+                  <entry>0.53%</entry>
+                  <entry>Ingredient</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Capryl Glucoside</entry>
+                  <entry>1.06</entry>
+                  <entry>Ingredient</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Potassium sorbate</entry>
+                  <entry>1.06</entry>
+                  <entry>Preservative</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Leucidal</entry>
+                  <entry>1.06</entry>
+                  <entry>Preservative</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Glycerin (vegetable)</entry>
+                  <entry>2.12</entry>
+                  <entry>Ingredient</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Lemongrass Essential Oil</entry>
+                  <entry>1.06</entry>
+                  <entry>Fragrance</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Peppermint Essential Oil</entry>
+                  <entry>1.06</entry>
+                  <entry>Fragrance</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Water</entry>
+                  <entry>92.06</entry>
+                  <entry>Ingredient</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00008-en" level="1">Formulation Three</heading>
+      <p id="p-00039-en" num="0056" />
+      <p id="p-00040-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="63pt" align="left" />
+              <colspec colname="2" colwidth="70pt" align="center" />
+              <colspec colname="3" colwidth="63pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ingredient</entry>
+                  <entry>%</entry>
+                  <entry>Category</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Vitamin D3</entry>
+                  <entry>0.53%</entry>
+                  <entry>Ingredient</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Capryl Glucoside</entry>
+                  <entry>1.06</entry>
+                  <entry>Ingredient</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Potassium sorbate</entry>
+                  <entry>1.06</entry>
+                  <entry>Preservative</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Leucidal</entry>
+                  <entry>1.06</entry>
+                  <entry>Preservative</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Glycerin (vegetable) </entry>
+                  <entry>2.12</entry>
+                  <entry>Ingredient</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Vanilla Essential Oil</entry>
+                  <entry>2.33</entry>
+                  <entry>Fragrance</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Water</entry>
+                  <entry>91.84</entry>
+                  <entry>Ingredient</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00009-en" level="1">Formulation Four</heading>
+      <p id="p-00041-en" num="0057" />
+      <p id="p-00042-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="4" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="21pt" align="left" />
+              <colspec colname="1" colwidth="63pt" align="left" />
+              <colspec colname="2" colwidth="70pt" align="center" />
+              <colspec colname="3" colwidth="63pt" align="left" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Ingredient</entry>
+                  <entry>%</entry>
+                  <entry>Category</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Vitamin C </entry>
+                  <entry>0.53%</entry>
+                  <entry>Ingredient</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Capryl Glucoside</entry>
+                  <entry>1.06</entry>
+                  <entry>Ingredient</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Potassium sorbate</entry>
+                  <entry>1.06</entry>
+                  <entry>Preservative</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Leucidal</entry>
+                  <entry>1.06</entry>
+                  <entry>Preservative</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Glycerin (vegetable)</entry>
+                  <entry>2.12</entry>
+                  <entry>Ingredient</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Cool Citrus Herb EO </entry>
+                  <entry>1.59</entry>
+                  <entry>Fragrance</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Water</entry>
+                  <entry>91.53</entry>
+                  <entry>Ingredient</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="3" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00043-en" num="0058">In a preferred embodiment, the present invention is a 100% natural air freshener, comprising: <ul id="ul-00007-en" list-style="none"><li><ul id="ul-00008-en" list-style="none"><li>water;</li><li>vegetable glycerin;</li><li>a plant-based solubilizer;</li><li>at least one plant essential oil;</li><li>at least one natural preservative; and</li><li>at least one vitamin.</li></ul></li></ul></p>
+      <p id="p-00044-en" num="0065">In an alternative embodiment, the present invention is a 100% natural air freshener, comprising: <ul id="ul-00009-en" list-style="none"><li><ul id="ul-00010-en" list-style="none"><li>water;</li><li>vegetable glycerin;</li><li>a plant-based solubilizer, wherein the solubilizer is capryl glucoside;</li><li>at least one essential oil selected from the group consisting of berry, lemongrass, peppermint, vanilla and cool citrus herb;</li><li>at least one natural preservative selected from the group consisting of potassium sorbate and leucidal; and</li><li>at least one vitamin selected from the group consisting of vitamins A, B, B complex, B1, B12, B15, B2, B5, B6, C, D, E and K.</li></ul></li></ul></p>
+      <p id="p-00045-en" num="0072">In yet another embodiment, the present invention may be further comprised of a combination of essential oils. In a preferred embodiment the essential oils are selected from the group consisting of berries, allspice, juniper, seeds, almond, anise, celery, <i>cumin</i>, nutmeg oil, bark, <i>cassia</i>, cinnamon, <i>sassafras</i>, wood, camphor, cedar, rosewood, sandalwood, agarwood, rhizome, galangal, ginger, leaves, basil, bay leaf, common sage, <i>eucalyptus</i>, lemon grass, <i>melaleuca</i>, oregano, patchouli, peppermint, pine, rosemary, spearmint, tea tree, thyme, wintergreen, resin, frankincense, myrrh, flowers, <i>cannabis</i>, chamomile, clary sage, clove, scented <i>geranium</i>, hops, hyssop, jasmine, lavender, manuka, marjoram, rose, ylang-ylang, peel, bergamot, grapefruit, lemon, lime, orange, tangerine, root, valerian, and mango.</p>
+      <p id="p-00046-en" num="0073">In a further embodiment, the present invention may be further comprised of a plant material with naturally occurring fungicidal properties. In a preferred embodiment, the plant material is chosen from the group consisting of <i>Ajuga bracteosa </i>Wall. ex Benth., <i>Aleurites moluccans, Allium sativum, Aloe barbadensis, Aloe vera, Anacardium occidentale, Anthemis nobilis, Arctium lappa, Argemone mexicana, Artemisia tridentata </i>Nutt, <i>Arthraxon hispidus </i>(Thunb.) Merr., <i>Arthraxon ciliaris </i>Beauv., <i>Arthraxon hispidus </i>(Thunb.) Merr., <i>Azadirachta indica, Barringtonia racemosa </i>(L.) Blume ex DC., <i>Bonafousia muelleriana </i>(Mart.) Boit. &amp; L. Allorge, <i>Bonafousia undulata </i>(Vahl) A.DC., <i>Calendula officinalis, Canarium luzonicum, Carica papaya, Caryocar villosum </i>(Aublet) Pers., <i>Cassia alata, Cassia absus, Cassia occidentalis, Cassia tora, Cassuvium pomiferum, Celastrus angulatus </i>Maxim. (<i>C. latifoliu </i>Hemsl.), <i>Cetraria islandica, Chelidonium majus, Chlorophora excelsa, Citrus sinensis, Citrus racemosa, Citrus decumana, Citrus bigaradia, Citrus paradisi, Commiphora molmol, Commiphora myrrha, Coriandrum sativum, Cumin cyminum, Curcuma amada, Cymbopogon citratus </i>(syn. <i>Adropogon citratus</i>), <i>Echinacea angustifblia, Eucalyptus globulus, Ficus racemosa, Geranium maculatum, Hirtella racemosa </i>Lam., <i>Iryanthera juruensis </i>Warb., <i>Jatropha multifida </i>Linné, <i>Jatropha curcas </i>Linné, <i>Juglans regia, Lavandula officinalis, Lavandula angustifolia, Lawsonia alba, Ligusticum sinense, Lygodium circinnatum </i>(N. L. Burm.) Swartz, <i>Majorana hortensis, Majorana onites, Matricaria officinalis, Melaleuca alternifolia, Origanum majorana, Origanum onites, Origanum vulgare, Origanum heracleoticum, Phytolacca decandra, Phytolacca americana, Phytolacca rigida, Pinus silvestris, Poria cocos, Prostanthera striatiflora, Rubus fruticosus, Salix babylonica </i>L., <i>Scutellaria baiacalensis, Thymus vulgaris, Trifolium pratense, Usnea barbata, Zanha africana</i>, and <i>Zingiber officinale. </i></p>
+      <p id="p-00047-en" num="0074">In a further embodiment, the present invention may be further comprised of a plant material with naturally occurring bactericidal properties. In a preferred embodiment, the plant material is chosen from the group consisting of <i>Abelmoschus moschatus </i>Medic., <i>Allium odorum, Allium sativum, Aloe barbadensis, Aloysia triphylla, Anthemis nobilis, Artemisia absinthium, Bellis perennis, Berberis vulgaris, Calendula officinalis, Canarium luzonicum, Caryophyllus aromaticus, Centella asiatica, Cetraria islandica, Cinnamonium zeylanicum, Citrus paradisi, Citrus limonum, Citrus medica, Citrus racemosa, Citrus decumana, Eucalyptus globulus, Eugenia caryophyllata, Eugenia aromatica, Eupatorium fortunei, Gentiana lutea, Ginkgo biloba, Hibiscus abelmoschus, Hippophae rhamnoides, Humulus lupulus, Hydrocotyle asiatica, Inula helenium, Jambosa caryophyllus, Lippia citriodora, Lithospermum erythrorhizon, Matricaria officinalis, Mauritia flexosa, Melaleuca alternifolia, Monotropa uniflora, Myrica cerifera, Persea americana, Phellodendron amurence, Propolis, Prostanthera striatiflora, Salvia officinalis, Syzygium aromaticum, Taraktogenos kurzii </i>King, <i>Thymus vulgaris, Usnea barbata, Valeriana officinalis</i>, and <i>Verbascum Thapsus. </i></p>
+      <p id="p-00048-en" num="0075">In a further embodiment, the present invention may be further comprised of a plant material with naturally occurring disinfectant properties. In a preferred embodiment, the plant material is chosen from the group consisting of <i>Agave americana, Allium sativum, Allium cepa, Aloe barbadensis, Aloe vera, Arctostaphylos uva</i>-<i>ursi, Artemisia abrotanum, Artemisia tridentata Nutt, Ascophylum nodosum, Aster tataricus </i>L., <i>Aster tataricus </i>L., <i>Baphia nitida, Betula pendula, Betula alba, Calendula officinalis, Calluna vulgaris, Carum carvi, Caryophyllus aromaticus, Chrysanthemum parthenium, Cinchona succirubra, Citrus decumana, Citrus paradisi, Citrus racemosa, Cochlearia officinalis, Commiphora myrrha, Commiphora molmol, Cupresses sempervirens, Eucalyptus globulus, Eugenia caryophyllata, Eugenia aromatica, Fagara capensis, Humulus lupulus, Hydrastis canadensis, Hypericum perforatum, Jambosa caryophyllus, Juglans regia, Juniperus communis, Kigelia africana, Lavandula officinalis, Lavandula angustifolia, Lygodium circinnatum </i>(N. L. Burm) Swartz, <i>Magnolia glauca, Majorana hortensis, Majorana onites, Melaleuca alternifolia, Melissa officinalis, Mentha piperita, Origanum heracleoticum, Origanum vulgare, Origanum onites, Origanum majorana, Oxycoccus quadripetalus, Petasites vulgaris, Pyrola minor, Salix vitellina, Salvia officinalis, Santalum album, Saponaria officinalis, Solidago virgaurea, Symphytum officinale, Syzygium aromaticum, Tabernaemontana crassa, Tanacetum vulgare, Tanacetum parthenium, Taraktogenos kurzii </i>King, <i>Taraxacum officinale, Thymus vulgaris, Tropaeolum majus, Tussilago petasites, Umbellularia californica </i>[H. &amp; A] Nutt., <i>Vaccinium vitis</i>-<i>idaea</i>, and <i>Zanthoxylum capense. </i></p>
+      <p id="p-00049-en" num="0076">In a further embodiment, the present invention may be further comprised of a plant material with naturally occurring germicidal properties. In a preferred embodiment, the plant material is chosen from the group consisting of <i>Andira araroba, Betula alba, Betula pendula, Carum copticum, Carum ajowan, Citrus mitis, Citrus microcarpa </i>Bge. (by Tanaka), <i>Humulus lupulus, Lavandula officinalis, Lavandula angustifolia, Lithospermum erythrorhizon, Melaleuca alternifolia, Phellodendron amurence, Sclerocarya birrea </i>subsp. <i>caffra, Thymus vulgaris, Trachyspermum ammi</i>, and <i>Vaccinium myrtillus. </i></p>
+      <p id="p-00050-en" num="0077">In a further embodiment, the present invention may be further comprised of a plant material with naturally occurring antiseptic properties. In a preferred embodiment, the plant material is chosen from the group consisting of <i>Abies cilicia, Achillea millefolium, Adropogon citratus, Agathosma betulina, Agave americana, Ajuga </i>spp, <i>Alkanna tinctoria, Alliaria petiolata, Allium sativum, Allium cepa, Aloe barbadensis, Amyris balsamifera, Anthemis nobilis, Anthriscus sylvestris, Anthriscus cerefolium, Anthyllis vulneraria, Apium graveolens, Aquilegia vulgaris, Arbutus unedo, Arctium lappa, Arctostaphylos uva</i>-<i>ursi, Armeria maritima, Armoracia rusticana, Arnica montana, Artemisia tridentata </i>Nutt, <i>Artemisia absinthium, Artemisia dracunculus, Azadirachta indica, Baptisia tinctoria, Berberis vulgaris, Betula pendula, Betula alba, Boldea fragrans, Boldo boldus, Boswellia thurifera, Brucea javanica, Calendula officinalis, Calluna vulgaris, Cananga odorata, Cannabis sativa, Capsella bursa</i>-<i>pastoris, Capsicum frutescens, capsicum minimum, Carlina acaulis, Carum copticum, Carum ajowan, Carum carvi, Caryophyllus aromaticus, Centaurium erythraea, Centaurium vulgare, Centella asiatica, Cetraria islandica, Chelidonium majus, Chlorophora excelsa, Cinchona succirubra, Cinnamomum cassia, Cinnamomum camphora, Cinnamonium zeylanicum, Citrus bigaradia, Citrus microcarpa </i>Bge. (by Tanaka), <i>Citrus mitis, Citrus bergamia, Citrus sinensis, Citrus limonum, Citrus medica, Cnicus benedictus, Commiphora myrrha, Commiphora molmol, Copaifera officinalis, Copaifera multijuga, Copaifera guyanensis, Copaifera reticulata, Corydalis cava, Corydalis ambigua </i>Cham. et Schlect., <i>Crithmum maritimum, Cupresses sempervirens, Curcuma amada, Curcuma amada, Cymbopogon citratus, Daucus carota, Diospyros mespiliformis, Echinacea angustifolia, Elettaria cardamomum, Elymus repens, Epigaea repens, Erythraea centaurium, Eucalyptus globulus, Eucryphia lucida, Eugenia caryophyllata, Eugenia aromatica, Eupatorium perfoliatum, Fagus sylvatica, Filipendula ulmaria, Foeniculum vulgare, Fragaria vesca, Galium verum, Gaultheria procumbens, Gentiana lutea, Geranium maculatum, Gerardia pedicularis, Geum urbanum, Gleditschia triacanthos, Gnaphalium stoeches, Gnaphalium citrinum, Gnaphalium dioicum, Gnaphalium polycephalum, Gnaphalium arenarium, Gratiola officinalis, Hamamelis virginiana, Hedeome pulegioides, Hedera helix, Heliotropium europaeum, Hieracium pilosella, Houttuynia cordata, Houyttuyniae cordata, Humulus lupulus, Hydrastis canadensis, Hydrocotyle asiatica, Hypericum perforatum, Hyssopus officinalis, Indigofera tinctoria, Inula helenium, Isatis tinctoria, Jambosa caryophyllus, Juglans regia, Juniperus communis, Lactuca sativa, Lantana camara </i>Linné, <i>Larrea divaricata </i>(DC) Cov., <i>Lavandula angustifolia, Lavandula officinalis, Legusticum levisticum, Levisticum officinale, Lilium candidum, Liquidambar styraciflua, Lonicera caprifolium, Lonicera periclymenum, Lysimachia nummularia, Magnolia glauca, Matricaria officinalis, Melaleuca leucadendron, Melaleuca alternifolia, Melaleuca viridiflora, Melissa officinalis, Mentha piperita, Meum athamanticum, Mimosa tenuiflora, Musa sapientum, Musa paradisiaca, Myroxylon pereirae, Myroxylon balsamum, Myrtus communis, Nabalus serpentaria, Nymphaea alba major aquatica, Nymphaea candida, Nymphaea lotus, Ocimum basilicum, Paeonia officinalis, Pelargonium odorantissimum, Pelargonium graveolens, Pentaglottis sempervirens, Perilla frutescens, Peumus boldus, Phaulopsis barteri, Phellodendron amurense </i>Rupr., <i>Phellodendron amurence, Pilosella officinarum, Pimenta dioica, Pimenta officinalis, Pimpinella anisum, Pinus montana </i>Mill., <i>Pinus pumilio </i>Haenke, <i>Pinus silvestris, Pinus mughus </i>Scop., <i>Pinus muga </i>Turra, <i>Piper methysticum, Plantago major, Plantago lanceolata, Podalyria tinctoria, Pogostemon patchouli Pellet, Populus tremula, Prunella vulgaris, Psidium guajava, Pulmonaria officinalis, Pyrola minor, Quercus robur, Quercus petraea, Rhus glabra, Rhus aromatica, Rhus cotinus </i>(<i>Cotinus coggyria</i>), <i>Ribes rubrum, Rosa gallica, Rosmarinus officinalis, Rubia tinctorum, Rubia peregrina, Rubus fruticosus, Rubus fructicosus, Rumex acetosa, Sabbatia angularis, Salix vitellina, Salvia sclarea, Salvia multiorrhiza, Salvia officinalis, Sambucus nigra, Sanguinaria canadensis, Santalum album, Sassafras albidum, Satureia hortensis</i>—Summer Savory, <i>Satureia montana</i>—Winter Savory, <i>Saussurea lappa </i>Clarke, <i>Scabiosa arvensis, Scutellaria baiacalensis, Senecio vulgaris, Senecio jacobaea, Serenoa repens, Smilax regelii, Smilax ornata, Solidago virgaurea, Sophora tinctoria, Sphagnum cymbifolium, Spiraea ulmaria, Stachys palustris, Statice caroliniana </i>(<i>limonium</i>), <i>Styrax benzoin, Styrax officinalis, Syzygium aromaticum, Tamarindus indica, Tamariscus narbonensis, Tamarix gallica, Terminalia avicennioides, Terminalia glaucescens, Terminalia ivorensis, Terminalia macroptera, Teucrium chamaedrys, Teucrium scordium, Thymus vulgaris, Tilea europaea, Trachyspermum ammi, Trifolium pratense, Trillium grandiflorum, Trillium erectum, Trillium flavum, Trillium pendulum, Turnera diffusa, Tussilago farfara, Vaccinium vitis</i>-<i>idaea, Vaccinium myrtillus, Verbena officinalis, Viola odorata, Viola canina, Xylopia aethiopica, Zanthoxylum armatum </i>DC., <i>Zanthoxylum armatum </i>DC., and <i>Zea mays. </i></p>
+      <p id="p-00051-en" num="0078">In a further embodiment, the present invention may be further comprised of a plant material with naturally occurring antibiotic properties. In a preferred embodiment, the plant material is chosen from the group consisting of <i>Abies cilicia, Achillea millefolium, Acorus calamus, Agrimonia eupatoria, Agropyrun repens, Alkanna tinctoria, Allium sativum, Allium cepa, Aloe barbadensis, Aloysia triphylla, Ananas sativus, Ananas comosus, Arbutus unedo, Arctium lappa, Armeria maritima, Armoracia rusticana, Artemisia tridentata </i>Nutt, <i>Calophyllum inophyllum, Carlina acaulis, Cassia tora, Cassia alata, Cassia occidentalis, Cassia nigricans </i>Vahl ex D.C., <i>Cassia absus, Centella asiatica, Cera alba, Cetraria islandica, Cetraria islandica, Citrus sinensis, Citrus bigaradia, Cnicus benedictus, Commiphora molmol, Commiphora myrrha, Curcuma amada, Drosera anglica, Echinacea angustifolia, Elymus repens, Evernia purpuracea, Ginkgo biloba, Gramen caninum vulgatius, Hepatica americana, Hieracium pilosella, Humulus lupulus, Hydrastis canadensis, Hydrocotyle asiatica, Hypericum perforatum, Lepidium sativum, Lippia citriodora, Lupinus sativus, Lycopersicon esculentum, Lythrum salicaria, Mangifera indica, Melilotus officinalis, Mimosa tenuiflora, Musa sapientum, Musa paradisiaca, Nigella sativa, Pentaglottis sempervirens, Pilosella officinarum, Pinus silvestris, Plumbago zeylanica, Plumbago europaea, Polytrichum </i>spp, <i>Prunella vulgaris, Raphanus sativus, Salix vitellina, Santalum album, Solanum esculentum, Solanum lycopersicum, Terminalia avicennioides, Terminalia ivorensis, Terminalia glaucescens, Terminalia macroptera, Trichodesma zeylanicum, Triticum repens, Tropaeolum majus, Usnea barbarta, Viola odorata</i>, and <i>Viola canina. </i></p>
+      <p id="p-00052-en" num="0079">In a further embodiment, the present invention may be further comprised of a plant material with naturally occurring antimicrobial properties. In a preferred embodiment, the plant material is chosen from the group consisting of <i>Adropogon citratus, Alkanna tinctoria, Allium sativum, Aloe barbadensis, Aniba rosaeodora </i>Ducke, <i>Anthemis nobilis, Arctium lappa, Arctostaphylos uva</i>-<i>ursi, Argemone mexicana, Arnica montana, Artemisia tridentata </i>Nutt, <i>Azadirachta indica, Baptisia tinctoria, Betula alba, Betula pendula, Calamintha officinalis, Calluna vulgaris, Carum carvi, Carum petroselinum, Cassia nigricans </i>Vahl ex D.C., <i>Cassia alata, Cassia absus, Cassia occidentalis, Cassia tora, Caulophyllum thalictroides </i>(<i>L</i>) <i>Michx., Cetraria islandica, Cimicifuga racemosa, Cinnamomum cassia, Cinnamonium zeylanicum, Cistus villosus, Citrus racemosa, Citrus medica, Citrus limonum, Citrus decumana, Citrus paradisi, Commiphora myrrha, Commiphora molmol, Croton </i>spp., <i>Cryptolepis obtusa </i>N. E. Brown, <i>Cryptolepis sanguinolenta </i>Schltr., <i>Cumin cyminum, Cymbopogon citratus, Daucus carota, Echinacea angustifolia, Eucalyptus globulus, Glycyrrhiza glabra, Gnaphalium stoeches, Gnaphalium polycephalum, Gnaphalium citrinum, Gnaphalium dioicum, Gnaphalium arenarium, Guiera senegalensis, Houyttuyniae cordata, Humulus lupulus, Hydrastis canadensis, Indigofera tinctoria, Juglans regia, Juniperus communis, Lapacho morado, Lapacho colorado, Larrea tridenta, Larrea divaricata </i>(DC) Cov., <i>Lavandula officinalis, Lavandula angustifolia, Legusticum levisticum, Levisticum officinale, Lippia chevalieri Moldenke, Matricaria officinalis, Melaleuca alternifolia, Melissa officinalis, Mimosa tenuiflora, Nymphaea alba major aquatica, Nymphaea candida, Ocimum sanctum, Ocimum basilicum, Passiflora incarnata, Pavetta oblongifolia </i>(Hiern) Bremek, <i>Pelargonium odorantissimum, Pelargonium graveolens, Pentaglottis sempervirens, Petroselinum crispum, Piliostigma thonningii, Pinus silvestris, Piper methysticum, Plantago major, Plumbago zeylanica, Podalyria tinctoria, Rosmarinus officinalis, Salvia hispanica, Salvia officinalis, Sanguinaria canadensis, Sanguisorba officinalis, Satureia montana, Satureia hortensis, Sophora tinctoria, Terminalia macroptera, Terminalia glaucescens, Terminalia ivorensis, Terminalia avicennioides, Teucrium scorodonia, Teucrium chamaedrys, Thymus vulgaris, Verbena officinalis. </i></p>
+      <p id="p-00053-en" num="0080">Also disclosed is a method of preparing a 100% natural air freshener, wherein the method comprises: <ul id="ul-00011-en" list-style="none"><li><ul id="ul-00012-en" list-style="none"><li>a) filling a clean vessel with water;</li><li>b) mixing and blending at least a first preservative with the water in step a);</li><li>c) mixing and blending at least a second preservative with the solution of step b);</li><li>d) mixing a vegetable glycerin and at least one vitamin in a separate container;</li><li>e) adding the vitamin mixture with the solution of step b) at high speed;</li><li>f) mixing and blending at least one plant-based solubilizer with the solution of step e) at low speed to avoid foaming; and</li><li>g) mixing and blending at least one plant essential oil with the solution of step f) at low speed to avoid foaming.</li></ul></li></ul></p>
+      <p id="p-00054-en" num="0088">In a preferred embodiment, the first preservative is potassium sorbate and the second preservative is luecidal.</p>
+      <p id="p-00055-en" num="0089">In a still further preferred embodiment the at least one vitamin is selected from the group consisting of vitamins A, B, B complex, B1, B12, B15, B2, B5, B6, C, D, E and K.</p>
+      <p id="p-00056-en" num="0090">In yet another embodiment the plant-based solubilizer is capryl glucoside.</p>
+      <p id="p-00057-en" num="0091">In still another embodiment the at least one plant essential oil is selected from the group consisting of berries, allspice, juniper, seeds, almond, anise, celery, <i>cumin</i>, nutmeg oil, bark, <i>cassia</i>, cinnamon, <i>sassafras</i>, wood, camphor, cedar, rosewood, sandalwood, agarwood, rhizome, galangal, ginger, leaves, basil, bay leaf, common sage, <i>eucalyptus</i>, lemon grass, <i>melaleuca</i>, oregano, patchouli, peppermint, pine, rosemary, spearmint, tea tree, thyme, wintergreen, resin, frankincense, myrrh, flowers, <i>cannabis</i>, chamomile, clary sage, clove, scented <i>geranium</i>, hops, hyssop, jasmine, lavender, manuka, marjoram, rose, ylang-ylang, peel, bergamot, grapefruit, lemon, lime, orange, tangerine, root, valerian, and mango. In a most preferred embodiment, the at least one plant essential oil is selected from the group consisting of berry, lemongrass, peppermint, vanilla and cool citrus herb.</p>
+      <p id="p-00058-en" num="0092">It will be appreciated that details of the foregoing embodiments, given for purposes of illustration, are not to be construed as limiting the scope of the invention. Although several embodiments of this invention have been described in detail above, those skilled in the art will readily appreciate that many modifications are possible in the exemplary embodiments without materially departing from the novel teachings and advantages of this invention. Accordingly, all such modifications are intended to be included within the scope of this invention, which is further defined in the converted utility application and appended claims. Further, it is recognized that many embodiments may be conceived that do not achieve all the advantages of some embodiments, particularly preferred embodiments, yet the absence of a particular advantage shall not be construed to necessarily mean that such an embodiment is outside the scope of the present invention.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A formulation for a 100% natural air freshener, the formulation comprising:
+<claim-text>water;</claim-text><claim-text>vegetable glycerin;</claim-text><claim-text>a plant-based solubilizer;</claim-text><claim-text>at least one plant essential oil;</claim-text><claim-text>at least one natural preservative; and</claim-text><claim-text>at least one vitamin.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The formulation of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the plant based solubilizer is capryl glucoside.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The formulation of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the at least one essential oil is selected from the group consisting of berries, allspice, juniper, seeds, almond, anise, celery, cumin, nutmeg oil, bark, cassia, cinnamon, sassafras, wood, camphor, cedar, rosewood, sandalwood, agarwood, rhizome, galangal, ginger, leaves, basil, bay leaf, common sage, eucalyptus, lemon grass, melaleuca, oregano, patchouli, peppermint, pine, rosemary, spearmint, tea tree, thyme, wintergreen, resin, frankincense, myrrh, flowers, cannabis, chamomile, clary sage, clove, scented geranium, hops, hyssop, jasmine, lavender, manuka, marjoram, rose, ylang-ylang, peel, bergamot, grapefruit, lemon, lime, orange, cool citrus herb, tangerine, root, valerian, and mango.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The formulation of <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the at least one essential oil is selected from the group consisting of berry, lemon grass, peppermint, vanilla and cool citrus herb.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The formulation of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the at least one natural preservative is selected from the group consisting of potassium sorbate and leucidal.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The formulation of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the formulation consists of a first natural preservative and a second natural preservative.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The formulation of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the first natural preservative is potassium sorbate and the second natural preservative is leucidal.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The formulation of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the at least one vitamin selected from the group consisting of vitamins A, B, B complex, B1, B12, B15, B2, B5, B6, C, D, E and K.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The formulation of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the formulation further comprises a plant material known to have naturally occurring fungicidal, bactericidal, disinfectant, germicidal, antiseptic, antibiotic and/or antimicrobial properties.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The formulation of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the plant material known to have naturally occurring fungicidal properties is selected from the group consisting of Ajuga bracteosa Wall. ex Benth., Aleurites moluccans, Allium sativum, Aloe barbadensis, Aloe vera, Anacardium occidentale, Anthemis nobilis, Arctium lappa, Argemone mexicana, Artemisia tridentate Nutt, Arthraxon hispidus (Thunb.) Merr., Arthraxon ciliaris Beauv., Arthraxon hispidus (Thunb.) Merr., Azadirachta indica, Barringtonia racemosa (L) Blume ex DC., Bonafousia muelleriana (Mart.) Boit. &amp; L. Allorge, Bonafousia undulata (Pahl) ADC, Calendula officinalis, Canarium luzonicum, Carica papaya, Caryocar villosum (Aublet) Pers., Cassia alata, Cassia absus, Cassia occidentalis, Cassia tora, Cassuvium pomiferum, Celastrus angulatus Maxim. (C. latifoliu Hemsl.)., Cetraria islandica, Chelidonium majus, Chlorophora excelsa, Citrus sinensis, Citrus racemosa, Citrus decumana, Citrus bigaradia, Citrus paradisi, Commiphora molmol, Commiphora myrrha, Coriandrum sativum, Cumin cyminum, Curcuma amada, Cymbopogon citratus (syn. Adropogon citratus), Echinacea angustifolia, Eucalyptus globulus, Ficus racemosa, Geranium maculatum, Hirtella racemosa Lam., Iryanthera juruensis Warb., Jatropha multifida Linné, Jatropha curcas Linné, Juglans regia, Lavandula officinalis, Lavandula angustifolia, Lawsonia alba, Ligusticum sinense, Lygodium circinnatum (N. L. Burm.) Swartz, Majorana hortensis, Majorana onites, Matricaria officinalis, Melaleuca alternifolia, Origanum majorana, Origanum onites, Origanum vulgare, Origanum heracleoticum, Phytolacca decandra, Phytolacca americana, Phytolacca rigida, Pinus silvestris, Poria cocos, Prostanthera striatiflora, Rubus fruticosus, Salix babylonica L., Scutellaria baiacalensis, Thymus vulgaris, Trifolium pratense, Usnea barbata, Zanha africana, and Zingiber officinale. </claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The formulation of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the plant material known to have naturally occurring bactericidal properties is selected from the group consisting of Abelmoschus moschatus Medic., Allium odorum, Allium sativum, Aloe barbadensis, Aloysia triphylla, Anthemis nobilis, Artemisia absinthium, Bellis perennis, Berberis vulgaris, Calendula officinalis, Canarium luzonicum, Caryophyllus aromaticus, Centella asiatica, Cetraria islandica, Cinnamonium zeylanicum, Citrus paradisi, Citrus limonum, Citrus medica, Citrus racemosa, Citrus decumana, Eucalyptus globulus, Eugenia caryophyllata, Eugenia aromatica, Eupatorium fortunei, Gentiana lutea, Ginkgo biloba, Hibiscus abelmoschus, Hippophae rhamnoides, Humulus lupulus, Hydrocotyle asiatica, Inula helenium, Jambosa caryophyllus, Lippia citriodora, Lithospermum erythrorhizon, Matricaria officinalis, Mauritia flexosa, Melaleuca alternifolia, Monotropa uniflora, Myrica cerifera, Persea americana, Phellodendron amurence, Propolis, Prostanthera striatiflora, Salvia officinalis, Syzygium aromaticum, Taraktogenos kurzii King, Thymus vulgaris, Usnea barbata, Valeriana officinalis, and Verbascum Thapsus. </claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The formulation of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the plant material known to have naturally occurring disinfectant properties is selected from the group consisting of Agave americana, Allium sativum, Album cepa, Aloe barbadensis, Aloe vera, Arctostaphylos uva-ursi, Artemisia abrotanum, Artemisia tridentata Nutt, Ascophylum nodosum, Aster tataricus L., Aster tataricus L., Baphia nitida, Betula pendula, Betula alba, Calendula officinalis, Calluna vulgaris, Carum carvi, Caryophyllus aromaticus, Chrysanthemum parthenium, Cinchona succirubra, Citrus decumana, Citrus paradisi, Citrus racemosa, Cochlearia officinalis, Commiphora myrrha, Commiphora molmol, Cupresses sempervirens, Eucalyptus globulus, Eugenia caryophyllata, Eugenia aromatica, Fagara capensis, Humulus lupulus, Hydrastis canadensis, Hypericum perforatum, Jambosa caryophyllus, Juglans regia, Juniperus communis, Kigelia africana, Lavandula officinalis, Lavandula angustifolia, Lygodium circinnatum (N. L. Burm.) Swartz, Magnolia glauca, Majorana hortensis, Majorana onites, Melaleuca alternifolia, Melissa officinalis, Mentha piperita, Origanum heracleoticum, Origanum vulgare, Origanum onites, Origanum majorana, Oxycoccus quadripetalus, Petasites vulgaris, Pyrola minor, Salix vitellina, Salvia officinalis, Santalum album, Saponaria officinalis, Solidago virgaurea, Symphytum officinale, Syzygium aromaticum, Tabernaemontana crassa, Tanacetum vulgare, Tanacetum parthenium, Taraktogenos kurzii King, Taraxacum officinale, Thymus vulgaris, Tropaeolum majus, Tussilago petasites, Umbellularia californica [H. &amp; A.] Nutt., Vaccinium vitis-idaea, and Zanthoxylum capense. </claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The formulation of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the plant material known to have naturally occurring germicidal properties is selected from the group consisting of Andira araroba, Betula alba, Betula pendula, Carum copticum, Carum ajowan, Citrus mitis, Citrus microcarpa Bge. (by Tanaka), Humulus lupulus, Lavandula officinalis, Lavandula angustifolia, Lithospermum erythrorhizon, Melaleuca alternifolia, Phellodendron amurence, Sclerocarya birrea subsp. caffra, Thymus vulgaris, Trachyspermum ammi, and Vaccinium myrtillus. </claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The formulation of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the plant material known to have naturally occurring antiseptic properties is selected from the group consisting of Abies cilicia, Achillea millefolium, Adropogon citratus, Agathosma betulina, Agave americana, Ajuga spp, Alkanna tinctoria, Alliaria petiolata, Allium sativum, Allium cepa, Aloe barbadensis, Amyris balsamifera, Anthemis nobilis, Anthriscus sylvestris, Anthriscus cerefolium, Anthyllis vulneraria, Apium graveolens, Aquilegia vulgaris, Arbutus unedo, Arctium lappa, Arctostaphylos uva-ursi, Armeria maritima, Armoracia rusticana, Arnica montana, Artemisia tridentata Nutt, Artemisia absinthium, Artemisia dracunculus, Azadirachta indica, Baptisia tinctoria, Berberis vulgaris, Betula pendula, Betula alba, Boldea fragrans, Boldo boldus, Boswellia thurifera, Brucea javanica, Calendula officinalis, Calluna vulgaris, Cananga odorata, Cannabis sativa, Capsella bursa-pastoris, Capsicum frutescens, capsicum minimum, Carlina acaulis, Carum copticum, Carum ajowan, Carum carvi, Caryophyllus aromaticus, Centaurium erythraea, Centaurium vulgare, Centella asiatica, Cetraria islandica, Chelidonium majus, Chlorophora excelsa, Cinchona succirubra, Cinnamomum cassia, Cinnamomum camphora, Cinnamonium zeylanicum, Citrus bigaradia, Citrus microcarpa Bge. (by Tanaka), Citrus mitis, Citrus bergamia, Citrus sinensis, Citrus limonum, Citrus medica, Cnicus benedictus, Commiphora myrrha, Commiphora molmol, Copaifera officinalis, Copaifera multijuga, Copaifera guyanensis, Copaifera reticulata, Corydalis cava, Corydalis ambigua Cham. et Schlect., Crithmum maritimum, Cupresses sempervirens, Curcuma amada, Curcuma amada, Cymbopogon citratus, Daucus carota, Diospyros mespiliformis, Echinacea angustifolia, Elettaria cardamomum, Elymus repens, Epigaea repens, Erythraea centaurium, Eucalyptus globulus, Eucryphia lucida, Eugenia caryophyllata, Eugenia aromatica, Eupatorium perfoliatum, Fagus sylvatica, Filipendula ulmaria, Foeniculum vulgare, Fragaria vesca, Galium verum, Gaultheria procumbens, Gentiana lutea, Geranium maculatum, Gerardia pedicularis, Geum urbanum, Gleditschia triacanthos, Gnaphalium stoeches, Gnaphalium citrinum, Gnaphalium dioicum, Gnaphalium polycephalum, Gnaphalium arenarium, Gratiola officinalis, Hamamelis virginiana, Hedeome pulegioides, Hedera helix, Heliotropium europaeum, Hieracium pilosella, Houttuynia cordata, Houyttuyniae cordata, Humulus lupulus, Hydrastis canadensis, Hydrocotyle asiatica, Hypericum perforatum, Hyssopus officinalis, Indigofera tinctoria, Inula helenium, Isatis tinctoria, Jambosa caryophyllus, Juglans regia, Juniperus communis, Lactuca sativa, Lantana camara Linné, Larrea divaricata (DC) Cov., Lavandula angustifolia, Lavandula officinalis, Legusticum levisticum, Levisticum officinale, Lilium candidum, Liquidambar styraciflua, Lonicera caprifolium, Lonicera periclymenum, Lysimachia nummularia, Magnolia glauca, Matricaria officinalis, Melaleuca leucadendron, Melaleuca alternifolia, Melaleuca viridiflora, Melissa officinalis, Mentha piperita, Meum athamanticum, Mimosa tenuiflora, Musa sapientum, Musa paradisiaca, Myroxylon pereirae, Myroxylon balsamum, Myrtus communis, Nabalus serpentaria, Nymphaea alba major aquatica, Nymphaea candida, Nymphaea lotus, Ocimum basilicum, Paeonia officinalis, Pelargonium odorantissimum, Pelargonium graveolens, Pentaglottis sempervirens, Perilla frutescens, Peumus boldus, Phaulopsis barteri, Phellodendron amurense Rupr., Phellodendron amurence, Pilosella officinarum, Pimento dioica, Pimento officinalis, Pimpinella anisum, Pinus montana Mill., Pinus pumilio Haenke, Pinus silvestris, Pinus mughus Scop., Pinus mugo Turra, Piper methysticum, Plantago major, Plantago lanceolata, Podalyria tinctoria, Pogostemon patchouli Pellet, Populus tremula, Prunella vulgaris, Psidium guajava, Pulmonaria officinalis, Pyrola minor, Quercus robur, Quercus petraea, Rhus glabra, Rhus aromatica, Rhus cotinus (Cotinus coggyria), Ribes rubrum, Rosa gallica, Rosmarinus officinalis, Rubia tinctorum, Rubia peregrina, Rubus fruticosus, Rubus fructicosus, Rumex acetosa, Sabbatia angularis, Salix vitellina, Salvia sclarea, Salvia multiorrhiza, Salvia officinalis, Sambucus nigra, Sanguinaria canadensis, Santalum album, Sassafras albidum, Satureia hortensis—Summer Savory, Satureia montana—Winter Savory, Saussurea lappa Clarke, Scabiosa arvensis, Scutellaria baiacalensis, Senecio vulgaris, Senecio jacobaea, Serenoa repens, Smilax regelii, Smilax ornata, Solidago virgaurea, Sophora tinctoria, Sphagnum cymbifolium, Spiraea ulmaria, Stachys palustris, Statice caroliniana (limonium), Styrax benzoin, Styrax officinalis, Syzygium aromaticum, Tamarindus indica, Tamariscus narbonensis, Tamarix gallica, Terminalia avicennioides, Terminalia glaucescens, Terminalia ivorensis, Terminalia macroptera, Teucrium chamaethys, Teucrium scordium, Thymus vulgaris, Tilea europaea, Trachyspermum ammi, Trifolium pratense, Trillium grandiflorum, Trillium erectum, Trillium flavum, Trillium pendulum, Turnera diffusa, Tussilago farfara, Vaccinium vitis-idaea, Vaccinium myrtillus, Verbena officinalis, Viola odorata, Viola canina, Xylopia aethiopica, Zanthoxylum armatum DC., Zanthoxylum armatum DC., and Zea mays. </claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The formulation of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the plant material known to have naturally occurring antibiotics properties is selected from the group consisting of Abies cilicia, Achillea millefolium, Acorus calamus, Agrimonia eupatoria, Agropyrun repens, Alkanna tinctoria, Allium sativum, Allium cepa, Aloe barbadensis, Aloysia triphylla, Ananas sativus, Ananas comosus, Arbutus unedo, Arctium lappa, Armeria maritima, Armoracia rusticana, Artemisia tridentata Nutt, Calophyllum inophyllum, Carlina acaulis, Cassia tora, Cassia alata, Cassia occidentalis, Cassia nigricans Vahl ex D.C., Cassia absus, Centella asiatica, Cera alba, Cetraria islandica, Cetraria islandica, Citrus sinensis, Citrus bigaradia, Cnicus benedictus, Commiphora molmol, Commiphora myrrha, Curcuma amada, Drosera anglica, Echinacea angustifolia, Elymus repens, Evernia purpuracea, Ginkgo biloba, Gramen caninum vulgatius, Hepatica americana, Hieracium pilosella, Humulus lupulus, Hydrastis canadensis, Hydrocotyle asiatica, Hypericum perforatum, Lepidium sativum, Lippia citriodora, Lupinus sativus, Lycopersicon esculentum, Lythrum salicaria, Mangifera indica, Melilotus officinalis, Mimosa tenuiflora, Musa sapientum, Musa paradisiaca, Nigella sativa, Pentaglottis sempervirens, Pilosella officinarum, Pinus silvestris, Plumbago zeylanica, Plumbago europaea, Polytrichum spp, Prunella vulgaris, Raphanus sativus, Salix vitellina, Santalum album, Solanum esculentum, Solanum lycopersicum, Terminalia avicennioides, Terminalia ivorensis, Terminalia glaucescens, Terminalia macroptera, Trichodesma zeylanicum, Triticum repens, Tropaeolum majus, Usnea barbarta, Viola odorata, and Viola canina. </claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en">
+      <claim-text>
+        <b>16</b>. The formulation of <claim-ref idref="clm-00009-en">claim 9</claim-ref>, wherein the plant material known to have naturally occurring antimicrobial properties is selected from the group consisting of Adropogon citratus, Alkanna tinctoria, Allium sativum, Aloe barbadensis, Aniba rosaeodora Ducke, Anthemis nobilis, Arctium lappa, Arctostaphylos uva-ursi, Argemone mexicana, Arnica montana, Artemisia tridentata Nutt, Azadirachta indica, Baptisia tinctoria, Betula alba, Betula pendula, Calamintha officinalis, Calluna vulgaris, Carum carvi, Carum petroselinum, Cassia nigricans Vahl ex D.C., Cassia alata, Cassia absus, Cassia occidentalis, Cassia tora, Caulophyllum thalictroides (L) Michx., Cetraria islandica, Cimicifuga racemosa, Cinnamomum cassia, Cinnamonium zeylanicum, Cistus villosus, Citrus racemosa, Citrus medica, Citrus limonum, Citrus decumana, Citrus paradisi, Commiphora myrrha, Commiphora molmol, Croton spp., Cryptolepis obtusa N. E. Brown, Cryptolepis sanguinolenta Schltr., Cumin cyminum, Cymbopogon citratus, Daucus carota, Echinacea angustifolia, Eucalyptus globulus, Glycyrrhiza glabra, Gnaphalium stoeches, Gnaphalium polycephalum, Gnaphalium citrinum, Gnaphalium dioicum, Gnaphalium arenarium, Guiera senegalensis, Houyttuyniae cordata, Humulus lupulus, Hydrastis canadensis, Indigofera tinctoria, Juglans regia, Juniperus communis, Lapacho morado, Lapacho colorado, Larrea tridenta, Larrea divaricata (DC) Cov., Lavandula officinalis, Lavandula angustifolia, Legusticum levisticum, Levisticum officinale, Lippia chevalieri Moldenke, Matricaria officinalis, Melaleuca alternifolia, Melissa officinalis, Mimosa tenuiflora, Nymphaea alba major aquatica, Nymphaea candida, Ocimum sanctum, Ocimum basilicum, Passiflora incarnata, Pavetta oblongifolia (Hiern) Bremek, Pelargonium odorantissimum, Pelargonium graveolens, Pentaglottis sempervirens, Petroselinum crispum, Piliostigma thonningii, Pinus silvestris, Piper methysticum, Plantago major, Plumbago zeylanica, Podalyria tinctoria, Rosmarinus officinalis, Salvia hispanica, Salvia officinalis, Sanguinaria canadensis, Sanguisorba officinalis, Satureia montana, Satureia hortensis, Sophora tinctoria, Terminalia macroptera, Terminalia glaucescens, Terminalia ivorensis, Terminalia avicennioides, Teucrium scorodonia, Teucrium chamaedrys, Thymus vulgaris, Verbena officinalis. </claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en" independent="true">
+      <claim-text>
+        <b>17</b>. A method of preparing the formulation of a 100% natural air freshener, wherein the method comprises:
+<claim-text>a) filling a clean vessel with water;</claim-text><claim-text>b) mixing and blending at least a first preservative with the water in step a);</claim-text><claim-text>c) mixing and blending at least a second preservative with the solution of step b);</claim-text><claim-text>d) mixing a vegetable glycerin and at least one vitamin in a separate container;</claim-text><claim-text>e) adding the vitamin mixture with the solution of step b) at high speed;</claim-text><claim-text>f) mixing and blending at least one plant-based solubilizer with the solution of step e) at low speed to avoid foaming; and</claim-text><claim-text>g) mixing and blending at least one plant essential oil with the solution of step f) at low speed to avoid foaming.</claim-text></claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The method of <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein the at least one plant essential oil is selected from the group consisting of berries, allspice, juniper, seeds, almond, anise, celery, cumin, nutmeg oil, bark, cassia, cinnamon, sassafras, wood, camphor, cedar, rosewood, sandalwood, agarwood, rhizome, galangal, ginger, leaves, basil, bay leaf, common sage, eucalyptus, lemon grass, melaleuca, oregano, patchouli, peppermint, pine, rosemary, spearmint, tea tree, thyme, wintergreen, resin, frankincense, myrrh, flowers, cannabis, chamomile, clary sage, clove, scented geranium, hops, hyssop, jasmine, lavender, manuka, marjoram, rose, ylang-ylang, peel, bergamot, grapefruit, lemon, lime, orange, cool citrus herb, tangerine, root, valerian, and mango.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The method of <claim-ref idref="clm-00017-en">claim 17</claim-ref>, wherein the at least one vitamin is selected from the group consisting of vitamins A, B, B complex, B1, B12, B15, B2, B5, B6, C, D, E and K.</claim-text>
+    </claim>
+  </claims>
+  <image file="US20150252291A1.PDF" type="pdf" size="567406" pages="12" />
+</lexisnexis-patent-document>

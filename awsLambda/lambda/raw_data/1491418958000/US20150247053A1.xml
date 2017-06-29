@@ -1,0 +1,1384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247053A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021449" date-changed="20150918" time-changed="025310">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140130">
+        <country>US</country>
+        <doc-number>20150247053</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14396293</doc-number>
+        <date>20130423</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150910">
+      <classification-ipcr sequence="1">
+        <text>C09D 131/04        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>131</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150910">
+      <classification-cpc sequence="1">
+        <text>C09D 131/04        20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>D</subclass>
+        <main-group>131</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C08F   2/01        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>F</subclass>
+        <main-group>2</main-group>
+        <subgroup>01</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C08F   2/26        20130101 LI20140201BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>F</subclass>
+        <main-group>2</main-group>
+        <subgroup>26</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140201</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C08F 220/04        20130101 LI20130703BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>F</subclass>
+        <main-group>220</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130703</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C08F 222/16        20130101 LI20130703BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>F</subclass>
+        <main-group>222</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20130703</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C08K   3/22        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>3</main-group>
+        <subgroup>22</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C08K   3/26        20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>3</main-group>
+        <subgroup>26</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C08K   3/346       20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>3</main-group>
+        <subgroup>346</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C08K2003/2241      20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>2003</main-group>
+        <subgroup>2241</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>C08K2003/265       20130101 LA20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>2003</main-group>
+        <subgroup>265</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>D21H  19/48        20130101 LI20140805BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>D</section>
+        <class>21</class>
+        <subclass>H</subclass>
+        <main-group>19</main-group>
+        <subgroup>48</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140805</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">14</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">VINYL ESTER-BASED COPOLYMER DISPERSIONS FROM A CONTINUOUS TUBULAR EMULSION POLYMERIZATION PROCESS</invention-title>
+    <related-documents date-changed="20150903">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61637699</doc-number>
+          <date>20120424</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>CELANESE EMULSIONS GMBH</orgname>
+            <address>
+              <city>Sulzbach</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>DE</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Madl</last-name>
+            <first-name>Alexander</first-name>
+            <address>
+              <city>Frankfurt am Main</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Farwaha</last-name>
+            <first-name>Rajeev</first-name>
+            <address>
+              <city>Belle Mead</city>
+              <state>NJ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Confalone</last-name>
+            <first-name>Philip</first-name>
+            <address>
+              <city>Raritan</city>
+              <state>NJ</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Adams</last-name>
+            <first-name>David</first-name>
+            <address>
+              <city>Bad Soden</city>
+              <country>DE</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>US13037742</doc-number>
+        <date>20130423</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2013163144</doc-number>
+        <date>20131031</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173463220">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247053</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130423</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173463219">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247053</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130423</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Disclosed are aqueous polymer dispersions which can be used as binders in paper coating compositions. Such dispersions are made using a continuous polymerization process involving a tubular reactor with a continuous loop section and a secondary line section and comprise a polymer of polymerized copolymers (a) a vinyl ester, (b) an ethylenically unsaturated mono or di-carboxylic acid or half ester of a di-carboxylic acid, and (c) a comonomer having a multifunctional moiety.</p>
+  </abstract>
+  <legal-data date-changed="20150918">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20141022</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247053A1</docdb-publication-number>
+      <docdb-application-id>444210007</docdb-application-id>
+      <new-owner>CELANESE EMULSIONS GMBH, GERMANY</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:FARWAHA, RAJEEV;CONFALONE, PHILIP;MADL, ALEXANDER;AND OTHERS;SIGNING DATES FROM 20130429 TO 20130513;REEL/FRAME:034033/0934</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to aqueous dispersions of vinyl ester-based polymers made in a continuous tubular reactor process and to their use in paper coating formulations.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND</heading>
+      <p id="p-00002-en" num="0002">Pigmented paper coating formulations generally comprise an aqueous synthetic polymer binder emulsion and pigment and may contain other additives typically used in the paper coating art. Illustrative of the polymer binders in the emulsions are vinyl acetate copolymers and interpolymers, including vinyl acetate/ethylene (VAE) and vinyl acetate/alkyl acrylate copolymers and interpolymers, and styrene/butadiene styrene/acrylate copolymers. Such copolymers and interpolymers can also contain other co-monomers such as, for example, a copolymerized ethylenically unsaturated mono- or dicarboxylic acid or other unsaturated co-monomers which can function as cross-linking agents.</p>
+      <p id="p-00003-en" num="0003">U.S. Pat. No. 4,395,499, for example, discloses high strength pigment binders for paper coatings having increased water retention and stability. The coating compositions contain an aqueous synthetic polymer latex comprising a dispersed interpolymer of a vinyl ester; a polyethylenically unsaturated co-monomer which can be triallyl cyanurate, triallyl isocyanurate, diallyl maleate, diallyl fumarate, divinyl benzene or diallyl phthalate; an ethylenically unsaturated mono- or dicarboxylic acid co-monomer or half ester thereof; and optionally an alkyl acrylate co-monomer.</p>
+      <p id="p-00004-en" num="0004">Notwithstanding the availability of these various types of paper coating binder emulsions, there is a persistent need for coated paper and coated paperboard producers to identify low cost paper coating emulsions (i.e., paper coating binders) which provide increased binding strength when the compositions are applied to paper and paperboard products. Most often, binding strength is quantified by a paper test called the IGT pick resistance test. In the IGT pick test, the greater the IGT value, the stronger the binding strength.</p>
+      <p id="p-00005-en" num="0005">A variety of emulsion polymerization components and techniques can influence binding strength, but, in general, vinyl acetate-based binders (e.g., polyvinyl acetate, vinyl acetate-ethylene, vinyl acetate-acrylate, and the vinyl acetate-based binders discussed above) are known to provide lower binding strength than more commonly used coating binders like styrene butadiene and styrene acrylics. To compensate for the lower IGT pick resistance provided by paper coating compositions using such vinyl ester based binders, higher binder levels are required, which, of course, detracts from the profitability of the coated paper and paperboard products made with these types of coating binders. In addition, those skilled in the art will appreciate that high binder levels may result in adverse properties, e.g., reduced ink absorption.</p>
+      <p id="p-00006-en" num="0006">Over the years, a few vinyl acetate/ethylene (VAE) copolymers and interpolymers have been developed for paper coating applications. U.S. Pat. No. 3,337,482, for example, discloses paper coating compositions containing pigments and binder emulsions comprising copolymers of ethylene, vinyl acetate and ethylenically unsaturated mono- or di-carboxylic acids such as acrylic acid or maleic acid. The binder emulsions of the '482 patent are prepared by emulsion polymerization of the co-monomers using a nonionic emulsfier which contains polyoxyethylene oleyl or lauryl phenyl ethers.</p>
+      <p id="p-00007-en" num="0007">U.S. Pat. No. 5,177,128 discloses a paper coating composition containing a first polymer network intertwined on a molecular scale with a second polymer network. The process involves making a first polymer emulsion and mixing a second monomer emulsion with the first polymer emulsion. The emulsion mixture is polymerized to provide a first polymer network with is intertwined on a molecular scale with the second polymer network.</p>
+      <p id="p-00008-en" num="0008">The most effective nonionic emulsifiers found to stabilize emulsions of VAE copolymers belong to a general class of nonionic surfactants called alkylphenol ethoxylates (APEs). APEs have been typically used in VAE latex products to improve emulsion polymerization and film forming, and in coating formulations to provide pigment wetting. However, these APE compounds are believed to break down in the environment into related compounds that are persistent in the environment and act as endocrine disruptors. Due in part to regulations in Europe, as well as recently adopted water quality criteria in the United States, the evolving environmental controls on APEs are reminiscent of the 1970s ban on lead compounds in paint. Given this adverse regulatory situation, the use of APE-type nonionic emulsifiers in VAE emulsion-containing products is increasingly viewed as disadvantageous.</p>
+      <p id="p-00009-en" num="0009">In light of the developing need to address potential problems with utilizing phenol free-emulsifiers in place of the heretofore more conventionally used APEs, and in view of the need to overcome issues associated with handling ethylene gas on a large scale basis, the use of VAE-based paper coating compositions has to date been of only limited commercial significance. Other issues including possible lack of FDA compliance and/or relatively high Volatile Organic Compound (VOC) content have also worked against the commercial use of VAE-based coating compositions.</p>
+      <p id="p-00010-en" num="0010">More recently equipment and expertise has been developed to polymerize and stabilize environmentally-friendly vinyl ester/ethylene, e.g., vinyl acetate/ethylene (VAE), coating binders on a commercial production scale. Accordingly, the current state of the emulsion polymerization art with respect to surfactant-stabilized, APE-free, vinyl ester-based polymers make such polymeric materials very desirable candidates for paper/paperboard coating applications. However, traditionally vinyl acetate-containing dispersion polymers are made in stirred tank reactors. In this situation, the throughput is limited by the reactor volume. The making of large production amounts of polymer requires a relatively large space and a high cooling capacity. Furthermore, significant time is required for discharging and preparing the stirred reactor for the next batch, increasing the total batch cycle time.</p>
+      <p id="p-00011-en" num="0011">Thus, a continuous loop process for making vinyl ester-based dispersion polymers for paper/paperboard coating would provide commercial advantages. Such commercial potential for vinyl ester-based dispersions can be realized if the binding strength exhibited by such vinyl ester-based binders can be made comparable to the binding strength of binders made using batch processes, including surfactant-stabilized, APE-free, VAE binders and non-vinyl ester-based binders such as those based on styrene butadiene and styrene acrylics. However, initial attempts at using a continuous process for making vinyl ester-based dispersion to achieve similar or improved paper coating properties to binders made from a batch process met with difficulty. For example, vinyl ester-based emulsions made from a continuous tubular reactor process had particles sizes similar to vinyl ester-based material made with a batch reactor, but had significantly lower IGT pick resistance values.</p>
+      <p id="p-00012-en" num="0012">The need therefore exists for improved vinyl ester-based emulsion compositions made from continuous processes (optionally free of APEs), coating compositions utilizing these emulsion compositions and having desired binding strength characteristics, and continuous processes for making such emulsion compositions and coating compositions.</p>
+      <heading id="h-00003-en" level="1">SUMMARY</heading>
+      <p id="p-00013-en" num="0013">It has now been discovered that by preparing vinyl acetate-based emulsions using a continuous tubular reactor and with certain monomers, dispersions may be prepared having especially desirable physical properties, such as good pick strength. Such latex binders are desirable because they can be used to provide especially effective and environmentally friendly coating compositions for paper and paperboard applications that can be manufactured cheaply, efficiently, and with more predictable, or less variance in, properties.</p>
+      <p id="p-00014-en" num="0014">In one embodiment, the present invention is directed to a composition comprising an aqueous dispersion of a polymer comprising at least the following polymerized comonomers: vinyl acetate, at least one ethylenically unsaturated mono or di-carboxylic acid or half ester of a di-carboxylic acid, and at least one multifunctional comonomer, and where the dispersion is prepared by a continuous emulsion polymerization in a reactor comprising a closed loop section and a secondary line section. In another embodiment of the present invention, the aqueous dispersion has a volume average particle size value, D<sub>v</sub>, of at least 150 nm</p>
+      <p id="p-00015-en" num="0015">In yet another embodiment, the present invention is directed to a composition comprising an aqueous dispersion of a polymer comprising at least the following polymerized comonomers: vinyl acetate and at least one ethylenically unsaturated mono or di-carboxylic acid or half ester of a di-carboxylic acid, where the dispersion is prepared by a continuous emulsion polymerization in a reactor comprising a closed loop section and a secondary line section. Certain embodiments of the invention contain no multifunctional monomer.</p>
+      <p id="p-00016-en" num="0016">Another embodiment of the present invention involves a composition comprising an aqueous dispersion of a polymer comprising at least the following polymerized comonomers: vinyl acetate, at least one ethylenically unsaturated mono or di-carboxylic acid or half ester of a di-carboxylic acid, and at least one multifunctional comonomer, and where the dispersion is prepared by a continuous emulsion polymerization in a polymerization reactor comprising a first section with a circulation loop with one or more inlets for raw material, a pump for circulating a reactor charge within the circulation loop, and a secondary line section not forming a closed loop connected to a discharge of the loop section.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00004-en" level="1">DETAILED DESCRIPTION</heading>
+      <p id="p-00017-en" num="0017">The present invention relates to aqueous polymer emulsions that demonstrate excellent dry pick strength when such emulsions are incorporated into coating compositions, and in particular into coating compositions for paper products. Emulsion polymers of the present invention comprise polymers formed from the continuous emulsion polymerization of comonomers: (a) a vinyl ester, (b) an ethylenically unsaturated mono or di-carboxylic acid or half ester of a di-carboxylic acid, and (c) a comonomer having a multifunctional moiety in a tubular reactor. The polymers may also contain additional comonomers, such as ethylene. The relative amounts of the comonomers in the emulsion polymers of the present invention may vary. The polymers are preferably colloidally dispersed in an aqueous medium comprising a surfactant.</p>
+      <p id="p-00018-en" num="0018">The primary comonomer used in the preparation of the copolymer dispersion is a vinyl ester. The vinyl esters utilized in the formation of the dispersions herein are the esters of alkanoic acids, the acid having from one to about 13 carbon atoms. Typical examples include; vinyl formate, vinyl acetate, vinyl propionate, vinyl butyrate, vinyl isobutyrate, vinyl valerate, vinyl-2-ethyl-hexanoate, viny isooctanoate, vinyl nonate, vinyl decanoate, vinyl pivalate, vinyl versatate, and mixtures thereof. Of the foregoing, vinyl acetate is the preferred monomer because of its ready availability and low cost.</p>
+      <p id="p-00019-en" num="0019">The vinyl ester preferably is present in the emulsion polymer in an amount ranging from 70 to 98 pphm (parts per hundred based on total monomer in the specified copolymer), e.g., from 75 to 85 pphm. More preferably, the vinyl ester content of the copolymer used in the emulsion of the coating compositions described will range from 78 pphm to 82 pphm.</p>
+      <p id="p-00020-en" num="0020">The emulsion polymers of the present invention optionally include ethylene as a comonomer. Generally, a relatively high ethylene content in the copolymer is desired in order to provide a binder emulsion that is especially effective in formulating coating compositions that provide desirably high binding strength. Thus, the optional ethylene may comprise from 2 pphm to 30 pphm of the copolymer, e.g., from 10 to 25 pphm or from 18 to 22 pphm, when present. More preferably, ethylene will be present in the copolymer in an amount ranging from 12 pphm to 20 pphm.</p>
+      <p id="p-00021-en" num="0021">Another comonomer of the present polymer dispersion is at least one monomer that introduces a carboxyl moiety into the polymer. Generally, any ethylenically unsaturated mono or di-carboxylic acid may be used to provide the carboxyl functionality. Examples of suitable acids include monocarboxylic ethylenically unsaturated acids such as acrylic, vinyl acetic, crotonic, methacrylic, tiglic, etc.; dicarboxylic ethylenically unsaturated acids such as maleic, fumaric, itaconic, maleic, citraconic, hydromuconic, allylmolonic, etc. as well as the half esters of these dicarboxylic acids such as mono(2-ethylhexyl) maleate, monoethyl maleate, monobutyl maleate, etc.</p>
+      <p id="p-00022-en" num="0022">Another comonomer that may be included in the emulsion polymers described comprises a multifunctional comonomer. These multifunctional comonomers can be polyethylenically unsaturated andmay function as cross-linkers in the emulsion polymers. Examples of suitable multifunctional comonomers include triallyl cyanurate, triallyl isocyanurate, diallyl maleate, diallyl fumarate, dyvinyl benzene and diallyl phthalate. Preferred comonomers of this type include diallyl maleate and diallyl fumarate. Especially preferred is diallyl phthalate. This type of multifunctional comonomer will be generally present in the emulsion polymer in an amount from 0.05 pphm to 0.5 pphm More preferably, such multifunctional comonomer(s)/cross-linker(s) will be used in the first copolymer in amounts from 0.1 pphm to 0.3 pphm. However, certain embodiments of the present invention may be substantially free of multifunctional comonomer.</p>
+      <p id="p-00023-en" num="0023">The vinyl ester-based emulsion polymers discussed can optionally comprise one or more additional non-functional comonomers. One type of such optional non-functional comonomer comprises further vinyl ester comonomers. Examples thereof are vinyl esters of monocarboxylic acids having one to eighteen carbon atoms (except those already used as the main comonomer), e.g. vinyl formate, vinyl propionate, vinyl butyrate, vinyl isobutyrate, vinyl benzoate, vinyl-2-ethyl-hexanoate, vinyl esters of an [alpha]-branched carboxylic acid having 5 to 11 carbon atoms in the acid moiety, e.g., Versatic™ acids, and the vinyl esters of pivalic, 2-ethylhexanoic, lauric, paimitic, myristic, and stearic acid. Vinyl esters of Versatic™ acids, more particularly VeoVa™ 9, VeoVa™ 10, and VeoVa™ 11, are preferred.</p>
+      <p id="p-00024-en" num="0024">In one aspect, the emulsion and resulting coating composition of the invention comprises one or more external crosslinkers. Suitable external crosslinkers include carbonates such as ammonium zirconium carbonate (AZC) and potassium zirconium carbonate (KZC). The external crosslinker may be added to the emulsion optionally after polymerization. If present, the external crosslinker may be present in the emulsion in an amount from 1 to 10 wt. %, e.g., from 3 to 10 wt. %, based on the total weight of the blended emulsion.</p>
+      <p id="p-00025-en" num="0025">As noted, the polymers used to form the aqueous dispersions herein are made from comonomers comprising a vinyl ester, an ethylenically unsaturated mono or di-carboxylic acid or half ester of a di-carboxylic acid, a multifunctional comonomer, and optionally ethylene and other comonomers. Preferably, these several types of comonomers will be present in the emulsion polymer in amounts relative to each other which serve to impart to the coating composition containing the emulsion polymer, e.g., paper coating composition, as hereinafter described, an IGT Dry Pick Value (also as defined hereinafter) of at least about 40, at least about 50, or at least about 60. These values are obtained using IGT Pick Test Oil of medium viscosity (52 Pa·s) at a testing speed of 2 cm per second and a testing pressure of 35 KgF.</p>
+      <p id="p-00026-en" num="0026">Since IGT values may vary based on conditions employed, IGT values may also be expressed as a percentage (% IGT) of a control IGT value. For purposes of the present invention, the control IGT value is an equivalent IGT value determined based on a vinyl ester-based polymer from a batch process. Although % IGT may vary, according to some exemplary embodiments, % IGT Pick Value (Wet or Dry) may be greater than 70% of the control, e.g., greater than 80% of the control, or greater than 90% of the control.</p>
+      <p id="p-00027-en" num="0027">The copolymer dispersion can be produced from the monomer mixture using emulsion polymerization techniques described more fully hereinafter. Within the copolymer dispersion, the copolymer will be present in the form of particles ranging in volume average particle size, D<sub>v</sub>, of at least 150 nm, such as from about 150 nm to about 600 nm, measured by laser aerosol sprectroscopy or another suitable method. More preferably, the copolymer dispersion will be present in the form of particles ranging in volume average particle size, D<sub>v</sub>, of from about 200 nm to about 500 nm, or about 300 to about 500 nm.</p>
+      <p id="p-00028-en" num="0028">Particle size can be determined by means of laser aerosol spectroscopy techniques, or for example, a Coulter Counter LS230 (laser/light scatter, range 40 to 20,000 nm) is one instrument that can be used to measure particle size.</p>
+      <p id="p-00029-en" num="0029">Depending upon co-monomer type, solubility and the monomer feeding techniques employed, the vinyl ester-based copolymer can be either homogeneous or heterogeneous in monomeric configuration and make-up. Homogeneous copolymers will have a single discreet glass transition temperature, T<sub>g</sub>, as determined by differential scanning calorimetry techniques. Heterogeneous copolymers will exhibit two or more discreet glass transition temperatures and might exhibit core shell particle morphologies. Whether homogeneous or heterogeneous, the vinyl ester-based copolymer used herein will have glass transition temperatures, T<sub>g</sub>, which range between about 0° C. and 35° C., more preferably between about 5° C. and 15° C. As is known, the T<sub>g </sub>of the polymer can be controlled, for example, by adjusting the ethylene content, i.e., generally the more ethylene present in the copolymer relative to other comonomers, the lower the T<sub>g</sub>.</p>
+      <heading id="h-00005-en" level="2">Stabilizers for Polymer Dispersions</heading>
+      <p id="p-00030-en" num="0030">The emulsion polymerization processes used to prepare the vinyl ester-based polymers in aqueous dispersion form can be carried out in the presence of a stabilization system which comprises one or more of certain types of anionic and/or nonionic surfactants as emulsifiers.</p>
+      <p id="p-00031-en" num="0031">Suitable nonionic surfactants which can be used as emulsifiers in the emulsion stabilizing system of the coating compositions herein include polyoxyethylene condensates. A wide variety of nonionic surfactants of this type are disclosed in the hereinbefore-referenced U.S. Pat. No. 5,849,389. As noted above, however, such ethoxylated nonionic surfactants used to stabilize the binder emulsions of the present invention preferably do not include ethoxylated nonionics based on alkyl phenols.</p>
+      <p id="p-00032-en" num="0032">The binder emulsions and coating compositions described herein are preferably substantially free of alkylphenol ethoxylates (APEs). For purposes of this invention, such emulsions and coating compositions are considered to be substantially free of APEs if they contain less than 500 wppm of alkylphenol ethoxylates. In other embodiments, the emulsion of the invention may comprise a minor amount of APEs.</p>
+      <p id="p-00033-en" num="0033">Suitable anionic surfactants that can be used as emulsifiers in the binder latex components of the coating compositions, e.g., paper coating compositions, described herein include alkyl aryl sulfonates, alkali metal alkyl sulfates, sulfonated alkyl esters and fatty acid soaps. A wide variety of anionic surfactants of this type are also disclosed in the hereinbefore-referenced U.S. Pat. No. 5,849,389.</p>
+      <p id="p-00034-en" num="0034">Following polymerization, the solids content of the resulting emulsion can be adjusted to the level desired by the addition of water or by the removal of water by distillation. Generally the desired level of polymeric solids content is from about 40 weight percent to about 70 weight percent based on the total weight of the respective emulsion, from about 40 weight percent to about 60 weight percent or from about 45 to about 55 weight percent.</p>
+      <p id="p-00035-en" num="0035">The particle size of the emulsion can be regulated by the quantity of non-ionic or anionic emulsifying agent or agents employed. As a general rule, the greater the amount of the emulsifying agent employed, the smaller the average particle size.</p>
+      <heading id="h-00006-en" level="2">Copolymer Dispersion Preparation</heading>
+      <p id="p-00036-en" num="0036">The copolymer dispersions comprising the vinyl ester-based copolymers described herein can be prepared using emulsion polymerization procedures which result in the preparation of polymer dispersions in aqueous latex form. The emulsion polymerizations of the present invention are carried out in a tubular reactor comprising a closed loop section and a secondary line section. The closed loop section can be continuously charged with fresh monomers and water phase at substantially the same rate as the rate at which an overflow of reactor charge is discharged into a secondary line section, the reactor charge being continuously re-circulated within the closed loop section. Together with selection of reaction temperature, the discharge rate and the circulation rate can be balanced to achieve low residual monomer content. Preferably the secondary line section has a volume of less than twice the volume of the closed loop section. Optionally, the secondary line section is coiled.</p>
+      <p id="p-00037-en" num="0037">The secondary line section can for example be provided with at least two separate cooling jackets in serial arrangement. This allows optimization of the different stages of polymerization when the reactor charge passes into the secondary line section. In one embodiment, a first part of the secondary line section is cooled to a lesser extent than a subsequent second part of the secondary line section. The first part can for instance be cooled to a relatively high temperature of 70° C. or higher to maximize polymerization, whereas the second part can be cooled to a greater extent, e.g., to 55° C. or less, so that the finished polymer emulsion is discharged to a storage tank at a reasonably low temperature.</p>
+      <p id="p-00038-en" num="0038">Optionally, the secondary line section may have a diameter which is larger than the diameter of the line forming the closed loop section. With a larger diameter, the reactor charge will move through the secondary line section at a relatively slow speed. In another possible embodiment, the diameter of the secondary line section can be smaller than the diameter of the pipeline forming the closed loop section, which will increase the shear rate in the former. Preferably, the secondary line section itself does not form a closed loop and has one end connected to a discharge opening of the loop section.</p>
+      <p id="p-00039-en" num="0039">The polymerization of the vinyl ester and other comonomers can take place in aqueous suspension and preferably the raw materials are provided by separate feed streams. These streams introduce fresh monomer and an aqueous solution of stabilizers known as the water phase or, e.g., a pre-emulsion of monomer and water with stabilizer and an aqueous stabilizer solution in a separate small stream. At the start of the reaction the reactor is filled with water phase made up in a solution tank. Other additions are also possible, particularly finished emulsion polymer (of the same or a different composition) from a previous run, optionally diluted to any concentration.</p>
+      <p id="p-00040-en" num="0040">Agitation in the reactor is provided by virtue of an in-line circulation pump. Shortly after the feed streams start to flow, the monomers begin to react and heat is generated. The temperature is stabilized by cooling means, usually by controlled circulation of a cooling fluid (e.g. water) through a cooling jacket. The product flows to the cooling tank, where residual monomer converts to polymer. After cooling, the emulsion polymer is filtered to remove any oversize particles or gritty material and transferred to a product storage tank.</p>
+      <p id="p-00041-en" num="0041">Optionally, the polymerization process may be carried out under pressure, for instance under a pressure of 10 to 150 bar. Alternatively, the polymerization may be carried out at ambient pressure.</p>
+      <p id="p-00042-en" num="0042">In a typical polymerization procedure involving, for example, vinyl acetate/ethylene copolymer dispersions, the vinyl acetate, ethylene, and other co-monomers can be polymerized in an aqueous medium under pressures up to about 120 bar in the presence of one or more initiators, at least one emulsifying agent and a cellulose ether or polyvinyl alcohol protective colloid component. The aqueous reaction mixture in the polymerization vessel can be maintained by a suitable buffering agent at a pH of about 4 to about 7.</p>
+      <p id="p-00043-en" num="0043">The invention is further illustrated by an example drawing. In the drawing, <figref>FIG. 1</figref> shows a tubular reactor <b>1</b> for emulsion polymerisation. The reactor <b>1</b> comprises a circulation loop <b>2</b> with a monomer inlet <b>3</b>, a water phase inlet <b>4</b>, and a discharge outlet <b>5</b> for product. A circulation pump <b>6</b> driven by a motor <b>7</b> serves as a driving means for circulating a reactor charge within the circulation loop <b>2</b>, via line <b>8</b> to the upper section of the coiled part <b>9</b> of the circulation loop <b>2</b>. In the coiled part <b>9</b>, the reactor charge flows down and via line section <b>10</b> back to the circulation pump, <b>6</b> where the main part of the reactor charge is recirculated again, except for the part that is discharged via outlet <b>5</b>. The discharged reactor charge has a residual monomer content of about 5% by weight. To obtain a continuous polymerisation process, the outlet of the circulation loop <b>2</b> is such that the outflow rate equals the inflow rate of the raw materials and is substantially less than the flow rate of the recirculated material.</p>
+      <p id="p-00044-en" num="0044">The reactor <b>1</b> further comprises a product take-off line <b>11</b> leading from the outlet <b>5</b> of circulation loop <b>2</b> to a coiled secondary line section <b>12</b>. A discharge line <b>13</b> leads from the coiled section <b>12</b> to a cooling tank <b>14</b>. The volume of the secondary line section <b>12</b> is about equal to the volume of the circulation loop <b>2</b>.</p>
+      <p id="p-00045-en" num="0045">The coiled tube of the circulation loop <b>2</b> is covered by a hollow cooling jacket <b>15</b>, through which cooling water flows. The cooling jacket <b>15</b> is connected to a cooling water inlet <b>16</b> and a cooling water outlet <b>17</b>.</p>
+      <p id="p-00046-en" num="0046">The coiled secondary line section <b>12</b> is similarly cooled and has a lower part <b>18</b> and a separately cooled upper part <b>19</b>. To this end, the lower part <b>18</b> is provided with a cooling jacket <b>20</b>, connected to a water inlet <b>21</b> and a water outlet (not shown). Similarly, the upper part <b>19</b> is provided with a separate cooling jacket <b>22</b>, connected to another water outlet <b>23</b> and a water inlet <b>24</b>. The lower part <b>18</b> of the secondary line section <b>12</b> is connected to the discharge outlet <b>5</b> of the circulation loop <b>2</b> and is cooled to a lesser extent than the subsequently cooled upper part <b>19</b> of the secondary line section <b>12</b>. The coiled secondary line section <b>12</b> is hung in a frame <b>25</b>.</p>
+      <heading id="h-00007-en" level="2">Coating Compositions</heading>
+      <p id="p-00047-en" num="0047">To produce the desired paper coating composition, the polymer dispersion described above is generally combined with a pigment, such as kaolin clay, titanium dioxide and/or calcium carbonate, and the usual paper coating additives, which may include, for example, rheology modifiers such as CMC, sodium polyacrylates or sodium alginates; lubricants; crosslinkers; optical brighteners; biocides; dispersants; or other co-binders, such as polyvinyl alcohol, protein, e.g., casein or soy protein, or starch, as is well known to those skilled in the art. The coating compositions herein may also contain sufficient alkali to maintain the pH of the coating composition between 6 and 10, more preferably between 7 and 9.</p>
+      <p id="p-00048-en" num="0048">Thus, in another embodiment, the invention is directed to a coating composition, preferably a paint, paper or paperboard coating composition, comprising an aqueous surfactant-stabilized, copolymer latex binder, and sufficient alkali to achieve a pH of 6 to 10, the latex binder having dispersed therein a copolymer of a vinyl ester having from 1 to 13 carbon atoms, an ethylenically unsaturated mono or di-carboxylic acid or half ester of the di-carboxylic acids, and a comonomer having a multifunctional moiety, wherein the latex binder is stabilized with anionic and/or non-ionic emulsifiers. The coating composition preferably further comprises one or more pigments. The composition preferably is substantially free of alkyl phenol ethoxylate surfactants.</p>
+      <p id="p-00049-en" num="0049">The pigment used in the paper coating compositions herein may be any of those conventionally employed. Frequently, some or all of the pigment comprises clay, such as any of the clays customarily used for paper coating, including the hydrous aluminium silicates of kaolin group clays, hydrated silica clays, and the specific types of clays recommended in Chapters 10-16 of “Kaolin Clays and their Industrial Uses,” by J. M. Huber Corp. (1949), New York, N.Y.</p>
+      <p id="p-00050-en" num="0050">In addition to clay, or as a complete replacement for clay, optical brighteners and/or paper pigments may also be utilized, such as, for example, calcium carbonate, titanium dioxide, or other coating pigments including plastic pigments, for example, polystyrene. The pigments, in particular calcium carbonate, may be present in amounts up to 50 wt. %, up to 75 wt. % or up to 97 wt. %, based on the total weight of the binder. Additionally, the composition may also contain other additives such as zinc oxide and/or a small amount of a dispersing or stabilizing agent such as sodium polyacrylate or tetrasodium polyphosphate (TSPP). The amount of binder in the paper coating composition may vary, but optionally ranges from 2.5 to 25 parts per 100 parts dry pigment, e.g., from 3.5 to 18 parts per 100 parts dry pigment.</p>
+      <p id="p-00051-en" num="0051">The composition of the pigments in the paper coating composition may vary widely. In one embodiment, the pigment consists of calcium carbonate. In some other embodiments, the pigment comprises from 65 to 100 wt. % clay, from 0 to 35 wt. % secondary pigment, from 0.01 to 0.5 wt. % stabilizing agent; from 3 to 30 wt. % interpolymer latex (solids basis); from 0 to 25 wt. % cobinder; from 0 to 0.2 wt. % defoamer; and sufficient water to provide the desired level of solids. Coating compositions containing from about 40 wt % to 70 wt % solids are typical. The modification and formulation of the coating color using these materials will be within the knowledge of those skilled in the art.</p>
+      <p id="p-00052-en" num="0052">The paper coating compositions of the invention may be applied to various substrates including paper such as groundwood and groundwood-free grades used for newspapers, advertisements, poster, books, magazines, or labels; paperboard such as solid bleached or unbleached sulfate and recycled grades used for folding cartons, beverage carriers, printing bristols, or liners; and building substrates such as wall coverings, wall board, or ceiling tile. In one embodiment, the paper coating composition can be used to coat paper intended for rotogravure printing or digital printing, such as ink jet printing.</p>
+      <p id="p-00053-en" num="0053">The amount of the paper coating composition applied to the substrate is generally in the range of 1 g/m<sup>2 </sup>to 30 g/m<sup>2</sup>, and preferably in the range of 3 g/m<sup>2 </sup>to 12 g/m<sup>2</sup>. The paper coating composition may be applied in a single step or by using two or more steps to build the final coat weight. Further, the paper coating composition may also be applied to opposite sides of the substrate either simultaneously or in separate coating steps.</p>
+      <p id="p-00054-en" num="0054">The paper coating composition may be applied to the substrate by techniques well known to those in the art. For example, the paper coating composition may be applied with a roll applicator such as a metered size press; a blade coater such as a short or long dwell time applicator; air knife coater; rod coater; slot die coater; jet applicator; or brush. Preferred coating methods for high speed application include the use of a blade coater or a metered size press.</p>
+      <p id="p-00055-en" num="0055">The paper coating compositions of the present invention, which contain the particular blended latex emulsions described herein, provide highly desirable binding characteristics when applied as coating to paper substrates of the type described above. The binding performance can be quantified by means of a parameter called dry pick strength, and in particular by means of parameters known in the industry as Dry and Wet Pick Values as specifically defined hereinafter.</p>
+      <p id="p-00056-en" num="0056">“Picking” is defined as the lifting of a coating, film or fibers from the surface of the base paper during printing. When a print wheel makes contact with a paper sample to deposit the ink, then subsequent negative forces are exerted on the paper as the inked print wheel is removed from the paper surface. The dry pick strength of the coated paper is measured with a method that consists of printing a strip of the coated paper in a print tester at an accelerating rate. The accelerated speed of the print wheel and the tack rating of the ink are adjusted to determine the strength of the coated paper sample at specific printing conditions. If the combination of print wheel speed and ink tack is great enough, then resulting negative forces create picking, which may appear as: white areas on the surfaces of the print wheel and coated paper sample, as blisters and textured areas on the surface of the coated paper sample, as delamination (surface layer removal) of the coated paper sample, or as tearing (complete strength failure) of the base paper sample.</p>
+      <p id="p-00057-en" num="0057">Evaluation of the picking effect exhibited by selected paper substrates coated with any given type of paper coating composition can be used to quantify the binding strength and coating performance of that composition. Picking evalution is carried out by means of IGT pick testing according to standard methods of measurement by the Technical Association of the Pulp and Paper Industry (TAPPI) as well known in the art. A measure of dry and wet binding strength is provided by IGT Pick testing pursuant to TAPPI Useful Method UM 591, Surface Strength of Paper, the entirety of which is incorporated herein by reference. The IGT dry pick strength measures the speed, in cm/sec, required to lift the paper coating off the surface of a paper substrate strip when printed using an ink roller and standard conditions as described in UM 591. Higher IGT dry pick numbers indicate better resistance of the coated substrate to picking and hence higher strength coating performance.</p>
+      <p id="p-00058-en" num="0058">The Dry Pick Values as used herein are the values obtained from the dry pick testing of the coated boards as described above using an IGT Testing Systems AIC2-5 Printability Tester under conditions which include use of medium viscosity oil, 2 cm/sec, and 35 KgF. As noted above, the paper coating compositions of the present invention, when using the blended latex emulsions of the present invention, preferably will exhibit Dry Pick Values in accordance with the above-described testing of at least about 50, at least about 60, or at least about 70, with crosslinker or substantially free of crosslinker. Generally, the paper coating compositions of the present invention preferably exhibit Dry Pick Values of from about 50 to about 80, e.g., from 60 to about 80, with crosslinker or substantially free of crosslinker.</p>
+      <p id="p-00059-en" num="0059">The paper coating compositions of the invention also preferably provide desirable brightness characteristics. Brightness may be measured by the TAPPI Brightness standard T452, “Brightness of pulp paper and paperboard (directional reflectance at 457 nm),” the entirety of which is incorporated herein by reference. In this test, a specifically designed directional geometry brightness tester is employed. A brightness filter is employed such that the values measured by the instrument will match those on a set of opal glass and paper standards within set tolerances. The brightness may be reported as a percentage of how much light is reflected. Thus, greater brightness values represent a brighter or whiter coated paper. In some exemplary embodiments, binders and paper coating compositions of the invention provide a TAPPI T452 brightness value of at least 70, at least 79 or at least 90, or in terms of ranges, from 70 to 97, from 70 to 90 or from 75 to 85.</p>
+      <p id="p-00060-en" num="0060">The paper coating compositions of the present invention also preferably have a high degree of gloss, which can be expressed in terms of TAPPI T480 om-05, the entirety of which is incorporated herein by reference. The T480 standard involves the measuring for specular gloss with a glossmeter at 75° angle from the plane of the paper. In some exemplary embodiments, binders and paper coating compositions of the invention provide a TAPPI T480 gloss value of at least 30, at least 35 or at least 40, or in terms of ranges, from 30 to 60, from 30 to 50 or from 35 to 45.</p>
+      <p id="p-00061-en" num="0061">In addition, the paper coating compositions of the present invention preferably are very smooth (have a low degree of roughness). Roughness may be measured according to TAPPI T555 om-4, the entirety of which is incorporated herein by reference. The T555 standard simulates printing press conditions. The instrument contains an internal gas flow restrictor with closely controlled pressure drop versus flow characteristics. The air flow over the surface of the paper or paperboard is calculated by comparing the pressure drop across the measuring head and the paper test surface with that across the flow restrictor. In some exemplary embodiments, the binders and paper coating compositions of the invention provide a TAPPI T555 roughness value expressed in microns of roughness of less than 3.2, less than 3.0, less than 2.8, or less than 2.5, or in terms of ranges, from 1.5 to 3.2, from 2.0 to 3.0 or from 2.2 to 2.8.</p>
+      <p id="p-00062-en" num="0062">Depending on the formulation employed, the binder and paper-coating compositions of the present invention may comply with U.S. Food &amp; Drug Administration (FDA) regulations concerning paper products that can be used in contact with food. In particular, FDA regulations embodied in 21 CFR §176.170 and 21 CFR §176.180 indicate the types of paper coating composition components, including components of polymers used in such compositions, which can be utilized to coat paper for eventual use with food products.</p>
+      <heading id="h-00008-en" level="1">EXAMPLES</heading>
+      <p id="p-00063-en" num="0063">The dispersions of the present invention, and the performance of such dispersions in the paper coating compositions herein, are illustrated by way of the following non-limiting Examples.</p>
+      <heading id="h-00009-en" level="1">Example Preparation</heading>
+      <p id="p-00064-en" num="0064">All the aqueous polymer dispersions of the examples were prepared with a continuous tubular reactor with a closed loop section and a secondary line section. The method of preparation for the liquid monomer compositions of the examples using the continuous loop reactor was as follows: (1) The loop section and the secondary line section of the reactor were filled with water. (2) The aqueous oxidant flow was started at the specified rate and the loop circulation pump was switched on. (3) Monomer in a pre-emulsified form was added at the specified feed rate. The comonomers of the pre-emulsion with vinyl acetate, were monoethyl maleate, and dibutyl phthalate as per the formulation concentrations shown in Table 1. The aqueous component for the pre-emulsion included most of the water and all of the surfactants/stabilizer together with the buffer and the reducer components. (4) Soon after the oxidant feed and pre-emulsion feeds had started, the temperature increased, indicating an exothermic reaction. This reaction exotherm was controlled with cooling water passing through jackets surrounding the process pipe to maintain the reaction temperature at 60° C. The mean residence time of materials within the loop component was 7 minutes. The reactor was pressurized with a valve so that the system operated with a positive pressure of 2 bar. (5) When the process reached an equilibrium, as indicated in a constancy in conversion and particle size, a 2.5 L sample was collected in a separate atmospheric tank to which was added a small amount of oxidizer and reducer to further reduce unreacted monomer. A biocide was also added.</p>
+      <p id="p-00065-en" num="0065">Table 1 shows the % concentrations for the various comonomers and surfactants. The concentration for the comonomers are expressed as a % of the total monomer. The balance of the comonomer was vinyl acetate. The concentration of surfactant is expressed as parts per hundred monomer. Example 1 did not contain comonomers (1) an ethylenically unsaturated mono or di-carboxylic acid or half ester of a di-carboxylic acid, e.g., monoethyl maleate or (2) a comonomer having a multifunctional moiety, e.g., diallyl phthalate. Examples 2A-2E used comonomers monoethyl maleate and diallyl phthalate at varying flow rates. Examples 3 and 4 used these same comonomers, but Example 3 used a different anionic surfactant and Example 4 used a different surfactant package.</p>
+      <p id="p-00066-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="14pt" align="left" />
+              <colspec colname="2" colwidth="175pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="left" />
+              <colspec colname="4" colwidth="35pt" align="left" />
+              <colspec colname="5" colwidth="35pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="5" rowsep="1">TABLE 1</entry>
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Anionics</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="14pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="49pt" align="left" />
+              <colspec colname="6" colwidth="35pt" align="left" />
+              <colspec colname="7" colwidth="35pt" align="left" />
+              <colspec colname="8" colwidth="35pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Sodium</entry>
+                  <entry />
+                  <entry>Sodium</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="7" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="14pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="49pt" align="left" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="49pt" align="center" />
+              <colspec colname="6" colwidth="35pt" align="center" />
+              <colspec colname="7" colwidth="70pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Sec.</entry>
+                  <entry />
+                  <entry>Laurylalcohol</entry>
+                  <entry>Sodium</entry>
+                  <entry />
+                  <entry>Comonomers</entry>
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="14pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="49pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="49pt" align="center" />
+              <colspec colname="6" colwidth="35pt" align="center" />
+              <colspec colname="7" colwidth="35pt" align="center" />
+              <colspec colname="8" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>Alkyl</entry>
+                  <entry>Sodium</entry>
+                  <entry>Ethoxylate</entry>
+                  <entry>Dioctyl</entry>
+                  <entry>Pluoronic</entry>
+                  <entry>Monoethyl</entry>
+                  <entry>Diallyl</entry>
+                </row>
+                <row>
+                  <entry>Ex</entry>
+                  <entry>Sulfonate</entry>
+                  <entry>Vinylsulfonate</entry>
+                  <entry>Sulfate</entry>
+                  <entry>Sulfosuccinate</entry>
+                  <entry>F-68</entry>
+                  <entry>maleate</entry>
+                  <entry>phthalate</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="8" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="14pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="49pt" align="char" char="." />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <colspec colname="5" colwidth="49pt" align="center" />
+              <colspec colname="6" colwidth="35pt" align="char" char="." />
+              <colspec colname="7" colwidth="35pt" align="center" />
+              <colspec colname="8" colwidth="35pt" align="center" />
+              <tbody valign="top">
+                <row>
+                  <entry>1</entry>
+                  <entry>1.765</entry>
+                  <entry>0.442</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>0.825</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                </row>
+                <row>
+                  <entry>2A</entry>
+                  <entry>2.063</entry>
+                  <entry>0.442</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>0.825</entry>
+                  <entry>0.3</entry>
+                  <entry>0.3</entry>
+                </row>
+                <row>
+                  <entry>2B</entry>
+                  <entry>2.063</entry>
+                  <entry>0.442</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>0.825</entry>
+                  <entry>0.3</entry>
+                  <entry>0.6</entry>
+                </row>
+                <row>
+                  <entry>2C</entry>
+                  <entry>2.063</entry>
+                  <entry>0.442</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>0.825</entry>
+                  <entry>0.45</entry>
+                  <entry>0.45</entry>
+                </row>
+                <row>
+                  <entry>2D</entry>
+                  <entry>2.063</entry>
+                  <entry>0.442</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>0.825</entry>
+                  <entry>0.6</entry>
+                  <entry>0.3</entry>
+                </row>
+                <row>
+                  <entry>2E</entry>
+                  <entry>2.063</entry>
+                  <entry>0.442</entry>
+                  <entry>—</entry>
+                  <entry>—</entry>
+                  <entry>0.825</entry>
+                  <entry>0.6</entry>
+                  <entry>0.6</entry>
+                </row>
+                <row>
+                  <entry>3</entry>
+                  <entry>—</entry>
+                  <entry>0.442</entry>
+                  <entry>2.064</entry>
+                  <entry>—</entry>
+                  <entry>0.825</entry>
+                  <entry>0.45</entry>
+                  <entry>0.45</entry>
+                </row>
+                <row>
+                  <entry>4</entry>
+                  <entry>—</entry>
+                  <entry>0.41</entry>
+                  <entry>0.82</entry>
+                  <entry>0.41</entry>
+                  <entry>20.6</entry>
+                  <entry>0.45</entry>
+                  <entry>0.45</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="8" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00067-en" num="0066">The volume average particles sizes, D<sub>v</sub>, as measured by a Coulter Counter LS230 (laser/light scatter, range 40 to 20,000 nm) for the examples is recorded in Table 2.</p>
+      <p id="p-00068-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="3" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="42pt" align="left" />
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="133pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" rowsep="1">TABLE 2</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Example</entry>
+                  <entry>D<sub>v </sub>Mean (nm)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>1</entry>
+                  <entry>133</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>2A</entry>
+                  <entry>490</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>2B</entry>
+                  <entry>345</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>2C</entry>
+                  <entry>380</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>2D</entry>
+                  <entry>400</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>2E</entry>
+                  <entry>420</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>3</entry>
+                  <entry>350</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>4</entry>
+                  <entry>359</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00069-en" num="0067">The example emulsions were then utilized in coating compositions. For the examples, the coating formulation used to treat this paper substrate was formulated as follows (expressed per 100 parts dry pigment):</p>
+      <p id="p-00070-en" num="0000">
+        <tables id="tables-00003-en" num="00003">
+          <table frame="none" colsep="0" rowsep="0">
+            <tgroup cols="1" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="217pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="1" rowsep="1">TABLE 3</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>COATING FORMULATION</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="1" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="56pt" align="left" />
+              <colspec colname="1" colwidth="161pt" align="left" />
+              <tbody valign="top">
+                <row>
+                  <entry />
+                  <entry>100 parts No. 1 Clay</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>0.1 parts FinnFix 10 CMC</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(carboxymethylcellulose)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>0.1 parts Dispex N40V (sodium</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>polyacrylate pigment dispersant)</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>17 parts Test Binder</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>52--58% final coating solids</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Composition pH adjusted to 8.5 w/</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>NH<sub>4</sub>OH:H<sub>2</sub>O (1:1) solution</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="1" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00071-en" num="0068">The coating formulation examples were applied to a paper board to measure the coated sheet properties. The binder level in the coating formulations was selected to emulate commercial coating recipes. Wire wound rods were used to coat the bleached board at a target coating weight value of 12 lbs./3000 ft<sup>2 </sup>(5.4 Kg/914 meters). This coating weight was selected to mimic the bleached board market. The freshly coated boards were oven dried at 260° F. (127° C.) for 30 seconds and subsequently calendered at 600 psi (4137 KPa) and 170° F. (77° C.) using 1 nip. The finished boards were conditioned 18 hours according to TAPPI standards prior to application testing. Results for the coated sheets are show in Table 4. The Examples were compared against commercial vinyl acetate polymer dispersions prepared from batch processes. These dispersion from batch processes are labeled as Resyn® 1103 and Resyn® 1190 in Table 4.</p>
+      <p id="p-00072-en" num="0000">
+        <tables id="tables-00004-en" num="00004">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="11" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="center" />
+              <colspec colname="3" colwidth="35pt" align="center" />
+              <colspec colname="4" colwidth="35pt" align="center" />
+              <colspec colname="5" colwidth="35pt" align="center" />
+              <colspec colname="6" colwidth="42pt" align="center" />
+              <colspec colname="7" colwidth="35pt" align="center" />
+              <colspec colname="8" colwidth="35pt" align="center" />
+              <colspec colname="9" colwidth="35pt" align="center" />
+              <colspec colname="10" colwidth="35pt" align="center" />
+              <colspec colname="11" colwidth="35pt" align="center" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="11" rowsep="1">TABLE 4</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="11" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry>Resyn</entry>
+                  <entry>Resyn</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>1</entry>
+                  <entry>2A</entry>
+                  <entry>2B</entry>
+                  <entry>2C</entry>
+                  <entry>2D</entry>
+                  <entry>2E</entry>
+                  <entry>3</entry>
+                  <entry>4</entry>
+                  <entry>1103</entry>
+                  <entry>1190</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="11" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="11" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="42pt" align="left" />
+              <colspec colname="2" colwidth="35pt" align="char" char="." />
+              <colspec colname="3" colwidth="35pt" align="char" char="." />
+              <colspec colname="4" colwidth="35pt" align="char" char="." />
+              <colspec colname="5" colwidth="35pt" align="char" char="." />
+              <colspec colname="6" colwidth="42pt" align="char" char="." />
+              <colspec colname="7" colwidth="35pt" align="char" char="." />
+              <colspec colname="8" colwidth="35pt" align="char" char="." />
+              <colspec colname="9" colwidth="35pt" align="char" char="." />
+              <colspec colname="10" colwidth="35pt" align="char" char="." />
+              <colspec colname="11" colwidth="35pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Emulsion</entry>
+                  <entry>49.0</entry>
+                  <entry>49.5</entry>
+                  <entry>49.3</entry>
+                  <entry>49.7</entry>
+                  <entry>49.9</entry>
+                  <entry>49.8</entry>
+                  <entry>50.5</entry>
+                  <entry>50.1</entry>
+                  <entry>47.4</entry>
+                  <entry>49.9</entry>
+                </row>
+                <row>
+                  <entry>Solids %</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Emulsion</entry>
+                  <entry>106</entry>
+                  <entry>32</entry>
+                  <entry>40</entry>
+                  <entry>30</entry>
+                  <entry>42</entry>
+                  <entry>34</entry>
+                  <entry>44</entry>
+                  <entry>46</entry>
+                  <entry>34</entry>
+                  <entry>114</entry>
+                </row>
+                <row>
+                  <entry>Viscosity</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>(cps)</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Coating</entry>
+                  <entry>52.8</entry>
+                  <entry>56.5</entry>
+                  <entry>56.5</entry>
+                  <entry>54.7</entry>
+                  <entry>55.1</entry>
+                  <entry>56.3</entry>
+                  <entry>55.0</entry>
+                  <entry>55.3</entry>
+                  <entry>54.1</entry>
+                  <entry>56.4</entry>
+                </row>
+                <row>
+                  <entry>Solids %</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Coating</entry>
+                  <entry>264</entry>
+                  <entry>206</entry>
+                  <entry>199</entry>
+                  <entry>187</entry>
+                  <entry>205</entry>
+                  <entry>211</entry>
+                  <entry>182</entry>
+                  <entry>189</entry>
+                  <entry>170</entry>
+                  <entry>260</entry>
+                </row>
+                <row>
+                  <entry>Viscosity</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>(cps)</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Coated</entry>
+                  <entry>12.1 ± 0.23</entry>
+                  <entry>11.6 ± 0.31</entry>
+                  <entry>12.0 ± 0.22</entry>
+                  <entry>12.0 ± 0.19</entry>
+                  <entry>12.0 ± 0.26</entry>
+                  <entry>11.8 ± 0.25</entry>
+                  <entry>11.5 ± 0.20</entry>
+                  <entry>11.5 ± 0.18</entry>
+                  <entry>11.9 ± 0.24</entry>
+                  <entry>11.4 ± 0.27</entry>
+                </row>
+                <row>
+                  <entry>sheet</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>coating</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>weight</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>(lbs./3000</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>ft<sup>2</sup>) ± 2S</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>75° Gardner</entry>
+                  <entry>42.8 ± 2.4</entry>
+                  <entry>50.0 ± 3.6</entry>
+                  <entry>48.9 ± 3.6</entry>
+                  <entry>49.5 ± 2.0</entry>
+                  <entry>46.8 ± 3.7</entry>
+                  <entry>52.6 ± 5.6</entry>
+                  <entry>55.2 ± 5.6</entry>
+                  <entry>53.4 ± 6.0</entry>
+                  <entry>54.5 ± 2.8</entry>
+                  <entry>53.5 ± 5.6</entry>
+                </row>
+                <row>
+                  <entry>Gloss ± 2S</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>TAPPI</entry>
+                  <entry>80.8 ± 0.32</entry>
+                  <entry>79.8 ± 0.23</entry>
+                  <entry>79.9 ± 0.14</entry>
+                  <entry>79.9 ± 0.11</entry>
+                  <entry>80.0 ± 0.39</entry>
+                  <entry>79.9 ± 0.24</entry>
+                  <entry>80.3 ± 0.23</entry>
+                  <entry>80.5 ± 0.15</entry>
+                  <entry>81.4 ± 0.29</entry>
+                  <entry>81.3 ± 0.28</entry>
+                </row>
+                <row>
+                  <entry>Brightness ±</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>2S</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Parker-print</entry>
+                  <entry> 3.3 ± 0.13</entry>
+                  <entry> 3.0 ± 0.12</entry>
+                  <entry> 3.0 ± 0.1</entry>
+                  <entry> 3.1 ± 0.15</entry>
+                  <entry>  3.2 ± 0.11</entry>
+                  <entry> 3.2 ± 0.24</entry>
+                  <entry> 3.2 ± 0.28</entry>
+                  <entry> 3.2 ± 0.36</entry>
+                  <entry> 3.1 ± 0.11</entry>
+                  <entry> 3.1 ± 0.14</entry>
+                </row>
+                <row>
+                  <entry>surface</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>roughness</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>(microns) ±</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>2S</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>IGT Dry</entry>
+                  <entry>  32 ± 6.6</entry>
+                  <entry>  62 ± 5.8</entry>
+                  <entry>  69 ± 4.0</entry>
+                  <entry>  71 ± 4.0</entry>
+                  <entry>  73 ± 5.0</entry>
+                  <entry>  69 ± 4.0</entry>
+                  <entry>  60 ± 9.4</entry>
+                  <entry>6  3 ± 8.5</entry>
+                  <entry>  67 ± 56</entry>
+                  <entry>  84 ± 6.0</entry>
+                </row>
+                <row>
+                  <entry>Pick</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>Resistance</entry>
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                  <entry />
+                </row>
+                <row>
+                  <entry>(cm/s) ± 2S</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="11" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00073-en" num="0069">As Table 4 shows, Examples 2 A-E, 3, and 4 show similar coating properties to the commercial batch Comparative Examples Resyn® 1103 and Resyn® 1190, including IGT Dry Pick Resistance values of 60 or greater. Example 1, which does not contain comonomers monoethyl maleate and diallyl phthalate, lacks the coating properties of the Comparative Examples and Examples 2 A-E, 3, and 4, including demonstrating a lower IGT Dry Pick Resistance.</p>
+      <p id="p-00074-en" num="0070">While the illustrative embodiments of the disclosure have been described with particularity, it will be understood that various other modifications will be apparent to and can be readily made by those skilled in the art without departing from the spirit and scope of the disclosure. Accordingly, it is not intended that the scope of the claims appended hereto be limited to the examples and descriptions set forth herein but rather that the claims be construed as encompassing all the features of the patentable novelty which reside in the present disclosure, including all features which would be treated as equivalents thereof by those skilled in the art to which the disclosure pertains.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A composition comprising:
+<claim-text>an aqueous dispersion of a polymer comprising at least the following polymerized comonomers:</claim-text><claim-text>vinyl acetate,</claim-text><claim-text>at least one ethylenically unsaturated mono or di-carboxylic acid or half ester of a di-carboxylic acid, and</claim-text><claim-text>at least one multifunctional comonomer,</claim-text><claim-text>where the dispersion is prepared by a continuous emulsion polymerization in a reactor comprising a closed loop section and a secondary line section.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en" independent="true">
+      <claim-text>
+        <b>2</b>. A composition comprising:
+<claim-text>an aqueous dispersion of a polymer comprising at least the following polymerized comonomers:</claim-text><claim-text>vinyl acetate,</claim-text><claim-text>at least one ethylenically unsaturated mono or di-carboxylic acid or half ester of a di-carboxylic acid,</claim-text><claim-text>and at least one multifunctional comonomer,</claim-text><claim-text>where the dispersion is prepared by a continuous emulsion polymerization in a polymerization reactor comprising a first section with a circulation loop with one or more inlets for raw material, a pump for circulating a reactor charge within the circulation loop, and a secondary line section not forming a closed loop connected to a discharge of the loop section.</claim-text></claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the volume of the secondary line section is less than twice the volume of the loop section.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the polymer further comprises ethylene polymerized with the other comonomers.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the at least one ethylenically unsaturated mono or di-carboxylic acid or half ester of a di-carboxylic acid comprises acrylic acid, vinyl acetic acid, crotonic acid, methacrylic acid, tiglic acid, maleic acid, fumaric acid, itaconic acid, maleic acid, citraconic acid, hydromuconic acid, allylmolonic acid, mono(2-ethylhexyl) maleate, monoethyl maleate, or monobutyl maleate, preferably monoethyl maleate.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the at least one multifunctional monomer comprises triallyl cyanurate, triallyl isocyanurate, diallyl maleate, diallyl fumarate, dyvinyl benzene or diallyl phthalate, preferably diallyl phthalate.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the dispersion is stabilized with anionic and/or nonionic emulsifiers which are substantially free of alkylphenol ethoxylate surfactants.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising an external crosslinker, preferably ammonium zirconium carbonate and/or potassium zirconium carbonate.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, having a solids content of from 40 wt % to 70 wt %.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the polymer comprises from 70 to 98-pphm vinyl acetate and from 2 to 30 pphm of ethylene.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, which exhibits a volume average particle size value, D<sub>v</sub>, of at least 150 nm.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further comprising a pigment selected from the group consisting of kaolin clay, calcium carbonate, titanium dioxide, plastic pigments and combinations of said pigments.</claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. A coating formed by the composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, having an % IGT Dry Pick Value greater than 60% compared to the same composition prepared using a batch process.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. A paper or paperboard substrate coated with from about 1 g/m<sup>2 </sup>to 30 g/m<sup>2 </sup>of the coating composition of <claim-ref idref="clm-00001-en">claim 1</claim-ref>. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150247053A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150247053A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150247053A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150247053A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150247053A1_00003.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150247053A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150247053A1.PDF" type="pdf" size="595612" pages="10" />
+</lexisnexis-patent-document>

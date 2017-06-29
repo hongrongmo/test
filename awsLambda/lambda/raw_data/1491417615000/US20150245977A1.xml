@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150245977A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021612" date-changed="20160120" time-changed="080816">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121141036">
+        <country>US</country>
+        <doc-number>20150245977</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14194624</doc-number>
+        <date>20140228</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20160120">
+      <classification-ipcr sequence="1">
+        <text>A61H  15/00        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>A</section>
+        <class>61</class>
+        <subclass>H</subclass>
+        <main-group>15</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20160120">
+      <classification-cpc sequence="1">
+        <text>A61H  15/00        20130101 FI20150903BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>H</subclass>
+        <main-group>15</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>A61H  15/0092      20130101 LI20160113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>H</subclass>
+        <main-group>15</main-group>
+        <subgroup>0092</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>A61H  15/02        20130101 LI20160113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>H</subclass>
+        <main-group>15</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20160113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>A61H2015/0021      20130101 LA20160113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>H</subclass>
+        <main-group>2015</main-group>
+        <subgroup>0021</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>A61H2201/0107      20130101 LA20160113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>H</subclass>
+        <main-group>2201</main-group>
+        <subgroup>0107</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>A61H2201/0157      20130101 LA20160113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>H</subclass>
+        <main-group>2201</main-group>
+        <subgroup>0157</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>A61H2201/0207      20130101 LA20160113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>H</subclass>
+        <main-group>2201</main-group>
+        <subgroup>0207</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>A61H2201/0257      20130101 LA20160113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>H</subclass>
+        <main-group>2201</main-group>
+        <subgroup>0257</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>A61H2201/1284      20130101 LA20160113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>H</subclass>
+        <main-group>2201</main-group>
+        <subgroup>1284</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>A61H2201/1685      20130101 LA20160113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>H</subclass>
+        <main-group>2201</main-group>
+        <subgroup>1685</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="11">
+        <text>A61H2201/1695      20130101 LA20160113BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>A</section>
+        <class>61</class>
+        <subclass>H</subclass>
+        <main-group>2201</main-group>
+        <subgroup>1695</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20160113</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">10</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">REHABILITATION DEVICE</invention-title>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Sungarian</last-name>
+            <first-name>Arno Sarkis</first-name>
+            <address>
+              <city>Shrewsbury</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+        <applicant sequence="2" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Desio</last-name>
+            <first-name>Stephen Michael</first-name>
+            <address>
+              <city>Northboro</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Sungarian</last-name>
+            <first-name>Arno Sarkis</first-name>
+            <address>
+              <city>Shrewsbury</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Desio</last-name>
+            <first-name>Stephen Michael</first-name>
+            <address>
+              <city>Northboro</city>
+              <state>MA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <patent-family date-changed="20150903">
+      <main-family family-id="173464436">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150245977</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173464435">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150245977</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20140228</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A rehabilitation device is provided. The rehabilitation device may include a plurality of modular canes, a plurality of rollers, at least one divider, a first end cap and a second end cap. Each tubular modular cane may terminate in the first end and an opposing second end. The second end diameter may be sized to slidably receive the first end. The second end cap may have a second connection end sized to slidably receive the first end. The first end cap may have first connection end adapted to slidably receive the second end. The plurality of rollers may be made of compressible material. The plurality of rollers may be mounted on the plurality of modular canes so that the rehabilitation device may have an adjustable length with interchangeable rollers. The plurality of rollers may be separated by at least one divider so as to adjust the spacing of the plurality of rollers.</p>
+  </abstract>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATION</heading>
+      <p id="p-00001-en" num="0001">This application claims the benefit of priority of U.S. provisional application No. 61720517 filed 28 Feb 2013, the contents of which are herein incorporated by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <p id="p-00002-en" num="0002">The present invention relates to medical rehabilitation and treatments and, more particularly, to a device for rehabbing and treating painful soft tissues and scar breakdown.</p>
+      <p id="p-00003-en" num="0003">Currently, message implements are bulky, used for a single or limited purpose and or do not allow for adequate treatment of different body parts and conditions. The existing devices function on the principle “one size fits all.” As a result, patients are forced to use various, non-compatible devices to address their multi-faceted needs. This in turn results in patients foregoing treatment, increased expenses as well as problems with clutter and storage. Moreover, the current devices are not designed to simultaneously treating different muscle groups.</p>
+      <p id="p-00004-en" num="0004">As can be seen, there is a need for a compact device that can be reconfigured to target different anatomic areas while applying a physiological approach, including simultaneously treatment of different muscle groups.</p>
+      <heading id="h-00003-en" level="1">SUMMARY OF THE INVENTION</heading>
+      <p id="p-00005-en" num="0005">In one aspect of the present invention, a rehabilitation device comprises: a tubular modular cane terminating in a first end and a second end; and at least one roller rotatably mounted on the modular cane, wherein the at least one roller provides a compressible surface, whereby the at least one roller is interchangeable.</p>
+      <p id="p-00006-en" num="0006">In another aspect of the present invention, a method of self-implementing no-hands rehabilitation to a predetermined body part comprising: providing a rehabilitation device comprising: at least one tubular modular cane terminating in a first end and a second end, wherein the second end is configured to slidably receive the first end; and two adjacent rollers rotatably mounted on the at least one modular cane, wherein each roller provides a compressible surface shaped so that the outer contour of the two adjacent rollers taper toward each other; conforming the two rollers to two different portions of a predetermined body part; and rolling the two portions of the predetermined body part over the rollers, whereby pressure is applied by self-weight.</p>
+      <p id="p-00007-en" num="0007">These and other features, aspects and advantages of the present invention will become better understood with reference to the following drawings, description and claims.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00004-en" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+      <p id="p-00008-en" num="0008">
+        <figref>FIG. 1</figref> is a perspective view of an exemplary embodiment of the present invention shown in use;</p>
+      <p id="p-00009-en" num="0009">
+        <figref>FIG. 2</figref> is a perspective view of an exemplary embodiment of the present invention;</p>
+      <p id="p-00010-en" num="0010">
+        <figref>FIG. 3</figref> is an exploded perspective view of an exemplary embodiment of the present invention</p>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 4</figref> is a section detail view of an exemplary embodiment of the present invention, taken along line <b>4</b>-<b>4</b> in <figref>FIG. 2</figref>;</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 5</figref> is a section detail view of an exemplary embodiment of a springed-pin of the present invention;</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 6</figref> is a section detail view of an exemplary embodiment of the present invention, illustrating a removable connection of a plurality of modular canes;</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 7</figref> is a section detail view of an exemplary embodiment of the present invention, taken along line <b>7</b>-<b>7</b> in <figref>FIG. 2</figref>;</p>
+      <p id="p-00015-en" num="0015">
+        <figref>FIG. 8</figref> is a perspective view of an exemplary embodiment of the present invention;</p>
+      <p id="p-00016-en" num="0016">
+        <figref>FIG. 9</figref> is a perspective view of an exemplary embodiment of the present invention;</p>
+      <p id="p-00017-en" num="0017">
+        <figref>FIG. 10</figref> is a perspective view of an exemplary embodiment of the present invention; and</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 11</figref> is a perspective view of an exemplary embodiment of the present invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00019-en" num="0019">The following detailed description is of the best currently contemplated modes of carrying out exemplary embodiments of the invention. The description is not to be taken in a limiting sense, but is made merely for the purpose of illustrating the general principles of the invention, since the scope of the invention is best defined by the appended claims.</p>
+      <p id="p-00020-en" num="0020">Broadly, an embodiment of the present invention provides a rehabilitation device. The rehabilitation device may include a plurality of modular canes, a plurality of rollers, at least one divider, a first end cap and a second end cap. Each tubular modular cane may terminate in the first end and an opposing second end. The second end diameter may be sized to slidably receive the first end. The second end cap may have a second connection end sized to slidably receive the first end. The first end cap may have first connection end adapted to slidably receive the second end. The plurality of rollers may be made of compressible material. The plurality of rollers may be mounted on the plurality of modular canes so that the rehabilitation device may have an adjustable length with interchangeable rollers. The plurality of rollers may be separated by at least one divider so as to adjust the spacing of the plurality of rollers.</p>
+      <p id="p-00021-en" num="0021">In certain embodiments, the rehabilitation device may include two rollers rotatably mounted to the modular cane. Because of the size and shape of the rollers the rehabilitation device may be able to conform to selected areas of the body. Such conformity to the selected body part enables self-administration of the rehabilitation device by use of self-weight without the use of any hands. The user may roll a portion of the selected body parts under self-weight over the two rollers.</p>
+      <p id="p-00022-en" num="0022">Referring to <figref>FIGS. 1 through 11</figref>, the present invention may include a rehabilitation device <b>10</b>. The rehabilitation device <b>10</b> may include a plurality of modular canes <b>12</b>, a plurality of rollers <b>40</b>, at least one divider <b>20</b>, a first end cap <b>22</b> and a second end cap <b>24</b>.</p>
+      <p id="p-00023-en" num="0023">The plurality of modular canes <b>12</b> may be tubes of various lengths and be made of lightweight material that can be repeatedly bent without fracturing, such as aluminum, polyethylene, polypropylene, various impregnated or laminated fibrous materials, various plasticized materials and the like. Each tubular modular cane <b>12</b> may define an interior surface <b>14</b> and an exterior surface <b>16</b>. The modular cane <b>12</b> may include a plurality of pinholes <b>36</b>, a plurality of springed pins <b>38</b>, a plurality of first ends <b>33</b>, a plurality of second ends <b>34</b> adapted to removably connect together to form various lengths for various rehabilitation needs of a user <b>50</b>.</p>
+      <p id="p-00024-en" num="0024">Each tubular modular cane <b>12</b> may terminate in the first end <b>33</b> and an opposing second end <b>34</b>. At least one pinhole <b>36</b> may be disposed near each first end <b>33</b> and near each second end <b>34</b>. The first end <b>33</b> may include a springed-pin <b>38</b>. The second end <b>34</b> may have an interior surface <b>14</b> diameter slightly larger than the diameter of the first end <b>33</b> exterior surface <b>16</b>. The second end <b>34</b> diameter may be sized to slidably receive the first end <b>33</b>. The first end <b>33</b> exterior surface <b>16</b> may slidably engage the interior surface <b>14</b> of the second end <b>34</b>.</p>
+      <p id="p-00025-en" num="0025">Each springed-pin <b>38</b> may include a button <b>30</b> connected to a spring <b>32</b>. The spring <b>32</b> may be connected to the interior surface <b>14</b>. Each spring <b>32</b> may bias one button <b>30</b> so that the button <b>30</b> protrudes through the opposing interior surface <b>14</b> and out of an adjacent pinhole <b>36</b> so as to protrude above the exterior surface <b>16</b>.</p>
+      <p id="p-00026-en" num="0026">Each second end cap <b>24</b> and each first end cap <b>22</b> may be a tube having a handle end <b>21</b>. Each second end cap <b>24</b> may have a second connection end. Each first end cap <b>22</b> may have a first connection end <b>23</b>. Each connection end may extend perpendicularly from about the middle of the handle end <b>21</b> forming a ‘T’ shape. A pair of handle ends <b>21</b> may be adapted to support the rehabilitation device <b>10</b> when in use, as illustrated in <figref>FIG. 1</figref>. The second end cap <b>24</b> may have one springed-pin <b>38</b> disposed near the second connection end <b>25</b>. The first end cap <b>22</b> may have one pinhole <b>36</b> disposed near the first connection end <b>23</b>. The second connection end <b>25</b> interior surface diameter may be sized to slidably receive the first end <b>33</b> exterior surface <b>16</b>. The first connection end <b>23</b> exterior surface may slidably engage the interior surface <b>14</b> of the second end <b>34</b>.</p>
+      <p id="p-00027-en" num="0027">The plurality of rollers <b>40</b> may be tubular elements having an interior roller surface <b>52</b> and an exterior roller surface <b>54</b>. The plurality of rollers <b>40</b> may be made of material that is conducive to storing thermal energy. For example, such material may be heated by a heat source and or cooled by a cooling source. The plurality of rollers <b>40</b> may be made of compressible material such as but not limited to foam and the like. The plurality of rollers <b>40</b> may be sized to conform the rehabilitation device <b>10</b> to selected areas of the body. The interior roller surface <b>52</b> may be rotatably mounted to each modular cane <b>12</b> exterior surface <b>16</b>. The plurality of rollers <b>40</b> may include a smooth roller <b>44</b>, a contoured roller, a textured roller <b>18</b>, <b>46</b>, a grooved roller and a ribbed roller <b>48</b> of various shapes, including but not limited to spherical <b>42</b>, cylindrical <b>44</b>, <b>46</b>, <b>48</b>, oblong and the like, and sizes. The grooved rollers may include a plurality of radially projecting fingers disposed along the exterior roller surface <b>54</b>. The plurality of rollers <b>40</b> may be mounted to rotate independently of each other. The plurality of rollers <b>40</b> may be separated by at least one divider <b>20</b>.</p>
+      <p id="p-00028-en" num="0028">The at least one divider <b>20</b> may be tubular elements adapted to slidably receive the plurality of modular canes <b>12</b>. The at least one divider <b>20</b> may form a tubular opening <b>28</b> large enough so that a divider <b>20</b> may slide over the handle end <b>21</b>. The at least one divider <b>20</b> may include a set screw hole <b>27</b> and a set screw <b>26</b> so as to removably attached along the modular cane <b>12</b>.</p>
+      <p id="p-00029-en" num="0029">In operation, the rehabilitation device <b>10</b> may be self-administered by a user <b>50</b> or the user <b>50</b> may administer the massage implement on a second person. A method of using the present invention may include the following. The rehabilitation device <b>10</b> disclosed above may be provided. The user <b>50</b> utilizing the rehabilitation device <b>10</b> may mount at least two of the plurality of rollers <b>40</b> to the modular cane <b>12</b>. Because of the size and shape of the rollers <b>40</b>, in certain embodiments each roller's outer contour tapers toward the other adjacent roller, the user <b>50</b> may be able to effectively conform the rehabilitation device <b>10</b> to selected areas of the body, such as but not limited to muscle groups, muscle tissue, scar tissue, tendons, trigger points and the like. Such conformity to the selected body part and between at least two of the plurality of rollers <b>40</b> enables self-administration of the rehabilitation device <b>10</b> by use of self-weight without the use of any hands, as illustrated in <figref>FIG. 1</figref>. The user <b>50</b> may roll a portion of the selected body parts under self-weight over the at least two of the plurality of rollers <b>40</b>. In certain embodiments, the user may add at least one spacer <b>20</b> between the at least two of the plurality of rollers <b>40</b> to facilitate such conformity. In certain embodiments, the user <b>50</b> may self-administer by self-weight using one roller <b>40</b>, such one-roller selections are illustrated in <figref>FIGS. 9 through 11</figref>.</p>
+      <p id="p-00030-en" num="0030">Utilization of the user's <b>50</b> self-weight under the self-administered, no-hands system disclosed above may facilitate relaxation of the applied-to muscle tissue so as to uniquely stimulate a plurality of receptors in the muscle/tendon juncture, whereby the present invention provides superior benefits. As a result, the rehabilitations device <b>10</b> may be useful in providing physiological effects known as self-myofascial release. Myofascial release alleviates muscle pain by relieving myofascial trigger points within the muscle tissue and/or by releasing lactic acid and other toxins from a person's muscle, whereby the additional benefits of the relaxation garnered by the self-administration is within the scope of the present invention. Significantly, prior art is self-applied by gripping at least one handle.</p>
+      <p id="p-00031-en" num="0031">In certain embodiments, a user <b>50</b> utilizing the rehabilitation device <b>10</b> may grasp one or both of the distal ends of the rehabilitation device <b>10</b> near the end caps <b>22</b>, <b>24</b> and apply at least one of the rollers <b>40</b> to a body area to be rehabilitated. The user <b>50</b> can then apply force to one or more of the distal ends, so as to distribute the force of the at least one of the rollers <b>40</b> to the area to be rehabilitated.</p>
+      <p id="p-00032-en" num="0032">The method of the invention includes the steps of selecting the appropriate one or plurality of rollers <b>40</b> and possibly at least one spacer <b>20</b> described above and then configuring the selections in an anatomically appropriate manner to rehabilitate a selected area of the body. The rehabilitation device <b>10</b> may be easily adjusted, re-adjusted, spaced and re-spaced during one physical therapy and or rehabilitation session. Likewise, the rehabilitation device <b>10</b> may be then re-configured to the specific anatomy of a different user. The plurality of rollers <b>40</b> may address different muscle groups simultaneously. The different shapes of the rollers <b>40</b> and their ready reconfigurations along the plurality of modular canes <b>12</b> may afford varied implementations across specific anatomical locations with different needs.</p>
+      <p id="p-00033-en" num="0033">It should be understood, of course, that the foregoing relates to exemplary embodiments of the invention and that modifications may be made without departing from the spirit and scope of the invention as set forth in the following claims.</p>
+    </detailed-desc>
+  </description>
+  <us-claim-statement>What is claimed is:</us-claim-statement>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A rehabilitation device comprising:
+<claim-text>a tubular modular cane terminating in a first end and a second end; and</claim-text><claim-text>at least one roller rotatably mounted on the modular cane, wherein the at least one roller provides a compressible surface,</claim-text><claim-text>whereby the at least one roller is interchangeable.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The rehabilitation device of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further including a plurality of tubular modular canes, wherein the second end is configured to slidably receive the first end of another modular cane, whereby the length of the modular cane is adjustable.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The rehabilitation device of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, wherein the plurality of modular canes provide a pinhole near each second end and wherein each first end has a springed-pin configured to removably mate to the pinhole of a receiving second end, whereby the length of the modular cane is adjustable.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The rehabilitation device of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, further including a first end cap and a second end cap, wherein the first end cap provides a pinhole configured to removably connect to the second end and wherein the second end cap has the springed-pin configured to removably connect to the first end.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The rehabilitation device of <claim-ref idref="clm-00002-en">claim 2</claim-ref>, further including at least one tubular spacer mounted on the plurality of the modular canes adjacent to the at least one roller.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en" independent="true">
+      <claim-text>
+        <b>6</b>. A self-administered self-weight rehabilitation device comprising:
+<claim-text>at least one tubular modular cane terminating in a first end and a second end, wherein the at least one modular cane in configures so that the second end removably receives the first end of another modular cane; and</claim-text><claim-text>two adjacent rollers rotatably mounted on the modular cane, wherein each roller provides a compressible surface shaped so that the outer contour of the two adjacent rollers taper toward each other,</claim-text><claim-text>whereby the two adjacent rollers are configured to conform to a specified body part.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The self-administered self-weight rehabilitation device of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, further including at least one tubular spacer mounted between the two adjacent rollers on the at least one modular cane, whereby the spacing the two adjacent rollers are adjustable for conforming to predetermined parts of the body.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en" independent="true">
+      <claim-text>
+        <b>8</b>. A method of self-implementing no-hands rehabilitation to a predetermined body part comprising:
+<claim-text>providing a rehabilitation device comprising: at least one tubular modular cane terminating in a first end and a second end, wherein the second end is configured to slidably receive the first end; and two adjacent rollers rotatably mounted on the at least one modular cane, wherein each roller provides a compressible surface shaped so that the outer contour of the two adjacent rollers taper toward each other;</claim-text><claim-text>conforming the two rollers to two different portions of a predetermined body part; and</claim-text><claim-text>rolling the two portions of the predetermined body part over the rollers,</claim-text><claim-text>whereby pressure is applied by self-weight.</claim-text></claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The method of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the two rollers are spaced by at least one tubular spacer mounted on the modular cane adjacent to and between the two rollers.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The method of <claim-ref idref="clm-00008-en">claim 8</claim-ref>, wherein the two rollers have a generally spherical shape.</claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150245977A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150245977A1-20150903-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150245977A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245977A1-20150903-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150245977A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245977A1-20150903-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150245977A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245977A1-20150903-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150245977A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150245977A1-20150903-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150245977A1_00006.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150245977A1-20150903-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150245977A1.PDF" type="pdf" size="317777" pages="8" />
+</lexisnexis-patent-document>

@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150259828A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150917" time-inserted="030100" date-changed="20151214" time-changed="185317">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121314014">
+        <country>US</country>
+        <doc-number>20150259828</doc-number>
+        <kind>A1</kind>
+        <date>20150917</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14406070</doc-number>
+        <date>20131029</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150917">
+      <priority-claim sequence="1" kind="national">
+        <country>KR</country>
+        <doc-number>1020120122007</doc-number>
+        <date>20121031</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150924">
+      <unexamined-printed-without-grant>
+        <date>20150917</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150924">
+      <classification-ipcr sequence="1">
+        <text>C30B  25/20        20060101AFI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>25</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C30B  25/10        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>25</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C30B  29/36        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>29</main-group>
+        <subgroup>36</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>H01L  21/02        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>02</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="5">
+        <text>H01L  29/16        20060101ALI20150917BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>29</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150924">
+      <classification-cpc sequence="1">
+        <text>C30B  25/20        20130101 FI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>25</main-group>
+        <subgroup>20</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C23C  16/0272      20130101 LI20140605BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>0272</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140605</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C23C  16/325       20130101 LI20140605BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>23</class>
+        <subclass>C</subclass>
+        <main-group>16</main-group>
+        <subgroup>325</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140605</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C30B  25/10        20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>25</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C30B  25/16        20130101 LI20140725BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>25</main-group>
+        <subgroup>16</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20140725</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C30B  29/36        20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>30</class>
+        <subclass>B</subclass>
+        <main-group>29</main-group>
+        <subgroup>36</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>H01L  21/02378     20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>02378</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>H01L  21/02529     20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>02529</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>H01L  21/0262      20130101 LI20150918BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>21</main-group>
+        <subgroup>0262</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150918</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="10">
+        <text>H01L  29/1608      20130101 LI20150917BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>H</section>
+        <class>01</class>
+        <subclass>L</subclass>
+        <main-group>29</main-group>
+        <subgroup>1608</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150917</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">9</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150917" lang="eng" format="original">EPITAXIAL WAFER AND METHOD FOR FABRICATING THE SAME</invention-title>
+    <references-cited date-changed="20151204">
+      <patent-citations name="patcit" date-changed="20151204" />
+      <citation>
+        <patcit num="1" dnum="US2002025660A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20020025660</doc-number>
+            <kind>A1</kind>
+            <name>BOYDSTON MARK R [US], et al</name>
+            <date>20020228</date>
+          </document-id>
+          <application-date>
+            <date>20001211</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US2009302328A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090302328</doc-number>
+            <kind>A1</kind>
+            <name>OHNO TOSHIYUKI [JP], et al</name>
+            <date>20091210</date>
+          </document-id>
+          <application-date>
+            <date>20090528</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="US2011312161A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110312161</doc-number>
+            <kind>A1</kind>
+            <name>HAMANO KENICHI [JP], et al</name>
+            <date>20111222</date>
+          </document-id>
+          <application-date>
+            <date>20100215</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="US2009155947A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20090155947</doc-number>
+            <kind>A1</kind>
+            <name>PAEK HO SUN [KR], et al</name>
+            <date>20090618</date>
+          </document-id>
+          <application-date>
+            <date>20081007</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="US6198141B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6198141</doc-number>
+            <kind>B1</kind>
+            <name>YAMAZAKI SHUNPEI [JP], et al</name>
+            <date>20010306</date>
+          </document-id>
+          <application-date>
+            <date>19970813</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="6" dnum="US2011059003A1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>20110059003</doc-number>
+            <kind>A1</kind>
+            <name>SUDARSHAN TANGALI S [US], et al</name>
+            <date>20110310</date>
+          </document-id>
+          <application-date>
+            <date>20100907</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <parties date-changed="20150917">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>LG INNOTEK CO., LTD.</orgname>
+            <address>
+              <city>Seoul</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>KR</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kang</last-name>
+            <first-name>Seok Min</first-name>
+            <address>
+              <city>Seoul</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>KR13009645</doc-number>
+        <date>20131029</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014069859</doc-number>
+        <date>20140508</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150917">
+      <main-family family-id="165560690">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259828</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20131029</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014069859</doc-number>
+            <kind>A1</kind>
+            <date>20140508</date>
+          </document-id>
+          <application-date>
+            <date>20131029</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104584190</doc-number>
+            <kind>A</kind>
+            <date>20150429</date>
+          </document-id>
+          <application-date>
+            <date>20131029</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020140055338</doc-number>
+            <kind>A</kind>
+            <date>20140509</date>
+          </document-id>
+          <application-date>
+            <date>20121031</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="165560689">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150259828</doc-number>
+            <kind>A1</kind>
+            <date>20150917</date>
+          </document-id>
+          <application-date>
+            <date>20131029</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014069859</doc-number>
+            <kind>A1</kind>
+            <date>20140508</date>
+          </document-id>
+          <application-date>
+            <date>20131029</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>CN</country>
+            <doc-number>104584190</doc-number>
+            <kind>A</kind>
+            <date>20150429</date>
+          </document-id>
+          <application-date>
+            <date>20131029</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>1020140055338</doc-number>
+            <kind>A</kind>
+            <date>20140509</date>
+          </document-id>
+          <application-date>
+            <date>20121031</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150917" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">Provided are an epitaxial wafer and a method of fabricating the same. The method includes a pre-growth step of injecting a reaction source for epitaxial growth on a semiconductor wafer prepared in a chamber and growing an epitaxial layer by a predetermined first thickness at a predetermined first growth rate and at a predetermined first growth temperature, a heat treatment step of performing heat treatment on the epitaxial layer grown by the pre-growth step during a predetermined time, and a subsequent growth step of injecting the reaction source on the heat-treated semiconductor wafer and growing the epitaxial layer to a target thickness at a predetermined second growth rate and at a predetermined second growth temperature. The first growth rate is smaller than the second growth rate.</p>
+  </abstract>
+  <legal-data date-changed="20151002">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20141209</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015259828A1</docdb-publication-number>
+      <docdb-application-id>444515241</docdb-application-id>
+      <new-owner>LG INNOTEK CO., LTD., KOREA, REPUBLIC OF</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNOR:KANG, SEOKMIN;REEL/FRAME:034434/0258</free-text-description>
+      <effective-date>
+        <date>20141128</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150917">
+    <summary>
+      <heading id="h-00001-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to a method of fabricating an epitaxial wafer, and more particularly, to an epitaxial wafer in which surface defect density is reduced and doping uniformity is improved, and a method of fabricating the same.</p>
+      <heading id="h-00002-en" level="1">BACKGROUND ART</heading>
+      <p id="p-00002-en" num="0002">Generally, epitaxial growth includes a chemical vapor deposition process and a substrate such as a single crystal silicon wafer is heated while a silicon compound in a gaseous, liquid, or solid state is transferred through a surface of the substrate and affects thermal decomposition or decomposition. When the single crystal silicon wafer is used for the substrate, silicon is stacked by continuously growing a single crystal structure. Thus, defects such as a cohesion silicon self-gap defect, or the like, which exist on the surface of the substrate, may directly affect quality of an epitaxial wafer. In the effect on the quality, the defects which exist on the surface of the substrate is continuously grown together with continuously growing the single crystal structure, and thus this may cause forming of a new crystal defect, that is, a growth defect in an epitaxial layer. For example, a surface defect such as an epitaxial stacking defect and a hillock in a range of about 0.1 microns to 10 microns may be formed. Therefore, a method and process of fabricating a substrate which does not substantially have such a surface defect problem is required in an epitaxial growth process.</p>
+      <p id="p-00003-en" num="0003">Further, it is important that the doped epitaxial wafer has doping uniformity from a center to an edge, which meets a desired range according to the design specifications. Therefore, a method and process of fabricating the epitaxial wafer capable of improving the doping uniformity is required.</p>
+      <heading id="h-00003-en" level="1">DISCLOSURE</heading>
+      <heading id="h-00004-en" level="1">Technical Problem</heading>
+      <p id="p-00004-en" num="0004">The present invention is directed to providing a high quality epitaxial wafer, in which surface defect density is reduced, doping uniformity is improved, and thus characteristics and yield are improved, and a method of fabricating the same.</p>
+      <heading id="h-00005-en" level="1">Technical Solution</heading>
+      <p id="p-00005-en" num="0005">One aspect of the present invention provides a method of fabricating of an epitaxial wafer, the method including: a pre-growth step of injecting a reaction source for epitaxial growth on a semiconductor wafer prepared in a chamber and growing an epitaxial layer by a predetermined first thickness at a predetermined first growth rate and at a predetermined first growth temperature; a heat treatment step of performing heat treatment on the epitaxial layer grown by the pre-growth step during a predetermined time; and a subsequent growth step of injecting the reaction source on the heat-treated semiconductor wafer and growing the epitaxial layer to a target thickness at a predetermined second growth rate and at a predetermined second growth temperature, and the first growth rate is smaller than the second growth rate.</p>
+      <p id="p-00006-en" num="0006">In an embodiment, the first growth temperature may be lower than the second growth temperature.</p>
+      <p id="p-00007-en" num="0007">In another embodiment, the semiconductor wafer may be a silicon carbide wafer and the reaction source may be a solid, liquid, or gaseous material including carbon and silicon.</p>
+      <p id="p-00008-en" num="0008">In still another embodiment, the second growth temperature may be set within a range of 1500° C. to 1700° C., and the first growth temperature may be set within a range of 1500° C. to 1700° C., the second growth rate may be set to 20 μm/h or more and the first growth rate is set to 5 μm/h or less, and the first thickness may be set within a range of 0.5 μm to 1 μm.</p>
+      <p id="p-00009-en" num="0009">In yet another embodiment, a heat-treatment temperature in the heat treatment step may be set within a range of 1500° C. to 1700° C.</p>
+      <heading id="h-00006-en" level="1">Advantageous Effects</heading>
+      <p id="p-00010-en" num="0010">According to the exemplary embodiment of the present invention, a high quality epitaxial wafer, in which surface defect density is reduced, doping uniformity is improved, and thus characteristics and yield are improved, can be fabricated.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00007-en" level="1">DESCRIPTION OF DRAWINGS</heading>
+      <p id="p-00011-en" num="0011">
+        <figref>FIG. 1</figref> is a view for describing a process of fabricating an epitaxial wafer according to an exemplary embodiment of the present invention.</p>
+      <p id="p-00012-en" num="0012">
+        <figref>FIG. 2</figref> is a flowchart showing a method of fabricating an epitaxial wafer according to an exemplary embodiment of the present invention.</p>
+      <p id="p-00013-en" num="0013">
+        <figref>FIG. 3</figref> is a graph showing an example of a growth condition in the method of fabricating the epitaxial wafer according to the exemplary embodiment of the present invention.</p>
+      <p id="p-00014-en" num="0014">
+        <figref>FIG. 4</figref> is a conceptual view showing an epitaxial wafer according to an exemplary embodiment of the present invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00008-en" level="1">MODES OF THE INVENTION</heading>
+      <p id="p-00015-en" num="0015">While the invention is susceptible to various modifications and alternative forms, specific embodiments thereof are shown by way of example in the drawings and will herein be described in detail. It should be understood, however, that there is no intent to limit the invention to the particular forms disclosed, but on the contrary, the invention is to cover all modifications, equivalents, and alternatives falling within the spirit and scope of the invention.</p>
+      <p id="p-00016-en" num="0016">When it is deemed that detailed descriptions of related well-known functions and configurations might obscure the subject matter of the embodiments, those detailed descriptions will be omitted. Further, the terms (e.g., first, second, etc.) used herein are only used to distinguish one element from another.</p>
+      <p id="p-00017-en" num="0017">The present invention provides a method capable of reducing surface defect density of a fabricated epitaxial wafer. The surface defect density of the epitaxial wafer may be changed by variables such as a flux of reaction gas which is injected in an initial stage, a growth temperature, pressure, a total flux, a C/Si ratio, a Si/H<sub>2 </sub>ratio, etc. The present invention provides a method for reducing the surface defect density to 0.5/cm<sup>2 </sup>or less (i.e., 0.5 defects per 1 cm<sup>2 </sup>or less). To this end, the present invention uses a method of controlling a growth temperature, a growth rate (i.e., a flux of reaction gas which is injected), a thickness of an epitaxial layer to be grown in a pre-growth step, and a C/Si ratio. Further, doping uniformity may also be improved by the method of fabricating the epitaxial wafer according to the embodiment of the present invention. This may be clearly understood through detailed descriptions of the following accompanying drawings.</p>
+      <p id="p-00018-en" num="0018">
+        <figref>FIG. 1</figref> is a view for describing a process of fabricating an epitaxial wafer according to an exemplary embodiment of the present invention and <figref>FIG. 2</figref> is a flowchart showing the method of fabricating the epitaxial wafer according to the exemplary embodiment of the present invention. <figref>FIG. 3</figref> is a graph showing an example of a growth condition in the method of fabricating the epitaxial wafer according to the exemplary embodiment of the present invention.</p>
+      <p id="p-00019-en" num="0019">Hereinafter, the method of fabricating the epitaxial wafer according to the exemplary embodiment of the present invention will be described in detail with reference to <figref>FIGS. 1 and 3</figref> based on the flowchart of <figref>FIG. 2</figref>.</p>
+      <p id="p-00020-en" num="0020">Referring to <figref>FIG. 2</figref>, in the exemplary embodiment of the present invention, a semiconductor wafer <b>110</b> (see <figref>FIG. 1</figref>) is prepared in a reaction chamber (S<b>210</b>), and then a pre-growth step (see <figref>FIG. 1</figref>) is performed (S<b>220</b>).</p>
+      <p id="p-00021-en" num="0021">Referring to <figref>FIG. 1</figref>, although a silicon carbide based wafer (a 4H-SiC wafer) is illustrated, the wafer may be different according to a device or a product to be finally fabricated.</p>
+      <p id="p-00022-en" num="0022">Before a process of stacking a particular material on the above-described semiconductor wafer is performed, it is difficult to secure stack reliability due to a lattice constant mismatch problem between the stacked layers. To reduce this problem, a method in which an epitaxial layer <b>115</b> (see <figref>FIG. 1</figref>) may serve as a kind of a buffer layer by stacking (growing) the epitaxial layer <b>115</b> on the semiconductor wafer is widely used.</p>
+      <p id="p-00023-en" num="0023">However, a surface defect may be generated in the growth process of the epitaxial layer, the semiconductor wafer is not relevant to use as a substrate of the product when the surface defect is greater than or equal to an allowable value (generally, when surface defect density is more than 1/cm<sup>2</sup>). Therefore, in the exemplary embodiment of the present invention, the pre-growth step in S<b>220</b> of <figref>FIG. 2</figref> is used as a method of reducing the surface defect density to 0.5/cm<sup>2 </sup>or less.</p>
+      <p id="p-00024-en" num="0024">According to the exemplary embodiment of the present invention, the pre-growth step is performed at a growth rate (hereinafter, referred to as a first growth rate) smaller than a growth rate (hereinafter, referred to as a second growth rate) in a subsequent growth step in S<b>240</b>. Further, the pre-growth step may be performed at a growth temperature (hereinafter, referred to as a first growth temperature) lower than a growth temperature (hereinafter, referred to as a second growth temperature) in the subsequent growth step in S<b>240</b>.</p>
+      <p id="p-00025-en" num="0025">For example, when the growth temperature in the subsequent growth step is set within a range of 1500° C. to 1700° C., the growth temperature in the pre-growth step may be set within a range of 1400° C. to 1500° C.</p>
+      <p id="p-00026-en" num="0026">That is, the pre-growth step is a process of growing the epitaxial layer on the semiconductor wafer at the first growth rate smaller than the second growth rate and at the first growth temperature lower than the second growth temperature when a reaction source for an epitaxial growth is injected into a reaction chamber.</p>
+      <p id="p-00027-en" num="0027">Here, the reaction source is different according to a material or type of the semiconductor wafer which is an object of the epitaxial layer to be stacked. For example, when the semiconductor wafer <b>110</b> is a silicon carbide based wafer as shown in <figref>FIG. 1</figref>, a solid, liquid, or gaseous material containing silicon compound such as SiH<sub>4</sub>+C<sub>3</sub>H<sub>8</sub>+H<sub>2</sub>, MTS(CH<sub>3</sub>SiCl<sub>3</sub>), TCS(SiHCl<sub>3</sub>), Si<sub>x</sub>C<sub>x</sub>, or the like, which are materials capable of matching lattice constant, may be used as the reaction source.</p>
+      <p id="p-00028-en" num="0028">In this case, for example, the first growth rate may be set to 5 μm/h or less (i.e., a rate in which the epitaxial layer is stacked to have a thickness in a range of 5 μm or less per an hour). Here, the growth rate may be controlled by controlling a flux of a reaction source implanted in the chamber.</p>
+      <p id="p-00029-en" num="0029">Generally, in the case in that the epitaxial growth is performed at a fast growth rate, the uniform stacking (growing) of the epitaxial layer may be difficult. Therefore, in the above-described pre-growth step, as a predetermined growth temperature is maintained, mobility between atoms by the reaction source is increased and an environment capable of uniformly growing is prepared. Then, as the growth rate is reduced, time in which the atoms are uniformly distributed and grown on the semiconductor wafer is granted. Further, dislocation density formed inside the epitaxial layer may be reduced.</p>
+      <p id="p-00030-en" num="0030">Therefore, lattice mismatch is reduced by performing the pre-growth step and thus surface defects may be reduced. Therefore, since the above-described pre-growth step is a pre-process to assist the subsequent growth step by reducing the surface defects according to the lattice mismatch in an initial growth stage, a thickness of the epitaxial layer grown by the pre-growth step may be sufficient to set within a range of approximately 0.5 μm to 1.0 μm.</p>
+      <p id="p-00031-en" num="0031">Here, the thickness of the epitaxial layer grown by the pre-growth step may be controlled by controlling the growth temperature, the growth rate, and a growth time t<b>1</b> (see <figref>FIG. 3</figref>), which were described above.</p>
+      <p id="p-00032-en" num="0032">After the pre-growth step is performed and before the subsequent growth step in S<b>240</b> is performed, a heat treatment step (see <figref>FIG. 1</figref>, a time in range of t<b>1</b> to t<b>2</b> of <figref>FIG. 3</figref>, that is, a reference numeral A of <figref>FIG. 3</figref>) in S<b>230</b> is performed. The heat treatment step is a process inserted between the above-described pre-growth step and the subsequent growth step to be described below in order to improve doping uniformity of the epitaxial layer to be fabricated according to the exemplary embodiment of the present invention.</p>
+      <p id="p-00033-en" num="0033">Generally, a process of doping the epitaxial layer to be grown with an N-type or a P-type may be simultaneously performed in the process of growing the epitaxial layer. The doping type is determined according to use of the epitaxial wafer, purpose, and the like, and this is possible to include doping gas which is required for N-type or P-type doping in the reaction gas. However, doping particles of particular polarity are not fully substituted with elements of Group 4 included in the epitaxial layer and may remain only in a state of being penetrated in the epitaxial layer.</p>
+      <p id="p-00034-en" num="0034">Therefore, in the exemplary embodiment of the present invention, the heat treatment step in S<b>230</b> is inserted after the pre-growth step and before the subsequent growth step, and thus a method in which doping uniformity of the finally fabricated epitaxial wafer is also improved is used.</p>
+      <p id="p-00035-en" num="0035">When the heat treatment step is inserted, time and energy capable of substituting the doping particles maintained in the epitaxial layer grown in the pre-growth step in the simple penetration state with the elements of Group 4 are granted in a heat treatment environment at a high temperature, and thus total doping uniformity of the finally fabricated epitaxial wafer may be improved.</p>
+      <p id="p-00036-en" num="0036">The above-described heat treatment step is performed during a predetermined time and then the subsequent growth step in S<b>240</b> is performed again. Here, since the subsequent growth step is a process of mainly performing epitaxial growth and a growth process after the pre-growth step is already performed, the epitaxial growth may be performed at a very fast rate compared to the growth rate of the pre-growth step.</p>
+      <p id="p-00037-en" num="0037">For example, the subsequent growth step in S<b>240</b> may be performed at a rate of 20 μm/h or more as shown in <figref>FIG. 3</figref>. Further, for example, the growth temperature (i.e., the second growth temperature) in the subsequent growth step may be set within a range of 1500° C. to 1700° C. as described above. The subsequent growth step may be performed until a total thickness of the epitaxial layer becomes a target thickness to be grown. In this case, the target thickness may be changed by purpose of the epitaxial wafer, usage, natures of the final device and the product, design values, etc.</p>
+      <p id="p-00038-en" num="0038">As described above, the method of fabricating the epitaxial wafer according to the exemplary embodiment of the present invention, which performs the subsequent growth step after the pre-growth step is performed at a very low growth rate, has an advantage in which processing time and cost may be reduced in addition to reduction of surface defect density compared to the conventional technique.</p>
+      <p id="p-00039-en" num="0039">In the case of the conventional technique, since the pre-growth step according to the exemplary embodiment of the present invention is not included, the epitaxial layer has been grown at the low growth rate in a range of about 8 μm/h to 10 μm/h to avoid a surface defect density problem. To this end, a complex process of polishing the epitaxial layer again to a target thickness was performed after excessively growing to have a thickness of 50 μm.</p>
+      <p id="p-00040-en" num="0040">On the other hand, according to the exemplary embodiment of the present invention, since the surface defect density problem is removed after the pre-growth step, a growth process may be performed at a very fast growth rate in the subsequent growth step. Since an additional polishing process is not needed, total processing time and cost may be greatly reduced.</p>
+      <p id="p-00041-en" num="0041">
+        <figref>FIG. 4</figref> is a conceptual view showing an epitaxial wafer according to an exemplary embodiment of the present invention.</p>
+      <p id="p-00042-en" num="0042">The epitaxial wafer according to the exemplary embodiment of the present invention includes a substrate <b>100</b> and an epitaxial structure <b>200</b> formed on the substrate <b>100</b>. The substrate <b>100</b> may include a silicon carbide based wafer and the epitaxial structure <b>200</b> may also include a silicon carbide structure.</p>
+      <p id="p-00043-en" num="0043">More specifically, the epitaxial structure <b>200</b> includes a first epitaxial layer <b>210</b> formed on the substrate <b>100</b> and a second epitaxial layer <b>220</b> formed on the first epitaxial layer <b>210</b>.</p>
+      <p id="p-00044-en" num="0044">The first epitaxial layer <b>210</b> is formed on the substrate <b>100</b> by the above-described pre-growth step, and thus may serve to reduce a leakage current when a voltage is applied. In this case, the first epitaxial layer <b>210</b> may have a thickness in a range of 1 μm or less.</p>
+      <p id="p-00045-en" num="0045">The second epitaxial layer <b>220</b> may be fabricated to have a target thickness and to have surface defect density in a range of 0.5 cm<sup>2 </sup>or less by the subsequent growth step.</p>
+      <p id="p-00046-en" num="0046">In this case, both the first epitaxial layer <b>210</b> and the second epitaxial layer <b>220</b> may include N-type conductive silicon carbide series. That is, when the substrate <b>100</b> includes silicon carbide (SiC), the first epitaxial layer <b>210</b> and the second epitaxial layer <b>220</b> may be formed of silicon carbide nitride (SiCN).</p>
+      <p id="p-00047-en" num="0047">However, it is not limited thereto, both the first epitaxial layer <b>210</b> and the second epitaxial layer <b>220</b> may include P-type conductive silicon carbide series. In this case, the first epitaxial layer <b>210</b> and the second epitaxial layer <b>220</b> may be formed of aluminum silicon carbide (AlSiC).</p>
+      <p id="p-00048-en" num="0048">The above-described epitaxial wafer may be applied to a metal-semiconductor field effect transistor (MESFET). For example, an ohmic contact layer including a source and a drain is formed on the second epitaxial layer <b>220</b> according to the exemplary embodiment of the present invention, and thus the MESFET may be fabricated. In addition to, the epitaxial wafer may be applied to various semiconductor devices.</p>
+      <p id="p-00049-en" num="0049">While the present invention has been described with reference to exemplary embodiments, it will be understood by those skilled in the art that various changes and modifications may be made without departing from the spirit and scope of the present invention as defined by the appended claims.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150917">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A method of fabricating an epitaxial wafer, comprising;
+<claim-text>a pre-growth step of injecting a reaction source for epitaxial growth on a semiconductor wafer prepared in a chamber and growing an epitaxial layer by a predetermined first thickness at a predetermined first growth rate and at a predetermined first growth temperature;</claim-text><claim-text>a heat treatment step of performing heat treatment on the epitaxial layer grown by the pre-growth step during a predetermined time; and</claim-text><claim-text>a subsequent growth step of injecting the reaction source on the heat-treated semiconductor wafer and growing the epitaxial layer to a target thickness at a predetermined second growth rate and at a predetermined second growth temperature,</claim-text><claim-text>wherein the first growth rate is smaller than the second growth rate.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the first growth temperature is lower than the second growth temperature.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The method of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the semiconductor wafer is a silicon carbide wafer and the reaction source is a solid, liquid, or gaseous material including carbon and silicon.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The method of <claim-ref idref="clm-00003-en">claim 3</claim-ref>, wherein the second growth temperature is set within a range of 1500° C. to 1700° C. and the first growth temperature is set within a range of 1500° C. to 1700° C., the second growth rate is set to 20 μm/h or more and the first growth rate is set to 5 μm/h or less, and the first thickness is set within a range of 0.5 μm to 1 μm.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The method of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein a heat-treatment temperature in the heat treatment step is set within a range of 1500° C. to 1700° C.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en" independent="true">
+      <claim-text>
+        <b>6</b>. An epitaxial wafer, comprising:
+<claim-text>a substrate; and</claim-text><claim-text>an epitaxial structure including a first epitaxial layer formed on the substrate and a second epitaxial layer formed on the first epitaxial layer,</claim-text><claim-text>wherein compositions of the first epitaxial layer and the second epitaxial layer are identical.</claim-text></claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The wafer of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein surface defect density of the second epitaxial layer is 0.5 cm<sup>2 </sup>or less.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The wafer of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein the substrate is a silicon carbide wafer and the first epitaxial layer and the second epitaxial layer are formed of N-type conductive silicon carbide series.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The wafer of <claim-ref idref="clm-00006-en">claim 6</claim-ref>, wherein a thickness of the first epitaxial layer is 1 μm or less. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150259828A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150259828A1-20150917-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150259828A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259828A1-20150917-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150259828A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259828A1-20150917-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150259828A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150259828A1-20150917-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150259828A1_00005.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150259828A1-20150917-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150259828A1.PDF" type="pdf" size="335840" pages="8" />
+</lexisnexis-patent-document>

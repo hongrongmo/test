@@ -1,0 +1,1594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150247029A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150903" time-inserted="021447" date-changed="20160111" time-changed="150453">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121140106">
+        <country>US</country>
+        <doc-number>20150247029</doc-number>
+        <kind>A1</kind>
+        <date>20150903</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14431454</doc-number>
+        <date>20130913</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <dates-of-public-availability date-changed="20150910">
+      <unexamined-printed-without-grant>
+        <date>20150903</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20151223">
+      <classification-ipcr sequence="1">
+        <text>C08L  31/04        20060101AFI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>31</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C04B  28/04        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>28</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="3">
+        <text>C04B  28/06        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>28</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="4">
+        <text>C08L  25/08        20060101ALI20150903BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>25</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150903</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20151223">
+      <classification-cpc sequence="1">
+        <text>C08L  31/04        20130101 FI20151218BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>31</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151218</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>C04B  28/04        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>28</main-group>
+        <subgroup>04</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>C04B  28/06        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>28</main-group>
+        <subgroup>06</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C04B  40/0042      20130101 LI20151002BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>40</main-group>
+        <subgroup>0042</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151002</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C04B2111/00672     20130101 LA20151002BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>2111</main-group>
+        <subgroup>00672</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151002</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="6">
+        <text>C04B2111/70        20130101 LA20151002BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>04</class>
+        <subclass>B</subclass>
+        <main-group>2111</main-group>
+        <subgroup>70</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>A</classification-value>
+        <action-date>
+          <date>20151002</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="7">
+        <text>C08L  23/0853      20130101 LI20151002BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>23</main-group>
+        <subgroup>0853</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151002</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="8">
+        <text>C08L  23/0869      20130101 LI20151002BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>23</main-group>
+        <subgroup>0869</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20151002</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="9">
+        <text>C08L  25/08        20130101 LI20150904BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>L</subclass>
+        <main-group>25</main-group>
+        <subgroup>08</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150904</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <combination-set>
+        <group-number>1</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C08L  23/0853      20130101 LI20151002BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>23</main-group>
+            <subgroup>0853</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151002</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C08L  25/08        20130101 LI20151002BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>08</class>
+            <subclass>L</subclass>
+            <main-group>25</main-group>
+            <subgroup>08</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151002</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>2</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C04B  40/0042      20130101 LI20151002BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>40</main-group>
+            <subgroup>0042</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151002</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C04B2103/0057      20130101 LA20151002BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>2103</main-group>
+            <subgroup>0057</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20151002</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>3</rank-number>
+          <classification-cpc>
+            <text>C04B2103/0057      20130101 LA20151002BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>2103</main-group>
+            <subgroup>0057</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20151002</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>3</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C04B  40/0042      20130101 LI20151002BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>40</main-group>
+            <subgroup>0042</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151002</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C04B  24/2623      20130101 LI20151002BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>24</main-group>
+            <subgroup>2623</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151002</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>3</rank-number>
+          <classification-cpc>
+            <text>C04B  24/2676      20130101 LI20151002BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>24</main-group>
+            <subgroup>2676</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151002</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>4</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C04B  28/04        20130101 LI20151002BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>28</main-group>
+            <subgroup>04</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151002</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C04B  14/06        20130101 LI20151002BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>14</main-group>
+            <subgroup>06</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151002</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>3</rank-number>
+          <classification-cpc>
+            <text>C04B  22/10        20130101 LI20151002BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>22</main-group>
+            <subgroup>10</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151002</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>4</rank-number>
+          <classification-cpc>
+            <text>C04B  22/143       20130101 LI20151002BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>22</main-group>
+            <subgroup>143</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151002</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>5</rank-number>
+          <classification-cpc>
+            <text>C04B  24/06        20130101 LI20151002BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>24</main-group>
+            <subgroup>06</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151002</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>6</rank-number>
+          <classification-cpc>
+            <text>C04B  24/2623      20130101 LI20151002BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>24</main-group>
+            <subgroup>2623</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151002</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>7</rank-number>
+          <classification-cpc>
+            <text>C04B  24/2676      20130101 LI20151002BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>24</main-group>
+            <subgroup>2676</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151002</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>8</rank-number>
+          <classification-cpc>
+            <text>C04B  24/383       20130101 LI20151002BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>24</main-group>
+            <subgroup>383</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151002</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>5</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C04B  40/0042      20130101 LI20151002BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>40</main-group>
+            <subgroup>0042</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151002</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C04B2103/0057      20130101 LA20151002BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>2103</main-group>
+            <subgroup>0057</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20151002</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>3</rank-number>
+          <classification-cpc>
+            <text>C04B2103/0065      20130101 LA20151002BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>2103</main-group>
+            <subgroup>0065</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>A</classification-value>
+            <action-date>
+              <date>20151002</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+      <combination-set>
+        <group-number>6</group-number>
+        <combination-rank>
+          <rank-number>1</rank-number>
+          <classification-cpc>
+            <text>C04B  28/06        20130101 LI20151002BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>28</main-group>
+            <subgroup>06</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151002</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>2</rank-number>
+          <classification-cpc>
+            <text>C04B  24/2623      20130101 LI20151002BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>24</main-group>
+            <subgroup>2623</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151002</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>3</rank-number>
+          <classification-cpc>
+            <text>C04B  24/2676      20130101 LI20151002BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>24</main-group>
+            <subgroup>2676</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151002</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+        <combination-rank>
+          <rank-number>4</rank-number>
+          <classification-cpc>
+            <text>C04B  40/0608      20130101 LI20151002BHEP        </text>
+            <cpc-version-indicator>
+              <date>20130101</date>
+            </cpc-version-indicator>
+            <section>C</section>
+            <class>04</class>
+            <subclass>B</subclass>
+            <main-group>40</main-group>
+            <subgroup>0608</subgroup>
+            <symbol-position>L</symbol-position>
+            <classification-value>I</classification-value>
+            <action-date>
+              <date>20151002</date>
+            </action-date>
+            <generating-office>
+              <country>EP</country>
+            </generating-office>
+            <classification-status>B</classification-status>
+            <classification-data-source>H</classification-data-source>
+          </classification-cpc>
+        </combination-rank>
+      </combination-set>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">10</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150903" lang="eng" format="original">REDISPERSIBLE POLYMER POWDER MIXTURES FOR USE IN DRY-MIX FORMULATIONS</invention-title>
+    <references-cited date-changed="20151103">
+      <patent-citations name="patcit" date-changed="20151103" />
+      <citation>
+        <patcit num="1" dnum="US6224981B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6224981</doc-number>
+            <kind>B1</kind>
+            <name>RICHARD JOEL [FR], et al</name>
+            <date>20010501</date>
+          </document-id>
+          <application-date>
+            <date>19971205</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="2" dnum="US6451900B1" dnum-type="publication number">
+          <document-id>
+            <country>US</country>
+            <doc-number>6451900</doc-number>
+            <kind>B1</kind>
+            <name>KUEHN HARTMUT [DE], et al</name>
+            <date>20020917</date>
+          </document-id>
+          <application-date>
+            <date>20000810</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="3" dnum="EP2399955A1" dnum-type="publication number">
+          <document-id>
+            <country>EP</country>
+            <doc-number>2399955</doc-number>
+            <kind>A1</kind>
+            <name>DOW GLOBAL TECHNOLOGIES LLC [US]</name>
+            <date>20111228</date>
+          </document-id>
+          <application-date>
+            <date>20110609</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="4" dnum="EP2433984A1" dnum-type="publication number">
+          <document-id>
+            <country>EP</country>
+            <doc-number>2433984</doc-number>
+            <kind>A1</kind>
+            <name>DOW GLOBAL TECHNOLOGIES LLC [US]</name>
+            <date>20120328</date>
+          </document-id>
+          <application-date>
+            <date>20110822</date>
+          </application-date>
+        </patcit>
+      </citation>
+      <citation>
+        <patcit num="5" dnum="EP0522791A1" dnum-type="publication number">
+          <document-id>
+            <country>EP</country>
+            <doc-number>522791</doc-number>
+            <kind>A1</kind>
+            <name>ROHM &amp; HAAS [US]</name>
+            <date>19930113</date>
+          </document-id>
+          <application-date>
+            <date>19920701</date>
+          </application-date>
+        </patcit>
+      </citation>
+    </references-cited>
+    <related-documents date-changed="20150903">
+      <provisional-application>
+        <document-id>
+          <country>US</country>
+          <doc-number>61707026</doc-number>
+          <date>20120928</date>
+        </document-id>
+      </provisional-application>
+    </related-documents>
+    <parties date-changed="20150903">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>ROHM AND HAAS COMPANY</orgname>
+            <address>
+              <city>Philadelphia</city>
+              <state>PA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+        <applicant sequence="2" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>DOW GLOBAL TECHNOLOGIES LLC</orgname>
+            <address>
+              <city>Midland</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>US</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kim-Habermehl</last-name>
+            <first-name>Linda</first-name>
+            <address>
+              <city>Midland</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Westmeyer</last-name>
+            <first-name>Mark D.</first-name>
+            <address>
+              <city>Collegeville</city>
+              <state>PA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Chen</last-name>
+            <first-name>Liang</first-name>
+            <address>
+              <city>Midland</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="4" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Hong</last-name>
+            <first-name>Liang</first-name>
+            <address>
+              <city>Schwenksville</city>
+              <state>PA</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="5" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Ladika</last-name>
+            <first-name>Mladen</first-name>
+            <address>
+              <city>Midland</city>
+              <state>MI</state>
+              <country>US</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>US13059571</doc-number>
+        <date>20130913</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014052033</doc-number>
+        <date>20140403</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20151215">
+      <main-family family-id="173463180">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247029</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130913</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9212280</doc-number>
+            <kind>B2</kind>
+            <date>20151215</date>
+          </document-id>
+          <application-date>
+            <date>20130913</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="173463179">
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150247029</doc-number>
+            <kind>A1</kind>
+            <date>20150903</date>
+          </document-id>
+          <application-date>
+            <date>20130913</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>9212280</doc-number>
+            <kind>B2</kind>
+            <date>20151215</date>
+          </document-id>
+          <application-date>
+            <date>20130913</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150903" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">A mixture of first and second redispersible polymer powders where the first redispersible polymer powder has a copolymer having a glass transition temperature of 60 degrees Celsius or higher and an acid level in a range of 0.1 to 8 weight-percent percent as determined by potentiometric titration according to ASTM D664 and the second redispersible polymer powder is selected from vinyl acetate ethylene copolymer redispersible polymer powders and polymer powders of a blend of vinyl acetate ethylene copolymer and vinyl ester of versatic acid copolymer is useful as a component in a dry-mix formulation that further contains Portland cement, alumina rich cement and calcium sulfate.</p>
+  </abstract>
+  <legal-data date-changed="20151225">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20151111</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247029A1</docdb-publication-number>
+      <docdb-application-id>444209959</docdb-application-id>
+      <new-owner>DOW GLOBAL TECHNOLOGIES LLC, MICHIGAN</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:WESTMEYER, MARK D.;KIM-HABERMEHL, LINDA;CHEN, LIANG;AND OTHERS;SIGNING DATES FROM 20121008 TO 20121012;REEL/FRAME:037008/0413</free-text-description>
+    </legal-event>
+    <legal-event sequence="2">
+      <publication-date>
+        <date>20151111</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015247029A1</docdb-publication-number>
+      <docdb-application-id>444209959</docdb-application-id>
+      <new-owner>ROHM AND HAAS COMPANY, PENNSYLVANIA</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:WESTMEYER, MARK D.;KIM-HABERMEHL, LINDA;CHEN, LIANG;AND OTHERS;SIGNING DATES FROM 20121008 TO 20121012;REEL/FRAME:037008/0413</free-text-description>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150903">
+    <summary>
+      <heading id="h-00001-en" level="1">BACKGROUND OF THE INVENTION</heading>
+      <heading id="h-00002-en" level="1">Field of the Invention</heading>
+      <p id="p-00001-en" num="0001">The present invention relates to mixtures of redispersible polymer powders and dry-mix formulations of cement containing the redispersible polymer powders, in particular dry-mix formulations containing alumina rich cement.</p>
+      <heading id="h-00003-en" level="1">Introduction</heading>
+      <p id="p-00002-en" num="0002">Dry-mix cement formulations (or simply “dry-mix formulations”) are valuable for transporting and storing cement composition in a ready-to-mix and use state. Generally, preparation of a mortar from a dry-mix formulation merely requires addition of water. Dry-mix formulations often comprise redispersible polymer powder (RDP) additives to improve properties of a mortar prepared by mixing the dry-mix formulation with water. A common RDP additive used in dry-mix formulations are redispersible particles of vinyl acetate ethylene (VAE) copolymers and blends of VAE and vinyl ester of versatic acid (VeoVA) copolymers (VAE/VeoVA copolymers). These types of polymer additives are useful for enhancing working properties of the dry-mix as it is dispersed in water to form a mortar, in application of the mortar, and/or by increasing strength and flexibility of the resulting mortar by forming a polymer network within the resulting mortar.</p>
+      <p id="p-00003-en" num="0003">Dry-mix formulations containing alumina rich cement are of particularly interest. Alumina-rich cement provides faster set times relative to Portland cements. Alumina-rich cement formulations are especially desirable for use in premium cement tile adhesives (CTA) and also in waterproofing membranes, grouts and self leveling underlayments. Alumina rich cement contains an alumina (Al<sub>2</sub>O<sub>3</sub>) content of greater than 30 weight-percent (wt %), preferably 40 wt % or more, more preferably 55 wt % or more and most preferably 70 wt % or more based on the total weight of the alumina rich cement.</p>
+      <p id="p-00004-en" num="0004">It is a continuous desire in the industry of dry-mix formulations to improve mortar properties and enhance end-use performance of mortars. For example, it is desirably to have a longer quick open time in order to increase the working time of a mortar. It is also desirable to decrease the set time of a mortar to allow workers to move from application of a mortar during construction to subsequent stages in construction more quickly, which improves productivity. It is yet further desirable to decrease the required water load for a dry-mix formulation, which corresponds to how much water is required to achieve optimal mortar properties. It is also generally desirable to minimize colloidal stabilizer that accompanies RDP additives into a dry-mix formulation because colloidal stabilizers can interfere with the performance of the RDP in enhancing mortar properties.</p>
+      <p id="p-00005-en" num="0005">At the same time, it is desirable to retain dry-mix formulations as close to current and well accepted formulations as possible. This is desirable to keep costs down and to avoid dramatically changing current industry practices, which can require extensive testing and qualifications to confirm industry standards are still met. For example, the current dominant RDP technology for dry-mix cement formulations is based on VAE and VAE/VeoVA copolymers. It is also desirable to achieve the benefits of alumina rich cement with lower concentrations of alumina rich cement.</p>
+      <heading id="h-00004-en" level="1">BRIEF SUMMARY OF THE INVENTION</heading>
+      <p id="p-00006-en" num="0006">The present invention provides a mixture of redispersible polymer powders (RDPs) that are particularly useful in forming a dry-mix formulation that produces a mortar having one or more than one, and can offer all of the desired features set forth above. That is, the mixture of RDPs provide for a dry-mix formulation having one or more of the following improvements over a dry-mix formulation containing an RDP of only VAE or VAE/VeoVA copolymer: a mortar having a longer quick open time, a mortar having decreased set time, a dry-mixing having a lower required water load necessary for optimal properties, and a dry mix containing an RDP without colloidal stabilizer. Surprisingly, the dry-mix formulation of the present invention contains an RDP of copolymers selected from VAE and VAE/VeoVA in combination with another RDP as a drop in replacement for just VAE or VAE/VeoVA RDPs.</p>
+      <p id="p-00007-en" num="0007">Surprisingly, an RDP mixture of a RDP with a particularly high glass transition temperature and carboxylation level and a RDP of VAE or a VAE/VeoVA copolymers, when included in a dry-mix formulation, results in a dry-mix that produces a mortar having one or more of the aforementioned desired improvements over a dry-mix containing an RDP of only VAE or VAE/VeoVA copolymers alone.</p>
+      <p id="p-00008-en" num="0008">In a first aspect, the present invention is a mixture comprising first and second redispersible polymer powders, wherein: (a) the first redispersible polymer powder comprises polymer particles primarily comprising a copolymer having a glass transition temperature of 60 degrees Celsius or higher and an acid level in a range of 0.1 to 8 weight-percent percent as determined by potentiometric titration according to ASTM D664; and (b) the second redispersible polymer powder is selected from vinyl acetate ethylene copolymer redispersible polymer powders and polymer powders of a blend of vinyl acetate ethylene copolymer and vinyl ester of versatic acid copolymer. The mixture can be in the form of a dry-mix formulation that further comprises Portland cement, alumina rich cement and calcium sulfate.</p>
+      <p id="p-00009-en" num="0009">The mixture of the present invention is useful for preparing mortars that are useful, for example, as cement tile adhesives, grout, waterproofing membranes, crack isolation membranes, repair mortars, and self leveling underlayments.</p>
+    </summary>
+    <detailed-desc>
+      <heading id="h-00005-en" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+      <p id="p-00010-en" num="0010">“ASTM” refers to ASTM International and is used to designate a test method by number as published by ASTM. “ANSI” refers to American National Standards Institute. “ISO” refers to International Organization for Standardization and is used to identify ISO test method numbers. Test numbers refer to the most recent test published prior to the priority date of this document unless otherwise specified by a date (for example, using a hyphenated suffix after the test number). “Multiple” means two or more. “And/or” means “and, or as an alternative”. All ranges include endpoints unless otherwise indicated. Specification of a “C” with a numeric subscript when identifying organic compounds refers to the number carbon atoms in the organic compound. “Polymer” includes both homopolymer and copolymer. Redispersible polymer powder, or RDP, refers to a polymer powder that can be dispersed into deionized water, desirable to such an extent that the particles fully disperse rather than agglomerate to form particles equivalent to the size of particles in the dispersion used to prepare the RDP.</p>
+      <p id="p-00011-en" num="0011">The present invention comprises a first RDP that comprises polymer particle primarily comprising a copolymer having a glass transition temperature (Tg) of 60 degrees Celsius (° C.) or higher, preferably 80° C. or higher and more preferably 100° C. or higher. There is no technical upper limit known for the Tg of the first redispersible polymer powder primary copolymer. However, it is typical for the copolymer to have a Tg of 200° C. or lower. Determine Tg for a copolymer by preparing the copolymer alone and measuring the Tg of that copolymer. Measure Tg of a polymer according to ASTM D7426-08 using a heating and cooling rate of 10° C. per minute.</p>
+      <p id="p-00012-en" num="0012">The first RDP “primarily” comprises the copolymer with the aforementioned Tg (that is, “high Tg copolymer”). That means, over 50 weight-percent (wt %), preferably 60 wt % or more, more preferably 70 wt % or more, still more preferably 80 wt % or more, yet more preferably 90 wt % or more and conceivably 100 wt % of the polymers in the first redispersible polymer powder is the high Tg copolymer.</p>
+      <p id="p-00013-en" num="0013">The high Tg copolymer of the first RDP has an acid level (also known as “carboxylation level” or amount of carboxylation) of 0.1 wt % or more, preferably 0.5 wt % or more and at the same time 8 wt % or less, preferably 5 wt % or less and more preferably 3 wt % or less and still more preferably 1.5 wt % or less. Acid level refers to the percent by weight of carboxylic acid moieties copolymerized into the copolymer relative to total weight of monomers copolymerized to form the copolymer. Determine acid level by potentiometric titration according to ASTM D664. Swell the particles with a solvent and neutralize all acid groups present with a strong base (such as sodium hydroxide). Then titrate the particles using the potentiometric titration method.</p>
+      <p id="p-00014-en" num="0014">Introduce carboxylic acid moieties into the high Tg copolymer by copolymerizing acid monomer and/or anhydride monomers into the copolymer. Suitable acid monomers in the high Tg copolymer include itaconic acid, acrylic acid, methacrylic acid, maleic acid. Suitable anhydride monomers include itaconic anhydride, acrylic anhydride, methacrylic anhydride and maleic anhydride. Desirably, the high Tg copolymer comprises copolymerized itaconic acid and can comprise itaconic acid as the only copolymerized acid monomer. Itaconic acid facilitates positioning of more acid functionalities on the surface of the particles than other acids.</p>
+      <p id="p-00015-en" num="0015">The high Tg copolymer of the first redispersible polymer powder is desirably a styrenic copolymer. That is, the high Tg copolymer desirably contains copolymerized styrenic monomer. Desirably, the styrenic monomers are styrene. Preferably, the styrenic monomer is styrene. Desirably, the high Tg copolymer is a copolymer of styrene and a carboxylic acid monomer that preferably comprises or even consists of itaconic acid.</p>
+      <p id="p-00016-en" num="0016">The high Tg copolymer of the first redispersible polymer powder can also, or alternatively, comprise acrylic monomers such as methylmethacrylate and/or tert-butyl methacrylate. For example, the high Tg copolymer can comprise both styrenic and acrylic monomers, styrenic monomers and no acrylic monomers or acrylic monomers and no styrenic monomers.</p>
+      <p id="p-00017-en" num="0017">The ratio of monomers selected for the high Tg copolymer is such that the resulting copolymer has a Tg and acid level that falls within the aforementioned Tg and acid level.</p>
+      <p id="p-00018-en" num="0018">The first RDP desirably has an average particle size in a range of 300 to 5,000 nanometers (nm). Desirably, the first RDP has an average particle size of 350 nm or more, preferably 400 nm or more and at the same time desirably 800 nm or less and preferably 500 nm or less. Determine average particle size of an RDP by dispersing the RDP in deionized water by adding 0.1 gram of the RDP to ten milliliters of water and vortex mixing for one minute and then determine average particle size by laser diffraction according to ISO13320-2009 using a Beckman Coulter LS 13 320 Series laser Diffraction Particle Size Analyzer. Unless otherwise stated, “average particle size” refers to volume-average particle size.</p>
+      <p id="p-00019-en" num="0019">The first RDP can be prepared by first forming a dispersion of the polymer particles in an aqueous medium and then spray drying the dispersion to isolate the polymer particles as a RDP. Interestingly, and beneficially, the first RDP can be isolated by spray drying without including a colloidal stabilizer such as polyvinyl alcohol (PVOH) because the Tg is sufficiently high to preclude blocking and irreversible clumping of the polymer particles. Therefore, the first RDP can be free of colloidal stabilizer such as PVOH. Colloidal stabilizer can still be beneficial, however, for redispersing the RDP and so is generally present at a concentration of 0-30 wt %, preferably 0-5 wt % based on total weight of first RDP.</p>
+      <p id="p-00020-en" num="0020">Second RDP is selected from vinyl acetate ethylene copolymer (VAE) RDPs and polymer powders of a blend of vinyl acetate ethylene copolymer and vinyl ester of versatic acid copolymer (VAE/VeoVA) RDPs. Preferably, the second RDP is selected from VAE RDPs.</p>
+      <p id="p-00021-en" num="0021">The mixture of the present invention can be free of core-shell RDPs. Core-shell RDPs comprise a shell polymer around and associated with a core polymer. “Associated” means proximate to one another due to physical or chemical restraints. For example, the shell polymer can physical encompass the core polymer thereby being associated with the core polymer by a physical restraint. The shell polymer can also be bonded (for example, through graph copolymerization) to the core polymer thereby being associated through chemical restraints. The shell polymer is “around” the core polymer, which means it is located more proximate to the outside surface of the core-shell RDP particle than the core polymer. Desirably, the shell polymer is exposed on the outside surface of the core-shell RDP particle and generally surrounds the core polymer. The RDPs of the present invention typically comprise a single polymer.</p>
+      <p id="p-00022-en" num="0022">The amount of first RDP is generally 10 wt % or more, preferably 20 wt % or more, still more preferably 25 wt % or more and can be 30 wt % or more based on total weight of first and second RDP in the mixture. At the same time, the concentration of first RDP is generally 60 wt % or less and preferably is 40 wt % or less, more preferably 30 wt % or less and can be 20 wt % or less based on total weight of first and second RDPs in the mixture.</p>
+      <p id="p-00023-en" num="0023">The total amount of RDP present in the mixture is desirably two wt % or more, preferably 5 wt % or more and can be 10 wt % or more, 20 wt % or more, 30 wt % or more and even 40 wt % or more based on total mixture weight. At the same time, the total amount of RDP present is generally 50 wt % or less and can be 40 wt % or less, 30 wt % or less 20 wt % or less or even 10 wt % or less based on total mixture weight. When the mixture is a dry-mix tile adhesive formulation, the total amount of RDP is generally 2-10 wt % based on total mixture weight. When the mixture is a dry-mix cementitious water proofing membrane the total amount of RDP is generally 10-50 wt % of the total mixture weight.</p>
+      <p id="p-00024-en" num="0024">The mixture of the present invention can further comprise a combination of both Portland cement and alumina rich cement to form a dry-mix cement formulation. The Portland cement is any ordinary Portland cement. The alumina rich cement has an alumina (Al<sub>2</sub>O<sub>3</sub>) content that is greater than 30 wt %, preferably 40 wt % or more, more preferably 55 wt % or more, still more preferably 70 wt % or more based on total alumina rich cement weight. The alumina rich cement can be, for example, selected from calcium aluminate cement (CAC) and calcium sulfoaluminate cement (CSA).</p>
+      <p id="p-00025-en" num="0025">The amount of Portland cement in a dry-mix formulation form of the mixture of the present invention is desirably 25 wt % or more, and can be 30 wt % or more, even 40 wt % or more and at the same time is generally 45 wt % or less, preferably 40 wt % or less based on the total weight of the dry-mix formulation.</p>
+      <p id="p-00026-en" num="0026">The amount of alumina rich cement is desirably 0.5 wt % or more, typically one wt % or more, preferably 2.5 wt % or more and at the same time typically 10 wt % or less desirably 8 wt % or less and preferably 5.5 wt % or less based on total weight of the dry dry-mix formulation form of the mixture of the present invention.</p>
+      <p id="p-00027-en" num="0027">The dry-mix formulation form of the mixture of the present invention further comprises calcium sulfate, typically at a concentration of 40 wt % or more and 60 wt % or less based on total weight of alumina rich cement.</p>
+      <p id="p-00028-en" num="0028">The mixture can, and generally does when the mixture is a dry-mix formulation, contain fillers and other conventional additives in conventional amounts, such as, for example, alkali metal hydroxide and/or alkaline earth metal hydroxide selected from the group consisting of zinc oxide, zinc hydroxide, and zinc hydroxide carbonate, an accelerator such as lithium carbonate, tartaric acid, one or more thickener such as a cellulose ether, such as hydroxymethylcellulose, a defoamer, and a liquefier, dispersant, or superplasticizer, such as a water soluble co-polymer dispersant, such as MELFLUX™ 2651F, a modified polycarboxylate (MELFLUX is a trademark of BASF Construction Polymers GMBH). Examples of fillers include, for example, sand such as silica sand and quartz sand, quartz flour, calcium carbonate, dolomite, aluminum silicates, talc or mica, or light weight fillers such as pumice, foamed glass, aerated concrete, perlites or vermiculites. Mixtures of the fillers may also be included.</p>
+      <p id="p-00029-en" num="0029">The dry-mix formulation form of the mixture of the present invention of the present invention is useful for hydrating to form mortar. Hydrating the dry-mix formulation generally occurs by adding water to the dry-mix formulation while mixing. One of the advantages of the present dry-mix formulation over other dry-mix formulations (particularly those containing only RDPs selected from RDPs of VAE and VAE/VeoVA copolymers) is that it has a lower water load. That is, the present dry-mix formulation requires less water to simultaneously achieve optimal consistency, compressibility and shear properties (collectively, “Optimal Properties”) than other dry-mix formulations. “Optimal Properties” in this context refers to optimal values for three characteristics, the test methods follow: consistency (97.5% rating value under Heritage-Wolff Stick Test), compressibility (&gt;90% wetting in Compressibility Test) and viscosity (400,000-600,000 centiPoise in Mortar Viscosity Test).</p>
+      <heading id="h-00006-en" level="1">Heritage-Wolff Stick Test</heading>
+      <p id="p-00030-en" num="0030">Place 100 grams of the dry-mix into a plastic container and add a known amount of water to form a mortar (approximately 20 grams). Evenly sir the mortar for 30 seconds with a wooden stick (tongue depressor). Evaluate the consistency of the mortar by placing the entire mortar composition on the top of the wooden stick while holding the stick in a horizontal position. Evaluate consistency by characterizing how the mortar moves or sags on the stick according to the following characterization scale: 100%=no movement; 97.5%=nearly compact with slight movement; 95%=slight and continuous movement; 92.5%=fast and continuous movement.</p>
+      <heading id="h-00007-en" level="1">Compressibility Test</heading>
+      <p id="p-00031-en" num="0031">Prepare a uniform mortar by adding a known amount of water to the dry-mix while mixing. Trowel the mortar uniformly along the length of an acrylic tile. Allow the mortar to sit for 10 minutes. Place a glass plate on top of the mortar and apply a 2.2 kilogram weight immediately onto the glass plate and allow to sit for 30 seconds. Remove the weight and place a plastic sheet over the glass place, the plastic sheet having marked on it a 10.16 centimeter by 10.16 centimeter (4 inch by 4 inch) grid divided into 400 equally sized squares. Determine the percentage of the glass that is wetted by the mortar. Wetting of more than 90% of the glass is optimal.</p>
+      <heading id="h-00008-en" level="1">Mortar Viscosity Test</heading>
+      <p id="p-00032-en" num="0032">Prepare a uniform mortar by adding a known amount of water to the dry-mix while mixing. Measure the viscosity of the mortar with a Brookfield Synchro-letric viscometer (Model RVT) in combination with a Brookfield Helipath stand at 25 degrees Celsius (° C.) using spindle T-F. To measure viscosity, place the mortar in a density cup and position it so that the spindle just touches the surface of the mortar. Allow the spindle to rotate for two minutes at five revolutions-per-minute (rpm). As the spindle rotates move the viscometer up and down so that the rotating spindle establishes a helical path through the sample. Take the first viscosity measurement after the spindle has submerged after completing a full revolution. Record four viscosity measurements as the viscometer moves in each direction and record the average of the measurements. Make viscosity measurement immediately after forming the mortar. A viscosity in a range of 400,000 to 600,000 centiPoise (cps) is optimal.</p>
+      <p id="p-00033-en" num="0033">Another benefit of the present invention is that it provides for hydration to a mortar that concomitantly has Optimal Properties and longer quick open time, decreased set time, or both longer quick open time and decreased set time relative to other dry-mix formulations, particularly those containing RDPs selected only from RDPs of VAE and VAE/VeoVA copolymers.</p>
+      <p id="p-00034-en" num="0034">Determine set time according to ASTM C191 by placing mortar formed by mixing a known amount of water with the dry-mix to form a uniform composition having optimal properties into circular set time molds and covering the mortar with a layer of plastic held in place with rubber bands. Characterize initial set time and final set time by measuring the distance Vicat needles can penetrate into the mortar.</p>
+      <p id="p-00035-en" num="0035">Determine quick open time according to the following procedure: Put 100 grams of dry-mix into a 200 milliliter beaker, add water as noted for the specific mortar, stir for one minute, allow the mortar to set for three minutes, mix for another minute, butter the mortar onto a fiber-reinforced cement board (EtaplanN, 40 centimeters by 20 centimeters), comb the mortar at a 60° angle using a 4×4 millimeter notched trowel. At each of the following time intervals after trowling place an Earthenware tile (5 cm×5 cm, having a water absorbing capacity of 15+/−3% in accordance with EN 159) into the mortar and place a 3 kilogram weight on it for 30 seconds: 5 minutes, 10, minutes, 15 minutes, 20 minutes, 25 minutes, 30 minutes. After 40 minutes, remove all tiles and turn them over to expose the surface that was in contact with the mortar. Evaluate how extensively the mortar wetted each tile by determining what percentage of the tile is covered by mortar. To assist in the determination, place a 10×10 grid of squares, each 25 square millimeters in size, over the tile and determine what percentage of tile in each square is covered with mortar. Round the surface area percentage to the nearest 5% value. Higher surface area percentages on tiles set into the mortar at a certain time reveals the mortar is more “open” that time than a tile having a lower surface area percentage from that same certain time.</p>
+      <p id="p-00036-en" num="0036">These improvements in properties are evident even when the dry-mix formulation comprises less colloidal stabilizer and/or less alumina rich cement than other comparable dry-mix formulations. For example, these improvements can be evident even when the first RDP has 5 wt % or less colloidal stabilizer, even when the first RDP has no colloidal stabilizer.</p>
+      <p id="p-00037-en" num="0037">The following examples illustrate embodiments of the present invention.</p>
+      <heading id="h-00009-en" level="1">EXAMPLES</heading>
+      <p id="p-00038-en" num="0038">The following components are used to prepare the Examples (Exs) and Comparative Examples (Comp Exs):</p>
+      <p id="p-00039-en" num="0000">
+        <tables id="tables-00001-en" num="00001">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="2" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="49pt" align="left" />
+              <colspec colname="2" colwidth="245pt" align="left" />
+              <thead>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry>Component</entry>
+                  <entry>Description</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry>450 SPP</entry>
+                  <entry>A redispersible polymer powder of a copolymer consisting of 99 wt % styrene and</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>one wt % itaconic acid that has an average particle size of 450 nanometers.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(prepared as described below).</entry>
+                </row>
+                <row>
+                  <entry>225 SPP</entry>
+                  <entry>A redispersible polymer powder of a copolymer consisting of 98 wt % styrene and</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>two wt % itaconic acid that has an average particle size of 225 nanometers.</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>(prepared as described below).</entry>
+                </row>
+                <row>
+                  <entry>VAE RDP</entry>
+                  <entry>A redispersible polymer powder of a vinyl acetate-ethylene copolymer having a</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>residual moisture content of 2 wt % or less, bulk density of 0.375-0.525 grams per</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>milliliter and a glass transition temperature of approximately 17° C. (for example</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>DLP 2000 redispersible polymer powder available from The Dow Chemical</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Company).</entry>
+                </row>
+                <row>
+                  <entry>Portland</entry>
+                  <entry>Portland Cement Type 1</entry>
+                </row>
+                <row>
+                  <entry>Cement</entry>
+                </row>
+                <row>
+                  <entry>Alumina Rich</entry>
+                  <entry>A calcium aluminate cement containing 68.7-70.5 wt % alumina (for example,</entry>
+                </row>
+                <row>
+                  <entry>Cement</entry>
+                  <entry>TERNAL ™ W calcium aluminate cement; TERNAL is a trademark of Kerneos</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Corporation).</entry>
+                </row>
+                <row>
+                  <entry>Calcium</entry>
+                  <entry>At least 98.7 wt % calcium sulfate composition (for example, SNOW WHITE ™</entry>
+                </row>
+                <row>
+                  <entry>Sulfate</entry>
+                  <entry>calcium sulfate filler; SNOW WHITE is a trademark of</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>United States Gypsum Company)</entry>
+                </row>
+                <row>
+                  <entry>Cellulose Ether</entry>
+                  <entry>Hydroxyethyl methyl cellulose having as a 2 wt % solution in water, a neutral pH</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>and a viscosity of 40,000-60,000 milliPascals * seconds according to Haake</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Rotovisko RV 100, shear rate 2.55 s<sup>−1 </sup>at 20° C. (for example, WALOCEL ™ MKX</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>60000 PF 01 hydroxyethyl methyl cellulose; WALOCEL is a trademark of the</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry>Dow Chemical Company).</entry>
+                </row>
+                <row>
+                  <entry>Sand</entry>
+                  <entry>Silica sand (for example, unground silica sand sold as F-80 by U.S. Silica).</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="2" align="center" rowsep="1" />
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <heading id="h-00010-en" level="1">Preparation of 450 SPP RDP</heading>
+      <p id="p-00040-en" num="0039">Into a 4-neck, 5-liter round bottom flask add 785 grams of deionized water, a reactor buffer (solution of 1.2 grams of sodium carbonate in 30 grams deionized water) and 23.3 grams of itaconic acid. Fit the 5-liter round bottom flask with a mechanical stirrer, thermocouple, condenser and a stainless steel dip tube. Warm the solution in the round bottom flask to 95° C. while mixing at 125 revolutions per minute. Add quickly (within one minute) to the 95° C. solution a preformed seed solution. The preformed seed solution is 56.6 grams of an acrylic latex having a particle size of 103 (for example, RHOPLEX™ AC-2612 acrylic emulsion, RHOPLEX is a trademark of The Dow Chemical Company) and 30 grams deionized water. Then feed into the solution a monomer emulsion at a rate of 11.7 grams per minute using and FMI Q pump and a cofeed catalyst at 0.76 grams per minute using a Cole-Palmer Dual syringe pump. The monomer emulsion contains 490 grams of deionized water, 11.9 grams of alkyldiphenyloxide disulfonate (DOWFAX™ 2A1 Surfactant, DOWFAX is a trademark of The Dow Chemical Company), and 2308.4 grams of styrene. The cofeed catalyst contains 7.6 grams of sodium persulfate in 220 grams of deionized water. The addition of the monomer emulsion takes four hours and cofeed catalyst takes five hours. After the additions are complete, rinse the monomer emulsion line into the solution with 35 grams deionized water and the cofeed catalyst line into the solution with 10 grams of deionized water. Maintain the solution temperature at 87-89° C. during addition of the monomer emulsion and cofeed catalyst and continuously stirred at 225 revolutions per minute.</p>
+      <p id="p-00041-en" num="0040">Cool the resulting emulsion to 80° C. and then rapidly add an aqueous solution of 0.13 grams of ferrous sulfate in 38 grams of deionized water. Then over 30 minutes feed 65 grams of a 1.2 wt % tert-butylhydroperoxide solution and a 65 grams of a 2.6 wt % sodium formaldehyde sulfoxylate solution using a dual syringe pump while cooling to 50° C. Then add 34 grams of an aqueous 25 wt % sodium hydroxide solution over ten minutes. Isolate the latex. The resulting latex is 55.42 wt % solids, has an average particle size of 458 nanometers (BI90 plus), a viscosity of 53 centipoise (LV#2, 60 rpm), a pH of 7.94 and 1614 ppm styrene.</p>
+      <p id="p-00042-en" num="0041">To obtain the RDP, spray dry the resulting latex using a two-fluid nozzle atomizer equipped on a MOBILE MINOR™ 2000 Model H spray dryer (MOBILE MINOR is a trademark of NIRO A/S Limited Liability Company, Denmark). Use an air pressure to the nozzle of 1 bar with 50% flow equivalent to 6.0 kilograms per hour of air flow. Spray dry in a nitrogen environment with an inlet temperature fixed at 140° C. and an outlet temperature targeted at 50° C. by tuning the feed rate of the dispersion (feed rate of 20-30 milliliters per minute). Prior to spraying, adjust the pH of the latex to approximately 10 using 1 M sodium hydroxide solution. Mix the latex with a MOWIOL™ 488 PVOH solution (MOWIOL is a trademark of Hoechst Aktiengesellschaft) to a concentration of 5 wt % based on latex solids weight. Pump the mixture into the heated chamber by an emulsion feed pump while feeding Kaolin clay powder (Kamin™ HG-90, Kamin is a trademark of Kamin LLC) into the chamber as an anti-caking agent at a concentration of approximately 10 wt % of the solids weight in the emulsion.</p>
+      <p id="p-00043-en" num="0042">The resulting RDP has an average particle size of 10- 20 microns as determined using a Beckman Coulter LS 13 320 laser diffraction particle size analyzer equipped with a Tornado Dry Powder System. The RDP redisperses to the latex particle size in water as determined by dispersing the RDP into deionized water at a concentration of one wt %, vortex mixing for 30 seconds two times and then determining particle size with a Beckman Coulter LS 13 320 laser light diffraction particle size analyzer equipped with the Universal Liquid Module. The method used is the international standard ISO 13320-1:1999 Particle Size Analysis-Laser Diffraction Method.</p>
+      <heading id="h-00011-en" level="1">Preparation of 225 SPP RDP</heading>
+      <p id="p-00044-en" num="0043">Prepare the 225 SPP RDP in like manner as the 450 SPP RDP except use 113.2 grams of perform seed instead of 59.6 grams.</p>
+      <heading id="h-00012-en" level="1">Comp Ex A and Exs 1-3 </heading>
+      <p id="p-00045-en" num="0044">Ex and Comp Ex mixtures, both RDP mixtures and full dry-mix forms of the mixtures containing the RDP mixtures, are described in Table 1 followed by characteristics of the dry-mix and resulting mortar at the specified Water Load. Concentrations are provided in wt % relative to total weight of the dry-mix. Prepare the dry-mixes of the Exs and Comp Exs by combining the cement, sand, lithium carbonate, tartaric acid, calcium sulfate and RDP components together in a plastic bag and hand mixing for two minutes followed by conditioning (let sit to equilibrate) for 24 hours.</p>
+      <p id="p-00046-en" num="0045">For characterizing the mortar, hydrate with the amount minimum amount of water required to achieve Optimal Properties as described for the Water Load test and then follow the procedures for each of the characterization tests.</p>
+      <p id="p-00047-en" num="0000">
+        <tables id="tables-00002-en" num="00002">
+          <table frame="none" colsep="0" rowsep="0" pgwide="1">
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="offset" colwidth="105pt" align="left" />
+              <colspec colname="1" colwidth="42pt" align="center" />
+              <colspec colname="2" colwidth="42pt" align="center" />
+              <colspec colname="3" colwidth="42pt" align="center" />
+              <colspec colname="4" colwidth="42pt" align="center" />
+              <thead>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" rowsep="1">TABLE 1</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry />
+                  <entry>Comp Ex A</entry>
+                  <entry>Ex 1</entry>
+                  <entry>Ex 2</entry>
+                  <entry>Ex 3</entry>
+                </row>
+                <row>
+                  <entry />
+                  <entry namest="offset" nameend="4" align="center" rowsep="1" />
+                </row>
+              </thead>
+              <tbody valign="top">
+                <row>
+                  <entry />
+                </row>
+              </tbody>
+            </tgroup>
+            <tgroup cols="5" colsep="0" rowsep="0" align="left">
+              <colspec colname="1" colwidth="105pt" align="left" />
+              <colspec colname="2" colwidth="42pt" align="char" char="." />
+              <colspec colname="3" colwidth="42pt" align="char" char="." />
+              <colspec colname="4" colwidth="42pt" align="char" char="." />
+              <colspec colname="5" colwidth="42pt" align="char" char="." />
+              <tbody valign="top">
+                <row>
+                  <entry>Portland Cement</entry>
+                  <entry>31</entry>
+                  <entry>31</entry>
+                  <entry>31</entry>
+                  <entry>31</entry>
+                </row>
+                <row>
+                  <entry>Calcium Rich Cement</entry>
+                  <entry>4.00</entry>
+                  <entry>4.00</entry>
+                  <entry>4.00</entry>
+                  <entry>4.00</entry>
+                </row>
+                <row>
+                  <entry>Sand</entry>
+                  <entry>56.38</entry>
+                  <entry>56.38</entry>
+                  <entry>56.38</entry>
+                  <entry>56.38</entry>
+                </row>
+                <row>
+                  <entry>Lithium Carbonate</entry>
+                  <entry>0.1</entry>
+                  <entry>0.1</entry>
+                  <entry>0.1</entry>
+                  <entry>0.1</entry>
+                </row>
+                <row>
+                  <entry>Tartaric Acid</entry>
+                  <entry>0.2</entry>
+                  <entry>0.2</entry>
+                  <entry>0.2</entry>
+                  <entry>0.2</entry>
+                </row>
+                <row>
+                  <entry>Calcium Sulfate</entry>
+                  <entry>2</entry>
+                  <entry>2</entry>
+                  <entry>2</entry>
+                  <entry>2</entry>
+                </row>
+                <row>
+                  <entry>VAE RDP</entry>
+                  <entry>6</entry>
+                  <entry>5.10</entry>
+                  <entry>5.10</entry>
+                  <entry>4.2</entry>
+                </row>
+                <row>
+                  <entry>225 SPP</entry>
+                  <entry>0</entry>
+                  <entry>0.9</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                </row>
+                <row>
+                  <entry>450 SPP</entry>
+                  <entry>0</entry>
+                  <entry>0</entry>
+                  <entry>0.9</entry>
+                  <entry>1.8</entry>
+                </row>
+                <row>
+                  <entry>Cellulose Ether</entry>
+                  <entry>0.32</entry>
+                  <entry>0.32</entry>
+                  <entry>0.32</entry>
+                  <entry>0.32</entry>
+                </row>
+                <row>
+                  <entry>Water Load<sup>1</sup></entry>
+                  <entry>0.215</entry>
+                  <entry>0.200</entry>
+                  <entry>0.200</entry>
+                  <entry>0.200</entry>
+                </row>
+                <row>
+                  <entry>Mortar Viscosity<sup>2 </sup>(cps)</entry>
+                  <entry>511,000</entry>
+                  <entry>600,000</entry>
+                  <entry>592,000</entry>
+                  <entry>524,000</entry>
+                </row>
+                <row>
+                  <entry>Set Time (hours - initial/final)</entry>
+                  <entry>10.7/24.5</entry>
+                  <entry>8.8/30.5</entry>
+                  <entry>10.8/20.6</entry>
+                  <entry>6.8/12.7</entry>
+                </row>
+                <row>
+                  <entry>Quick Open Time</entry>
+                </row>
+                <row>
+                  <entry>(% the coverage)</entry>
+                </row>
+                <row>
+                  <entry> 5 min</entry>
+                  <entry>97</entry>
+                  <entry>97</entry>
+                  <entry>97</entry>
+                  <entry>98</entry>
+                </row>
+                <row>
+                  <entry>10 min</entry>
+                  <entry>93</entry>
+                  <entry>80</entry>
+                  <entry>90</entry>
+                  <entry>85</entry>
+                </row>
+                <row>
+                  <entry>15 min</entry>
+                  <entry>90</entry>
+                  <entry>55</entry>
+                  <entry>90</entry>
+                  <entry>81</entry>
+                </row>
+                <row>
+                  <entry>20 min</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                  <entry>50</entry>
+                </row>
+                <row>
+                  <entry>25 min</entry>
+                  <entry>35</entry>
+                  <entry>43</entry>
+                  <entry>45</entry>
+                  <entry>45</entry>
+                </row>
+                <row>
+                  <entry>30 min</entry>
+                  <entry>12</entry>
+                  <entry>20</entry>
+                  <entry>40</entry>
+                  <entry>40</entry>
+                </row>
+                <row>
+                  <entry>Total colloidal stabilizer<sup>3</sup></entry>
+                  <entry>11</entry>
+                  <entry>9.95</entry>
+                  <entry>9.95</entry>
+                  <entry>8.9</entry>
+                </row>
+                <row>
+                  <entry>(wt % relative to total RDP weight)</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="center" rowsep="1" />
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="left" id="entry-00001-en">
+                    <sup>1</sup>Water Load corresponds to the lowest weight ratio of water to dry-mix determined to provide Optimal Properties (optimal consistency, compressibility and viscosity as describe earlier herein) for the resulting mortar.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="left" id="entry-00002-en">
+                    <sup>2</sup>Mortar viscosity as determined by the Mortar Viscosity Test described earlier herein. Values are in thousands of cps. For example, 490k cps = 490,000 cps.</entry>
+                </row>
+                <row>
+                  <entry namest="1" nameend="5" align="left" id="entry-00003-en">
+                    <sup>3</sup>Colloidal stabilizer is PVOH. DLP2000 contains approximately 11 wt % PVOH based on total RDP weight. 450 SPP and 225 SPP each contain approximately 4 wt % PVOH based on total RDP weight.</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </tables>
+      </p>
+      <p id="p-00048-en" num="0046">Comp Ex A is a reference standard for Exs 1-3 and represents a dry-mix comprising only a VAE RDP. The Exs are a similar dry-mix formulation but with a certain portion of the RDP comprising a high Tg copolymer RDP. The Exs and Comp Exs described in Table 1 reveal the surprising and desirable benefit of the present invention. The data in Table 1 reveals at least the following:</p>
+      <p id="p-00049-en" num="0047">1. A lower Water Load is required for the dry-mix formulations comprising a high Tg copolymer RDP. Comp Ex A requires a weight ratio of 0.215 while the Exs require a weight ratio of only 0.200.</p>
+      <p id="p-00050-en" num="0048">2. Initial and final set times are shortened with an RDP that comprises a high Tg copolymer RDP. This is most evident in Ex 3, which illustrates a reduction of both initial and final set times relative to Comp Ex A. Both Exs 1 and 2 also reveal a shorter set time either in initial or final set time relative to Comp Ex A.</p>
+      <p id="p-00051-en" num="0049">3. Quick open times are lengthened with an RDP that comprises a high Tg copolymer RDP. A higher percentage tile coverage corresponds to a longer quick open time. The advantage of the present invention is most evident in the 25 and 30 minute evaluation where 40% coverage of the tile is still achieved on tiles set into the mortar 30 minutes after trowling.</p>
+      <p id="p-00052-en" num="0050">4. Improved performance with less colloidal stabilizer. The Examples display the aforementioned improvements while further comprising less colloidal stabilizer than the comparative example.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150903">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A mixture comprising first and second redispersible polymer powders, wherein:
+<claim-text>a. the first redispersible polymer powder comprises polymer particles primarily comprising a copolymer having a glass transition temperature of 60 degrees Celsius or higher and an acid level in a range of 0.1 to 8 weight-percent percent as determined by potentiometric titration according to ASTM D664; and</claim-text><claim-text>b. the second redispersible polymer powder is selected from vinyl acetate ethylene copolymer redispersible polymer powders and polymer powders of a blend of vinyl acetate ethylene copolymer and vinyl ester of versatic acid copolymer.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The mixture of <claim-ref idref="clm-00001-en">claim 1</claim-ref> further comprising Portland cement, alumina rich cement and calcium sulfate so as to form a dry-mix formulation.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The mixture of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further characterized by the first redispersible polymer powder concentration being 10 weight-percent or more and 30 weight-percent or less based on total weight of first and second redispersible polymer powder.</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The dry mixture <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further characterized by the first redispersible polymer powder comprising primarily a copolymer containing copolymerized styrene and itaconic acid.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The mixture of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further characterized by the first redispersible polymer powder having an acid level in a range of 0.5 to 1.5 weight-percent as determined by potentiometric titration according to ASTM D664.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The mixture of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further characterized by the first redispersible polymer powder being free of colloidal stabilizer.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en">
+      <claim-text>
+        <b>7</b>. The mixture of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further characterized by the first redispersible polymer powder comprising particles primarily comprising a copolymer having a glass transition temperature of 80 degrees Celsius or higher.</claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The mixture of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further characterized by the first redispersible polymer powder having a volume-average particle size that is in a range of 350 to 800 nanometers.</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The mixture of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the second redispersible polymer powder is a vinyl acetate ethylene copolymer redispersible polymer powder.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The mixture of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, further characterized by being free of core-shell redispersible polymer powder.</claim-text>
+    </claim>
+  </claims>
+  <image file="US20150247029A1.PDF" type="pdf" size="367439" pages="7" />
+</lexisnexis-patent-document>

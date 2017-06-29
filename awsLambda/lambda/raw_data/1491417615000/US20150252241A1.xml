@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright ©2016 LexisNexis Univentio, The Netherlands. -->
+<lexisnexis-patent-document schema-version="1.13" date-produced="20160127" file="US20150252241A1.xml" produced-by="LexisNexis-Univentio" lang="eng" date-inserted="20150910" time-inserted="021814" date-changed="20151006" time-changed="063135">
+  <bibliographic-data lang="eng">
+    <publication-reference publ-type="Application" publ-desc="Patent Application Publication">
+      <document-id id="121229236">
+        <country>US</country>
+        <doc-number>20150252241</doc-number>
+        <kind>A1</kind>
+        <date>20150910</date>
+      </document-id>
+    </publication-reference>
+    <application-reference appl-type="utility">
+      <document-id>
+        <country>US</country>
+        <doc-number>14434767</doc-number>
+        <date>20131001</date>
+      </document-id>
+    </application-reference>
+    <application-series-code>14</application-series-code>
+    <language-of-filing>eng</language-of-filing>
+    <language-of-publication>eng</language-of-publication>
+    <priority-claims date-changed="20150910">
+      <priority-claim sequence="1" kind="national">
+        <country>KR</country>
+        <doc-number>1020120115227</doc-number>
+        <date>20121017</date>
+      </priority-claim>
+    </priority-claims>
+    <dates-of-public-availability date-changed="20150917">
+      <unexamined-printed-without-grant>
+        <date>20150910</date>
+      </unexamined-printed-without-grant>
+    </dates-of-public-availability>
+    <classifications-ipcr date-changed="20150917">
+      <classification-ipcr sequence="1">
+        <text>C09K   5/14        20060101AFI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+      <classification-ipcr sequence="2">
+        <text>C08K   9/10        20060101ALI20150910BHUS        </text>
+        <ipc-version-indicator>
+          <date>20060101</date>
+        </ipc-version-indicator>
+        <classification-level>A</classification-level>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>US</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-ipcr>
+    </classifications-ipcr>
+    <classifications-cpc date-changed="20150917">
+      <classification-cpc sequence="1">
+        <text>C09K   5/14        20130101 FI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>09</class>
+        <subclass>K</subclass>
+        <main-group>5</main-group>
+        <subgroup>14</subgroup>
+        <symbol-position>F</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="2">
+        <text>B82Y  30/00        20130101 LI20141104BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>82</class>
+        <subclass>Y</subclass>
+        <main-group>30</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141104</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="3">
+        <text>B82Y  40/00        20130101 LI20141104BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>B</section>
+        <class>82</class>
+        <subclass>Y</subclass>
+        <main-group>40</main-group>
+        <subgroup>00</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20141104</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="4">
+        <text>C01B  31/0438      20130101 LI20150911BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>01</class>
+        <subclass>B</subclass>
+        <main-group>31</main-group>
+        <subgroup>0438</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150911</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+      <classification-cpc sequence="5">
+        <text>C08K   9/10        20130101 LI20150910BHEP        </text>
+        <cpc-version-indicator>
+          <date>20130101</date>
+        </cpc-version-indicator>
+        <section>C</section>
+        <class>08</class>
+        <subclass>K</subclass>
+        <main-group>9</main-group>
+        <subgroup>10</subgroup>
+        <symbol-position>L</symbol-position>
+        <classification-value>I</classification-value>
+        <action-date>
+          <date>20150910</date>
+        </action-date>
+        <generating-office>
+          <country>EP</country>
+        </generating-office>
+        <classification-status>B</classification-status>
+        <classification-data-source>H</classification-data-source>
+      </classification-cpc>
+    </classifications-cpc>
+    <number-of-claims calculated="yes">26</number-of-claims>
+    <invention-title id="title_eng" date-changed="20150910" lang="eng" format="original">COATED PARTICLE, COMPOSITION INCLUDING SAME, AND HEAT TRANSFER SHEET</invention-title>
+    <parties date-changed="20150910">
+      <applicants>
+        <applicant sequence="1" app-type="applicant" designation="us-only">
+          <addressbook lang="eng">
+            <orgname>LMS CO.,LTD</orgname>
+            <address>
+              <city>Pyeongtaek-si Gyeonggi-do</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+          <residence>
+            <country>KR</country>
+          </residence>
+        </applicant>
+      </applicants>
+      <inventors>
+        <inventor sequence="1" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Jang</last-name>
+            <first-name>Sung Won</first-name>
+            <address>
+              <city>Seoul</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="2" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Kwon</last-name>
+            <first-name>Oh Kwan</first-name>
+            <address>
+              <city>Gyeonggi-do</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+        <inventor sequence="3" designation="us-only">
+          <addressbook lang="eng">
+            <last-name>Choi</last-name>
+            <first-name>Jeong Og</first-name>
+            <address>
+              <city>Seoul</city>
+              <country>KR</country>
+            </address>
+          </addressbook>
+        </inventor>
+      </inventors>
+    </parties>
+    <pct-or-regional-filing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>KR13008787</doc-number>
+        <date>20131001</date>
+      </document-id>
+    </pct-or-regional-filing-data>
+    <pct-or-regional-publishing-data>
+      <document-id>
+        <country>WO</country>
+        <doc-number>2014061929</doc-number>
+        <date>20140424</date>
+      </document-id>
+    </pct-or-regional-publishing-data>
+    <patent-family date-changed="20150910">
+      <main-family family-id="158746503">
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101266391</doc-number>
+            <kind>B1</kind>
+            <date>20130522</date>
+          </document-id>
+          <application-date>
+            <date>20121017</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252241</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014061929</doc-number>
+            <kind>A1</kind>
+            <date>20140424</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+      </main-family>
+      <complete-family family-id="158746502">
+        <family-member>
+          <document-id>
+            <country>KR</country>
+            <doc-number>101266391</doc-number>
+            <kind>B1</kind>
+            <date>20130522</date>
+          </document-id>
+          <application-date>
+            <date>20121017</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>US</country>
+            <doc-number>20150252241</doc-number>
+            <kind>A1</kind>
+            <date>20150910</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+        <family-member>
+          <document-id>
+            <country>WO</country>
+            <doc-number>2014061929</doc-number>
+            <kind>A1</kind>
+            <date>20140424</date>
+          </document-id>
+          <application-date>
+            <date>20131001</date>
+          </application-date>
+        </family-member>
+      </complete-family>
+    </patent-family>
+  </bibliographic-data>
+  <abstract id="abstr_eng" date-changed="20150910" lang="eng" format="original">
+    <p id="p-a-00001-en" num="0000">The coated particle according to the present invention includes a base particle and a graphene layer which covers the surface of the base particle. Accordingly, a coated particle of which the shape and the particle distribution are easily controlled may be prepared.</p>
+  </abstract>
+  <legal-data date-changed="20150925">
+    <legal-event sequence="1">
+      <publication-date>
+        <date>20150410</date>
+      </publication-date>
+      <event-code-1>AS</event-code-1>
+      <legal-description>ASSIGNMENT</legal-description>
+      <status-identifier>N</status-identifier>
+      <docdb-publication-number> US  2015252241A1</docdb-publication-number>
+      <docdb-application-id>444310541</docdb-application-id>
+      <new-owner>LMS CO., LTD, KOREA, REPUBLIC OF</new-owner>
+      <free-text-description>ASSIGNMENT OF ASSIGNORS INTEREST;ASSIGNORS:JANG, SUNG WON;KWON, OH KWAN;CHOI, JEONG OG;REEL/FRAME:035375/0338</free-text-description>
+      <effective-date>
+        <date>20150323</date>
+      </effective-date>
+    </legal-event>
+  </legal-data>
+  <description id="descr_eng" lang="eng" format="original" date-changed="20150910">
+    <related-apps>
+      <heading id="h-00001-en" level="1">CROSS-REFERENCE TO RELATED APPLICATIONS</heading>
+      <p id="p-00001-en" num="0001">This application is the United States national phase of International Application No. PCT/KR2013/008787 filed Oct. 1, 2013, and claims priority to Korean Patent Application No. 10-2012-0115227 filed Oct. 17, 2012, the disclosure of which are hereby incorporated in their entirety by reference.</p>
+    </related-apps>
+    <summary>
+      <heading id="h-00002-en" level="1">TECHNICAL FIELD</heading>
+      <p id="p-00002-en" num="0002">The present invention relates to a coated particle, a composition including the same, and a heat transfer sheet, and more particularly, to a coated particle having improved heat transfer characteristics, a composition including the same, and a heat transfer sheet.</p>
+      <heading id="h-00003-en" level="1">BACKGROUND ART</heading>
+      <p id="p-00003-en" num="0003">In general, an electronic product includes various kinds of electronic devices from which heat is generated while the product is driven. Since the electronic product has a problem such as malfunction due to heat generated from the electronic devices, heat radiation sheets have been introduced into the electronic product in order to emit heat generated from the electronic devices.</p>
+      <p id="p-00004-en" num="0004">In the related art, heat generated from the electronic devices was emitted by using a metal heat radiation sheet composed of a metal having high heat conductivity, such as aluminum (Al) or copper (Cu), but there was a problem in that heat transfer characteristics deteriorate as the thickness of the metal heat radiation sheet became small. Further, there is also a disadvantage in that production costs are increased by a high temperature process of manufacturing a metal heat radiation sheet, thereby leading to an increase in unit cost of the heat radiation sheet.</p>
+      <p id="p-00005-en" num="0005">Meanwhile, heat radiation sheets using graphene having excellent heat transfer characteristics, which replaces metal, have been developed. Since graphene has a plate-like structure, a heat radiation sheet using graphene has low heat transfer characteristics in a direction perpendicular to an in-plane direction of graphene compared to heat transfer characteristics of graphene in the in-plane direction thereof. Accordingly, there is a limitation in manufacturing a heat radiation sheet having excellent heat transfer characteristics both in the in-plane direction and in the direction perpendicular to the in-plane direction even though graphene is used.</p>
+      <heading id="h-00004-en" level="1">DISCLOSURE</heading>
+      <heading id="h-00005-en" level="1">Technical Problem</heading>
+      <p id="p-00006-en" num="0006">The present invention provides a coated particle having improved heat transfer characteristics.</p>
+      <p id="p-00007-en" num="0007">The present invention provides a composition including the coated particle.</p>
+      <p id="p-00008-en" num="0008">The present invention provides a heat transfer sheet including the coated particle.</p>
+      <heading id="h-00006-en" level="1">Technical Solution</heading>
+      <p id="p-00009-en" num="0009">The coated particle according to the present invention includes a base particle and a graphene layer. The base particle is composed of a metal, and the graphene layer covers at least a part of the surface of the base particle.</p>
+      <p id="p-00010-en" num="0010">In an exemplary embodiment, the base particle may have a spherical shape, a plate shape, or a wire shape.</p>
+      <p id="p-00011-en" num="0011">In an exemplary embodiment, the graphene layer may include graphene including at least one layer or more.</p>
+      <p id="p-00012-en" num="0012">In an exemplary embodiment, the base particle may be formed of nickel (Ni), copper (Cu), iron (Fe), ruthenium (Ru), cobalt (Co), platinum (Pt), or iridium (Ir). These may be used either independently or in combination of two or more thereof.</p>
+      <p id="p-00013-en" num="0013">The composition according to the present invention includes a base resin and a coated particle. The coated particle is distributed in the base resin, and includes the base particle and the graphene layer. The graphene layer covers at least a part of the surface of the base particle.</p>
+      <p id="p-00014-en" num="0014">In an exemplary embodiment, the content of the coated particle may be 5 parts by weight to 500 parts by weight with respect to 100 parts by weight of the base resin.</p>
+      <p id="p-00015-en" num="0015">In an exemplary embodiment, the composition may further include a carbon-containing powder distributed in the base resin together with the coated particle. In this case, the carbon-containing powder may include carbon nanotubes, graphene flake, oxidized graphene flake, graphite flake, oxidized graphite flake, expanded graphite flake, fullerene, carbon fiber, or carbon black.</p>
+      <p id="p-00016-en" num="0016">In an exemplary embodiment, the content of the carbon-containing powder may be 30 parts by weight or less with respect to 100 parts by weight of the base resin.</p>
+      <p id="p-00017-en" num="0017">In an exemplary embodiment, the base resin may include an ethylene resin, a propylene resin, a vinyl chloride resin, a styrene resin, a carbonate resin, an ester resin, a nylon resin, a silicone resin or an imide resin.</p>
+      <p id="p-00018-en" num="0018">A sheet according to the present invention is a sheet which transfers heat and includes a base film including a base resin, and a coated particle. The coated particle is distributed in the base film, and includes a base particle and a graphene layer which covers at least a part of the surface of the base particle.</p>
+      <heading id="h-00007-en" level="1">Advantageous Effects</heading>
+      <p id="p-00019-en" num="0019">According to the present invention, since a base particle is prepared by using a metal of which the shape is easily controlled and a graphene layer is formed on the surface of the base particle, the shape of the coated particle is easily controlled and it is possible to uniformly distribute the coated particle in a process of manufacturing a sheet.</p>
+      <p id="p-00020-en" num="0020">Further, when a heat transfer sheet is manufactured by using the coated particle according to the present invention, it is possible to manufacture a heat transfer sheet having improved heat transfer characteristics. Heat transfer characteristics may be improved in an in-plane direction of the sheet as well as in a direction perpendicular to the in-plane direction. Accordingly, since a separate sheet for strengthening heat transfer characteristics need not be used, the weight of a device may be reduced.</p>
+      <p id="p-00021-en" num="0021">As described above, the sheet having improved heat transfer characteristics may be used in various electronic devices and electronic equipment, thereby improving heat emission characteristics of the electronic device and the electronic equipment, and improving reliability of the device and the equipment and extending a service life thereof therefrom. In addition, due to weight reduction of a sheet, it is also possible to reduce the weight of the device and the equipment to which the sheet is applied.</p>
+    </summary>
+    <description-of-drawings>
+      <heading id="h-00008-en" level="1">DESCRIPTION OF DRAWINGS</heading>
+      <p id="p-00022-en" num="0022">
+        <figref>FIG. 1</figref> is a view illustrating base particles according to exemplary embodiments of the present invention.</p>
+      <p id="p-00023-en" num="0023">
+        <figref>FIG. 2</figref> is a view illustrating coated particles according to exemplary embodiments of the present invention.</p>
+      <p id="p-00024-en" num="0024">
+        <figref>FIG. 3</figref> is a view illustrating a sheet according to an Example of the present invention.</p>
+      <p id="p-00025-en" num="0025">
+        <figref>FIG. 4</figref> is a view illustrating a sheet according to another Example of the present invention.</p>
+      <p id="p-00026-en" num="0026">
+        <figref>FIG. 5</figref> is a view illustrating a sheet according to a modified Example of the present invention.</p>
+      <p id="p-00027-en" num="0027">
+        <figref>FIG. 6</figref> is a view for describing a method for manufacturing a coated particle according to exemplary embodiments of the present invention.</p>
+      <p id="p-00028-en" num="0028">
+        <figref>FIG. 7</figref> is a scanning electron microscope photograph of a coated particle according to an Example of the present invention.</p>
+      <p id="p-00029-en" num="0029">
+        <figref>FIG. 8</figref> is a graph of the result of measuring a coated particle manufactured according to an Example of the present invention by using Raman spectroscopy.</p>
+      <p id="p-00030-en" num="0030">
+        <figref>FIG. 9</figref> is a view for describing a method for manufacturing a sheet according to the Examples of the present invention.</p>
+    </description-of-drawings>
+    <detailed-desc>
+      <heading id="h-00009-en" level="1">BEST MODE</heading>
+      <p id="p-00031-en" num="0031">Hereinafter, the Examples of the present invention will be described in detail with reference to the accompanying drawings. However, the present invention is not limited to the Examples to be disclosed below, but may be implemented in various other forms, and the present Examples are provided for rendering the disclosure of the present invention complete and for fully representing the scope of the present invention to those skilled in the art.</p>
+      <p id="p-00032-en" num="0032">
+        <figref>FIG. 1</figref> is a view illustrating base particles according to exemplary embodiments of the present invention, and <figref>FIG. 2</figref> is a view illustrating coated particles according to exemplary embodiments of the present invention. In <figref>FIG. 2</figref>, (a) is a three-dimensional view of the coated particle, and (b) is a cross-sectional view of the coated particle.</p>
+      <p id="p-00033-en" num="0033">Referring to <figref>FIGS. 1 and 2</figref>, a coated particle <b>10</b> includes a base particle <b>11</b> and a graphene layer <b>12</b>.</p>
+      <p id="p-00034-en" num="0034">The base particle <b>11</b> is a particle formed of a metal, and serves as a substrate for forming the graphene layer <b>12</b>. The metal of the base particle <b>11</b> may serve as a catalyst in a process of forming the graphene layer <b>12</b>. The base particle <b>11</b> may have various shapes such as a spherical shape, a plate shape, or a wire shape. That is, the base particle <b>11</b> is made of a metal, and thus may be easily controlled so as to have various shapes and sizes according to the user's demand characteristics.</p>
+      <p id="p-00035-en" num="0035">For example, the base particle <b>11</b> may be spherical. The surface of the base particle <b>11</b> may be curved. That is, even though the distance from the center of gravity of the base particle <b>11</b> to the surface thereof is not constant, a three-dimensional shape which may be classified as “substantially spherical” may also be typically defined as being spherical.</p>
+      <p id="p-00036-en" num="0036">For example, when the base particle <b>11</b> is a spherical particle, the base particle <b>11</b> may have a diameter of 5 nm to 10 μm. When the base particle <b>11</b> has a diameter of less than 5 nm, it may be difficult to form the graphene layer <b>12</b> on the surface of the base particle <b>11</b>. Furthermore, when the diameter of the base particle <b>11</b> exceeds 10 μm, it may be difficult for the coated particle <b>12</b> including the base particle <b>11</b> to be uniformly dispersed in the base resin during the process of manufacturing the sheet. In this case, the diameter of the base particle <b>11</b> is a straight-line distance between two points on the surface of the base particle <b>11</b>, and is the length of a virtual straight line which connects the two points while passing through the center of gravity of the base particle <b>11</b>. In this case, when the surface of the base particle <b>11</b> is curved, and accordingly, the straight-line distance varies according to the position of the two points, the diameter of the base particle <b>11</b> means a maximum value of the straight-line distances. <figref>FIGS. 1 and 2</figref> illustrate the case where the base particle <b>11</b> is substantially spherical, but the base particle <b>11</b> may also have a three-dimensional shape in which the distances from the center of gravity to the surface are different from each other, for example, an egg shape.</p>
+      <p id="p-00037-en" num="0037">For another example, when the base particle <b>11</b> is a plate-like particle, the base particle <b>11</b> may have a size of 5 nm to 10 μm. When the base particle <b>11</b> has a size of less than 5 nm, it may be difficult to form the graphene layer <b>12</b> on the surface of the base particle <b>11</b>. Further, when the size of the base particle <b>11</b> exceeds 10 μm, it may be difficult for the coated particle <b>12</b> including the base particle <b>11</b> to be uniformly dispersed in the base resin during the process of manufacturing the sheet. In this case, the size of the base particle <b>11</b> is a straight-line distance between two points on the border of the base particle <b>11</b>, and when the border of the base particle <b>11</b> is curved, and accordingly, the straight-line distance varies according to the position of the two points, the size of the base particle <b>11</b> means a maximum value of the straight-line distances. <figref>FIGS. 1 and 2</figref> illustrate the case where the base particle <b>11</b> has a curved plate-like shape, but the planar shape thereof may be rectangular.</p>
+      <p id="p-00038-en" num="0038">For another example, when the base particle <b>11</b> is a wire-like particle, the base particle <b>11</b> may have a length of 50 nm to 10 μm. When the base particle <b>11</b> has a length of less than 5 nm, it may be difficult to form the graphene layer <b>12</b> on the surface of the base particle <b>11</b>. In addition, when the length of the base particle <b>11</b> exceeds 10 μm, it may be difficult for the coated particle <b>12</b> including the base particle <b>11</b> to be uniformly dispersed in the base resin during the process of manufacturing the sheet. In this case, the length of the base particle <b>11</b> means a straight-line distance between both ends in a long-axis direction thereof.</p>
+      <p id="p-00039-en" num="0039">Examples of the metal which forms the base particle <b>11</b> include nickel (Ni), copper (Cu), iron (Fe), ruthenium (Ru), cobalt (Co), platinum (Pt) or iridium (Ir), and the like. These may be used either alone or in combination of two or more thereof. That is, the base particle <b>11</b> may be formed of only one metal, or of an alloy including two or more thereof.</p>
+      <p id="p-00040-en" num="0040">The graphene layer <b>12</b> is a layer formed on the surface of the base particle <b>11</b>. The graphene layer <b>12</b> may wholly cover the surface of the base particle <b>11</b>, or partially cover only a part thereof. The graphene layer <b>12</b> may be a single layer composed of one-layered graphene, or a plurality of layers in which two layers or more of graphene are laminated. Graphene means a material having a two-dimensional planar structure in which six carbon atoms are connected in a honeycomb-like hexagonal form, and the theoretical heat conductivity thereof is about 5,300 W/mK.</p>
+      <p id="p-00041-en" num="0041">The graphene layer <b>12</b> covers at least a part of the surface of the base particle <b>11</b>. That is, the graphene layer <b>12</b> may partially cover the surface of the base particle <b>11</b>. On the contrary, the graphene layer <b>12</b> may wholly cover the surface of the base particle <b>11</b>.</p>
+      <p id="p-00042-en" num="0042">The graphene layer <b>12</b> may be synthesized by a chemical vapor deposition (CVD) method, and the like using a metal, which constitutes the base particle <b>11</b>, as a catalyst. The graphene layer <b>12</b> may be synthesized in one to fifty layers according to the kind of metal which constitutes the base particle <b>11</b>. The graphene layer <b>12</b> may have a thickness of several A to several hundred nm, and a thickness of several hundred nm to several μm, according to the time for synthesis. The thickness of the graphene layer <b>12</b> may be defined as an average value of the distances from the surface of the base particle <b>11</b> to the surface of the graphene layer <b>12</b>. By the coated particle <b>10</b> including the graphene layer <b>12</b>, heat transfer characteristics in a direction perpendicular to the in-plane direction of the sheet may be improved. The “in-plane direction” will be defined below while a sheet (<b>100</b><i>a</i>, see <figref>FIG. 3</figref>) is described.</p>
+      <p id="p-00043-en" num="0043">Hereinafter, a composition including the coated particle <b>10</b> and the base resin described above will be described. The composition may further include a solvent which dissolves the base resin, and a cross-linker. The overlapping specific description on the coated particle <b>10</b> will be omitted.</p>
+      <p id="p-00044-en" num="0044">The base resin may be dissolved in the solvent. The composition may become a liquid state by dissolving the base resin in the solvent. That is, the coated particle <b>10</b> may be distributed in the base resin dissolved in the solvent. In a drying process of evaporating the solvent by adding heat to the composition, the base resin becomes a solid state. When the composition further includes a cross-linker, the cross-linker may be thermally reacted in the drying process to cross-link the base resin, thereby forming a cured product in a solid state.</p>
+      <p id="p-00045-en" num="0045">Specific examples of the base resin include an ethylene resin, a propylene resin, a vinyl chloride resin, a styrene resin, a carbonate resin, an ester resin, a nylon resin or a silicone resin, and the like. These may be used either alone or in combination of two or more thereof. The base resin may have a weight average molecular weight of about 100,000 to about 500,000 in consideration of solubility with respect to the solvent.</p>
+      <p id="p-00046-en" num="0046">The content of the coated particle <b>10</b> may be 5 parts by weight to 500 parts by weight with respect to 100 parts by weight of the base resin. For example, when the content of the coated particle <b>10</b> is less than 5 parts by weight, even though a sheet is manufactured by using the composition, the sheet may have little heat transfer characteristics. Furthermore, when the content of the coated particle <b>10</b> exceeds 500 parts by weight, it may be rather difficult for the coated particles <b>10</b> to be uniformly dispersed in the base resin.</p>
+      <p id="p-00047-en" num="0047">Specific examples of the cross-linker include an isocyanate-based compound, an epoxy-based compound, a melamine-based compound or an organic peroxide, and the like. These may be used either alone or in combination of two or more thereof.</p>
+      <p id="p-00048-en" num="0048">The content of the cross-linker may be 0 part by weight to 250 parts by weight with respect to 100 parts by weight of the base resin. When the content of the cross-linker is 0 part by weight, the composition does not include the cross-linker. For example, when the content of the cross-linker exceeds 250 parts by weight, even though the composition maximally contains the base resin, the cross-linker, which does not participate in the cross-linking reaction of the base resin, remains in the sheet which is a final product, thereby leading to deterioration in heat transfer characteristics of the sheet, or the base resin is excessively cured (over-cured), thereby leading to manufacturing a thermally modified sheet.</p>
+      <p id="p-00049-en" num="0049">Specific examples of the solvent include ethyl acetate, methyl ethyl ketone, methylene chloride, tetrahydrofuran or chloroform, and the like. These may be used either alone or in combination of two or more thereof.</p>
+      <p id="p-00050-en" num="0050">The solvent may dissolve the base resin and disperse the coated particle <b>10</b>. In consideration of the solubility of the base resin and the dispersibility of the coated particle <b>10</b>, the content of the solvent may be 30 parts by weight to 500 parts by weight with respect to 100 parts by weight of the base resin.</p>
+      <p id="p-00051-en" num="0051">The composition may further include a carbon-containing powder. The composition may further include the carbon-containing powder, thereby improving heat transfer characteristics of a sheet manufactured by using the composition compared to heat transfer characteristics of a sheet including only the coated particle <b>10</b>.</p>
+      <p id="p-00052-en" num="0052">The carbon-containing powder is a structural body formed of a carbon-based material. The carbon-containing powder may include particles having various shapes, such as spherical particles, plate-like particles, and wire-like particles (or tubular particles). Specific examples of the carbon-containing powder include carbon nanotubes, graphene flake, graphite flake, oxidized graphene flake, expanded graphite flake, oxidized graphite flake, fullerene, carbon black or carbon fiber, and the like. These may be used either alone or in combination of two or more thereof.</p>
+      <p id="p-00053-en" num="0053">For example, the carbon nanotubes are a tubular powder elongated in one direction, and the thermal conductivity of carbon nanotubes in the elongated direction thereof may be about 3,000 W/mK to about 3,500 W/mK.</p>
+      <p id="p-00054-en" num="0054">The graphene flake is a plate-like structural body including graphene having a two-dimensional planar structure in which six carbon atoms are connected in a honeycomb-like hexagonal form. The thermal conductivity of graphene is about 5,300 W/mK.</p>
+      <p id="p-00055-en" num="0055">In the present invention, the “graphene flake” is defined as a powder having a graphene laminated structure including one to fifty layers. The graphene flake includes at least one layer of graphene. That is, the graphene flake may have a single-layered structure composed of one-layered graphene, or a multi-layered structure including two or more layers of graphene. The graphene flake may have a specific surface area of about 50 m<sup>2</sup>/g to about 2,675 m<sup>2</sup>/g. The “specific surface area” means a surface area of graphene flake per unit mass.</p>
+      <p id="p-00056-en" num="0056">Graphite flake also has a structure in which a plurality of graphenes is laminated, is a powder having a structure in which the number of graphenes laminated is larger than that in the graphene flake, and is defined as a powder which is differentiated from the graphene flake. The graphite flake has a specific surface area of a value larger than about 0 m<sup>2</sup>/g, and the value may be less than about 50 m<sup>2</sup>/g.</p>
+      <p id="p-00057-en" num="0057">Oxidized graphene flake is a plate-like structural body including oxidized graphene. The oxidized graphene may be defined as a graphene in which a function group including an oxygen atom is bonded to the surface or edge thereof. The oxidized graphene flake includes oxidized graphene including at least one layer or more, and may further include graphene. In the oxidized graphene flake, the total number of layers of graphene and oxidized graphene may be fifty layers or less. That is, the oxidized graphene flake may be composed of oxidized graphene including 1 to 50 layers, or composed of graphene and oxidized graphene including at least one layer or more.</p>
+      <p id="p-00058-en" num="0058">Further, the oxidized graphite flake includes oxidized graphene, and is a powder in which the total number of layers laminated is larger than that in the oxidized graphene flake. The oxidized graphite flake may be composed of oxidized graphene, or composed of oxidized graphene and graphene.</p>
+      <p id="p-00059-en" num="0059">Expanded graphite flake is defined as a laminated structural body in which the distance between graphenes is larger than that in the graphite flake.</p>
+      <p id="p-00060-en" num="0060">When the composition further includes the carbon-containing powder, the content of the carbon-containing powder may be 0 part by weight to 30 parts by weight with respect to 100 parts by weight of the base resin. When the content of the carbon-containing powder is 0 part by weight, the composition does not include a carbon-containing powder. For example, when the content of the carbon-containing powder exceeds 30 parts by weight, because it is difficult for the carbon-containing powder to be dispersed in the base resin, the content of the carbon-containing powder is preferably 30 parts by weight or less.</p>
+      <p id="p-00061-en" num="0061">Hereinafter, sheets manufactured by using the coated powder <b>10</b> will be described.</p>
+      <p id="p-00062-en" num="0062">
+        <figref>FIG. 3</figref> is a view illustrating a sheet according to an Example of the present invention. In <figref>FIG. 3</figref>, (a) is a three-dimensional view of the sheet, and (b) is a partially enlarged cross-sectional view of the sheet.</p>
+      <p id="p-00063-en" num="0063">Referring to <figref>FIG. 3</figref>, a sheet <b>100</b><i>a</i>, which transfers heat, includes a base film <b>20</b> and a coated particle <b>10</b>.</p>
+      <p id="p-00064-en" num="0064">The base film <b>20</b> is a plate (for example, a plate having a rectangular shape) having a predetermined area and thickness and includes a first surface <b>21</b>, a second surface <b>22</b>, and side surfaces <b>23</b>, the first surface <b>21</b> and the second surface <b>22</b> face each other, and the first surface <b>21</b> and the second surface <b>22</b> are connected to each other by the side surfaces <b>23</b>.</p>
+      <p id="p-00065-en" num="0065">The base film <b>20</b> includes a resin. The “resin” may be a base resin in a solid state. On the contrary, when the sheet <b>100</b><i>a </i>is manufactured by using a composition further including a cross-linker, the base film <b>20</b> may include a cured product which is a cross-linked base resin. Since the base resin is substantially the same as the base resin included in the composition, an overlapping specific description thereof will be omitted.</p>
+      <p id="p-00066-en" num="0066">Specific examples of the base resin forming the base film <b>20</b> include an ethylene resin, a propylene resin, a vinyl chloride resin, a styrene resin, a carbonate resin, an ester resin, a nylon resin, a silicone resin or an imide resin, and the like. These may be used either alone or in combination of two or more thereof. The base film <b>20</b> may also include a cured product in which at least one resin exemplified above is cross-linked by a cross-linker.</p>
+      <p id="p-00067-en" num="0067">The “in-plane direction” of the sheet <b>100</b><i>a </i>used below means an elongated direction D<b>1</b> of a virtual line connecting any two points on any one surface of the first surface <b>21</b> and the second surface <b>22</b>, which are a main surface of the sheet <b>100</b><i>a</i>. The “perpendicular direction” is defined as a direction perpendicular to the in-plane direction, that is, a direction D<b>2</b> normal to the first surface <b>21</b> or the second surface <b>22</b>.</p>
+      <p id="p-00068-en" num="0068">Since the coated particle <b>10</b> has been previously described in detail, the overlapping description thereof will be omitted. The plurality of coated particles <b>10</b> are dispersed in the base film <b>20</b>. In the plurality of coated particles <b>10</b> dispersed in the base film <b>20</b>, the diameters thereof may be substantially the same as or different from each other.</p>
+      <p id="p-00069-en" num="0069">In this case, at least a part of the coated particles <b>10</b> may be in contact with each other in an in-plane direction and/or in a direction perpendicular thereto in the base film <b>20</b>. By the coated particles <b>10</b> which are in contact with each other, the sheet <b>100</b><i>a </i>may have heat transfer characteristics in the in-plane direction and in the perpendicular direction.</p>
+      <p id="p-00070-en" num="0070">Meanwhile, the content of the coated particle <b>10</b> in the sheet <b>100</b><i>a </i>may be 5 parts by weight to 500 parts by weight, with respect to 100 parts by weight of the base resin included in the base film <b>20</b>. When the content of the coated particle <b>10</b> is less than 5 parts by weight with respect to 100 parts by weight of the base film <b>20</b>, the coated particles <b>10</b> are minimally contacted with each other, so that heat transfer characteristics of the sheet <b>100</b><i>a </i>are not exhibited. Furthermore, when the content of the coated particle <b>10</b> exceeds 500 parts by weight, it may be rather difficult for the coated particles <b>10</b> to be uniformly dispersed in the base film <b>20</b>.</p>
+      <p id="p-00071-en" num="0071">
+        <figref>FIG. 4</figref> is a view illustrating a sheet according to another Example of the present invention. In <figref>FIG. 4</figref>, (a) is a three-dimensional view of a sheet <b>100</b><i>b</i>, and (b) is a partially enlarged cross-sectional view of the sheet <b>100</b><i>b. </i></p>
+      <p id="p-00072-en" num="0072">Referring to <figref>FIG. 4</figref>, the sheet <b>100</b><i>b </i>includes a base film <b>20</b>, a coated particle <b>10</b>, and a carbon-containing powder <b>30</b>. Since the sheet <b>100</b><i>b </i>is substantially the same as the sheet <b>100</b><i>a </i>described in <figref>FIG. 3</figref> except for further including the carbon-containing powder <b>30</b>, the overlapping specific description thereof will be omitted.</p>
+      <p id="p-00073-en" num="0073">The carbon-containing powder <b>30</b> is a structural body formed of a carbon-based material. Since the carbon-containing powder <b>30</b> is substantially the same as the carbon-containing powder included in the composition according to the present invention, the overlapping specific description thereof will be omitted.</p>
+      <p id="p-00074-en" num="0074">As an example, since graphene has a 2-dimensional plate-like structure, the heat transfer route in the graphene is substantially the same as the in-plane direction thereof. Heat is transferred even in a direction perpendicular to the in-plane direction of graphene, but the heat transfer is very minimal as compared to the degree that heat is transferred in the in-plane direction of graphene, so that the heat transfer route of graphene may be substantially the same as the in-plane direction thereof. In this case, the in-plane direction of graphene may be substantially the same as the in-plane direction of the sheet <b>100</b><i>b</i>, or may be inclined at a predetermined angle θ<sub>1</sub>. The predetermine angle θ<sub>1 </sub>may be about −60° to +60° based on the first surface <b>21</b> or the second surface <b>22</b>. That is, the interplanar angle between the basal plane of graphene and the first surface <b>21</b> or the second surface <b>22</b> may be about −60° to +60°.</p>
+      <p id="p-00075-en" num="0075">The coated particle <b>10</b> may be brought into contact with the carbon-containing powder <b>30</b>, thereby improving heat transfer characteristics in the perpendicular direction. At least a part of the coated particle <b>10</b> may be interposed between the carbon-containing powders <b>30</b>, so that the carbon-containing powders <b>30</b> may be indirectly connected to each other through the coated particle <b>10</b>. In this case, the heat transfer route in the perpendicular direction may be substantially the same as the normal direction D<b>2</b>, or may be the same as a direction inclined at a predetermined angle θ<sub>2</sub>. The predetermined angle θ<sub>2 </sub>may be −30° to +30° based on the normal direction D<b>2</b>.</p>
+      <p id="p-00076-en" num="0076">The content of the carbon-containing powder <b>30</b> in the sheet <b>100</b><i>b </i>may be 30 parts by weight or less with respect to 100 parts by weight of the base resin included in the sheet <b>100</b><i>b</i>. For example, when the content of the carbon-containing powder <b>30</b> exceeds 30 parts by weight, it may be difficult for the carbon-containing powder <b>30</b> to be uniformly dispersed in the sheet <b>100</b><i>b. </i></p>
+      <p id="p-00077-en" num="0077">The carbon-containing powder <b>10</b> may be brought into contact with the coated particle <b>10</b>, thereby improving heat transfer characteristics of the sheet <b>100</b><i>b </i>in an in-plane direction thereof as well as in a direction perpendicular thereto. That is, at least a part of the carbon-containing powder <b>30</b> may be interposed between the coated particles <b>10</b>, so that the carbon-containing powders <b>30</b> may be indirectly connected to each other through the coated particle <b>10</b>.</p>
+      <p id="p-00078-en" num="0078">Meanwhile, the content of the coated particle <b>10</b> in the sheet <b>100</b><i>b </i>may be 5 parts by weight to 500 parts by weight, with respect to 100 parts by weight of the base resin included in the sheet <b>100</b><i>b. </i></p>
+      <p id="p-00079-en" num="0079">
+        <figref>FIG. 5</figref> is a view illustrating a sheet according to a modified Example of the present invention. In <figref>FIG. 5</figref>, (a) is a partially cross-sectional view of a sheet manufactured without compression, and (b) is a partially cross-sectional view of a compressed sheet.</p>
+      <p id="p-00080-en" num="0080">The sheet <b>100</b><i>b </i>illustrated in <figref>FIG. 5(</figref><i>a</i>) is substantially the same as the sheet <b>100</b><i>b </i>described in <figref>FIG. 4</figref>. Further, a sheet <b>100</b><i>c </i>illustrated in <figref>FIG. 5(</figref><i>b</i>) is substantially the same as the sheet <b>100</b><i>b </i>described in <figref>FIG. 4</figref>, except for the arrangement of the coated particle <b>10</b> and the carbon-containing powder <b>30</b>. Therefore, the overlapping detailed description thereof will be omitted.</p>
+      <p id="p-00081-en" num="0081">Referring to <figref>FIG. 5(</figref><i>b</i>), the compressed sheet <b>100</b><i>c </i>includes a base film <b>20</b>, a coated particle <b>10</b>, and a carbon-containing powder <b>30</b>. The sheet <b>100</b><i>c </i>has a second thickness T<b>2</b> smaller than a first thickness T<b>1</b> of the sheet <b>100</b><i>b </i>manufactured without compression.</p>
+      <p id="p-00082-en" num="0082">When the sheets <b>100</b><i>b </i>and <b>100</b><i>c </i>having the first surfaces <b>21</b> of which the areas are the same as each other are compared with each other, the distance between the coated particle <b>10</b> and the carbon-containing powder <b>30</b> in the sheet <b>100</b><i>c </i>having the second thickness T<b>2</b> is relatively closer than the distance between the coated particle <b>10</b> and the carbon-containing powder <b>30</b> in the sheet <b>100</b><i>b </i>having the first thickness T<b>1</b>. In addition, the distance between the coated particles <b>10</b> or the distance between the carbon-containing powders <b>30</b> in the sheet <b>100</b><i>b </i>illustrated in <figref>FIG. 5(</figref><i>b</i>) is closer than that in the sheet <b>100</b><i>b </i>illustrated in <figref>FIG. 5(</figref><i>a</i>). Accordingly, heat conductivity of the compressed sheet <b>100</b><i>c </i>may be improved as compared to thermal conductivity of the sheet <b>100</b><i>b </i>manufactured without compression.</p>
+      <p id="p-00083-en" num="0083">Meanwhile, it is possible to manufacture a compressed sheet <b>100</b><i>d </i>having a third thickness T<b>3</b> smaller than the second thickness T<b>2</b> of the sheet <b>100</b><i>c </i>illustrated in <figref>FIG. 5(</figref><i>b</i>) by compressing the sheet <b>100</b><i>a </i>including only the coated particle <b>10</b>, which is illustrated in <figref>FIG. 3</figref>. That is, the thickness of the compressed sheets <b>100</b><i>c </i>and <b>100</b><i>d </i>may vary according to the constituent element included in the base film <b>20</b>. The sheet <b>100</b><i>d </i>illustrated in <figref>FIG. 5(</figref><i>c</i>) may have improved heat conductivity compared to that of the sheet <b>100</b><i>a </i>illustrated in <figref>FIG. 3</figref>.</p>
+      <p id="p-00084-en" num="0084">That is, considering that as the distance between the coated particles <b>10</b>, the distance between the carbon-containing powders <b>30</b>, or the distance between the coated particle <b>10</b> and the carbon-containing powder <b>30</b> becomes closer, heat may be easily transferred, conductivity of the sheets <b>100</b><i>c </i>and <b>100</b><i>d </i>may be further improved when the sheets <b>100</b><i>c </i>and <b>100</b><i>d </i>are manufactured by performing the compression process.</p>
+      <p id="p-00085-en" num="0085">According to the description in <figref>FIGS. 2 to 5</figref>, the sheets <b>100</b><i>a </i>and <b>100</b><i>d </i>including the coated particles <b>10</b> or the sheets <b>100</b><i>b </i>and <b>100</b><i>c </i>further including the carbon-containing powders <b>30</b> may have improved heat transfer characteristics compared to a heat radiation sheet including only the carbon-containing powders <b>30</b>. In particular, heat transfer characteristics in the “perpendicular direction” described above may be improved. In this case, the sheets <b>100</b><i>a</i>, <b>100</b><i>b</i>, <b>100</b><i>c</i>, and <b>100</b><i>d </i>according to the Examples of the present invention may have a heat conductivity of about 200 W/mK to about 500 W/mK in an in-plane direction thereof, and a heat conductivity of about 3 W/mK to about 50 W/mK in a direction perpendicular to the in-plane direction.</p>
+      <p id="p-00086-en" num="0086">In addition, since the sheets <b>100</b><i>a </i>and <b>100</b><i>d </i>including the coated particles <b>10</b> or the sheets <b>100</b><i>b </i>and <b>100</b><i>c </i>further including the carbon-containing powders <b>30</b> are lighter than a metal radiation sheet having the same size, it is possible to reduce the weights of various electronic devices or electronic equipment using the sheets <b>100</b><i>a</i>, <b>100</b><i>b</i>, <b>100</b><i>c</i>, and <b>100</b><i>d </i>according to the present invention.</p>
+      <p id="p-00087-en" num="0087">Hereinafter, a method for preparing the coated particle according to the present invention will be described with reference to <figref>FIGS. 6 to 8</figref>, and a method for manufacturing a sheet by using a composition for manufacturing a sheet according to the present invention will be described with reference to <figref>FIG. 9</figref>.</p>
+      <p id="p-00088-en" num="0088">
+        <figref>FIG. 6</figref> is a view for describing a method for manufacturing a coated particle according to exemplary embodiments of the present invention.</p>
+      <p id="p-00089-en" num="0089">Referring to <figref>FIG. 6</figref>, a base particle is first prepared in order to prepare a coated particle (Step S<b>11</b>). Since the description on the base particle is substantially the same as that in <figref>FIG. 1</figref>, the specific description thereof will be omitted.</p>
+      <p id="p-00090-en" num="0090">An oxidized film formed on the surface of the base particle is removed (Step S<b>12</b>).</p>
+      <p id="p-00091-en" num="0091">While the base particle is stored while being exposed to air, an oxidized film may be formed on the surface thereof. In order to stably form a graphene layer on the surface of the base particle, a process of removing the oxidized film is performed before the graphene layer is formed. For example, after the base particle is loaded into a chamber, the oxidized film may be reduced by increasing the temperature of the chamber, and supplying a hydrogen gas into the chamber. It can be seen that due to the reduction of the oxidized film, the oxidized film formed on the surface of the base particle has been substantially removed. The process for removing the oxidized film may be omitted in some cases.</p>
+      <p id="p-00092-en" num="0092">A graphene layer is formed on the surface of the base particle (Step S<b>13</b>).</p>
+      <p id="p-00093-en" num="0093">For example, a carbon supply source such as methane or acetylene is provided in a gas state into the chamber maintained at high temperature. In this case, a hydrogen gas may also flow into the chamber. In order to form a graphene layer, the temperature of the chamber may be maintained at about 1,000° C. After a predetermined time has passed, the graphene layer may be formed on the surface of the base particle by decreasing the temperature of the chamber to room temperature while flowing an inert gas into the chamber. Accordingly, the coated particle according to the Example of the present invention may be prepared.</p>
+      <p id="p-00094-en" num="0094">It is possible to adjust the thickness of the graphene layer and the number of layers of graphene, which constitutes the graphene layer, according to the kind of metal which forms the base particle, the amount of a methane gas and a hydrogen gas flowing, the time for the process, and the like. As an example, when the base particle is formed of copper, the graphene layer may have a structure in which 1 to 3 layers of graphene are laminated. On the contrary, when the base particle is formed of nickel, the graphene layer may have a structure in which 1 to 50 layers of graphene are laminated.</p>
+      <p id="p-00095-en" num="0095">
+        <figref>FIG. 6</figref> describes a thermal chemical vapor deposition (TCVD) method as a method for forming the graphene layer, but the graphene layer may be formed by using various methods such as a plasma enhanced chemical vapor deposition (PECVD) method and a microwave plasma enhanced chemical vapor deposition (MPECVD) method in addition to the thermal chemical vapor deposition method.</p>
+      <heading id="h-00010-en" level="2">Preparation of Coated Particle</heading>
+      <p id="p-00096-en" num="0096">A base particle formed of nickel was prepared, and the base particle was disposed in a chamber. The temperature of the chamber was increased to about 1,000° C. while a hydrogen gas was flowed at a flow rate of about 10 sccm for about 30 minutes, thereby removing an oxidized film on the surface of the base particle. Subsequently, a methane gas (CH<sub>4</sub>) and a hydrogen gas (H<sub>2</sub>) were provided into the chamber at a flow rate of about 10 sccm for about 60 minutes while the temperature of the chamber was maintained at about 1,000° C. Next, while an argon (Ar) gas was flown into the chamber at a flow rate of about 100 sccm, the chamber was cooled at a rate of about 60° C./min, thereby preparing a coated particle having a diameter of about 500 nm to about 600 nm.</p>
+      <p id="p-00097-en" num="0097">The coated particle prepared was photographed by a scanning electron microscope (SEM) and is illustrated in <figref>FIG. 7</figref>, and the result of measurement by using a Raman spectroscope is illustrated in <figref>FIG. 8</figref>.</p>
+      <p id="p-00098-en" num="0098">
+        <figref>FIG. 7</figref> is a scanning electron microscope photograph of a coated particle according to an Example of the present invention, and <figref>FIG. 8</figref> is a graph of the result of measuring a coated particle manufactured according to an Example of the present invention by using the Raman spectroscopy.</p>
+      <p id="p-00099-en" num="0099">Referring to <figref>FIG. 7</figref>, it can be seen that a coated particle having a diameter of about 500 nm to about 600 nm has been prepared through the process described above. The coated particle prepared has a substantially spherical shape.</p>
+      <p id="p-00100-en" num="0100">In <figref>FIG. 8</figref>, an x-axis indicates a wavenumber (unit: cm<sup>−1</sup>). The “wavenumber” means a value obtained by dividing a difference between a frequency (unit: sec<sup>−1</sup>) of light irradiated on a subject material and a frequency of light scattered by the subject material by the speed of light (unit: cm/sec). When light is irradiated on the subject material, the frequency of light scattered by the subject material may vary according to the molecule's inherent vibration, rotation energy and/or lattice vibration energy of the subject material, which refers to the “Raman scattering”. A y-axis indicates the intensity of the scattered light, and means that the larger the value of the y-axis is, the subject material has the greater number of structures or bonds which absorb light having a frequency calculated from the wavenumber.</p>
+      <p id="p-00101-en" num="0101">Referring to <figref>FIG. 8</figref>, it can be seen that peaks having a strong intensity appear at about 1,580 cm<sup>−1 </sup>and about 2,700 cm<sup>−1</sup>.</p>
+      <p id="p-00102-en" num="0102">In general, a peak appearing near about 1,580 cm<sup>−1 </sup>refers to a “G-peak”, and it can be seen from the presence of the G-peak that an sp<sup>2 </sup>bond between carbon and carbon is present. In addition, a “2D-peak” is a peak appearing near about 2,700 cm<sup>−1</sup>, and a peak due to the double resonance phenomenon in a hexagonal lattice structure.</p>
+      <p id="p-00103-en" num="0103">According to the above description, it can be seen from the appearance of the G-peak in the graph of <figref>FIG. 8</figref> that an sp<sup>2 </sup>bond of carbon and carbon is present, and from the appearance of the 2D-peak in the graph of <figref>FIG. 8</figref> that the coated particle includes graphene. That is, it can be seen that a coated particle including a graphene layer is prepared through the process described above.</p>
+      <heading id="h-00011-en" level="2">Manufacture of Sheet</heading>
+      <p id="p-00104-en" num="0104">The coated particle prepared above, an epoxy-based compound EJ-1030 (trade name, JSI Co., Ltd., Korea) as a cross-linker, and a WNGP-50 graphene powder (trade name, BMS Tech, Korea) as a graphene flake were dispersed in a solution in which KE-1606 (trade name, Shin-Etsu Chemical Co., Ltd., Japan) as a silicone resin was dissolved in chloroform, thereby preparing a composition for manufacturing a sheet. With respect to the total weight of the composition, the content of chloroform was about 16.4 wt %, the content of the silicone resin was about 32.6 wt %, the content of the epoxy-based compound was about 1 wt %, the content of the graphene flake was 8 wt %, and the content of the coated particle was about 42 wt %.</p>
+      <p id="p-00105-en" num="0105">A sheet having a thickness of about 500 μm was manufactured by using the composition, and the heat conductivity of the sheet in an in-plane direction thereof and the heat conductivity of the sheet in a direction perpendicular to the in-plane direction were measured by LFA-457 (trade name, NETZSCH, Inc.).</p>
+      <p id="p-00106-en" num="0106">As a result, it was found that the heat conductivity in the in-plane direction was about 400 W/mK, and the heat conductivity in the direction perpendicular to the in-plane direction was about 10 W/mK.</p>
+      <p id="p-00107-en" num="0107">According to the experiment and the experimental result, when compared to the fact that heat conductivity of the graphite heat radiation sheet in an in-plane direction thereof was approximately 130 W/mK and the heat conductivity in a direction perpendicular to the in-plane direction was at a level of almost 3 W/mK, it can be seen that the heat conductivities of a sheet manufactured by using the composition including the coated particle according to the present invention were high in an in-plane direction thereof and in a direction perpendicular to the in-plane direction.</p>
+      <p id="p-00108-en" num="0108">Hereinafter, a composition for manufacturing a sheet including the coated particle prepared in <figref>FIG. 6</figref>, and a method for manufacturing a sheet by using the composition will be described with reference to <figref>FIG. 9</figref>.</p>
+      <p id="p-00109-en" num="0109">
+        <figref>FIG. 9</figref> is a view for describing a method for manufacturing a sheet according to the Examples of the present invention.</p>
+      <p id="p-00110-en" num="0110">Referring to <figref>FIG. 9</figref>, a base resin and a coated particle are prepared in order to prepare a composition for manufacturing a sheet (Step S<b>21</b>).</p>
+      <p id="p-00111-en" num="0111">The coated particle may be prepared through the process which is substantially the same as that described in <figref>FIG. 6</figref>.</p>
+      <p id="p-00112-en" num="0112">The base resin may be prepared by being dissolved in a solvent. The base resin itself is in a solid state, but may be a solution in a liquid state by being dissolved in the solvent. Specific examples of the base resin include an ethylene resin, a propylene resin, a vinyl chloride resin, a styrene resin, a carbonate resin, an ester resin, a nylon resin, a silicone resin or an imide resin, and the like. These may be used either alone or in combination of two or more thereof.</p>
+      <p id="p-00113-en" num="0113">The coated particle is dispersed in a base resin dissolved in the solvent (Step S<b>22</b>).</p>
+      <p id="p-00114-en" num="0114">The coated particle may be dispersed in the base resin by using a vortex mixer. On the contrary, the coated particle may be dispersed in the base resin by various methods such as a mechanical stirrer, a homogenizer, sonication, and milling.</p>
+      <p id="p-00115-en" num="0115">Accordingly, a composition for manufacturing a sheet including the coated particle and the base resin may be prepared. In this case, the composition may further include a carbon-containing powder. The carbon-containing powder may be easily dispersed together with the coated particle in the base resin in the step of dispersing the coated particle in the base resin. When the composition for manufacturing a sheet includes the carbon-containing powder, the content of the carbon-containing powder may be 30 parts by weight or less with respect to 100 parts by weight of the base resin.</p>
+      <p id="p-00116-en" num="0116">A sheet is formed by using the composition prepared as described above (Step S<b>23</b>).</p>
+      <p id="p-00117-en" num="0117">The sheet may be manufactured by coating the composition on a base substrate. For example, the sheet may be formed by casting the composition on the base substrate, and then removing the solvent. Specifically, it is possible to use a polydimethylsiloxane film (PDMS film), a polyethylene terephthalate film (PET film), a polyimide film (PI film), a polyurethane film, a glass substrate, a steel belt or a steel drum, and the like as the base substrate, and the solvent is removed by coating the composition on the base substrate, and drying the composition. Accordingly, the base resin, the coated particle, and the carbon-containing powder remain on the base substrate, thereby forming a film having a predetermined thickness. The sheet may be formed by separating the film from the base substrate. On the contrary, a sheet according to an Example of the present invention may be manufactured by extruding the composition.</p>
+      <p id="p-00118-en" num="0118">During the process of manufacturing the sheet, a pressurization process may be additionally performed before the base resin is cured (Step S<b>24</b>).</p>
+      <p id="p-00119-en" num="0119">In the pressurization process, the thickness of the sheet may be adjusted, such that the coated particles, or the coated particle and the carbon-containing powder are brought into contact with each other in the finally manufactured sheet. In the pressurization process, pressure is applied in order to manufacture the sheet, and heat may be additionally added.</p>
+      <p id="p-00120-en" num="0120">As described above, the detailed description of the present invention has described specific examples, but various modifications can be made in a range without departing from the scope of the present invention. Therefore, the scope of the present invention should not be limited to the described Examples, and should be defined by not only the claims to be described below, but also those equivalent to the claims.</p>
+    </detailed-desc>
+  </description>
+  <claims id="claims_eng" lang="eng" format="original" date-changed="20150910">
+    <claim num="1" id="clm-00001-en" independent="true">
+      <claim-text>
+        <b>1</b>. A coated particle comprising:
+<claim-text>a base particle composed of a metal; and</claim-text><claim-text>a graphene layer which covers at least a part of a surface of the base particle.</claim-text></claim-text>
+    </claim>
+    <claim num="2" id="clm-00002-en">
+      <claim-text>
+        <b>2</b>. The coated particle of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the graphene layer comprises at least one layer or more of graphene.</claim-text>
+    </claim>
+    <claim num="3" id="clm-00003-en">
+      <claim-text>
+        <b>3</b>. The coated particle of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the base particle comprises at least one of nickel (Ni), copper (Cu), iron (Fe), ruthenium (Ru), cobalt (Co), platinum (Pt), and iridium (Ir).</claim-text>
+    </claim>
+    <claim num="4" id="clm-00004-en">
+      <claim-text>
+        <b>4</b>. The coated particle of <claim-ref idref="clm-00001-en">claim 1</claim-ref>, wherein the base particle has a spherical shape, a plate shape, or a wire shape.</claim-text>
+    </claim>
+    <claim num="5" id="clm-00005-en">
+      <claim-text>
+        <b>5</b>. The coated particle of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the base particle is a spherical particle having a diameter of 5 nm to 10 μm.</claim-text>
+    </claim>
+    <claim num="6" id="clm-00006-en">
+      <claim-text>
+        <b>6</b>. The coated particle of <claim-ref idref="clm-00004-en">claim 4</claim-ref>, wherein the base particle is a wire-like particle having a length of 50 nm to 10 μm.</claim-text>
+    </claim>
+    <claim num="7" id="clm-00007-en" independent="true">
+      <claim-text>
+        <b>7</b>. A composition comprising:
+<claim-text>a base resin; and</claim-text><claim-text>a coated particle which is distributed in the base resin, and comprises a base particle and a graphene layer which covers at least a part of a surface of the base particle.</claim-text></claim-text>
+    </claim>
+    <claim num="8" id="clm-00008-en">
+      <claim-text>
+        <b>8</b>. The composition of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the base particle comprises at least one of nickel (Ni), copper (Cu), iron (Fe), ruthenium (Ru), cobalt (Co), platinum (Pt), and iridium (Ir).</claim-text>
+    </claim>
+    <claim num="9" id="clm-00009-en">
+      <claim-text>
+        <b>9</b>. The composition of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the base particle is a spherical particle having a diameter of 5 nm to 10 μm.</claim-text>
+    </claim>
+    <claim num="10" id="clm-00010-en">
+      <claim-text>
+        <b>10</b>. The composition of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the graphene layer comprises at least one layer of graphene.</claim-text>
+    </claim>
+    <claim num="11" id="clm-00011-en">
+      <claim-text>
+        <b>11</b>. The composition of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein a content of the coated particle is 5 to 500 parts by weight with respect to 100 parts by weight of the base resin.</claim-text>
+    </claim>
+    <claim num="12" id="clm-00012-en">
+      <claim-text>
+        <b>12</b>. The composition of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, further comprising:
+<claim-text>a carbon-containing powder distributed in the base resin together with the coated particle.</claim-text></claim-text>
+    </claim>
+    <claim num="13" id="clm-00013-en">
+      <claim-text>
+        <b>13</b>. The composition of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein the carbon-containing powder comprises at least one of carbon nanotubes, graphene flake, oxidized graphene flake, graphite flake, oxidized graphite flake, expanded graphite flake, fullerene, carbon fiber, and carbon black.</claim-text>
+    </claim>
+    <claim num="14" id="clm-00014-en">
+      <claim-text>
+        <b>14</b>. The composition of <claim-ref idref="clm-00012-en">claim 12</claim-ref>, wherein a content of the carbon-containing powder is 30 parts by weight or less with respect to 100 parts by weight of the base resin.</claim-text>
+    </claim>
+    <claim num="15" id="clm-00015-en">
+      <claim-text>
+        <b>15</b>. The composition of <claim-ref idref="clm-00007-en">claim 7</claim-ref>, wherein the base resin comprises at least one of an ethylene resin, a propylene resin, a vinyl chloride resin, a styrene resin, a carbonate resin, an ester resin, a nylon resin, a silicone resin, and an imide resin.</claim-text>
+    </claim>
+    <claim num="16" id="clm-00016-en" independent="true">
+      <claim-text>
+        <b>16</b>. A sheet transferring heat, comprising:
+<claim-text>a base film comprising a base resin; and</claim-text><claim-text>a coated particle which is distributed in the base film, and comprises a base particle and a graphene layer which covers at least a part of a surface of the base particle.</claim-text></claim-text>
+    </claim>
+    <claim num="17" id="clm-00017-en">
+      <claim-text>
+        <b>17</b>. The sheet of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the coated particle is in contact with at least one of the other coated particles.</claim-text>
+    </claim>
+    <claim num="18" id="clm-00018-en">
+      <claim-text>
+        <b>18</b>. The sheet of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein a content of the coated particle is 5 to 500 parts by weight with respect to 100 parts by weight of the base resin.</claim-text>
+    </claim>
+    <claim num="19" id="clm-00019-en">
+      <claim-text>
+        <b>19</b>. The sheet of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the base particle comprises at least one of nickel (Ni), copper (Cu), iron (Fe), ruthenium (Ru), cobalt (Co), platinum (Pt), and iridium (Ir).</claim-text>
+    </claim>
+    <claim num="20" id="clm-00020-en">
+      <claim-text>
+        <b>20</b>. The sheet of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the base particle is a spherical particle having a diameter of 5 nm to 10 μm.</claim-text>
+    </claim>
+    <claim num="21" id="clm-00021-en">
+      <claim-text>
+        <b>21</b>. The sheet of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the graphene layer comprises at least one layer of graphene.</claim-text>
+    </claim>
+    <claim num="22" id="clm-00022-en">
+      <claim-text>
+        <b>22</b>. The sheet of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, further comprising:
+<claim-text>a carbon-containing powder distributed in the base film.</claim-text></claim-text>
+    </claim>
+    <claim num="23" id="clm-00023-en">
+      <claim-text>
+        <b>23</b>. The sheet of <claim-ref idref="clm-00022-en">claim 22</claim-ref>, wherein the sheet comprises the coated particle and the carbon-containing powder which are brought into contact with each other.</claim-text>
+    </claim>
+    <claim num="24" id="clm-00024-en">
+      <claim-text>
+        <b>24</b>. The sheet of <claim-ref idref="clm-00022-en">claim 22</claim-ref>, wherein the carbon-containing powder comprises at least one of carbon nanotubes, graphene flake, oxidized graphene flake, graphite flake, oxidized graphite flake, expanded graphite flake, fullerene, carbon fiber, and carbon black.</claim-text>
+    </claim>
+    <claim num="25" id="clm-00025-en">
+      <claim-text>
+        <b>25</b>. The sheet of <claim-ref idref="clm-00022-en">claim 22</claim-ref>, wherein a content of the carbon-containing powder is 30 parts by weight or less with respect to 100 parts by weight of the base resin.</claim-text>
+    </claim>
+    <claim num="26" id="clm-00026-en">
+      <claim-text>
+        <b>26</b>. The sheet of <claim-ref idref="clm-00016-en">claim 16</claim-ref>, wherein the base resin comprises at least one of an ethylene resin, a propylene resin, a vinyl chloride resin, a styrene resin, a carbonate resin, an ester resin, a nylon resin, a silicone resin, and an imide resin. </claim-text>
+    </claim>
+  </claims>
+  <drawings id="drawings" format="original">
+    <figure num="1">
+      <img he="N/A" wi="N/A" file="US20150252241A1_00001.PNG" alt="clipped image" img-content="drawing" img-format="png" original="US20150252241A1-20150910-D00000.TIF" />
+    </figure>
+    <figure num="2">
+      <img he="N/A" wi="N/A" file="US20150252241A1_00002.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252241A1-20150910-D00001.TIF" />
+    </figure>
+    <figure num="3">
+      <img he="N/A" wi="N/A" file="US20150252241A1_00003.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252241A1-20150910-D00002.TIF" />
+    </figure>
+    <figure num="4">
+      <img he="N/A" wi="N/A" file="US20150252241A1_00004.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252241A1-20150910-D00003.TIF" />
+    </figure>
+    <figure num="5">
+      <img he="N/A" wi="N/A" file="US20150252241A1_00005.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252241A1-20150910-D00004.TIF" />
+    </figure>
+    <figure num="6">
+      <img he="N/A" wi="N/A" file="US20150252241A1_00006.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252241A1-20150910-D00005.TIF" />
+    </figure>
+    <figure num="7">
+      <img he="N/A" wi="N/A" file="US20150252241A1_00007.PNG" alt="drawing sheet" img-content="drawing" img-format="png" original="US20150252241A1-20150910-D00006.TIF" />
+    </figure>
+    <figure num="8">
+      <img he="N/A" wi="N/A" file="US20150252241A1_00008.PNG" alt="thumbnail image" img-content="drawing" img-format="png" original="US20150252241A1-20150910-D00000.TIF" />
+    </figure>
+  </drawings>
+  <image file="US20150252241A1.PDF" type="pdf" size="690023" pages="15" />
+</lexisnexis-patent-document>
