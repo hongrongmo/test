@@ -103,6 +103,14 @@ public class INSPECCombiner
                                       yearIndex);
             }
         }
+        else if(loadNumber == 1)
+        {                      
+                c.writeCombinedByTable(url,
+                                      driver,
+                                      username,
+                                      password);
+            
+        }      
         else
         {
             c.writeCombinedByYear(url,
@@ -124,7 +132,7 @@ public class INSPECCombiner
     			
     				stmt = con.createStatement();
     				System.out.println("Running the query...");
-    				String sqlQuery = "select * from " + Combiner.TABLENAME +" where database='" + Combiner.CURRENTDB + "'";
+    				String sqlQuery = "select * from " + Combiner.TABLENAME;
     				System.out.println(sqlQuery);
     				rs = stmt.executeQuery(sqlQuery);
     				
@@ -1069,11 +1077,15 @@ public class INSPECCombiner
         }
         else if(newdocType.equals("40"))
         {
-            list.add("MC");
+            //list.add("MC");
+        	//change for book project by hmo at2017/05/16
+        	list.add("CH");
         }
         else if(newdocType.equals("30"))
         {
-            list.add("MR");
+            //list.add("MR");
+        	//change for book project by hmo at2017/05/16
+            list.add("BK");
         }
         else if(newdocType.equals("12"))
         {
