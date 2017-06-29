@@ -3276,7 +3276,7 @@ public class PatentXmlReader
 		else
 		{
 			docType = authCode;
-			System.out.println("found new authCode "+authCode+ " for record "+patentNumber);
+			//System.out.println("found new authCode "+authCode+ " for record "+patentNumber);
 		}
 		return docType;
 	}
